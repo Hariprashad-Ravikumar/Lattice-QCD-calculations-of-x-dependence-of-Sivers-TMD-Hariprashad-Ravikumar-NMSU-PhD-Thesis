@@ -1,0 +1,271 @@
+%TCIDATA{Version=5.00.0.2606}
+%TCIDATA{LaTeXparent=0,0,main-sw.tex}
+                      
+%TCIDATA{ChildDefaults=chapter:1,page:1}
+
+
+\section{Instructions for Using the Thesis Shells}
+
+We give a brief list of instructions for using the thesis shells with
+Scientific Workplace, some of which are listed on the department's web page.
+
+You will need to download all of the front matter files along with
+nmsuth01.cls, main-sw.tex, and thesisbody.tex. Place all of these files in
+the same directory. You should also read the file main-sw.dvi or main-sw.ps
+or main-sw.pdf for more detailed information about using these files.
+
+Write the body of your thesis, using any style you wish. You may also write
+an abstract page in Scientific Workplace. Once you are finished with your
+typing, open the file thesisbody.tex, delete any text you find, except for
+the grey boxes right before the sample references. Then click on file, then
+import contents, and then locate the file for your thesis. Then save the
+file. Next, edit the files title-sw.tex, approval-sw.tex, dedica-sw.tex,
+ackno-sw.tex, vita-sw.tex, and abstract-sw.tex, by putting in the
+appropriate data. Make sure you do not delete any of the blank spaces or
+other formatting commands. If you typed an abstract, open the file
+abstract-sw.tex, place the cursor immediately before the first line of the
+abstract itself (which starts Type your abstract here), click on file, then
+import contents, and enter the name of your abstract file. Finally, delete
+the existing line starting with Type your abstract here, and then save.
+
+To compile your document, click on typeset, then preview, and change the
+number of passes to three. You should only compile main-sw, not thesisbody.
+
+\subsection{Notes for Typing}
+
+\begin{enumerate}
+\item Do not use chapter headings in your thesis. The most major heading
+should be a section heading. You will need to change your headings if you
+used chapter heads.
+
+\item Be careful when editing the front matter documents; the formatting
+commands need to be kept as they are if you want your thesis correctly
+formatted.
+
+\item If you do not have tables and/or figures, delete the appropriate line
+in the main-sw.tex file.
+
+\item If you typed your thesis in several parts, import all of them into the
+file thesisbody.tex.
+
+\item You are encouraged to read the file main.dvi or main.ps or main.pdf
+for more detailed information about typing your thesis.
+\end{enumerate}
+
+\subsection{What do you do if you have a really long heading, such as this
+long subsection heading?}
+
+If you have headings that are more than one line in the table of contents,
+then thesisbody.tex will need to be modified. Perform the following steps:
+
+\begin{enumerate}
+\item preview your thesis to find out which headings take more than one
+line. For each, determine where the first line of the heading ends.
+
+\item at the location where the first line of a long heading ends, add a tex
+field (click on insert, then field, then tex field) with the following
+command: \texttt{\TEXTsymbol{\backslash}vspace\{-\TEXTsymbol{\backslash}%
+singlespace\} \TEXTsymbol{\backslash}\TEXTsymbol{\backslash}}
+
+\item before clicking ok, click the box named Encapsulated at the top left
+of the tex field screen.
+\end{enumerate}
+
+To see how this works, when you preview this document, you will see the
+first line of the section head ending after the work this. We then modify
+the section heading as follows.
+
+\subsection{What do you do if you have a really long heading, such as this%
+%TCIMACRO{\TeXButton{spacing inside heading}{\vspace{-\singlespace} \\ } }%
+%BeginExpansion
+\vspace{-\singlespace} \\ 
+%EndExpansion
+long subsection heading?}
+
+You will see, in the table of contents and the document itself the
+difference between the two versions of the subsection heads.
+
+\subsection{Figures and Tables}
+
+If you have figures and or tables in your document, and you want them to
+show up in a list of tables and list of figures, there are a few things you
+must do. First, any graphic that is to show up in the list of figures should
+be a floating graphic. If you have a graphic, click on it to open the small
+blue icon at the bottom right of the graphic, then click on the icon. Click
+on the layout tab, and click the button labeled floating. For tables, make
+them by adding the fragment named \emph{Table - (4 x 3, floating)}. Open the
+grey box named caption and type in your caption, making sure not to change
+any of the tex code. If you want to refer to the table, change the text
+inside the \TEXTsymbol{\backslash}label command. If you have already typed a
+table, add the fragment, delete the sample table, and place the grey boxes
+around your table in the same position as in the sample.
+
+If you do not have figures and or tables, you should edit the main-sw.tex
+file. You will see the following grey boxes:
+
+\begin{center}
+%TCIMACRO{\TeXButton{newpage}{ }}%
+%BeginExpansion
+ %
+%EndExpansion
+%TCIMACRO{\TeXButton{List of Tables}{ }}%
+%BeginExpansion
+ %
+%EndExpansion
+%TCIMACRO{\TeXButton{addcontentsline List of Tables}{ }}%
+%BeginExpansion
+ %
+%EndExpansion
+
+%TCIMACRO{\TeXButton{newpage}{}}%
+%BeginExpansion
+%
+%EndExpansion
+%TCIMACRO{\TeXButton{List of Figures}{ }}%
+%BeginExpansion
+ %
+%EndExpansion
+%TCIMACRO{\TeXButton{addcontentsline List of Figures}{ }}%
+%BeginExpansion
+ %
+%EndExpansion
+\end{center}
+
+Delete the appropriate entire line of these boxes if you do not have tables
+or figures.
+
+Here is an example of a figure and a table.\FRAME{ftbpFU}{3.1955in}{2.3774in%
+}{0pt}{\Qcb{example figure}}{}{sampleplot.jpg}{\special{language "Scientific
+Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
+"F";width 3.1955in;height 2.3774in;depth 0pt;original-width
+4.0413in;original-height 3in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";filename 'SamplePlot.jpg';file-properties "XNPEU";}}
+
+\begin{center}
+%TCIMACRO{\TeXButton{B}{\begin{table}[tbp] \centering}}%
+%BeginExpansion
+\begin{table}[tbp] \centering%
+%EndExpansion
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Head} & \textbf{Head} & \textbf{Head} \\ \hline
+entry & entry & entry \\ 
+entry & entry & entry \\ 
+entry & entry & entry \\ \hline
+\end{tabular}%
+\caption{example table\label{key}}%
+%TCIMACRO{\TeXButton{E}{\end{table}}}%
+%BeginExpansion
+\end{table}%
+%EndExpansion
+\end{center}
+
+
+\begin{center}
+%TCIMACRO{\TeXButton{B}{\begin{table}[tbp] \centering}}%
+%BeginExpansion
+\begin{table}[tbp] \centering%
+%EndExpansion
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Head} & \textbf{Head} & \textbf{Head} \\ \hline
+entry & entry & entry \\ 
+entry & entry & entry \\ 
+entry & entry & entry \\ \hline
+\end{tabular}%
+\caption{example table two\label{key}}%
+%TCIMACRO{\TeXButton{E}{\end{table}}}%
+%BeginExpansion
+\end{table}%
+%EndExpansion
+\end{center}
+
+\subsection{Footnotes}
+
+If you have long footnotes\footnote{%
+%TCIMACRO{\TeXButton{singlespace}{\setlength{\baselineskip}{\singlespace}}}%
+%BeginExpansion
+\setlength{\baselineskip}{\singlespace}%
+%EndExpansion
+What do you do if you have a really long footnote and you do not wish to
+make it smaller? The graduate school will want footnotes single spaced, and
+if you have more than one footnote on a page, doublespacing between
+footnotes.%
+%TCIMACRO{\TeXButton{vspace}{\vspace{\singlespace}}}%
+%BeginExpansion
+\vspace{\singlespace}%
+%EndExpansion
+}, you will have to reformat them since the graduate school wants footnotes
+single spaced. Also, if you have more than one footnote on a page, they want
+doublespacing between footnotes. To accomplish this, at the beginning of the
+footnote box, insert a tex field (click on insert, typeset object, tex
+field, or some similar set of menu items if you are using a version of
+Scientific Workplace earlier than 4.0). In the tex field, add the line
+
+\begin{center}
+\TEXTsymbol{\backslash}setlength\{\TEXTsymbol{\backslash}baselineskip\}\{%
+\TEXTsymbol{\backslash}singlespace\}
+\end{center}
+
+\noindent You must do this to each footnote. If you have more than one
+footnote on a page, to each but the last footnote on the page add a tex
+field in the footnote box after the footnote text containing the line
+
+\begin{center}
+\TEXTsymbol{\backslash}vspace\{\TEXTsymbol{\backslash}singlespace\}
+\end{center}
+
+\noindent The footnotes in this section have done these changes; you will
+see the result in the compiled version.\footnote{%
+%TCIMACRO{\TeXButton{singlespace}{\setlength{\baselineskip}{\singlespace}}}%
+%BeginExpansion
+\setlength{\baselineskip}{\singlespace}%
+%EndExpansion
+This is the second footnote on the page.}
+
+\subsection{References}
+
+There are two ways to handle references in LaTeX documents, typing them
+directly or using BiBTeX. Examples of typing them directly are given below;
+the gray TeX boxes immediately before the references are needed to make the
+references be formatted correctly and have the references section show up in
+the table of contents. No information on how to use BibTeX will be given
+here; we only point out that to use BibTeX, you need to click on insert,
+typeset object, bibliography, click on your BibTeX file and the appropriate
+style. You should do this on the bottom line in main-sw.tex and not in
+thesisbody.tex.
+
+%TCIMACRO{\TeXButton{newpage}{\newpage\ }}%
+%BeginExpansion
+\newpage\ %
+%EndExpansion
+%TCIMACRO{%
+%\TeXButton{addcontentsline REFERENCES}{\addcontentsline{toc}{section}{REFERENCES}}}%
+%BeginExpansion
+\addcontentsline{toc}{section}{REFERENCES}%
+%EndExpansion
+%TCIMACRO{%
+%\TeXButton{setlength singlespace}{\setlength{\baselineskip}{\singlespace}}}%
+%BeginExpansion
+\setlength{\baselineskip}{\singlespace}%
+%EndExpansion
+
+\begin{thebibliography}{9}
+\bibitem{Bez99} Guram Bezhanishvili, \emph{Varieties of monadic {H}eyting
+algebras. {I}{I}. {D}uality theory}, Studia Logica \textbf{62} (1999),
+no.~1, 21--48.
+
+\bibitem{DeG45} J.~de~Groot, \emph{Topological classification of all closed
+countable and continuous classification of all countable pointsets},
+Indagationes Math. \textbf{7} (1945), 42--53.
+
+\bibitem{Eng77} Ryszard Engelking, \emph{General topology}, PWN---Polish
+Scientific Publishers, Warsaw, 1977.
+
+\bibitem{Jon82} Peter~T. Johnstone, \emph{Stone spaces}, Cambridge
+University Press, Cambridge, 1982.
+
+\bibitem{Pri70} H.~A. Priestley, \emph{Representation of distributive
+lattices by means of ordered stone spaces}, Bull. London Math. Soc. \textbf{2%
+} (1970), 186--190.
+\end{thebibliography}
