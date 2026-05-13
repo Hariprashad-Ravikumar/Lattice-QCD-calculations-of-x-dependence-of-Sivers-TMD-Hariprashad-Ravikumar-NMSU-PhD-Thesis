@@ -17,82 +17,181 @@
  %out the next line.  If you comment out the next line, you should
  %also not try to process chp1a.tex.  
 \usepackage[all]{xy}
-%Your system should have the graphicx package for included graphics.
- %If not, or, if you have no graphics to include, comment out the next 
- %line.  If you commment out the next line, then you should not try to 
- %process the part of the document called graphics.tex.  Comment out
- %the line below calling for \input{graphics}
+\usepackage {amsmath}
+\usepackage[a4paper, total={7.3in, 10.3in}]{geometry}
+
+
+\usepackage[titletoc]{appendix}
+
+\usepackage{amssymb}
+%\usepackage{xcolor}
+\usepackage[x11names, rgb]{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage{mathtools}
+\usepackage{xcolor}
+\usepackage{braket}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{ulem}
+\usepackage{cancel}
 \usepackage{graphicx}
-%The next settings give the correct margins for an NMSU Ph.D. thesis.
-%They are commented out due to updates in requirements (apparently)
-%\setlength{\evensidemargin}{0.56in}
-%\setlength{\oddsidemargin}{0.56in}
-%\setlength{\textwidth}{5.75in}
-%\setlength{\topmargin}{-0.25in}
-%\setlength{\textheight}{8.25in}
-\usepackage[margin=1in]{geometry}
-%
-%
-%\newtheorem{theorem}{Theorem}[section]
-%\newtheorem{lemma}[theorem]{Lemma}
-%\newtheorem{prop}[theorem]{Proposition}
-%\newtheorem{cor}[theorem]{Corollary}
-%\newtheorem{conjecture}[theorem]{Conjecture}
-%\newtheorem{fact}[theorem]{Fact}
-%\theoremstyle{definition}
-%\newtheorem{defn}[theorem]{Definition}
-%\newtheorem{example}[theorem]{Example}
-%\newtheorem{question}[theorem]{Question}
-%\newtheorem{remark}[theorem]{Remark}
-% Theorem Formatting Commands.
-\theoremstyle{plain}
+\usepackage{mathtools}
+\usepackage{amsmath}  
+\usepackage{amsfonts} 
+\usepackage{graphicx}
+\usepackage{amssymb} 
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{empheq}
+\usepackage{amsthm}
+ \usepackage{braket}
+ \usepackage{amsmath}
+\DeclareMathOperator\arctanh{arctanh}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{graphicx}
 \newtheorem{theorem}{Theorem}[section]
-\newtheorem{lemma}[theorem]{Lemma}%[section]
-\newtheorem{prop}[theorem]{Proposition}%[section]
-\newtheorem{cor}[theorem]{Corollary}%[section]
-\newtheorem*{nametheorem}{Theorem}%[section]
-\theoremstyle{definition}
-\newtheorem{defn}[theorem]{Definition}%[section]
-\newtheorem{example}[theorem]{Example}%[section]
-\theoremstyle{remark}
-\newtheorem*{rem}{Remark}
-\newtheorem*{convention*}{Convention}
-%
-% Miscellaneous Special Capitals
-\newcommand{\bZ}{{\mathbf Z}}
-\newcommand{\bQ}{{\mathbf Q}}
-\newcommand{\bR}{{\mathbf R}}
-\newcommand{\cC}{{\mathcal C}}
-% 
-%Miscellaneous symbols
-\newcommand{\op}{{\rm \oplus}}
-\newcommand{\id}{\rm id}
-%
-%Miscellaneous Greek letters
-\newcommand{\eps}{\ensuremath{\epsilon}}
-\newcommand{\ga}{\ensuremath{\gamma}}
-%
-%Miscellaneous operators
-\DeclareMathOperator{\Coker}{Coker}
-\DeclareMathOperator{\Tor}{Tor}
-\DeclareMathOperator{\Ext}{Ext}
-\DeclareMathOperator{\Maps}{Maps}
-\DeclareMathOperator{\Hom}{Hom}
-\DeclareMathOperator{\Aut}{Aut}
-\DeclareMathOperator{\Sin}{Sin}
-\DeclareMathOperator{\Tot}{Tot}
-\DeclareMathOperator{\im}{im}
-%
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+\numberwithin{equation}{section}
+\newcommand{\units}[1]{\ensuremath{\,\mathrm{#1}}}
+\newcommand{\braKet}[3]{#3\langle#1#3|#2#3\rangle}
+\newcommand{\Tr}{\mathrm{tr}}
+\newcommand{\BTr}{\mathrm{Tr}}
+\newcommand{\latcfn}{\ensuremath{C}}
+\usepackage{graphicx}
+\newcommand{\tpm}{\ensuremath{{\,\pm\,}}}
+%\usepackage{markdown}
+\usepackage[hybrid]{markdown}
+
+\newcommand{\prp}{\perp}
+\newcommand{\transp}{\mathsf{T}}
+\newcommand{\GammaOp}{\Gamma}
+\newcommand{\GammaDist}{\ensuremath{\Gamma^\text{d}}}
+\newcommand{\GammaTwo}{\ensuremath{\Gamma^\text{2pt}}}
+\newcommand{\GammaThr}{\ensuremath{\Gamma^\text{3pt}}}
+\newcommand{\GammaDiq}{\ensuremath{\Gamma^\text{diq}}}
+\newcommand{\lat}{{\text{lat}}}
+\newcommand{\ren}{{\text{ren}}}
+\newcommand{\unren}{{\text{unren}}}
+\newcommand{\norm}{{\text{norm}}}
+\newcommand{\tcdot}{{\cdot}}
+\newcommand{\ldotP}{{\elll\!\cdot\!P}}
+
+\newcommand{\myRe}{\ensuremath{\mathrm{Re}}}
+\newcommand{\myIm}{\ensuremath{\mathrm{Im}}}
+
+\newcommand{\dlangle}{{\rlap{\big\langle}\hskip 0.1em\big\langle}}
+\newcommand{\drangle}{{\rlap{\big\rangle}\hskip 0.1em\big\rangle}}
+
+\newcommand{\Wline}[1]{\ensuremath{{\mathcal{U}}[#1]}}
+\newcommand{\WlineC}[1]{\ensuremath{{\mathcal{U}}{[#1]}}}
+\newcommand{\WlineClat}[1]{\ensuremath{{\mathcal{U}}^\text{lat}{[#1]}}}
+\newcommand{\WlineI}[2]{\ensuremath{{\mathcal{U}}#1{[#2]}}}
+\newcommand{\Wlineren}[1]{\ensuremath{{\mathcal{U}}^\text{ren}[#1]}}
+
+\newcommand{\mean}[1]{\ensuremath{\left\langle{#1}\right\rangle}}
+\newcommand{\vect}[1]{\ensuremath{\boldsymbol{#1}}}
+\newcommand{\vprp}[1]{\vect{#1}_{\mathrm T}}
+
+\newcommand{\mmin}{{\text{min}}}
+
+
+% Let hyperref auto-detect the engine, don't force pdftex
+\usepackage[colorlinks=true, citecolor=black, urlcolor=black, linkcolor=black, bookmarksopen=true]{hyperref}
+\usepackage{cleveref}
+
+
+\newcommand{\quark}{q}
+\newcommand{\nucl}[1]{{#1}}
+\newcommand{\Quark}{Q}
+\newcommand{\Afield}{A}
+\newcommand{\MDM}{\mathcal{M}}
+\newcommand{\tMDM}{\tilde{\mathcal{M}}}
+\newcommand{\tAmp}{\widetilde{A}}
+\newcommand{\tBmp}{\widetilde{B}}
+\newcommand{\TFM}{{\hat{\mathbb{T}}}}
+\newcommand{\renZ}{Z}
+\newcommand{\U}{\mathcal{U}{[\mathcal{C}_{b}]}}
+%\newcommand{\len}{\mathcal{L}}
+\newcommand{\len}{\ell}
+%\newcommand{\tAmp}{\ensuremath{\widetilde{A}^{(+)}}}
+%\newcommand{\tBmp}{\ensuremath{\widetilde{B}^{(+)}}}
+\newcommand{\Amp}{\ensuremath{A^{(+)}}}
+\newcommand{\Bmp}{\ensuremath{B^{(+)}}}
+\newcommand{\nplus}{\ensuremath{\bar n}}
+\newcommand{\nminus}{\ensuremath{n}}
+
+
+\newcommand{\TMD}{TMD\xspace}
+\newcommand{\TMDs}{TMDs\xspace}
+
+\newcommand{\sW}{\ensuremath{\text{sW}}}
+
+\newcommand{\toddmark}[1]{\ensuremath{\Bigg[#1\Bigg]_{\text{\tiny{odd}}}}}
+\newcommand{\Eu}[1]{#1}
+
+\newcommand{\fourint}{\ensuremath{\int_\mathcal{F}}}
+\newcommand{\xfourint}{\ensuremath{\int_\mathcal{M}}}
+
+
+\newcommand{\conherm}{\ensuremath{(\dagger)}}
+\newcommand{\conpar}{\ensuremath{(\mathrm{P})}}
+\newcommand{\contime}{\ensuremath{(\mathrm{T})}}
+\newcommand{\myeps}{\ensuremath{\epsilon}}
+
+\newcommand{\xmom}[1]{{\ensuremath{[#1]}}}
+\newcommand{\ktmom}[1]{{\ensuremath{(#1)}}}
+\newcommand{\xktmom}[2]{{\xmom{#1}\ktmom{#2}}}
+
+\newcommand{\bvec}{b}
+\newcommand{\softf}{\mathcal{S}}
+\newcommand{\mN}{m_N}
+\newcommand{\nf}{n_f}
+
+
+\newcommand{\sgn}{\mathrm{sgn}}
+\newcommand{\nbdash}{\protect\nobreakdash-\hspace{0pt}}
+
+\newcounter{fnnumber}
+\newcounter{fnnumberamp}
+\newcommand{\MSbar}{\overline{\text{MS}}}
+%\usepackage{makecell}
+\newcommand{\kei}{k}
+
+\newcommand{\unsub}{\text{unsubtr.}}
+\newcommand{\zetahat}{{\hat \zeta}}
+\newcommand{\elll}{b}
+\def\epp{\epsilon^{\prime}}
+\def\ep{\epsilon}
+\def\vep{\varepsilon}
+\def\la{\langle}
+\def\ra{\rangle}
+\def\ppg{\pi^+\pi^-\gamma}
+\def\vp{{\bf p}}
+\def\ko{K^0}
+\def\kb{\bar{K^0}}
+\def\ka{\kappa}
+\def\al{\alpha}
+\def\ab{\bar{\alpha}}
+\def\be{\begin{equation}}
+\def\ee{\end{equation}}
+\def\bea{\begin{eqnarray}}
+\def\eea{\end{eqnarray}}
+\def\wh{\widehat}
+\usepackage{listings}
 %Prepare for  double spacing
 %\renewcommand{\baselinestretch}{1.5}
 \newlength{\singlespace}
 \setlength{\singlespace}{\baselineskip}
 \newlength{\doublespace}
 \setlength{\doublespace}{2.0\baselineskip}
+\usepackage[numbers]{natbib}
 %
 \begin{document}
 %Use the next line to obtain double spacing for the main body of the document
 \setlength{\baselineskip}{\doublespace}
+
 %Comment out the preceding line and uncomment the next line containing
  %a \setlength command to obtain single spacing for the main body of 
  %the document.
@@ -150,29 +249,36 @@
 \newpage
 \pagenumbering{arabic}
 %
-\input{intro}
+\input{Chapters/INTRODUCTION_AND_MOTIVATION}
 \newpage
-\input{chp1a}
+\input{Chapters/THEORETICAL_FRAMEWORK_OF_TMDs}
 \newpage
-\input{table}
+\input{Chapters/LATTICE_QCD_METHODOLOGY}
 \newpage
-\input{graphics}
+\input{Chapters/EXTRACTING_THE_x-DEPENDENCE}
 \newpage
-%The next four lines create a list of references for the 
- %paper from a .bbl file created by BibTeX from a .bib bibliographic
- %database file.  
- %The MathSciNet clipboard was used to prepare 
- %the .bib file.  See Lamport's book mentioned in the references for
- %basic information about BibTeX.  If you don't use BibTeX, you need
- %to create and format the list of references yourself.
-\addcontentsline{toc}{section}{REFERENCES}
-\setlength{\baselineskip}{\singlespace}
-\bibliographystyle{plain}
-\bibliography{main}
-%These next three command lines create a list of references for the paper from
- %a biblio.tex file you create yourself.
-\addcontentsline{toc}{section}{REFERENCES}
-\setlength{\baselineskip}{\singlespace}
-\input{biblio}
+\input{Chapters/FITTING_METHODOLOGIES_AND_STABILITY_ANALYSIS}
+\newpage
+\input{Chapters/EXTRAPOLATIONS-TO-THE-PHYSICAL-LIMIT}
+\newpage
+~
+\newpage
+~
+\newpage
+\input{Chapters/CONCLUSION}
+\newpage
+\appendix
+\input{appendix}
+\newpage
+
+
 %
+\phantomsection
+\addcontentsline{toc}{section}{REFERENCES}
+\setlength{\baselineskip}{\singlespace}
+
+\bibliographystyle{apsrev4-1}
+\bibliography{BibTeXList}
+%
+
 \end{document}

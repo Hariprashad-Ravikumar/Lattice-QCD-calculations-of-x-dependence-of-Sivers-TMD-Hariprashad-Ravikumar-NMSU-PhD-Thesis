@@ -1,0 +1,52 @@
+\section{QLUA: Gamma $\Gamma(n)$}
+The binary notation for 16 basis matrices:
+\begin{align}
+    \Gamma(n)=\gamma_{1}^{n_{0}}\gamma_{2}^{n_{1}}\gamma_{3}^{n_{2}}\gamma_{4}^{n_{3}}
+\end{align}
+where, the binary representation of $[n]_{10}$ is $[n_{3}n_{2}n_{1}n_{0}]_{2}$
+\begin{align}
+    [n]_{10}=n_{3}2^{3}+n_{2}2^{2}+n_{1}2^{1}+n_{0}2^{0}
+\end{align}
+The below table contains all 16 gamma matrices with binary notations.
+\begin{table}[h!]
+\centering
+\scalebox{1.4}{
+\begin{tabular}{|c|c||c|}
+\hline
+  $[n]_{10}$    & $[n_{3}n_{2}n_{1}n_{0}]_{2}$ & $\Gamma(n)$ \\
+  \hline
+  \hline
+    $0$ & $0000$ & $\mathbbm{1}$\\
+   \hline
+    $1$ & $0001$ & $\gamma_{1}$\\
+   \hline
+    $2$ & $0010$ & $\gamma_{2}$\\
+   \hline
+    $3$ & $0011$ & $\gamma_{1}\gamma_{2}$\\
+   \hline
+    $4$ & $0100$ & $\gamma_{3}$\\
+   \hline
+    $5$ & $0101$ & $\gamma_{1}\gamma_{3}$\\
+   \hline
+    $6$ & $0110$ & $\gamma_{2}\gamma_{3}$\\
+   \hline
+    $7$ & $0111$ & $\gamma_{1}\gamma_{2}\gamma_{3}$=$\gamma_{5}\gamma_{4}$\\
+   \hline
+    $8$ & $1000$ & $\gamma_{4}$\\
+   \hline
+    $9$ & $1001$ & $\gamma_{1}\gamma_{4}$\\
+   \hline
+    $10$ & $1010$ & $\gamma_{2}\gamma_{4}$\\
+   \hline
+    $11$ & $1011$ & $\gamma_{1}\gamma_{2}\gamma_{4}=-\gamma_{5}\gamma_{3}$\\
+   \hline
+    $12$ & $1100$ & $\gamma_{3}\gamma_{4}$\\
+   \hline
+    $13$ & $1101$ & $\gamma_{1}\gamma_{3}\gamma_{4}=\gamma_{5}\gamma_{2}$\\
+   \hline
+    $14$ & $1110$ & $\gamma_{2}\gamma_{3}\gamma_{4}=-\gamma_{5}\gamma_{1}$\\
+   \hline
+    $15$ & $1111$ & $\gamma_{1}\gamma_{2}\gamma_{3}\gamma_{4}=\gamma_{5}$\\
+   \hline
+\end{tabular}}
+\end{table}

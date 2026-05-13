@@ -1,0 +1,84 @@
+\section{THEORETICAL FRAMEWORK OF TMDs}
+
+\subsection{Symmetry Constraints}
+Let's start with \cite{Boer-Bessel-Weighted-Asymmetries}
+\begin{align}
+  \Phi^{[\GammaOp]}_{\text{unsub}} (\kei,P,S;v,\mu) & = \int \frac{d^4 \elll}{(2\pi)^4} \ 
+  e^{i\kei \cdot \elll} 
+  \underbrace{ \frac{1}{2} \bra{\nucl{P,S}}\ \bar \quark(0)\ \overbrace{ \mathcal{U}[0,\infty v]\ \mathcal{U}[\infty v,\elll] }^{\displaystyle \U} \GammaOp\ \quark(\elll)\ \ket{\nucl{P,S}} }_{\displaystyle \widetilde \Phi^{[\GammaOp]}_{\text{unsub}}(\elll,P,S;v,\mu) }\ .
+  \label{eq-corrunmod}
+\end{align}
+The above correlator can be parameterized in terms of real-valued Lorentz-invariant amplitudes as
+\begin{align}
+\frac{1}{2} \Phi^{[\gamma^\mu]}_{\text{unsub}} & = P^\mu\, \Amp_2 +\kei^\mu\, \Amp_3 + \frac{1}{\mN} \epsilon^{\mu \nu \alpha \beta} P_\nu \kei_\alpha S_\beta\, \Amp_{12} + \frac{\mN^2}{(v \tcdot P)} v^\mu\, \Bmp_1 \nonumber\\
+& + \frac{\mN}{v \tcdot P} \epsilon^{\mu \nu \alpha \beta} P_\nu v_\alpha S_\beta\, \Bmp_7 + \frac{ \mN}{v \tcdot P} \epsilon^{\mu \nu \alpha \beta} \kei_\nu v_\alpha S_\beta\, \Bmp_8 \nonumber\\ 
+& + \frac{1}{\mN (v \tcdot P)} (\kei \tcdot S) \epsilon^{\mu \nu \alpha \beta} P_\nu \kei_\alpha v_\beta\, \Bmp_9  + \frac{\mN}{(v \tcdot P)^2} (v \tcdot S) \epsilon^{\mu \nu \alpha \beta} P_\nu \kei_\alpha v_\beta \Bmp_{10}\ . 
+\label{eq-phidecomp}
+\end{align}
+On applying Lorentz transformations ($L$), parity transformation ($P$), time-reversal ($T$), and hermitian conjugation ($\dagger$) to the matrix elements, we find that the correlator fulfills
+\begin{align}
+	&(L): &\Phi^{[\Gamma]}_{\text{unsub}}(k,P,S;v,\mu)  
+	&= \Phi^{[\Lambda_{1/2}^{-1}\Gamma\Lambda_{1/2}^{\phantom{-1}}]}_{\text{unsub}}(\Lambda k,\Lambda P, \Lambda S;\Lambda v,\mu) \ ,\label{eq-lortrans} \displaybreak[0] \\
+	&(P): &\Phi^{[\Gamma]}_{\text{unsub}}(k,P,S;v,\mu)  
+	&= \Phi^{[\gamma^0\Gamma\gamma^0]}_{\text{unsub}}(\overline{k},\overline{P},-\overline{S};\overline{v},\mu) \ ,\label{eq-conpar} \displaybreak[0] \\
+	&(T): &\left[ \Phi^{[\Gamma]}_{\text{unsub}}(k,P,S;v,\mu) \right]^* &= \Phi^{[\gamma^1 \gamma^3 \Gamma^* \gamma^3 \gamma^1]}_{\text{unsub}}(\overline{k},\overline{P},\overline{S};-\overline{v},\mu) \ , \label{eq-contime} \displaybreak[0] \\
+	&(\dagger): &\left[  \Phi^{[\Gamma]}_{\text{unsub}}(k,P,S;v,\mu) \right]^* &= \Phi^{[\gamma^0 \Gamma^\dagger \gamma^0]}_{\text{unsub}}(k,P,S;v,\mu) \ . \label{eq-conherm}
+\end{align}
+where we denote the sign change of spatial components of a given vector $c$; that is,  $\overline{c} \equiv (c^0, -c^1, -c^2, -c^3)$. From hermiticity $(\dagger)$ follows that the $\Amp_i$ and $\Bmp_i$ in Eq.\ \eqref{eq-phidecomp} are real valued. Time reversal $(T)$ does not constrain the number of allowed structures, because it changes the sign of $v\tcdot P$. Instead, time reversal $(T)$ establishes relations between SIDIS amplitudes $A_i^{(+)}$, $B_i^{(+)}$ and Drell-Yan amplitudes $A_i^{(-)}$, $B_i^{(-)}$.
+	
+For any of the transformations $\mathcal{T} \in \{ L, P, T, \dagger \}$, the Eqs.\ \eqref{eq-lortrans}-\eqref{eq-conherm} are of the general form 
+\begin{equation}
+	\mathcal{T}_\Phi\left(\Phi(\kei,w)\right) = \Phi\left(\mathcal{T}_\kei(\kei),\mathcal{T}_w(w)\right)
+\end{equation}
+where we have omitted the subscript ``unsub'' and the renormalization scale $\mu$, and where the symbol $w$ summarizes all dependences on $\GammaOp$, $P$, $S$ and $v$. Here $\mathcal{T}_\Phi$ is either the identity function or complex conjugation. The transformation rule $\mathcal{T}_\kei(\kei)$ maps onto $\Lambda \kei$, $\kei$ or $\overline{\kei}$ and thus fulfills $a \tcdot b = \mathcal{T}_\kei(a) \tcdot \mathcal{T}_\kei(b)$ for any two vectors $a$ and $b$. The Fourier-transformed correlator 
+\begin{equation}
+	\widetilde{\Phi}(\elll,w) =  \int d^4 \kei \ e^{-i \kei \tcdot \elll} \Phi(\kei, w)
+\end{equation}
+transforms according to
+\begin{align}
+	\mathcal{T}_\Phi\left(\widetilde{\Phi}(\elll,w) \right) & =  \int d^4 \kei \ e^{\mathcal{T}_\Phi(-i)\, \kei \tcdot \elll}\ \mathcal{T}_\Phi \left( \Phi(\kei, w) \right) \nonumber \\
+	& =  \int d^4 q \ e^{\mathcal{T}_\Phi(-i)\, \mathcal{T}^{-1}_\kei(q) \tcdot \elll} \ \Phi\left(q, \mathcal{T}_w( w) \right).......\text{(change of Variables: $\kei\rightarrow q=\mathcal{T}_\kei(\kei)$ or $\kei=\mathcal{T}^{-1}_\kei(q)$)}  \nonumber \\
+	& =  \int d^4 q \ e^{\mathcal{T}_\Phi(-i)\, q \tcdot \mathcal{T}_\kei(\elll)} \ \Phi\left(q, \mathcal{T}_w( w) \right)..........(\because q \tcdot b = \mathcal{T}_\kei(q) \tcdot \mathcal{T}_\kei(b)) \nonumber \\
+    & =  \int d^4 q \ e^{-iq\left(\frac{\mathcal{T}_\Phi(i)}{i}\,  \tcdot \mathcal{T}_\kei(\elll)\right)} \ \Phi\left(q, \mathcal{T}_w( w) \right)\nonumber \\
+	& = \widetilde{\Phi}\left( \frac{\mathcal{T}_\Phi(i)}{i} \mathcal{T}_\kei(\elll), \mathcal{T}_w(w) \right)\, .
+	\label{eq-phitildetrafo}
+\end{align}
+For example, $\tilde \Phi$ transforms under hermitian conjugation as
+\begin{align}
+	&(\dagger): &\left[ \widetilde{\Phi}^{[\GammaOp]}_{\text{unsub}}(\elll,P,S;v)  \right]^* 
+	&= \widetilde{\Phi}^{[\gamma^0 \GammaOp^\dagger \gamma^0]}_{\text{unsub}}(-\elll,P,S;v)  \ .\label{eq-conhermtilde}
+\end{align}
+Let $f(\kei,w)$ be any of the structures preceding the invariant amplitudes in the parameterization of $\Phi$.
+The structure $f(\kei,w)$ is a homogeneous function of some degree $n$ in $\kei$, i.e., $f(\alpha \kei,w) = \alpha^n f(\kei,w)$ for any number $\alpha$. 
+For example, the structure $f(\kei,w) = \frac{1}{\mN (v \tcdot P)} (\kei \tcdot S) \epsilon^{\mu \nu \alpha \beta} P_\nu \kei_\alpha v_\beta$ preceding $\Bmp_9$ in Eq.\ \eqref{eq-phidecomp} has degree $n=2$.
+If we define $\tilde f(\elll,w) \equiv f(- i \mN^2 \elll,w)$, then 
+\begin{align}
+	\mathcal{T}_\Phi\left( \tilde f(\elll, w) \right) =
+	\mathcal{T}_\Phi(-i \mN^2)^n\, \mathcal{T}_\Phi\left( f( \elll, w) \right) =
+	f\left( \mathcal{T}_\Phi(-i \mN^2) \mathcal{T}_\kei(\elll) , \mathcal{T}_w(w) \right) =
+	\tilde f \left(  \frac{\mathcal{T}_\Phi(i)}{i} \elll, w \right)\, .
+	\end{align}
+This shows that $\tilde f$ transforms like $\widetilde \Phi$ in Eq.\ \eqref{eq-phitildetrafo}.
+We conclude that the parameterization of $\widetilde{\Phi}$ can be found by the substitution $\kei \rightarrow -i \mN^2 \elll$ in the structures parameterizing $\Phi$, and we arrive at 
+\begin{align}  \frac{1}{2}\widetilde \Phi^{[\gamma^\mu]}_{\text{unsub}}  = & P^\mu\, \tAmp_2 - i \mN^2 \elll^\mu\, \tAmp_3 - i \mN \epsilon^{\mu \nu \alpha \beta} P_\nu \elll_\alpha S_\beta\, \tAmp_{12} + \frac{\mN^2}{(v \tcdot P)} v^\mu\, \tBmp_1\nonumber\\
+& + \frac{\mN}{v \tcdot P} \epsilon^{\mu \nu \alpha \beta} P_\nu v_\alpha S_\beta\, \tBmp_7  - \frac{ i \mN^3}{v \tcdot P} \epsilon^{\mu \nu \alpha \beta} \elll_\nu v_\alpha S_\beta\, \tBmp_8 \nonumber\\
+& - \frac{\mN^3}{v \tcdot P} (\elll \tcdot S) \epsilon^{\mu \nu \alpha \beta} P_\nu \elll_\alpha v_\beta\, \tBmp_9  - \frac{i \mN^3}{(v \tcdot P)^2} (v \tcdot S) \epsilon^{\mu \nu \alpha \beta} P_\nu \elll_\alpha v_\beta \tBmp_{10}\ . 
+\label{eq-phitildedecomp}
+\end{align}
+
+The amplitudes $\tAmp_i$ and $\tBmp_i$ introduced this way are no longer constrained to be real-valued functions. Instead, hermitian conjugation Eq.\ \eqref{eq-conhermtilde} yields the relation
+\begin{equation}
+	\left[ \tAmp_i(\elll^2,\elll \tcdot P, v \tcdot \elll / (v \tcdot P), \zeta^{-2},\mu^2) \right]^* = \tAmp_i(\elll^2,-\elll \tcdot P, -v \tcdot \elll / (v \tcdot P), \zeta^{-2},\mu^2)\, .\label{conditi_hermitian}
+\end{equation}
+In general, the amplitudes are complex,
+\begin{align}
+    \tilde{A}_i&=\tilde{A}^{\text{Re}}_i+i\tilde{A}^{\text{Im}}_i\\
+    \tilde{B}_i&=\tilde{B}^{\text{Re}}_i+i\tilde{B}^{\text{Im}}_i
+\end{align}
+Because of Eq.\ \eqref{conditi_hermitian}, provided we have the amplitudes for both $\pm b$, we find
+\begin{align}
+    \tilde{A}^{\text{Re}}_i&=\tilde{A}^{\text{(b-even)}}_i\\
+    \tilde{A}^{\text{Im}}_i&=\tilde{A}^{\text{(b-odd})}_i\\
+    \tilde{B}^{\text{Re}}_i&=\tilde{B}^{\text{(b-even)}}_i\\
+    \tilde{B}^{\text{Im}}_i&=\tilde{B}^{\text{(b-odd})}_i
+\end{align}
