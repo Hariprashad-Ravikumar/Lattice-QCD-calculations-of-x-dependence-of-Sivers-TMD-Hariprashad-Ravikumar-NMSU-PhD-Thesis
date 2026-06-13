@@ -1,1 +1,86 @@
 \section{LATTICE QCD METHODOLOGY}
+
+\subsection{Quantum Chromodynamics}
+The fundamental theory of the strong interaction, Quantum Chromodynamics (QCD), describes the dynamics of quarks and gluons. The formulation of QCD in the continuum is defined by the Lagrangian density,
+\begin{equation}
+    \mathcal{L}_{\text{QCD}} = \sum_{f} \overline{\psi}_f(x) \left( i \gamma^\mu D_\mu - m_f \right) \psi_f(x) - \frac{1}{4} F_{\mu\nu}^a(x) F^{a \mu\nu}(x),
+\end{equation}
+where $\psi_f$ denotes the quark field of flavor $f$ with bare mass $m_f$, and $D_\mu = \partial_\mu - i g \frac{\lambda^a}{2} A_\mu^a$ is the gauge covariant derivative containing the gluon field $A_\mu^a$. The gluon field strength tensor is $F_{\mu\nu}^a$. Since QCD is asymptotically free at high energies, perturbation theory is successfully applied to hard scattering processes. However, at the energy scales characteristic of hadron structure, the strong coupling constant becomes large, rendering perturbative techniques invalid \cite{Gattringer:2010zz}. Accessing non-perturbative phenomena, such as the transverse momentum structure of partons, requires a first-principles regularization of the theory.
+
+\subsection{Lattice QCD}
+Lattice QCD provides a rigorous, non-perturbative framework for evaluating the QCD path integral. By transitioning to Euclidean spacetime ($t \to -i \tau$) and discretizing the continuous spacetime onto a four-dimensional hypercubic grid with lattice spacing $a$, the path integral becomes mathematically well-defined \cite{Wilson:1974sk}. The spacetime coordinates are restricted to $x_\mu = n_\mu a$, where $n_\mu \in \mathbb{Z}$.
+
+The finite lattice spacing serves as an ultraviolet regulator with a momentum cutoff of $\pi/a$, while the finite volume $V = L^3 \times T$ imposes an infrared cutoff. The expectation value of a physical observable $\mathcal{O}$ is given by the functional integral
+\begin{equation}
+    \langle \mathcal{O} \rangle = \frac{1}{Z} \int \mathcal{D}[U] \mathcal{D}[\psi] \mathcal{D}[\overline{\psi}] \, \mathcal{O}[U, \psi, \overline{\psi}] \, e^{-S_{\text{QCD}}[U, \psi, \overline{\psi}]},
+\end{equation}
+where $Z$ is the partition function. Integrating out the fermionic Grassmann variables yields the fermion determinant, enabling the use of importance-sampling Monte Carlo methods to evaluate the integral over the gauge field configurations \cite{Gattringer:2010zz, Lin:2014}.
+
+\subsection{Wilson Gauge Action}
+To preserve local color gauge invariance on the discretized spacetime, the continuous gauge fields $A_\mu(x)$ are replaced by parallel transporters along the links connecting adjacent lattice sites. These link variables are $SU(3)$ matrices defined as
+\begin{equation}
+    U_\mu(x) = \exp\left( i a g A_\mu\left(x + \frac{a\hat{\mu}}{2}\right) \right).
+\end{equation}
+The simplest gauge-invariant object constructed from link variables is the trace of the fundamental $1 \times 1$ closed loop, known as the plaquette:
+\begin{equation}
+    P_{\mu\nu}(x) = U_\mu(x) U_\nu(x+a\hat{\mu}) U_\mu^\dagger(x+a\hat{\nu}) U_\nu^\dagger(x).
+\end{equation}
+Using this, the Wilson gauge action is formulated as \cite{Wilson:1974sk}
+\begin{equation}
+    S_g[U] = \frac{2}{g^2} \sum_{x \in \Lambda} \sum_{\mu < \nu} \text{Re} \, \text{Tr}\left[ 1 - P_{\mu\nu}(x) \right].
+\end{equation}
+In the continuum limit ($a \to 0$), this action reproduces the continuous Yang-Mills action up to $\mathcal{O}(a^2)$ discretization artifacts \cite{Gattringer:2010zz}.
+
+\subsection{Fermions on the Lattice}
+Naively discretizing the Dirac action by replacing continuum derivatives with symmetric finite differences leads to the fermion doubling problem, where a single fermion field inadvertently describes 16 degenerate particles in four dimensions \cite{Gattringer:2010zz}. To decouple these unphysical doublers, the Wilson fermion action introduces a dimension-five operator (the Wilson term) proportional to the lattice Laplacian:
+\begin{equation}
+    S_f^W = a^4 \sum_{x} \overline{\psi}(x) \left( \sum_\mu \gamma_\mu \tilde{\nabla}_\mu - \frac{a r}{2} \nabla_\mu^* \nabla_\mu + m_0 \right) \psi(x),
+\end{equation}
+where $\tilde{\nabla}$, $\nabla$, and $\nabla^*$ are the symmetric, forward, and backward gauge-covariant finite differences, respectively. The Wilson term gives the 15 doublers masses proportional to $r/a$, safely decoupling them as $a \to 0$. However, this comes at the cost of explicitly breaking chiral symmetry even for massless quarks, introducing $\mathcal{O}(a)$ discretization artifacts that must be managed or improved systematically \cite{Lin:2014}.
+
+\subsection{Two-Point Correlation Functions}
+Hadronic properties, such as the ground state mass, are extracted from two-point correlation functions. A hadron interpolating operator $\chi(x,t)$ is constructed to possess the desired quantum numbers (e.g., a three-quark operator for the nucleon). The two-point function in momentum space is defined as
+\begin{equation}
+    C_2(t, \mathbf{p}) = \sum_{\mathbf{x}} e^{-i \mathbf{p} \cdot \mathbf{x}} \langle 0 | \chi(\mathbf{x}, t) \overline{\chi}(\mathbf{0}, 0) | 0 \rangle.
+\end{equation}
+By inserting a complete set of momentum-projected states, the time-evolution of the correlator isolates the lowest energy state:
+\begin{equation}
+    C_2(t, \mathbf{p}) \xrightarrow{t \gg 0} \frac{Z(\mathbf{p}) Z^\dagger(\mathbf{p})}{2 E(\mathbf{p})} e^{-E(\mathbf{p}) t},
+\end{equation}
+where $E(\mathbf{p}) = \sqrt{m_H^2 + \mathbf{p}^2}$ is the energy of the hadron, and $Z(\mathbf{p}) = \langle 0 | \chi | H(\mathbf{p}) \rangle$ is the overlap factor. Fitting the exponential decay of $C_2(t)$ at large Euclidean times yields the mass and dispersion relation of the hadron \cite{Lin:2014}.
+
+\subsection{Three-Point Correlation Functions}
+To probe the internal structure of the nucleon, such as its interaction with an external current, we evaluate three-point correlation functions. A generic operator $\mathcal{O}(\mathbf{z}, \tau)$ is inserted between the creation of the hadron at source time $0$ and its annihilation at sink time $t$:
+\begin{equation}
+    C_3(t, \tau, \mathbf{p}, \mathbf{p}') = \sum_{\mathbf{x}, \mathbf{z}} e^{-i \mathbf{p}' \cdot \mathbf{x}} e^{i (\mathbf{p}' - \mathbf{p}) \cdot \mathbf{z}} \langle 0 | \chi(\mathbf{x}, t) \mathcal{O}(\mathbf{z}, \tau) \overline{\chi}(\mathbf{0}, 0) | 0 \rangle.
+\end{equation}
+Inserting complete sets of states between the operators provides a spectral decomposition. In the limit $0 \ll \tau \ll t$, excited states are exponentially suppressed, yielding the ground-state matrix element:
+\begin{equation}
+    C_3(t, \tau, \mathbf{p}, \mathbf{p}') \simeq \frac{|Z(\mathbf{p})| |Z(\mathbf{p}')|}{4 E(\mathbf{p}) E(\mathbf{p}')} e^{-E(\mathbf{p}')(t-\tau)} e^{-E(\mathbf{p})\tau} \langle H(\mathbf{p}') | \mathcal{O} | H(\mathbf{p}) \rangle.
+\end{equation}
+Rigorous control of the source-sink separation $t$ and operator insertion time $\tau$ is critical for isolating the fundamental hadronic matrix element from excited-state contamination \cite{Lin:2014}.
+
+\subsection{Non-Local Operators}
+While local currents (such as the vector $\overline{q}\gamma_\mu q$ or axial $\overline{q}\gamma_\mu \gamma_5 q$ currents) probe static charges and moments, determining the momentum distribution of partons necessitates non-local operators. A non-local operator separates the quark and antiquark fields by a spatial or temporal distance. To preserve local color gauge invariance, the fields must be connected by a gauge link (Wilson line) $\mathcal{U}_{\mathcal{C}}$:
+\begin{equation}
+    \mathcal{O}_\Gamma(b) = \overline{q}(0) \Gamma \mathcal{U}_{\mathcal{C}}[0, b] q(b),
+\end{equation}
+where $\Gamma$ dictates the Dirac structure and $b$ defines the operator separation interval \cite{Musch:2011er}.
+
+\subsection{Introduction to TMD Three-Point Functions}
+Extracting Transverse Momentum Dependent Parton Distribution Functions (TMDs) relies entirely on evaluating matrix elements of non-local operators. The Sivers function and other naive T-odd TMDs intrinsically depend on initial or final state interactions. In the continuum formulation, these interactions are governed by light-like gauge links extending to infinity. On the Euclidean lattice, we substitute the unsimulatable light-like links with space-like, staple-shaped Wilson lines \cite{Musch:2011er}.
+
+The staple link, $\mathcal{U}_{\mathcal{C}}[0, \eta v, \eta v + b, b]$, introduces an explicit directional vector $v$ and staple extent $\eta$. The correlation function thus becomes a function of the operator separation $b$, the nucleon momentum $P$, and the specific staple geometry. Because evaluating this observable requires inserting the extended, highly non-trivial gauge link topology into the three-point function, the computational expense and gauge noise are significantly higher than for standard local operators. Accessing the phenomenologically vital $x$-dependence requires mapping the Fourier conjugate variable $b \cdot P$, meaning the three-point functions must be systematically evaluated across a wide range of separations $b$ and nucleon momenta $P$, whilst rigorously tracking the $\hat{\zeta}$ dependence (the Collins-Soper parameter) as the physical limit is approached.
+
+\subsection{Extracting Matrix Elements: The Ratio Method}
+To extract the bare matrix element from the lattice correlators, the standard approach is to construct a ratio of the three-point function to the two-point function. This strategically cancels the unknown overlap factors $Z(\mathbf{p})$ and the leading exponential time dependencies. A standard choice for the ratio is:
+\begin{equation}
+    R(t, \tau, \mathbf{p}) = \frac{C_3(t, \tau, \mathbf{p}, \mathbf{p})}{C_2(t, \mathbf{p})},
+\end{equation}
+where the momentum transfer has been set to zero ($\mathbf{p}' = \mathbf{p}$), as is appropriate for forward matrix elements like those strictly required for TMDs.
+
+In the ground-state saturation limit ($0 \ll \tau \ll t$), the ratio becomes independent of both $t$ and $\tau$, producing a stable "plateau" in Euclidean time:
+\begin{equation}
+    R(t, \tau, \mathbf{p}) \xrightarrow{0 \ll \tau \ll t} \frac{\langle H(\mathbf{p}) | \mathcal{O} | H(\mathbf{p}) \rangle}{2 E(\mathbf{p})}.
+\end{equation}
+From this plateau value, the physical matrix elements parameterizing the correlation function are isolated. For TMD studies, these matrix elements are subsequently decomposed into invariant amplitudes (such as $\tilde{A}_{2B}$ and $\tilde{A}_{12B}$ for the unpolarized and Sivers effects, respectively). Because the statistical noise of $C_3$ grows exponentially with $t$, the lattice analysis requires careful optimization of the source-sink separation to establish a clean plateau prior to the signal being overwhelmed by noise.

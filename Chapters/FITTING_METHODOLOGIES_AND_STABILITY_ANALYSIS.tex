@@ -1,63 +1,341 @@
 \section{FITTING METHODOLOGIES AND STABILITY ANALYSIS}
 
+\section{Methode: Fit from $(b_{L}, b_{T})$ space to $(P\cdot b, b^2)$ space}
+We do fits in $(b_{L}, b_{T})$ space and then convert them into $(P\cdot b, b^2)$ amplitudes. For example for simple Gaussian fit inn $(b_{L}, b_{T})$ space, we model the real amplitudes as
+\begin{align}
+    \tAmp^{Re}_{iB}&=\gamma \exp{\left[-\alpha \textcolor{red}{b_{L}^{2}}-\beta \textcolor{red}{b_{T}^{2}}\right]}\\
+    &=\gamma \exp{\left[-\alpha \textcolor{red}{b_{L}^{2}}-\beta \left(\textcolor{blue}{b}^{2}-\textcolor{red}{b_{L}^{2}}\right)\right]}\\
+    &=\gamma \exp{\left[-\left(\alpha-\beta\right) \textcolor{red}{b_{L}^{2}}-\beta \textcolor{blue}{b}^{2}\right]}\\
+   \tAmp^{Re}_{iB} &=\gamma \exp{\left[-\frac{\left(\alpha-\beta\right)}{P_{L}^2} (\textcolor{blue}{P\cdot b})^{2}-\beta \textcolor{blue}{b}^{2}\right]}
+\end{align}
+and we model the imaginary amplitudes as
+\begin{align}
+    \tAmp^{Im}_{iB}&=\gamma \textcolor{red}{b_{L}}\exp{\left[-\alpha \textcolor{red}{b_{L}^{2}}-\beta \textcolor{red}{b_{T}^{2}}\right]}\\
+    &=\gamma \textcolor{red}{b_{L}}\exp{\left[-\alpha \textcolor{red}{b_{L}^{2}}-\beta \left(\textcolor{blue}{b}^{2}-\textcolor{red}{b_{L}^{2}}\right)\right]}\\
+    &=\gamma \textcolor{red}{b_{L}}\exp{\left[-\left(\alpha-\beta\right) \textcolor{red}{b_{L}^{2}}-\beta \textcolor{blue}{b}^{2}\right]}\\
+    \tAmp^{Im}_{iB} &=\frac{\gamma}{P_{L}} (\textcolor{blue}{P\cdot b}) \exp{\left[-\frac{\left(\alpha-\beta\right)}{P_{L}^2} (\textcolor{blue}{P\cdot b})^{2}-\beta \textcolor{blue}{b}^{2}\right]}
+\end{align}
+
+\section{$\tAmp^{Re}_{2B}$: $\eta$-dependent Gaussian-type fit : $b\geq3$}
+\subsection{At fixed $\eta$}
+On fitting a Gaussian function at any given $\eta$
+\begin{align}
+    \tAmp^{Re}_{2B}=ae^{-cb_L^2}e^{-db_T^2}
+\end{align}
+we compared $\chi^2/DoF$. The differences in the parameters $c$ and $d$ will provide information about stability in $P.b$ space. 
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\linewidth]{Gaussian_type_fit_Real_A2B/Gaussian_eta_p-1.eps}
+    \caption{Gaussian fit for each $\eta$, $b\geq3$ and $P_L=-1$}
+    \label{fig:placeholder}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\linewidth]{Gaussian_type_fit_Real_A2B/Gaussian_eta_p-2.eps}
+    \caption{Gaussian fit for each $\eta$, $b\geq3$ and $P_L=-2$}
+    \label{fig:placeholder}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\linewidth]{Gaussian_type_fit_Real_A2B/Gaussian_eta_p-3.eps}
+    \caption{Gaussian fit for each $\eta$, $b\geq3$ and $P_L=-3$}
+    \label{fig:placeholder}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\linewidth]{Gaussian_type_fit_Real_A2B/Gaussian_eta_p-4.eps}
+    \caption{Gaussian fit for each $\eta$, $b\geq3$ and $P_L=-4$}
+    \label{fig:placeholder}
+\end{figure}
+
+We also tried a Lorentzian fit for each $\eta$:
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\linewidth]{Gaussian_type_fit_Real_A2B/Lorentzian_eta_p-1.eps}
+    \caption{Lorentzian fit for each $\eta$, $b\geq3$ and $P_L=-4$}
+    \label{fig:placeholder}
+\end{figure}
+
+\pagebreak
+
+~ 
+\pagebreak
+
+~ 
+\pagebreak
+
+\subsubsection{Finding best Fit: $b\geq3$}
+For $P_L=-1$, the range $7\leq\eta\leq10$ is found to be the most stable region for our analysis. We begin the fitting procedure with a simple Gaussian ansatz in $(b_L, b_T)$, which is a common baseline in lattice phenomenology. However, this model yields a high $\chi^2/\text{DoF} \approx 3.54$, indicating that a pure Gaussian decay is too steep to fit the data well.
+
+To address this, we systematically explore several functional variants. We find that introducing a power-law dependence significantly improves the quality of the fit. 
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\linewidth]{Gaussian_type_fit_Real_A2B/FitList_eta78910_p-1.eps}
+    \caption{Summary of various functional fits for $\tAmp^{Re}_{2B}$ for $7\leq\eta\leq10$, $b\geq3$ and $P_L=-1$}
+    \label{fig:placeholder}
+\end{figure}
+For $\tAmp^{Re}_{2B}$ for $7\leq\eta\leq10$, $b\geq3$ and $P_L=-1$, the picked model is
+{\color{blue}
+\begin{align}
+    \Aboxed{\tAmp^{Re}_{2B}(b_L, b_T,\eta)&=\frac{ae^{-f\eta}}{(1~+~c\eta^{g}b_{L}^2~+~db_{T}^{2})^{j}}}\\
+    \tAmp^{Re}_{2B}(b_L, b_T,\eta)&=\frac{[5.2(12)]e^{-[0.500(15)]\eta}}{(1~+~[0.034(17)]\eta^{[0.50(15)]}b_{L}^2~+~[0.103(29)]b_{T}^{2})^{[2.16(21)]}}
+\end{align}
+}
+
+\pagebreak
+To test the stability and range of $\eta$ and $b_{min}$, we fit:
+\begin{itemize}
+    \item \begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\linewidth]{Gaussian_type_fit_Real_A2B/Lorentzian_eta7-10_p-1_bleq3.eps}
+    \caption{Lorentzian-type Power-Law fit for $\tAmp^{Re}_{2B}$ for $7\leq\eta\leq10$, $b\geq3$ and $P_L=-1$}
+    \label{fig:placeholder}
+     \end{figure}
+
+     \item \begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\linewidth]{Gaussian_type_fit_Real_A2B/Lorentzian_eta6-10_p-1_bleq3.eps}
+    \caption{Lorentzian-type Power-Law fit for $\tAmp^{Re}_{2B}$ for $6\leq\eta\leq10$, $b\geq3$ and $P_L=-1$}
+    \label{fig:placeholder}
+     \end{figure}
+
+     \item \begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\linewidth]{Gaussian_type_fit_Real_A2B/Lorentzian_eta7-10_p-1_bleq2.eps}
+    \caption{Lorentzian-type Power-Law fit for $\tAmp^{Re}_{2B}$ for $7\leq\eta\leq10$, $b\geq2$ and $P_L=-1$}
+    \label{fig:placeholder}
+     \end{figure}
+
+     \item \begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\linewidth]{Gaussian_type_fit_Real_A2B/Lorentzian_eta6-10_p-1_bleq2.eps}
+    \caption{Lorentzian-type Power-Law fit for $\tAmp^{Re}_{2B}$ for $6\leq\eta\leq10$, $b\geq2$ and $P_L=-1$}
+    \label{fig:placeholder}
+     \end{figure}
+\end{itemize}
+
+\pagebreak
+\subsubsection{Let's fix the Power Law: $\frac{ae^{-f\eta}}{(1~+~c\eta^{g}b_{L}^2~+~db_{T}^{2})^{2}}$}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\linewidth]{Gaussian_type_fit_Real_A2B/LorentzianPower2_eta6-10_p-1_bleq3.eps}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\linewidth]{Gaussian_type_fit_Real_A2B/LorentzianPower2_eta6-10_p-2_bleq3.eps}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\linewidth]{Gaussian_type_fit_Real_A2B/LorentzianPower2_eta5-10_p-3_bleq3.eps}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\linewidth]{Gaussian_type_fit_Real_A2B/LorentzianPower2_eta5-9_p-4_bleq3.eps}
+\end{figure}
+
+
+\pagebreak
+\subsection{Re A2B: Asymptotic in $\eta$ functions}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\linewidth]{PowerLaw_etaAsymptotic/A2BfitFT_eta_Asymptotic_P1.pdf}
+\end{figure}
+
+\pagebreak
+\subsection{Asymptotic in $\eta$ functions (Wider Fourier transform ansatzs)}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\linewidth]{PowerLaw_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_P1.pdf}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\linewidth]{PowerLaw_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_P2.pdf}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\linewidth]{PowerLaw_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_P3.pdf}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\linewidth]{PowerLaw_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_compareP123.pdf}
+\end{figure}
+
+
+\pagebreak
+~
+
+\pagebreak
+~
+
+\pagebreak
+~
+
+\pagebreak
+~
+
+
 \subsection{Simultaneous Fit with Covariance matrix}
-\subsection{Fit to $A^{Re}_{2B}$, $A^{Im}_{2B}$ \&  $A^{Re}_{12B}$}
+\subsection{Fit to \texorpdfstring{$A^{Re}_{2B}, A^{Im}_{2B}~\&~A^{Re}_{12B}$}{TEXT}}
 
-\subsubsection{$P_L=-1$}
-\input{SimultaneousFitsCov/Fit_Table_PL-1_bmin3}
-\input{SimultaneousFitsCov/Integration_Table_PL-1_bmin3}
-
-\begin{figure}[h!]
+\renewcommand{\PLval}{-1}
+\subsubsection{\texorpdfstring{$\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$}{TEXT}}
+\input{SimultaneousFitsCov/Fit_Table_PL\PLval_bmin3}
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.5\linewidth]{SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-a_im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_PL-1.pdf}
+    \begin{tabular}{ccc}
+        % Column Headers
+        \textbf{$\widetilde{A}^{Re}_{2B}$} & \textbf{$\widetilde{A}^{Im}_{2B}$} & \textbf{$\widetilde{A}^{Re}_{12B}$} \\[2ex]
+        \includegraphics[width=0.3\linewidth]{plots/Amps_Fit/ReA12B_Pb_bsq_PL\PLval_WithFit_3D.pdf} &
+        \includegraphics[width=0.3\linewidth]{plots/Amps_Fit/ImA2B_PL\PLval_WithFit_3D.pdf} &
+        \includegraphics[width=0.3\linewidth]{plots/Amps_Fit/ReA12B_PL\PLval_WithFit_3D.pdf}\\[2ex]
+        \includegraphics[width=0.3\linewidth]{plots/Amps_Fit/ReA2B_Pb_bsq_PL\PLval_WithFit_3D.pdf} &
+        \includegraphics[width=0.3\linewidth]{plots/Amps_Fit/ImA2B_Pb_bsq_PL\PLval_WithFit_3D.pdf} &
+        \includegraphics[width=0.3\linewidth]{plots/Amps_Fit/ReA12B_Pb_bsq_PL\PLval_WithFit_3D.pdf} \\
+    \end{tabular}
+    \caption{Fit for $\widetilde{A}^{Re}_{2B}$, $\widetilde{A}^{Im}_{2B}$ \& $\widetilde{A}^{Re}_{12B}$ amplitudes for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space with the fit.}
+    \label{fig:A2B_amplitudes}
 \end{figure}
-\begin{figure}[h!]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.7\linewidth]{SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-3D_a_im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_PL-1.pdf}
+    \begin{tabular}{c}
+        \includegraphics[width=0.9\linewidth]{plots/Amps_Fit/Combined_eta8_PL\PLval_WithFit_2D.pdf} \\
+        \includegraphics[width=0.9\linewidth]{plots/Amps_Fit/Combined_Pb_bsq_eta8_PL\PLval_WithFit_2D.pdf} \\
+    \end{tabular}
+    \caption{Fit for $\widetilde{A}^{Re}_{2B}$, $\widetilde{A}^{Im}_{2B}$ \& $\widetilde{A}^{Re}_{12B}$ amplitudes for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ at fixed $\eta|\vect{v}|/a=8$. The top two row displays the $(b_{L}/a,b_{T}/a)-$space, while the bottom two row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2)-$space with the fit.}
+    \label{fig:placeholder}
+\end{figure}
+\pagebreak
+\input{SimultaneousFitsCov/Integration_Table_PL\PLval_bmin3}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.5\linewidth]{SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-a_im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_PL\PLval.pdf}
+\end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\linewidth]{SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-3D_a_im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_PL\PLval.pdf}
 \end{figure}
 
 \pagebreak
-\subsubsection{$P_L=-2$}
-\input{SimultaneousFitsCov/Fit_Table_PL-2_bmin3}
-
-\input{SimultaneousFitsCov/Integration_Table_PL-2_bmin3}
-
-\begin{figure}[h!]
+\renewcommand{\PLval}{-2}
+\subsubsection{\texorpdfstring{$\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$}{TEXT}}
+\input{SimultaneousFitsCov/Fit_Table_PL\PLval_bmin3}
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.5\linewidth]{SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-a_im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_PL-2.pdf}
+    \begin{tabular}{ccc}
+        % Column Headers
+        \textbf{$\widetilde{A}^{Re}_{2B}$} & \textbf{$\widetilde{A}^{Im}_{2B}$} & \textbf{$\widetilde{A}^{Re}_{12B}$} \\[2ex]
+        \includegraphics[width=0.3\linewidth]{plots/Amps_Fit/ReA12B_Pb_bsq_PL\PLval_WithFit_3D.pdf} &
+        \includegraphics[width=0.3\linewidth]{plots/Amps_Fit/ImA2B_PL\PLval_WithFit_3D.pdf} &
+        \includegraphics[width=0.3\linewidth]{plots/Amps_Fit/ReA12B_PL\PLval_WithFit_3D.pdf}\\[2ex]
+        \includegraphics[width=0.3\linewidth]{plots/Amps_Fit/ReA2B_Pb_bsq_PL\PLval_WithFit_3D.pdf} &
+        \includegraphics[width=0.3\linewidth]{plots/Amps_Fit/ImA2B_Pb_bsq_PL\PLval_WithFit_3D.pdf} &
+        \includegraphics[width=0.3\linewidth]{plots/Amps_Fit/ReA12B_Pb_bsq_PL\PLval_WithFit_3D.pdf} \\
+    \end{tabular}
+    \caption{Fit for $\widetilde{A}^{Re}_{2B}$, $\widetilde{A}^{Im}_{2B}$ \& $\widetilde{A}^{Re}_{12B}$ amplitudes for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space with the fit.}
+    \label{fig:A2B_amplitudes}
 \end{figure}
-\begin{figure}[h!]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.7\linewidth]{SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-3D_a_im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_PL-2.pdf}
+    \begin{tabular}{c}
+        \includegraphics[width=0.9\linewidth]{plots/Amps_Fit/Combined_eta8_PL\PLval_WithFit_2D.pdf} \\
+        \includegraphics[width=0.9\linewidth]{plots/Amps_Fit/Combined_Pb_bsq_eta8_PL\PLval_WithFit_2D.pdf} \\
+    \end{tabular}
+    \caption{Fit for $\widetilde{A}^{Re}_{2B}$, $\widetilde{A}^{Im}_{2B}$ \& $\widetilde{A}^{Re}_{12B}$ amplitudes for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ at fixed $\eta|\vect{v}|/a=8$. The top two row displays the $(b_{L}/a,b_{T}/a)-$space, while the bottom two row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2)-$space with the fit.}
+    \label{fig:placeholder}
+\end{figure}
+\pagebreak
+\input{SimultaneousFitsCov/Integration_Table_PL\PLval_bmin3}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.5\linewidth]{SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-a_im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_PL\PLval.pdf}
+\end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\linewidth]{SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-3D_a_im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_PL\PLval.pdf}
 \end{figure}
 
 \pagebreak
-\subsubsection{$P_L=-3$}
-\input{SimultaneousFitsCov/Fit_Table_PL-3_bmin3}
-
-\input{SimultaneousFitsCov/Integration_Table_PL-3_bmin3}
-
-\begin{figure}[h!]
+\renewcommand{\PLval}{-3}
+\subsubsection{\texorpdfstring{$\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$}{TEXT}}
+\input{SimultaneousFitsCov/Fit_Table_PL\PLval_bmin3}
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.6\linewidth]{SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-a_im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_PL-3.pdf}
+    \begin{tabular}{ccc}
+        % Column Headers
+        \textbf{$\widetilde{A}^{Re}_{2B}$} & \textbf{$\widetilde{A}^{Im}_{2B}$} & \textbf{$\widetilde{A}^{Re}_{12B}$} \\[2ex]
+        \includegraphics[width=0.3\linewidth]{plots/Amps_Fit/ReA12B_Pb_bsq_PL\PLval_WithFit_3D.pdf} &
+        \includegraphics[width=0.3\linewidth]{plots/Amps_Fit/ImA2B_PL\PLval_WithFit_3D.pdf} &
+        \includegraphics[width=0.3\linewidth]{plots/Amps_Fit/ReA12B_PL\PLval_WithFit_3D.pdf}\\[2ex]
+        \includegraphics[width=0.3\linewidth]{plots/Amps_Fit/ReA2B_Pb_bsq_PL\PLval_WithFit_3D.pdf} &
+        \includegraphics[width=0.3\linewidth]{plots/Amps_Fit/ImA2B_Pb_bsq_PL\PLval_WithFit_3D.pdf} &
+        \includegraphics[width=0.3\linewidth]{plots/Amps_Fit/ReA12B_Pb_bsq_PL\PLval_WithFit_3D.pdf} \\
+    \end{tabular}
+    \caption{Fit for $\widetilde{A}^{Re}_{2B}$, $\widetilde{A}^{Im}_{2B}$ \& $\widetilde{A}^{Re}_{12B}$ amplitudes for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space with the fit.}
+    \label{fig:A2B_amplitudes}
 \end{figure}
-\begin{figure}[h!]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.7\linewidth]{SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-3D_a_im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_PL-3.pdf}
+    \begin{tabular}{c}
+        \includegraphics[width=0.9\linewidth]{plots/Amps_Fit/Combined_eta8_PL\PLval_WithFit_2D.pdf} \\
+        \includegraphics[width=0.9\linewidth]{plots/Amps_Fit/Combined_Pb_bsq_eta8_PL\PLval_WithFit_2D.pdf} \\
+    \end{tabular}
+    \caption{Fit for $\widetilde{A}^{Re}_{2B}$, $\widetilde{A}^{Im}_{2B}$ \& $\widetilde{A}^{Re}_{12B}$ amplitudes for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ at fixed $\eta|\vect{v}|/a=8$. The top two row displays the $(b_{L}/a,b_{T}/a)-$space, while the bottom two row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2)-$space with the fit.}
+    \label{fig:placeholder}
+\end{figure}
+\pagebreak
+\input{SimultaneousFitsCov/Integration_Table_PL\PLval_bmin3}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.5\linewidth]{SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-a_im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_PL\PLval.pdf}
+\end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\linewidth]{SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-3D_a_im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_PL\PLval.pdf}
 \end{figure}
 
 \pagebreak
-\subsubsection{$P_L=-4$}
-\input{SimultaneousFitsCov/Fit_Table_PL-4_bmin3}
-
-\input{SimultaneousFitsCov/Integration_Table_PL-4_bmin3}
-
-\begin{figure}[h!]
+\renewcommand{\PLval}{-4}
+\subsubsection{\texorpdfstring{$\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$}{TEXT}}
+\input{SimultaneousFitsCov/Fit_Table_PL\PLval_bmin3}
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.6\linewidth]{SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-a_im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_PL-4.pdf}
+    \begin{tabular}{ccc}
+        % Column Headers
+        \textbf{$\widetilde{A}^{Re}_{2B}$} & \textbf{$\widetilde{A}^{Im}_{2B}$} & \textbf{$\widetilde{A}^{Re}_{12B}$} \\[2ex]
+        \includegraphics[width=0.3\linewidth]{plots/Amps_Fit/ReA12B_Pb_bsq_PL\PLval_WithFit_3D.pdf} &
+        \includegraphics[width=0.3\linewidth]{plots/Amps_Fit/ImA2B_PL\PLval_WithFit_3D.pdf} &
+        \includegraphics[width=0.3\linewidth]{plots/Amps_Fit/ReA12B_PL\PLval_WithFit_3D.pdf}\\[2ex]
+        \includegraphics[width=0.3\linewidth]{plots/Amps_Fit/ReA2B_Pb_bsq_PL\PLval_WithFit_3D.pdf} &
+        \includegraphics[width=0.3\linewidth]{plots/Amps_Fit/ImA2B_Pb_bsq_PL\PLval_WithFit_3D.pdf} &
+        \includegraphics[width=0.3\linewidth]{plots/Amps_Fit/ReA12B_Pb_bsq_PL\PLval_WithFit_3D.pdf} \\
+    \end{tabular}
+    \caption{Fit for $\widetilde{A}^{Re}_{2B}$, $\widetilde{A}^{Im}_{2B}$ \& $\widetilde{A}^{Re}_{12B}$ amplitudes for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space with the fit.}
+    \label{fig:A2B_amplitudes}
 \end{figure}
-\begin{figure}[h!]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.7\linewidth]{SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-3D_a_im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_PL-4.pdf}
+    \begin{tabular}{c}
+        \includegraphics[width=0.9\linewidth]{plots/Amps_Fit/Combined_eta8_PL\PLval_WithFit_2D.pdf} \\
+        \includegraphics[width=0.9\linewidth]{plots/Amps_Fit/Combined_Pb_bsq_eta8_PL\PLval_WithFit_2D.pdf} \\
+    \end{tabular}
+    \caption{Fit for $\widetilde{A}^{Re}_{2B}$, $\widetilde{A}^{Im}_{2B}$ \& $\widetilde{A}^{Re}_{12B}$ amplitudes for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ at fixed $\eta|\vect{v}|/a=8$. The top two row displays the $(b_{L}/a,b_{T}/a)-$space, while the bottom two row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2)-$space with the fit.}
+    \label{fig:placeholder}
+\end{figure}
+\pagebreak
+\input{SimultaneousFitsCov/Integration_Table_PL\PLval_bmin3}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.5\linewidth]{SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-a_im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_PL\PLval.pdf}
+\end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\linewidth]{SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-3D_a_im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_PL\PLval.pdf}
 \end{figure}
 \pagebreak
