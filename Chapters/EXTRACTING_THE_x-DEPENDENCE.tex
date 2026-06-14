@@ -1,35 +1,73 @@
 \section{EXTRACTING THE \texorpdfstring{$x-$}{TEXT}DEPENDENCE}
+\label{sec:x_dependence}
 
-\subsection{ Constraint \texorpdfstring{$b\cdot P \neq 0$}{TEXT} for (\texorpdfstring{$P_1=-1$}{TEXT})}
-From
+\subsection{The Sivers Shift as a Function of Momentum Fraction}
+In order to connect our lattice observables to the physical, $x$-dependent Transverse Momentum Dependent Parton Distribution Functions (TMDs), we must isolate the relevant amplitudes from the correlation function. Focusing on the leading-twist unpolarized quark distribution, the correlator is parameterized by the Lorentz-invariant amplitudes $\tAmp_{2B}$ and $\tAmp_{12B}$:
 \begin{align}
-    \frac{v \tcdot b}{v \tcdot P} = b \tcdot P \frac{R(\zetahat^2)}{\mN^2}
+    \frac{1}{2} \bra{P,S}\ \bar{q}(0)\ \gamma^{+}\ \WlineC{\mathcal{C}_\bvec}\ q(\bvec)\ \ket{P,S}=2P^{+}\left(\tAmp_{2B} 
+		+ i \mN \epsilon_{ij} \vect{\bvec}_i \vect{S}_j\, \tAmp_{12B} \right) \ .
 \end{align}
-We have,
+Our primary goal is to extract the generalized Sivers shift, $\langle \vect{k}_y \rangle_{TU}$, as a continuous function of the longitudinal momentum fraction $x = k^+ / P^+$. The Sivers shift is defined phenomenologically as the ratio of the first transverse momentum moment of the Sivers function to the unpolarized distribution. 
+
+Because $x$ and the longitudinal spatial separation $b \cdot P$ act as Fourier conjugate variables, mapping the $x$-dependence fundamentally requires performing a full Fourier transform of these amplitudes with respect to $b \cdot P$. Analytically, the $x$-dependent Sivers shift takes the form:
 \begin{align}
-    b_{1}|v|\left[\frac{P_{1}}{m_{N}}\left(\hat{\zeta}-\sqrt{\hat{\zeta}^2+1}\right)+\hat{\zeta}\frac{m_{N}}{P_{1}}\right]=\vec{v}_{T}\cdot\vec{b}_{T}
-\end{align}
-let $\vec{v}_{T}=(0,v_{3})$ and $\vec{b}_{T}=(b_{2},0)$
+   \langle \vect{k}_y \rangle_{TU}(\vprp{\bvec}^2,x,\zetahat,\eta v \tcdot P) 
+	&\ \equiv\ \mN \frac{\tilde f_{1T}^{\perp(1)}(\vprp{\bvec}^2;\zetahat,\ldots,\eta v \tcdot P)}{\tilde f_1^{(0)}(\vprp{\bvec}^2;\zetahat,\ldots,\eta v \tcdot P)} \nonumber \\
+ &=-m_{N} \frac{\int d(b\cdot P)e^{ix(b\cdot P)} \tAmp_{12B}(\bvec^2,\bvec \tcdot P,(\bvec \tcdot P) R(\zetahat^2)/\mN^2,-1/(\mN\zetahat)^2,\eta v \tcdot P)}{\int d(b\cdot P)e^{ix(b\cdot P)}\tAmp_{2B}(\bvec^2,\bvec \tcdot P,(\bvec \tcdot P) R(\zetahat^2)/\mN^2,-1/(\mN\zetahat)^2,\eta v \tcdot P)} \nonumber \\
+ &=-m_{N} \frac{\int d(b\cdot P)e^{ix(b\cdot P)} \left[\tAmp_{12B}^{\text{Re}}(\cdots)+i\tAmp_{12B}^{\text{Im}}(\cdots)\right]}{\int d(b\cdot P)e^{ix(b\cdot P)}\left[\tAmp_{2B}^{\text{Re}}(\cdots)+i\tAmp_{2B}^{\text{Im}}(\cdots)\right]}\\
+ &=-m_{N} \frac{\int d(b\cdot P) \left[\cos{\left(x(b\cdot P)\right)}\tAmp_{12B}^{\text{Re}}(\cdots)-\sin{\left(x(b\cdot P)\right)}\tAmp_{12B}^{\text{Im}}(\cdots)\right]}{\int d(b\cdot P)\left[\cos{\left(x(b\cdot P)\right)}\tAmp_{2B}^{\text{Re}}(\cdots)-\sin{\left(x(b\cdot P)\right)}\tAmp_{2B}^{\text{Im}}(\cdots)\right]} \ .
+ \end{align}
+ Expanding the Fourier phase factor into its trigonometric components isolates the amplitudes' real and imaginary contributions to the Sivers shift. Because the integration over $d(b \cdot P)$ is performed over a symmetric domain, the non-vanishing terms of the integral are completely dictated by the parity of the integrands with respect to $b \cdot P$. The trigonometric weights $\cos\left(x(b\cdot P)\right)$ and $\sin\left(x(b\cdot P)\right)$ are inherently even and odd, respectively.
+
+This harmonic symmetry elegantly filters the invariant amplitudes based on their behavior under Hermitian conjugation. As constrained by fundamental symmetries, the real components $\tAmp_{2B}^{\text{Re}}$ and $\tAmp_{12B}^{\text{Re}}$ must be even functions of $b \cdot P$, while the imaginary components $\tAmp_{2B}^{\text{Im}}$ and $\tAmp_{12B}^{\text{Im}}$ must be odd. Consequently, only the symmetric products, i.e., the even real amplitudes coupled with the cosine term, and the odd imaginary amplitudes coupled with the sine term, survive the integration. The operational challenge now lies in extracting these specific parity components from the discrete lattice data. The following section describes how we strategically construct our correlation functions to extract these distinct real and imaginary amplitudes.
+
+
+\subsection{The Collins-Soper Parameter (\texorpdfstring{$\hat{\zeta}$}{TEXT})}
+A fundamental complication in calculating TMDs is the presence of rapidity divergences induced by the gauge link extending to infinity. In the continuum, these divergences are regulated by tilting the Wilson line slightly off the light cone. In our Euclidean lattice framework, the staple direction $v$ must be strictly space-like ($v^2 < 0$). The Lorentz-invariant quantity that characterizes the proximity of our space-like gauge link to the physical light-like trajectory is the Collins-Soper parameter:
+\begin{equation}
+    \hat{\zeta} = \frac{v \cdot P}{m_N \sqrt{|v^2|}} \ .
+\end{equation}
+The physical TMD limit is recovered by extrapolating $\hat{\zeta} \to \infty$. In practice, since $v$ is a purely spatial vector on the lattice ($v_0 = 0$), increasing $\hat{\zeta}$ requires simulating the nucleon at progressively higher spatial momenta $\vect{P}$. Tracking the evolution of the Sivers shift across multiple values of $\hat{\zeta}$ is therefore an indispensable step for phenomenological predictions.
+
+\subsection{Kinematic Constraints for \texorpdfstring{$b\cdot P \neq 0$}{TEXT}}
+To perform the Fourier transform over $b \cdot P$, we require a lattice geometry where $b \cdot P$ is non-zero. However, the Lorentz-invariant arguments of the amplitudes are not independent. Our chosen frame ($b^+=0, \vprp{P}=0$) enforces the constraint:
 \begin{align}
-    \mN &= 1067\text{ MeV};~~~~P_{1}=-\frac{2\pi}{L}=-\frac{2\pi}{32\times 0.114\text{ fm}}=-339.3\text{ MeV},
+    \frac{v \tcdot b}{v \tcdot P} = b \tcdot P \frac{R(\zetahat^2)}{\mN^2} \ ,
 \end{align}
-then
+where $R(\zetahat^2) = 1 - \sqrt{1 + \zetahat^{-2}}$. Expanding the dot products in a frame where the momentum is directed along the 1-axis ($P = (E, P_1, 0, 0)$), we find:
 \begin{align}
-   \Longrightarrow \left[\frac{P_{1}}{m_{N}}\left(\hat{\zeta}-\sqrt{\hat{\zeta}^2+1}\right)+\hat{\zeta}\frac{m_{N}}{P_{1}}\right]&=0\\
-    \Longrightarrow \hat{\zeta} &=\sqrt{\frac{P_{1}^2}{m_{N}^{2}\left(\frac{m_{N}^{2}}{P_{1}^{2}}+2\right)}}\\
-    \Aboxed{\hat{\zeta} &= \pm 0.0922238}.
+    b_{1}|v|\left[\frac{P_{1}}{m_{N}}\left(\hat{\zeta}-\sqrt{\hat{\zeta}^2+1}\right)+\hat{\zeta}\frac{m_{N}}{P_{1}}\right]=\vec{v}_{T}\cdot\vec{b}_{T} \ .
 \end{align}
-Now,
+To satisfy this equation over a continuous range of $b \cdot P$ without coupling the transverse separation $\vec{b}_T$ directly to the longitudinal staple geometry, we deliberately orient the transverse vectors orthogonally. By choosing $\vec{v}_{T}=(0,v_{3})$ and $\vec{b}_{T}=(b_{2},0)$, the right-hand side identically vanishes ($\vec{v}_{T}\cdot\vec{b}_{T} = 0$). 
+
+\subsubsection{Explicit Calculation for \texorpdfstring{$P_1=-1$}{TEXT}}
+Setting the right-hand side to zero implies that the bracketed term must vanish. This uniquely fixes the required Collins-Soper parameter for a given lattice momentum. Using the lattice ensemble parameters, the nucleon mass and the lowest momentum mode are:
 \begin{align}
-    \hat{\zeta}&=\frac{-v_{1}P_{1}}{|v|\mN}=\frac{-v_{1}P_{1}}{\left(\sqrt{v_{1}^{2}+0^{2}+v_{3}^{2}}\right)m_{N}}
+    \mN &= \frac{0.6228(28)}{0.11403\text{ fm}} =  \frac{0.6228(28)\times 197.32698 \text{ MeV}}{0.11403} = 1077.8(48)\text{ MeV} \ , \\
+    P_{1}&=-\frac{2\pi}{L}=-\frac{2\pi}{32\times 0.11403\text{ fm}}=-339.3\text{ MeV} \ .
 \end{align}
-on solving for $v_{1}$,
+Substituting these values into the constraint equation yields:
 \begin{align}
-    \Longrightarrow\Aboxed{v_{1}=\pm 0.303023~v_{3}}
+   \Longrightarrow \left[\frac{P_{1}}{m_{N}}\left(\hat{\zeta}-\sqrt{\hat{\zeta}^2+1}\right)+\hat{\zeta}\frac{m_{N}}{P_{1}}\right]&=0 \nonumber \\
+    \Longrightarrow \hat{\zeta} &=\sqrt{\frac{P_{1}^2}{m_{N}^{2}\left(\frac{m_{N}^{2}}{P_{1}^{2}}+2\right)}} \nonumber \\
+    \hat{\zeta} &= \pm 0.09077(75) \nonumber \\
+    \Aboxed{\hat{\zeta} &= \pm 0.090772} \ .
 \end{align}
-Similarly, we find for all momenta as follows
+With $\hat{\zeta}$ uniquely determined, we can derive the specific orientation of the space-like staple vector $v$. From the definition of $\hat{\zeta}$:
+\begin{align}
+    \hat{\zeta}&=\frac{-v_{1}P_{1}}{|v|\mN}=\frac{-v_{1}P_{1}}{\left(\sqrt{v_{1}^{2}+0^{2}+v_{3}^{2}}\right)m_{N}} \ .
+\end{align}
+Solving for the longitudinal staple component $v_1$ in terms of the transverse component $v_3$:
+\begin{align}
+    \Longrightarrow\Aboxed{v_{1}=\pm 0.301~v_{3}} \ .
+\end{align}
+
+\subsection{Lattice Parameter Space and Off-Axis Links}
+This geometric calculation is repeated across a spectrum of nucleon momenta to systematically increase $\hat{\zeta}$. The resulting constraint parameters are summarized in Table \ref{tab:zeta_directions}.
+
 \begin{table}[h!]
     \centering
+    \renewcommand{\arraystretch}{1.3}
     \begin{tabular}{|c|c|c|}
     \hline
         $\vect{P}\cdot a\hat{L}/(2\pi)$ & $\hat{\zeta}$ &  $v_{1}$\\
@@ -43,13 +81,13 @@ Similarly, we find for all momenta as follows
         $(-4,0,0)$ & $\pm 0.785756$ &$v_{1}=\pm 0.786~v_{3}$\\
         \hline
     \end{tabular}
-    \caption{Directions of $\vect{v}$ vector}
-    \label{tab:placeholder}
+    \caption{Resulting Collins-Soper parameters ($\hat{\zeta}$) and the necessary geometric constraint on the staple vector components to ensure $b \cdot P \neq 0$.}
+    \label{tab:zeta_directions}
 \end{table}
 
-So, we have
 \begin{table}[h!]
     \centering
+    \renewcommand{\arraystretch}{1.3}
     \begin{tabular}{|c|c|c|}
     \hline
        $\vect{\bvec}/a$  &  $\eta \vect{v}/a$ & $\vect{P}\cdot a\hat{L}/(2\pi)$\\
@@ -57,75 +95,234 @@ So, we have
         $(b_{1},b_{2},0)$ & $ \eta\cdot(v_{1},0,v_{3})$, $\eta=0,\cdots,10$  & $(n,0,0)$, $n=-1,-2,-3,-4$\\
         \hline
     \end{tabular}
-    \caption{Parameters of Lattice QCD calculations}
-    \label{tab:my_label}
+    \caption{Configuration parameters for the Lattice QCD non-local matrix element extraction.}
+    \label{tab:lattice_params}
 \end{table}
 
-\begin{figure}
+A profound consequence of Table \ref{tab:zeta_directions} is that the staple vector $v$ cannot align cleanly with the Cartesian axes of the Euclidean grid. Instead, it must point in an off-axis direction within the $v_1-v_3$ plane. For example, to achieve $v_1 = 0.301~v_3$ at $|P| = 1$, the Wilson line must trace an oblique, step-wise path across the discrete lattice sites (e.g., traversing roughly three lattice spacings in the 1-direction for every ten in the 3-direction). Generating these off-axis Wilson lines without injecting excessive discretization noise is a major operational challenge of this analysis, dictating our strategies for link smearing and gauge path selection.
+
+\begin{figure}[htpb]
     \centering
-    \includegraphics[width=0.5\linewidth]{plots/kinematics_interpolation/v1_v2_allzetahat_plot.pdf}
-    \caption{Caption}
-    \label{fig:placeholder}
+    \includegraphics[width=0.6\linewidth]{plots/kinematics_interpolation/v1_v2_allzetahat_plot.pdf}
+    \caption{Directions of the spatial staple vectors $\vect{v}$ mapped in the $v_1-v_3$ plane. Each vector corresponds to the requisite geometry to satisfy the $b \cdot P \neq 0$ constraint for the four sequential Collins-Soper parameters $\hat{\zeta}$.}
+    \label{fig:v_allzetahat}
+\end{figure}
+
+\subsubsection{Off-Axis \texorpdfstring{$\vect{v}$}{TEXT} and Spatial Interpolation}
+
+To evaluate the correlation function as a function of the staple extent, we scale the direction vector $\vect{v}$ by an increment $\eta$, and $\vect{v}$ is a unit vector. The physical length of the staple is thus governed by the coordinate $\eta \vect{v}/a$. Because $\vect{v}$ points in a continuous, off-axis direction, scaling it by integer values of $\eta$ generally yields target coordinates that fall somewhere between the discrete Cartesian lattice sites. 
+
+ To access the continuous off-axis coordinate $\eta \vect{v}/a$, we employ a spatial bounding and interpolation strategy. Rather than constructing a single, potentially biased step-wise path (a "staircase") that roughly approximates the vector, we explicitly compute the observable at multiple distinct integer lattice sites surrounding the exact ideal target coordinate. 
+ 
+ These bounding coordinates are reached via specific permutations of fundamental links. Within our methodology, a path sequence denoted as $\{1,3,1\}$ corresponds to a single link in the $\hat{x_{1}}$ direction, followed by one in the $\hat{x_{3}}$ direction, and a final link in the $\hat{x_{1}}$ direction, successfully landing at the physical integer coordinate $(2,0,1)$. By systematically varying these step sequences, we gather data at three to four physically adjacent lattice sites (e.g., on either side of the target along the $x^3$ slice). 
+
+Once these bounding matrix elements are computed, we perform a spatial interpolation inside the Jackknife resampling loop to extract the value precisely at the continuous target coordinate $\eta \vect{v}/a$. This interpolation drastically mitigates discretization artifacts and staircase errors associated with off-axis Wilson lines. A detailed mathematical description of this interpolation procedure is deferred to the subsequent section. The ideal continuous trajectories, alongside their corresponding discrete bounding paths and link sequences for each momentum transfer, are detailed in Figures \ref{fig:v_path_P-1} through \ref{fig:eta_table_P-4}.
+
+% ---------------------------------------------------------
+% P_1 = -1 Figures
+% ---------------------------------------------------------
+\begin{figure}[htpb]
+    \centering
+    \begin{minipage}{0.38\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{plots/kinematics_interpolation/v1_v2_withPath_forP-1_plot.pdf}
+        \caption{Ideal continuous trajectory of the off-axis staple vector (solid blue) for $P_1 = -1$. Circular markers indicate target continuous coordinates for sequential values of $\eta$. Dashed lines illustrate the discrete, step-wise permutations of gauge links used to reach the surrounding bounding integer lattice sites.}
+        \label{fig:v_path_P-1}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{plots/kinematics_interpolation/eta_gauge_links_forP-1_table.pdf}
+        \caption{Discrete gauge link configurations defining the interpolation bounds for $P_1 = -1$. Empty brackets $\{\}$ denote a zero-length origin link, while numerical arrays (e.g., $\{1,3,1\}$) explicitly dictate the sequential directional steps.}
+        \label{fig:eta_table_P-1}
+    \end{minipage}
+\end{figure}
+
+% ---------------------------------------------------------
+% P_1 = -2 Figures
+% ---------------------------------------------------------
+\begin{figure}[htpb]
+    \centering
+    \begin{minipage}{0.38\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{plots/kinematics_interpolation/v1_v2_withPath_forP-2_plot.pdf}
+        \caption{Ideal continuous trajectory and corresponding discrete bounding paths for the off-axis staple vector at $P_1 = -2$.}
+        \label{fig:v_path_P-2}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{plots/kinematics_interpolation/eta_gauge_links_forP-2_table.pdf}
+        \caption{Discrete gauge link configurations defining the interpolation bounds for $P_1 = -2$.}
+        \label{fig:eta_table_P-2}
+    \end{minipage}
+\end{figure}
+
+% ---------------------------------------------------------
+% P_1 = -3 Figures
+% ---------------------------------------------------------
+\begin{figure}[htpb]
+    \centering
+    \begin{minipage}{0.38\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{plots/kinematics_interpolation/v1_v2_withPath_forP-3_plot.pdf}
+        \caption{Ideal continuous trajectory and corresponding discrete bounding paths for the off-axis staple vector at $P_1 = -3$.}
+        \label{fig:v_path_P-3}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{plots/kinematics_interpolation/eta_gauge_links_forP-3_table.pdf}
+        \caption{Discrete gauge link configurations defining the interpolation bounds for $P_1 = -3$.}
+        \label{fig:eta_table_P-3}
+    \end{minipage}
+\end{figure}
+
+% ---------------------------------------------------------
+% P_1 = -4 Figures
+% ---------------------------------------------------------
+\begin{figure}[htpb]
+    \centering
+    \begin{minipage}{0.38\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{plots/kinematics_interpolation/v1_v2_withPath_forP-4_plot.pdf}
+        \caption{Ideal continuous trajectory and corresponding discrete bounding paths for the off-axis staple vector at $P_1 = -4$.}
+        \label{fig:v_path_P-4}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{plots/kinematics_interpolation/eta_gauge_links_forP-4_table.pdf}
+        \caption{Discrete gauge link configurations defining the interpolation bounds for $P_1 = -4$.}
+        \label{fig:eta_table_P-4}
+    \end{minipage}
 \end{figure}
 
 \pagebreak
-\subsubsection{Off-axis \texorpdfstring{$\vect{v}$}{TEXT}}
-\begin{figure}[h!]
+\subsubsection{Spatial Interpolation of Off-Axis Coordinates}
+\label{sec:spatial_interpolation}
+
+As established in the previous section, the ideal spatial trajectory of the gauge link, $\eta \vect{v}/a$, rarely falls on an exact integer lattice site. To evaluate the correlation function along this continuous trajectory, we compute the non-local matrix elements at several discrete bounding coordinates and interpolate between them. 
+
+Before interpolating, we must account for path degeneracy. Because the lattice gauge links are restricted to the Cartesian axes, there are multiple step-wise permutations (different side-link paths) that terminate at the exact same physical lattice coordinate. While these paths are geometrically equivalent in terms of their endpoints, they traverse different local gauge field configurations and thus acquire distinct discretization artifacts and gauge noise. As illustrated in Figure \ref{fig:example_2path}, we average the correlation functions evaluated over all degenerate paths that share the same endpoint. This path-averaging procedure significantly improves the signal-to-noise ratio before any interpolation is performed.
+
+\begin{figure}[htpb]
     \centering
-    \includegraphics[width=0.5\linewidth]{plots/kinematics_interpolation/v1_v2_withPath_forP-1_plot.pdf}
-    \caption{Caption}
-    \label{fig:placeholder}
-\end{figure}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.8\linewidth]{plots/kinematics_interpolation/eta_gauge_links_forP-1_table.pdf}
-    \caption{Caption}
-    \label{fig:placeholder}
+    \includegraphics[width=0.25\linewidth]{plots/kinematics_interpolation/Example_v_plot_with_2path.pdf}
+    \caption{Illustration of path degeneracy. Two distinct step-wise gauge link permutations (e.g., solid and dashed lines) terminate at the identical discrete lattice coordinate. The correlators from these equivalent paths are averaged to suppress local gauge noise prior to interpolation.}
+    \label{fig:example_2path}
 \end{figure}
 
-\begin{figure}[h!]
+Once the path-averaged correlators are obtained at the discrete bounding sites, we perform a 1-dimensional interpolation. For a fixed transverse staple extent $v_3$, the kinematic constraint dictates an ideal continuous longitudinal component, $v_1^{\text{constraint}}$. The surrounding discrete lattice sites provide correlators at actual simulated coordinates, $v_1^{\text{lattice}}$. We define the fractional deviation from the ideal path as:
+\begin{equation}
+    \Delta v_1 = \frac{v_1^{\text{constraint}} - v_1^{\text{lattice}}}{a} \ .
+\end{equation}
+By calculating the observable at three or more bounding lattice sites, we generate a set of data points as a function of this deviation $\Delta v_1$. Within each Jackknife resampling bin (to rigorously preserve the covariance and statistical error), we perform a quadratic interpolation over these points. The physical amplitude lying precisely on the continuous constraint trajectory is then extracted by evaluating the interpolating polynomial exactly at $\Delta v_1 = 0$. 
+
+The core Mathematica logic executed inside the data analysis pipeline to perform this quadratic interpolation is shown in the snippet below:
+
+\begin{lstlisting}[language=Mathematica, basicstyle=\ttfamily\footnotesize, frame=single, numbers=left, breaklines=true, breakatwhitespace=true, caption={Core interpolation logic for evaluating the constrained correlator.}, label={lst:interpolation}]
+(* Pair fractional deviation (x) with path-averaged data (y) *)
+plotforinterpolation = Transpose[{v1dataforInterpolation, 
+                                  dataforInterpolation}];
+
+(* Construct quadratic interpolation over bounding points *)
+fninterpol = Interpolation[plotforinterpolation, 
+                           InterpolationOrder -> 2];
+
+(* Evaluate exactly on the constraint trajectory (deviation = 0) *)
+interpol0 = {{0, fninterpol[0]}};
+\end{lstlisting}
+
+A representative example of this interpolation procedure is shown in Figure \ref{fig:interpolation_ex} for a specific staple extent ($\eta=7$) and momentum transfer ($P_1 = -1$). The red data points represent the path-averaged lattice evaluations at the discrete bounding sites, plotted against their deviation from the ideal trajectory. The solid gray curve denotes the quadratic interpolation, and the blue point highlights the final extracted physical value at $\Delta v_1 = 0$. This procedure is systematically applied across all Dirac structures ($\Gamma$) and separately for both the real ($b\cdot P$-even) and imaginary ($b\cdot P$-odd) parts of the amplitudes.
+
+\begin{figure}[htpb]
     \centering
-    \includegraphics[width=0.5\linewidth]{plots/kinematics_interpolation/v1_v2_withPath_forP-2_plot.pdf}
-    \caption{Caption}
-    \label{fig:placeholder}
-\end{figure}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.8\linewidth]{plots/kinematics_interpolation/eta_gauge_links_forP-2_table.pdf}
-    \caption{Caption}
-    \label{fig:placeholder}
+    \includegraphics[width=0.5\linewidth]{plots/kinematics_interpolation/Interpolation_Ex_b120_eta7_P-1.pdf}
+    \caption{Quadratic interpolation of the real and imaginary parts of the correlation function for $\vect{b}=\{1,2,0\}$, $\eta=7$, and $\vect{P}\cdot a\hat{L}/(2\pi)=(-1,0,0)$. Red markers indicate the path-averaged lattice data points as a function of their deviation from the ideal constraint trajectory, $\Delta v_1 = (v_1^{\text{constraint}} - v_1^{\text{lattice}})/a$. The gray band indicates the quadratic fit (`InterpolationOrder $\rightarrow$ 2`), and the central blue marker represents the final extracted value at $\Delta v_1 = 0$, lying exactly on the required off-axis spatial trajectory.}
+    \label{fig:interpolation_ex}
 \end{figure}
 
-\begin{figure}[h!]
+\subsection{Quark Separation Vectors (\texorpdfstring{$\vect{b}$}{TEXT}) and Amplitude Parity}
+\label{sec:b_separation_paths}
+
+In addition to the staple vector $\vect{v}$, the correlation function depends fundamentally on the spatial separation between the initial and final quark fields, $\vect{b}$. As established, the real and imaginary parts of the invariant amplitudes ($\tAmp_{iB}^{\text{Re}}$ and $\tAmp_{iB}^{\text{Im}}$) are strictly even and odd functions of the longitudinal separation variable $b \cdot P$, respectively. 
+
+Because the nucleon momentum in our lattice setup is fixed along the $\hat{x_{1}}$-axis ($P = P_1 \hat{x_{1}}$), the longitudinal separation is directly proportional to the $\hat{x_{1}}$-component of the separation vector: $b \cdot P = -P_1 b_1$. Therefore, to isolate the real and imaginary parts of the amplitudes, we must evaluate the correlator at both positive and negative values of $b_1$. By taking the symmetric (even) and antisymmetric (odd) linear combinations of the correlators evaluated at $+b_1$ and $-b_1$, we can explicitly project out the real and imaginary amplitudes required for the $x$-dependent Fourier transform.
+
+To perform a robust numerical Fourier transform over $b \cdot P$, it is imperative to sample a wide and dense grid of the separation vector $\vect{b}$. Figure \ref{fig:b_phase_space} illustrates the parameter space targeted in our calculations. The left panel shows the discrete Cartesian grid evaluated in the $b_1-b_2$ plane, while the right panel demonstrates how this discrete spatial grid maps onto the phenomenologically relevant invariant phase space spanned by $b \cdot P/(2\pi)$ and the absolute separation $|b|/a$, dynamically shifting depending on the target Collins-Soper parameter $\hat{\zeta}$.
+
+\begin{figure}[htpb]
     \centering
-    \includegraphics[width=0.5\linewidth]{plots/kinematics_interpolation/v1_v2_withPath_forP-3_plot.pdf}
-    \caption{Caption}
-    \label{fig:placeholder}
-\end{figure}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.8\linewidth]{plots/kinematics_interpolation/eta_gauge_links_forP-3_table.pdf}
-    \caption{Caption}
-    \label{fig:placeholder}
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{plots/kinematics_interpolation/bL_bT_plot.pdf}
+        \caption{The sampled operator separation vectors mapped in the spatial $b_1-b_2$ plane (where $b_1 \equiv b_L$ and $b_2 \equiv b_T$).}
+        \label{fig:bL_bT_path}
+    \end{minipage}
+    \hspace{0.05\textwidth} % Adds a controlled gap between the two smaller images
+    \begin{minipage}{0.4\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{plots/kinematics_interpolation/Pb_bsq_plot.pdf}
+        \caption{Mapping of the spatial lattice vectors into the physical invariant phase space $(b \cdot P/(2\pi), |b|/a)$. The trajectories diverge based on the selected target $\hat{\zeta}$.}
+        \label{fig:bL_bT_standard}
+    \end{minipage}
+    \caption{Coverage of the quark separation vectors across the simulated lattice volume and their corresponding physical phase space representation.}
+    \label{fig:b_phase_space}
 \end{figure}
 
-\begin{figure}[h!]
+\subsubsection{Gauge Link Construction for \texorpdfstring{$\vect{b}$}{TEXT}}
+Constructing the direct Wilson line connecting the quark fields at $0$ and $\vect{b}$ requires generating step-wise paths across the lattice. We categorize these paths into purely transverse separations ($b_1 = 0$) and off-axis separations with a longitudinal component ($b_1 \neq 0$).
+
+For strictly transverse separations, where $b \cdot P = 0$, the gauge links are constructed entirely within the transverse plane. Table \ref{fig:b_table_transverse} lists the fundamental link sequences used to reach these target coordinates. An empty bracket $\{\}$ denotes the local origin, while arrays such as $\{2,2\}$ indicate a sequence of two consecutive links in the $\hat{x_{2}}$-direction.
+
+\begin{figure}[htpb]
     \centering
-    \includegraphics[width=0.5\linewidth]{plots/kinematics_interpolation/v1_v2_withPath_forP-4_plot.pdf}
-    \caption{Caption}
-    \label{fig:placeholder}
+    \includegraphics[width=0.65\linewidth]{plots/kinematics_interpolation/b_gauge_links_for_table1.pdf}
+    \caption{Discrete gauge link configurations for strictly transverse quark separations ($\vect{b} = \{0, b_2, b_3\}$). Numerical arrays dictate the sequential lattice steps (e.g., `2` represents a shift in the $x_2$ direction).}
+    \label{fig:b_table_transverse}
 \end{figure}
-\begin{figure}[h!]
+
+To access finite $b \cdot P$, we construct off-axis paths with simultaneous steps in the longitudinal ($\hat{x_{1}}$) and transverse ($\hat{x_{2}}$) directions. To preserve the symmetry required for isolating parity states, every path designed to reach a $+b_1$ coordinate is mirrored by an exact counterpart reaching $-b_1$. These mirrored sequences are detailed side-by-side in Figure \ref{fig:b_tables_longitudinal}. Sequences such as $\{2,1\}$ indicate an alternating "staircase" step: one unit in the $\hat{x_{2}}$-direction followed by one unit in the $\hat{x_{1}}$-direction. 
+
+\begin{figure}[htpb]
     \centering
-    \includegraphics[width=0.8\linewidth]{plots/kinematics_interpolation/eta_gauge_links_forP-4_table.pdf}
-    \caption{Caption}
-    \label{fig:placeholder}
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{plots/kinematics_interpolation/b_gauge_links_for_table2.pdf}
+        \caption{Gauge link sequences for $+b_1$ (positive longitudinal separation).}
+        \label{fig:b_table_pos_b1}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{plots/kinematics_interpolation/b_gauge_links_for_table3.pdf}
+        \caption{Mirrored gauge link sequences for $-b_1$ (negative longitudinal separation).}
+        \label{fig:b_table_neg_b1}
+    \end{minipage}
+    \caption{Symmetric sets of step-wise gauge link paths required to access finite $\pm b \cdot P$ and isolate the real and imaginary components of the invariant amplitudes.}
+    \label{fig:b_tables_longitudinal}
 \end{figure}
 
+\subsubsection{Path Averaging for \texorpdfstring{$\vect{b}$}{TEXT}}
 
+Similar to the logic applied to the off-axis staple vector $\vect{v}$, the off-axis separation vector $\vect{b}$ suffers from path degeneracy. Multiple distinct sequences of orthogonal lattice links can terminate at the identical spatial coordinate $\vect{b}$. Because these different paths traverse slightly different local gauge field fluctuations, computing the observable along just one path introduces arbitrary discretization noise. 
 
-\subsection{Deriving \texorpdfstring{$\widetilde \Phi^{[\gamma^+]}$}{TEXT}}
-Let's start with the parametrization of the correlator \cite{BMush_Engelhardt2012},
+To mitigate this, we average the correlation function over multiple equivalent step-wise paths that share the same origin and endpoint, as illustrated for a single coordinate in Figure \ref{fig:b_path_example}. Applying this path-averaging strategy across the entire target grid yields a comprehensive network of smoothed off-axis trajectories, visualized in Figure \ref{fig:b_full_network}. This path-averaged dataset provides the statistically robust, parity-separated amplitudes required for the final Fourier transform.
+
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.3\linewidth]{plots/kinematics_interpolation/Example_b_plot_with_2path.pdf}
+    \caption{Illustration of path degeneracy for the quark separation vector $\vect{b}$. Distinct step-wise permutations (solid and dashed lines) terminating at the same Cartesian coordinate are averaged to suppress local gauge noise.}
+    \label{fig:b_path_example}
+\end{figure}
+
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.3\linewidth]{plots/kinematics_interpolation/bL_bT_plot_with_path.pdf}
+    \caption{The full network of path-averaged $\vect{b}$ vectors in the $b_1/a - b_2/a$ plane. Solid red lines represent the ideal vectors, while dashed lines illustrate the underlying degenerate staircase paths calculated and averaged on the discrete lattice.}
+    \label{fig:b_full_network}
+\end{figure}
+
+\subsection{Solving for Real and Imaginary Amplitudes \texorpdfstring{$\tAmp_{iB}^{\text{Re}}$ and $\tAmp_{iB}^{\text{Im}}$}{TEXT}}
+\label{sec:solving_amplitudes}
+
+To extract the physical Sivers shift from the lattice, we must isolate the specific invariant amplitudes $\tAmp_{2B}$ and $\tAmp_{12B}$ from the raw correlator data. Let us start with the standard parametrization of the unsubtracted correlator \cite{Musch:2011er}:
 \begin{align}
     \frac{1}{2}\widetilde \Phi^{[\gamma^\mu]}_{\unsub} & = 
 		P^\mu\, \tAmp_2 - i \mN^2 \bvec^\mu\, \tAmp_3
@@ -136,7 +333,7 @@ Let's start with the parametrization of the correlator \cite{BMush_Engelhardt201
 		~~- \frac{\mN^3}{v \tcdot P} (\bvec \tcdot S) \epsilon^{\mu \nu \alpha \beta} P_\nu \bvec_\alpha v_\beta\, \tBmp_9
 		- \frac{i \mN^3}{(v \tcdot P)^2} (v \tcdot S) \epsilon^{\mu \nu \alpha \beta} P_\nu \bvec_\alpha v_\beta \tBmp_{10}
 \end{align}
- For the lattice calculations, it is, however, advantageous to start with an equivalent parametrization in which the structures explicitly depend on the staple extent $\eta$ and which is still well-defined for $ v\cdot P = 0$. Such a parametrization can be obtained from the parametrization above by replacing $v \rightarrow \eta v$ and by leaving out the factors $(v \tcdot P)^{-n}$. 
+While this parametrization describes a continuous gauge link extending to infinity, for practical lattice calculations, it is highly advantageous to adopt an equivalent representation where the structures explicitly depend on the finite staple extent $\eta$. This ensures the parametrization remains mathematically well-defined even in the $v \cdot P = 0$ limit. This alternative form is obtained by making the substitution $v \rightarrow \eta v$ and extracting the scaling factors $(v \tcdot P)^{-n}$:
  \begin{align}
     \frac{1}{2}\widetilde \Phi^{[\gamma^\mu]}_{\unsub}=\frac{1}{2} R_{\gamma^{\mu}} E_N & =  
 		P^\mu\, \tilde a_2 - i \mN^2 \bvec^\mu\, \tilde a_3
@@ -147,7 +344,7 @@ Let's start with the parametrization of the correlator \cite{BMush_Engelhardt201
 		~~- \mN^3 (\bvec \tcdot S) \epsilon^{\mu \nu \alpha \beta} P_\nu \bvec_\alpha \eta v_\beta\, \tilde b_9
 		-i \mN^3 (v \tcdot S) \epsilon^{\mu \nu \alpha \beta} P_\nu \bvec_\alpha \eta^2 v_\beta \tilde b_{10}
 \end{align}
-For $P^{\mu}=(E_N, -|\vec{P}^1|,0,0)$, $b^{\mu}=(0,b_{1},b_{2},0)$, $v^{\mu}=\pm n^{\prime}(0,v_{1},0,v_{3})$, $S^{\mu}=(0,0,0,1)$,
+To evaluate this tensor equation, we project it onto the specific kinematics optimized for our lattice setup. We choose a frame where the nucleon moves along the negative $\hat{1}$-axis, the spin is polarized along the $\hat{3}$-axis, and the separation and staple vectors lie in the transverse/longitudinal planes. Explicitly, we set $P^{\mu}=(E_N, -|\vec{P}^1|,0,0)$, $b^{\mu}=(0,b_{1},b_{2},0)$, $v^{\mu}=\pm n^{\prime}(0,v_{1},0,v_{3})$, and $S^{\mu}=(0,0,0,1)$. Expanding the sum over Lorentz indices for the temporal component ($\mu = 0$) and explicitly cancelling the vanishing terms (such as $b^0 = 0$, $v^0 = 0$, and $\bvec \tcdot S = 0$), we find:
 \begin{align}
     \frac{1}{2}\widetilde \Phi^{[\gamma^{0}]}_{\unsub} & = 
 		P^0\, \tAmp_2 - \cancelto{0}{i \mN^2 \bvec^0\, \tAmp_3}
@@ -156,27 +353,25 @@ For $P^{\mu}=(E_N, -|\vec{P}^1|,0,0)$, $b^{\mu}=(0,b_{1},b_{2},0)$, $v^{\mu}=\pm
 		+ \cancelto{0}{\frac{\mN}{v \tcdot P} \epsilon^{0 113} P_1 v_1 S_3\, \tBmp_7  }+ \cancelto{0}{\frac{\mN}{v \tcdot P} \epsilon^{0 133} P_1 v_3 S_3\, \tBmp_7  }
 		 \nonumber \\ &
 		~~- \frac{ i \mN^3}{v \tcdot P} \underbrace{\epsilon^{0 213}}_{-1} \bvec_2 v_1 S_3\, \tBmp_8 - \cancelto{0}{\frac{ i \mN^3}{v \tcdot P}\epsilon^{0 113} \bvec_1 v_1 S_3\, \tBmp_8}- \cancelto{0}{\frac{ i \mN^3}{v \tcdot P}\epsilon^{0 133} \bvec_1 v_3 S_3\, \tBmp_8}- \cancelto{0}{\frac{ i \mN^3}{v \tcdot P}\epsilon^{0 233} \bvec_2 v_3 S_3\, \tBmp_8}\nonumber \\ &
-		~~+ \frac{\mN^3}{v \tcdot P} \cancelto{0}{(\bvec \tcdot S)} \underbrace{\epsilon^{0 123}}_{1} |\vec{P}_1| \bvec_2 v_3\, \tBmp_9- \cancelto{0}{\frac{\mN^3}{v \tcdot P} (\bvec \tcdot S) \epsilon^{0 121} P_1 \bvec_2 v_1\, \tBmp_9}- \cancelto{0}{\frac{\mN^3}{v \tcdot P} (\bvec \tcdot S) \epsilon^{0 113} P_1 \bvec_1 v_3\, \tBmp_9}- \cancelto{0}{\frac{\mN^3}{v \tcdot P} (\bvec \tcdot S) \epsilon^{0 111} P_1 \bvec_1 v_1\, \tBmp_9}\nonumber \\ &
-		~~+ \frac{i \mN^3}{(v \tcdot P)^2} (v \tcdot S) \underbrace{\epsilon^{0 123}}_{1} |\vec{P}_1| \bvec_2 v_3 \tBmp_{10}
-		- \cancelto{0}{\frac{i \mN^3}{(v \tcdot P)^2} (v \tcdot S) \epsilon^{0 121} P_1 \bvec_2 v_1 \tBmp_{10}}- \cancelto{0}{\frac{i \mN^3}{(v \tcdot P)^2} (v \tcdot S) \epsilon^{0 111} P_1 \bvec_1 v_1 \tBmp_{10}}\nonumber \\ &
-		~~- \cancelto{0}{\frac{i \mN^3}{(v \tcdot P)^2} (v \tcdot S) \epsilon^{0 113} P_1 \bvec_1 v_3 \tBmp_{10}}\\
+		~~+ \frac{\mN^3}{v \tcdot P} \cancelto{0}{(\bvec \tcdot S)} \underbrace{\epsilon^{0 123}}_{1} |\vec{P}_1| \bvec_2 v_3\, \tBmp_9- \cancelto{0}{\frac{\mN^3}{v \tcdot P} (\bvec \tcdot S) \epsilon^{0 121} P_1 \bvec_2 v_1\, \tBmp_9}- \cancelto{0}{\frac{\mN^3}{v \tcdot P} (\bvec \tcdot S) \epsilon^{0 113} P_1 \bvec_1 v_3\, \tBmp_9} \nonumber \\ &
+        - \cancelto{0}{\frac{\mN^3}{v \tcdot P} (\bvec \tcdot S) \epsilon^{0 111} P_1 \bvec_1 v_1\, \tBmp_9} + \frac{i \mN^3}{(v \tcdot P)^2} (v \tcdot S) \underbrace{\epsilon^{0 123}}_{1} |\vec{P}_1| \bvec_2 v_3 \tBmp_{10}
+		- \cancelto{0}{\frac{i \mN^3}{(v \tcdot P)^2} (v \tcdot S) \epsilon^{0 121} P_1 \bvec_2 v_1 \tBmp_{10}} \nonumber \\ &
+        - \cancelto{0}{\frac{i \mN^3}{(v \tcdot P)^2} (v \tcdot S) \epsilon^{0 111} P_1 \bvec_1 v_1 \tBmp_{10}} - \cancelto{0}{\frac{i \mN^3}{(v \tcdot P)^2} (v \tcdot S) \epsilon^{0 113} P_1 \bvec_1 v_3 \tBmp_{10}}\\
   \Aboxed{ \frac{1}{2}\widetilde \Phi^{[\gamma^{0}]}_{\unsub}& = P^0\, \tAmp_2  + i \mN  |\vec{P}^1| \bvec_2 S_3\, \tAmp_{12}+ \frac{ i \mN^3}{v \tcdot P}  \bvec_2 v_1 S_3\, \tBmp_8+ \frac{i \mN^3}{(v \tcdot P)^2} (v \tcdot S)  |P_1| \bvec_2 v_3 \tBmp_{10}}
 \end{align}
-and
+Repeating this tensor contraction for the longitudinal spatial component ($\mu = 1$), taking care to track the signs of the Levi-Civita symbol, yields:
 \begin{align}
     \frac{1}{2}\widetilde \Phi^{[\gamma^{1}]}_{\unsub} & = 
 		-|\vec{P}^1|\, \tAmp_2 - i \mN^2 \bvec^1\, \tAmp_3
 		- i \mN \underbrace{\epsilon^{1 023}}_{-1} P_0 \bvec_2 S_3\, \tAmp_{12} \nonumber \\ &
 		~~+ \frac{\mN^2}{(v \tcdot P)} v^1\, \tBmp_1 
-		+ \cancelto{0}{\frac{\mN}{v \tcdot P} \epsilon^{1 013} P_0 v_1 S_3\, \tBmp_7  }+ \cancelto{0}{\frac{\mN}{v \tcdot P} \epsilon^{1 033} P_0 v_3 S_3\, \tBmp_7  }
-		- \cancelto{0}{\frac{ i \mN^3}{v \tcdot P} \epsilon^{1 213} \bvec_2 v_1 S_3\, \tBmp_8}- \cancelto{0}{\frac{ i \mN^3}{v \tcdot P} \epsilon^{1 233} \bvec_2 v_3 S_3\, \tBmp_8} \nonumber \\ &
-  ~~- \cancelto{0}{\frac{ i \mN^3}{v \tcdot P} \epsilon^{1 133} \bvec_1 v_3 S_3\, \tBmp_8}- \cancelto{0}{\frac{ i \mN^3}{v \tcdot P} \epsilon^{1 113} \bvec_1 v_1 S_3\, \tBmp_8}- \frac{\mN^3}{v \tcdot P} \cancelto{0}{(\bvec \tcdot S)} \underbrace{\epsilon^{1 023}}_{1} P_0 \bvec_2 v_3\, \tBmp_9- \cancelto{0}{\frac{\mN^3}{v \tcdot P} (\bvec \tcdot S) \epsilon^{1 021} P_0 \bvec_2 v_1\, \tBmp_9} \nonumber \\ &
-		~~
-		- \frac{i \mN^3}{(v \tcdot P)^2} (v \tcdot S) \underbrace{\epsilon^{1 023}}_{-1} P_0 \bvec_2 v_3 \tBmp_{10}- \cancelto{0}{\frac{i \mN^3}{(v \tcdot P)^2} (v \tcdot S) \epsilon^{1 021} P_0 \bvec_2 v_1 \tBmp_{10}}\\
+		+ \cancelto{0}{\frac{\mN}{v \tcdot P} \epsilon^{1 013} P_0 v_1 S_3\, \tBmp_7  }+ \cancelto{0}{\frac{\mN}{v \tcdot P} \epsilon^{1 033} P_0 v_3 S_3\, \tBmp_7  } \nonumber \\ &
+		- \cancelto{0}{\frac{ i \mN^3}{v \tcdot P} \epsilon^{1 213} \bvec_2 v_1 S_3\, \tBmp_8}- \cancelto{0}{\frac{ i \mN^3}{v \tcdot P} \epsilon^{1 233} \bvec_2 v_3 S_3\, \tBmp_8} - \cancelto{0}{\frac{ i \mN^3}{v \tcdot P} \epsilon^{1 133} \bvec_1 v_3 S_3\, \tBmp_8}- \cancelto{0}{\frac{ i \mN^3}{v \tcdot P} \epsilon^{1 113} \bvec_1 v_1 S_3\, \tBmp_8}\nonumber \\ & 
+        - \frac{\mN^3}{v \tcdot P} \cancelto{0}{(\bvec \tcdot S)} \underbrace{\epsilon^{1 023}}_{1} P_0 \bvec_2 v_3\, \tBmp_9 - \cancelto{0}{\frac{\mN^3}{v \tcdot P} (\bvec \tcdot S) \epsilon^{1 021} P_0 \bvec_2 v_1\, \tBmp_9} - \frac{i \mN^3}{(v \tcdot P)^2} (v \tcdot S) \underbrace{\epsilon^{1 023}}_{-1} P_0 \bvec_2 v_3 \tBmp_{10} \nonumber \\ & - \cancelto{0}{\frac{i \mN^3}{(v \tcdot P)^2} (v \tcdot S) \epsilon^{1 021} P_0 \bvec_2 v_1 \tBmp_{10}}\\
   \Aboxed{ \frac{1}{2}\widetilde \Phi^{[\gamma^{1}]}_{\unsub} & =-|\vec{P}^1|\, \tAmp_2+ \frac{\mN^2}{(v \tcdot P)} v^1\, \tBmp_1 
 		+ i \mN  P_0 \bvec_2 S_3\, \tAmp_{12}+ \frac{i \mN^3}{(v \tcdot P)^2} (v \tcdot S)  P_0 \bvec_2 v_3 \tBmp_{10}- i \mN^2 \bvec^1\, \tAmp_3}
 \end{align}
-for $\mu=2$
+Evaluating the transverse component ($\mu=2$) isolates terms heavily dependent on $P_0$ and the orthogonal separation $b_1$:
 \begin{align}
     \frac{1}{2}\widetilde \Phi^{[\gamma^2]}_{\unsub} & = 
 		 - i \mN^2 \bvec^2\, \tAmp_3
@@ -189,7 +384,7 @@ for $\mu=2$
   \Aboxed{\frac{1}{2}\widetilde \Phi^{[\gamma^2]}_{\unsub} & =- i \mN^2 \bvec^2\, \tAmp_3
 		- i \mN  P_0 \bvec_1 S_3\, \tAmp_{12}+ \frac{\mN}{v \tcdot P}  P_0 v_1 S_3\, \tBmp_7- \frac{i \mN^3}{(v \tcdot P)^2} (v \tcdot S) P_0 \bvec_1 v_3 \tBmp_{10}}
 \end{align}
-for $\mu=3$
+Finally, the orthogonal transverse component ($\mu=3$) simplifies significantly due to the alignment of the spin vector:
 \begin{align}
     \frac{1}{2}\widetilde \Phi^{[\gamma^3]}_{\unsub} & = \frac{\mN^2}{(v \tcdot P)} v^3\, \tBmp_1 
 		\nonumber \\ &
@@ -197,7 +392,7 @@ for $\mu=3$
 		- \frac{i \mN^3}{(v \tcdot P)^2} (v \tcdot S) \underbrace{\epsilon^{3 0 2 1}}_{1} P_0 \bvec_2 v_1 \tBmp_{10}\\
   \Aboxed{\frac{1}{2}\widetilde \Phi^{[\gamma^3]}_{\unsub}& = \frac{\mN^2}{(v \tcdot P)} v^3\, \tBmp_1- \frac{i \mN^3}{(v \tcdot P)^2} (v \tcdot S)  P_0 \bvec_2 v_1 \tBmp_{10}}
 \end{align}
-So, we have
+Consolidating these boxed results, we establish the full system of equations mapping the infinite-link continuous amplitudes to the projected correlator components:
 \begin{align}
    \Aboxed{ \frac{1}{2}\widetilde \Phi^{[\gamma^{0}]}_{\unsub}& = P^0\, \tAmp_2  + i \mN  |\vec{P}^1| \bvec_2 S_3\, \tAmp_{12}+ \frac{ i \mN^3}{v \tcdot P}  \bvec_2 v_1 S_3\, \tBmp_8+ \frac{i \mN^3}{(v \tcdot P)^2} (v \tcdot S)  |P_1| \bvec_2 v_3 \tBmp_{10}}\\
    \Aboxed{ \frac{1}{2}\widetilde \Phi^{[\gamma^{1}]}_{\unsub} & =-|\vec{P}^1|\, \tAmp_2- i \mN^2 \bvec^1\, \tAmp_3+ \frac{\mN^2}{(v \tcdot P)} v^1\, \tBmp_1 
@@ -206,6 +401,7 @@ So, we have
 		- i \mN  P_0 \bvec_1 S_3\, \tAmp_{12}+ \frac{\mN}{v \tcdot P}  P_0 v_1 S_3\, \tBmp_7- \frac{i \mN^3}{(v \tcdot P)^2} (v \tcdot S) P_0 \bvec_1 v_3 \tBmp_{10}}\\
     \Aboxed{\frac{1}{2}\widetilde \Phi^{[\gamma^3]}_{\unsub}& = \frac{\mN^2}{(v \tcdot P)} v^3\, \tBmp_1- \frac{i \mN^3}{(v \tcdot P)^2} (v \tcdot S)  P_0 \bvec_2 v_1 \tBmp_{10}}
 \end{align}
+We structure this system as a column vector to streamline the upcoming algebraic inversions:
 \begin{align}
     \begin{pmatrix}
         \rule{0pt}{16pt} \widetilde \Phi^{[\gamma^{0}]}_{\unsub}\\
@@ -221,7 +417,7 @@ So, we have
         \rule{0pt}{16pt} \frac{\mN^2}{(v \tcdot P)} v^3\, \tBmp_1- \frac{i \mN^3}{(v \tcdot P)^2} (v \tcdot S)  P_0 \bvec_2 v_1 \tBmp_{10}
     \end{pmatrix}
 \end{align}
-let's write everything in upper index form,
+To formally align with standard contravariant Lorentz notation, we raise the spatial indices using the Minkowski metric $g^{\mu\nu} = \text{diag}(1, -1, -1, -1)$. This introduces a relative minus sign for the spatial components (e.g., $P_1 = -P^1$, $b_2 = -b^2$):
 \begin{align}
     \begin{pmatrix}
         \rule{0pt}{16pt} \widetilde \Phi^{[\gamma^{0}]}_{\unsub}\\
@@ -237,19 +433,18 @@ let's write everything in upper index form,
         \rule{0pt}{16pt} \frac{\mN^2}{(v \tcdot P)} v^3\, \tBmp_1- \frac{i \mN^3}{(v \tcdot P)^2} (v \tcdot S)  P^0 \bvec^2 v^1 \tBmp_{10}
     \end{pmatrix}
 \end{align}
-
-The relation to the upper-case amplitudes is given by
+To connect these continuous amplitudes to the discretized finite-link observables simulated on the lattice, we apply the scaling dictionary bridging the infinite-link parametrization ($\tAmp_i$, $\tBmp_i$) to the finite-link parametrization ($\tilde{a}_i$, $\tilde{b}_i$):
 \begin{align}
-	\tAmp_i\left(\bvec^2,\bvec \tcdot P,\frac{v \tcdot \bvec}{v \tcdot P}, \frac{v^2}{(v \tcdot P)^2}, \eta v \tcdot P\right) & = \tilde a_i(\bvec^2,\bvec \tcdot P, \eta v \tcdot b, (\eta v)^2, \eta v \tcdot P)    \, , \nonumber \\
+	\tAmp_i\left(\bvec^2,\bvec \tcdot P,\frac{v \tcdot \bvec}{v \tcdot P}, \frac{v^2}{(v \tcdot P)^2}, \eta v \tcdot P\right) & = \tilde a_i(\bvec^2,\bvec \tcdot P, \eta v \tcdot b, (\eta v)^2, \eta v \tcdot P)   \, , \nonumber \\
 	 \tBmp_i\left(\bvec^2,\bvec \tcdot P,\frac{v \tcdot \bvec}{v \tcdot P}, \frac{v^2}{(v \tcdot P)^2}, \eta v \tcdot P\right) & = (\eta v \tcdot P)^n\ \tilde b_i(\bvec^2,\bvec \tcdot P, \eta v \tcdot b, (\eta v)^2, \eta v \tcdot P)   \, ,
 	\label{eq-ab}
 \end{align}
-In general, the amplitudes are complex,
+These invariant amplitudes are complex-valued functions, formally decomposed into their real and imaginary components:
 \begin{align}
     \tilde{a}_i&=\tilde{a}^{\text{Re}}_i+i\tilde{a}^{\text{Im}}_i\\
     \tilde{b}_i&=\tilde{b}^{\text{Re}}_i+i\tilde{b}^{\text{Im}}_i
 \end{align}
-On lattice:
+Furthermore, the lattice evaluation necessitates converting the continuous Minkowski gamma matrices ($\gamma_M$) into the strictly Euclidean conventions ($\gamma_E$) utilized by the lattice simulation software:
 \begin{itemize}
     \item Correct Euclidean $\longleftrightarrow$ Minkowski $\gamma$-matrices notation:
     \begin{align}
@@ -260,7 +455,7 @@ On lattice:
         \boxed{\gamma^{5}_{E}}=&\gamma^{1}_{E}\gamma^{2}_{E}\gamma^{3}_{E}\gamma^{4}_{E}=\boxed{-\gamma^{5}_{M}}=-i\gamma^{4}_{M}\gamma^{1}_{M}\gamma^{2}_{M}\gamma^{3}_{M}
     \end{align}
 \end{itemize}
-then
+Substituting the Euclidean gamma structures and mapping $P^0 \to E_N$, we rewrite the column vector strictly in terms of the lattice ratio observables $R_{\Gamma(i)}$ and the finite-link amplitudes:
 \begin{align}
     \begin{pmatrix}
         \rule{0pt}{16pt} R_{\Gamma(1)}\\
@@ -281,8 +476,7 @@ then
          \rule{0pt}{16pt}   \tilde a_2  - i \mN  \frac{|\vec{P}^1|}{E_N} \bvec^2  \tilde a_{12}- \frac{ i \mN^3}{E_N}  \bvec^2 \eta v^1  \tilde b_8+ \frac{i \mN^3}{E_N}  |\vec{P}^1| \bvec^2 \eta^2 (v^3)^2 \tilde b_{10}
     \end{pmatrix}
 \end{align}
-On making two set of equations by flipping only the $b^1=b_{L}$, for positive $b^1$, we have 
-%
+To analytically separate the real and imaginary amplitude contributions, we split this matrix equation into two distinct sets by flipping the longitudinal separation component $b^1$. For a strictly positive longitudinal separation ($+b^1$), explicitly resolving the real and imaginary parts of the correlator ratios yields:
 \begin{align}
     \begin{pmatrix}
         \rule{0pt}{16pt} \text{Re}\{ R_{\Gamma(1)}\}^{[+b^1]} \\
@@ -306,7 +500,7 @@ On making two set of equations by flipping only the $b^1=b_{L}$, for positive $b
       \rule{0pt}{16pt} -  \mN  \frac{|\vec{P}^1|}{E_N} \bvec^2  \tilde a^{\text{Re}}_{12}- \frac{  \mN^3}{E_N}  \bvec^2 \eta v^1  \tilde b^{\text{Re}}_8+ \frac{ \mN^3}{E_N}  |\vec{P}^1| \bvec^2 \eta^2 (v^3)^2 \tilde b^{\text{Re}}_{10}+\tilde a^{\text{Im}}_2
     \end{pmatrix}
 \end{align}
-and for negative $b^1$, by construction $\tilde{A}^{\text{Im}}_i=\tilde{A}^{\text{(b-odd})}_i=\tilde{A}^{\text{($b^1$-odd})}_i$ and  $\tilde{B}^{\text{Im}}_i=\tilde{B}^{\text{(b-odd})}_i=\tilde{B}^{\text{($b^1$-odd})}_i$ we have 
+Evaluating the system for the negated separation ($-b^1$) introduces selective sign flips based on the parity constraints established in Section 3.5. By construction, the imaginary parts of the amplitudes are strictly odd functions of $b^1$ ($\tilde{A}^{\text{Im}}_i=\tilde{A}^{\text{(b-odd})}_i=\tilde{A}^{\text{($b^1$-odd})}_i$ and  $\tilde{B}^{\text{Im}}_i=\tilde{B}^{\text{(b-odd})}_i=\tilde{B}^{\text{($b^1$-odd})}_i$). Applying these parity reversals yields the conjugate matrix:
 \begin{align}
     \begin{pmatrix}
         \rule{0pt}{16pt} \text{Re}\{ R_{\Gamma(1)}\}^{[-b^1]} \\
@@ -330,7 +524,7 @@ and for negative $b^1$, by construction $\tilde{A}^{\text{Im}}_i=\tilde{A}^{\tex
       \rule{0pt}{16pt} - \mN  \frac{|\vec{P}^1|}{E_N} \bvec^2  \tilde a^{\text{Re}}_{12}- \frac{  \mN^3}{E_N}  \bvec^2 \eta v^1  \tilde b^{\text{Re}}_8 + \frac{ \mN^3}{E_N}  |\vec{P}^1| \bvec^2 \eta^2 (v^3)^2 \tilde b^{\text{Re}}_{10}\textcolor{red}{-}\tilde a^{\text{Im}}_2
     \end{pmatrix}
 \end{align}
-let's now form $b-$even part as $\frac{R^{[+b]}+R^{[-b]}}{2}$,
+By taking the symmetric average of the two matrices, $\frac{1}{2}\left(R^{[+b]} + R^{[-b]}\right)$, we mathematically project out the $b$-even combination, thereby naturally isolating the real parts of the requisite amplitudes:
 \begin{align}
     \begin{pmatrix}
         \rule{0pt}{16pt} \text{Re}\{ R_{\Gamma(1)}\}^{[b^{1}\text{-even}]} \\
@@ -354,7 +548,7 @@ let's now form $b-$even part as $\frac{R^{[+b]}+R^{[-b]}}{2}$,
       \rule{0pt}{16pt} -  \mN  \frac{|\vec{P}^1|}{E_N} \bvec^2  \tilde a^{\text{Re}}_{12}- \frac{  \mN^3}{E_N}  \bvec^2 \eta v^1  \tilde b^{\text{Re}}_8+ \frac{ \mN^3}{E_N}  |\vec{P}^1| \bvec^2 \eta^2 (v^3)^2 \tilde b^{\text{Re}}_{10}
     \end{pmatrix}
 \end{align}
-Similarly,  $b-$odd part as $\frac{R^{[+b]}-R^{[-b]}}{2}$,
+Conversely, taking the antisymmetric half-difference of the two matrices, $\frac{1}{2}\left(R^{[+b]} - R^{[-b]}\right)$, projects out the $b$-odd combination, strictly isolating the imaginary parts:
 \begin{align}
     \begin{pmatrix}
         \rule{0pt}{16pt} \text{Re}\{ R_{\Gamma(1)}\}^{[b^{1}\text{-odd}]} \\
@@ -377,132 +571,61 @@ Similarly,  $b-$odd part as $\frac{R^{[+b]}-R^{[-b]}}{2}$,
       \rule{0pt}{16pt} \tilde a^{\text{Im}}_2
     \end{pmatrix}
 \end{align}
-To form Sivers shift, all we need are the real and imaginary parts of $\tilde a_2$, $\tilde b_1$, $\tilde a_{12}$, and $\tilde b_8$. Let's extract the amplitudes for both real and imaginary parts. For the real part
+To analytically reconstruct the Sivers shift, we must solve these projected systems for the subset of amplitudes driving the Sivers effect: specifically, $\tilde a_2$, $\tilde b_1$, $\tilde a_{12}$, and $\tilde b_8$. Reading directly from the $b$-even system, we isolate the real components:
 \begin{align}
     \Aboxed{\tilde a^{\text{Re}}_2 = & \frac{1}{2}\text{Re}\{ R_{\Gamma(8)}\}^{[b^{1}\text{-even}]} }\\
     \Aboxed{\tilde b^{\text{Re}}_1 = & \frac{E_{N}}{2\mN^2 \eta v^3} \text{Im}\{ R_{\Gamma(4)}\}^{[b^{1}\text{-even}]}}
 \end{align}
-also
+Substituting the appropriate matrix rows, we dynamically decouple $\tilde a_{12}$ and $\tilde b_8$:
 \begin{align}
    \Aboxed{\tilde a^{\text{Re}}_{12}=&\frac{-1}{2\mN  \bvec^2}\left[\text{Re}\{ R_{\Gamma(1)}\}^{[b^{1}\text{-even}]}+\frac{v^3}{v^1}\text{Re}\{ R_{\Gamma(4)}\}^{[b^{1}\text{-even}]}\right]}
 \end{align}
 \begin{align}
     \Aboxed{\tilde b^{\text{Re}}_8=&\frac{-E_N}{ 2\mN^3 \bvec^2 \eta v^1 }\left[\text{Im}\{ R_{\Gamma(8)}\}^{[b^{1}\text{-even}]}+\frac{|\vec{P}^1|v^3}{E_N v^1}\text{Re}\{ R_{\Gamma(4)}\}^{[b^{1}\text{-even}]}+ 2\mN  \frac{|\vec{P}^1|}{E_N} \bvec^2  \tilde a^{\text{Re}}_{12}\right]}
 \end{align}
-Similarly,  
+Applying identical algebraic decoupling to the $b$-odd system, we isolate the corresponding imaginary components:
 \begin{align}
     \Aboxed{\tilde a^{\text{Im}}_2 = & \frac{1}{2}\text{Im}\{ R_{\Gamma(8)}\}^{[b^{1}\text{-odd}]} }\\
     \Aboxed{\tilde b^{\text{Im}}_1 = & \frac{-E_{N}}{2\mN^2 \eta v^3} \text{Re}\{ R_{\Gamma(4)}\}^{[b^{1}\text{-odd}]}}
 \end{align}
-also
+and the remaining transverse amplitudes:
 \begin{align}
    \Aboxed{\tilde a^{\text{Im}}_{12}=&\frac{-1}{2\mN  \bvec^2}\left[\text{Im}\{ R_{\Gamma(1)}\}^{[b^{1}\text{-odd}]}+\frac{v^3}{v^1}\text{Im}\{ R_{\Gamma(4)}\}^{[b^{1}\text{-odd}]}\right]}
 \end{align}
 \begin{align}
     \Aboxed{\tilde b^{\text{Im}}_8=&\frac{E_N}{ 2\mN^3 \bvec^2 \eta v^1 }\left[\text{Re}\{ R_{\Gamma(8)}\}^{[b^{1}\text{-odd}]}-\frac{|\vec{P}^1|v^3}{E_N v^1}\text{Im}\{ R_{\Gamma(4)}\}^{[b^{1}\text{-odd}]}- 2\mN  \frac{|\vec{P}^1|}{E_N} \bvec^2  \tilde a^{\text{Im}}_{12}\right]}
 \end{align}
-With the dictionary 
+Finally, we convert these finite-link evaluations ($\tilde a_i, \tilde b_i$) back into the standard continuum-invariant amplitudes ($\tAmp_i, \tBmp_i$) using the proportionality dictionary:
 \begin{align}
 	\tAmp_i & = \tilde a_i \\
 	 \tBmp_i & = (\eta v \tcdot P)^n\ \tilde b_i
 \end{align}
-We get,
+Recalling that $v \tcdot P = v_1 P^1 = v^1 |P^1|$ due to our chosen frame, the conversion factors uniquely scale each amplitude structure. Applying this mapping to the real components yields the final accessible amplitudes on the lattice:
 \begin{align}
     \Aboxed{\tAmp^{\text{Re}}_2 = & \frac{1}{2}\text{Re}\{ R_{\Gamma(8)}\}^{[b^{1}\text{-even}]} }\\
     \Aboxed{\tBmp^{\text{Re}}_1 = & \frac{E_{N}|P^1|v^1}{2\mN^2  v^3} \text{Im}\{ R_{\Gamma(4)}\}^{[b^{1}\text{-even}]}}\\
     \Aboxed{\tAmp^{\text{Re}}_{12}=&\frac{-1}{2\mN  \bvec^2}\left[\text{Re}\{ R_{\Gamma(1)}\}^{[b^{1}\text{-even}]}+\frac{v^3}{v^1}\text{Re}\{ R_{\Gamma(4)}\}^{[b^{1}\text{-even}]}\right]}\\
     \Aboxed{\tBmp^{\text{Re}}_8=&\frac{-E_N |P^1|}{ 2\mN^3 \bvec^2 }\left[\text{Im}\{ R_{\Gamma(8)}\}^{[b^{1}\text{-even}]}+\frac{|\vec{P}^1|v^3}{E_N v^1}\text{Re}\{ R_{\Gamma(4)}\}^{[b^{1}\text{-even}]}+ 2\mN  \frac{|\vec{P}^1|}{E_N} \bvec^2  \tAmp^{\text{Re}}_{12}\right]}
 \end{align}
+Applying the same scaling factors to the imaginary counterparts provides the complementary T-odd contributions:
 \begin{align}
     \Aboxed{\tAmp^{\text{Im}}_2 = & \frac{1}{2}\text{Im}\{ R_{\Gamma(8)}\}^{[b^{1}\text{-odd}]} }\\
     \Aboxed{\tBmp^{\text{Im}}_1 = & \frac{-E_{N}|P^1|v^1}{2\mN^2 \eta v^3} \text{Re}\{ R_{\Gamma(4)}\}^{[b^{1}\text{-odd}]}}\\
     \Aboxed{\tAmp^{\text{Im}}_{12}=&\frac{-1}{2\mN  \bvec^2}\left[\text{Im}\{ R_{\Gamma(1)}\}^{[b^{1}\text{-odd}]}+\frac{v^3}{v^1}\text{Im}\{ R_{\Gamma(4)}\}^{[b^{1}\text{-odd}]}\right]}\\
      \Aboxed{\tBmp^{\text{Im}}_8=&\frac{E_N|P^1|}{ 2\mN^3 \bvec^2  }\left[\text{Re}\{ R_{\Gamma(8)}\}^{[b^{1}\text{-odd}]}-\frac{|\vec{P}^1|v^3}{E_N v^1}\text{Im}\{ R_{\Gamma(4)}\}^{[b^{1}\text{-odd}]}- 2\mN  \frac{|\vec{P}^1|}{E_N} \bvec^2  \tAmp^{\text{Im}}_{12}\right]}
 \end{align}
-To form Sivers shift, we use
+With the fundamental invariant amplitudes explicitly extracted, the final step to reconstruct the effective amplitudes governing the unpolarized and Sivers TMDs ($\tAmp_{2B}$ and $\tAmp_{12B}$ respectively) is to combine them according to the kinematic constraint of the Collins-Soper parameter:
 \begin{align}
     \Aboxed{\tAmp_{2B}  & \ \equiv\  \tAmp_2 + R(\zetahat^2) \tBmp_1}\\
     \Aboxed{\tAmp_{12B}  & \ \equiv\  \tAmp_{12} - R(\zetahat^2) \tBmp_8}
 \end{align}
-where,
+where the geometric regularization factor characterizing the approach to the light cone is strictly defined by:
 \begin{align}
     \Aboxed{R(\zetahat^2) \equiv 1- \sqrt{1 + \hat \zeta^{-2}}}
 \end{align}
+\vspace{1em}
+\noindent\rule{\textwidth}{0.4pt}
 
-\pagebreak
-\subsubsection{Forming \texorpdfstring{$b_L$}{TEXT} - even and odd}
-The goal is to calculate a good range of $\vect{b}$:
-\begin{figure}[htbp]
-    \centering
-    \begin{minipage}{0.45\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{plots/kinematics_interpolation/bL_bT_plot.pdf}
-        \caption{Caption for plot with path}
-        \label{fig:bL_bT_path}
-    \end{minipage}\hfill
-    \begin{minipage}{0.45\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{plots/kinematics_interpolation/Pb_bsq_plot.pdf}
-        \caption{Caption for standard plot}
-        \label{fig:bL_bT_standard}
-    \end{minipage}
-\end{figure}
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.5\linewidth]{plots/kinematics_interpolation/b_gauge_links_for_table1.pdf}
-    \caption{Caption}
-    \label{fig:placeholder}
-\end{figure}
-\begin{figure}[h!]
-    \centering
-    \begin{minipage}{0.45\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{plots/kinematics_interpolation/b_gauge_links_for_table2.pdf}
-        \caption{First caption}
-        \label{fig:placeholder1}
-    \end{minipage}\hfill
-    \begin{minipage}{0.45\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{plots/kinematics_interpolation/b_gauge_links_for_table3.pdf}
-        \caption{Second caption}
-        \label{fig:placeholder2}
-    \end{minipage}
-\end{figure}
-
-\pagebreak
-Same $\vect{b}$ with different linkpaths are averaged
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.3\linewidth]{plots/kinematics_interpolation/Example_b_plot_with_2path.pdf}
-    \caption{Caption}
-    \label{fig:placeholder}
-\end{figure}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.5\linewidth]{plots/kinematics_interpolation/bL_bT_plot_with_path.pdf}
-    \caption{Caption}
-    \label{fig:placeholder}
-\end{figure}
-
-\pagebreak
-\subsubsection{\texorpdfstring{$\vect{v}$}{TEXT} - Interpolation}
-Same $\vect{v}$ with different sidelink are averaged
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.5\linewidth]{plots/kinematics_interpolation/Example_v_plot_with_2path.pdf}
-    \caption{Caption}
-    \label{fig:placeholder}
-\end{figure}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.6\linewidth]{plots/kinematics_interpolation/Interpolation_Ex_b120_eta7_P-1.pdf}
-    \caption{Interpolation Example for $\vect{b}={1,2,0}$, $\eta=7$, $P_L\cdot a\hat{L}/(2\pi)=-1$}
-    \label{fig:placeholder}
-\end{figure}
-
-\pagebreak
-~
 \pagebreak
 \subsection{Lattice calculations of Amplitudes}
 \subsubsection{\texorpdfstring{$\hat{\zeta}=0.090772$}{TEXT}}
