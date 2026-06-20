@@ -1,20 +1,181 @@
 \section{FITTING METHODOLOGIES AND STABILITY ANALYSIS}
+\label{sec:fitting_methodologies}
 
-\section{Methode: Fit from $(b_{L}, b_{T})$ space to $(P\cdot b, b^2)$ space}
-We do fits in $(b_{L}, b_{T})$ space and then convert them into $(P\cdot b, b^2)$ amplitudes. For example for simple Gaussian fit inn $(b_{L}, b_{T})$ space, we model the real amplitudes as
+An initial survey of the extracted lattice data reveals a striking disparity in statistical precision among the invariant amplitudes. The real part of the unpolarized amplitude, $\tAmp_{2B}^{\text{Re}}$, exhibits remarkably small statistical uncertainties across the entirety of the simulated phase space. In contrast, the imaginary unpolarized amplitude $\tAmp_{2B}^{\text{Im}}$ and the real Sivers amplitude $\tAmp_{12B}^{\text{Re}}$ suffer from comparatively larger gauge noise, while the imaginary Sivers amplitude $\tAmp_{12B}^{\text{Im}}$ has already been discarded due to its statistical consistency with zero. Because $\tAmp_{2B}^{\text{Re}}$ constitutes the leading-twist unpolarized background and possesses the highest data quality, establishing a robust, highly stable global fit for this specific amplitude serves as the foundational core of our entire numerical analysis. 
+
+A central methodological decision in this analysis is the choice of domain for these global fits. While it may seem intuitive to fit the amplitudes directly in the Lorentz-invariant phase space spanned by $(P \cdot b, b^2)$, doing so introduces severe numerical and physical instabilities. Instead, performing the parameterizations natively in the Cartesian spatial domain $(b_L, b_T)$ is demonstrably superior for several reasons.
+
+First, fitting directly in $(b_L, b_T)$ provides access to a significantly larger, more uniformly distributed set of discrete data points. More importantly, it resolves severe kinematic degeneracies that are otherwise hidden in the invariant space. The squared separation distance, defined as $b^2 = b_L^2 + b_T^2$, is strictly non-negative. Because of this circular symmetry in the definition, multiple distinct combinations of longitudinal and transverse separations (e.g., a large $b_L$ with a small $b_T$, versus a small $b_L$ with a large $b_T$) can map to the exact same invariant $b^2$. 
+
+If the fits were performed blindly in the $(P \cdot b, b^2)$ basis, these distinct orthogonal spatial dependencies would be artificially compressed and entangled into a single coordinate. By fitting the two-dimensional surface directly over the $(b_L, b_T)$ grid, we allow the model to independently resolve the longitudinal decay profile separately from the transverse decay profile. Once this high-fidelity spatial surface is successfully modeled and stabilized using the precision $\tAmp_{2B}^{\text{Re}}$ data, the continuous parameterization can then be analytically evaluated at any invariant kinematic point to perform the final Fourier transforms.
+
+\subsection{Coordinate Transformation and the Simple Gaussian Model}
+\label{sec:gaussian_transformation}
+
+As motivated in the previous section, we perform our parameterizations natively in the Cartesian $(b_L, b_T)$ lattice space to resolve kinematic degeneracies, and subsequently map the resulting functional forms into the continuous Lorentz-invariant $(P \cdot b, b^2)$ phase space. To establish a baseline for our stability analysis, we first test a simple two-dimensional Gaussian profile.
+
+For the real parts of the amplitudes ($\tAmp^{Re}_{iB}$), the fundamental Hermitian conjugation symmetries dictate that the function must be strictly even in the longitudinal separation $b_L$. We therefore model the real amplitude with a standard 2D Gaussian centered at the origin:
 \begin{align}
-    \tAmp^{Re}_{iB}&=\gamma \exp{\left[-\alpha \textcolor{red}{b_{L}^{2}}-\beta \textcolor{red}{b_{T}^{2}}\right]}\\
-    &=\gamma \exp{\left[-\alpha \textcolor{red}{b_{L}^{2}}-\beta \left(\textcolor{blue}{b}^{2}-\textcolor{red}{b_{L}^{2}}\right)\right]}\\
-    &=\gamma \exp{\left[-\left(\alpha-\beta\right) \textcolor{red}{b_{L}^{2}}-\beta \textcolor{blue}{b}^{2}\right]}\\
+    \tAmp^{Re}_{iB}&=\gamma \exp{\left[-\alpha \textcolor{red}{b_{L}^{2}}-\beta \textcolor{red}{b_{T}^{2}}\right]}
+\end{align}
+To transform this into the invariant phase space, we must eliminate the transverse coordinate $b_T$. We utilize the geometric constraint defining the squared separation vector, $\textcolor{blue}{b}^2 = \textcolor{red}{b_L^2} + \textcolor{red}{b_T^2}$, which allows us to substitute $\textcolor{red}{b_T^2} = \textcolor{blue}{b}^2 - \textcolor{red}{b_L^2}$:
+\begin{align}
+    \tAmp^{Re}_{iB}&=\gamma \exp{\left[-\alpha \textcolor{red}{b_{L}^{2}}-\beta \left(\textcolor{blue}{b}^{2}-\textcolor{red}{b_{L}^{2}}\right)\right]}
+\end{align}
+Grouping the terms by the longitudinal coordinate isolates the dependence on the invariant squared separation $\textcolor{blue}{b}^2$:
+\begin{align}
+    \tAmp^{Re}_{iB}&=\gamma \exp{\left[-\left(\alpha-\beta\right) \textcolor{red}{b_{L}^{2}}-\beta \textcolor{blue}{b}^{2}\right]}
+\end{align}
+Finally, we apply the Lorentz-invariant projection derived in Section \ref{sec:lorentz_mapping}, where the longitudinal spatial coordinate is given by $b_L = (\textcolor{blue}{P \cdot b}) / (-P_L)$. Squaring this substitution completely maps the amplitude into the required invariant frame:
+\begin{align}
    \tAmp^{Re}_{iB} &=\gamma \exp{\left[-\frac{\left(\alpha-\beta\right)}{P_{L}^2} (\textcolor{blue}{P\cdot b})^{2}-\beta \textcolor{blue}{b}^{2}\right]}
 \end{align}
-and we model the imaginary amplitudes as
+
+We apply an analogous transformation to the imaginary amplitudes ($\tAmp^{Im}_{iB}$). Because the imaginary amplitudes must be strictly odd functions of $b_L$, the Gaussian profile must be multiplied by a linear prefactor of $b_L$:
 \begin{align}
-    \tAmp^{Im}_{iB}&=\gamma \textcolor{red}{b_{L}}\exp{\left[-\alpha \textcolor{red}{b_{L}^{2}}-\beta \textcolor{red}{b_{T}^{2}}\right]}\\
-    &=\gamma \textcolor{red}{b_{L}}\exp{\left[-\alpha \textcolor{red}{b_{L}^{2}}-\beta \left(\textcolor{blue}{b}^{2}-\textcolor{red}{b_{L}^{2}}\right)\right]}\\
-    &=\gamma \textcolor{red}{b_{L}}\exp{\left[-\left(\alpha-\beta\right) \textcolor{red}{b_{L}^{2}}-\beta \textcolor{blue}{b}^{2}\right]}\\
-    \tAmp^{Im}_{iB} &=\frac{\gamma}{P_{L}} (\textcolor{blue}{P\cdot b}) \exp{\left[-\frac{\left(\alpha-\beta\right)}{P_{L}^2} (\textcolor{blue}{P\cdot b})^{2}-\beta \textcolor{blue}{b}^{2}\right]}
+    \tAmp^{Im}_{iB}&=\gamma \textcolor{red}{b_{L}}\exp{\left[-\alpha \textcolor{red}{b_{L}^{2}}-\beta \textcolor{red}{b_{T}^{2}}\right]}
 \end{align}
+Once again, we substitute the transverse component using the geometric constraint $\textcolor{red}{b_T^2} = \textcolor{blue}{b}^2 - \textcolor{red}{b_L^2}$:
+\begin{align}
+    \tAmp^{Im}_{iB}&=\gamma \textcolor{red}{b_{L}}\exp{\left[-\alpha \textcolor{red}{b_{L}^{2}}-\beta \left(\textcolor{blue}{b}^{2}-\textcolor{red}{b_{L}^{2}}\right)\right]}
+\end{align}
+Factoring the exponent isolates the invariant $b^2$ dependence from the longitudinal decay profile:
+\begin{align}
+    \tAmp^{Im}_{iB}&=\gamma \textcolor{red}{b_{L}}\exp{\left[-\left(\alpha-\beta\right) \textcolor{red}{b_{L}^{2}}-\beta \textcolor{blue}{b}^{2}\right]}
+\end{align}
+Substituting $\textcolor{red}{b_L} = (\textcolor{blue}{P \cdot b}) / (-P_L)$ for both the linear prefactor and the squared exponent yields the final invariant imaginary amplitude:
+\begin{align}
+    \tAmp^{Im}_{iB} &=\frac{\gamma}{-P_{L}} (\textcolor{blue}{P\cdot b}) \exp{\left[-\frac{\left(\alpha-\beta\right)}{P_{L}^2} (\textcolor{blue}{P\cdot b})^{2}-\beta \textcolor{blue}{b}^{2}\right]}
+\end{align}
+
+\vspace{1em}
+\begin{center}
+    \textcolor{red}{\textbf{[INSERT FIGURE]}}
+\end{center}
+\vspace{1em}
+
+\subsubsection{Pathology of the Simple Gaussian Model}
+While the simple Gaussian parameterization provides a mathematically clean transformation into the $(P \cdot b, b^2)$ phase space, it ultimately fails to satisfy the rigorous physical constraints required to extract the Sivers shift.
+
+The fundamental objective of mapping these amplitudes into the invariant space is to perform a continuous Fourier transform over $P \cdot b$ to extract the momentum fraction $x$-dependence. Looking at the transformed real amplitude, the exponential decay governing the $P \cdot b$ integration is parameterized by:
+\begin{equation}
+    \exp{\left[-\frac{\left(\alpha-\beta\right)}{P_{L}^2} (\textcolor{blue}{P\cdot b})^{2} \right]}
+\end{equation}
+For the infinite Fourier integral $\int d(P\cdot b) e^{ix(P\cdot b)} \tAmp_{iB}$ to converge, the argument of the exponential must remain negative as $(P \cdot b) \to \pm \infty$. This imposes a strict mathematical bound on our fit parameters: the condition $(\alpha - \beta) > 0$ must hold. If $\alpha < \beta$, the coefficient becomes positive, leading to exponential growth of the amplitude at large longitudinal separations and rendering the integral physically divergent.
+
+Unfortunately, applying this simple Gaussian fit to our high-precision lattice data reveals a critical failure in the model. When fitting the unpolarized real amplitude, $\tAmp^{Re}_{2B}$, the parameter extraction consistently yields $\alpha < \beta$. This implies that the amplitude decays faster in the transverse direction than in the longitudinal direction, leading to an unphysical, non-integrable expansion when mapped into the $(P \cdot b, b^2)$ invariant space. 
+
+Furthermore, the overall goodness-of-fit for the simple Gaussian ansatz is exceptionally poor. The resulting $\chi^2/\text{dof}$ is unacceptably high, indicating that a single, symmetric 2D Gaussian decay profile is insufficiently flexible to capture the true underlying physics of the non-local operator. 
+
+\vspace{1em}
+\begin{center}
+    \textcolor{red}{\textbf{[INSERT FIGURE]}}
+\end{center}
+\vspace{1em}
+
+To resolve these unphysical divergences and properly model the lattice correlation functions, we are forced to abandon the simple Gaussian model in favor of more sophisticated, multi-parameter functional forms that can accommodate the distinct decay rates while guaranteeing convergence in the Fourier domain.
+
+\subsection{Physics-Informed Symbolic Regression via PySR}
+\label{sec:pysr_methodology}
+
+The failure of the simple Gaussian ansatz highlights a fundamental challenge in phenomenological lattice QCD: guessing the correct functional form of a non-local amplitude in a multi-dimensional space is highly susceptible to human bias and unphysical rigidities. To overcome this, we abandon presumed functional forms and instead employ Symbolic Regression (SR). 
+
+Unlike traditional regression, which optimizes the numerical parameters of a pre-determined function, symbolic regression simultaneously searches the space of mathematical expressions and their parameters. It aims to discover the analytical equation that best balances accuracy (goodness-of-fit) with simplicity (parsimony). To perform this high-dimensional search, we utilize \texttt{PySR} \cite{Cranmer2023pysr}, a highly optimized framework that leverages Genetic Programming to discover interpretable physical laws from data.
+
+\subsubsection{Genetic Algorithms and Expression Trees}
+At the core of \texttt{PySR} is a genetic algorithm \cite{Koza1992GP, Schmidt2009Distilling}. In this paradigm, mathematical equations are represented as binary trees, where internal nodes are mathematical operators (e.g., $+$, $\times$, $\exp$, $\sin$) and leaf nodes are variables (e.g., $b_L, b_T$) or numerical constants. 
+
+The algorithm mimics biological evolution. It begins by initializing a random "population" of these equation trees. The performance of each tree is evaluated against the lattice data using a specified loss function, and it is assigned a "fitness" score. The best-performing equations survive and undergo evolutionary operations to produce the next generation. These operations include:
+\begin{itemize}
+    \item \textbf{Crossover:} Sub-trees from two highly fit parent equations are swapped to create offspring.
+    \item \textbf{Mutation:} Random alterations are applied to a tree, such as changing an operator (e.g., $+$ to $\times$), perturbing a constant, or appending a new mathematical branch.
+\end{itemize}
+This cycle repeats for thousands of generations, iteratively distilling the population toward expressions that are both accurate and mathematically concise. 
+
+\begin{figure}[htpb]
+    \centering
+    \begin{tikzpicture}[
+        node distance=1.5cm and 2cm,
+        box/.style={draw, rectangle, rounded corners, minimum width=3cm, minimum height=1cm, align=center, fill=blue!5},
+        arrow/.style={->, >=stealth, thick}
+        ]
+        
+        % Nodes
+        \node[box] (init) {Initialize Population \\ (Random Equation Trees)};
+        \node[box, below=of init] (eval) {Evaluate Fitness \\ (Compute Custom Loss)};
+        \node[box, below=of eval] (select) {Selection \\ (Keep fittest equations)};
+        \node[box, right=of select] (evolve) {Evolution \\ (Crossover \& Mutation)};
+        \node[box, right=of init] (pareto) {Pareto Front \\ (Best Accuracy vs. Complexity)};
+        
+        % Arrows
+        \draw[arrow] (init) -- (eval);
+        \draw[arrow] (eval) -- (select);
+        \draw[arrow] (select) -- (evolve);
+        \draw[arrow] (evolve) |- (eval);
+        \draw[arrow] (select) -| (pareto);
+        
+    \end{tikzpicture}
+    \caption{Flowchart illustrating the evolutionary loop of the Genetic Algorithm utilized by \texttt{PySR} to discover analytical equations. The process continuously optimizes the population of mathematical expressions against the custom physics-informed loss function.}
+    \label{fig:pysr_flowchart}
+\end{figure}
+
+\subsubsection{The Physics-Informed Custom Loss Function}
+
+While standard symbolic regression optimizes a standard metric like Mean Squared Error (MSE), blindly applying it to our lattice data poses a serious risk. A genetic algorithm might discover a polynomial or diverging exponential function that fits the local, finite grid of $(b_L, b_T)$ data exceptionally well, achieving a low MSE. However, as demonstrated in Section \ref{sec:gaussian_transformation}, if the amplitude does not strictly decay as $b_L \to \infty$, the subsequent continuous Fourier transform over $P \cdot b$ will diverge, yielding unphysical infinite momentum distributions.
+
+To explicitly force the genetic algorithm to respect the asymptotic physics of the nucleon, we implemented a physics-inspired custom loss function within \texttt{PySR}. We construct this loss function systematically. First, the base accuracy of the model is dictated by the standard reduced chi-squared statistic, ensuring the model respects the varying uncertainties of the discrete lattice measurements:
+\begin{align}
+    \mathcal{L}_{\text{base}} = \frac{\chi^2}{\text{dof}} = \frac{1}{N - k} \sum_{i=1}^{N} \left( \frac{\tAmp_{2B}^{\text{Re, lattice}}(i) - \tAmp_{2B}^{\text{Re, model}}(i)}{\sigma_i} \right)^2
+\end{align}
+
+Here, $N$ is the number of lattice data points, $k$ is the number of degrees of freedom in the generated expression, and $\sigma_i$ is the statistical error of the $i$-th lattice point.
+
+To enforce the asymptotic decay required for Fourier integrability, we introduce a severe penalty term. We evaluate the proposed model equation at artificially large values of the longitudinal separation, $b_L^{\text{large}}$, while keeping the transverse separations $b_T$ fixed to physical slices. We compute the vector sum of the absolute model predictions in this extreme asymptotic regime:
+\begin{align}
+    \mathcal{P}_{\text{asymptotic}} = \sum_{b_T \in \{b_{T}^{\text{fixed}}\}} \sum_{b_L \in \{b_{L}^{\text{large}}\}} \left| \tAmp_{2B}^{\text{Re, model}}(b_L, b_T) \right|
+\end{align}
+
+If a genetically generated equation diverges or grows at large $b_L$, this penalty term $\mathcal{P}_{\text{asymptotic}}$ will explode, immediately ruining the equation's fitness score and causing it to be "killed off" in the next evolutionary generation. Conversely, if the equation naturally decays toward zero as physics demands, the penalty safely vanishes.
+
+Finally, we combine these terms into the total objective function utilized by \texttt{PySR}. To strictly enforce the asymptotic behavior without overwhelming the base goodness-of-fit during the evolutionary search, the penalty is scaled by a small regularization parameter $\epsilon$:
+\begin{align}
+    \mathcal{L}_{\text{custom}} &= \mathcal{L}_{\text{base}} + \epsilon \, \mathcal{P}_{\text{asymptotic}} \\
+    \mathcal{L}_{\text{custom}} &= \frac{\chi^2}{\text{dof}} + \epsilon \sum_{b_T \in \{b_{T}^{\text{fixed}}\}} \sum_{b_L \in \{b_{L}^{\text{large}}\}} \left| \tAmp_{2B}^{\text{Re, model}}(b_L, b_T) \right|
+\end{align}
+
+By evaluating fitness using $\mathcal{L}_{\text{custom}}$, \texttt{PySR} is effectively restricted to searching only the subspace of mathematical expressions that simultaneously fit the finite lattice data and rigorously obey the asymptotic decay constraints required by QCD phenomenology. 
+
+\vspace{1em}
+\begin{center}
+    \textcolor{red}{\textbf{[INSERT FIGURE HERE: Table/Image showing the Pareto front of models generated by PySR, listing the equations, their complexity scores, and their corresponding custom loss values.]}}
+\end{center}
+\vspace{1em}
+
+The execution of this physics-informed symbolic regression yields a "Pareto Front" of candidate models: a ranked list of equations that offer the best trade-offs between mathematical simplicity and predictive accuracy. In the following section, we evaluate the top candidates from this generation to identify the most robust global parameterization for $\tAmp_{2B}^{\text{Re}}$.
+
+
+\subsection{Discretization Effects and Short-Distance Data Exclusion}
+\label{sec:discretization_effects}
+
+Before deploying the physics-informed symbolic regression (or any subsequent global fitting procedure) on the extracted lattice amplitudes, we must carefully address the validity limits of our discretized spacetime. Lattice QCD acts as an ultraviolet (UV) regulator by defining the theory on a discrete grid with a finite lattice spacing $a$. Consequently, physical observables evaluated at length scales comparable to $a$ are heavily contaminated by discretization artifacts.
+
+For our specific evaluation of non-local Transverse Momentum Dependent (TMD) observables, this discrete geometry poses a significant challenge at short quark-separation distances. When the magnitude of the spatial separation vector $\vect{b}$ is very small (e.g., $|\vect{b}| \sim 1a$ or $2a$), the underlying continuous rotational symmetry of QCD is severely broken down to the discrete hypercubic group of the lattice. Furthermore, the step-wise Wilson lines constructed to connect these closely spaced fields suffer from severe $\mathcal{O}(a)$ and $\mathcal{O}(a^2)$ finite-spacing errors. Fitting phenomenological continuum models to these short-distance lattice points would force the algorithm to artificially parameterize unphysical lattice UV noise rather than the true non-perturbative structure of the nucleon.
+
+To rigorously insulate our continuous invariant parameterizations from short-distance discretization effects, we impose a strict spatial cut on our lattice dataset before any model fitting. Specifically, we exclude all data points where the magnitude of the spatial separation is less than three lattice units:
+\begin{equation}
+    |\vect{b}| = \sqrt{b_L^2 + b_T^2} \ge 3a \ .
+\end{equation}
+
+By isolating the dataset to $b \ge 3a$, we guarantee that the non-local operator spans a sufficient number of lattice sites such that the step-wise gauge link approaches a relatively smooth, continuous trajectory. This spatial restriction ensures that the physics-informed \texttt{PySR} algorithm and the resulting Fourier transforms over $P \cdot b$ are trained exclusively on the long-range, non-perturbative dynamics driving the Sivers effect, safely isolated from the corrupting influence of the discrete ultraviolet regulator.
+
+\vspace{1em}
+\begin{center}
+    \textcolor{red}{\textbf{[INSERT FIGURE HERE: A scatter plot or grid representation of the $(b_L/a, b_T/a)$ parameter space, visually highlighting the masked region $|\vect{b}| < 3a$ versus the accepted data points used for the fit.]}}
+\end{center}
+\vspace{1em}
+
+All subsequent stability analyses, global fits, and extracted phenomenological parameters discussed in this chapter are derived strictly from this artifact-suppressed ($|\vect{b}| \ge 3a$) dataset.
+
 
 \section{$\tAmp^{Re}_{2B}$: $\eta$-dependent Gaussian-type fit : $b\geq3$}
 \subsection{At fixed $\eta$}

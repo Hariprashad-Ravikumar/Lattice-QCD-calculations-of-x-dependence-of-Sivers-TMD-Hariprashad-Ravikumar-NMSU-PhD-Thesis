@@ -17,7 +17,7 @@ Because $x$ and the longitudinal spatial separation $b \cdot P$ act as Fourier c
  &=-m_{N} \frac{\int d(b\cdot P)e^{ix(b\cdot P)} \left[\tAmp_{12B}^{\text{Re}}(\cdots)+i\tAmp_{12B}^{\text{Im}}(\cdots)\right]}{\int d(b\cdot P)e^{ix(b\cdot P)}\left[\tAmp_{2B}^{\text{Re}}(\cdots)+i\tAmp_{2B}^{\text{Im}}(\cdots)\right]}\\
  &=-m_{N} \frac{\int d(b\cdot P) \left[\cos{\left(x(b\cdot P)\right)}\tAmp_{12B}^{\text{Re}}(\cdots)-\sin{\left(x(b\cdot P)\right)}\tAmp_{12B}^{\text{Im}}(\cdots)\right]}{\int d(b\cdot P)\left[\cos{\left(x(b\cdot P)\right)}\tAmp_{2B}^{\text{Re}}(\cdots)-\sin{\left(x(b\cdot P)\right)}\tAmp_{2B}^{\text{Im}}(\cdots)\right]} \ .
  \end{align}
- Expanding the Fourier phase factor into its trigonometric components isolates the amplitudes' real and imaginary contributions to the Sivers shift. Because the integration over $d(b \cdot P)$ is performed over a symmetric domain, the non-vanishing terms of the integral are completely dictated by the parity of the integrands with respect to $b \cdot P$. The trigonometric weights $\cos\left(x(b\cdot P)\right)$ and $\sin\left(x(b\cdot P)\right)$ are inherently even and odd, respectively.
+ Expanding the Fourier phase factor into its trigonometric components isolates the real and imaginary contributions of the amplitudes to the Sivers shift. Because the integration over $d(b \cdot P)$ is performed over a symmetric domain, the non-vanishing terms of the integral are completely dictated by the parity of the integrands with respect to $b \cdot P$. The trigonometric weights $\cos\left(x(b\cdot P)\right)$ and $\sin\left(x(b\cdot P)\right)$ are inherently even and odd, respectively.
 
 This harmonic symmetry elegantly filters the invariant amplitudes based on their behavior under Hermitian conjugation. As constrained by fundamental symmetries, the real components $\tAmp_{2B}^{\text{Re}}$ and $\tAmp_{12B}^{\text{Re}}$ must be even functions of $b \cdot P$, while the imaginary components $\tAmp_{2B}^{\text{Im}}$ and $\tAmp_{12B}^{\text{Im}}$ must be odd. Consequently, only the symmetric products, i.e., the even real amplitudes coupled with the cosine term, and the odd imaginary amplitudes coupled with the sine term, survive the integration. The operational challenge now lies in extracting these specific parity components from the discrete lattice data. The following section describes how we strategically construct our correlation functions to extract these distinct real and imaginary amplitudes.
 
@@ -63,7 +63,7 @@ Solving for the longitudinal staple component $v_1$ in terms of the transverse c
 \end{align}
 
 \subsection{Lattice Parameter Space and Off-Axis Links}
-This geometric calculation is repeated across a spectrum of nucleon momenta to systematically increase $\hat{\zeta}$. The resulting constraint parameters are summarized in Table \ref{tab:zeta_directions}.
+This geometric calculation is repeated over a range of nucleon momenta to increase $\hat{\zeta}$ systematically. The resulting constraint parameters are summarized in Table \ref{tab:zeta_directions}.
 
 \begin{table}[h!]
     \centering
@@ -200,7 +200,7 @@ Once these bounding matrix elements are computed, we perform a spatial interpola
 
 As established in the previous section, the ideal spatial trajectory of the gauge link, $\eta \vect{v}/a$, rarely falls on an exact integer lattice site. To evaluate the correlation function along this continuous trajectory, we compute the non-local matrix elements at several discrete bounding coordinates and interpolate between them. 
 
-Before interpolating, we must account for path degeneracy. Because the lattice gauge links are restricted to the Cartesian axes, there are multiple step-wise permutations (different side-link paths) that terminate at the exact same physical lattice coordinate. While these paths are geometrically equivalent in terms of their endpoints, they traverse different local gauge field configurations and thus acquire distinct discretization artifacts and gauge noise. As illustrated in Figure \ref{fig:example_2path}, we average the correlation functions evaluated over all degenerate paths that share the same endpoint. This path-averaging procedure significantly improves the signal-to-noise ratio before any interpolation is performed.
+Before interpolating, we must account for path degeneracy. Because the lattice gauge links are restricted to the Cartesian axes, there are multiple step-wise permutations (different side-link paths) that terminate at the exact same physical lattice coordinate. While these paths are geometrically equivalent at their endpoints, they traverse different local gauge field configurations and thus exhibit distinct discretization artifacts and gauge noise. As illustrated in Figure \ref{fig:example_2path}, we average the correlation functions evaluated over all degenerate paths that share the same endpoint. This path-averaging procedure significantly improves the signal-to-noise ratio before any interpolation is performed.
 
 \begin{figure}[htpb]
     \centering
@@ -246,7 +246,7 @@ In addition to the staple vector $\vect{v}$, the correlation function depends fu
 
 Because the nucleon momentum in our lattice setup is fixed along the $\hat{x_{1}}$-axis ($P = P_1 \hat{x_{1}}$), the longitudinal separation is directly proportional to the $\hat{x_{1}}$-component of the separation vector: $b \cdot P = -P_1 b_1$. Therefore, to isolate the real and imaginary parts of the amplitudes, we must evaluate the correlator at both positive and negative values of $b_1$. By taking the symmetric (even) and antisymmetric (odd) linear combinations of the correlators evaluated at $+b_1$ and $-b_1$, we can explicitly project out the real and imaginary amplitudes required for the $x$-dependent Fourier transform.
 
-To perform a robust numerical Fourier transform over $b \cdot P$, it is imperative to sample a wide and dense grid of the separation vector $\vect{b}$. Figure \ref{fig:b_phase_space} illustrates the parameter space targeted in our calculations. The left panel shows the discrete Cartesian grid evaluated in the $b_1-b_2$ plane, while the right panel demonstrates how this discrete spatial grid maps onto the phenomenologically relevant invariant phase space spanned by $b \cdot P/(2\pi)$ and the absolute separation $|b|/a$, dynamically shifting depending on the target Collins-Soper parameter $\hat{\zeta}$.
+To perform a robust numerical Fourier transform over $b \cdot P$, it is imperative to sample a wide and dense grid of the separation vector $\vect{b}$. Figure \ref{fig:b_phase_space} illustrates the parameter space targeted in our calculations. The left panel shows the discrete Cartesian grid evaluated in the $b_1-b_2$ plane. In contrast, the right panel demonstrates how this discrete spatial grid maps onto the phenomenologically relevant invariant phase space spanned by $b \cdot P/(2\pi)$ and the absolute separation $|b|/a$, dynamically shifting depending on the target Collins-Soper parameter $\hat{\zeta}$.
 
 \begin{figure}[htpb]
     \centering
@@ -333,7 +333,7 @@ To extract the physical Sivers shift from the lattice, we must isolate the speci
 		~~- \frac{\mN^3}{v \tcdot P} (\bvec \tcdot S) \epsilon^{\mu \nu \alpha \beta} P_\nu \bvec_\alpha v_\beta\, \tBmp_9
 		- \frac{i \mN^3}{(v \tcdot P)^2} (v \tcdot S) \epsilon^{\mu \nu \alpha \beta} P_\nu \bvec_\alpha v_\beta \tBmp_{10}
 \end{align}
-While this parametrization describes a continuous gauge link extending to infinity, for practical lattice calculations, it is highly advantageous to adopt an equivalent representation where the structures explicitly depend on the finite staple extent $\eta$. This ensures the parametrization remains mathematically well-defined even in the $v \cdot P = 0$ limit. This alternative form is obtained by making the substitution $v \rightarrow \eta v$ and extracting the scaling factors $(v \tcdot P)^{-n}$:
+While this parametrization describes a continuous gauge link extending to infinity, for practical lattice calculations it is highly advantageous to adopt an equivalent representation in which the structures explicitly depend on the finite staple extent $\eta$. This ensures the parametrization remains mathematically well-defined even in the $v \cdot P = 0$ limit. This alternative form is obtained by making the substitution $v \rightarrow \eta v$ and extracting the scaling factors $(v \tcdot P)^{-n}$:
  \begin{align}
     \frac{1}{2}\widetilde \Phi^{[\gamma^\mu]}_{\unsub}=\frac{1}{2} R_{\gamma^{\mu}} E_N & =  
 		P^\mu\, \tilde a_2 - i \mN^2 \bvec^\mu\, \tilde a_3
@@ -344,7 +344,7 @@ While this parametrization describes a continuous gauge link extending to infini
 		~~- \mN^3 (\bvec \tcdot S) \epsilon^{\mu \nu \alpha \beta} P_\nu \bvec_\alpha \eta v_\beta\, \tilde b_9
 		-i \mN^3 (v \tcdot S) \epsilon^{\mu \nu \alpha \beta} P_\nu \bvec_\alpha \eta^2 v_\beta \tilde b_{10}
 \end{align}
-To evaluate this tensor equation, we project it onto the specific kinematics optimized for our lattice setup. We choose a frame where the nucleon moves along the negative $\hat{1}$-axis, the spin is polarized along the $\hat{3}$-axis, and the separation and staple vectors lie in the transverse/longitudinal planes. Explicitly, we set $P^{\mu}=(E_N, -|\vec{P}^1|,0,0)$, $b^{\mu}=(0,b_{1},b_{2},0)$, $v^{\mu}=\pm n^{\prime}(0,v_{1},0,v_{3})$, and $S^{\mu}=(0,0,0,1)$. Expanding the sum over Lorentz indices for the temporal component ($\mu = 0$) and explicitly cancelling the vanishing terms (such as $b^0 = 0$, $v^0 = 0$, and $\bvec \tcdot S = 0$), we find:
+To evaluate this tensor equation, we project it onto the specific kinematics optimized for our lattice setup. We choose a frame where the nucleon moves along the negative $\hat{1}$-axis, the spin is polarized along the $\hat{3}$-axis, and the separation and staple vectors lie in the transverse/longitudinal planes. Explicitly, we set $P^{\mu}=(E_N, -|\vec{P}^1|,0,0)$, $b^{\mu}=(0,b_{1},b_{2},0)$, $v^{\mu}=\pm n^{\prime}(0,v_{1},0,v_{3})$, and $S^{\mu}=(0,0,0,1)$. Expanding the sum over Lorentz indices for the temporal component ($\mu = 0$) and explicitly canceling the vanishing terms (such as $b^0 = 0$, $v^0 = 0$, and $\bvec \tcdot S = 0$), we find:
 \begin{align}
     \frac{1}{2}\widetilde \Phi^{[\gamma^{0}]}_{\unsub} & = 
 		P^0\, \tAmp_2 - \cancelto{0}{i \mN^2 \bvec^0\, \tAmp_3}
@@ -623,12 +623,174 @@ where the geometric regularization factor characterizing the approach to the lig
 \begin{align}
     \Aboxed{R(\zetahat^2) \equiv 1- \sqrt{1 + \hat \zeta^{-2}}}
 \end{align}
-\vspace{1em}
-\noindent\rule{\textwidth}{0.4pt}
+
+\subsection{Constructing the Effective Amplitudes \texorpdfstring{$\tAmp_{2B}$}{TEXT} and \texorpdfstring{$\tAmp_{12B}$}{TEXT}}
+\label{sec:effective_amplitudes}
+
+With the fundamental invariant amplitudes explicitly isolated via the parity-projection of the lattice correlation functions, we can now synthesize the effective amplitudes that directly govern the unpolarized and Sivers Transverse Momentum Dependent (TMD) distributions. 
+theexplicitly 
+To ground these expressions in our simulated lattice geometry, we map the contravariant spatial indices to our physical grid parameters. We define the longitudinal spatial separation as $b_L \equiv b^1$ and the transverse spatial separation as $b_T \equiv b^2$. Consequently, the squared spatial separation vector becomes $\bvec^2 = b_L^2 + b_T^2$. Likewise, we identify the longitudinal nucleon momentum as $P_L \equiv P^1$. 
+
+We begin with the defining linear combination for the unpolarized effective amplitude, $\tAmp_{2B}$. Splitting this amplitude into its real and imaginary components yields:
+\begin{align}
+    \tAmp_{2B}^{\text{Re}}(b_L, b_T, \hat{\zeta}) &= \tAmp_2^{\text{Re}} + R(\zetahat^2) \tBmp_1^{\text{Re}} \\
+    \tAmp_{2B}^{\text{Im}}(b_L, b_T, \hat{\zeta}) &= \tAmp_2^{\text{Im}} + R(\zetahat^2) \tBmp_1^{\text{Im}}
+\end{align}
+
+Substituting the parity-projected lattice ratio observables derived in the previous section (and applying our $b_L, P_L$ geometric mapping), we form the complete, directly computable expression for the real part of $\tAmp_{2B}$:
+\begin{align}
+    \tAmp_{2B}^{\text{Re}}(b_L, b_T, \hat{\zeta}) &= \frac{1}{2}\text{Re}\{ R_{\Gamma(8)}\}^{[b_L\text{-even}]} + R(\zetahat^2) \frac{E_{N}|P_L|v^1}{2\mN^2 v^3} \text{Im}\{ R_{\Gamma(4)}\}^{[b_L\text{-even}]}
+\end{align}
+
+Applying the exact same substitution to the imaginary component, taking care to utilize the $b_L$-odd projected data sets to preserve the correct time-reversal parity, gives:
+\begin{align}
+    \tAmp_{2B}^{\text{Im}}(b_L, b_T, \hat{\zeta}) &= \frac{1}{2}\text{Im}\{ R_{\Gamma(8)}\}^{[b_L\text{-odd}]} - R(\zetahat^2) \frac{E_{N}|P_L|v^1}{2\mN^2 v^3} \text{Re}\{ R_{\Gamma(4)}\}^{[b_L\text{-odd}]}
+\end{align}
+
+We now turn our attention to the effective amplitude driving the Sivers shift, $\tAmp_{12B}$. This amplitude combines the fundamental structures $\tAmp_{12}$ and $\tBmp_8$. Its real and imaginary decompositions are defined as:
+\begin{align}
+    \tAmp_{12B}^{\text{Re}}(b_L, b_T, \hat{\zeta}) &= \tAmp_{12}^{\text{Re}} - R(\zetahat^2) \tBmp_8^{\text{Re}} \\
+    \tAmp_{12B}^{\text{Im}}(b_L, b_T, \hat{\zeta}) &= \tAmp_{12}^{\text{Im}} - R(\zetahat^2) \tBmp_8^{\text{Im}}
+\end{align}
+
+Because the terms within $\tAmp_{12B}$ are mathematically denser, we first explicitly write out the inner components $\tAmp_{12}^{\text{Re}}$ and $\tBmp_8^{\text{Re}}$ strictly in terms of the grid parameters $b_L$ and $b_T$. Using the kinematic constraint $\bvec^2 = b_L^2 + b_T^2$, the real part of the leading-twist term becomes:
+\begin{align}
+    \tAmp^{\text{Re}}_{12} &= \frac{-1}{2\mN (b_L^2 + b_T^2)} \left[\text{Re}\{ R_{\Gamma(1)}\}^{[b_L\text{-even}]} + \frac{v^3}{v^1}\text{Re}\{ R_{\Gamma(4)}\}^{[b_L\text{-even}]}\right]
+\end{align}
+
+Similarly, the corresponding real part of the rapidity-dependent correction term is expressed as:
+\begin{align}
+    \tBmp^{\text{Re}}_8 &= \frac{-E_N |P_L|}{ 2\mN^3 (b_L^2 + b_T^2) }\left[\text{Im}\{ R_{\Gamma(8)}\}^{[b_L\text{-even}]} + \frac{|P_L|v^3}{E_N v^1}\text{Re}\{ R_{\Gamma(4)}\}^{[b_L\text{-even}]} + 2\mN  \frac{|P_L|}{E_N} (b_L^2 + b_T^2)  \tAmp^{\text{Re}}_{12}\right]
+\end{align}
+
+Inserting these expanded components back into the definition of $\tAmp_{12B}^{\text{Re}}$, we yield the full, uncompressed equation required for the real-part Sivers integration:
+\begin{align}
+    \tAmp_{12B}^{\text{Re}}(b_L, b_T, \hat{\zeta}) &= \tAmp^{\text{Re}}_{12} - R(\zetahat^2) \Bigg( \frac{-E_N |P_L|}{ 2\mN^3 (b_L^2 + b_T^2) }\Bigg[\text{Im}\{ R_{\Gamma(8)}\}^{[b_L\text{-even}]} + \frac{|P_L|v^3}{E_N v^1}\text{Re}\{ R_{\Gamma(4)}\}^{[b_L\text{-even}]} \nonumber\\
+    &~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+ 2\mN  \frac{|P_L|}{E_N} (b_L^2 + b_T^2)  \tAmp^{\text{Re}}_{12}\Bigg] \Bigg)
+\end{align}
+
+To build the matching imaginary component of the Sivers effective amplitude, we first extract the underlying $b_L$-odd constituent structures:
+\begin{align}
+    \tAmp^{\text{Im}}_{12} &= \frac{-1}{2\mN (b_L^2 + b_T^2)} \left[\text{Im}\{ R_{\Gamma(1)}\}^{[b_L\text{-odd}]} + \frac{v^3}{v^1}\text{Im}\{ R_{\Gamma(4)}\}^{[b_L\text{-odd}]}\right]
+\end{align}
+
+And the corresponding imaginary rapidity-correction term:
+\begin{align}
+    \tBmp^{\text{Im}}_8 &= \frac{E_N |P_L|}{ 2\mN^3 (b_L^2 + b_T^2) }\left[\text{Re}\{ R_{\Gamma(8)}\}^{[b_L\text{-odd}]} - \frac{|P_L|v^3}{E_N v^1}\text{Im}\{ R_{\Gamma(4)}\}^{[b_L\text{-odd}]} - 2\mN  \frac{|P_L|}{E_N} (b_L^2 + b_T^2)  \tAmp^{\text{Im}}_{12}\right]
+\end{align}
+
+Substituting these into the $\tAmp_{12B}^{\text{Im}}$ definition provides the complete equation necessary for the odd-parity integration:
+\begin{align}
+    \tAmp_{12B}^{\text{Im}}(b_L, b_T, \hat{\zeta}) &= \tAmp^{\text{Im}}_{12} - R(\zetahat^2) \Bigg( \frac{E_N |P_L|}{ 2\mN^3 (b_L^2 + b_T^2) }\Bigg[\text{Re}\{ R_{\Gamma(8)}\}^{[b_L\text{-odd}]} - \frac{|P_L|v^3}{E_N v^1}\text{Im}\{ R_{\Gamma(4)}\}^{[b_L\text{-odd}]} \nonumber\\
+    &~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~- 2\mN  \frac{|P_L|}{E_N} (b_L^2 + b_T^2)  \tAmp^{\text{Im}}_{12}\Bigg] \Bigg)
+\end{align}
+
+\subsection{Constructing the Effective Amplitudes \texorpdfstring{$\tAmp_{2B}$}{TEXT} and \texorpdfstring{$\tAmp_{12B}$}{TEXT}}
+\label{sec:effective_amplitudes}
+
+With the fundamental invariant amplitudes explicitly isolated via the parity-projection of the lattice correlation functions, we can now synthesize the effective amplitudes that directly govern the unpolarized and Sivers Transverse Momentum Dependent (TMD) distributions. 
+theexplicitly 
+To ground these expressions in our simulated lattice geometry, we map the contravariant spatial indices to our physical grid parameters. We define the longitudinal spatial separation as $b_L \equiv b^1$ and the transverse spatial separation as $b_T \equiv b^2$. Consequently, the squared spatial separation vector expands to $\bvec^2 = b_L^2 + b_T^2$. Likewise, we identify the longitudinal nucleon momentum as $P_L \equiv P^1$. 
+
+We begin with the defining linear combination for the unpolarized effective amplitude, $\tAmp_{2B}$. Splitting this amplitude into its real and imaginary components yields:
+\begin{align}
+    \tAmp_{2B}^{\text{Re}}(b_L, b_T, \hat{\zeta}) &= \tAmp_2^{\text{Re}} + R(\zetahat^2) \tBmp_1^{\text{Re}} \\
+    \tAmp_{2B}^{\text{Im}}(b_L, b_T, \hat{\zeta}) &= \tAmp_2^{\text{Im}} + R(\zetahat^2) \tBmp_1^{\text{Im}}
+\end{align}
+
+Substituting the parity-projected lattice ratio observables derived in Section \ref{sec:solving_amplitudes} (and applying our $b_L, P_L$ geometric mapping), we form the complete, directly computable expression for the real part of $\tAmp_{2B}$ purely as a function of our grid coordinates:
+\begin{align}
+    \tAmp_{2B}^{\text{Re}}(b_L, b_T, \hat{\zeta}) &= \frac{1}{2}\text{Re}\{ R_{\Gamma(8)}\}^{[b_L\text{-even}]} + R(\zetahat^2) \frac{E_{N}|P_L|v^1}{2\mN^2 v^3} \text{Im}\{ R_{\Gamma(4)}\}^{[b_L\text{-even}]}
+\end{align}
+
+Applying the exact same substitution to the imaginary component—taking care to utilize the $b_L$-odd projected data sets to correctly preserve time-reversal parity—gives:
+\begin{align}
+    \tAmp_{2B}^{\text{Im}}(b_L, b_T, \hat{\zeta}) &= \frac{1}{2}\text{Im}\{ R_{\Gamma(8)}\}^{[b_L\text{-odd}]} - R(\zetahat^2) \frac{E_{N}|P_L|v^1}{2\mN^2 \eta v^3} \text{Re}\{ R_{\Gamma(4)}\}^{[b_L\text{-odd}]}
+\end{align}
+
+We now turn our attention to the effective amplitude driving the Sivers shift, $\tAmp_{12B}$. This amplitude combines the fundamental structures $\tAmp_{12}$ and $\tBmp_8$. Its real and imaginary decompositions are defined as:
+\begin{align}
+    \tAmp_{12B}^{\text{Re}}(b_L, b_T, \hat{\zeta}) &= \tAmp_{12}^{\text{Re}} - R(\zetahat^2) \tBmp_8^{\text{Re}} \\
+    \tAmp_{12B}^{\text{Im}}(b_L, b_T, \hat{\zeta}) &= \tAmp_{12}^{\text{Im}} - R(\zetahat^2) \tBmp_8^{\text{Im}}
+\end{align}
+
+Because the terms within $\tAmp_{12B}$ are mathematically dense, we first explicitly write out the inner constituent $\tAmp_{12}^{\text{Re}}$ strictly in terms of the grid parameters $b_L$ and $b_T$. Using the spatial kinematic constraint $\bvec^2 = b_L^2 + b_T^2$, the real part of the leading-twist term becomes:
+\begin{align}
+    \tAmp^{\text{Re}}_{12} &= \frac{-1}{2\mN (b_L^2 + b_T^2)} \left[\text{Re}\{ R_{\Gamma(1)}\}^{[b_L\text{-even}]} + \frac{v^3}{v^1}\text{Re}\{ R_{\Gamma(4)}\}^{[b_L\text{-even}]}\right]
+\end{align}
+
+Substituting this internal structure alongside the expansion for $\tBmp_8^{\text{Re}}$, we yield the full, uncompressed equation required for the real-part Sivers integration:
+\begin{align}
+    \tAmp_{12B}^{\text{Re}}(b_L, b_T, \hat{\zeta}) &= \tAmp^{\text{Re}}_{12} - R(\zetahat^2) \Bigg( \frac{-E_N |P_L|}{ 2\mN^3 (b_L^2 + b_T^2) }\Bigg[\text{Im}\{ R_{\Gamma(8)}\}^{[b_L\text{-even}]} + \frac{|P_L|v^3}{E_N v^1}\text{Re}\{ R_{\Gamma(4)}\}^{[b_L\text{-even}]} \nonumber \\
+    & \qquad + 2\mN  \frac{|P_L|}{E_N} (b_L^2 + b_T^2)  \tAmp^{\text{Re}}_{12}\Bigg] \Bigg)
+\end{align}
+
+Following the exact same procedure for the imaginary (T-odd) components, we first define the internal $b_L$-odd constituent $\tAmp^{\text{Im}}_{12}$:
+\begin{align}
+    \tAmp^{\text{Im}}_{12} &= \frac{-1}{2\mN (b_L^2 + b_T^2)} \left[\text{Im}\{ R_{\Gamma(1)}\}^{[b_L\text{-odd}]} + \frac{v^3}{v^1}\text{Im}\{ R_{\Gamma(4)}\}^{[b_L\text{-odd}]}\right]
+\end{align}
+
+And subsequently insert it to form the complete equation necessary for the imaginary part of the Sivers effective amplitude:
+\begin{align}
+    \tAmp_{12B}^{\text{Im}}(b_L, b_T, \hat{\zeta}) &= \tAmp^{\text{Im}}_{12} - R(\zetahat^2) \Bigg( \frac{E_N |P_L|}{ 2\mN^3 (b_L^2 + b_T^2) }\Bigg[\text{Re}\{ R_{\Gamma(8)}\}^{[b_L\text{-odd}]} - \frac{|P_L|v^3}{E_N v^1}\text{Im}\{ R_{\Gamma(4)}\}^{[b_L\text{-odd}]} \nonumber \\
+    & \qquad - 2\mN  \frac{|P_L|}{E_N} (b_L^2 + b_T^2)  \tAmp^{\text{Im}}_{12}\Bigg] \Bigg)
+\end{align}
+
+
+\subsection{Transformation to the Lorentz-Invariant Phase Space}
+\label{sec:lorentz_mapping}
+
+At this stage, the effective amplitudes $\tAmp_{2B}$ and $\tAmp_{12B}$ are formulated strictly as discrete functions of the Cartesian lattice grid parameters $b_L$ and $b_T$. However, extracting the longitudinal momentum fraction $x$-dependence necessitates computing the Fourier transform over the Lorentz-invariant inner product $P \cdot b$. To rigorously perform this integration, we must formally demonstrate a one-to-one mapping from our simulated Cartesian lattice coordinates to the invariant phase space.
+
+In our selected kinematic frame, the 4-vectors for the nucleon momentum and spatial separation are defined as:
+\begin{align}
+    P^{\mu} &= (E_N, P_L, 0, 0) \\
+    b^{\mu} &= (0, b_L, b_T, 0)
+\end{align}
+
+Evaluating the inner product using the Minkowski metric signature $(+,-,-,-)$, the temporal and transverse orthogonal components vanish, yielding strictly:
+\begin{align}
+    P \cdot b &= P_0 b^0 - P_1 b^1 - P_2 b^2 - P_3 b^3 \nonumber \\
+              &= - P_L b_L
+\end{align}
+
+This identity is powerful because it allows us to algebraically invert the relation, directly expressing the longitudinal Cartesian lattice coordinate $b_L$ as a continuous function of the invariant scalar $P \cdot b$ and the fixed lattice momentum $P_L$:
+\begin{align}
+    b_L &= \frac{P \cdot b}{-P_L}
+\end{align}
+
+To complete the geometric mapping, we must also ensure the squared separation term $\bvec^2$ present in the denominators of our amplitudes transforms invariantly. Substituting our Lorentz expression for $b_L$ into the geometric relation $\bvec^2 = b_L^2 + b_T^2$ yields:
+\begin{align}
+    \bvec^2 &= \left( \frac{P \cdot b}{-P_L} \right)^2 + b_T^2
+\end{align}
+
+This substitution is the critical theoretical step of this chapter. By replacing $b_L$ and $\bvec^2$ with these invariant expressions, we dynamically transform our discrete, lattice-evaluated amplitudes into continuous mathematical functions formulated entirely within the Lorentz-invariant frame:
+\begin{align}
+    \tAmp_{iB}(b_L, b_T, \hat{\zeta}) \quad \xrightarrow{\text{Coordinate Transformation}} \quad \tAmp_{iB}\left( P \cdot b, \bvec^2, \hat{\zeta} \right)
+\end{align}
+
+With the amplitudes now successfully parameterized by the continuous invariant scalar $P \cdot b$, we are formally equipped to evaluate the integral. As introduced at the beginning of this chapter, the momentum fraction $x$-dependent Sivers shift is extracted by performing the continuous Fourier transform strictly over this newly constructed Lorentz-invariant phase space:
+\begin{align}
+   \langle \vect{k}_y \rangle_{TU}(\vprp{\bvec}^2,x,\zetahat,\eta v \tcdot P)
+	&=-m_{N} \frac{\int d(b\cdot P) \left[\cos{\left(x(b\cdot P)\right)}\tAmp_{12B}^{\text{Re}}(\cdots)-\sin{\left(x(b\cdot P)\right)}\tAmp_{12B}^{\text{Im}}(\cdots)\right]}{\int d(b\cdot P)\left[\cos{\left(x(b\cdot P)\right)}\tAmp_{2B}^{\text{Re}}(\cdots)-\sin{\left(x(b\cdot P)\right)}\tAmp_{2B}^{\text{Im}}(\cdots)\right]} \ .
+\end{align}
+
+This completes the rigorous mathematical framework bridging the raw Euclidean correlation ratios evaluated on the discrete lattice grid to the physical, $x$-dependent phenomenological observables required to study the Sivers effect.
+
 
 \pagebreak
-\subsection{Lattice calculations of Amplitudes}
-\subsubsection{\texorpdfstring{$\hat{\zeta}=0.090772$}{TEXT}}
+\subsection{Numerical Results and Parity Constraints of the Extracted Amplitudes}
+\label{sec:numerical_amplitudes}
+
+Before examining the lattice data across the different Collins-Soper scales ($\hat{\zeta}$), it is crucial to verify the fundamental symmetry properties of the extracted amplitudes. As established in our theoretical framework, Hermitian conjugation of the non-local correlator imposes strict parity constraints on the invariant amplitudes. Specifically, the condition $[\tAmp_{iB}(P \cdot b, \dots)]^* = \tAmp_{iB}(-P \cdot b, \dots)$ dictates the exact mathematical behavior of their real and imaginary components with respect to the longitudinal separation.
+
+For the real parts of the amplitudes, $\tAmp_{2B}^{\text{Re}}$ and $\tAmp_{12B}^{\text{Re}}$, this conjugation relation enforces $\tAmp_{iB}^{\text{Re}}(P \cdot b) = \tAmp_{iB}^{\text{Re}}(-P \cdot b)$. Consequently, these real amplitudes must be strictly even functions of the invariant scalar $P \cdot b$. In our simulated lattice frame, where the inner product evaluates to $P \cdot b = -P_L b_L$, this physical constraint requires the amplitudes to be symmetric (even) with respect to the Cartesian longitudinal separation $b_L$. 
+
+Conversely, for the imaginary parts of the amplitudes, $\tAmp_{2B}^{\text{Im}}$ and $\tAmp_{12B}^{\text{Im}}$, the conjugation relation demands $\tAmp_{iB}^{\text{Im}}(P \cdot b) = -\tAmp_{iB}^{\text{Im}}(-P \cdot b)$. Therefore, the imaginary amplitudes are strictly odd functions of $P \cdot b$, and correspondingly, antisymmetric (odd) functions of $b_L$. The lattice data plotted in the subsequent spaces robustly exhibit these exact even and odd symmetry profiles along the $b_L$ axis, successfully validating our parity-projection methodology.
+
+However, an important distinction emerges when analyzing the statistical quality of the extracted signals. While the unpolarized amplitudes ($\tAmp_{2B}^{\text{Re}}$ and $\tAmp_{2B}^{\text{Im}}$) and the real Sivers amplitude ($\tAmp_{12B}^{\text{Re}}$) exhibit clear, statistically resolvable signals across the simulated phase space, the imaginary Sivers amplitude ($\tAmp_{12B}^{\text{Im}}$) does not. Across all evaluated momentum transfers and staple extents, the extracted lattice data for $\tAmp_{12B}^{\text{Im}}$ remains completely dominated by gauge noise and is statistically compatible with zero. Because there is no distinguishable signal, it is impossible to meaningfully constrain or fit a phenomenological model to this component. Consequently, $\tAmp_{12B}^{\text{Im}}$ is discarded from further analysis, and the $x$-dependent Sivers shift will be evaluated relying exclusively on the robust $\tAmp_{12B}^{\text{Re}}$ data.
+
+\subsubsection{Amplitude Profiles at \texorpdfstring{$\hat{\zeta}=0.090772$ ($P_L = -1$)}{TEXT}}
 \newcommand{\PLval}{-1}
 \begin{figure}[htbp]
     \centering
@@ -641,8 +803,9 @@ where the geometric regularization factor characterizing the approach to the lig
         \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ImA2B_Pb_bsq_PL\PLval_3D.pdf} \\
     \end{tabular}
     \caption{Real and imaginary parts of the $\widetilde{A}_{2B}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space.}
-    \label{fig:A2B_amplitudes}
+    \label{fig:A2B_amplitudes_P1}
 \end{figure}
+
 \begin{figure}[htbp]
     \centering
     \begin{tabular}{cc}
@@ -654,21 +817,21 @@ where the geometric regularization factor characterizing the approach to the lig
         \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ImA12B_Pb_bsq_PL\PLval_3D.pdf} \\
     \end{tabular}
     \caption{Real and imaginary parts of the $\widetilde{A}_{12B}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space.}
-    \label{fig:A12B_amplitude}
+    \label{fig:A12B_amplitude_P1}
 \end{figure}
+
 \begin{figure}[htbp]
     \centering
     \begin{tabular}{c}
         \includegraphics[width=0.9\linewidth]{plots/Amps_Fit/Combined_eta8_PL\PLval_2D.pdf} \\
         \includegraphics[width=0.9\linewidth]{plots/Amps_Fit/Combined_Pb_bsq_eta8_PL\PLval_2D.pdf} \\
     \end{tabular}
-    \caption{$\widetilde{A}^{Re}_{2B}$, $\widetilde{A}^{Im}_{2B}$, $\widetilde{A}^{Re}_{12B}$ \& $\widetilde{A}^{Im}_{12B}$  amplitudes for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ at fixed $\eta|\vect{v}|/a=8$. The top two row displays the $(b_{L}/a,b_{T}/a)-$space, while the bottom two row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2)-$space.}
-    \label{fig:placeholder}
+    \caption{$\widetilde{A}^{Re}_{2B}$, $\widetilde{A}^{Im}_{2B}$, $\widetilde{A}^{Re}_{12B}$ \& $\widetilde{A}^{Im}_{12B}$  amplitudes for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ at fixed $\eta|\vect{v}|/a=8$. The top two rows display the $(b_{L}/a,b_{T}/a)-$space, while the bottom two rows display the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2)-$space. Notice the lack of discernible signal in $\widetilde{A}^{Im}_{12B}$.}
+    \label{fig:combined_eta8_P1}
 \end{figure}
 
-
 \pagebreak
-\subsubsection{\texorpdfstring{$\hat{\zeta}=0.294367$}{TEXT}}
+\subsubsection{Amplitude Profiles at \texorpdfstring{$\hat{\zeta}=0.294367$ ($P_L = -2$)}{TEXT}}
 \renewcommand{\PLval}{-2}
 \begin{figure}[htbp]
     \centering
@@ -681,8 +844,9 @@ where the geometric regularization factor characterizing the approach to the lig
         \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ImA2B_Pb_bsq_PL\PLval_3D.pdf} \\
     \end{tabular}
     \caption{Real and imaginary parts of the $\widetilde{A}_{2B}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space.}
-    \label{fig:A2B_amplitudes}
+    \label{fig:A2B_amplitudes_P2}
 \end{figure}
+
 \begin{figure}[htbp]
     \centering
     \begin{tabular}{cc}
@@ -694,20 +858,21 @@ where the geometric regularization factor characterizing the approach to the lig
         \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ImA12B_Pb_bsq_PL\PLval_3D.pdf} \\
     \end{tabular}
     \caption{Real and imaginary parts of the $\widetilde{A}_{12B}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space.}
-    \label{fig:A12B_amplitude}
+    \label{fig:A12B_amplitude_P2}
 \end{figure}
+
 \begin{figure}[htbp]
     \centering
     \begin{tabular}{c}
         \includegraphics[width=0.9\linewidth]{plots/Amps_Fit/Combined_eta8_PL\PLval_2D.pdf} \\
         \includegraphics[width=0.9\linewidth]{plots/Amps_Fit/Combined_Pb_bsq_eta8_PL\PLval_2D.pdf} \\
     \end{tabular}
-    \caption{$\widetilde{A}^{Re}_{2B}$, $\widetilde{A}^{Im}_{2B}$, $\widetilde{A}^{Re}_{12B}$ \& $\widetilde{A}^{Im}_{12B}$  amplitudes for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ at fixed $\eta|\vect{v}|/a=8$. The top two row displays the $(b_{L}/a,b_{T}/a)-$space, while the bottom two row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2)-$space.}
-    \label{fig:placeholder}
+    \caption{$\widetilde{A}^{Re}_{2B}$, $\widetilde{A}^{Im}_{2B}$, $\widetilde{A}^{Re}_{12B}$ \& $\widetilde{A}^{Im}_{12B}$  amplitudes for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ at fixed $\eta|\vect{v}|/a=8$. The top two rows display the $(b_{L}/a,b_{T}/a)-$space, while the bottom two rows display the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2)-$space.}
+    \label{fig:combined_eta8_P2}
 \end{figure}
 
 \pagebreak
-\subsubsection{\texorpdfstring{$\hat{\zeta}=0.539684$}{TEXT}}
+\subsubsection{Amplitude Profiles at \texorpdfstring{$\hat{\zeta}=0.539684$ ($P_L = -3$)}{TEXT}}
 \renewcommand{\PLval}{-3}
 \begin{figure}[htbp]
     \centering
@@ -720,8 +885,9 @@ where the geometric regularization factor characterizing the approach to the lig
         \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ImA2B_Pb_bsq_PL\PLval_3D.pdf} \\
     \end{tabular}
     \caption{Real and imaginary parts of the $\widetilde{A}_{2B}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space.}
-    \label{fig:A2B_amplitudes}
+    \label{fig:A2B_amplitudes_P3}
 \end{figure}
+
 \begin{figure}[htbp]
     \centering
     \begin{tabular}{cc}
@@ -733,20 +899,21 @@ where the geometric regularization factor characterizing the approach to the lig
         \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ImA12B_Pb_bsq_PL\PLval_3D.pdf} \\
     \end{tabular}
     \caption{Real and imaginary parts of the $\widetilde{A}_{12B}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space.}
-    \label{fig:A12B_amplitude}
+    \label{fig:A12B_amplitude_P3}
 \end{figure}
+
 \begin{figure}[htbp]
     \centering
     \begin{tabular}{c}
         \includegraphics[width=0.9\linewidth]{plots/Amps_Fit/Combined_eta8_PL\PLval_2D.pdf} \\
         \includegraphics[width=0.9\linewidth]{plots/Amps_Fit/Combined_Pb_bsq_eta8_PL\PLval_2D.pdf} \\
     \end{tabular}
-    \caption{$\widetilde{A}^{Re}_{2B}$, $\widetilde{A}^{Im}_{2B}$, $\widetilde{A}^{Re}_{12B}$ \& $\widetilde{A}^{Im}_{12B}$  amplitudes for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ at fixed $\eta|\vect{v}|/a=8$. The top two row displays the $(b_{L}/a,b_{T}/a)-$space, while the bottom two row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2)-$space.}
-    \label{fig:placeholder}
+    \caption{$\widetilde{A}^{Re}_{2B}$, $\widetilde{A}^{Im}_{2B}$, $\widetilde{A}^{Re}_{12B}$ \& $\widetilde{A}^{Im}_{12B}$  amplitudes for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ at fixed $\eta|\vect{v}|/a=8$. The top two rows display the $(b_{L}/a,b_{T}/a)-$space, while the bottom two rows display the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2)-$space.}
+    \label{fig:combined_eta8_P3}
 \end{figure}
 
 \pagebreak
-\subsubsection{\texorpdfstring{$\hat{\zeta}=0.785756$}{TEXT}}
+\subsubsection{Amplitude Profiles at \texorpdfstring{$\hat{\zeta}=0.785756$ ($P_L = -4$)}{TEXT}}
 \renewcommand{\PLval}{-4}
 \begin{figure}[htbp]
     \centering
@@ -759,8 +926,9 @@ where the geometric regularization factor characterizing the approach to the lig
         \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ImA2B_Pb_bsq_PL\PLval_3D.pdf} \\
     \end{tabular}
     \caption{Real and imaginary parts of the $\widetilde{A}_{2B}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space.}
-    \label{fig:A2B_amplitudes}
+    \label{fig:A2B_amplitudes_P4}
 \end{figure}
+
 \begin{figure}[htbp]
     \centering
     \begin{tabular}{cc}
@@ -772,14 +940,15 @@ where the geometric regularization factor characterizing the approach to the lig
         \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ImA12B_Pb_bsq_PL\PLval_3D.pdf} \\
     \end{tabular}
     \caption{Real and imaginary parts of the $\widetilde{A}_{12B}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space.}
-    \label{fig:A12B_amplitude}
+    \label{fig:A12B_amplitude_P4}
 \end{figure}
+
 \begin{figure}[htbp]
     \centering
     \begin{tabular}{c}
         \includegraphics[width=0.9\linewidth]{plots/Amps_Fit/Combined_eta8_PL\PLval_2D.pdf} \\
         \includegraphics[width=0.9\linewidth]{plots/Amps_Fit/Combined_Pb_bsq_eta8_PL\PLval_2D.pdf} \\
     \end{tabular}
-    \caption{$\widetilde{A}^{Re}_{2B}$, $\widetilde{A}^{Im}_{2B}$, $\widetilde{A}^{Re}_{12B}$ \& $\widetilde{A}^{Im}_{12B}$  amplitudes for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ at fixed $\eta|\vect{v}|/a=8$. The top two row displays the $(b_{L}/a,b_{T}/a)-$space, while the bottom two row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2)-$space.}
-    \label{fig:placeholder}
+    \caption{$\widetilde{A}^{Re}_{2B}$, $\widetilde{A}^{Im}_{2B}$, $\widetilde{A}^{Re}_{12B}$ \& $\widetilde{A}^{Im}_{12B}$  amplitudes for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ at fixed $\eta|\vect{v}|/a=8$. The top two rows display the $(b_{L}/a,b_{T}/a)-$space, while the bottom two rows display the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2)-$space.}
+    \label{fig:combined_eta8_P4}
 \end{figure}
