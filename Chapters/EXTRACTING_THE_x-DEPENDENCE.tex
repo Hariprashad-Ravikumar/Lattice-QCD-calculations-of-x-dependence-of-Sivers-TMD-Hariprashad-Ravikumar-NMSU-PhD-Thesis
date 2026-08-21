@@ -2,7 +2,7 @@
 \label{sec:x_dependence}
 
 \subsection{The Sivers Shift as a Function of Momentum Fraction}
-In order to connect our lattice observables to the physical, $x$-dependent Transverse Momentum Dependent Parton Distribution Functions (TMDs), we must isolate the relevant amplitudes from the correlation function. Focusing on the leading-twist unpolarized quark distribution, the correlator is parameterized by the Lorentz-invariant amplitudes $\tAmp_{2B}$ and $\tAmp_{12B}$:
+ToIn order to connect our lattice observables to the physical, $x$-dependent Transverse Momentum Dependent Parton Distribution Functions (TMDs), we must isolate the relevant amplitudes from the correlation function. Focusing on the leading-twist unpolarized quark distribution, the correlator is parameterized by the Lorentz-invariant amplitudes $\tAmp_{2B}$ and $\tAmp_{12B}$:
 \begin{align}
     \frac{1}{2} \bra{P,S}\ \bar{q}(0)\ \gamma^{+}\ \WlineC{\mathcal{C}_\bvec}\ q(\bvec)\ \ket{P,S}=2P^{+}\left(\tAmp_{2B} 
 		+ i \mN \epsilon_{ij} \vect{\bvec}_i \vect{S}_j\, \tAmp_{12B} \right) \ .
@@ -246,7 +246,7 @@ In addition to the staple vector $\vect{v}$, the correlation function depends fu
 
 Because the nucleon momentum in our lattice setup is fixed along the $\hat{x_{1}}$-axis ($P = P_1 \hat{x_{1}}$), the longitudinal separation is directly proportional to the $\hat{x_{1}}$-component of the separation vector: $b \cdot P = -P_1 b_1$. Therefore, to isolate the real and imaginary parts of the amplitudes, we must evaluate the correlator at both positive and negative values of $b_1$. By taking the symmetric (even) and antisymmetric (odd) linear combinations of the correlators evaluated at $+b_1$ and $-b_1$, we can explicitly project out the real and imaginary amplitudes required for the $x$-dependent Fourier transform.
 
-To perform a robust numerical Fourier transform over $b \cdot P$, it is imperative to sample a wide and dense grid of the separation vector $\vect{b}$. Figure \ref{fig:b_phase_space} illustrates the parameter space targeted in our calculations. The left panel shows the discrete Cartesian grid evaluated in the $b_1-b_2$ plane. In contrast, the right panel demonstrates how this discrete spatial grid maps onto the phenomenologically relevant invariant phase space spanned by $b \cdot P/(2\pi)$ and the absolute separation $|b|/a$, dynamically shifting depending on the target Collins-Soper parameter $\hat{\zeta}$.
+To perform a robust numerical Fourier transform over $b \cdot P$, it is imperative to sample a wide and dense grid of the separation vector $\vect{b}$. Figure \ref{fig:b_phase_space} illustrates the parameter space targeted in our calculations. The left panel shows the discrete Cartesian grid evaluated in the $b_1-b_2$ plane. In contrast, the right panel demonstrates how this discrete spatial grid maps onto the phenomenologically relevant invariant Variable Space spanned by $b \cdot P/(2\pi)$ and the absolute separation $|b|/a$, dynamically shifting depending on the target Collins-Soper parameter $\hat{\zeta}$.
 
 \begin{figure}[htpb]
     \centering
@@ -260,10 +260,10 @@ To perform a robust numerical Fourier transform over $b \cdot P$, it is imperati
     \begin{minipage}{0.4\textwidth}
         \centering
         \includegraphics[width=\linewidth]{plots/kinematics_interpolation/Pb_bsq_plot.pdf}
-        \caption{Mapping of the spatial lattice vectors into the physical invariant phase space $(b \cdot P/(2\pi), |b|/a)$. The trajectories diverge based on the selected target $\hat{\zeta}$.}
+        \caption{Mapping of the spatial lattice vectors into the physical invariant Variable Space $(b \cdot P/(2\pi), |b|/a)$. The trajectories diverge based on the selected target $\hat{\zeta}$.}
         \label{fig:bL_bT_standard}
     \end{minipage}
-    \caption{Coverage of the quark separation vectors across the simulated lattice volume and their corresponding physical phase space representation.}
+    \caption{Coverage of the quark separation vectors across the simulated lattice volume and their corresponding physical Variable Space representation.}
     \label{fig:b_phase_space}
 \end{figure}
 
@@ -737,10 +737,10 @@ And subsequently insert it to form the complete equation necessary for the imagi
 \end{align}
 
 
-\subsection{Transformation to the Lorentz-Invariant Phase Space}
+\subsection{Transformation to the Lorentz-Invariant Variable Space}
 \label{sec:lorentz_mapping}
 
-At this stage, the effective amplitudes $\tAmp_{2B}$ and $\tAmp_{12B}$ are formulated strictly as discrete functions of the Cartesian lattice grid parameters $b_L$ and $b_T$. However, extracting the longitudinal momentum fraction $x$-dependence necessitates computing the Fourier transform over the Lorentz-invariant inner product $P \cdot b$. To rigorously perform this integration, we must formally demonstrate a one-to-one mapping from our simulated Cartesian lattice coordinates to the invariant phase space.
+At this stage, the effective amplitudes $\tAmp_{2B}$ and $\tAmp_{12B}$ are formulated strictly as discrete functions of the Cartesian lattice grid parameters $b_L$ and $b_T$. However, extracting the longitudinal momentum fraction $x$-dependence necessitates computing the Fourier transform over the Lorentz-invariant inner product $P \cdot b$. To rigorously perform this integration, we must formally demonstrate a one-to-one mapping from our simulated Cartesian lattice coordinates to the invariant Variable Space.
 
 In our selected kinematic frame, the 4-vectors for the nucleon momentum and spatial separation are defined as:
 \begin{align}
@@ -769,7 +769,7 @@ This substitution is the critical theoretical step of this chapter. By replacing
     \tAmp_{iB}(b_L, b_T, \hat{\zeta}) \quad \xrightarrow{\text{Coordinate Transformation}} \quad \tAmp_{iB}\left( P \cdot b, \bvec^2, \hat{\zeta} \right)
 \end{align}
 
-With the amplitudes now successfully parameterized by the continuous invariant scalar $P \cdot b$, we are formally equipped to evaluate the integral. As introduced at the beginning of this chapter, the momentum fraction $x$-dependent Sivers shift is extracted by performing the continuous Fourier transform strictly over this newly constructed Lorentz-invariant phase space:
+With the amplitudes now successfully parameterized by the continuous invariant scalar $P \cdot b$, we are formally equipped to evaluate the integral. As introduced at the beginning of this chapter, the momentum fraction $x$-dependent Sivers shift is extracted by performing the continuous Fourier transform strictly over this newly constructed Lorentz-invariant Variable Space:
 \begin{align}
    \langle \vect{k}_y \rangle_{TU}(\vprp{\bvec}^2,x,\zetahat,\eta v \tcdot P)
 	&=-m_{N} \frac{\int d(b\cdot P) \left[\cos{\left(x(b\cdot P)\right)}\tAmp_{12B}^{\text{Re}}(\cdots)-\sin{\left(x(b\cdot P)\right)}\tAmp_{12B}^{\text{Im}}(\cdots)\right]}{\int d(b\cdot P)\left[\cos{\left(x(b\cdot P)\right)}\tAmp_{2B}^{\text{Re}}(\cdots)-\sin{\left(x(b\cdot P)\right)}\tAmp_{2B}^{\text{Im}}(\cdots)\right]} \ .
@@ -788,7 +788,7 @@ For the real parts of the amplitudes, $\tAmp_{2B}^{\text{Re}}$ and $\tAmp_{12B}^
 
 Conversely, for the imaginary parts of the amplitudes, $\tAmp_{2B}^{\text{Im}}$ and $\tAmp_{12B}^{\text{Im}}$, the conjugation relation demands $\tAmp_{iB}^{\text{Im}}(P \cdot b) = -\tAmp_{iB}^{\text{Im}}(-P \cdot b)$. Therefore, the imaginary amplitudes are strictly odd functions of $P \cdot b$, and correspondingly, antisymmetric (odd) functions of $b_L$. The lattice data plotted in the subsequent spaces robustly exhibit these exact even and odd symmetry profiles along the $b_L$ axis, successfully validating our parity-projection methodology.
 
-However, an important distinction emerges when analyzing the statistical quality of the extracted signals. While the unpolarized amplitudes ($\tAmp_{2B}^{\text{Re}}$ and $\tAmp_{2B}^{\text{Im}}$) and the real Sivers amplitude ($\tAmp_{12B}^{\text{Re}}$) exhibit clear, statistically resolvable signals across the simulated phase space, the imaginary Sivers amplitude ($\tAmp_{12B}^{\text{Im}}$) does not. Across all evaluated momentum transfers and staple extents, the extracted lattice data for $\tAmp_{12B}^{\text{Im}}$ remains completely dominated by gauge noise and is statistically compatible with zero. Because there is no distinguishable signal, it is impossible to meaningfully constrain or fit a phenomenological model to this component. Consequently, $\tAmp_{12B}^{\text{Im}}$ is discarded from further analysis, and the $x$-dependent Sivers shift will be evaluated relying exclusively on the robust $\tAmp_{12B}^{\text{Re}}$ data.
+However, an important distinction emerges when analyzing the statistical quality of the extracted signals. While the unpolarized amplitudes ($\tAmp_{2B}^{\text{Re}}$ and $\tAmp_{2B}^{\text{Im}}$) and the real Sivers amplitude ($\tAmp_{12B}^{\text{Re}}$) exhibit clear, statistically resolvable signals across the simulated Variable Space, the imaginary Sivers amplitude ($\tAmp_{12B}^{\text{Im}}$) does not. Across all evaluated momentum transfers and staple extents, the extracted lattice data for $\tAmp_{12B}^{\text{Im}}$ remains completely dominated by gauge noise and is statistically compatible with zero. Because there is no distinguishable signal, it is impossible to meaningfully constrain or fit a phenomenological model to this component. Consequently, $\tAmp_{12B}^{\text{Im}}$ is discarded from further analysis, and the $x$-dependent Sivers shift will be evaluated relying exclusively on the robust $\tAmp_{12B}^{\text{Re}}$ data.
 
 \subsubsection{Amplitude Profiles at \texorpdfstring{$\hat{\zeta}=0.090772$ ($P_L = -1$)}{TEXT}}
 \newcommand{\PLval}{-1}
