@@ -1,0 +1,9 @@
+check Exp[-a(P.b)]*LIST0fb^2*Exp[-f*eta]
+
+LIST0fb^2
+---------
+Gaussian, Lorentzian, mix,..
+
+------
+Amp is Exp[-a(P.b)] in space like
+Amp is Power-law in light cone - Rigge
