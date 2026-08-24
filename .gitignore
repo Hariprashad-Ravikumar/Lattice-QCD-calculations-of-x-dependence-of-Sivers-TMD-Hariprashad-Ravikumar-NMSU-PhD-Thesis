@@ -1,0 +1,7 @@
+# Ignore deep-wiki and AGENTS markdown files for Overleaf sync
+deep-wiki/
+AGENTS.md
+AGENTS*.md
+
+# macOS metadata
+.DS_Store
