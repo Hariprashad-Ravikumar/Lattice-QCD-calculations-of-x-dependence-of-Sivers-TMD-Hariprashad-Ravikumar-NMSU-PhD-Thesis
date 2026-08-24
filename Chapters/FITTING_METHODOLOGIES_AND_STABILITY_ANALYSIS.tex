@@ -95,6 +95,36 @@ Furthermore, the overall goodness-of-fit for the simple Gaussian ansatz is excep
 
 To resolve these unphysical divergences and properly model the lattice correlation functions, we are forced to abandon the simple Gaussian model in favor of more sophisticated, multi-parameter functional forms that can accommodate the distinct decay rates while guaranteeing convergence in the Fourier domain.
 
+
+\subsection{Discretization Effects and Short-Distance Data Exclusion}
+\label{sec:discretization_effects}
+
+Before deploying the physics-informed symbolic regression (or any subsequent global fitting procedure) on the extracted lattice amplitudes, we must carefully address the validity limits of our discretized spacetime. Lattice QCD acts as an ultraviolet (UV) regulator by defining the theory on a discrete grid with a finite lattice spacing $a$. Consequently, physical observables evaluated at length scales comparable to $a$ are heavily contaminated by discretization artifacts.
+
+For our specific evaluation of non-local Transverse Momentum Dependent (TMD) observables, this discrete geometry poses a significant challenge at short quark-separation distances. When the magnitude of the spatial separation vector $\vect{b}$ is very small (e.g., $|\vect{b}| \sim 1a$ or $2a$), the underlying continuous rotational symmetry of QCD is severely broken down to the discrete hypercubic group of the lattice. Furthermore, the step-wise Wilson lines constructed to connect these closely spaced fields suffer from severe $\mathcal{O}(a)$ and $\mathcal{O}(a^2)$ finite-spacing errors. Fitting phenomenological continuum models to these short-distance lattice points would force the algorithm to artificially parameterize unphysical lattice UV noise rather than the true non-perturbative structure of the nucleon.
+
+To rigorously insulate our continuous invariant parameterizations from short-distance discretization effects, we impose a strict spatial cut on our lattice dataset before any model fitting. Specifically, we exclude all data points where the magnitude of the spatial separation is less than three lattice units:
+\begin{equation}
+    |\vect{b}| = \sqrt{b_L^2 + b_T^2} \ge 3a \ .
+\end{equation}
+
+By isolating the dataset to $b \ge 3a$, we guarantee that the non-local operator spans a sufficient number of lattice sites such that the step-wise gauge link approaches a relatively smooth, continuous trajectory. This spatial restriction ensures that the physics-informed \texttt{PySR} algorithm and the resulting Fourier transforms over $P \cdot b$ are trained exclusively on the long-range, non-perturbative dynamics driving the Sivers effect, safely isolated from the corrupting influence of the discrete ultraviolet regulator.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{plots/short_distance/A2B_Re_b_lessthan3_and_ge3.pdf}
+    \caption{Plots of $\tAmp^{Re}_{2B}$ amplitude showing data $|\vect{b}| < 3a$ curving in opposite way that data at $|\vect{b}| \ge 3a$ for fixed momentum ($P=-1$) and fixed $\eta$ (say $\eta=8$)}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{plots/short_distance/A12B_Re_b_lessthan3_and_ge3.pdf}
+    \caption{Plots of $\tAmp^{Re}_{12B}$ amplitude showing data $|\vect{b}| < 3a$ curving in opposite way that data at $|\vect{b}| \ge 3a$ for fixed momentum ($P=-1$) and fixed $\eta$ (say $\eta=8$)}
+\end{figure}
+
+All subsequent stability analyses, global fits, and extracted phenomenological parameters discussed in this chapter are derived strictly from this artifact-suppressed ($|\vect{b}| \ge 3a$) dataset.
+
+
 \subsection{Physics-Informed Symbolic Regression via PySR}
 \label{sec:pysr_methodology}
 
@@ -214,86 +244,10 @@ The straight-line diagnostic in Figure~\ref{fig:gaussian_straightline_test} prov
 
 These results establish the \texttt{PySR}-discovered Lorentzian power-law structure as the physically correct spatial profile for $\tAmp_{2B}^{\text{Re}}$. In the following sections, we incorporate this functional form into the full $\eta$-dependent parameterization and extend it to the remaining amplitudes for the global simultaneous fit.
 
-
-\subsection{Discretization Effects and Short-Distance Data Exclusion}
-\label{sec:discretization_effects}
-
-Before deploying the physics-informed symbolic regression (or any subsequent global fitting procedure) on the extracted lattice amplitudes, we must carefully address the validity limits of our discretized spacetime. Lattice QCD acts as an ultraviolet (UV) regulator by defining the theory on a discrete grid with a finite lattice spacing $a$. Consequently, physical observables evaluated at length scales comparable to $a$ are heavily contaminated by discretization artifacts.
-
-For our specific evaluation of non-local Transverse Momentum Dependent (TMD) observables, this discrete geometry poses a significant challenge at short quark-separation distances. When the magnitude of the spatial separation vector $\vect{b}$ is very small (e.g., $|\vect{b}| \sim 1a$ or $2a$), the underlying continuous rotational symmetry of QCD is severely broken down to the discrete hypercubic group of the lattice. Furthermore, the step-wise Wilson lines constructed to connect these closely spaced fields suffer from severe $\mathcal{O}(a)$ and $\mathcal{O}(a^2)$ finite-spacing errors. Fitting phenomenological continuum models to these short-distance lattice points would force the algorithm to artificially parameterize unphysical lattice UV noise rather than the true non-perturbative structure of the nucleon.
-
-To rigorously insulate our continuous invariant parameterizations from short-distance discretization effects, we impose a strict spatial cut on our lattice dataset before any model fitting. Specifically, we exclude all data points where the magnitude of the spatial separation is less than three lattice units:
-\begin{equation}
-    |\vect{b}| = \sqrt{b_L^2 + b_T^2} \ge 3a \ .
-\end{equation}
-
-By isolating the dataset to $b \ge 3a$, we guarantee that the non-local operator spans a sufficient number of lattice sites such that the step-wise gauge link approaches a relatively smooth, continuous trajectory. This spatial restriction ensures that the physics-informed \texttt{PySR} algorithm and the resulting Fourier transforms over $P \cdot b$ are trained exclusively on the long-range, non-perturbative dynamics driving the Sivers effect, safely isolated from the corrupting influence of the discrete ultraviolet regulator.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\linewidth]{plots/short_distance/A2B_Re_b_lessthan3_and_ge3.pdf}
-    \caption{Plots of $\tAmp^{Re}_{2B}$ amplitude showing data $|\vect{b}| < 3a$ curving in opposite way that data at $|\vect{b}| \ge 3a$ for fixed momentum ($P=-1$) and fixed $\eta$ (say $\eta=8$)}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\linewidth]{plots/short_distance/A12B_Re_b_lessthan3_and_ge3.pdf}
-    \caption{Plots of $\tAmp^{Re}_{12B}$ amplitude showing data $|\vect{b}| < 3a$ curving in opposite way that data at $|\vect{b}| \ge 3a$ for fixed momentum ($P=-1$) and fixed $\eta$ (say $\eta=8$)}
-\end{figure}
-
-All subsequent stability analyses, global fits, and extracted phenomenological parameters discussed in this chapter are derived strictly from this artifact-suppressed ($|\vect{b}| \ge 3a$) dataset.
-
-
-\section{$\tAmp^{Re}_{2B}$: $\eta$-dependent Gaussian-type fit : $b\geq3$}
-\subsection{At fixed $\eta$}
-On fitting a Gaussian function at any given $\eta$
-\begin{align}
-    \tAmp^{Re}_{2B}=ae^{-cb_L^2}e^{-db_T^2}
-\end{align}
-we compared $\chi^2/DoF$. The differences in the parameters $c$ and $d$ will provide information about stability in $P.b$ space. 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=1\linewidth]{Gaussian_type_fit_Real_A2B/Gaussian_eta_p-1.eps}
-    \caption{Gaussian fit for each $\eta$, $b\geq3$ and $P_L=-1$}
-    \label{fig:placeholder}
-\end{figure}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=1\linewidth]{Gaussian_type_fit_Real_A2B/Gaussian_eta_p-2.eps}
-    \caption{Gaussian fit for each $\eta$, $b\geq3$ and $P_L=-2$}
-    \label{fig:placeholder}
-\end{figure}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=1\linewidth]{Gaussian_type_fit_Real_A2B/Gaussian_eta_p-3.eps}
-    \caption{Gaussian fit for each $\eta$, $b\geq3$ and $P_L=-3$}
-    \label{fig:placeholder}
-\end{figure}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=1\linewidth]{Gaussian_type_fit_Real_A2B/Gaussian_eta_p-4.eps}
-    \caption{Gaussian fit for each $\eta$, $b\geq3$ and $P_L=-4$}
-    \label{fig:placeholder}
-\end{figure}
-
-We also tried a Lorentzian fit for each $\eta$:
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=1\linewidth]{Gaussian_type_fit_Real_A2B/Lorentzian_eta_p-1.eps}
-    \caption{Lorentzian fit for each $\eta$, $b\geq3$ and $P_L=-4$}
-    \label{fig:placeholder}
-\end{figure}
-
 \pagebreak
 
-~ 
-\pagebreak
-
-~ 
-\pagebreak
-
-\subsubsection{Finding best Fit: $b\geq3$}
-For $P_L=-1$, the range $7\leq\eta\leq10$ is found to be the most stable region for our analysis. We begin the fitting procedure with a simple Gaussian ansatz in $(b_L, b_T)$, which is a common baseline in lattice phenomenology. However, this model yields a high $\chi^2/\text{DoF} \approx 3.54$, indicating that a pure Gaussian decay is too steep to fit the data well.
+\subsection{Lorentzian power-law for position space Amplitudes}
+As we have concluded from our PySR analysis, the data prefer a Lorentzian power-law model in position space. To address this, we systematically explore several functional variants. For completeness, we begin the fitting procedure with a simple Gaussian ansatz in $(b_L, b_T)$. As predicted from PySR, this model yields a high $\chi^2/\text{DoF} \approx 3.54$, indicating that a pure Gaussian decay is not a best fit for the data.
 
 To address this, we systematically explore several functional variants. We find that introducing a power-law dependence significantly improves the quality of the fit. 
 
@@ -303,110 +257,29 @@ To address this, we systematically explore several functional variants. We find 
     \caption{Summary of various functional fits for $\tAmp^{Re}_{2B}$ for $7\leq\eta\leq10$, $b\geq3$ and $P_L=-1$}
     \label{fig:placeholder}
 \end{figure}
-For $\tAmp^{Re}_{2B}$ for $7\leq\eta\leq10$, $b\geq3$ and $P_L=-1$, the picked model is
-{\color{blue}
+
+From the above list of potential candidate models, we find that introducing a power-law dependence significantly improves the quality of the fit. There is still freedom of different asymptotes of $\eta$ that one can still explore, which we discuss in the next subsection.
+
+\subsection{Re A2B: Asymptotic in $\eta$ functions}
+We systematically explored different asymptotes of $\eta$ with the same Lorentzian power law in $(b_L, b_T)$ space. We listed corresponding $\chi^2/\text{DoF}$, AIC (Akaike information criterion) and Fourier transformation plot in $x$-space with the $\eta\rightarrow\infty$ limit. 
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\linewidth]{PowerLaw_etaAsymptotic/A2BfitFT_eta_Asymptotic_P1.pdf}
+\end{figure}
+
+
+Here AIC is calculated from $\chi^2$ as
 \begin{align}
-    \Aboxed{\tAmp^{Re}_{2B}(b_L, b_T,\eta)&=\frac{ae^{-f\eta}}{(1~+~c\eta^{g}b_{L}^2~+~db_{T}^{2})^{j}}}\\
-    \tAmp^{Re}_{2B}(b_L, b_T,\eta)&=\frac{[5.2(12)]e^{-[0.500(15)]\eta}}{(1~+~[0.034(17)]\eta^{[0.50(15)]}b_{L}^2~+~[0.103(29)]b_{T}^{2})^{[2.16(21)]}}
+    \text{AIC}&=2k+\chi^2\\
+    \text{AICc}&=\text{AIC}+\frac{2k(k+1)}{(n-k-1)}
 \end{align}
-}
-
-\pagebreak
-To test the stability and range of $\eta$ and $b_{min}$, we fit:
+where 
 \begin{itemize}
-    \item \begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.9\linewidth]{Gaussian_type_fit_Real_A2B/Lorentzian_eta7-10_p-1_bleq3.eps}
-    \caption{Lorentzian-type Power-Law fit for $\tAmp^{Re}_{2B}$ for $7\leq\eta\leq10$, $b\geq3$ and $P_L=-1$}
-    \label{fig:placeholder}
-     \end{figure}
-
-     \item \begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.9\linewidth]{Gaussian_type_fit_Real_A2B/Lorentzian_eta6-10_p-1_bleq3.eps}
-    \caption{Lorentzian-type Power-Law fit for $\tAmp^{Re}_{2B}$ for $6\leq\eta\leq10$, $b\geq3$ and $P_L=-1$}
-    \label{fig:placeholder}
-     \end{figure}
-
-     \item \begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.9\linewidth]{Gaussian_type_fit_Real_A2B/Lorentzian_eta7-10_p-1_bleq2.eps}
-    \caption{Lorentzian-type Power-Law fit for $\tAmp^{Re}_{2B}$ for $7\leq\eta\leq10$, $b\geq2$ and $P_L=-1$}
-    \label{fig:placeholder}
-     \end{figure}
-
-     \item \begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.9\linewidth]{Gaussian_type_fit_Real_A2B/Lorentzian_eta6-10_p-1_bleq2.eps}
-    \caption{Lorentzian-type Power-Law fit for $\tAmp^{Re}_{2B}$ for $6\leq\eta\leq10$, $b\geq2$ and $P_L=-1$}
-    \label{fig:placeholder}
-     \end{figure}
+    \item $k$: Number of free parameters
+    \item $n$: Number of points considered
 \end{itemize}
 
-\pagebreak
-\subsubsection{Let's fix the Power Law: $\frac{ae^{-f\eta}}{(1~+~c\eta^{g}b_{L}^2~+~db_{T}^{2})^{2}}$}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=1\linewidth]{Gaussian_type_fit_Real_A2B/LorentzianPower2_eta6-10_p-1_bleq3.eps}
-\end{figure}
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=1\linewidth]{Gaussian_type_fit_Real_A2B/LorentzianPower2_eta6-10_p-2_bleq3.eps}
-\end{figure}
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=1\linewidth]{Gaussian_type_fit_Real_A2B/LorentzianPower2_eta5-10_p-3_bleq3.eps}
-\end{figure}
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=1\linewidth]{Gaussian_type_fit_Real_A2B/LorentzianPower2_eta5-9_p-4_bleq3.eps}
-\end{figure}
-
-
-\pagebreak
-\subsection{Re A2B: Asymptotic in $\eta$ functions}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=1\linewidth]{PowerLaw_etaAsymptotic/A2BfitFT_eta_Asymptotic_P1.pdf}
-\end{figure}
-
-\pagebreak
-\subsection{Asymptotic in $\eta$ functions (Wider Fourier transform ansatzs)}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=1\linewidth]{PowerLaw_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_P1.pdf}
-\end{figure}
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=1\linewidth]{PowerLaw_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_P2.pdf}
-\end{figure}
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=1\linewidth]{PowerLaw_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_P3.pdf}
-\end{figure}
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=1\linewidth]{PowerLaw_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_compareP123.pdf}
-\end{figure}
-
-
-\pagebreak
-~
-
-\pagebreak
-~
-
-\pagebreak
-~
-
-\pagebreak
-~
+Most of the asymptotic $\eta$ functions have the same $\chi^2/\text{DoF}$, and importantly the same Lorentzian power $j\approx2$. On fitting a Lorentzian function with power $j\approx2$ at every $\eat$ slice, we get,
 
 \section{Candidate Selection and Simultaneous Fitting Strategy}
 \label{sec:simultaneous_fit_strategy}
