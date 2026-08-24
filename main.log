@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.17)  23 AUG 2026 19:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.17)  24 AUG 2026 14:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2283,25 +2283,49 @@ iledFit_details1.pdf): PDF inclusion: multiple pdfs with page group included in
 pdfTeX warning: pdflatex (file ./plots/Gaussian_fit_all_b/Gaussian_A2B_Im_P1_Fa
 iledFit_details2.pdf): PDF inclusion: multiple pdfs with page group included in
  a single page
+>] [54]
+<plots/short_distance/A2B_Re_b_lessthan3_and_ge3.pdf, id=5975, 1351.0475pt x 36
+7.3725pt>
+File: plots/short_distance/A2B_Re_b_lessthan3_and_ge3.pdf Graphic file (type pd
+f)
+<use plots/short_distance/A2B_Re_b_lessthan3_and_ge3.pdf>
+Package pdftex.def Info: plots/short_distance/A2B_Re_b_lessthan3_and_ge3.pdf  u
+sed on input line 115.
+(pdftex.def)             Requested size: 527.57121pt x 143.45967pt.
+<plots/short_distance/A12B_Re_b_lessthan3_and_ge3.pdf, id=5976, 1351.0475pt x 3
+61.35pt>
+File: plots/short_distance/A12B_Re_b_lessthan3_and_ge3.pdf Graphic file (type p
+df)
+<use plots/short_distance/A12B_Re_b_lessthan3_and_ge3.pdf>
+Package pdftex.def Info: plots/short_distance/A12B_Re_b_lessthan3_and_ge3.pdf  
+used on input line 121.
+(pdftex.def)             Requested size: 527.57121pt x 141.10788pt.
+
+
+Package natbib Warning: Citation `Cranmer2023pysr' on page 55 undefined on inpu
+t line 133.
+
+[55 <./plots/short_distance/A2B_Re_b_lessthan3_and_ge3.pdf> <./plots/short_dist
+ance/A12B_Re_b_lessthan3_and_ge3.pdf
+
+pdfTeX warning: pdflatex (file ./plots/short_distance/A12B_Re_b_lessthan3_and_g
+e3.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+
 >]
 
-Package natbib Warning: Citation `Cranmer2023pysr' on page 54 undefined on inpu
-t line 103.
+Package natbib Warning: Citation `Koza1992GP' on page 56 undefined on input lin
+e 136.
 
 
-Package natbib Warning: Citation `Koza1992GP' on page 54 undefined on input lin
-e 106.
+Package natbib Warning: Citation `Schmidt2009Distilling' on page 56 undefined o
+n input line 136.
 
-
-Package natbib Warning: Citation `Schmidt2009Distilling' on page 54 undefined o
-n input line 106.
-
-[54] (./PySR_outputs/pysr_model_config.tex
+[56] (./PySR_outputs/pysr_model_config.tex
 Overfull \hbox (3.6091pt too wide) in paragraph at lines 9--25
  [][] 
  []
 
-) [55] [56] (./PySR_outputs/pysr_custom_loss_code.tex)
+) [57] (./PySR_outputs/pysr_custom_loss_code.tex [58])
 (./PySR_outputs/pysr_equations_table.tex
 Underfull \hbox (badness 10000) in paragraph at lines 16--17
 []\OT1/cmr/m/n/10.95 Linear in $\OML/cmm/m/it/10.95 ^^Q$ $\OMS/cmsy/m/n/10.95 ^
@@ -2324,268 +2348,23 @@ Overfull \hbox (16.33794pt too wide) in paragraph at lines 9--30
  [][] 
  []
 
-) [57] [58]
-<PySR_outputs/01_A2B_PySR_Benchmark_Fits.pdf, id=6039, 1048.45326pt x 657.77434
+) [59] [60]
+<PySR_outputs/01_A2B_PySR_Benchmark_Fits.pdf, id=6161, 1048.45326pt x 657.77434
 pt>
 File: PySR_outputs/01_A2B_PySR_Benchmark_Fits.pdf Graphic file (type pdf)
 <use PySR_outputs/01_A2B_PySR_Benchmark_Fits.pdf>
 Package pdftex.def Info: PySR_outputs/01_A2B_PySR_Benchmark_Fits.pdf  used on i
-nput line 199.
+nput line 229.
 (pdftex.def)             Requested size: 527.57121pt x 330.98405pt.
-<PySR_outputs/02_Gaussian_StraightLine_Test.pdf, id=6040, 930.63339pt x 715.384
+<PySR_outputs/02_Gaussian_StraightLine_Test.pdf, id=6162, 930.63339pt x 715.384
 52pt>
 File: PySR_outputs/02_Gaussian_StraightLine_Test.pdf Graphic file (type pdf)
 <use PySR_outputs/02_Gaussian_StraightLine_Test.pdf>
 Package pdftex.def Info: PySR_outputs/02_Gaussian_StraightLine_Test.pdf  used o
-n input line 206.
+n input line 236.
 (pdftex.def)             Requested size: 501.19104pt x 385.26488pt.
- [59] [60 <./PySR_outputs/01_A2B_PySR_Benchmark_Fits.pdf>] [61 <./PySR_outputs/
-02_Gaussian_StraightLine_Test.pdf>] [62]
-<plots/short_distance/A2B_Re_b_lessthan3_and_ge3.pdf, id=6314, 1351.0475pt x 36
-7.3725pt>
-File: plots/short_distance/A2B_Re_b_lessthan3_and_ge3.pdf Graphic file (type pd
-f)
-<use plots/short_distance/A2B_Re_b_lessthan3_and_ge3.pdf>
-Package pdftex.def Info: plots/short_distance/A2B_Re_b_lessthan3_and_ge3.pdf  u
-sed on input line 234.
-(pdftex.def)             Requested size: 527.57121pt x 143.45967pt.
-<plots/short_distance/A12B_Re_b_lessthan3_and_ge3.pdf, id=6315, 1351.0475pt x 3
-61.35pt>
-File: plots/short_distance/A12B_Re_b_lessthan3_and_ge3.pdf Graphic file (type p
-df)
-<use plots/short_distance/A12B_Re_b_lessthan3_and_ge3.pdf>
-Package pdftex.def Info: plots/short_distance/A12B_Re_b_lessthan3_and_ge3.pdf  
-used on input line 240.
-(pdftex.def)             Requested size: 527.57121pt x 141.10788pt.
- [63 <./plots/short_distance/A2B_Re_b_lessthan3_and_ge3.pdf> <./plots/short_dis
-tance/A12B_Re_b_lessthan3_and_ge3.pdf
-
-pdfTeX warning: pdflatex (file ./plots/short_distance/A12B_Re_b_lessthan3_and_g
-e3.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-
->]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 247.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\setbox' on input line 247.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 247.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hbox' on input line 247.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 247.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 247.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 247.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\textstyle' on input line 247.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 247.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathaccent' on input line 247.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 247.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 247.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 247.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 247.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\eta' on input line 247.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 247.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 247.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\geq' on input line 247.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 247.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 248.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\eta' on input line 248.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 248.
-
-Package epstopdf Info: Source file: <Gaussian_type_fit_Real_A2B/Gaussian_eta_p-
-1.eps>
-(epstopdf)                    date: 2026-08-21 14:11:15
-(epstopdf)                    size: 72484 bytes
-(epstopdf)             Output file: <Gaussian_type_fit_Real_A2B/Gaussian_eta_p-
-1-eps-converted-to.pdf>
-(epstopdf)                    date: 2026-08-23 19:20:09
-(epstopdf)                    size: 26634 bytes
-(epstopdf)             Command: <repstopdf --outfile=Gaussian_type_fit_Real_A2B
-/Gaussian_eta_p-1-eps-converted-to.pdf Gaussian_type_fit_Real_A2B/Gaussian_eta_
-p-1.eps>
-(epstopdf)             \includegraphics on input line 256.
-Package epstopdf Info: Output file is already uptodate.
-<Gaussian_type_fit_Real_A2B/Gaussian_eta_p-1-eps-converted-to.pdf, id=6425, 496
-.85625pt x 262.9825pt>
-File: Gaussian_type_fit_Real_A2B/Gaussian_eta_p-1-eps-converted-to.pdf Graphic 
-file (type pdf)
-<use Gaussian_type_fit_Real_A2B/Gaussian_eta_p-1-eps-converted-to.pdf>
-Package pdftex.def Info: Gaussian_type_fit_Real_A2B/Gaussian_eta_p-1-eps-conver
-ted-to.pdf  used on input line 256.
-(pdftex.def)             Requested size: 527.57121pt x 279.2617pt.
-Package epstopdf Info: Source file: <Gaussian_type_fit_Real_A2B/Gaussian_eta_p-
-2.eps>
-(epstopdf)                    date: 2026-08-21 14:11:15
-(epstopdf)                    size: 72068 bytes
-(epstopdf)             Output file: <Gaussian_type_fit_Real_A2B/Gaussian_eta_p-
-2-eps-converted-to.pdf>
-(epstopdf)                    date: 2026-08-23 19:20:09
-(epstopdf)                    size: 26415 bytes
-(epstopdf)             Command: <repstopdf --outfile=Gaussian_type_fit_Real_A2B
-/Gaussian_eta_p-2-eps-converted-to.pdf Gaussian_type_fit_Real_A2B/Gaussian_eta_
-p-2.eps>
-(epstopdf)             \includegraphics on input line 262.
-Package epstopdf Info: Output file is already uptodate.
-<Gaussian_type_fit_Real_A2B/Gaussian_eta_p-2-eps-converted-to.pdf, id=6426, 487
-.8225pt x 249.93375pt>
-File: Gaussian_type_fit_Real_A2B/Gaussian_eta_p-2-eps-converted-to.pdf Graphic 
-file (type pdf)
-<use Gaussian_type_fit_Real_A2B/Gaussian_eta_p-2-eps-converted-to.pdf>
-Package pdftex.def Info: Gaussian_type_fit_Real_A2B/Gaussian_eta_p-2-eps-conver
-ted-to.pdf  used on input line 262.
-(pdftex.def)             Requested size: 527.57121pt x 270.30197pt.
-Package epstopdf Info: Source file: <Gaussian_type_fit_Real_A2B/Gaussian_eta_p-
-3.eps>
-(epstopdf)                    date: 2026-08-21 14:11:15
-(epstopdf)                    size: 71834 bytes
-(epstopdf)             Output file: <Gaussian_type_fit_Real_A2B/Gaussian_eta_p-
-3-eps-converted-to.pdf>
-(epstopdf)                    date: 2026-08-23 19:20:09
-(epstopdf)                    size: 22642 bytes
-(epstopdf)             Command: <repstopdf --outfile=Gaussian_type_fit_Real_A2B
-/Gaussian_eta_p-3-eps-converted-to.pdf Gaussian_type_fit_Real_A2B/Gaussian_eta_
-p-3.eps>
-(epstopdf)             \includegraphics on input line 268.
-Package epstopdf Info: Output file is already uptodate.
-<Gaussian_type_fit_Real_A2B/Gaussian_eta_p-3-eps-converted-to.pdf, id=6427, 463
-.7325pt x 249.93375pt>
-File: Gaussian_type_fit_Real_A2B/Gaussian_eta_p-3-eps-converted-to.pdf Graphic 
-file (type pdf)
-<use Gaussian_type_fit_Real_A2B/Gaussian_eta_p-3-eps-converted-to.pdf>
-Package pdftex.def Info: Gaussian_type_fit_Real_A2B/Gaussian_eta_p-3-eps-conver
-ted-to.pdf  used on input line 268.
-(pdftex.def)             Requested size: 527.57121pt x 284.36682pt.
-Package epstopdf Info: Source file: <Gaussian_type_fit_Real_A2B/Gaussian_eta_p-
-4.eps>
-(epstopdf)                    date: 2026-08-21 14:11:15
-(epstopdf)                    size: 71852 bytes
-(epstopdf)             Output file: <Gaussian_type_fit_Real_A2B/Gaussian_eta_p-
-4-eps-converted-to.pdf>
-(epstopdf)                    date: 2026-08-23 19:20:10
-(epstopdf)                    size: 22686 bytes
-(epstopdf)             Command: <repstopdf --outfile=Gaussian_type_fit_Real_A2B
-/Gaussian_eta_p-4-eps-converted-to.pdf Gaussian_type_fit_Real_A2B/Gaussian_eta_
-p-4.eps>
-(epstopdf)             \includegraphics on input line 274.
-Package epstopdf Info: Output file is already uptodate.
-<Gaussian_type_fit_Real_A2B/Gaussian_eta_p-4-eps-converted-to.pdf, id=6428, 452
-.69125pt x 249.93375pt>
-File: Gaussian_type_fit_Real_A2B/Gaussian_eta_p-4-eps-converted-to.pdf Graphic 
-file (type pdf)
-<use Gaussian_type_fit_Real_A2B/Gaussian_eta_p-4-eps-converted-to.pdf>
-Package pdftex.def Info: Gaussian_type_fit_Real_A2B/Gaussian_eta_p-4-eps-conver
-ted-to.pdf  used on input line 274.
-(pdftex.def)             Requested size: 527.57121pt x 291.27339pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-Package epstopdf Info: Source file: <Gaussian_type_fit_Real_A2B/Lorentzian_eta_
-p-1.eps>
-(epstopdf)                    date: 2026-08-21 14:11:15
-(epstopdf)                    size: 72453 bytes
-(epstopdf)             Output file: <Gaussian_type_fit_Real_A2B/Lorentzian_eta_
-p-1-eps-converted-to.pdf>
-(epstopdf)                    date: 2026-08-23 19:20:10
-(epstopdf)                    size: 22340 bytes
-(epstopdf)             Command: <repstopdf --outfile=Gaussian_type_fit_Real_A2B
-/Lorentzian_eta_p-1-eps-converted-to.pdf Gaussian_type_fit_Real_A2B/Lorentzian_
-eta_p-1.eps>
-(epstopdf)             \includegraphics on input line 282.
-Package epstopdf Info: Output file is already uptodate.
-<Gaussian_type_fit_Real_A2B/Lorentzian_eta_p-1-eps-converted-to.pdf, id=6429, 4
-78.78876pt x 269.005pt>
-File: Gaussian_type_fit_Real_A2B/Lorentzian_eta_p-1-eps-converted-to.pdf Graphi
-c file (type pdf)
-<use Gaussian_type_fit_Real_A2B/Lorentzian_eta_p-1-eps-converted-to.pdf>
-Package pdftex.def Info: Gaussian_type_fit_Real_A2B/Lorentzian_eta_p-1-eps-conv
-erted-to.pdf  used on input line 282.
-(pdftex.def)             Requested size: 527.57121pt x 296.4359pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[64 <./Gaussian_type_fit_Real_A2B/Gaussian_eta_p-1-eps-converted-to.pdf>]
-[65 <./Gaussian_type_fit_Real_A2B/Gaussian_eta_p-2-eps-converted-to.pdf> <./Gau
-ssian_type_fit_Real_A2B/Gaussian_eta_p-3-eps-converted-to.pdf>] [66 <./Gaussian
-_type_fit_Real_A2B/Gaussian_eta_p-4-eps-converted-to.pdf> <./Gaussian_type_fit_
-Real_A2B/Lorentzian_eta_p-1-eps-converted-to.pdf>]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 295.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\geq' on input line 295.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 295.
-
+ [61] [62 <./PySR_outputs/01_A2B_PySR_Benchmark_Fits.pdf>] [63 <./PySR_outputs/
+02_Gaussian_StraightLine_Test.pdf>] [64]
 Package epstopdf Info: Source file: <Gaussian_type_fit_Real_A2B/FitList_eta7891
 0_p-1.eps>
 (epstopdf)                    date: 2026-08-21 14:11:15
@@ -2597,414 +2376,341 @@ Package epstopdf Info: Source file: <Gaussian_type_fit_Real_A2B/FitList_eta7891
 (epstopdf)             Command: <repstopdf --outfile=Gaussian_type_fit_Real_A2B
 /FitList_eta78910_p-1-eps-converted-to.pdf Gaussian_type_fit_Real_A2B/FitList_e
 ta78910_p-1.eps>
-(epstopdf)             \includegraphics on input line 302.
+(epstopdf)             \includegraphics on input line 256.
 Package epstopdf Info: Output file is already uptodate.
-<Gaussian_type_fit_Real_A2B/FitList_eta78910_p-1-eps-converted-to.pdf, id=6529,
+<Gaussian_type_fit_Real_A2B/FitList_eta78910_p-1-eps-converted-to.pdf, id=6436,
  728.7225pt x 558.085pt>
 File: Gaussian_type_fit_Real_A2B/FitList_eta78910_p-1-eps-converted-to.pdf Grap
 hic file (type pdf)
 <use Gaussian_type_fit_Real_A2B/FitList_eta78910_p-1-eps-converted-to.pdf>
 Package pdftex.def Info: Gaussian_type_fit_Real_A2B/FitList_eta78910_p-1-eps-co
-nverted-to.pdf  used on input line 302.
+nverted-to.pdf  used on input line 256.
 (pdftex.def)             Requested size: 527.57121pt x 404.052pt.
-[67 <./Gaussian_type_fit_Real_A2B/FitList_eta78910_p-1-eps-converted-to.pdf>]
-[68]
-Package epstopdf Info: Source file: <Gaussian_type_fit_Real_A2B/Lorentzian_eta7
--10_p-1_bleq3.eps>
-(epstopdf)                    date: 2026-08-21 14:11:15
-(epstopdf)                    size: 61980 bytes
-(epstopdf)             Output file: <Gaussian_type_fit_Real_A2B/Lorentzian_eta7
--10_p-1_bleq3-eps-converted-to.pdf>
-(epstopdf)                    date: 2026-08-23 19:20:11
-(epstopdf)                    size: 24075 bytes
-(epstopdf)             Command: <repstopdf --outfile=Gaussian_type_fit_Real_A2B
-/Lorentzian_eta7-10_p-1_bleq3-eps-converted-to.pdf Gaussian_type_fit_Real_A2B/L
-orentzian_eta7-10_p-1_bleq3.eps>
-(epstopdf)             \includegraphics on input line 319.
-Package epstopdf Info: Output file is already uptodate.
-<Gaussian_type_fit_Real_A2B/Lorentzian_eta7-10_p-1_bleq3-eps-converted-to.pdf, 
-id=6562, 522.95375pt x 116.435pt>
-File: Gaussian_type_fit_Real_A2B/Lorentzian_eta7-10_p-1_bleq3-eps-converted-to.
-pdf Graphic file (type pdf)
-<use Gaussian_type_fit_Real_A2B/Lorentzian_eta7-10_p-1_bleq3-eps-converted-to.p
-df>
-Package pdftex.def Info: Gaussian_type_fit_Real_A2B/Lorentzian_eta7-10_p-1_bleq
-3-eps-converted-to.pdf  used on input line 319.
-(pdftex.def)             Requested size: 474.81087pt x 105.71793pt.
-Package epstopdf Info: Source file: <Gaussian_type_fit_Real_A2B/Lorentzian_eta6
--10_p-1_bleq3.eps>
-(epstopdf)                    date: 2026-08-21 14:11:15
-(epstopdf)                    size: 62577 bytes
-(epstopdf)             Output file: <Gaussian_type_fit_Real_A2B/Lorentzian_eta6
--10_p-1_bleq3-eps-converted-to.pdf>
-(epstopdf)                    date: 2026-08-23 19:20:11
-(epstopdf)                    size: 24275 bytes
-(epstopdf)             Command: <repstopdf --outfile=Gaussian_type_fit_Real_A2B
-/Lorentzian_eta6-10_p-1_bleq3-eps-converted-to.pdf Gaussian_type_fit_Real_A2B/L
-orentzian_eta6-10_p-1_bleq3.eps>
-(epstopdf)             \includegraphics on input line 326.
-Package epstopdf Info: Output file is already uptodate.
-<Gaussian_type_fit_Real_A2B/Lorentzian_eta6-10_p-1_bleq3-eps-converted-to.pdf, 
-id=6563, 610.28pt x 116.435pt>
-File: Gaussian_type_fit_Real_A2B/Lorentzian_eta6-10_p-1_bleq3-eps-converted-to.
-pdf Graphic file (type pdf)
-<use Gaussian_type_fit_Real_A2B/Lorentzian_eta6-10_p-1_bleq3-eps-converted-to.p
-df>
-Package pdftex.def Info: Gaussian_type_fit_Real_A2B/Lorentzian_eta6-10_p-1_bleq
-3-eps-converted-to.pdf  used on input line 326.
-(pdftex.def)             Requested size: 474.81087pt x 90.5915pt.
-Package epstopdf Info: Source file: <Gaussian_type_fit_Real_A2B/Lorentzian_eta7
--10_p-1_bleq2.eps>
-(epstopdf)                    date: 2026-08-21 14:11:15
-(epstopdf)                    size: 62578 bytes
-(epstopdf)             Output file: <Gaussian_type_fit_Real_A2B/Lorentzian_eta7
--10_p-1_bleq2-eps-converted-to.pdf>
-(epstopdf)                    date: 2026-08-23 19:20:11
-(epstopdf)                    size: 24271 bytes
-(epstopdf)             Command: <repstopdf --outfile=Gaussian_type_fit_Real_A2B
-/Lorentzian_eta7-10_p-1_bleq2-eps-converted-to.pdf Gaussian_type_fit_Real_A2B/L
-orentzian_eta7-10_p-1_bleq2.eps>
-(epstopdf)             \includegraphics on input line 333.
-Package epstopdf Info: Output file is already uptodate.
-<Gaussian_type_fit_Real_A2B/Lorentzian_eta7-10_p-1_bleq2-eps-converted-to.pdf, 
-id=6564, 538.01pt x 116.435pt>
-File: Gaussian_type_fit_Real_A2B/Lorentzian_eta7-10_p-1_bleq2-eps-converted-to.
-pdf Graphic file (type pdf)
-<use Gaussian_type_fit_Real_A2B/Lorentzian_eta7-10_p-1_bleq2-eps-converted-to.p
-df>
-Package pdftex.def Info: Gaussian_type_fit_Real_A2B/Lorentzian_eta7-10_p-1_bleq
-2-eps-converted-to.pdf  used on input line 333.
-(pdftex.def)             Requested size: 474.81087pt x 102.75803pt.
-Package epstopdf Info: Source file: <Gaussian_type_fit_Real_A2B/Lorentzian_eta6
--10_p-1_bleq2.eps>
-(epstopdf)                    date: 2026-08-21 14:11:15
-(epstopdf)                    size: 62581 bytes
-(epstopdf)             Output file: <Gaussian_type_fit_Real_A2B/Lorentzian_eta6
--10_p-1_bleq2-eps-converted-to.pdf>
-(epstopdf)                    date: 2026-08-23 19:20:11
-(epstopdf)                    size: 24281 bytes
-(epstopdf)             Command: <repstopdf --outfile=Gaussian_type_fit_Real_A2B
-/Lorentzian_eta6-10_p-1_bleq2-eps-converted-to.pdf Gaussian_type_fit_Real_A2B/L
-orentzian_eta6-10_p-1_bleq2.eps>
-(epstopdf)             \includegraphics on input line 340.
-Package epstopdf Info: Output file is already uptodate.
-<Gaussian_type_fit_Real_A2B/Lorentzian_eta6-10_p-1_bleq2-eps-converted-to.pdf, 
-id=6565, 538.01pt x 116.435pt>
-File: Gaussian_type_fit_Real_A2B/Lorentzian_eta6-10_p-1_bleq2-eps-converted-to.
-pdf Graphic file (type pdf)
-<use Gaussian_type_fit_Real_A2B/Lorentzian_eta6-10_p-1_bleq2-eps-converted-to.p
-df>
-Package pdftex.def Info: Gaussian_type_fit_Real_A2B/Lorentzian_eta6-10_p-1_bleq
-2-eps-converted-to.pdf  used on input line 340.
-(pdftex.def)             Requested size: 474.81087pt x 102.75803pt.
- [69 <./Gaussian_type_fit_Real_A2B/Lorentzian_eta7-10_p-1_bleq3-eps-converted-t
-o.pdf> <./Gaussian_type_fit_Real_A2B/Lorentzian_eta6-10_p-1_bleq3-eps-converted
--to.pdf> <./Gaussian_type_fit_Real_A2B/Lorentzian_eta7-10_p-1_bleq2-eps-convert
-ed-to.pdf> <./Gaussian_type_fit_Real_A2B/Lorentzian_eta6-10_p-1_bleq2-eps-conve
-rted-to.pdf>]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 347.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\begingroup' on input line 347.
+(hyperref)                removing `math shift' on input line 263.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 347.
+(hyperref)                removing `\eta' on input line 263.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\eta' on input line 347.
+(hyperref)                removing `math shift' on input line 263.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\endgroup' on input line 347.
+LaTeX Warning: File `PowerLaw_etaAsymptotic/A2BfitFT_eta_Asymptotic_P1.pdf' not
+ found on input line 267.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@@over' on input line 347.
+! Package pdftex.def Error: File `PowerLaw_etaAsymptotic/A2BfitFT_eta_Asymptoti
+c_P1.pdf' not found: using draft setting.
 
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.267 ...symptotic/A2BfitFT_eta_Asymptotic_P1.pdf}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\eta' on input line 347.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 347.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 347.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 347.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 347.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 347.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 347.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 347.
-
-Package epstopdf Info: Source file: <Gaussian_type_fit_Real_A2B/LorentzianPower
-2_eta6-10_p-1_bleq3.eps>
-(epstopdf)                    date: 2026-08-21 14:11:15
-(epstopdf)                    size: 62036 bytes
-(epstopdf)             Output file: <Gaussian_type_fit_Real_A2B/LorentzianPower
-2_eta6-10_p-1_bleq3-eps-converted-to.pdf>
-(epstopdf)                    date: 2026-08-23 19:20:12
-(epstopdf)                    size: 24891 bytes
-(epstopdf)             Command: <repstopdf --outfile=Gaussian_type_fit_Real_A2B
-/LorentzianPower2_eta6-10_p-1_bleq3-eps-converted-to.pdf Gaussian_type_fit_Real
-_A2B/LorentzianPower2_eta6-10_p-1_bleq3.eps>
-(epstopdf)             \includegraphics on input line 350.
-Package epstopdf Info: Output file is already uptodate.
-<Gaussian_type_fit_Real_A2B/LorentzianPower2_eta6-10_p-1_bleq3-eps-converted-to
-.pdf, id=6650, 490.83376pt x 118.4425pt>
-File: Gaussian_type_fit_Real_A2B/LorentzianPower2_eta6-10_p-1_bleq3-eps-convert
-ed-to.pdf Graphic file (type pdf)
-<use Gaussian_type_fit_Real_A2B/LorentzianPower2_eta6-10_p-1_bleq3-eps-converte
-d-to.pdf>
-Package pdftex.def Info: Gaussian_type_fit_Real_A2B/LorentzianPower2_eta6-10_p-
-1_bleq3-eps-converted-to.pdf  used on input line 350.
-(pdftex.def)             Requested size: 527.57121pt x 127.31235pt.
-Package epstopdf Info: Source file: <Gaussian_type_fit_Real_A2B/LorentzianPower
-2_eta6-10_p-2_bleq3.eps>
-(epstopdf)                    date: 2026-08-21 14:11:15
-(epstopdf)                    size: 62004 bytes
-(epstopdf)             Output file: <Gaussian_type_fit_Real_A2B/LorentzianPower
-2_eta6-10_p-2_bleq3-eps-converted-to.pdf>
-(epstopdf)                    date: 2026-08-23 19:20:12
-(epstopdf)                    size: 24859 bytes
-(epstopdf)             Command: <repstopdf --outfile=Gaussian_type_fit_Real_A2B
-/LorentzianPower2_eta6-10_p-2_bleq3-eps-converted-to.pdf Gaussian_type_fit_Real
-_A2B/LorentzianPower2_eta6-10_p-2_bleq3.eps>
-(epstopdf)             \includegraphics on input line 355.
-Package epstopdf Info: Output file is already uptodate.
-<Gaussian_type_fit_Real_A2B/LorentzianPower2_eta6-10_p-2_bleq3-eps-converted-to
-.pdf, id=6651, 645.41125pt x 110.4125pt>
-File: Gaussian_type_fit_Real_A2B/LorentzianPower2_eta6-10_p-2_bleq3-eps-convert
-ed-to.pdf Graphic file (type pdf)
-<use Gaussian_type_fit_Real_A2B/LorentzianPower2_eta6-10_p-2_bleq3-eps-converte
-d-to.pdf>
-Package pdftex.def Info: Gaussian_type_fit_Real_A2B/LorentzianPower2_eta6-10_p-
-2_bleq3-eps-converted-to.pdf  used on input line 355.
-(pdftex.def)             Requested size: 527.57121pt x 90.25746pt.
-Package epstopdf Info: Source file: <Gaussian_type_fit_Real_A2B/LorentzianPower
-2_eta5-10_p-3_bleq3.eps>
-(epstopdf)                    date: 2026-08-21 14:11:15
-(epstopdf)                    size: 62004 bytes
-(epstopdf)             Output file: <Gaussian_type_fit_Real_A2B/LorentzianPower
-2_eta5-10_p-3_bleq3-eps-converted-to.pdf>
-(epstopdf)                    date: 2026-08-23 19:20:12
-(epstopdf)                    size: 24865 bytes
-(epstopdf)             Command: <repstopdf --outfile=Gaussian_type_fit_Real_A2B
-/LorentzianPower2_eta5-10_p-3_bleq3-eps-converted-to.pdf Gaussian_type_fit_Real
-_A2B/LorentzianPower2_eta5-10_p-3_bleq3.eps>
-(epstopdf)             \includegraphics on input line 360.
-Package epstopdf Info: Output file is already uptodate.
-<Gaussian_type_fit_Real_A2B/LorentzianPower2_eta5-10_p-3_bleq3-eps-converted-to
-.pdf, id=6652, 645.41125pt x 110.4125pt>
-File: Gaussian_type_fit_Real_A2B/LorentzianPower2_eta5-10_p-3_bleq3-eps-convert
-ed-to.pdf Graphic file (type pdf)
-<use Gaussian_type_fit_Real_A2B/LorentzianPower2_eta5-10_p-3_bleq3-eps-converte
-d-to.pdf>
-Package pdftex.def Info: Gaussian_type_fit_Real_A2B/LorentzianPower2_eta5-10_p-
-3_bleq3-eps-converted-to.pdf  used on input line 360.
-(pdftex.def)             Requested size: 527.57121pt x 90.25746pt.
-Package epstopdf Info: Source file: <Gaussian_type_fit_Real_A2B/LorentzianPower
-2_eta5-9_p-4_bleq3.eps>
-(epstopdf)                    date: 2026-08-21 14:11:15
-(epstopdf)                    size: 62003 bytes
-(epstopdf)             Output file: <Gaussian_type_fit_Real_A2B/LorentzianPower
-2_eta5-9_p-4_bleq3-eps-converted-to.pdf>
-(epstopdf)                    date: 2026-08-23 19:20:12
-(epstopdf)                    size: 24853 bytes
-(epstopdf)             Command: <repstopdf --outfile=Gaussian_type_fit_Real_A2B
-/LorentzianPower2_eta5-9_p-4_bleq3-eps-converted-to.pdf Gaussian_type_fit_Real_
-A2B/LorentzianPower2_eta5-9_p-4_bleq3.eps>
-(epstopdf)             \includegraphics on input line 365.
-Package epstopdf Info: Output file is already uptodate.
-<Gaussian_type_fit_Real_A2B/LorentzianPower2_eta5-9_p-4_bleq3-eps-converted-to.
-pdf, id=6653, 645.41125pt x 110.4125pt>
-File: Gaussian_type_fit_Real_A2B/LorentzianPower2_eta5-9_p-4_bleq3-eps-converte
-d-to.pdf Graphic file (type pdf)
-<use Gaussian_type_fit_Real_A2B/LorentzianPower2_eta5-9_p-4_bleq3-eps-converted
--to.pdf>
-Package pdftex.def Info: Gaussian_type_fit_Real_A2B/LorentzianPower2_eta5-9_p-4
-_bleq3-eps-converted-to.pdf  used on input line 365.
-(pdftex.def)             Requested size: 527.57121pt x 90.25746pt.
-[70 <./Gaussian_type_fit_Real_A2B/LorentzianPower2_eta6-10_p-1_bleq3-eps-conver
-ted-to.pdf> <./Gaussian_type_fit_Real_A2B/LorentzianPower2_eta6-10_p-2_bleq3-ep
-s-converted-to.pdf> <./Gaussian_type_fit_Real_A2B/LorentzianPower2_eta5-10_p-3_
-bleq3-eps-converted-to.pdf> <./Gaussian_type_fit_Real_A2B/LorentzianPower2_eta5
--9_p-4_bleq3-eps-converted-to.pdf>]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 370.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\eta' on input line 370.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 370.
-
-<PowerLaw_etaAsymptotic/A2BfitFT_eta_Asymptotic_P1.pdf, id=6751, 1041.8925pt x 
-1136.245pt>
-File: PowerLaw_etaAsymptotic/A2BfitFT_eta_Asymptotic_P1.pdf Graphic file (type 
-pdf)
-<use PowerLaw_etaAsymptotic/A2BfitFT_eta_Asymptotic_P1.pdf>
-Package pdftex.def Info: PowerLaw_etaAsymptotic/A2BfitFT_eta_Asymptotic_P1.pdf 
- used on input line 373.
-(pdftex.def)             Requested size: 527.57121pt x 575.35092pt.
-[71 <./PowerLaw_etaAsymptotic/A2BfitFT_eta_Asymptotic_P1.pdf>]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 377.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\eta' on input line 377.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 377.
-
-<PowerLaw_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_P1.pdf, id=6802, 1050.926
-25pt x 842.14626pt>
-File: PowerLaw_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_P1.pdf Graphic file 
+[65 <./Gaussian_type_fit_Real_A2B/FitList_eta78910_p-1-eps-converted-to.pdf>]
+[66]
+<Gaussian_type_fit_Real_A2B/LorentzianFixedA_P-1_b3.pdf, id=6470, 339.2675pt x 
+182.6825pt>
+File: Gaussian_type_fit_Real_A2B/LorentzianFixedA_P-1_b3.pdf Graphic file (type
+ pdf)
+<use Gaussian_type_fit_Real_A2B/LorentzianFixedA_P-1_b3.pdf>
+Package pdftex.def Info: Gaussian_type_fit_Real_A2B/LorentzianFixedA_P-1_b3.pdf
+  used on input line 286.
+(pdftex.def)             Requested size: 474.81087pt x 255.67847pt.
+<PowerLaw_etaAsymptotic/A2B_c_eta_AllAsymptoticModels_P1.pdf, id=6471, 685.5612
+5pt x 355.3275pt>
+File: PowerLaw_etaAsymptotic/A2B_c_eta_AllAsymptoticModels_P1.pdf Graphic file 
 (type pdf)
-<use PowerLaw_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_P1.pdf>
-Package pdftex.def Info: PowerLaw_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_P
-1.pdf  used on input line 380.
-(pdftex.def)             Requested size: 527.57121pt x 422.78116pt.
-<PowerLaw_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_P2.pdf, id=6803, 1055.945
-pt x 861.2175pt>
-File: PowerLaw_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_P2.pdf Graphic file 
-(type pdf)
-<use PowerLaw_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_P2.pdf>
-Package pdftex.def Info: PowerLaw_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_P
-2.pdf  used on input line 385.
-(pdftex.def)             Requested size: 527.57121pt x 430.27916pt.
+<use PowerLaw_etaAsymptotic/A2B_c_eta_AllAsymptoticModels_P1.pdf>
+Package pdftex.def Info: PowerLaw_etaAsymptotic/A2B_c_eta_AllAsymptoticModels_P
+1.pdf  used on input line 294.
+(pdftex.def)             Requested size: 474.81087pt x 246.10336pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<PowerLaw_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_P3.pdf, id=6804, 1088.065
-pt x 843.15pt>
-File: PowerLaw_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_P3.pdf Graphic file 
+<PowerLaw_etaAsymptotic/A2B_d_eta_Independence_P1.pdf, id=6472, 491.8375pt x 34
+7.2975pt>
+File: PowerLaw_etaAsymptotic/A2B_d_eta_Independence_P1.pdf Graphic file (type p
+df)
+<use PowerLaw_etaAsymptotic/A2B_d_eta_Independence_P1.pdf>
+Package pdftex.def Info: PowerLaw_etaAsymptotic/A2B_d_eta_Independence_P1.pdf  
+used on input line 300.
+(pdftex.def)             Requested size: 474.81087pt x 335.28836pt.
+
+LaTeX Warning: Reference `fig:ReA12B_eta_independence' on page 67 undefined on 
+input line 308.
+
+
+LaTeX Warning: Reference `tab:ReA12B_fixed_eta' on page 67 undefined on input l
+ine 308.
+
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.310 \begin{figure}[h!]
+                        
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+<Gaussian_type_fit_Real_A2B/LorentzianFixed_ReA12B_P-1_b3.pdf, id=6473, 339.267
+5pt x 182.6825pt>
+File: Gaussian_type_fit_Real_A2B/LorentzianFixed_ReA12B_P-1_b3.pdf Graphic file
+ (type pdf)
+<use Gaussian_type_fit_Real_A2B/LorentzianFixed_ReA12B_P-1_b3.pdf>
+Package pdftex.def Info: Gaussian_type_fit_Real_A2B/LorentzianFixed_ReA12B_P-1_
+b3.pdf  used on input line 312.
+(pdftex.def)             Requested size: 290.16577pt x 156.24811pt.
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.317 \begin{figure}[h!]
+                        
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+<PowerLaw_etaAsymptotic/ReA12B_c_eta_Independence_P1.pdf, id=6474, 491.8375pt x
+ 347.2975pt>
+File: PowerLaw_etaAsymptotic/ReA12B_c_eta_Independence_P1.pdf Graphic file (typ
+e pdf)
+<use PowerLaw_etaAsymptotic/ReA12B_c_eta_Independence_P1.pdf>
+Package pdftex.def Info: PowerLaw_etaAsymptotic/ReA12B_c_eta_Independence_P1.pd
+f  used on input line 319.
+(pdftex.def)             Requested size: 258.51279pt x 182.54588pt.
+<PowerLaw_etaAsymptotic/ReA12B_d_eta_Independence_P1.pdf, id=6475, 491.8375pt x
+ 349.305pt>
+File: PowerLaw_etaAsymptotic/ReA12B_d_eta_Independence_P1.pdf Graphic file (typ
+e pdf)
+<use PowerLaw_etaAsymptotic/ReA12B_d_eta_Independence_P1.pdf>
+Package pdftex.def Info: PowerLaw_etaAsymptotic/ReA12B_d_eta_Independence_P1.pd
+f  used on input line 320.
+(pdftex.def)             Requested size: 258.51279pt x 183.60106pt.
+
+LaTeX Warning: Reference `fig:ImA2B_eta_independence' on page 67 undefined on i
+nput line 325.
+
+
+LaTeX Warning: Reference `tab:ImA2B_fixed_eta' on page 67 undefined on input li
+ne 325.
+
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.327 \begin{figure}[h!]
+                        
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+<Gaussian_type_fit_Real_A2B/LorentzianFixed_ImA2B_P-1_b3.pdf, id=6476, 339.2675
+pt x 182.6825pt>
+File: Gaussian_type_fit_Real_A2B/LorentzianFixed_ImA2B_P-1_b3.pdf Graphic file 
 (type pdf)
-<use PowerLaw_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_P3.pdf>
-Package pdftex.def Info: PowerLaw_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_P
-3.pdf  used on input line 390.
-(pdftex.def)             Requested size: 527.57121pt x 408.8372pt.
+<use Gaussian_type_fit_Real_A2B/LorentzianFixed_ImA2B_P-1_b3.pdf>
+Package pdftex.def Info: Gaussian_type_fit_Real_A2B/LorentzianFixed_ImA2B_P-1_b
+3.pdf  used on input line 329.
+(pdftex.def)             Requested size: 290.16577pt x 156.24811pt.
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+! LaTeX Error: Not in outer par mode.
 
-<PowerLaw_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_compareP123.pdf, id=6805,
- 1129.21875pt x 748.7975pt>
-File: PowerLaw_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_compareP123.pdf Grap
-hic file (type pdf)
-<use PowerLaw_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_compareP123.pdf>
-Package pdftex.def Info: PowerLaw_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_c
-ompareP123.pdf  used on input line 395.
-(pdftex.def)             Requested size: 527.57121pt x 349.84396pt.
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.334 \begin{figure}[h!]
+                        
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+<PowerLaw_etaAsymptotic/ImA2B_c_eta_Independence_P1.pdf, id=6477, 491.8375pt x 
+349.305pt>
+File: PowerLaw_etaAsymptotic/ImA2B_c_eta_Independence_P1.pdf Graphic file (type
+ pdf)
+<use PowerLaw_etaAsymptotic/ImA2B_c_eta_Independence_P1.pdf>
+Package pdftex.def Info: PowerLaw_etaAsymptotic/ImA2B_c_eta_Independence_P1.pdf
+  used on input line 336.
+(pdftex.def)             Requested size: 258.51279pt x 183.60106pt.
+<PowerLaw_etaAsymptotic/ImA2B_d_eta_Independence_P1.pdf, id=6478, 491.8375pt x 
+351.3125pt>
+File: PowerLaw_etaAsymptotic/ImA2B_d_eta_Independence_P1.pdf Graphic file (type
+ pdf)
+<use PowerLaw_etaAsymptotic/ImA2B_d_eta_Independence_P1.pdf>
+Package pdftex.def Info: PowerLaw_etaAsymptotic/ImA2B_d_eta_Independence_P1.pdf
+  used on input line 337.
+(pdftex.def)             Requested size: 258.51279pt x 184.65623pt.
 
-[72 <./PowerLaw_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_P1.pdf>] [73 <./Pow
-erLaw_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_P2.pdf>] [74 <./PowerLaw_etaA
-symptotic/A2Bfit_widerFT_eta_Asymptotic_P3.pdf>] [75 <./PowerLaw_etaAsymptotic/
-A2Bfit_widerFT_eta_Asymptotic_compareP123.pdf>] [76] [77]
+LaTeX Warning: Reference `eq:model_ReA2B' on page 67 undefined on input line 35
+2.
 
-Package natbib Warning: Citation `Boram2011Covariance' on page 78 undefined on 
-input line 468.
 
-[78]
+LaTeX Warning: Reference `eq:model_ImA2B' on page 67 undefined on input line 35
+2.
 
-Package natbib Warning: Citation `Lepage:2001ym' on page 79 undefined on input 
-line 480.
+
+LaTeX Warning: Reference `eq:model_ReA2B' on page 67 undefined on input line 37
+4.
+
+
+LaTeX Warning: Reference `eq:model_ImA2B' on page 67 undefined on input line 37
+4.
+
+
+Overfull \hbox (17.60863pt too wide) detected at line 381
+[][][]\OMS/cmsy/m/n/12 h[][]i[] \OT1/cmr/m/n/12 = [] \OML/cmm/m/it/12 :
+ []
+
+
+Package natbib Warning: Citation `Boram2011Covariance' on page 67 undefined on 
+input line 394.
+
+
+Package natbib Warning: Citation `Lepage:2001ym' on page 67 undefined on input 
+line 406.
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
-) [79]
-[80] (./SimultaneousFitsCov/Fit_Table_PL-1_bmin3.tex)
-<plots/Amps_Fit/ReA12B_Pb_bsq_PL-1_WithFit_3D.pdf, id=7076, 999.55696pt x 360.4
+)
+(./SimultaneousFitsCov/Fit_Table_PL-1_bmin3.tex
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{table}[htpb]
+                       
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+)
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.458 \begin{figure}[htbp]
+                          
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+<plots/Amps_Fit/ReA12B_Pb_bsq_PL-1_WithFit_3D.pdf, id=6482, 999.55696pt x 360.4
 8277pt>
 File: plots/Amps_Fit/ReA12B_Pb_bsq_PL-1_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA12B_Pb_bsq_PL-1_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA12B_Pb_bsq_PL-1_WithFit_3D.pdf  used
- on input line 537.
+ on input line 463.
 (pdftex.def)             Requested size: 158.27296pt x 57.07886pt.
-<plots/Amps_Fit/ImA2B_PL-1_WithFit_3D.pdf, id=7077, 997.04759pt x 360.48277pt>
+<plots/Amps_Fit/ImA2B_PL-1_WithFit_3D.pdf, id=6483, 997.04759pt x 360.48277pt>
 File: plots/Amps_Fit/ImA2B_PL-1_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ImA2B_PL-1_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ImA2B_PL-1_WithFit_3D.pdf  used on inpu
-t line 538.
+t line 464.
 (pdftex.def)             Requested size: 158.27296pt x 57.22188pt.
-<plots/Amps_Fit/ReA12B_PL-1_WithFit_3D.pdf, id=7078, 999.55696pt x 360.48277pt>
+<plots/Amps_Fit/ReA12B_PL-1_WithFit_3D.pdf, id=6484, 999.55696pt x 360.48277pt>
 
 File: plots/Amps_Fit/ReA12B_PL-1_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA12B_PL-1_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA12B_PL-1_WithFit_3D.pdf  used on inp
-ut line 539.
+ut line 465.
 (pdftex.def)             Requested size: 158.27296pt x 57.07886pt.
-<plots/Amps_Fit/ReA2B_Pb_bsq_PL-1_WithFit_3D.pdf, id=7079, 997.04759pt x 360.48
+<plots/Amps_Fit/ReA2B_Pb_bsq_PL-1_WithFit_3D.pdf, id=6485, 997.04759pt x 360.48
 277pt>
 File: plots/Amps_Fit/ReA2B_Pb_bsq_PL-1_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA2B_Pb_bsq_PL-1_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA2B_Pb_bsq_PL-1_WithFit_3D.pdf  used 
-on input line 540.
+on input line 466.
 (pdftex.def)             Requested size: 158.27296pt x 57.22188pt.
-<plots/Amps_Fit/ImA2B_Pb_bsq_PL-1_WithFit_3D.pdf, id=7080, 997.04759pt x 360.48
+<plots/Amps_Fit/ImA2B_Pb_bsq_PL-1_WithFit_3D.pdf, id=6486, 997.04759pt x 360.48
 277pt>
 File: plots/Amps_Fit/ImA2B_Pb_bsq_PL-1_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ImA2B_Pb_bsq_PL-1_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ImA2B_Pb_bsq_PL-1_WithFit_3D.pdf  used 
-on input line 541.
+on input line 467.
 (pdftex.def)             Requested size: 158.27296pt x 57.22188pt.
 File: plots/Amps_Fit/ReA12B_Pb_bsq_PL-1_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA12B_Pb_bsq_PL-1_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA12B_Pb_bsq_PL-1_WithFit_3D.pdf  used
- on input line 542.
+ on input line 468.
 (pdftex.def)             Requested size: 158.27296pt x 57.07886pt.
-<plots/Amps_Fit/Combined_eta8_PL-1_WithFit_2D.pdf, id=7081, 1436.12254pt x 851.
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.474 \begin{figure}[htbp]
+                          
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+<plots/Amps_Fit/Combined_eta8_PL-1_WithFit_2D.pdf, id=6487, 1436.12254pt x 851.
 04338pt>
 File: plots/Amps_Fit/Combined_eta8_PL-1_WithFit_2D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/Combined_eta8_PL-1_WithFit_2D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/Combined_eta8_PL-1_WithFit_2D.pdf  used
- on input line 551.
+ on input line 477.
 (pdftex.def)             Requested size: 474.81087pt x 281.36461pt.
-<plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-1_WithFit_2D.pdf, id=7082, 1436.37004pt
+<plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-1_WithFit_2D.pdf, id=6488, 1436.37004pt
  x 851.04338pt>
 File: plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-1_WithFit_2D.pdf Graphic file (typ
 e pdf)
 <use plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-1_WithFit_2D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-1_WithFit_2D.pd
-f  used on input line 552.
+f  used on input line 478.
 (pdftex.def)             Requested size: 474.81087pt x 281.32565pt.
- [81 <./plots/Amps_Fit/ReA12B_Pb_bsq_PL-1_WithFit_3D.pdf> <./plots/Amps_Fit/ImA
-2B_PL-1_WithFit_3D.pdf> <./plots/Amps_Fit/ReA12B_PL-1_WithFit_3D.pdf> <./plots/
-Amps_Fit/ReA2B_Pb_bsq_PL-1_WithFit_3D.pdf> <./plots/Amps_Fit/ImA2B_Pb_bsq_PL-1_
-WithFit_3D.pdf>] [82 <./plots/Amps_Fit/Combined_eta8_PL-1_WithFit_2D.pdf> <./pl
-ots/Amps_Fit/Combined_Pb_bsq_eta8_PL-1_WithFit_2D.pdf>]
-(./SimultaneousFitsCov/Integration_Table_PL-1_bmin3.tex)
+(./SimultaneousFitsCov/Integration_Table_PL-1_bmin3.tex
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{table}[htpb]
+                       
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+)
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.492 \begin{figure}[htbp]
+                          
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 <SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-a_im-a_re-a_reA12B-c_im-c_re
 -c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_PL-
-1.pdf, id=7774, 1002.22931pt x 569.37094pt>
+1.pdf, id=6489, 1002.22931pt x 569.37094pt>
 File: SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-a_im-a_re-a_reA12B-c_im
 -c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta61
 0_PL-1.pdf Graphic file (type pdf)
@@ -3013,11 +2719,23 @@ c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610
 _PL-1.pdf>
 Package pdftex.def Info: SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-a_im
 -a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re
--k2_re__bmin3_eta610_PL-1.pdf  used on input line 568.
+-k2_re__bmin3_eta610_PL-1.pdf  used on input line 494.
 (pdftex.def)             Requested size: 263.7856pt x 149.8574pt.
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.499 \begin{figure}[htbp]
+                          
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 <SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-3D_a_im-a_re-a_reA12B-c_im-c
 _re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_
-PL-1.pdf, id=7775, 1288.86156pt x 862.77747pt>
+PL-1.pdf, id=6490, 1288.86156pt x 862.77747pt>
 File: SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-3D_a_im-a_re-a_reA12B-c
 _im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_et
 a610_PL-1.pdf Graphic file (type pdf)
@@ -3026,72 +2744,128 @@ im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta
 610_PL-1.pdf>
 Package pdftex.def Info: SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-3D_a
 _im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1
-_re-k2_re__bmin3_eta610_PL-1.pdf  used on input line 575.
+_re-k2_re__bmin3_eta610_PL-1.pdf  used on input line 501.
 (pdftex.def)             Requested size: 369.29823pt x 247.21062pt.
- [83 <./SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-a_im-a_re-a_reA12B-c_
-im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta
-610_PL-1.pdf>]
-(./SimultaneousFitsCov/Fit_Table_PL-2_bmin3.tex)
-<plots/Amps_Fit/ReA12B_Pb_bsq_PL-2_WithFit_3D.pdf, id=7834, 1004.02887pt x 357.
+(./SimultaneousFitsCov/Fit_Table_PL-2_bmin3.tex
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{table}[htpb]
+                       
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+)
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.510 \begin{figure}[htbp]
+                          
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+<plots/Amps_Fit/ReA12B_Pb_bsq_PL-2_WithFit_3D.pdf, id=6491, 1004.02887pt x 357.
 318pt>
 File: plots/Amps_Fit/ReA12B_Pb_bsq_PL-2_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA12B_Pb_bsq_PL-2_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA12B_Pb_bsq_PL-2_WithFit_3D.pdf  used
- on input line 589.
+ on input line 515.
 (pdftex.def)             Requested size: 158.27296pt x 56.32695pt.
-<plots/Amps_Fit/ImA2B_PL-2_WithFit_3D.pdf, id=7835, 1001.5195pt x 357.318pt>
+<plots/Amps_Fit/ImA2B_PL-2_WithFit_3D.pdf, id=6492, 1001.5195pt x 357.318pt>
 File: plots/Amps_Fit/ImA2B_PL-2_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ImA2B_PL-2_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ImA2B_PL-2_WithFit_3D.pdf  used on inpu
-t line 590.
+t line 516.
 (pdftex.def)             Requested size: 158.27296pt x 56.46326pt.
-<plots/Amps_Fit/ReA12B_PL-2_WithFit_3D.pdf, id=7836, 1004.02887pt x 357.318pt>
+<plots/Amps_Fit/ReA12B_PL-2_WithFit_3D.pdf, id=6493, 1004.02887pt x 357.318pt>
 File: plots/Amps_Fit/ReA12B_PL-2_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA12B_PL-2_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA12B_PL-2_WithFit_3D.pdf  used on inp
-ut line 591.
+ut line 517.
 (pdftex.def)             Requested size: 158.27296pt x 56.32695pt.
-<plots/Amps_Fit/ReA2B_Pb_bsq_PL-2_WithFit_3D.pdf, id=7837, 1001.5195pt x 357.31
+<plots/Amps_Fit/ReA2B_Pb_bsq_PL-2_WithFit_3D.pdf, id=6494, 1001.5195pt x 357.31
 8pt>
 File: plots/Amps_Fit/ReA2B_Pb_bsq_PL-2_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA2B_Pb_bsq_PL-2_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA2B_Pb_bsq_PL-2_WithFit_3D.pdf  used 
-on input line 592.
+on input line 518.
 (pdftex.def)             Requested size: 158.27296pt x 56.46326pt.
-<plots/Amps_Fit/ImA2B_Pb_bsq_PL-2_WithFit_3D.pdf, id=7838, 1001.5195pt x 357.31
+<plots/Amps_Fit/ImA2B_Pb_bsq_PL-2_WithFit_3D.pdf, id=6495, 1001.5195pt x 357.31
 8pt>
 File: plots/Amps_Fit/ImA2B_Pb_bsq_PL-2_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ImA2B_Pb_bsq_PL-2_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ImA2B_Pb_bsq_PL-2_WithFit_3D.pdf  used 
-on input line 593.
+on input line 519.
 (pdftex.def)             Requested size: 158.27296pt x 56.46326pt.
 File: plots/Amps_Fit/ReA12B_Pb_bsq_PL-2_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA12B_Pb_bsq_PL-2_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA12B_Pb_bsq_PL-2_WithFit_3D.pdf  used
- on input line 594.
+ on input line 520.
 (pdftex.def)             Requested size: 158.27296pt x 56.32695pt.
-<plots/Amps_Fit/Combined_eta8_PL-2_WithFit_2D.pdf, id=7839, 1436.09178pt x 851.
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.525 \begin{figure}[htbp]
+                          
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+<plots/Amps_Fit/Combined_eta8_PL-2_WithFit_2D.pdf, id=6496, 1436.09178pt x 851.
 04338pt>
 File: plots/Amps_Fit/Combined_eta8_PL-2_WithFit_2D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/Combined_eta8_PL-2_WithFit_2D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/Combined_eta8_PL-2_WithFit_2D.pdf  used
- on input line 602.
+ on input line 528.
 (pdftex.def)             Requested size: 474.81087pt x 281.37761pt.
-<plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-2_WithFit_2D.pdf, id=7840, 1436.3393pt 
+<plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-2_WithFit_2D.pdf, id=6497, 1436.3393pt 
 x 851.04338pt>
 File: plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-2_WithFit_2D.pdf Graphic file (typ
 e pdf)
 <use plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-2_WithFit_2D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-2_WithFit_2D.pd
-f  used on input line 603.
+f  used on input line 529.
 (pdftex.def)             Requested size: 474.81087pt x 281.32565pt.
- [84 <./SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-3D_a_im-a_re-a_reA12B
--c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_
-eta610_PL-1.pdf>]
-(./SimultaneousFitsCov/Integration_Table_PL-2_bmin3.tex)
+(./SimultaneousFitsCov/Integration_Table_PL-2_bmin3.tex
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{table}[htpb]
+                       
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+)
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.536 \begin{figure}[htbp]
+                          
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 <SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-a_im-a_re-a_reA12B-c_im-c_re
 -c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_PL-
-2.pdf, id=7898, 1002.22931pt x 569.37094pt>
+2.pdf, id=6498, 1002.22931pt x 569.37094pt>
 File: SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-a_im-a_re-a_reA12B-c_im
 -c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta61
 0_PL-2.pdf Graphic file (type pdf)
@@ -3100,11 +2874,23 @@ c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610
 _PL-2.pdf>
 Package pdftex.def Info: SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-a_im
 -a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re
--k2_re__bmin3_eta610_PL-2.pdf  used on input line 612.
+-k2_re__bmin3_eta610_PL-2.pdf  used on input line 538.
 (pdftex.def)             Requested size: 263.7856pt x 149.8574pt.
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.540 \begin{figure}[htbp]
+                          
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 <SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-3D_a_im-a_re-a_reA12B-c_im-c
 _re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_
-PL-2.pdf, id=7899, 1288.46666pt x 862.77747pt>
+PL-2.pdf, id=6499, 1288.46666pt x 862.77747pt>
 File: SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-3D_a_im-a_re-a_reA12B-c
 _im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_et
 a610_PL-2.pdf Graphic file (type pdf)
@@ -3113,83 +2899,130 @@ im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta
 610_PL-2.pdf>
 Package pdftex.def Info: SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-3D_a
 _im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1
-_re-k2_re__bmin3_eta610_PL-2.pdf  used on input line 616.
+_re-k2_re__bmin3_eta610_PL-2.pdf  used on input line 542.
 (pdftex.def)             Requested size: 369.29823pt x 247.28961pt.
- [85 <./plots/Amps_Fit/ReA12B_Pb_bsq_PL-2_WithFit_3D.pdf> <./plots/Amps_Fit/ImA
-2B_PL-2_WithFit_3D.pdf> <./plots/Amps_Fit/ReA12B_PL-2_WithFit_3D.pdf> <./plots/
-Amps_Fit/ReA2B_Pb_bsq_PL-2_WithFit_3D.pdf> <./plots/Amps_Fit/ImA2B_Pb_bsq_PL-2_
-WithFit_3D.pdf>]
-[86 <./plots/Amps_Fit/Combined_eta8_PL-2_WithFit_2D.pdf> <./plots/Amps_Fit/Comb
-ined_Pb_bsq_eta8_PL-2_WithFit_2D.pdf>] [87 <./SimultaneousFitsCov/SimulFitCovMa
-trix-A12B-A2B-FT-a_im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_i
-m-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_PL-2.pdf> <./SimultaneousFitsCov/Simu
-lFitCovMatrix-A12B-A2B-FT-3D_a_im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_
-reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_PL-2.pdf>]
-(./SimultaneousFitsCov/Fit_Table_PL-3_bmin3.tex)
-<plots/Amps_Fit/ReA12B_Pb_bsq_PL-3_WithFit_3D.pdf, id=8704, 1003.98372pt x 357.
+(./SimultaneousFitsCov/Fit_Table_PL-3_bmin3.tex
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{table}[htpb]
+                       
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+)
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.549 \begin{figure}[htbp]
+                          
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+<plots/Amps_Fit/ReA12B_Pb_bsq_PL-3_WithFit_3D.pdf, id=6500, 1003.98372pt x 357.
 28975pt>
 File: plots/Amps_Fit/ReA12B_Pb_bsq_PL-3_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA12B_Pb_bsq_PL-3_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA12B_Pb_bsq_PL-3_WithFit_3D.pdf  used
- on input line 628.
+ on input line 554.
 (pdftex.def)             Requested size: 158.27296pt x 56.3225pt.
-<plots/Amps_Fit/ImA2B_PL-3_WithFit_3D.pdf, id=8705, 1001.47435pt x 357.28975pt>
+<plots/Amps_Fit/ImA2B_PL-3_WithFit_3D.pdf, id=6501, 1001.47435pt x 357.28975pt>
 
 File: plots/Amps_Fit/ImA2B_PL-3_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ImA2B_PL-3_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ImA2B_PL-3_WithFit_3D.pdf  used on inpu
-t line 629.
+t line 555.
 (pdftex.def)             Requested size: 158.27296pt x 56.46423pt.
-<plots/Amps_Fit/ReA12B_PL-3_WithFit_3D.pdf, id=8706, 1003.98372pt x 357.28975pt
+<plots/Amps_Fit/ReA12B_PL-3_WithFit_3D.pdf, id=6502, 1003.98372pt x 357.28975pt
 >
 File: plots/Amps_Fit/ReA12B_PL-3_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA12B_PL-3_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA12B_PL-3_WithFit_3D.pdf  used on inp
-ut line 630.
+ut line 556.
 (pdftex.def)             Requested size: 158.27296pt x 56.3225pt.
-<plots/Amps_Fit/ReA2B_Pb_bsq_PL-3_WithFit_3D.pdf, id=8707, 1001.47435pt x 357.2
+<plots/Amps_Fit/ReA2B_Pb_bsq_PL-3_WithFit_3D.pdf, id=6503, 1001.47435pt x 357.2
 8975pt>
 File: plots/Amps_Fit/ReA2B_Pb_bsq_PL-3_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA2B_Pb_bsq_PL-3_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA2B_Pb_bsq_PL-3_WithFit_3D.pdf  used 
-on input line 631.
+on input line 557.
 (pdftex.def)             Requested size: 158.27296pt x 56.46423pt.
-<plots/Amps_Fit/ImA2B_Pb_bsq_PL-3_WithFit_3D.pdf, id=8708, 1001.47435pt x 357.2
+<plots/Amps_Fit/ImA2B_Pb_bsq_PL-3_WithFit_3D.pdf, id=6504, 1001.47435pt x 357.2
 8975pt>
 File: plots/Amps_Fit/ImA2B_Pb_bsq_PL-3_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ImA2B_Pb_bsq_PL-3_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ImA2B_Pb_bsq_PL-3_WithFit_3D.pdf  used 
-on input line 632.
+on input line 558.
 (pdftex.def)             Requested size: 158.27296pt x 56.46423pt.
 File: plots/Amps_Fit/ReA12B_Pb_bsq_PL-3_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA12B_Pb_bsq_PL-3_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA12B_Pb_bsq_PL-3_WithFit_3D.pdf  used
- on input line 633.
+ on input line 559.
 (pdftex.def)             Requested size: 158.27296pt x 56.3225pt.
-<plots/Amps_Fit/Combined_eta8_PL-3_WithFit_2D.pdf, id=8709, 1436.09682pt x 851.
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.564 \begin{figure}[htbp]
+                          
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+<plots/Amps_Fit/Combined_eta8_PL-3_WithFit_2D.pdf, id=6505, 1436.09682pt x 851.
 04338pt>
 File: plots/Amps_Fit/Combined_eta8_PL-3_WithFit_2D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/Combined_eta8_PL-3_WithFit_2D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/Combined_eta8_PL-3_WithFit_2D.pdf  used
- on input line 641.
+ on input line 567.
 (pdftex.def)             Requested size: 474.81087pt x 281.37761pt.
-<plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-3_WithFit_2D.pdf, id=8710, 1436.34431pt
+<plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-3_WithFit_2D.pdf, id=6506, 1436.34431pt
  x 851.04338pt>
 File: plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-3_WithFit_2D.pdf Graphic file (typ
 e pdf)
 <use plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-3_WithFit_2D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-3_WithFit_2D.pd
-f  used on input line 642.
+f  used on input line 568.
 (pdftex.def)             Requested size: 474.81087pt x 281.32565pt.
- [88 <./plots/Amps_Fit/ReA12B_Pb_bsq_PL-3_WithFit_3D.pdf> <./plots/Amps_Fit/ImA
-2B_PL-3_WithFit_3D.pdf> <./plots/Amps_Fit/ReA12B_PL-3_WithFit_3D.pdf> <./plots/
-Amps_Fit/ReA2B_Pb_bsq_PL-3_WithFit_3D.pdf> <./plots/Amps_Fit/ImA2B_Pb_bsq_PL-3_
-WithFit_3D.pdf>] [89 <./plots/Amps_Fit/Combined_eta8_PL-3_WithFit_2D.pdf> <./pl
-ots/Amps_Fit/Combined_Pb_bsq_eta8_PL-3_WithFit_2D.pdf>]
-(./SimultaneousFitsCov/Integration_Table_PL-3_bmin3.tex)
+(./SimultaneousFitsCov/Integration_Table_PL-3_bmin3.tex
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{table}[htpb]
+                       
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+)
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.575 \begin{figure}[htbp]
+                          
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 <SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-a_im-a_re-a_reA12B-c_im-c_re
 -c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_PL-
-3.pdf, id=9402, 1002.22931pt x 569.37094pt>
+3.pdf, id=6507, 1002.22931pt x 569.37094pt>
 File: SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-a_im-a_re-a_reA12B-c_im
 -c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta61
 0_PL-3.pdf Graphic file (type pdf)
@@ -3198,11 +3031,23 @@ c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610
 _PL-3.pdf>
 Package pdftex.def Info: SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-a_im
 -a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re
--k2_re__bmin3_eta610_PL-3.pdf  used on input line 651.
+-k2_re__bmin3_eta610_PL-3.pdf  used on input line 577.
 (pdftex.def)             Requested size: 263.7856pt x 149.8574pt.
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.579 \begin{figure}[htbp]
+                          
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 <SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-3D_a_im-a_re-a_reA12B-c_im-c
 _re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_
-PL-3.pdf, id=9403, 1291.68645pt x 862.77747pt>
+PL-3.pdf, id=6508, 1291.68645pt x 862.77747pt>
 File: SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-3D_a_im-a_re-a_reA12B-c
 _im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_et
 a610_PL-3.pdf Graphic file (type pdf)
@@ -3211,75 +3056,128 @@ im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta
 610_PL-3.pdf>
 Package pdftex.def Info: SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-3D_a
 _im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1
-_re-k2_re__bmin3_eta610_PL-3.pdf  used on input line 655.
+_re-k2_re__bmin3_eta610_PL-3.pdf  used on input line 581.
 (pdftex.def)             Requested size: 369.29823pt x 246.67085pt.
- [90 <./SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-a_im-a_re-a_reA12B-c_
-im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta
-610_PL-3.pdf> <./SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-3D_a_im-a_re
--a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_r
-e__bmin3_eta610_PL-3.pdf>] (./SimultaneousFitsCov/Fit_Table_PL-4_bmin3.tex)
-<plots/Amps_Fit/ReA12B_Pb_bsq_PL-4_WithFit_3D.pdf, id=9516, 1003.48184pt x 357.
+(./SimultaneousFitsCov/Fit_Table_PL-4_bmin3.tex
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{table}[htpb]
+                       
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+)
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.588 \begin{figure}[htbp]
+                          
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+<plots/Amps_Fit/ReA12B_Pb_bsq_PL-4_WithFit_3D.pdf, id=6509, 1003.48184pt x 357.
 28975pt>
 File: plots/Amps_Fit/ReA12B_Pb_bsq_PL-4_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA12B_Pb_bsq_PL-4_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA12B_Pb_bsq_PL-4_WithFit_3D.pdf  used
- on input line 667.
+ on input line 593.
 (pdftex.def)             Requested size: 158.27296pt x 56.34975pt.
-<plots/Amps_Fit/ImA2B_PL-4_WithFit_3D.pdf, id=9517, 981.6574pt x 384.32855pt>
+<plots/Amps_Fit/ImA2B_PL-4_WithFit_3D.pdf, id=6510, 981.6574pt x 384.32855pt>
 File: plots/Amps_Fit/ImA2B_PL-4_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ImA2B_PL-4_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ImA2B_PL-4_WithFit_3D.pdf  used on inpu
-t line 668.
+t line 594.
 (pdftex.def)             Requested size: 158.27296pt x 61.96297pt.
-<plots/Amps_Fit/ReA12B_PL-4_WithFit_3D.pdf, id=9518, 981.6574pt x 384.32855pt>
+<plots/Amps_Fit/ReA12B_PL-4_WithFit_3D.pdf, id=6511, 981.6574pt x 384.32855pt>
 File: plots/Amps_Fit/ReA12B_PL-4_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA12B_PL-4_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA12B_PL-4_WithFit_3D.pdf  used on inp
-ut line 669.
+ut line 595.
 (pdftex.def)             Requested size: 158.27296pt x 61.96297pt.
-<plots/Amps_Fit/ReA2B_Pb_bsq_PL-4_WithFit_3D.pdf, id=9519, 1000.97247pt x 357.2
+<plots/Amps_Fit/ReA2B_Pb_bsq_PL-4_WithFit_3D.pdf, id=6512, 1000.97247pt x 357.2
 8975pt>
 File: plots/Amps_Fit/ReA2B_Pb_bsq_PL-4_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA2B_Pb_bsq_PL-4_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA2B_Pb_bsq_PL-4_WithFit_3D.pdf  used 
-on input line 670.
+on input line 596.
 (pdftex.def)             Requested size: 158.27296pt x 56.4915pt.
-<plots/Amps_Fit/ImA2B_Pb_bsq_PL-4_WithFit_3D.pdf, id=9520, 1000.97247pt x 357.2
+<plots/Amps_Fit/ImA2B_Pb_bsq_PL-4_WithFit_3D.pdf, id=6513, 1000.97247pt x 357.2
 8975pt>
 File: plots/Amps_Fit/ImA2B_Pb_bsq_PL-4_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ImA2B_Pb_bsq_PL-4_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ImA2B_Pb_bsq_PL-4_WithFit_3D.pdf  used 
-on input line 671.
+on input line 597.
 (pdftex.def)             Requested size: 158.27296pt x 56.4915pt.
 File: plots/Amps_Fit/ReA12B_Pb_bsq_PL-4_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA12B_Pb_bsq_PL-4_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA12B_Pb_bsq_PL-4_WithFit_3D.pdf  used
- on input line 672.
+ on input line 598.
 (pdftex.def)             Requested size: 158.27296pt x 56.34975pt.
-<plots/Amps_Fit/Combined_eta8_PL-4_WithFit_2D.pdf, id=9521, 1436.4008pt x 851.6
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.603 \begin{figure}[htbp]
+                          
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+<plots/Amps_Fit/Combined_eta8_PL-4_WithFit_2D.pdf, id=6514, 1436.4008pt x 851.6
 2956pt>
 File: plots/Amps_Fit/Combined_eta8_PL-4_WithFit_2D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/Combined_eta8_PL-4_WithFit_2D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/Combined_eta8_PL-4_WithFit_2D.pdf  used
- on input line 680.
+ on input line 606.
 (pdftex.def)             Requested size: 474.81087pt x 281.50644pt.
-<plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-4_WithFit_2D.pdf, id=9522, 1436.37508pt
+<plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-4_WithFit_2D.pdf, id=6515, 1436.37508pt
  x 851.04338pt>
 File: plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-4_WithFit_2D.pdf Graphic file (typ
 e pdf)
 <use plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-4_WithFit_2D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-4_WithFit_2D.pd
-f  used on input line 681.
+f  used on input line 607.
 (pdftex.def)             Requested size: 474.81087pt x 281.32565pt.
- [91 <./plots/Amps_Fit/ReA12B_Pb_bsq_PL-4_WithFit_3D.pdf> <./plots/Amps_Fit/ImA
-2B_PL-4_WithFit_3D.pdf> <./plots/Amps_Fit/ReA12B_PL-4_WithFit_3D.pdf> <./plots/
-Amps_Fit/ReA2B_Pb_bsq_PL-4_WithFit_3D.pdf> <./plots/Amps_Fit/ImA2B_Pb_bsq_PL-4_
-WithFit_3D.pdf>] [92 <./plots/Amps_Fit/Combined_eta8_PL-4_WithFit_2D.pdf> <./pl
-ots/Amps_Fit/Combined_Pb_bsq_eta8_PL-4_WithFit_2D.pdf>]
-(./SimultaneousFitsCov/Integration_Table_PL-4_bmin3.tex)
+(./SimultaneousFitsCov/Integration_Table_PL-4_bmin3.tex
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{table}[htpb]
+                       
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+)
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.614 \begin{figure}[htbp]
+                          
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 <SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-a_im-a_re-a_reA12B-c_im-c_re
 -c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_PL-
-4.pdf, id=10200, 1002.22931pt x 569.37094pt>
+4.pdf, id=6516, 1002.22931pt x 569.37094pt>
 File: SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-a_im-a_re-a_reA12B-c_im
 -c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta61
 0_PL-4.pdf Graphic file (type pdf)
@@ -3288,11 +3186,23 @@ c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610
 _PL-4.pdf>
 Package pdftex.def Info: SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-a_im
 -a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re
--k2_re__bmin3_eta610_PL-4.pdf  used on input line 690.
+-k2_re__bmin3_eta610_PL-4.pdf  used on input line 616.
 (pdftex.def)             Requested size: 263.7856pt x 149.8574pt.
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.618 \begin{figure}[htbp]
+                          
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 <SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-3D_a_im-a_re-a_reA12B-c_im-c
 _re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_
-PL-4.pdf, id=10201, 1291.58916pt x 862.77747pt>
+PL-4.pdf, id=6517, 1291.58916pt x 862.77747pt>
 File: SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-3D_a_im-a_re-a_reA12B-c
 _im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_et
 a610_PL-4.pdf Graphic file (type pdf)
@@ -3301,57 +3211,113 @@ im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta
 610_PL-4.pdf>
 Package pdftex.def Info: SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-3D_a
 _im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1
-_re-k2_re__bmin3_eta610_PL-4.pdf  used on input line 694.
+_re-k2_re__bmin3_eta610_PL-4.pdf  used on input line 620.
 (pdftex.def)             Requested size: 369.29823pt x 246.68402pt.
+(./SimultaneousFitsCov/Fit_Table_PL-1_bmin3.tex
 
-(./SimultaneousFitsCov/Fit_Table_PL-1_bmin3.tex)
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{table}[htpb]
+                       
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+)
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.626 \begin{figure}[htbp]
+                          
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: plots/Amps_Fit/ReA12B_Pb_bsq_PL-1_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA12B_Pb_bsq_PL-1_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA12B_Pb_bsq_PL-1_WithFit_3D.pdf  used
- on input line 705.
+ on input line 631.
 (pdftex.def)             Requested size: 158.27296pt x 57.07886pt.
 File: plots/Amps_Fit/ImA2B_PL-1_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ImA2B_PL-1_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ImA2B_PL-1_WithFit_3D.pdf  used on inpu
-t line 706.
+t line 632.
 (pdftex.def)             Requested size: 158.27296pt x 57.22188pt.
 File: plots/Amps_Fit/ReA12B_PL-1_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA12B_PL-1_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA12B_PL-1_WithFit_3D.pdf  used on inp
-ut line 707.
+ut line 633.
 (pdftex.def)             Requested size: 158.27296pt x 57.07886pt.
 File: plots/Amps_Fit/ReA2B_Pb_bsq_PL-1_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA2B_Pb_bsq_PL-1_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA2B_Pb_bsq_PL-1_WithFit_3D.pdf  used 
-on input line 708.
+on input line 634.
 (pdftex.def)             Requested size: 158.27296pt x 57.22188pt.
 File: plots/Amps_Fit/ImA2B_Pb_bsq_PL-1_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ImA2B_Pb_bsq_PL-1_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ImA2B_Pb_bsq_PL-1_WithFit_3D.pdf  used 
-on input line 709.
+on input line 635.
 (pdftex.def)             Requested size: 158.27296pt x 57.22188pt.
 File: plots/Amps_Fit/ReA12B_Pb_bsq_PL-1_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA12B_Pb_bsq_PL-1_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA12B_Pb_bsq_PL-1_WithFit_3D.pdf  used
- on input line 710.
+ on input line 636.
 (pdftex.def)             Requested size: 158.27296pt x 57.07886pt.
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.641 \begin{figure}[htbp]
+                          
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: plots/Amps_Fit/Combined_eta8_PL-1_WithFit_2D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/Combined_eta8_PL-1_WithFit_2D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/Combined_eta8_PL-1_WithFit_2D.pdf  used
- on input line 718.
+ on input line 644.
 (pdftex.def)             Requested size: 474.81087pt x 281.36461pt.
 File: plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-1_WithFit_2D.pdf Graphic file (typ
 e pdf)
 <use plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-1_WithFit_2D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-1_WithFit_2D.pd
-f  used on input line 719.
+f  used on input line 645.
 (pdftex.def)             Requested size: 474.81087pt x 281.32565pt.
- [93 <./SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-a_im-a_re-a_reA12B-c_
-im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta
-610_PL-4.pdf> <./SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-3D_a_im-a_re
--a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_r
-e__bmin3_eta610_PL-4.pdf>]
-(./SimultaneousFitsCov/Integration_Table_PL-1_bmin3.tex)
+(./SimultaneousFitsCov/Integration_Table_PL-1_bmin3.tex
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{table}[htpb]
+                       
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+)
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.652 \begin{figure}[htbp]
+                          
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-a_im-a_re-a_reA12B-c_im
 -c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta61
 0_PL-1.pdf Graphic file (type pdf)
@@ -3360,8 +3326,20 @@ c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610
 _PL-1.pdf>
 Package pdftex.def Info: SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-a_im
 -a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re
--k2_re__bmin3_eta610_PL-1.pdf  used on input line 728.
+-k2_re__bmin3_eta610_PL-1.pdf  used on input line 654.
 (pdftex.def)             Requested size: 263.7856pt x 149.8574pt.
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.656 \begin{figure}[htbp]
+                          
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-3D_a_im-a_re-a_reA12B-c
 _im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_et
 a610_PL-1.pdf Graphic file (type pdf)
@@ -3370,53 +3348,113 @@ im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta
 610_PL-1.pdf>
 Package pdftex.def Info: SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-3D_a
 _im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1
-_re-k2_re__bmin3_eta610_PL-1.pdf  used on input line 732.
+_re-k2_re__bmin3_eta610_PL-1.pdf  used on input line 658.
 (pdftex.def)             Requested size: 369.29823pt x 247.21062pt.
- [94] [95] [96]
-(./SimultaneousFitsCov/Fit_Table_PL-2_bmin3.tex)
+(./SimultaneousFitsCov/Fit_Table_PL-2_bmin3.tex
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{table}[htpb]
+                       
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+)
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.665 \begin{figure}[htbp]
+                          
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: plots/Amps_Fit/ReA12B_Pb_bsq_PL-2_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA12B_Pb_bsq_PL-2_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA12B_Pb_bsq_PL-2_WithFit_3D.pdf  used
- on input line 744.
+ on input line 670.
 (pdftex.def)             Requested size: 158.27296pt x 56.32695pt.
 File: plots/Amps_Fit/ImA2B_PL-2_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ImA2B_PL-2_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ImA2B_PL-2_WithFit_3D.pdf  used on inpu
-t line 745.
+t line 671.
 (pdftex.def)             Requested size: 158.27296pt x 56.46326pt.
 File: plots/Amps_Fit/ReA12B_PL-2_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA12B_PL-2_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA12B_PL-2_WithFit_3D.pdf  used on inp
-ut line 746.
+ut line 672.
 (pdftex.def)             Requested size: 158.27296pt x 56.32695pt.
 File: plots/Amps_Fit/ReA2B_Pb_bsq_PL-2_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA2B_Pb_bsq_PL-2_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA2B_Pb_bsq_PL-2_WithFit_3D.pdf  used 
-on input line 747.
+on input line 673.
 (pdftex.def)             Requested size: 158.27296pt x 56.46326pt.
 File: plots/Amps_Fit/ImA2B_Pb_bsq_PL-2_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ImA2B_Pb_bsq_PL-2_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ImA2B_Pb_bsq_PL-2_WithFit_3D.pdf  used 
-on input line 748.
+on input line 674.
 (pdftex.def)             Requested size: 158.27296pt x 56.46326pt.
 File: plots/Amps_Fit/ReA12B_Pb_bsq_PL-2_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA12B_Pb_bsq_PL-2_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA12B_Pb_bsq_PL-2_WithFit_3D.pdf  used
- on input line 749.
+ on input line 675.
 (pdftex.def)             Requested size: 158.27296pt x 56.32695pt.
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.680 \begin{figure}[htbp]
+                          
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: plots/Amps_Fit/Combined_eta8_PL-2_WithFit_2D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/Combined_eta8_PL-2_WithFit_2D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/Combined_eta8_PL-2_WithFit_2D.pdf  used
- on input line 757.
+ on input line 683.
 (pdftex.def)             Requested size: 474.81087pt x 281.37761pt.
 File: plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-2_WithFit_2D.pdf Graphic file (typ
 e pdf)
 <use plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-2_WithFit_2D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-2_WithFit_2D.pd
-f  used on input line 758.
+f  used on input line 684.
 (pdftex.def)             Requested size: 474.81087pt x 281.32565pt.
- [97] [98]
-(./SimultaneousFitsCov/Integration_Table_PL-2_bmin3.tex)
+(./SimultaneousFitsCov/Integration_Table_PL-2_bmin3.tex
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{table}[htpb]
+                       
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+)
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.691 \begin{figure}[htbp]
+                          
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-a_im-a_re-a_reA12B-c_im
 -c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta61
 0_PL-2.pdf Graphic file (type pdf)
@@ -3425,8 +3463,20 @@ c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610
 _PL-2.pdf>
 Package pdftex.def Info: SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-a_im
 -a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re
--k2_re__bmin3_eta610_PL-2.pdf  used on input line 767.
+-k2_re__bmin3_eta610_PL-2.pdf  used on input line 693.
 (pdftex.def)             Requested size: 263.7856pt x 149.8574pt.
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.695 \begin{figure}[htbp]
+                          
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-3D_a_im-a_re-a_reA12B-c
 _im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_et
 a610_PL-2.pdf Graphic file (type pdf)
@@ -3435,53 +3485,113 @@ im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta
 610_PL-2.pdf>
 Package pdftex.def Info: SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-3D_a
 _im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1
-_re-k2_re__bmin3_eta610_PL-2.pdf  used on input line 771.
+_re-k2_re__bmin3_eta610_PL-2.pdf  used on input line 697.
 (pdftex.def)             Requested size: 369.29823pt x 247.28961pt.
- [99]
-(./SimultaneousFitsCov/Fit_Table_PL-3_bmin3.tex)
+(./SimultaneousFitsCov/Fit_Table_PL-3_bmin3.tex
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{table}[htpb]
+                       
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+)
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.704 \begin{figure}[htbp]
+                          
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: plots/Amps_Fit/ReA12B_Pb_bsq_PL-3_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA12B_Pb_bsq_PL-3_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA12B_Pb_bsq_PL-3_WithFit_3D.pdf  used
- on input line 783.
+ on input line 709.
 (pdftex.def)             Requested size: 158.27296pt x 56.3225pt.
 File: plots/Amps_Fit/ImA2B_PL-3_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ImA2B_PL-3_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ImA2B_PL-3_WithFit_3D.pdf  used on inpu
-t line 784.
+t line 710.
 (pdftex.def)             Requested size: 158.27296pt x 56.46423pt.
 File: plots/Amps_Fit/ReA12B_PL-3_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA12B_PL-3_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA12B_PL-3_WithFit_3D.pdf  used on inp
-ut line 785.
+ut line 711.
 (pdftex.def)             Requested size: 158.27296pt x 56.3225pt.
 File: plots/Amps_Fit/ReA2B_Pb_bsq_PL-3_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA2B_Pb_bsq_PL-3_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA2B_Pb_bsq_PL-3_WithFit_3D.pdf  used 
-on input line 786.
+on input line 712.
 (pdftex.def)             Requested size: 158.27296pt x 56.46423pt.
 File: plots/Amps_Fit/ImA2B_Pb_bsq_PL-3_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ImA2B_Pb_bsq_PL-3_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ImA2B_Pb_bsq_PL-3_WithFit_3D.pdf  used 
-on input line 787.
+on input line 713.
 (pdftex.def)             Requested size: 158.27296pt x 56.46423pt.
 File: plots/Amps_Fit/ReA12B_Pb_bsq_PL-3_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA12B_Pb_bsq_PL-3_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA12B_Pb_bsq_PL-3_WithFit_3D.pdf  used
- on input line 788.
+ on input line 714.
 (pdftex.def)             Requested size: 158.27296pt x 56.3225pt.
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.719 \begin{figure}[htbp]
+                          
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: plots/Amps_Fit/Combined_eta8_PL-3_WithFit_2D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/Combined_eta8_PL-3_WithFit_2D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/Combined_eta8_PL-3_WithFit_2D.pdf  used
- on input line 796.
+ on input line 722.
 (pdftex.def)             Requested size: 474.81087pt x 281.37761pt.
 File: plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-3_WithFit_2D.pdf Graphic file (typ
 e pdf)
 <use plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-3_WithFit_2D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-3_WithFit_2D.pd
-f  used on input line 797.
+f  used on input line 723.
 (pdftex.def)             Requested size: 474.81087pt x 281.32565pt.
- [100] [101]
-(./SimultaneousFitsCov/Integration_Table_PL-3_bmin3.tex)
+(./SimultaneousFitsCov/Integration_Table_PL-3_bmin3.tex
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{table}[htpb]
+                       
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+)
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.730 \begin{figure}[htbp]
+                          
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-a_im-a_re-a_reA12B-c_im
 -c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta61
 0_PL-3.pdf Graphic file (type pdf)
@@ -3490,8 +3600,20 @@ c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610
 _PL-3.pdf>
 Package pdftex.def Info: SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-a_im
 -a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re
--k2_re__bmin3_eta610_PL-3.pdf  used on input line 806.
+-k2_re__bmin3_eta610_PL-3.pdf  used on input line 732.
 (pdftex.def)             Requested size: 263.7856pt x 149.8574pt.
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.734 \begin{figure}[htbp]
+                          
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-3D_a_im-a_re-a_reA12B-c
 _im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_et
 a610_PL-3.pdf Graphic file (type pdf)
@@ -3500,53 +3622,113 @@ im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta
 610_PL-3.pdf>
 Package pdftex.def Info: SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-3D_a
 _im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1
-_re-k2_re__bmin3_eta610_PL-3.pdf  used on input line 810.
+_re-k2_re__bmin3_eta610_PL-3.pdf  used on input line 736.
 (pdftex.def)             Requested size: 369.29823pt x 246.67085pt.
- [102]
-(./SimultaneousFitsCov/Fit_Table_PL-4_bmin3.tex)
+(./SimultaneousFitsCov/Fit_Table_PL-4_bmin3.tex
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{table}[htpb]
+                       
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+)
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.743 \begin{figure}[htbp]
+                          
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: plots/Amps_Fit/ReA12B_Pb_bsq_PL-4_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA12B_Pb_bsq_PL-4_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA12B_Pb_bsq_PL-4_WithFit_3D.pdf  used
- on input line 822.
+ on input line 748.
 (pdftex.def)             Requested size: 158.27296pt x 56.34975pt.
 File: plots/Amps_Fit/ImA2B_PL-4_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ImA2B_PL-4_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ImA2B_PL-4_WithFit_3D.pdf  used on inpu
-t line 823.
+t line 749.
 (pdftex.def)             Requested size: 158.27296pt x 61.96297pt.
 File: plots/Amps_Fit/ReA12B_PL-4_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA12B_PL-4_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA12B_PL-4_WithFit_3D.pdf  used on inp
-ut line 824.
+ut line 750.
 (pdftex.def)             Requested size: 158.27296pt x 61.96297pt.
 File: plots/Amps_Fit/ReA2B_Pb_bsq_PL-4_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA2B_Pb_bsq_PL-4_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA2B_Pb_bsq_PL-4_WithFit_3D.pdf  used 
-on input line 825.
+on input line 751.
 (pdftex.def)             Requested size: 158.27296pt x 56.4915pt.
 File: plots/Amps_Fit/ImA2B_Pb_bsq_PL-4_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ImA2B_Pb_bsq_PL-4_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ImA2B_Pb_bsq_PL-4_WithFit_3D.pdf  used 
-on input line 826.
+on input line 752.
 (pdftex.def)             Requested size: 158.27296pt x 56.4915pt.
 File: plots/Amps_Fit/ReA12B_Pb_bsq_PL-4_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA12B_Pb_bsq_PL-4_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA12B_Pb_bsq_PL-4_WithFit_3D.pdf  used
- on input line 827.
+ on input line 753.
 (pdftex.def)             Requested size: 158.27296pt x 56.34975pt.
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.758 \begin{figure}[htbp]
+                          
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: plots/Amps_Fit/Combined_eta8_PL-4_WithFit_2D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/Combined_eta8_PL-4_WithFit_2D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/Combined_eta8_PL-4_WithFit_2D.pdf  used
- on input line 835.
+ on input line 761.
 (pdftex.def)             Requested size: 474.81087pt x 281.50644pt.
 File: plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-4_WithFit_2D.pdf Graphic file (typ
 e pdf)
 <use plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-4_WithFit_2D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-4_WithFit_2D.pd
-f  used on input line 836.
+f  used on input line 762.
 (pdftex.def)             Requested size: 474.81087pt x 281.32565pt.
- [103] [104]
-(./SimultaneousFitsCov/Integration_Table_PL-4_bmin3.tex)
+(./SimultaneousFitsCov/Integration_Table_PL-4_bmin3.tex
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{table}[htpb]
+                       
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+)
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.769 \begin{figure}[htbp]
+                          
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-a_im-a_re-a_reA12B-c_im
 -c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta61
 0_PL-4.pdf Graphic file (type pdf)
@@ -3555,8 +3737,20 @@ c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610
 _PL-4.pdf>
 Package pdftex.def Info: SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-a_im
 -a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re
--k2_re__bmin3_eta610_PL-4.pdf  used on input line 845.
+-k2_re__bmin3_eta610_PL-4.pdf  used on input line 771.
 (pdftex.def)             Requested size: 263.7856pt x 149.8574pt.
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.773 \begin{figure}[htbp]
+                          
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-3D_a_im-a_re-a_reA12B-c
 _im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_et
 a610_PL-4.pdf Graphic file (type pdf)
@@ -3565,24 +3759,35 @@ im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta
 610_PL-4.pdf>
 Package pdftex.def Info: SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-3D_a
 _im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1
-_re-k2_re__bmin3_eta610_PL-4.pdf  used on input line 849.
+_re-k2_re__bmin3_eta610_PL-4.pdf  used on input line 775.
 (pdftex.def)             Requested size: 369.29823pt x 246.68402pt.
-) [105]
-(./Chapters/EXTRAPOLATIONS-TO-THE-PHYSICAL-LIMIT.tex
+) (./Chapters/EXTRAPOLATIONS-TO-THE-PHYSICAL-LIMIT.tex
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 2.
 
-<SimultaneousFitsCov/SimulFit_Distinct_1_over_PL_bmin3_eta610_b29.0.pdf, id=103
-73, 1032.81232pt x 694.28561pt>
+<SimultaneousFitsCov/SimulFit_Distinct_1_over_PL_bmin3_eta610_b29.0.pdf, id=651
+8, 1032.81232pt x 694.28561pt>
 File: SimultaneousFitsCov/SimulFit_Distinct_1_over_PL_bmin3_eta610_b29.0.pdf Gr
 aphic file (type pdf)
 <use SimultaneousFitsCov/SimulFit_Distinct_1_over_PL_bmin3_eta610_b29.0.pdf>
 Package pdftex.def Info: SimultaneousFitsCov/SimulFit_Distinct_1_over_PL_bmin3_
 eta610_b29.0.pdf  used on input line 6.
 (pdftex.def)             Requested size: 422.05858pt x 283.72667pt.
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 \begin{figure}[h!]
+                      
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 <SimultaneousFitsCov/extrapolation_para_level/Param_Extrapolations_1byZetahat_s
-q_P234_bmin3_eta610_b29.0.pdf, id=10374, 1300.86pt x 867.24pt>
+q_P234_bmin3_eta610_b29.0.pdf, id=6519, 1300.86pt x 867.24pt>
 File: SimultaneousFitsCov/extrapolation_para_level/Param_Extrapolations_1byZeta
 hat_sq_P234_bmin3_eta610_b29.0.pdf Graphic file (type pdf)
 <use SimultaneousFitsCov/extrapolation_para_level/Param_Extrapolations_1byZetah
@@ -3590,9 +3795,21 @@ at_sq_P234_bmin3_eta610_b29.0.pdf>
 Package pdftex.def Info: SimultaneousFitsCov/extrapolation_para_level/Param_Ext
 rapolations_1byZetahat_sq_P234_bmin3_eta610_b29.0.pdf  used on input line 11.
 (pdftex.def)             Requested size: 422.05858pt x 281.37328pt.
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 \begin{figure}[h!]
+                       
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 <SimultaneousFitsCov/extrapolation_para_level/Extrapolated_AmpLevel_P234_Sivers
-_1_over_zetahat_sq_bmin3_eta610_b29.0.pdf, id=10375, 1002.22244pt x 593.75513pt
->
+_1_over_zetahat_sq_bmin3_eta610_b29.0.pdf, id=6520, 1002.22244pt x 593.75513pt>
+
 File: SimultaneousFitsCov/extrapolation_para_level/Extrapolated_AmpLevel_P234_S
 ivers_1_over_zetahat_sq_bmin3_eta610_b29.0.pdf Graphic file (type pdf)
 <use SimultaneousFitsCov/extrapolation_para_level/Extrapolated_AmpLevel_P234_Si
@@ -3602,13 +3819,19 @@ ted_AmpLevel_P234_Sivers_1_over_zetahat_sq_bmin3_eta610_b29.0.pdf  used on inpu
 t line 17.
 (pdftex.def)             Requested size: 422.05858pt x 250.03682pt.
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+! LaTeX Error: Not in outer par mode.
 
-[106 <./SimultaneousFitsCov/SimulFit_Distinct_1_over_PL_bmin3_eta610_b29.0.pdf>
- <./SimultaneousFitsCov/extrapolation_para_level/Param_Extrapolations_1byZetaha
-t_sq_P234_bmin3_eta610_b29.0.pdf>]
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22 \begin{figure}[h!]
+                       
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 <SimultaneousFitsCov/extrapolation_para_level/SimulFitCovMatrix-A12B-A2B-FT-3D_
-_bmin3_eta610_PLInf.pdf, id=10501, 1273.45659pt x 888.1983pt>
+_bmin3_eta610_PLInf.pdf, id=6521, 1273.45659pt x 888.1983pt>
 File: SimultaneousFitsCov/extrapolation_para_level/SimulFitCovMatrix-A12B-A2B-F
 T-3D__bmin3_eta610_PLInf.pdf Graphic file (type pdf)
 <use SimultaneousFitsCov/extrapolation_para_level/SimulFitCovMatrix-A12B-A2B-FT
@@ -3616,8 +3839,20 @@ T-3D__bmin3_eta610_PLInf.pdf Graphic file (type pdf)
 Package pdftex.def Info: SimultaneousFitsCov/extrapolation_para_level/SimulFitC
 ovMatrix-A12B-A2B-FT-3D__bmin3_eta610_PLInf.pdf  used on input line 24.
 (pdftex.def)             Requested size: 422.05858pt x 294.36676pt.
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 \begin{figure}[h!]
+                       
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 <SimultaneousFitsCov/extrapolation_para_level/All_Momenta_vs_Extrapolated_2D_P2
-34_bmin3_eta610_b29.0.pdf, id=10502, 1036.03003pt x 702.56851pt>
+34_bmin3_eta610_b29.0.pdf, id=6522, 1036.03003pt x 702.56851pt>
 File: SimultaneousFitsCov/extrapolation_para_level/All_Momenta_vs_Extrapolated_
 2D_P234_bmin3_eta610_b29.0.pdf Graphic file (type pdf)
 <use SimultaneousFitsCov/extrapolation_para_level/All_Momenta_vs_Extrapolated_2
@@ -3625,16 +3860,7 @@ D_P234_bmin3_eta610_b29.0.pdf>
 Package pdftex.def Info: SimultaneousFitsCov/extrapolation_para_level/All_Momen
 ta_vs_Extrapolated_2D_P234_bmin3_eta610_b29.0.pdf  used on input line 30.
 (pdftex.def)             Requested size: 422.05858pt x 286.21106pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-) [107 <./SimultaneousFitsCov/extrapolation_para_level/Extrapolated_AmpLevel_P2
-34_Sivers_1_over_zetahat_sq_bmin3_eta610_b29.0.pdf> <./SimultaneousFitsCov/extr
-apolation_para_level/SimulFitCovMatrix-A12B-A2B-FT-3D__bmin3_eta610_PLInf.pdf>]
-[108 <./SimultaneousFitsCov/extrapolation_para_level/All_Momenta_vs_Extrapolate
-d_2D_P234_bmin3_eta610_b29.0.pdf>] [109] (./Chapters/CONCLUSION.tex) [110]
-(./appendix.tex
+) (./Chapters/CONCLUSION.tex) (./appendix.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -3658,58 +3884,87 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-) [111]
+)
 No file main.bbl.
 
 Package natbib Warning: There were undefined citations.
 
+
+! LaTeX Error: \begin{figure} on input line 298 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.287 \end{document}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 (./main.aux (./title.aux) (./copyright.aux) (./approval.aux) (./dedica.aux)
 (./ackno.aux) (./vita.aux) (./abstract.aux))
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 3935E4C5F3F2E429685A71B6A49F2E4D;14992.
- ) 
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 3935E4C5F3F2E429685A71B6A49F2E4D;14992
+(rerunfilecheck)             After:  56651999BE2E6E7ACAB39061B7926785;11852.
+! You can't use `\end' in internal vertical mode.
+\enddocument ...cument/end}\deadcycles \z@ \@@end 
+                                                  
+l.287 \end{document}
+                    
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+! LaTeX Error: \begin{figure} on input line 298 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.287 \end{document}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.287 \end{document}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+)
+! Emergency stop.
+<*> main.tex
+            
+*** (job aborted, no legal \end found)
+
+ 
 Here is how much of TeX's memory you used:
- 43651 strings out of 476025
- 878278 string characters out of 5790016
- 2395168 words of memory out of 5000000
- 62696 multiletter control sequences out of 15000+600000
+ 43526 strings out of 476025
+ 874308 string characters out of 5790016
+ 2323168 words of memory out of 5000000
+ 62678 multiletter control sequences out of 15000+600000
  527970 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  82i,22n,80p,3236b,8786s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></
-usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></us
-r/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr
-/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></
-usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></
-usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
-sr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></us
-r/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/
-local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/lo
-cal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/lo
-cal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></us
-r/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
-local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/lo
-cal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local
-/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/te
-xlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/tex
-live/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texli
-ve/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive
-/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/
-2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2
-023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/20
-23/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/202
-3/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2023/
-texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/local/texlive/
-2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (129 pages, 37883634 bytes).
-PDF statistics:
- 11021 PDF objects out of 12825 (max. 8388607)
- 3311 compressed objects within 34 object streams
- 555 named destinations out of 1000 (max. 500000)
- 1220 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+!  ==> Fatal error occurred, no output PDF file produced!

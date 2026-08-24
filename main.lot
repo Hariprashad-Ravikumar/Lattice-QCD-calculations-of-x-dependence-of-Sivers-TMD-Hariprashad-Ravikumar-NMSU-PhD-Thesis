@@ -1,21 +1,5 @@
 \babel@toc {english}{}\relax 
 \contentsline {table}{\numberline {1}{\ignorespaces Resulting Collins-Soper parameters ($\hat {\zeta }$) and the necessary geometric constraint on the staple vector components to ensure $b \cdot P \neq 0$.\relax }}{17}{table.caption.4}%
 \contentsline {table}{\numberline {2}{\ignorespaces Configuration parameters for the Lattice QCD non-local matrix element extraction.\relax }}{17}{table.caption.5}%
-\contentsline {table}{\numberline {3}{\ignorespaces Hyperparameter and operator configuration for the Physics-Informed \texttt {PySR} Symbolic Regression search.\relax }}{55}{table.caption.33}%
-\contentsline {table}{\numberline {4}{\ignorespaces Pareto front of analytical candidate models discovered by \texttt {PySR} for the real amplitude $\setbox \z@ \hbox {\mathsurround \z@ $\textstyle A$}\mathaccent "0365{A}_{2B}^{\text {Re}}(\eta , b_L, b_T)$, ranked by mathematical complexity and loss. The optimal physics-informed models ($C=14$ and $C=16$) are highlighted.\relax }}{58}{table.caption.34}%
-\contentsline {table}{\numberline {5}{\ignorespaces Simultaneous Fit with common $f$: for $P_L=-1$, $b_{min} \ge 3$, $\eta \in [6, 10]$. Global $\chi ^2/\text {DoF} = 1.85(10)$\relax }}{81}{table.caption.58}%
-\contentsline {table}{\numberline {6}{\ignorespaces Numerical Integration of Fourier Transforms: $P_L=-1, b_{min} \ge 3$\relax }}{83}{table.caption.61}%
-\contentsline {table}{\numberline {7}{\ignorespaces Simultaneous Fit with common $f$: for $P_L=-2$, $b_{min} \ge 3$, $\eta \in [6, 10]$. Global $\chi ^2/\text {DoF} = 1.197(85)$\relax }}{84}{table.caption.64}%
-\contentsline {table}{\numberline {8}{\ignorespaces Numerical Integration of Fourier Transforms: $P_L=-2, b_{min} \ge 3$\relax }}{85}{table.caption.67}%
-\contentsline {table}{\numberline {9}{\ignorespaces Simultaneous Fit with common $f$: for $P_L=-3$, $b_{min} \ge 3$, $\eta \in [6, 10]$. Global $\chi ^2/\text {DoF} = 0.712(66)$\relax }}{88}{table.caption.70}%
-\contentsline {table}{\numberline {10}{\ignorespaces Numerical Integration of Fourier Transforms: $P_L=-3, b_{min} \ge 3$\relax }}{90}{table.caption.73}%
-\contentsline {table}{\numberline {11}{\ignorespaces Simultaneous Fit with common $f$: for $P_L=-4$, $b_{min} \ge 3$, $\eta \in [6, 10]$. Global $\chi ^2/\text {DoF} = 0.434(51)$\relax }}{91}{table.caption.76}%
-\contentsline {table}{\numberline {12}{\ignorespaces Numerical Integration of Fourier Transforms: $P_L=-4, b_{min} \ge 3$\relax }}{93}{table.caption.79}%
-\contentsline {table}{\numberline {13}{\ignorespaces Simultaneous Fit with common $f$: for $P_L=-1$, $b_{min} \ge 3$, $\eta \in [6, 10]$. Global $\chi ^2/\text {DoF} = 1.85(10)$\relax }}{94}{table.caption.82}%
-\contentsline {table}{\numberline {14}{\ignorespaces Numerical Integration of Fourier Transforms: $P_L=-1, b_{min} \ge 3$\relax }}{94}{table.caption.85}%
-\contentsline {table}{\numberline {15}{\ignorespaces Simultaneous Fit with common $f$: for $P_L=-2$, $b_{min} \ge 3$, $\eta \in [6, 10]$. Global $\chi ^2/\text {DoF} = 1.197(85)$\relax }}{97}{table.caption.88}%
-\contentsline {table}{\numberline {16}{\ignorespaces Numerical Integration of Fourier Transforms: $P_L=-2, b_{min} \ge 3$\relax }}{99}{table.caption.91}%
-\contentsline {table}{\numberline {17}{\ignorespaces Simultaneous Fit with common $f$: for $P_L=-3$, $b_{min} \ge 3$, $\eta \in [6, 10]$. Global $\chi ^2/\text {DoF} = 0.712(66)$\relax }}{100}{table.caption.94}%
-\contentsline {table}{\numberline {18}{\ignorespaces Numerical Integration of Fourier Transforms: $P_L=-3, b_{min} \ge 3$\relax }}{102}{table.caption.97}%
-\contentsline {table}{\numberline {19}{\ignorespaces Simultaneous Fit with common $f$: for $P_L=-4$, $b_{min} \ge 3$, $\eta \in [6, 10]$. Global $\chi ^2/\text {DoF} = 0.434(51)$\relax }}{103}{table.caption.100}%
-\contentsline {table}{\numberline {20}{\ignorespaces Numerical Integration of Fourier Transforms: $P_L=-4, b_{min} \ge 3$\relax }}{105}{table.caption.103}%
+\contentsline {table}{\numberline {3}{\ignorespaces Hyperparameter and operator configuration for the Physics-Informed \texttt {PySR} Symbolic Regression search.\relax }}{57}{table.caption.35}%
+\contentsline {table}{\numberline {4}{\ignorespaces Pareto front of analytical candidate models discovered by \texttt {PySR} for the real amplitude $\setbox \z@ \hbox {\mathsurround \z@ $\textstyle A$}\mathaccent "0365{A}_{2B}^{\text {Re}}(\eta , b_L, b_T)$, ranked by mathematical complexity and loss. The optimal physics-informed models ($C=14$ and $C=16$) are highlighted.\relax }}{60}{table.caption.36}%
