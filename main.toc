@@ -1,0 +1,70 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{LIST OF TABLES}{xi}{section*.2}%
+\contentsline {section}{LIST OF FIGURES}{xviii}{section*.3}%
+\contentsline {section}{\numberline {1}INTRODUCTION AND MOTIVATION}{1}{section.1}%
+\contentsline {section}{\numberline {2}LATTICE QCD METHODOLOGY}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Quantum Chromodynamics}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Lattice QCD}{2}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Wilson Gauge Action}{3}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Fermions on the Lattice}{3}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Two-Point Correlation Functions}{4}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Three-Point Correlation Functions}{4}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Non-Local Operators}{4}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}Introduction to TMD Three-Point Functions}{5}{subsection.2.8}%
+\contentsline {subsection}{\numberline {2.9}Extracting Matrix Elements: The Ratio Method}{5}{subsection.2.9}%
+\contentsline {section}{\numberline {3}THEORETICAL FRAMEWORK OF TMDs}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Definition of TMDs}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}General strategy}{8}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}TMDs in Fourier space}{9}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Link geometry}{9}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Symmetry Constraints}{10}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Parametrization of the correlator}{11}{subsection.3.6}%
+\contentsline {section}{\numberline {4}EXTRACTING THE $x-$DEPENDENCE}{14}{section.4}%
+\contentsline {subsection}{\numberline {4.1}The Sivers Shift as a Function of Momentum Fraction}{14}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}The Collins-Soper Parameter ($\hat {\zeta }$)}{15}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Kinematic Constraints for $b\cdot P \neq 0$}{15}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Explicit Calculation for $P_1=-1$}{16}{subsubsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.4}Lattice Parameter Space and Off-Axis Links}{16}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.1}Off-Axis $\ensuremath {\boldsymbol {v}}$ and Spatial Interpolation}{17}{subsubsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.2}Spatial Interpolation of Off-Axis Coordinates}{20}{subsubsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.5}Quark Separation Vectors ($\ensuremath {\boldsymbol {b}}$) and Amplitude Parity}{23}{subsection.4.5}%
+\contentsline {subsubsection}{\numberline {4.5.1}Gauge Link Construction for $\ensuremath {\boldsymbol {b}}$}{23}{subsubsection.4.5.1}%
+\contentsline {subsubsection}{\numberline {4.5.2}Path Averaging for $\ensuremath {\boldsymbol {b}}$}{25}{subsubsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.6}Solving for Real and Imaginary Amplitudes $\setbox \z@ \hbox {\mathsurround \z@ $\textstyle A$}\mathaccent "0365{A}_{iB}^{\text {Re}}$ and $\setbox \z@ \hbox {\mathsurround \z@ $\textstyle A$}\mathaccent "0365{A}_{iB}^{\text {Im}}$}{25}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Constructing the Effective Amplitudes $\setbox \z@ \hbox {\mathsurround \z@ $\textstyle A$}\mathaccent "0365{A}_{2B}$ and $\setbox \z@ \hbox {\mathsurround \z@ $\textstyle A$}\mathaccent "0365{A}_{12B}$}{35}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.8}Constructing the Effective Amplitudes $\setbox \z@ \hbox {\mathsurround \z@ $\textstyle A$}\mathaccent "0365{A}_{2B}$ and $\setbox \z@ \hbox {\mathsurround \z@ $\textstyle A$}\mathaccent "0365{A}_{12B}$}{37}{subsection.4.8}%
+\contentsline {subsection}{\numberline {4.9}Transformation to the Lorentz-Invariant Variable Space}{38}{subsection.4.9}%
+\contentsline {subsection}{\numberline {4.10}Numerical Results and Parity Constraints of the Extracted Amplitudes}{41}{subsection.4.10}%
+\contentsline {subsubsection}{\numberline {4.10.1}Amplitude Profiles at $\hat {\zeta }=0.090772$ ($P_L = -1$)}{41}{subsubsection.4.10.1}%
+\contentsline {subsubsection}{\numberline {4.10.2}Amplitude Profiles at $\hat {\zeta }=0.294367$ ($P_L = -2$)}{44}{subsubsection.4.10.2}%
+\contentsline {subsubsection}{\numberline {4.10.3}Amplitude Profiles at $\hat {\zeta }=0.539684$ ($P_L = -3$)}{46}{subsubsection.4.10.3}%
+\contentsline {subsubsection}{\numberline {4.10.4}Amplitude Profiles at $\hat {\zeta }=0.785756$ ($P_L = -4$)}{48}{subsubsection.4.10.4}%
+\contentsline {section}{\numberline {5}FITTING METHODOLOGIES AND STABILITY ANALYSIS}{50}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Coordinate Transformation and the Simple Gaussian Model}{51}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}Pathology of the Simple Gaussian Model}{53}{subsubsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.2}Physics-Informed Symbolic Regression via PySR}{54}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Genetic Algorithms and Expression Trees}{54}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}The Physics-Informed Custom Loss Function}{56}{subsubsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.3}Pareto Front of Discovered Models}{57}{subsubsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.3}Discretization Effects and Short-Distance Data Exclusion}{62}{subsection.5.3}%
+\contentsline {section}{\numberline {6}$\setbox \z@ \hbox {\mathsurround \z@ $\textstyle A$}\mathaccent "0365{A}^{Re}_{2B}$: $\eta $-dependent Gaussian-type fit : $b\geq 3$}{64}{section.6}%
+\contentsline {subsection}{\numberline {6.1}At fixed $\eta $}{64}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {6.1.1}Finding best Fit: $b\geq 3$}{67}{subsubsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.2}Let's fix the Power Law: $\frac {ae^{-f\eta }}{(1~+~c\eta ^{g}b_{L}^2~+~db_{T}^{2})^{2}}$}{70}{subsubsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.2}Re A2B: Asymptotic in $\eta $ functions}{71}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Asymptotic in $\eta $ functions (Wider Fourier transform ansatzs)}{72}{subsection.6.3}%
+\contentsline {section}{\numberline {7}Candidate Selection and Simultaneous Fitting Strategy}{76}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Simultaneous Fit with Full Covariance Matrix}{78}{subsection.7.1}%
+\contentsline {subsubsection}{\numberline {7.1.1}Simultaneous Fit Results for $\ensuremath {\boldsymbol {P}}\cdot a\hat {L}/(2\pi )=\{-1,0,0\}$}{81}{subsubsection.7.1.1}%
+\contentsline {subsubsection}{\numberline {7.1.2}$\ensuremath {\boldsymbol {P}}\cdot a\hat {L}/(2\pi )=\{-2,0,0\}$}{84}{subsubsection.7.1.2}%
+\contentsline {subsubsection}{\numberline {7.1.3}$\ensuremath {\boldsymbol {P}}\cdot a\hat {L}/(2\pi )=\{-3,0,0\}$}{88}{subsubsection.7.1.3}%
+\contentsline {subsubsection}{\numberline {7.1.4}$\ensuremath {\boldsymbol {P}}\cdot a\hat {L}/(2\pi )=\{-4,0,0\}$}{91}{subsubsection.7.1.4}%
+\contentsline {subsubsection}{\numberline {7.1.5}$\ensuremath {\boldsymbol {P}}\cdot a\hat {L}/(2\pi )=\{-1,0,0\}$}{93}{subsubsection.7.1.5}%
+\contentsline {subsubsection}{\numberline {7.1.6}$\ensuremath {\boldsymbol {P}}\cdot a\hat {L}/(2\pi )=\{-2,0,0\}$}{97}{subsubsection.7.1.6}%
+\contentsline {subsubsection}{\numberline {7.1.7}$\ensuremath {\boldsymbol {P}}\cdot a\hat {L}/(2\pi )=\{-3,0,0\}$}{100}{subsubsection.7.1.7}%
+\contentsline {subsubsection}{\numberline {7.1.8}$\ensuremath {\boldsymbol {P}}\cdot a\hat {L}/(2\pi )=\{-4,0,0\}$}{103}{subsubsection.7.1.8}%
+\contentsline {section}{\numberline {8}EXTRAPOLATIONS TO THE PHYSICAL LIMIT}{106}{section.8}%
+\contentsline {subsubsection}{\numberline {8.0.1}$\hat {\zeta } \to \infty $ Extrapolation}{106}{subsubsection.8.0.1}%
+\contentsline {subsection}{\numberline {8.1}Extrapolation at fit-parameters level}{106}{subsection.8.1}%
+\contentsline {section}{\numberline {9}CONCLUSION}{110}{section.9}%
+\contentsline {section}{\numberline {A}QLUA: Gamma $\Gamma (n)$}{111}{appendix.A}%

@@ -279,7 +279,28 @@ where
     \item $n$: Number of points considered
 \end{itemize}
 
-Most of the asymptotic $\eta$ functions have the same $\chi^2/\text{DoF}$, and importantly the same Lorentzian power $j\approx2$. On fitting a Lorentzian function with power $j\approx2$ at every $\eat$ slice, we get,
+Most of the asymptotic $\eta$ functions have the same $\chi^2/\text{DoF}$, and importantly the same Lorentzian power $j\approx2$, amplitude $a\approx4$, overall $\eta$ dependancy as $\times e^{-0.5\eta}$. On fitting a Lorentzian function with power $j\approx2$ at every $\eta$ slice, we get:
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\linewidth]{Gaussian_type_fit_Real_A2B/LorentzianFixedA_P-1_b3.pdf}
+    \caption{Lorentzian fit at every $\eta$ slice for $\tAmp^{Re}_{2B}$ with fixed power $j=2$ and amplitude $a=4$.}
+\end{figure}
+
+From these fits, we extracted the parameters $c$ and $d$. Physically, the fit parameter $c$ directly goes as a coefficient of the longitudinal separation $(P \cdot b)$, while $d$ serves directly as a coefficient of the invariant squared separation $b^2$. To thoroughly investigate the $\eta$-dependence of these spatial coefficients, we plot the extracted values of $c$ and $d$ against our candidate asymptotic models:
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\linewidth]{PowerLaw_etaAsymptotic/A2B_c_eta_AllAsymptoticModels_P1.pdf}
+    \caption{The extracted parameter $c(\eta)$ overlaid with various candidate asymptotic models, demonstrating its asymptotic approach at large $\eta$.}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\linewidth]{PowerLaw_etaAsymptotic/A2B_d_eta_Independence_P1.pdf}
+    \caption{The extracted parameter $d(\eta)$, exhibiting a clear independence from the staple extent $\eta$.}
+\end{figure}
+
 
 \section{Candidate Selection and Simultaneous Fitting Strategy}
 \label{sec:simultaneous_fit_strategy}
