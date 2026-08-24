@@ -298,17 +298,58 @@ From these fits, we extracted the parameters $c$ and $d$. Physically, the fit pa
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.9\linewidth]{PowerLaw_etaAsymptotic/A2B_d_eta_Independence_P1.pdf}
-    \caption{The extracted parameter $d(\eta)$, exhibiting a clear independence from the staple extent $\eta$.}
+\section{Candidate Selection}
+\label{sec:candidate_selection}
+
+Through rigorous $\chi^2/\text{dof}$ minimizations and sequential fitting procedures across individual $\eta$ slices, we systematically determined the optimal structural parameterizations for the phenomenologically relevant invariant amplitudes: $\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$, and $\tAmp_{12B}^{\text{Re}}$. As previously noted, $\tAmp_{12B}^{\text{Im}}$ is excluded from this modeling as the lattice data remains statistically compatible with zero.
+
+For the unpolarized real amplitude $\tAmp_{2B}^{\text{Re}}$, our sequential analysis revealed that while the transverse width parameter $d$ remains constant across all $\eta$, the longitudinal width parameter $c(\eta)$ requires an asymptotic model. We ultimately selected the model $c(\eta) = c\left(1 - \frac{k_1}{\eta} - \frac{k_2}{\eta^2}\right)$, because its Fourier transform naturally suppresses unphysical negative-$x$ contributions. The theoretical details and implications of this suppression in momentum space will be discussed in depth in the following sections.
+
+For the real Sivers amplitude $\tAmp_{12B}^{\text{Re}}$, we repeated the sequential Lorentzian fitting at fixed $\eta$ slices. As shown in Figure \ref{fig:ReA12B_eta_independence} and Table \ref{tab:ReA12B_fixed_eta}, the extracted longitudinal parameter $c$ and transverse parameter $d$ exhibit clear independence from $\eta$. Therefore, the data strictly dictates modeling both $c$ and $d$ as pure constants for $\tAmp_{12B}^{\text{Re}}$.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.55\linewidth]{Gaussian_type_fit_Real_A2B/LorentzianFixed_ReA12B_P-1_b3.pdf}
+    \caption{Sequential Lorentzian fits for $\tAmp_{12B}^{\text{Re}}$ at individual $\eta$ slices showing consistent $\chi^2/\text{dof}$ and stable parameters.}
+    \label{tab:ReA12B_fixed_eta}
 \end{figure}
 
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.49\linewidth]{PowerLaw_etaAsymptotic/ReA12B_c_eta_Independence_P1.pdf}
+    \includegraphics[width=0.49\linewidth]{PowerLaw_etaAsymptotic/ReA12B_d_eta_Independence_P1.pdf}
+    \caption{Lattice extracted parameters $c$ (left) and $d$ (right) for $\tAmp_{12B}^{\text{Re}}$ as a function of $\eta$. Both parameters demonstrate clear independence from $\eta$.}
+    \label{fig:ReA12B_eta_independence}
+\end{figure}
 
+Similarly, for the imaginary unpolarized amplitude $\tAmp_{2B}^{\text{Im}}$, the lattice data is inherently noisier. However, applying the same sequential fitting strategy reveals a consistent trend. We adopt the physically motivated ansatz that $c$ and $d$ are constant in $\eta$, mirroring the structural stability observed in the real amplitudes. This ansatz provides stable and theoretically sound fits, as demonstrated in Figure \ref{fig:ImA2B_eta_independence} and Table \ref{tab:ImA2B_fixed_eta}.
 
-\section{Candidate Selection and Simultaneous Fitting Strategy}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.55\linewidth]{Gaussian_type_fit_Real_A2B/LorentzianFixed_ImA2B_P-1_b3.pdf}
+    \caption{Sequential Lorentzian fits for $\tAmp_{2B}^{\text{Im}}$ at individual $\eta$ slices showing consistent $\chi^2/\text{dof}$.}
+    \label{tab:ImA2B_fixed_eta}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.49\linewidth]{PowerLaw_etaAsymptotic/ImA2B_c_eta_Independence_P1.pdf}
+    \includegraphics[width=0.49\linewidth]{PowerLaw_etaAsymptotic/ImA2B_d_eta_Independence_P1.pdf}
+    \caption{Lattice extracted parameters $c$ (left) and $d$ (right) for $\tAmp_{2B}^{\text{Im}}$ as a function of $\eta$. Despite increased statistical noise, the data is highly compatible with the constant parameter ansatz.}
+    \label{fig:ImA2B_eta_independence}
+\end{figure}
+
+Consolidating these findings, the precise analytical models in invariant $(b_L,b_T)$ space for the three phenomenological amplitudes are definitively established as:
+\begin{align}
+    \tAmp_{2B}^{\text{Re}}&=\left[\frac{a e^{-f \eta}}{\left[1 + \left(d + c\left(1 - \frac{k_1}{\eta} - \frac{k_2}{\eta^2}\right)\right) b_L^2 + d b_T^2\right]^j}\right]\label{eq:model_ReA2B}\\
+    \tAmp_{12B}^{\text{Re}}&=\left[\frac{-a^{\prime} e^{-f \eta}}{\left[1 + (c^{\prime} + d^{\prime}) b_L^2 + d^{\prime} b_T^2\right]^{j^{\prime}}}\right]\label{eq:model_ReA12B}\\
+    \tAmp_{2B}^{\text{Im}}&=\left[\frac{a^{\prime\prime} b_L e^{-f \eta}}{\left[1 + (c^{\prime\prime} + d^{\prime\prime}) b_L^2 + d^{\prime\prime} b_T^2\right]^{j^{\prime\prime}}}\right]\label{eq:model_ImA2B}
+\end{align}
+
+\section{Simultaneous Fitting Strategy}
 \label{sec:simultaneous_fit_strategy}
 
-Through a rigorous $\chi^2/\text{dof}$ minimizations and sequential fitting procedures, we systematically narrowed down the potential candidate models for the phenomenologically relevant invariant amplitudes: $\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$, and $\tAmp_{12B}^{\text{Re}}$. As previously noted, $\tAmp_{12B}^{\text{Im}}$ is excluded from this modeling as the lattice data remains statistically compatible with zero. 
-
-A crucial finding from these sequential fits is that all three surviving amplitudes exhibit a universal $\eta$-dependence characterized by a Lorentzian-power-law profile damped by a shared exponential decay factor, $e^{-f\eta}$. Because the Sivers shift is defined as a ratio of transverse momentum moments, this shared exponential behavior will be canceled out for the physical momentum fraction $x$ calculation. 
+A crucial feature unifying the structural models in Eq. (\ref{eq:model_ReA2B})-(\ref{eq:model_ImA2B}) is that all three surviving amplitudes exhibit a universal $\eta$-dependence damped by a shared exponential decay factor, $e^{-f\eta}$. Because the Sivers shift is defined as a ratio of transverse momentum moments, this shared exponential behavior will be canceled out for the physical momentum fraction $x$ calculation. 
 
 We begin with the definition of the Sivers shift as the ratio of the first transverse momentum moment of the Sivers function to the unpolarized TMD distribution:
 \begin{equation}
@@ -330,17 +371,7 @@ Applying Euler's formula to expand the Fourier kernel $e^{ix(b\cdot P)}$ into it
 \begin{equation}
     \langle \vect{k}_y \rangle_{TU} = -m_{N} \frac{\int d(b\cdot P) \cos{\left(x(b\cdot P)\right)}\tAmp_{12B}^{\text{Re}}(\cdots)}{\int d(b\cdot P)\left[\cos{\left(x(b\cdot P)\right)}\tAmp_{2B}^{\text{Re}}(\cdots)-\sin{\left(x(b\cdot P)\right)}\tAmp_{2B}^{\text{Im}}(\cdots)\right]} \ .
 \end{equation}
-At this stage, we substitute the precise analytical models (in $(b_L,b_T)$ space) discovered during our sequential parameter optimization.
-\begin{align}
-    \tAmp_{2B}^{\text{Re}}&=\left[\frac{a e^{-f \eta}}{\left[1 + \left(d + c\left(1 - \frac{k_1}{\eta} - \frac{k_2}{\eta^2}\right)\right) b_L^2 + d b_T^2\right]^j}\right]\\
-    \tAmp_{12B}^{\text{Re}}&=\left[\frac{-a^{\prime} e^{-f \eta}}{\left[1 + (c^{\prime} + d^{\prime}) b_L^2 + d^{\prime} b_T^2\right]^{j^{\prime}}}\right]\\
-    \tAmp_{2B}^{\text{Im}}&=\left[\frac{a^{\prime\prime} b_L e^{-f \eta}}{\left[1 + (c^{\prime\prime} + d^{\prime\prime}) b_L^2 + d^{\prime\prime} b_T^2\right]^{j^{\prime\prime}}}\right]
-\end{align}
-\textcolor{red}{$\eta$-dependancy for A12B and ImA2B, show plots c vs $1/\eta$}
-\textcolor{red}{$\eta$-dependancy $e^{-f\eta}$: Wilson loop: Area'ish law, exponential decay, show Mathematica gave common f}
-
-
-Substituting these functions explicitly reveals the presence of the shared asymptotic parameter $e^{-f \eta}$:
+At this stage, substituting the precise analytical models from Eq. (\ref{eq:model_ReA2B})-(\ref{eq:model_ImA2B}) explicitly reveals the presence of the shared asymptotic parameter $e^{-f \eta}$:
 \begin{equation}
     \langle \vect{k}_y \rangle_{TU} = \frac{-m_{N} \int d(b\cdot P) \cos{\left(x(b\cdot P)\right)}\left[\frac{-a^{\prime} e^{-f \eta}}{\left[1 + (c^{\prime} + d^{\prime}) b_L^2 + d^{\prime} b_T^2\right]^{j^{\prime}}}\right]}{\int d(b\cdot P)\left[\cos{\left(x(b\cdot P)\right)}\left[\frac{a e^{-f \eta}}{\left[1 + \left(d + c\left(1 - \frac{k_1}{\eta} - \frac{k_2}{\eta^2}\right)\right) b_L^2 + d b_T^2\right]^j}\right]-\sin{\left(x(b\cdot P)\right)}\left[\frac{a^{\prime\prime} b_L e^{-f \eta}}{\left[1 + (c^{\prime\prime} + d^{\prime\prime}) b_L^2 + d^{\prime\prime} b_T^2\right]^{j^{\prime\prime}}}\right]\right]} \ .
 \end{equation}
