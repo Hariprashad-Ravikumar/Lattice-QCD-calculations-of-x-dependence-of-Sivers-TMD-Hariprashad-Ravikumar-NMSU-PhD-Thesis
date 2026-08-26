@@ -16,21 +16,21 @@ As motivated in the previous section, we perform our parameterizations natively 
 
 For the real parts of the amplitudes ($\tAmp^{Re}_{iB}$), the fundamental Hermitian conjugation symmetries dictate that the function must be strictly even in the longitudinal separation $b_L$. We therefore model the real amplitude with a standard 2D Gaussian centered at the origin:
 \begin{align}
-    \tAmp^{Re}_{iB}&=\gamma \exp{\left[-\alpha \textcolor{red}{b_{L}^{2}}-\beta \textcolor{red}{b_{T}^{2}}\right]}
+    \tAmp^{Re}_{iB}&=\gamma \exp{\left[-\alpha b_L^2-\beta b_T^2\right]}
 \end{align}
-To transform this into the invariant phase space, we must eliminate the transverse coordinate $b_T$. We utilize the geometric constraint defining the squared separation vector, $\textcolor{blue}{b}^2 = \textcolor{red}{b_L^2} + \textcolor{red}{b_T^2}$, which allows us to substitute $\textcolor{red}{b_T^2} = \textcolor{blue}{b}^2 - \textcolor{red}{b_L^2}$:
+To transform this into the invariant phase space, we must eliminate the transverse coordinate $b_T$. We utilize the geometric constraint defining the squared separation vector, $b^2 = b_L^2 + b_T^2$, which allows us to substitute $b_T^2 = b^2 - b_L^2$:
 \begin{align}
-    \tAmp^{Re}_{iB}&=\gamma \exp{\left[-\alpha \textcolor{red}{b_{L}^{2}}-\beta \left(\textcolor{blue}{b}^{2}-\textcolor{red}{b_{L}^{2}}\right)\right]}
+    \tAmp^{Re}_{iB}&=\gamma \exp{\left[-\alpha b_L^2-\beta \left(b^2-b_L^2\right)\right]}
 \end{align}
-Grouping the terms by the longitudinal coordinate isolates the dependence on the invariant squared separation $\textcolor{blue}{b}^2$:
+Grouping the terms by the longitudinal coordinate isolates the dependence on the invariant squared separation $b^2$:
 \begin{align}
-    \tAmp^{Re}_{iB}&=\gamma \exp{\left[-\left(\alpha-\beta\right) \textcolor{red}{b_{L}^{2}}-\beta \textcolor{blue}{b}^{2}\right]}
+    \tAmp^{Re}_{iB}&=\gamma \exp{\left[-\left(\alpha-\beta\right) b_L^2-\beta b^2\right]}
 \end{align}
-Finally, we apply the Lorentz-invariant projection derived in Section \ref{sec:lorentz_mapping}, where the longitudinal spatial coordinate is given by $b_L = (\textcolor{blue}{P \cdot b}) / (-P_L)$. Squaring this substitution completely maps the amplitude into the required invariant frame:
+Finally, we apply the Lorentz-invariant projection derived in Section \ref{sec:lorentz_mapping}, where the longitudinal spatial coordinate is given by $b_L = (P \cdot b) / (-P_L)$. Squaring this substitution completely maps the amplitude into the required invariant frame:
 
 
 \begin{align}
-   \tAmp^{Re}_{iB} &=\gamma \exp{\left[-\frac{\left(\alpha-\beta\right)}{P_{L}^2} (\textcolor{blue}{P\cdot b})^{2}-\beta \textcolor{blue}{b}^{2}\right]}
+   \tAmp^{Re}_{iB} &=\gamma \exp{\left[-\frac{\left(\alpha-\beta\right)}{P_{L}^2} (P\cdot b)^{2}-\beta b^{2}\right]}
 \end{align}
 \begin{figure}[H]
     \centering
@@ -49,25 +49,25 @@ Finally, we apply the Lorentz-invariant projection derived in Section \ref{sec:l
         \includegraphics[width=\linewidth]{plots/Gaussian_fit_all_b/Gaussian_A12B_Re_P1_FailedFit_details2.pdf}
     \end{minipage}
     
-    \caption{Failure of Gaussian model fit for $\tAmp^{Re}_{2B}$ (with $\alpha-\beta = -0.0427(27)$ and $\chi^2/\text{dof}\approx 235$) and $\tAmp^{Re}_{12B}$ (with $\alpha-\beta = -0.022(25)$ and$\chi^2/\text{dof}\approx 1.4$) amplitudes.}
+    \caption{Failure of Gaussian model fit for $\tAmp^{Re}_{2B}$ (with $\alpha-\beta = -0.0427(27)$ and $\chi^2/\text{dof}\approx 235$) and $\tAmp^{Re}_{12B}$ (with $\alpha-\beta = -0.022(25)$ and $\chi^2/\text{dof}\approx 1.4$) amplitudes.}
     \label{fig:gaussian_failure}
 \end{figure}
 
 We apply an analogous transformation to the imaginary amplitudes ($\tAmp^{Im}_{iB}$). Because the imaginary amplitudes must be strictly odd functions of $b_L$, the Gaussian profile must be multiplied by a linear prefactor of $b_L$:
 \begin{align}
-    \tAmp^{Im}_{iB}&=\gamma \textcolor{red}{b_{L}}\exp{\left[-\alpha \textcolor{red}{b_{L}^{2}}-\beta \textcolor{red}{b_{T}^{2}}\right]}
+    \tAmp^{Im}_{iB}&=\gamma b_L\exp{\left[-\alpha b_L^2-\beta b_T^2\right]}
 \end{align}
-Once again, we substitute the transverse component using the geometric constraint $\textcolor{red}{b_T^2} = \textcolor{blue}{b}^2 - \textcolor{red}{b_L^2}$:
+Once again, we substitute the transverse component using the geometric constraint $b_T^2 = b^2 - b_L^2$:
 \begin{align}
-    \tAmp^{Im}_{iB}&=\gamma \textcolor{red}{b_{L}}\exp{\left[-\alpha \textcolor{red}{b_{L}^{2}}-\beta \left(\textcolor{blue}{b}^{2}-\textcolor{red}{b_{L}^{2}}\right)\right]}
+    \tAmp^{Im}_{iB}&=\gamma b_L\exp{\left[-\alpha b_L^2-\beta \left(b^2-b_L^2\right)\right]}
 \end{align}
 Factoring the exponent isolates the invariant $b^2$ dependence from the longitudinal decay profile:
 \begin{align}
-    \tAmp^{Im}_{iB}&=\gamma \textcolor{red}{b_{L}}\exp{\left[-\left(\alpha-\beta\right) \textcolor{red}{b_{L}^{2}}-\beta \textcolor{blue}{b}^{2}\right]}
+    \tAmp^{Im}_{iB}&=\gamma b_L\exp{\left[-\left(\alpha-\beta\right) b_L^2-\beta b^2\right]}
 \end{align}
-Substituting $\textcolor{red}{b_L} = (\textcolor{blue}{P \cdot b}) / (-P_L)$ for both the linear prefactor and the squared exponent yields the final invariant imaginary amplitude:
+Substituting $b_L = (P \cdot b) / (-P_L)$ for both the linear prefactor and the squared exponent yields the final invariant imaginary amplitude:
 \begin{align}
-    \tAmp^{Im}_{iB} &=\frac{\gamma}{-P_{L}} (\textcolor{blue}{P\cdot b}) \exp{\left[-\frac{\left(\alpha-\beta\right)}{P_{L}^2} (\textcolor{blue}{P\cdot b})^{2}-\beta \textcolor{blue}{b}^{2}\right]}
+    \tAmp^{Im}_{iB} &=\frac{\gamma}{-P_{L}} (P\cdot b) \exp{\left[-\frac{\left(\alpha-\beta\right)}{P_{L}^2} (P\cdot b)^{2}-\beta b^{2}\right]}
 \end{align}
 
 \begin{figure}[H]
@@ -76,7 +76,7 @@ Substituting $\textcolor{red}{b_L} = (\textcolor{blue}{P \cdot b}) / (-P_L)$ for
     \includegraphics[width=0.55\textwidth]{plots/Gaussian_fit_all_b/Gaussian_A2B_Im_P1_FailedFit_details1.pdf}\\[2ex]
     \includegraphics[width=0.55\textwidth]{plots/Gaussian_fit_all_b/Gaussian_A2B_Im_P1_FailedFit_details2.pdf}
     
-    \caption{Failure of the simple Gaussian model fit for the imaginary $\tAmp^{Im}_{2B}$ (with $\alpha-\beta = 0.008\pm0.017$ and$\chi^2/\text{dof}\approx 2.9$) amplitude.}
+    \caption{Failure of the simple Gaussian model fit for the imaginary $\tAmp^{Im}_{2B}$ (with $\alpha-\beta = 0.008\pm0.017$ and $\chi^2/\text{dof}\approx 2.9$) amplitude.}
     \label{fig:gaussian_failure_ImA2B}
 \end{figure}
 
@@ -132,42 +132,8 @@ The failure of the simple Gaussian ansatz highlights a fundamental challenge in 
 
 Unlike traditional regression, which optimizes the numerical parameters of a pre-determined function, symbolic regression simultaneously searches the space of mathematical expressions and their parameters. It aims to discover the analytical equation that best balances accuracy (goodness-of-fit) with simplicity (parsimony). To perform this high-dimensional search, we utilize \texttt{PySR} \cite{Cranmer2023pysr}, a highly optimized framework that leverages Genetic Programming to discover interpretable physical laws from data.
 
-\subsubsection{Genetic Algorithms and Expression Trees}
-At the core of \texttt{PySR} is a genetic algorithm \cite{Koza1992GP, Schmidt2009Distilling}. In this paradigm, mathematical equations are represented as binary trees, where internal nodes are mathematical operators (e.g., $+$, $\times$, $\exp$, $\sin$) and leaf nodes are variables (e.g., $b_L, b_T$) or numerical constants. 
-
-The algorithm mimics biological evolution. It begins by initializing a random "population" of these equation trees. The performance of each tree is evaluated against the lattice data using a specified loss function, and it is assigned a "fitness" score. The best-performing equations survive and undergo evolutionary operations to produce the next generation. These operations include:
-\begin{itemize}
-    \item \textbf{Crossover:} Sub-trees from two highly fit parent equations are swapped to create offspring.
-    \item \textbf{Mutation:} Random alterations are applied to a tree, such as changing an operator (e.g., $+$ to $\times$), perturbing a constant, or appending a new mathematical branch.
-\end{itemize}
-This cycle repeats for thousands of generations, iteratively distilling the population toward expressions that are both accurate and mathematically concise. 
-
-\begin{figure}[htpb]
-    \centering
-    \begin{tikzpicture}[
-        node distance=1.5cm and 2cm,
-        box/.style={draw, rectangle, rounded corners, minimum width=3cm, minimum height=1cm, align=center, fill=blue!5},
-        arrow/.style={->, >=stealth, thick}
-        ]
-        
-        % Nodes
-        \node[box] (init) {Initialize Population \\ (Random Equation Trees)};
-        \node[box, below=of init] (eval) {Evaluate Fitness \\ (Compute Custom Loss)};
-        \node[box, below=of eval] (select) {Selection \\ (Keep fittest equations)};
-        \node[box, right=of select] (evolve) {Evolution \\ (Crossover \& Mutation)};
-        \node[box, right=of init] (pareto) {Pareto Front \\ (Best Accuracy vs. Complexity)};
-        
-        % Arrows
-        \draw[arrow] (init) -- (eval);
-        \draw[arrow] (eval) -- (select);
-        \draw[arrow] (select) -- (evolve);
-        \draw[arrow] (evolve) |- (eval);
-        \draw[arrow] (select) -| (pareto);
-        
-    \end{tikzpicture}
-    \caption{Flowchart illustrating the evolutionary loop of the Genetic Algorithm utilized by \texttt{PySR} to discover analytical equations. The process continuously optimizes the population of mathematical expressions against the custom physics-informed loss function.}
-    \label{fig:pysr_flowchart}
-\end{figure}
+\subsubsection{Expression Search and Configuration}
+At its core, \texttt{PySR} \cite{Cranmer2023pysr, Koza1992GP, Schmidt2009Distilling} utilizes a genetic algorithm to iteratively distill mathematical expressions represented as binary trees. The algorithm evaluates a population of expressions against the lattice data using a custom loss function, optimizing both accuracy and mathematical parsimony over thousands of generations. 
 
 The specific configuration of the \texttt{PySR} search, including the permitted mathematical operators, nesting constraints, and key hyperparameters, is detailed in Table~\ref{tab:pysr_config}. Notably, the operator library includes a custom Lorentzian-type binary operator, $\text{lor}(x, y) = 1/(1 + x^2 + y^2)^2$, alongside standard arithmetic and exponential functions, while nesting constraints prevent the algorithm from generating physically meaningless double-exponential or double-decay structures.
 
@@ -238,9 +204,9 @@ This discovery has a profound implication for the Fourier integrability constrai
     \label{fig:gaussian_straightline_test}
 \end{figure}
 
-The visual comparison in Figure~\ref{fig:pysr_benchmark_fits} confirms the quantitative superiority of the \texttt{PySR}-discovered models. Across all staple extents, the factorized $C = 14$ and $C = 16$ expressions track the lattice data throughout the accessible $(b_L, b_T)$ grid, while the pure power-law-$\eta$ models ($C = 11, 17$) exhibit slight systematic tension at the boundary $\eta$ values where their $\eta^{-n}$ dependence departs from the smoother exponential decay.
+The visual comparison in Fig.~\ref{fig:pysr_benchmark_fits} confirms the quantitative superiority of the \texttt{PySR}-discovered models. Across all staple extents, the factorized $C = 14$ and $C = 16$ expressions track the lattice data throughout the accessible $(b_L, b_T)$ grid, while the pure power-law-$\eta$ models ($C = 11, 17$) exhibit slight systematic tension at the boundary $\eta$ values where their $\eta^{-n}$ dependence departs from the smoother exponential decay.
 
-The straight-line diagnostic in Figure~\ref{fig:gaussian_straightline_test} provides definitive, model-independent evidence for the power-law spatial structure. Under the Gaussian hypothesis, plotting $\tAmp_{2B}^{\text{Re}}$ on a logarithmic ordinate against $b^2$ should yield a straight line with slope $-c$. The clear upward curvature observed in the lattice data at large $b^2$ unambiguously rules out the Gaussian form: the true amplitude decays more slowly than any exponential, precisely as expected for a generalized Lorentzian power-law tail. This diagnostic independently validates the functional form discovered by the genetic algorithm, confirming that the choice of $(1 + b^2)^{-j}$ is not an artifact of the evolutionary search but a genuine feature of the underlying non-perturbative physics.
+The straight-line diagnostic in Fig.~\ref{fig:gaussian_straightline_test} provides definitive, model-independent evidence for the power-law spatial structure. Under the Gaussian hypothesis, plotting $\tAmp_{2B}^{\text{Re}}$ on a logarithmic ordinate against $b^2$ should yield a straight line with slope $-c$. The clear upward curvature observed in the lattice data at large $b^2$ unambiguously rules out the Gaussian form: the true amplitude decays more slowly than any exponential, precisely as expected for a generalized Lorentzian power-law tail. This diagnostic independently validates the functional form discovered by the genetic algorithm, confirming that the choice of $(1 + b^2)^{-j}$ is not an artifact of the evolutionary search but a genuine feature of the underlying non-perturbative physics.
 
 These results establish the \texttt{PySR}-discovered Lorentzian power-law structure as the physically correct spatial profile for $\tAmp_{2B}^{\text{Re}}$. In the following sections, we incorporate this functional form into the full $\eta$-dependent parameterization and extend it to the remaining amplitudes for the global simultaneous fit.
 
@@ -249,7 +215,7 @@ These results establish the \texttt{PySR}-discovered Lorentzian power-law struct
 
 While the \texttt{PySR} analysis conclusively established the generalized Lorentzian power-law in the invariant spatial separation $b^2$, the behavior along the longitudinal momentum fraction axis $P \cdot b$ must also be rigorously determined. A phenomenologically common ansatz for hadronic form factors involves a separable exponential decay along the longitudinal axis, such as $e^{-c|P \cdot b|}$. To explicitly test this hypothesis, we constructed a suite of candidate models that multiply a separable longitudinal exponential decay by various transverse $b^2$ profiles, including Gaussian, Lorentzian, Dipole, and mixed exponential-Lorentzian forms. We then performed full 4D simultaneous Jackknife fits on these ansätze.
 
-The results of these fits are summarized in Figure~\ref{fig:rejection_exponential_longitudinal}. The analysis yields two critical observations. First, when forced into a Gaussian transverse profile (Ansatz 1), the fit is exceptionally poor ($\chi^2/\text{dof} \approx 3.34$), further corroborating the failure of pure Gaussian models. Second, and more importantly, in the models that do successfully describe the data (the Lorentzian and Dipole forms with $\chi^2/\text{dof} \approx 1.28$), the coefficient $c$ governing the exponential decay consistently evaluates to zero within its Jackknife uncertainties (e.g., $c = -0.007 \pm 0.012$ and $-0.009 \pm 0.012$). 
+The results of these fits are summarized in Fig.~\ref{fig:rejection_exponential_longitudinal}. The analysis yields two critical observations. First, when forced into a Gaussian transverse profile (Ansatz 1), the fit is exceptionally poor ($\chi^2/\text{dof} \approx 3.34$), further corroborating the failure of pure Gaussian models. Second, and more importantly, in the models that do successfully describe the data (the Lorentzian and Dipole forms with $\chi^2/\text{dof} \approx 1.28$), the coefficient $c$ governing the exponential decay consistently evaluates to zero within its Jackknife uncertainties (e.g., $c = -0.007 \pm 0.012$ and $-0.009 \pm 0.012$). 
 
 \begin{figure}[htbp]
     \centering
@@ -273,7 +239,7 @@ As definitively established by both our analytical convergence requirements and 
 From the above list of potential candidate models, the introduction of a power-law dependence significantly improves the global quality of the fit over any exponential baseline. However, there is still freedom in modeling the exact asymptotic behavior of the width parameters in $\eta$, which we rigorously define in the next subsection.
 
 \subsection{Asymptotic $\eta$ Functions for $\tAmp_{2B}^{\text{Re}}$}
-To systematically determine the true asymptotic behavior of the longitudinal width parameter $c(\eta)$ at large staple extents, we evaluated several phenomenologically motivated ansätze while holding the spatial Lorentzian power-law structure constant. The comparative goodness-of-fit ($\chi^2/\text{dof}$), the Akaike Information Criterion (AIC), and the corresponding $x$-space Fourier transforms in the $\eta\rightarrow\infty$ limit are summarized in Figure \ref{fig:A2B_eta_asymptotes}. 
+To systematically determine the true asymptotic behavior of the longitudinal width parameter $c(\eta)$ at large staple extents, we evaluated several phenomenologically motivated ansätze while holding the spatial Lorentzian power-law structure constant. The comparative goodness-of-fit ($\chi^2/\text{dof}$), the Akaike Information Criterion (AIC), and the corresponding $x$-space Fourier transforms in the $\eta\rightarrow\infty$ limit are summarized in Fig.~\ref{fig:A2B_eta_asymptotes}. 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.9\linewidth]{PowerLaw_etaAsymptotic/A2BfitFT_eta_Asymptotic_P1.pdf}
@@ -281,12 +247,7 @@ To systematically determine the true asymptotic behavior of the longitudinal wid
     \label{fig:A2B_eta_asymptotes}
 \end{figure}
 
-The AIC is calculated from the $\chi^2$ statistic to penalize excessive parameterization, defined as:
-\begin{align}
-    \text{AIC}&=2k+\chi^2\\
-    \text{AICc}&=\text{AIC}+\frac{2k(k+1)}{(n-k-1)}
-\end{align}
-where $k$ is the number of free parameters and $n$ is the total number of data points considered.
+We utilize the Akaike Information Criterion (AIC) to rigorously penalize excessive parameterization and select the optimal model complexity.
 
 Our analysis reveals that all viable asymptotic functions share statistically indistinguishable $\chi^2/\text{dof}$ values and converge to a universal spatial profile characterized by a Lorentzian power $j \approx 2$ and an amplitude scale $a \approx 4$, damped by an identical area-law suppression factor $e^{-0.5\eta}$. By fixing these global structural parameters ($j=2$, $a=4$) and performing sequential fits at individual $\eta$ slices, we isolate the specific $\eta$-dependence of the width parameters $c$ and $d$. The stability of these sequential fits is shown below:
 
@@ -318,7 +279,7 @@ Through rigorous $\chi^2/\text{dof}$ minimizations and sequential fitting proced
 
 For the unpolarized real amplitude $\tAmp_{2B}^{\text{Re}}$, our sequential analysis revealed that while the transverse width parameter $d$ remains constant across all $\eta$, the longitudinal width parameter $c(\eta)$ requires an asymptotic model. We ultimately selected the model $c(\eta) = c\left(1 - \frac{k_1}{\eta} - \frac{k_2}{\eta^2}\right)$, because its Fourier transform naturally suppresses unphysical negative-$x$ contributions. The theoretical details and implications of this suppression in momentum space will be discussed in depth in the following sections.
 
-For the real Sivers amplitude $\tAmp_{12B}^{\text{Re}}$, we repeated the sequential Lorentzian fitting at fixed $\eta$ slices. As shown in Figure \ref{fig:ReA12B_eta_independence} and Table \ref{tab:ReA12B_fixed_eta}, the extracted longitudinal parameter $c$ and transverse parameter $d$ exhibit clear independence from $\eta$. Therefore, the data strictly dictates modeling both $c$ and $d$ as pure constants for $\tAmp_{12B}^{\text{Re}}$.
+For the real Sivers amplitude $\tAmp_{12B}^{\text{Re}}$, we repeated the sequential Lorentzian fitting at fixed $\eta$ slices. As shown in Fig.~\ref{fig:ReA12B_eta_independence} and Table \ref{tab:ReA12B_fixed_eta}, the extracted longitudinal parameter $c$ and transverse parameter $d$ exhibit clear independence from $\eta$. Therefore, the data strictly dictates modeling both $c$ and $d$ as pure constants for $\tAmp_{12B}^{\text{Re}}$.
 
 \begin{figure}[h!]
     \centering
@@ -335,7 +296,7 @@ For the real Sivers amplitude $\tAmp_{12B}^{\text{Re}}$, we repeated the sequent
     \label{fig:ReA12B_eta_independence}
 \end{figure}
 
-Similarly, for the imaginary unpolarized amplitude $\tAmp_{2B}^{\text{Im}}$, the lattice data is inherently noisier. However, applying the same sequential fitting strategy reveals a consistent trend. We adopt the physically motivated ansatz that $c$ and $d$ are constant in $\eta$, mirroring the structural stability observed in the real amplitudes. This ansatz provides stable and theoretically sound fits, as demonstrated in Figure \ref{fig:ImA2B_eta_independence} and Table \ref{tab:ImA2B_fixed_eta}.
+Similarly, for the imaginary unpolarized amplitude $\tAmp_{2B}^{\text{Im}}$, the lattice data is inherently noisier. However, applying the same sequential fitting strategy reveals a consistent trend. We adopt the physically motivated ansatz that $c$ and $d$ are constant in $\eta$, mirroring the structural stability observed in the real amplitudes. This ansatz provides stable and theoretically sound fits, as demonstrated in Fig.~\ref{fig:ImA2B_eta_independence} and Table \ref{tab:ImA2B_fixed_eta}.
 
 \begin{figure}[h!]
     \centering
@@ -476,121 +437,23 @@ Finally, the necessity and statistical rigor of employing a fully correlated $\c
 \end{figure}
 \pagebreak
 
+\subsubsection{Simultaneous Fit Results for Higher Momenta}
+
+The global simultaneous fitting procedure was systematically repeated for the higher simulated nucleon momenta $P_L = -2, -3$, and $-4$. The overall quality of the parametric surface fits and the extensive multidimensional covariance matrix structures are entirely consistent with the $P_L = -1$ baseline shown above.
+
+To maintain conciseness, the detailed three-dimensional fit surfaces and dense correlation matrices for these higher momenta are deferred to the Supplemental Material (or Appendices). However, the extracted parameters and the resultant physical momentum fraction integrations for all evaluated momenta are tabulated below.
+
 \renewcommand{\PLval}{-2}
-\subsubsection{\texorpdfstring{$\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$}{TEXT}}
 \input{SimultaneousFitsCov/Fit_Table_PL\PLval_bmin3}
-\begin{figure}[htbp]
-    \centering
-    \begin{tabular}{ccc}
-        % Column Headers
-        \textbf{$\widetilde{A}^{Re}_{2B}$} & \textbf{$\widetilde{A}^{Im}_{2B}$} & \textbf{$\widetilde{A}^{Re}_{12B}$} \\[2ex]
-        \includegraphics[width=0.3\linewidth]{plots/Amps_Fit/ReA12B_Pb_bsq_PL\PLval_WithFit_3D.pdf} &
-        \includegraphics[width=0.3\linewidth]{plots/Amps_Fit/ImA2B_PL\PLval_WithFit_3D.pdf} &
-        \includegraphics[width=0.3\linewidth]{plots/Amps_Fit/ReA12B_PL\PLval_WithFit_3D.pdf}\\[2ex]
-        \includegraphics[width=0.3\linewidth]{plots/Amps_Fit/ReA2B_Pb_bsq_PL\PLval_WithFit_3D.pdf} &
-        \includegraphics[width=0.3\linewidth]{plots/Amps_Fit/ImA2B_Pb_bsq_PL\PLval_WithFit_3D.pdf} &
-        \includegraphics[width=0.3\linewidth]{plots/Amps_Fit/ReA12B_Pb_bsq_PL\PLval_WithFit_3D.pdf} \\
-    \end{tabular}
-    \caption{Fit for $\widetilde{A}^{Re}_{2B}$, $\widetilde{A}^{Im}_{2B}$ \& $\widetilde{A}^{Re}_{12B}$ amplitudes for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space with the fit.}
-    \label{fig:A2B_amplitudes_fit_P2}
-\end{figure}
-\begin{figure}[htbp]
-    \centering
-    \begin{tabular}{c}
-        \includegraphics[width=0.9\linewidth]{plots/Amps_Fit/Combined_eta8_PL\PLval_WithFit_2D.pdf} \\
-        \includegraphics[width=0.9\linewidth]{plots/Amps_Fit/Combined_Pb_bsq_eta8_PL\PLval_WithFit_2D.pdf} \\
-    \end{tabular}
-    \caption{Fit for $\widetilde{A}^{Re}_{2B}$, $\widetilde{A}^{Im}_{2B}$ \& $\widetilde{A}^{Re}_{12B}$ amplitudes for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ at fixed $\eta|\vect{v}|/a=8$. The top two rows display the $(b_{L}/a,b_{T}/a)-$space, while the bottom two rows display the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2)-$space with the fit.}
-    \label{fig:combined_fit_P2}
-\end{figure}
-\pagebreak
 \input{SimultaneousFitsCov/Integration_Table_PL\PLval_bmin3}
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.5\linewidth]{SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-a_im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_PL\PLval.pdf}
-\end{figure}
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.7\linewidth]{SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-3D_a_im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_PL\PLval.pdf}
-\end{figure}
 
-\pagebreak
 \renewcommand{\PLval}{-3}
-\subsubsection{\texorpdfstring{$\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$}{TEXT}}
 \input{SimultaneousFitsCov/Fit_Table_PL\PLval_bmin3}
-\begin{figure}[htbp]
-    \centering
-    \begin{tabular}{ccc}
-        % Column Headers
-        \textbf{$\widetilde{A}^{Re}_{2B}$} & \textbf{$\widetilde{A}^{Im}_{2B}$} & \textbf{$\widetilde{A}^{Re}_{12B}$} \\[2ex]
-        \includegraphics[width=0.3\linewidth]{plots/Amps_Fit/ReA12B_Pb_bsq_PL\PLval_WithFit_3D.pdf} &
-        \includegraphics[width=0.3\linewidth]{plots/Amps_Fit/ImA2B_PL\PLval_WithFit_3D.pdf} &
-        \includegraphics[width=0.3\linewidth]{plots/Amps_Fit/ReA12B_PL\PLval_WithFit_3D.pdf}\\[2ex]
-        \includegraphics[width=0.3\linewidth]{plots/Amps_Fit/ReA2B_Pb_bsq_PL\PLval_WithFit_3D.pdf} &
-        \includegraphics[width=0.3\linewidth]{plots/Amps_Fit/ImA2B_Pb_bsq_PL\PLval_WithFit_3D.pdf} &
-        \includegraphics[width=0.3\linewidth]{plots/Amps_Fit/ReA12B_Pb_bsq_PL\PLval_WithFit_3D.pdf} \\
-    \end{tabular}
-    \caption{Fit for $\widetilde{A}^{Re}_{2B}$, $\widetilde{A}^{Im}_{2B}$ \& $\widetilde{A}^{Re}_{12B}$ amplitudes for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space with the fit.}
-    \label{fig:A2B_amplitudes_fit_P3}
-\end{figure}
-\begin{figure}[htbp]
-    \centering
-    \begin{tabular}{c}
-        \includegraphics[width=0.9\linewidth]{plots/Amps_Fit/Combined_eta8_PL\PLval_WithFit_2D.pdf} \\
-        \includegraphics[width=0.9\linewidth]{plots/Amps_Fit/Combined_Pb_bsq_eta8_PL\PLval_WithFit_2D.pdf} \\
-    \end{tabular}
-    \caption{Fit for $\widetilde{A}^{Re}_{2B}$, $\widetilde{A}^{Im}_{2B}$ \& $\widetilde{A}^{Re}_{12B}$ amplitudes for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ at fixed $\eta|\vect{v}|/a=8$. The top two rows display the $(b_{L}/a,b_{T}/a)-$space, while the bottom two rows display the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2)-$space with the fit.}
-    \label{fig:combined_fit_P3}
-\end{figure}
-\pagebreak
 \input{SimultaneousFitsCov/Integration_Table_PL\PLval_bmin3}
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.5\linewidth]{SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-a_im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_PL\PLval.pdf}
-\end{figure}
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.7\linewidth]{SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-3D_a_im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_PL\PLval.pdf}
-\end{figure}
 
-\pagebreak
 \renewcommand{\PLval}{-4}
-\subsubsection{\texorpdfstring{$\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$}{TEXT}}
 \input{SimultaneousFitsCov/Fit_Table_PL\PLval_bmin3}
-\begin{figure}[htbp]
-    \centering
-    \begin{tabular}{ccc}
-        % Column Headers
-        \textbf{$\widetilde{A}^{Re}_{2B}$} & \textbf{$\widetilde{A}^{Im}_{2B}$} & \textbf{$\widetilde{A}^{Re}_{12B}$} \\[2ex]
-        \includegraphics[width=0.3\linewidth]{plots/Amps_Fit/ReA12B_Pb_bsq_PL\PLval_WithFit_3D.pdf} &
-        \includegraphics[width=0.3\linewidth]{plots/Amps_Fit/ImA2B_PL\PLval_WithFit_3D.pdf} &
-        \includegraphics[width=0.3\linewidth]{plots/Amps_Fit/ReA12B_PL\PLval_WithFit_3D.pdf}\\[2ex]
-        \includegraphics[width=0.3\linewidth]{plots/Amps_Fit/ReA2B_Pb_bsq_PL\PLval_WithFit_3D.pdf} &
-        \includegraphics[width=0.3\linewidth]{plots/Amps_Fit/ImA2B_Pb_bsq_PL\PLval_WithFit_3D.pdf} &
-        \includegraphics[width=0.3\linewidth]{plots/Amps_Fit/ReA12B_Pb_bsq_PL\PLval_WithFit_3D.pdf} \\
-    \end{tabular}
-    \caption{Fit for $\widetilde{A}^{Re}_{2B}$, $\widetilde{A}^{Im}_{2B}$ \& $\widetilde{A}^{Re}_{12B}$ amplitudes for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space with the fit.}
-    \label{fig:A2B_amplitudes_fit_P4}
-\end{figure}
-\begin{figure}[htbp]
-    \centering
-    \begin{tabular}{c}
-        \includegraphics[width=0.9\linewidth]{plots/Amps_Fit/Combined_eta8_PL\PLval_WithFit_2D.pdf} \\
-        \includegraphics[width=0.9\linewidth]{plots/Amps_Fit/Combined_Pb_bsq_eta8_PL\PLval_WithFit_2D.pdf} \\
-    \end{tabular}
-    \caption{Fit for $\widetilde{A}^{Re}_{2B}$, $\widetilde{A}^{Im}_{2B}$ \& $\widetilde{A}^{Re}_{12B}$ amplitudes for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ at fixed $\eta|\vect{v}|/a=8$. The top two rows display the $(b_{L}/a,b_{T}/a)-$space, while the bottom two rows display the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2)-$space with the fit.}
-    \label{fig:combined_fit_P4}
-\end{figure}
-\pagebreak
 \input{SimultaneousFitsCov/Integration_Table_PL\PLval_bmin3}
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.5\linewidth]{SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-a_im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_PL\PLval.pdf}
-\end{figure}
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.7\linewidth]{SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-3D_a_im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_PL\PLval.pdf}
-\end{figure}
 
 
 \pagebreak
