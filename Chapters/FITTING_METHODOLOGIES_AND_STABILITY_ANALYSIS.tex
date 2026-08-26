@@ -244,6 +244,22 @@ The straight-line diagnostic in Figure~\ref{fig:gaussian_straightline_test} prov
 
 These results establish the \texttt{PySR}-discovered Lorentzian power-law structure as the physically correct spatial profile for $\tAmp_{2B}^{\text{Re}}$. In the following sections, we incorporate this functional form into the full $\eta$-dependent parameterization and extend it to the remaining amplitudes for the global simultaneous fit.
 
+\subsection{Rejection of Separable Exponential Longitudinal Decay}
+\label{sec:rejection_exponential_longitudinal}
+
+While the \texttt{PySR} analysis conclusively established the generalized Lorentzian power-law in the invariant spatial separation $b^2$, the behavior along the longitudinal momentum fraction axis $P \cdot b$ must also be rigorously determined. A phenomenologically common ansatz for hadronic form factors involves a separable exponential decay along the longitudinal axis, such as $e^{-c|P \cdot b|}$. To explicitly test this hypothesis, we constructed a suite of candidate models that multiply a separable longitudinal exponential decay by various transverse $b^2$ profiles, including Gaussian, Lorentzian, Dipole, and mixed exponential-Lorentzian forms. We then performed full 4D simultaneous Jackknife fits on these ansätze.
+
+The results of these fits are summarized in Figure~\ref{fig:rejection_exponential_longitudinal}. The analysis yields two critical observations. First, when forced into a Gaussian transverse profile (Ansatz 1), the fit is exceptionally poor ($\chi^2/\text{dof} \approx 3.34$), further corroborating the failure of pure Gaussian models. Second, and more importantly, in the models that do successfully describe the data (the Lorentzian and Dipole forms with $\chi^2/\text{dof} \approx 1.28$), the coefficient $c$ governing the exponential decay consistently evaluates to zero within its Jackknife uncertainties (e.g., $c = -0.007 \pm 0.012$ and $-0.009 \pm 0.012$). 
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\linewidth]{plots/Rejection-of-Separable-Exponential-Longitudinal-Decay.pdf}
+    \caption{Simultaneous 4D fit results testing the validity of a separable longitudinal exponential decay $e^{-c|P \cdot b|}$ paired with various transverse profiles. In the models that achieve a satisfactory $\chi^2/\text{dof}$, the coefficient $c$ consistently fits to zero within uncertainties, demonstrating that the data rejects an independent exponential decay along the longitudinal axis.}
+    \label{fig:rejection_exponential_longitudinal}
+\end{figure}
+
+The minimization algorithm actively suppresses the separable exponential decay term because it is fundamentally incompatible with the lattice data. This finding definitively rules out a separable exponential decay $e^{-c|P \cdot b|}$, indicating that the longitudinal momentum dependence cannot be trivially factored out as an exponential. Instead, it must be intimately coupled with the overall spatial distribution. This crucial phenomenological constraint directly motivates our final parameterizations, where the longitudinal coordinate $(P \cdot b)^2$ is injected directly into the denominator of the generalized Lorentzian, ensuring both analytical consistency and agreement with the non-perturbative data.
+
 \subsection{Lorentzian power-law for position space Amplitudes}
 As definitively established by both our analytical convergence requirements and the \texttt{PySR} analysis, the spatial decay profile strongly prefers a generalized Lorentzian power-law rather than a simple Gaussian form. Therefore, we systematically explore several power-law functional variants in $(b_L, b_T)$ space to construct our final parameterized models.
 
