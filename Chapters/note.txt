@@ -1,4 +1,4 @@
-check Exp[-a(P.b)]*LIST0fb^2*Exp[-f*eta]
+check Exp[-a|P.b)|]*LIST0fb^2*Exp[-f*eta]
 
 LIST0fb^2
 ---------
