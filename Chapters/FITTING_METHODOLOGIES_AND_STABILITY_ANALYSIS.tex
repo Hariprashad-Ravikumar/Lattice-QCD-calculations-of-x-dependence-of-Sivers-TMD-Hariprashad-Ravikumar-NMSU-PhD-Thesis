@@ -12,9 +12,9 @@ Fitting in the $(P \cdot b, b^2)$ basis would compress these distinct orthogonal
 \subsection{Coordinate Transformation and the Simple Gaussian Model}
 \label{sec:gaussian_transformation}
 
-As motivated in the previous section, we perform our parameterizations natively in the Cartesian $(b_L, b_T)$ lattice space to resolve kinematic degeneracies, and subsequently map the resulting functional forms into the continuous Lorentz-invariant $(P \cdot b, b^2)$ phase space. To establish a baseline for our stability analysis, we first test a simple two-dimensional Gaussian profile.
+We parameterize the amplitudes natively in the Cartesian $(b_L, b_T)$ lattice space to resolve kinematic degeneracies, then map the resulting functions into the continuous Lorentz-invariant $(P \cdot b, b^2)$ phase space. We begin by testing a simple two-dimensional Gaussian profile.
 
-For the real parts of the amplitudes ($\tAmp^{Re}_{iB}$), the fundamental Hermitian conjugation symmetries dictate that the function must be strictly even in the longitudinal separation $b_L$. We therefore model the real amplitude with a standard 2D Gaussian centered at the origin:
+For the real parts of the amplitudes ($\tAmp^{Re}_{iB}$), Hermitian conjugation symmetries require the function to be even in the longitudinal separation $b_L$. We model the real amplitude with a standard 2D Gaussian centered at the origin:
 \begin{align}
     \tAmp^{Re}_{iB}&=\gamma \exp{\left[-\alpha b_L^2-\beta b_T^2\right]}
 \end{align}
@@ -80,35 +80,35 @@ Substituting $b_L = (P \cdot b) / (-P_L)$ for both the linear prefactor and the 
     \label{fig:gaussian_failure_ImA2B}
 \end{figure}
 
-\subsubsection{Pathology of the Simple Gaussian Model}
-While the simple Gaussian parameterization provides a mathematically clean transformation into the $(P \cdot b, b^2)$ phase space, it ultimately fails to satisfy the rigorous physical constraints required to extract the Sivers shift.
+\subsubsection{Failure of the Simple Gaussian Model}
+The Gaussian parameterization maps easily into the $(P \cdot b, b^2)$ phase space, but it does not satisfy the physical constraints necessary to extract the Sivers shift.
 
-The fundamental objective of mapping these amplitudes into the invariant space is to perform a continuous Fourier transform over $P \cdot b$ to extract the momentum fraction $x$-dependence. Looking at the transformed real amplitude, the exponential decay governing the $P \cdot b$ integration is parameterized by:
+We map these amplitudes into the invariant space to perform a continuous Fourier transform over $P \cdot b$ and extract the momentum fraction $x$-dependence. In the transformed real amplitude, the exponential governing the $P \cdot b$ integration is:
 \begin{equation}
     \exp{\left[-\frac{\left(\alpha-\beta\right)}{P_{L}^2} (\textcolor{blue}{P\cdot b})^{2} \right]}
 \end{equation}
-For the infinite Fourier integral $\int d(P\cdot b) e^{ix(P\cdot b)} \tAmp_{iB}$ to converge, the argument of the exponential must remain negative as $(P \cdot b) \to \pm \infty$. This imposes a strict mathematical bound on our fit parameters: the condition $(\alpha - \beta) > 0$ must hold. If $\alpha < \beta$, the coefficient becomes positive, leading to exponential growth of the amplitude at large longitudinal separations and rendering the integral physically divergent.
+For the Fourier integral $\int d(P\cdot b) e^{ix(P\cdot b)} \tAmp_{iB}$ to converge, the argument of the exponential must remain negative as $(P \cdot b) \to \pm \infty$. This requires $(\alpha - \beta) > 0$. If $\alpha < \beta$, the amplitude grows exponentially at large longitudinal separations, making the integral divergent.
 
-Unfortunately, applying this simple Gaussian fit to our high-precision lattice data reveals a critical failure in the model. When fitting the unpolarized real amplitude, $\tAmp^{Re}_{2B}$, the parameter extraction consistently yields $\alpha < \beta$. This implies that the amplitude decays faster in the transverse direction than in the longitudinal direction, leading to an unphysical, non-integrable expansion when mapped into the $(P \cdot b, b^2)$ invariant space. 
+Fitting this Gaussian model to our lattice data yields $\alpha < \beta$ for the unpolarized real amplitude, $\tAmp^{Re}_{2B}$. This means the amplitude decays faster in the transverse direction than in the longitudinal direction, leading to a non-integrable expansion in the $(P \cdot b, b^2)$ space. 
 
-Furthermore, the overall goodness-of-fit for the simple Gaussian ansatz is exceptionally poor. The resulting $\chi^2/\text{dof}$ is unacceptably high ($\chi^2/\text{dof}\approx 230$), indicating that a single, symmetric 2D Gaussian decay profile is insufficiently flexible to capture the true underlying physics of the non-local operator. 
+Additionally, the Gaussian model does not fit the data well, yielding a $\chi^2/\text{dof}\approx 230$. A symmetric 2D Gaussian decay profile is too rigid to describe the non-local operator. 
 
-To resolve these unphysical divergences and properly model the lattice correlation functions, we are forced to abandon the simple Gaussian model in favor of more sophisticated, multi-parameter functional forms that can accommodate the distinct decay rates while guaranteeing convergence in the Fourier domain.
+Because of this divergence and poor fit quality, we cannot use the simple Gaussian model. We instead use multi-parameter functions that accommodate distinct decay rates and guarantee convergence in the Fourier domain.
 
 
 \subsection{Discretization Effects and Short-Distance Data Exclusion}
 \label{sec:discretization_effects}
 
-Before deploying the physics-informed symbolic regression (or any subsequent global fitting procedure) on the extracted lattice amplitudes, we must carefully address the validity limits of our discretized spacetime. Lattice QCD acts as an ultraviolet (UV) regulator by defining the theory on a discrete grid with a finite lattice spacing $a$. Consequently, physical observables evaluated at length scales comparable to $a$ are heavily contaminated by discretization artifacts.
+Before fitting the lattice amplitudes, we account for the limits of the discretized spacetime. Lattice QCD defines the theory on a discrete grid with a finite lattice spacing $a$. Observables evaluated at length scales comparable to $a$ contain discretization artifacts.
 
-For our specific evaluation of non-local Transverse Momentum Dependent (TMD) observables, this discrete geometry poses a significant challenge at short quark-separation distances. When the magnitude of the spatial separation vector $\vect{b}$ is very small (e.g., $|\vect{b}| \sim 1a$ or $2a$), the underlying continuous rotational symmetry of QCD is severely broken down to the discrete hypercubic group of the lattice. Furthermore, the step-wise Wilson lines constructed to connect these closely spaced fields suffer from severe $\mathcal{O}(a)$ and $\mathcal{O}(a^2)$ finite-spacing errors. Fitting phenomenological continuum models to these short-distance lattice points would force the algorithm to artificially parameterize unphysical lattice UV noise rather than the true non-perturbative structure of the nucleon.
+At short quark-separation distances ($|\vect{b}| \sim 1a$ or $2a$), the continuous rotational symmetry of QCD breaks down to the discrete hypercubic group of the lattice. The step-wise Wilson lines connecting these closely spaced fields also introduce $\mathcal{O}(a)$ and $\mathcal{O}(a^2)$ finite-spacing errors. Fitting continuum models to these short-distance points would cause the algorithm to parameterize ultraviolet lattice artifacts instead of the non-perturbative structure of the nucleon.
 
-To rigorously insulate our continuous invariant parameterizations from short-distance discretization effects, we impose a strict spatial cut on our lattice dataset before any model fitting. Specifically, we exclude all data points where the magnitude of the spatial separation is less than three lattice units:
+To separate our parameterizations from these short-distance effects, we apply a spatial cut to our dataset before fitting. We exclude data points where the magnitude of the spatial separation is less than three lattice units:
 \begin{equation}
     |\vect{b}| = \sqrt{b_L^2 + b_T^2} \ge 3a \ .
 \end{equation}
 
-By isolating the dataset to $b \ge 3a$, we guarantee that the non-local operator spans a sufficient number of lattice sites such that the step-wise gauge link approaches a relatively smooth, continuous trajectory. This spatial restriction ensures that the physics-informed \texttt{PySR} algorithm and the resulting Fourier transforms over $P \cdot b$ are trained exclusively on the long-range, non-perturbative dynamics driving the Sivers effect, safely isolated from the corrupting influence of the discrete ultraviolet regulator.
+With the dataset restricted to $b \ge 3a$, the non-local operator spans enough lattice sites for the step-wise gauge link to approach a continuous trajectory. This ensures the fitting algorithms and subsequent Fourier transforms depend on the long-range dynamics rather than the ultraviolet regulator.
 
 \begin{figure}[H]
     \centering
@@ -128,12 +128,12 @@ All subsequent stability analyses, global fits, and extracted phenomenological p
 \subsection{Physics-Informed Symbolic Regression via PySR}
 \label{sec:pysr_methodology}
 
-The failure of the simple Gaussian ansatz highlights a fundamental challenge in phenomenological lattice QCD: guessing the correct functional form of a non-local amplitude in a multi-dimensional space is highly susceptible to human bias and unphysical rigidities. To overcome this, we abandon presumed functional forms and instead employ Symbolic Regression (SR). 
+Guessing the correct functional form of a non-local amplitude in a multi-dimensional space is susceptible to human bias. To address this, we use Symbolic Regression (SR). 
 
-Unlike traditional regression, which optimizes the numerical parameters of a pre-determined function, symbolic regression simultaneously searches the space of mathematical expressions and their parameters. It aims to discover the analytical equation that best balances accuracy (goodness-of-fit) with simplicity (parsimony). To perform this high-dimensional search, we utilize \texttt{PySR} \cite{Cranmer2023pysr}, a highly optimized framework that leverages Genetic Programming to discover interpretable physical laws from data.
+Unlike traditional regression, which optimizes the parameters of a pre-determined function, symbolic regression searches the space of mathematical expressions and their parameters simultaneously. We utilize \texttt{PySR} \cite{Cranmer2023pysr}, a framework that uses Genetic Programming to discover interpretable equations from data by balancing goodness-of-fit with mathematical parsimony.
 
 \subsubsection{Expression Search and Configuration}
-At its core, \texttt{PySR} \cite{Cranmer2023pysr, Koza1992GP, Schmidt2009Distilling} utilizes a genetic algorithm to iteratively distill mathematical expressions represented as binary trees. The algorithm evaluates a population of expressions against the lattice data using a custom loss function, optimizing both accuracy and mathematical parsimony over thousands of generations. 
+\texttt{PySR} \cite{Cranmer2023pysr, Koza1992GP, Schmidt2009Distilling} uses a genetic algorithm to iteratively distill mathematical expressions represented as binary trees. The algorithm evaluates a population of expressions against the lattice data using a custom loss function over thousands of generations. 
 
 The specific configuration of the \texttt{PySR} search, including the permitted mathematical operators, nesting constraints, and key hyperparameters, is detailed in Table~\ref{tab:pysr_config}. Notably, the operator library includes a custom Lorentzian-type binary operator, $\text{lor}(x, y) = 1/(1 + x^2 + y^2)^2$, alongside standard arithmetic and exponential functions, while nesting constraints prevent the algorithm from generating physically meaningless double-exponential or double-decay structures.
 
@@ -142,53 +142,53 @@ The specific configuration of the \texttt{PySR} search, including the permitted 
 
 \subsubsection{The Physics-Informed Custom Loss Function}
 
-While standard symbolic regression optimizes a standard metric like Mean Squared Error (MSE), blindly applying it to our lattice data poses a serious risk. A genetic algorithm might discover a polynomial or diverging exponential function that fits the local, finite grid of $(b_L, b_T)$ data exceptionally well, achieving a low MSE. However, as demonstrated in Section \ref{sec:gaussian_transformation}, if the amplitude does not strictly decay as $b_L \to \infty$, the subsequent continuous Fourier transform over $P \cdot b$ will diverge, yielding unphysical infinite momentum distributions.
+Standard symbolic regression optimizes metrics like Mean Squared Error (MSE). However, a genetic algorithm might discover a polynomial or diverging exponential function that fits the finite $(b_L, b_T)$ lattice grid well, but diverges as $b_L \to \infty$. As shown in Section \ref{sec:gaussian_transformation}, this would cause the subsequent Fourier transform over $P \cdot b$ to diverge.
 
-To explicitly force the genetic algorithm to respect the asymptotic physics of the nucleon, we implemented a physics-inspired custom loss function within \texttt{PySR}. We construct this loss function systematically. First, the base accuracy of the model is dictated by the standard reduced chi-squared statistic, ensuring the model respects the varying uncertainties of the discrete lattice measurements:
+We implemented a custom loss function within \texttt{PySR} to enforce the asymptotic physics of the nucleon. The base accuracy of the model is determined by the reduced chi-squared statistic:
 \begin{align}
     \mathcal{L}_{\text{base}} = \frac{\chi^2}{\text{dof}} = \frac{1}{N - k} \sum_{i=1}^{N} \left( \frac{\tAmp_{2B}^{\text{Re, lattice}}(i) - \tAmp_{2B}^{\text{Re, model}}(i)}{\sigma_i} \right)^2
 \end{align}
 
 Here, $N$ is the number of lattice data points, $k$ is the number of degrees of freedom in the generated expression, and $\sigma_i$ is the statistical error of the $i$-th lattice point.
 
-To enforce the asymptotic decay required for Fourier integrability, we introduce a severe penalty term. We evaluate the proposed model equation at artificially large values of the longitudinal separation, $b_L^{\text{large}}$, while keeping the transverse separations $b_T$ fixed to physical slices. We compute the vector sum of the absolute model predictions in this extreme asymptotic regime:
+To enforce the asymptotic decay required for Fourier integrability, we introduce a penalty term. We evaluate the proposed model equation at large values of the longitudinal separation, $b_L^{\text{large}}$, while keeping the transverse separations $b_T$ fixed to physical slices. We compute the sum of the absolute model predictions in this asymptotic regime:
 \begin{align}
     \mathcal{P}_{\text{asymptotic}} = \sum_{b_T \in \{b_{T}^{\text{fixed}}\}} \sum_{b_L \in \{b_{L}^{\text{large}}\}} \left| \tAmp_{2B}^{\text{Re, model}}(b_L, b_T) \right|
 \end{align}
 
-If a genetically generated equation diverges or grows at large $b_L$, this penalty term $\mathcal{P}_{\text{asymptotic}}$ will explode, immediately ruining the equation's fitness score and causing it to be "killed off" in the next evolutionary generation. Conversely, if the equation naturally decays toward zero as physics demands, the penalty safely vanishes.
+If a generated equation diverges or grows at large $b_L$, the penalty term $\mathcal{P}_{\text{asymptotic}}$ increases, lowering the equation's fitness score. If the equation decays toward zero, the penalty vanishes.
 
-Finally, we combine these terms into the total objective function utilized by \texttt{PySR}. To strictly enforce the asymptotic behavior without overwhelming the base goodness-of-fit during the evolutionary search, the penalty is scaled by a small regularization parameter $\epsilon$:
+We combine these terms into the total objective function for \texttt{PySR}. The penalty is scaled by a small regularization parameter $\epsilon$:
 \begin{align}
     \mathcal{L}_{\text{custom}} &= \mathcal{L}_{\text{base}} + \epsilon \, \mathcal{P}_{\text{asymptotic}} \\
     \mathcal{L}_{\text{custom}} &= \frac{\chi^2}{\text{dof}} + \epsilon \sum_{b_T \in \{b_{T}^{\text{fixed}}\}} \sum_{b_L \in \{b_{L}^{\text{large}}\}} \left| \tAmp_{2B}^{\text{Re, model}}(b_L, b_T) \right|
 \end{align}
 
-By evaluating fitness using $\mathcal{L}_{\text{custom}}$, \texttt{PySR} is effectively restricted to searching only the subspace of mathematical expressions that simultaneously fit the finite lattice data and rigorously obey the asymptotic decay constraints required by QCD phenomenology. The explicit implementation of this objective function in the Julia language, as passed to the \texttt{PySR} engine, is shown below. The asymptotic penalty evaluates each candidate expression at five test coordinates in the regime $b_L \gg 1$, spanning staple extents $\eta \in \{6, 8, 10\}$ and longitudinal separations up to $b_L = 80a$. The regularization weight is set to $\epsilon = 0.1$.
+By evaluating fitness using $\mathcal{L}_{\text{custom}}$, \texttt{PySR} restricts the search to mathematical expressions that fit the finite lattice data and obey the asymptotic decay constraints. The implementation of this objective function in Julia is shown below. The asymptotic penalty evaluates each candidate expression at five test coordinates in the regime $b_L \gg 1$, spanning staple extents $\eta \in \{6, 8, 10\}$ and longitudinal separations up to $b_L = 80a$. The regularization weight is set to $\epsilon = 0.1$.
 
 \input{PySR_outputs/pysr_custom_loss_code}
 
 \subsubsection{Pareto Front of Discovered Models}
 
-The execution of this physics-informed symbolic regression yields a ``Pareto Front'' of candidate models: a ranked list of equations that offer the optimal trade-offs between mathematical simplicity (measured by expression tree complexity $C$) and predictive accuracy (measured by the custom loss $\mathcal{L}_{\text{custom}}$). The full Pareto front for the real unpolarized amplitude $\tAmp_{2B}^{\text{Re}}$ is presented in Table~\ref{tab:pysr_pareto_front}.
+The symbolic regression outputs a Pareto front of candidate models: a ranked list of equations offering trade-offs between mathematical simplicity (measured by expression tree complexity $C$) and predictive accuracy (measured by the custom loss $\mathcal{L}_{\text{custom}}$). The Pareto front for the real unpolarized amplitude $\tAmp_{2B}^{\text{Re}}$ is presented in Table~\ref{tab:pysr_pareto_front}.
 
 \input{PySR_outputs/pysr_equations_table}
 
-The Pareto front reveals a physically illuminating hierarchy of increasingly sophisticated analytical structures. At the lowest complexities ($C \leq 4$), \texttt{PySR} captures only the overall $\eta$-dependence of the amplitude, discovering a pure exponential decay $\sim (0.499)^\eta \approx e^{-0.695\eta}$, which is broadly consistent with an area-law suppression of the extended Wilson line. At intermediate complexities ($C = 7$--$12$), the algorithm introduces explicit spatial $b$-dependence through Lorentzian-type power-law denominators of the form $(1 + b_L^2 + b_T^2)^{-j}$, coupled with various crude $\eta$-models (linear, power-law). Crucially, at no point along the Pareto front does the algorithm discover a Gaussian spatial profile $e^{-cb^2}$; instead, it consistently converges on the heavier power-law tail structure, independently corroborating the pathological failure of the Gaussian ansatz established in Section~\ref{sec:gaussian_transformation}.
+At the lowest complexities ($C \leq 4$), \texttt{PySR} captures the overall $\eta$-dependence of the amplitude as an exponential decay $\sim (0.499)^\eta \approx e^{-0.695\eta}$, consistent with the area-law suppression of the extended Wilson line. At intermediate complexities ($C = 7$--$12$), the algorithm introduces spatial $b$-dependence through Lorentzian-type power-law denominators $(1 + b_L^2 + b_T^2)^{-j}$ alongside linear or power-law $\eta$-models. The algorithm does not select a Gaussian spatial profile $e^{-cb^2}$ at any point along the Pareto front. It instead converges on the power-law tail structure, aligning with the findings in Section~\ref{sec:gaussian_transformation}.
 
-The physically optimal models emerge at complexities $C = 14$ and $C = 16$. The $C = 14$ expression achieves the cleanest factorized form:
+The models at complexities $C = 14$ and $C = 16$ provide the best balance of accuracy and structure. The $C = 14$ expression achieves a factorized form:
 \begin{equation}
     \tAmp_{2B}^{\text{Re}} = \frac{39.71}{(1 + b_L^2 + b_T^2)^{1.39}} \, e^{-0.534\eta} \ ,
     \label{eq:pysr_C14}
 \end{equation}
-which is a product of an exponential decay in the staple extent $\eta$ and a generalized Lorentzian power-law decay in the total squared separation $b^2 = b_L^2 + b_T^2$. The $C = 16$ model introduces a small additive constant offset of $-0.00127$, reducing the loss to $\mathcal{L}_{\text{custom}} = 2.03$:
+which is a product of an exponential decay in $\eta$ and a generalized Lorentzian power-law decay in $b^2 = b_L^2 + b_T^2$. The $C = 16$ model introduces a small additive constant offset of $-0.00127$, reducing the loss to $\mathcal{L}_{\text{custom}} = 2.03$:
 \begin{equation}
     \tAmp_{2B}^{\text{Re}} = \frac{245.5}{(1 + b_L^2 + b_T^2)^{1.26}} \, e^{-0.468\eta} - 0.00127 \ .
     \label{eq:pysr_C16}
 \end{equation}
-Beyond $C = 16$, additional complexity yields only marginal improvements in loss while sacrificing interpretability, confirming that the essential physics is fully captured by the factorized exponential--power-law structure.
+Beyond $C = 16$, added complexity provides marginal improvements in loss while reducing interpretability.
 
-This discovery has a profound implication for the Fourier integrability constraint discussed in Section~\ref{sec:gaussian_transformation}. The power-law tail $(1 + b^2)^{-j}$ with $j > 1/2$ decays algebraically at large separations, which is slower than a Gaussian but remains absolutely integrable over the real line. Unlike the Gaussian model, where the sign of $(\alpha - \beta)$ could render the Fourier integral divergent, the power-law denominator guarantees convergent integrals for all physical values of the exponent $j$. Furthermore, the factorized structure $e^{-f\eta} \times g(b^2)$ is precisely the form required for the shared $\eta$-dependent exponential to cancel analytically in the Sivers shift ratio, as demonstrated in Section~\ref{sec:simultaneous_fit_strategy}.
+The power-law tail $(1 + b^2)^{-j}$ with $j > 1/2$ decays algebraically at large separations. This is slower than a Gaussian decay but remains absolutely integrable over the real line. Unlike the Gaussian model, where the sign of $(\alpha - \beta)$ can render the Fourier integral divergent, the power-law denominator guarantees convergent integrals for positive exponents $j > 1/2$. Additionally, the factorized structure $e^{-f\eta} \times g(b^2)$ allows the shared $\eta$-dependent exponential to cancel analytically in the Sivers shift ratio, which we use in Section~\ref{sec:simultaneous_fit_strategy}.
 
 \begin{figure}[htbp]
     \centering
@@ -204,18 +204,18 @@ This discovery has a profound implication for the Fourier integrability constrai
     \label{fig:gaussian_straightline_test}
 \end{figure}
 
-The visual comparison in Fig.~\ref{fig:pysr_benchmark_fits} confirms the quantitative superiority of the \texttt{PySR}-discovered models. Across all staple extents, the factorized $C = 14$ and $C = 16$ expressions track the lattice data throughout the accessible $(b_L, b_T)$ grid, while the pure power-law-$\eta$ models ($C = 11, 17$) exhibit slight systematic tension at the boundary $\eta$ values where their $\eta^{-n}$ dependence departs from the smoother exponential decay.
+As shown in Fig.~\ref{fig:pysr_benchmark_fits}, the factorized $C = 14$ and $C = 16$ expressions track the lattice data throughout the accessible $(b_L, b_T)$ grid across all staple extents. The pure power-law-$\eta$ models ($C = 11, 17$) exhibit slight systematic tension at the boundary $\eta$ values, where their $\eta^{-n}$ dependence departs from the exponential decay.
 
-The straight-line diagnostic in Fig.~\ref{fig:gaussian_straightline_test} provides definitive, model-independent evidence for the power-law spatial structure. Under the Gaussian hypothesis, plotting $\tAmp_{2B}^{\text{Re}}$ on a logarithmic ordinate against $b^2$ should yield a straight line with slope $-c$. The clear upward curvature observed in the lattice data at large $b^2$ unambiguously rules out the Gaussian form: the true amplitude decays more slowly than any exponential, precisely as expected for a generalized Lorentzian power-law tail. This diagnostic independently validates the functional form discovered by the genetic algorithm, confirming that the choice of $(1 + b^2)^{-j}$ is not an artifact of the evolutionary search but a genuine feature of the underlying non-perturbative physics.
+The straight-line diagnostic in Fig.~\ref{fig:gaussian_straightline_test} tests the Gaussian hypothesis. If the amplitude followed a Gaussian decay, plotting $\tAmp_{2B}^{\text{Re}}$ on a logarithmic ordinate against $b^2$ would yield a straight line with slope $-c$. The lattice data shows upward curvature at large $b^2$, indicating that the amplitude decays more slowly than an exponential. This behavior matches the generalized Lorentzian power-law tail discovered by the genetic algorithm.
 
-These results establish the \texttt{PySR}-discovered Lorentzian power-law structure as the physically correct spatial profile for $\tAmp_{2B}^{\text{Re}}$. In the following sections, we incorporate this functional form into the full $\eta$-dependent parameterization and extend it to the remaining amplitudes for the global simultaneous fit.
+Based on these results, we adopt the Lorentzian power-law structure as the spatial profile for $\tAmp_{2B}^{\text{Re}}$. In the following sections, we extend this functional form to the remaining amplitudes for the global simultaneous fit.
 
 \subsection{Rejection of Separable Exponential Longitudinal Decay}
 \label{sec:rejection_exponential_longitudinal}
 
-While the \texttt{PySR} analysis conclusively established the generalized Lorentzian power-law in the invariant spatial separation $b^2$, the behavior along the longitudinal momentum fraction axis $P \cdot b$ must also be rigorously determined. A phenomenologically common ansatz for hadronic form factors involves a separable exponential decay along the longitudinal axis, such as $e^{-c|P \cdot b|}$. To explicitly test this hypothesis, we constructed a suite of candidate models that multiply a separable longitudinal exponential decay by various transverse $b^2$ profiles, including Gaussian, Lorentzian, Dipole, and mixed exponential-Lorentzian forms. We then performed full 4D simultaneous Jackknife fits on these ansätze.
+With the generalized Lorentzian power-law established for the spatial separation $b^2$, we must determine the behavior along the longitudinal momentum fraction axis $P \cdot b$. A common ansatz for hadronic form factors involves a separable exponential decay along the longitudinal axis, such as $e^{-c|P \cdot b|}$. To test this, we constructed candidate models that multiply a separable longitudinal exponential decay by various transverse $b^2$ profiles, including Gaussian, Lorentzian, Dipole, and mixed exponential-Lorentzian forms. We then performed full 4D simultaneous Jackknife fits on these models.
 
-The results of these fits are summarized in Fig.~\ref{fig:rejection_exponential_longitudinal}. The analysis yields two critical observations. First, when forced into a Gaussian transverse profile (Ansatz 1), the fit is exceptionally poor ($\chi^2/\text{dof} \approx 3.34$), further corroborating the failure of pure Gaussian models. Second, and more importantly, in the models that do successfully describe the data (the Lorentzian and Dipole forms with $\chi^2/\text{dof} \approx 1.28$), the coefficient $c$ governing the exponential decay consistently evaluates to zero within its Jackknife uncertainties (e.g., $c = -0.007 \pm 0.012$ and $-0.009 \pm 0.012$). 
+The fit results are summarized in Fig.~\ref{fig:rejection_exponential_longitudinal}. When forced into a Gaussian transverse profile (Ansatz 1), the fit is poor ($\chi^2/\text{dof} \approx 3.34$), again showing the failure of pure Gaussian models. In the models that successfully describe the data (the Lorentzian and Dipole forms with $\chi^2/\text{dof} \approx 1.28$), the coefficient $c$ governing the exponential decay evaluates to zero within its Jackknife uncertainties (e.g., $c = -0.007 \pm 0.012$ and $-0.009 \pm 0.012$). 
 
 \begin{figure}[htbp]
     \centering
@@ -224,10 +224,10 @@ The results of these fits are summarized in Fig.~\ref{fig:rejection_exponential_
     \label{fig:rejection_exponential_longitudinal}
 \end{figure}
 
-The minimization algorithm actively suppresses the separable exponential decay term because it is fundamentally incompatible with the lattice data. This finding definitively rules out a separable exponential decay $e^{-c|P \cdot b|}$, indicating that the longitudinal momentum dependence cannot be trivially factored out as an exponential. Instead, it must be intimately coupled with the overall spatial distribution. This crucial phenomenological constraint directly motivates our final parameterizations, where the longitudinal coordinate $(P \cdot b)^2$ is injected directly into the denominator of the generalized Lorentzian, ensuring both analytical consistency and agreement with the non-perturbative data.
+The fit suppresses the separable exponential decay term. This indicates that a separable exponential decay $e^{-c|P \cdot b|}$ does not fit the lattice data, and the longitudinal momentum dependence cannot be factored out as an independent exponential. We must couple it directly with the spatial distribution. We therefore inject the longitudinal coordinate $(P \cdot b)^2$ directly into the denominator of the generalized Lorentzian for our final parameterizations.
 
 \subsection{Lorentzian power-law for position space Amplitudes}
-As definitively established by both our analytical convergence requirements and the \texttt{PySR} analysis, the spatial decay profile strongly prefers a generalized Lorentzian power-law rather than a simple Gaussian form. Therefore, we systematically explore several power-law functional variants in $(b_L, b_T)$ space to construct our final parameterized models.
+Based on the analytical convergence requirements and the \texttt{PySR} analysis, we use a generalized Lorentzian power-law rather than a Gaussian form for the spatial decay profile. We explore several power-law variants in $(b_L, b_T)$ space to construct our parameterized models.
 
 \begin{figure}[htbp]
     \centering
@@ -236,10 +236,10 @@ As definitively established by both our analytical convergence requirements and 
     \label{fig:FitList_eta78910}
 \end{figure}
 
-From the above list of potential candidate models, the introduction of a power-law dependence significantly improves the global quality of the fit over any exponential baseline. However, there is still freedom in modeling the exact asymptotic behavior of the width parameters in $\eta$, which we rigorously define in the next subsection.
+Among these candidate models, introducing a power-law dependence improves the fit over an exponential baseline. However, we still need to determine the asymptotic behavior of the width parameters in $\eta$, which we address in the next subsection.
 
 \subsection{Asymptotic $\eta$ Functions for $\tAmp_{2B}^{\text{Re}}$}
-To systematically determine the true asymptotic behavior of the longitudinal width parameter $c(\eta)$ at large staple extents, we evaluated several phenomenologically motivated ansätze while holding the spatial Lorentzian power-law structure constant. The comparative goodness-of-fit ($\chi^2/\text{dof}$), the Akaike Information Criterion (AIC), and the corresponding $x$-space Fourier transforms in the $\eta\rightarrow\infty$ limit are summarized in Fig.~\ref{fig:A2B_eta_asymptotes}. 
+To determine the asymptotic behavior of the longitudinal width parameter $c(\eta)$ at large staple extents, we evaluated several candidate models while holding the spatial Lorentzian power-law constant. The comparative goodness-of-fit ($\chi^2/\text{dof}$), the Akaike Information Criterion (AIC), and the corresponding $x$-space Fourier transforms in the $\eta\rightarrow\infty$ limit are summarized in Fig.~\ref{fig:A2B_eta_asymptotes}. 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.9\linewidth]{PowerLaw_etaAsymptotic/A2BfitFT_eta_Asymptotic_P1.pdf}
@@ -247,9 +247,9 @@ To systematically determine the true asymptotic behavior of the longitudinal wid
     \label{fig:A2B_eta_asymptotes}
 \end{figure}
 
-We utilize the Akaike Information Criterion (AIC) to rigorously penalize excessive parameterization and select the optimal model complexity.
+We use the Akaike Information Criterion (AIC) to penalize excessive parameterization.
 
-Our analysis reveals that all viable asymptotic functions share statistically indistinguishable $\chi^2/\text{dof}$ values and converge to a universal spatial profile characterized by a Lorentzian power $j \approx 2$ and an amplitude scale $a \approx 4$, damped by an identical area-law suppression factor $e^{-0.5\eta}$. By fixing these global structural parameters ($j=2$, $a=4$) and performing sequential fits at individual $\eta$ slices, we isolate the specific $\eta$-dependence of the width parameters $c$ and $d$. The stability of these sequential fits is shown below:
+All viable asymptotic functions share statistically similar $\chi^2/\text{dof}$ values and converge to a spatial profile with a Lorentzian power $j \approx 2$ and an amplitude scale $a \approx 4$, damped by an area-law suppression factor $e^{-0.5\eta}$. We isolate the specific $\eta$-dependence of the width parameters $c$ and $d$ by fixing these structural parameters ($j=2$, $a=4$) and performing sequential fits at individual $\eta$ slices. The results are shown below:
 
 \begin{figure}[htbp]
     \centering
@@ -258,7 +258,7 @@ Our analysis reveals that all viable asymptotic functions share statistically in
     \label{fig:ReA2B_fixed_eta_slices}
 \end{figure}
 
-From these fits, we extracted the parameters $c$ and $d$. Physically, the fit parameter $c$ directly goes as a coefficient of the longitudinal separation $(P \cdot b)$, while $d$ serves directly as a coefficient of the invariant squared separation $b^2$. To thoroughly investigate the $\eta$-dependence of these spatial coefficients, we plot the extracted values of $c$ and $d$ against our candidate asymptotic models:
+From these fits, we extract the parameters $c$ and $d$. The fit parameter $c$ acts as a coefficient of the longitudinal separation $(P \cdot b)$, while $d$ acts as a coefficient of the invariant squared separation $b^2$. We plot the extracted values of $c$ and $d$ against our candidate asymptotic models to analyze their $\eta$-dependence:
 
 \begin{figure}[h!]
     \centering
@@ -275,11 +275,11 @@ From these fits, we extracted the parameters $c$ and $d$. Physically, the fit pa
 \section{Candidate Selection}
 \label{sec:candidate_selection}
 
-Through rigorous $\chi^2/\text{dof}$ minimizations and sequential fitting procedures across individual $\eta$ slices, we systematically determined the optimal structural parameterizations for the phenomenologically relevant invariant amplitudes: $\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$, and $\tAmp_{12B}^{\text{Re}}$. As previously noted, $\tAmp_{12B}^{\text{Im}}$ is excluded from this modeling as the lattice data remains statistically compatible with zero.
+Based on the $\chi^2/\text{dof}$ minimizations and sequential fitting at individual $\eta$ slices, we determined the structural parameterizations for the invariant amplitudes: $\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$, and $\tAmp_{12B}^{\text{Re}}$. We exclude $\tAmp_{12B}^{\text{Im}}$ because the lattice data is consistent with zero.
 
-For the unpolarized real amplitude $\tAmp_{2B}^{\text{Re}}$, our sequential analysis revealed that while the transverse width parameter $d$ remains constant across all $\eta$, the longitudinal width parameter $c(\eta)$ requires an asymptotic model. We ultimately selected the model $c(\eta) = c\left(1 - \frac{k_1}{\eta} - \frac{k_2}{\eta^2}\right)$, because its Fourier transform naturally suppresses unphysical negative-$x$ contributions. The theoretical details and implications of this suppression in momentum space will be discussed in depth in the following sections.
+For the unpolarized real amplitude $\tAmp_{2B}^{\text{Re}}$, the transverse width parameter $d$ remains constant across all $\eta$, but the longitudinal width parameter $c(\eta)$ requires an asymptotic model. We select the model $c(\eta) = c\left(1 - \frac{k_1}{\eta} - \frac{k_2}{\eta^2}\right)$ because its Fourier transform suppresses negative-$x$ contributions, which we discuss in later sections.
 
-For the real Sivers amplitude $\tAmp_{12B}^{\text{Re}}$, we repeated the sequential Lorentzian fitting at fixed $\eta$ slices. As shown in Fig.~\ref{fig:ReA12B_eta_independence} and Table \ref{tab:ReA12B_fixed_eta}, the extracted longitudinal parameter $c$ and transverse parameter $d$ exhibit clear independence from $\eta$. Therefore, the data strictly dictates modeling both $c$ and $d$ as pure constants for $\tAmp_{12B}^{\text{Re}}$.
+For the real Sivers amplitude $\tAmp_{12B}^{\text{Re}}$, we repeated the sequential Lorentzian fitting at fixed $\eta$ slices. As shown in Fig.~\ref{fig:ReA12B_eta_independence} and Table \ref{tab:ReA12B_fixed_eta}, the longitudinal parameter $c$ and transverse parameter $d$ are independent of $\eta$. We therefore model $c$ and $d$ as constants for $\tAmp_{12B}^{\text{Re}}$.
 
 \begin{table}[h!]
     \centering
@@ -296,7 +296,7 @@ For the real Sivers amplitude $\tAmp_{12B}^{\text{Re}}$, we repeated the sequent
     \label{fig:ReA12B_eta_independence}
 \end{figure}
 
-Similarly, for the imaginary unpolarized amplitude $\tAmp_{2B}^{\text{Im}}$, the lattice data is inherently noisier. However, applying the same sequential fitting strategy reveals a consistent trend. We adopt the physically motivated ansatz that $c$ and $d$ are constant in $\eta$, mirroring the structural stability observed in the real amplitudes. This ansatz provides stable and theoretically sound fits, as demonstrated in Fig.~\ref{fig:ImA2B_eta_independence} and Table \ref{tab:ImA2B_fixed_eta}.
+For the imaginary unpolarized amplitude $\tAmp_{2B}^{\text{Im}}$, the lattice data has more statistical noise, but the sequential fitting yields a similar trend. We model $c$ and $d$ as constant in $\eta$, mirroring the structural stability of the real amplitudes. The resulting fits are shown in Fig.~\ref{fig:ImA2B_eta_independence} and Table \ref{tab:ImA2B_fixed_eta}.
 
 \begin{table}[h!]
     \centering
@@ -313,7 +313,7 @@ Similarly, for the imaginary unpolarized amplitude $\tAmp_{2B}^{\text{Im}}$, the
     \label{fig:ImA2B_eta_independence}
 \end{figure}
 
-Consolidating these findings, the precise analytical models in invariant $(b_L,b_T)$ space for the three phenomenological amplitudes are definitively established as:
+The analytical models in invariant $(b_L,b_T)$ space for the three amplitudes are:
 \begin{align}
     \tAmp_{2B}^{\text{Re}}&=\left[\frac{a e^{-f \eta}}{\left[1 + \left(d + c\left(1 - \frac{k_1}{\eta} - \frac{k_2}{\eta^2}\right)\right) b_L^2 + d b_T^2\right]^j}\right]\label{eq:model_ReA2B}\\
     \tAmp_{12B}^{\text{Re}}&=\left[\frac{-a^{\prime} e^{-f \eta}}{\left[1 + (c^{\prime} + d^{\prime}) b_L^2 + d^{\prime} b_T^2\right]^{j^{\prime}}}\right]\label{eq:model_ReA12B}\\
@@ -323,29 +323,29 @@ Consolidating these findings, the precise analytical models in invariant $(b_L,b
 \section{Simultaneous Fitting Strategy}
 \label{sec:simultaneous_fit_strategy}
 
-A crucial feature unifying the structural models in Eq. (\ref{eq:model_ReA2B})-(\ref{eq:model_ImA2B}) is that all three surviving amplitudes exhibit a universal $\eta$-dependence damped by a shared exponential decay factor, $e^{-f\eta}$. Because the Sivers shift is defined as a ratio of transverse momentum moments, this shared exponential behavior will be canceled out for the physical momentum fraction $x$ calculation. 
+The structural models in Eq. (\ref{eq:model_ReA2B})-(\ref{eq:model_ImA2B}) show that all three surviving amplitudes share an $\eta$-dependence damped by a common exponential decay factor, $e^{-f\eta}$. Because the Sivers shift is a ratio of transverse momentum moments, this shared exponential behavior cancels out in the physical momentum fraction $x$ calculation. 
 
-We begin with the definition of the Sivers shift as the ratio of the first transverse momentum moment of the Sivers function to the unpolarized TMD distribution:
+The Sivers shift is the ratio of the first transverse momentum moment of the Sivers function to the unpolarized TMD distribution:
 \begin{equation}
    \langle \vect{k}_y \rangle_{TU}(\vprp{\bvec}^2,x,\zetahat,\eta v \tcdot P) 
 	\ \equiv\ \mN \frac{\tilde f_{1T}^{\perp(1)}(\vprp{\bvec}^2;\zetahat,\ldots,\eta v \tcdot P)}{\tilde f_1^{(0)}(\vprp{\bvec}^2;\zetahat,\ldots,\eta v \tcdot P)} \ .
 \end{equation}
 
-By expanding these Fourier-transformed distributions in terms of the invariant effective amplitudes $\tAmp_{12B}$ and $\tAmp_{2B}$, we rewrite the ratio explicitly as an integration over the longitudinal spatial separation $b \cdot P$:
+Expanding these Fourier-transformed distributions in terms of the invariant effective amplitudes $\tAmp_{12B}$ and $\tAmp_{2B}$, we rewrite the ratio as an integration over the longitudinal spatial separation $b \cdot P$:
 \begin{equation}
     \langle \vect{k}_y \rangle_{TU} = -m_{N} \frac{\int d(b\cdot P)e^{ix(b\cdot P)} \tAmp_{12B}(\bvec^2,\bvec \tcdot P,(\bvec \tcdot P) R(\zetahat^2)/\mN^2,-1/(\mN\zetahat)^2,\eta v \tcdot P)}{\int d(b\cdot P)e^{ix(b\cdot P)}\tAmp_{2B}(\bvec^2,\bvec \tcdot P,(\bvec \tcdot P) R(\zetahat^2)/\mN^2,-1/(\mN\zetahat)^2,\eta v \tcdot P)} \ .
 \end{equation}
 
-Next, we decompose the complex effective amplitudes into their real (T-even) and imaginary (T-odd) constituents. Because the lattice data for the imaginary Sivers amplitude is entirely dominated by noise and statistically indistinguishable from zero, we explicitly eliminate $\tAmp_{12B}^{\text{Im}}$ from the numerator:
+We then decompose the complex effective amplitudes into their real (T-even) and imaginary (T-odd) components. The imaginary Sivers amplitude is statistically consistent with zero, so we remove $\tAmp_{12B}^{\text{Im}}$ from the numerator:
 \begin{equation}
     \langle \vect{k}_y \rangle_{TU} = -m_{N} \frac{\int d(b\cdot P)e^{ix(b\cdot P)} \left[\tAmp_{12B}^{\text{Re}}(\cdots)+i\cancelto{0}{\tAmp_{12B}^{\text{Im}}(\cdots)}\right]}{\int d(b\cdot P)e^{ix(b\cdot P)}\left[\tAmp_{2B}^{\text{Re}}(\cdots)+i\tAmp_{2B}^{\text{Im}}(\cdots)\right]} \ .
 \end{equation}
 
-Applying Euler's formula to expand the Fourier kernel $e^{ix(b\cdot P)}$ into its symmetric (cosine) and antisymmetric (sine) trigonometric components allows us to filter the integrals by parity. Because the integration domain is symmetric, any integrand that is overall odd in $b \cdot P$ integrates exactly to zero. Retaining only the non-vanishing even-parity combinations yields:
+We use Euler's formula to expand the Fourier kernel $e^{ix(b\cdot P)}$ into cosine and sine components. Because the integration domain is symmetric, any integrand that is odd in $b \cdot P$ integrates to zero. Retaining only the non-vanishing even-parity combinations yields:
 \begin{equation}
     \langle \vect{k}_y \rangle_{TU} = -m_{N} \frac{\int d(b\cdot P) \cos{\left(x(b\cdot P)\right)}\tAmp_{12B}^{\text{Re}}(\cdots)}{\int d(b\cdot P)\left[\cos{\left(x(b\cdot P)\right)}\tAmp_{2B}^{\text{Re}}(\cdots)-\sin{\left(x(b\cdot P)\right)}\tAmp_{2B}^{\text{Im}}(\cdots)\right]} \ .
 \end{equation}
-At this stage, substituting the precise analytical models from Eq. (\ref{eq:model_ReA2B})-(\ref{eq:model_ImA2B}) explicitly reveals the presence of the shared asymptotic parameter $e^{-f \eta}$. Because the $e^{-f\eta}$ term is independent of the integration variable $b \cdot P$, it factors out of both the numerator and denominator integrals, resulting in the exact analytical cancellation of the shared exponential decay parameter. Applying the Lorentz-invariant projection where the longitudinal spatial coordinate is given by $b_L = \frac{P \cdot b}{-P_L}$ and $b_T^2=b^2-b_L^2$, we arrive at the final integrands in the invariant frame:
+Substituting the analytical models from Eq. (\ref{eq:model_ReA2B})-(\ref{eq:model_ImA2B}) shows the shared asymptotic parameter $e^{-f \eta}$. Because the $e^{-f\eta}$ term is independent of the integration variable $b \cdot P$, it factors out of both the numerator and denominator integrals, canceling the shared exponential decay parameter. Applying the Lorentz-invariant projection $b_L = \frac{P \cdot b}{-P_L}$ and $b_T^2=b^2-b_L^2$, we arrive at the final integrands in the invariant frame:
 \begin{equation}
 \begin{aligned}
     \langle \vect{k}_y \rangle_{TU} &= m_{N} \frac{\int d(b\cdot P) \cos{\left(x(b\cdot P)\right)} \frac{a^{\prime}}{D_{12B}^{\text{Re}}}}{\int d(b\cdot P)\left[\cos{\left(x(b\cdot P)\right)} \frac{a}{D_{2B}^{\text{Re}}} - \sin{\left(x(b\cdot P)\right)}\frac{a^{\prime\prime} (P \cdot b) / (-P_L)}{D_{2B}^{\text{Im}}}\right]} \ , \\
@@ -354,39 +354,39 @@ At this stage, substituting the precise analytical models from Eq. (\ref{eq:mode
     D_{2B}^{\text{Im}} &= \left[1 + (c^{\prime\prime}) \frac{(P \cdot b)^2}{P_L^2} + d^{\prime\prime} b^2\right]^{j^{\prime\prime}} \ .
 \end{aligned}
 \end{equation}
-To rigorously enforce this shared $\eta$-dependence and capture the physics governing these amplitudes, we must transition from sequential fitting to a comprehensive simultaneous global fit. By forcing the parameter $f$ to be identical across all three amplitude models ($\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$, and $\tAmp_{12B}^{\text{Re}}$), the simultaneous fit guarantees theoretical self-consistency and significantly stabilizes the parameter extraction, correctly reflecting the physical cancellation mechanism shown above.
+To enforce this shared $\eta$-dependence across the amplitudes, we use a simultaneous global fit. Forcing the parameter $f$ to be identical across all three amplitude models ($\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$, and $\tAmp_{12B}^{\text{Re}}$) ensures theoretical consistency and stabilizes the parameter extraction, reflecting the physical cancellation mechanism above.
 
 \subsection{Simultaneous Fit with Full Covariance Matrix}
 
-Evaluating the statistical uncertainties of these highly non-linear, simultaneous parameterizations requires moving beyond a simple uncorrelated $\chi^2$ minimization. Because the amplitudes are extracted from the same underlying gauge field configurations and evaluated across nearby spatial coordinates ($b_L, b_T$), their statistical fluctuations are highly correlated. A traditional uncorrelated fit would improperly weight these data points, leading to artificially deflated uncertainties and potentially biased central values.
+Because the amplitudes are extracted from the same gauge field configurations and evaluated across nearby spatial coordinates ($b_L, b_T$), their statistical fluctuations are highly correlated. A simple uncorrelated $\chi^2$ minimization would improperly weight these data points, leading to deflated uncertainties and biased central values.
 
-To resolve this, we implement a correlated $\chi^2$ minimization utilizing the full covariance matrix. This method mathematically accounts for the substantial cross-correlations inherent in the lattice data, both across different spatial separations and across the real and imaginary amplitude components. 
+To resolve this, we perform a correlated $\chi^2$ minimization utilizing the full covariance matrix. This accounts for the cross-correlations inherent in the lattice data, both across different spatial separations and across the real and imaginary amplitude components. 
 
-To robustly estimate these correlations, we employ the Jackknife resampling method. Let $y_i^{(k)}$ represent the lattice evaluation of the $i$-th data point (which spans all spatial coordinates across $\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$, and $\tAmp_{12B}^{\text{Re}}$) in the $k$-th Jackknife bin. The full Jackknife covariance matrix $C_{ij}$ is defined as \cite{Boram2011Covariance}:
+We estimate these correlations using the Jackknife resampling method. Let $y_i^{(k)}$ represent the lattice evaluation of the $i$-th data point (spanning all spatial coordinates across $\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$, and $\tAmp_{12B}^{\text{Re}}$) in the $k$-th Jackknife bin. The full Jackknife covariance matrix $C_{ij}$ is defined as \cite{Boram2011Covariance}:
 \begin{equation}
     C_{ij} = \frac{N-1}{N} \sum_{k=1}^{N} \left( y_i^{(k)} - \bar{y}_i \right) \left( y_j^{(k)} - \bar{y}_j \right) \ ,
 \end{equation}
 where $N$ is the total number of Jackknife samples and $\bar{y}_i = \frac{1}{N}\sum_k y_i^{(k)}$ is the sample mean. 
 
-Incorporating the inverse covariance matrix correctly weights the orthogonal data directions in the parameter space, heavily penalizing non-physical fluctuations. The global simultaneous fit is then driven strictly by minimizing the correlated $\chi^2$ objective function with respect to the model parameters $\mathbf{p}$:
+The global simultaneous fit minimizes the correlated $\chi^2$ objective function with respect to the model parameters $\mathbf{p}$:
 \begin{equation}
     \chi^2(\mathbf{p}) = \sum_{i,j} \left( \bar{y}_i - F_i(\mathbf{p}) \right) C_{ij}^{-1} \left( \bar{y}_j - F_j(\mathbf{p}) \right) \ ,
 \end{equation}
-where $F_i(\mathbf{p})$ represents the exact analytical models (derived via \texttt{PySR}) evaluated at the corresponding kinematics. 
+where $F_i(\mathbf{p})$ represents the analytical models evaluated at the corresponding kinematics. 
 
-To execute this numerically, we utilize the \texttt{lsqfit} \cite{Lepage:2001ym} non-linear least squares fitting package in conjunction with the \texttt{gvar} library for Gaussian error propagation. By evaluating the amplitude functions across all discrete spatial separations concurrently, we explicitly construct the full Jackknife covariance matrix that captures the cross-correlations between $\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$, and $\tAmp_{12B}^{\text{Re}}$. The \texttt{gvar} framework is then used to mathematically bind the combined lattice data array to this dense inverse covariance matrix.
+We utilize the \texttt{lsqfit} \cite{Lepage:2001ym} non-linear least squares fitting package and the \texttt{gvar} library for Gaussian error propagation. We construct the full Jackknife covariance matrix that captures the cross-correlations between $\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$, and $\tAmp_{12B}^{\text{Re}}$. The \texttt{gvar} framework binds the combined lattice data array to the inverse covariance matrix.
 
-This approach ensures that the global simultaneous fit is driven strictly by minimizing the correlated objective function, appropriately weighting the orthogonal data directions and penalizing non-physical fluctuations. Consequently, the final extracted parameters and their propagated error bands are statistically rigorous and mathematically robust. The ensuing subsections detail the results of these full simultaneous covariance matrix fits evaluated at discrete lattice momenta.
+This approach appropriately weights the data directions based on the correlations. The following subsections present the results of these simultaneous covariance matrix fits evaluated at discrete lattice momenta.
 
 \pagebreak
 \renewcommand{\PLval}{-1}
 \subsubsection{\texorpdfstring{Simultaneous Fit Results for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$}{TEXT}}
 
-The extracted parameters from the global simultaneous fit for the lowest simulated nucleon momentum, $P_1 = -1$ ($\hat{\zeta} \approx 0.091$), are summarized in the table below. By mathematically enforcing the shared asymptotic decay parameter $f$ across all three effective amplitudes ($\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$, and $\tAmp_{12B}^{\text{Re}}$), the model successfully stabilizes the extraction of the multi-dimensional spatial profiles while preserving the physical cancellation required for the Sivers shift ratio.
+The extracted parameters from the simultaneous fit for the lowest simulated nucleon momentum, $P_1 = -1$ ($\hat{\zeta} \approx 0.091$), are summarized below. Enforcing the shared asymptotic decay parameter $f$ across all three effective amplitudes ($\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$, and $\tAmp_{12B}^{\text{Re}}$) stabilizes the extraction of the spatial profiles and preserves the cancellation required for the Sivers shift ratio.
 
 \input{SimultaneousFitsCov/Fit_Table_PL\PLval_bmin3}
 
-Figures \ref{fig:A2B_amplitudes_fit_P1} and \ref{fig:combined_fit_P1} visually demonstrate the quality of this correlated minimization. The simultaneous parameterization (represented by the continuous surfaces and shaded error bands) exhibits excellent agreement with the discrete lattice data across both the native Cartesian $(b_L/a, b_T/a)$ grid and the transformed Lorentz-invariant $(P \cdot b, b^2)$ phase space. Furthermore, the explicit exclusion of the short-distance data ($|\vect{b}| < 3a$) ensures the fit is not artificially skewed by ultraviolet lattice artifacts, allowing the global model to cleanly capture the true non-perturbative long-range dynamics.
+Figures \ref{fig:A2B_amplitudes_fit_P1} and \ref{fig:combined_fit_P1} show the results of the correlated minimization. The parameterization (represented by the continuous surfaces and shaded error bands) aligns with the discrete lattice data across the Cartesian $(b_L/a, b_T/a)$ grid and the Lorentz-invariant $(P \cdot b, b^2)$ phase space. Excluding the short-distance data ($|\vect{b}| < 3a$) ensures the fit captures the long-range dynamics without skewing from ultraviolet lattice artifacts.
 
 \begin{figure}[htbp]
     \centering
@@ -416,11 +416,11 @@ Figures \ref{fig:A2B_amplitudes_fit_P1} and \ref{fig:combined_fit_P1} visually d
 
 \pagebreak
 
-With the continuous parametrization of the effective amplitudes successfully stabilized, we proceed to analytically evaluate the Fourier integrals over the invariant scalar $P \cdot b$. The results of these integrations, which yield the physical momentum fraction $x$-dependent unpolarized distribution and the consequent Sivers shift, are tabulated below.
+Using the continuous parametrization of the effective amplitudes, we analytically evaluate the Fourier integrals over the invariant scalar $P \cdot b$. The results of these integrations, which yield the momentum fraction $x$-dependent unpolarized distribution and the Sivers shift, are tabulated below.
 
 \input{SimultaneousFitsCov/Integration_Table_PL\PLval_bmin3}
 
-Finally, the necessity and statistical rigor of employing a fully correlated $\chi^2$ minimization are explicitly confirmed by visualizing the Jackknife covariance matrix, shown in the figures below. The dense off-diagonal elements visible in both the 2D correlation matrix and the 3D surface plot indicate strong cross-correlations between the spatial lattice points and across the distinct amplitude components. By mathematically incorporating this exact covariance structure into the fitting pipeline via \texttt{lsqfit}, we appropriately weight the heavily correlated physical fluctuations and guarantee that the propagated error bands on the final extracted Sivers shift are statistically robust.
+The Jackknife covariance matrix is shown in the figures below. The off-diagonal elements in the 2D correlation matrix and the 3D surface plot show the cross-correlations between the spatial lattice points and across the amplitude components. Incorporating this covariance structure into the fitting pipeline via \texttt{lsqfit} properly weights the correlated fluctuations to determine the error bands on the final extracted Sivers shift.
 
 \begin{figure}[htbp]
     \centering
