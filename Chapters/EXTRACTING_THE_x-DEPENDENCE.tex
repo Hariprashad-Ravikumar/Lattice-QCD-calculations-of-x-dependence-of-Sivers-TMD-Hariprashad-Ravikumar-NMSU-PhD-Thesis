@@ -2,7 +2,7 @@
 \label{sec:x_dependence}
 
 \subsection{The Sivers Shift as a Function of Momentum Fraction}
-ToIn order to connect our lattice observables to the physical, $x$-dependent Transverse Momentum Dependent Parton Distribution Functions (TMDs), we must isolate the relevant amplitudes from the correlation function. Focusing on the leading-twist unpolarized quark distribution, the correlator is parameterized by the Lorentz-invariant amplitudes $\tAmp_{2B}$ and $\tAmp_{12B}$:
+To connect our lattice observables to the physical, $x$-dependent Transverse Momentum Dependent Parton Distribution Functions (TMDs), we must isolate the relevant amplitudes from the correlation function. Focusing on the leading-twist unpolarized quark distribution, the correlator is parameterized by the Lorentz-invariant amplitudes $\tAmp_{2B}$ and $\tAmp_{12B}$:
 \begin{align}
     \frac{1}{2} \bra{P,S}\ \bar{q}(0)\ \gamma^{+}\ \WlineC{\mathcal{C}_\bvec}\ q(\bvec)\ \ket{P,S}=2P^{+}\left(\tAmp_{2B} 
 		+ i \mN \epsilon_{ij} \vect{\bvec}_i \vect{S}_j\, \tAmp_{12B} \right) \ .
@@ -19,7 +19,7 @@ Because $x$ and the longitudinal spatial separation $b \cdot P$ act as Fourier c
  \end{align}
  Expanding the Fourier phase factor into its trigonometric components isolates the real and imaginary contributions of the amplitudes to the Sivers shift. Because the integration over $d(b \cdot P)$ is performed over a symmetric domain, the non-vanishing terms of the integral are completely dictated by the parity of the integrands with respect to $b \cdot P$. The trigonometric weights $\cos\left(x(b\cdot P)\right)$ and $\sin\left(x(b\cdot P)\right)$ are inherently even and odd, respectively.
 
-This harmonic symmetry elegantly filters the invariant amplitudes based on their behavior under Hermitian conjugation. As constrained by fundamental symmetries, the real components $\tAmp_{2B}^{\text{Re}}$ and $\tAmp_{12B}^{\text{Re}}$ must be even functions of $b \cdot P$, while the imaginary components $\tAmp_{2B}^{\text{Im}}$ and $\tAmp_{12B}^{\text{Im}}$ must be odd. Consequently, only the symmetric products, i.e., the even real amplitudes coupled with the cosine term, and the odd imaginary amplitudes coupled with the sine term, survive the integration. The operational challenge now lies in extracting these specific parity components from the discrete lattice data. The following section describes how we strategically construct our correlation functions to extract these distinct real and imaginary amplitudes.
+This harmonic symmetry filters the invariant amplitudes based on their behavior under Hermitian conjugation. As constrained by fundamental symmetries, the real components $\tAmp_{2B}^{\text{Re}}$ and $\tAmp_{12B}^{\text{Re}}$ must be even functions of $b \cdot P$, while the imaginary components $\tAmp_{2B}^{\text{Im}}$ and $\tAmp_{12B}^{\text{Im}}$ must be odd. Consequently, only the symmetric products, i.e., the even real amplitudes coupled with the cosine term, and the odd imaginary amplitudes coupled with the sine term, survive the integration. The operational challenge now lies in extracting these specific parity components from the discrete lattice data. The following section describes how we construct our correlation functions to extract these distinct real and imaginary amplitudes.
 
 
 \subsection{The Collins-Soper Parameter (\texorpdfstring{$\hat{\zeta}$}{TEXT})}
@@ -27,7 +27,7 @@ A fundamental complication in calculating TMDs is the presence of rapidity diver
 \begin{equation}
     \hat{\zeta} = \frac{v \cdot P}{m_N \sqrt{|v^2|}} \ .
 \end{equation}
-The physical TMD limit is recovered by extrapolating $\hat{\zeta} \to \infty$. In practice, since $v$ is a purely spatial vector on the lattice ($v_0 = 0$), increasing $\hat{\zeta}$ requires simulating the nucleon at progressively higher spatial momenta $\vect{P}$. Tracking the evolution of the Sivers shift across multiple values of $\hat{\zeta}$ is therefore an indispensable step for phenomenological predictions.
+The physical TMD limit is recovered by extrapolating $\hat{\zeta} \to \infty$. In practice, since $v$ is a purely spatial vector on the lattice ($v_0 = 0$), increasing $\hat{\zeta}$ requires simulating the nucleon at progressively higher spatial momenta $\vect{P}$. Tracking the evolution of the Sivers shift across multiple values of $\hat{\zeta}$ is therefore a necessary step for phenomenological predictions.
 
 \subsection{Kinematic Constraints for \texorpdfstring{$b\cdot P \neq 0$}{TEXT}}
 To perform the Fourier transform over $b \cdot P$, we require a lattice geometry where $b \cdot P$ is non-zero. However, the Lorentz-invariant arguments of the amplitudes are not independent. Our chosen frame ($b^+=0, \vprp{P}=0$) enforces the constraint:
@@ -38,7 +38,7 @@ where $R(\zetahat^2) = 1 - \sqrt{1 + \zetahat^{-2}}$. Expanding the dot products
 \begin{align}
     b_{1}|v|\left[\frac{P_{1}}{m_{N}}\left(\hat{\zeta}-\sqrt{\hat{\zeta}^2+1}\right)+\hat{\zeta}\frac{m_{N}}{P_{1}}\right]=\vec{v}_{T}\cdot\vec{b}_{T} \ .
 \end{align}
-To satisfy this equation over a continuous range of $b \cdot P$ without coupling the transverse separation $\vec{b}_T$ directly to the longitudinal staple geometry, we deliberately orient the transverse vectors orthogonally. By choosing $\vec{v}_{T}=(0,v_{3})$ and $\vec{b}_{T}=(b_{2},0)$, the right-hand side identically vanishes ($\vec{v}_{T}\cdot\vec{b}_{T} = 0$). 
+To satisfy this equation over a continuous range of $b \cdot P$ without coupling the transverse separation $\vec{b}_T$ directly to the longitudinal staple geometry, we orient the transverse vectors orthogonally. By choosing $\vec{v}_{T}=(0,v_{3})$ and $\vec{b}_{T}=(b_{2},0)$, the right-hand side identically vanishes ($\vec{v}_{T}\cdot\vec{b}_{T} = 0$). 
 
 \subsubsection{Explicit Calculation for \texorpdfstring{$P_1=-1$}{TEXT}}
 Setting the right-hand side to zero implies that the bracketed term must vanish. This uniquely fixes the required Collins-Soper parameter for a given lattice momentum. Using the lattice ensemble parameters, the nucleon mass and the lowest momentum mode are:
@@ -99,7 +99,7 @@ This geometric calculation is repeated over a range of nucleon momenta to increa
     \label{tab:lattice_params}
 \end{table}
 
-A profound consequence of Table \ref{tab:zeta_directions} is that the staple vector $v$ cannot align cleanly with the Cartesian axes of the Euclidean grid. Instead, it must point in an off-axis direction within the $v_1-v_3$ plane. For example, to achieve $v_1 = 0.301~v_3$ at $|P| = 1$, the Wilson line must trace an oblique, step-wise path across the discrete lattice sites (e.g., traversing roughly three lattice spacings in the 1-direction for every ten in the 3-direction). Generating these off-axis Wilson lines without injecting excessive discretization noise is a major operational challenge of this analysis, dictating our strategies for link smearing and gauge path selection.
+A consequence of Table \ref{tab:zeta_directions} is that the staple vector $v$ cannot align cleanly with the Cartesian axes of the Euclidean grid. Instead, it must point in an off-axis direction within the $v_1-v_3$ plane. For example, to achieve $v_1 = 0.301~v_3$ at $|P| = 1$, the Wilson line must trace an oblique, step-wise path across the discrete lattice sites (e.g., traversing roughly three lattice spacings in the 1-direction for every ten in the 3-direction). Generating these off-axis Wilson lines without injecting excessive discretization noise is a challenge that guides our strategies for link smearing and gauge path selection.
 
 \begin{figure}[htpb]
     \centering
@@ -116,7 +116,7 @@ To evaluate the correlation function as a function of the staple extent, we scal
  
  These bounding coordinates are reached via specific permutations of fundamental links. Within our methodology, a path sequence denoted as $\{1,3,1\}$ corresponds to a single link in the $\hat{x_{1}}$ direction, followed by one in the $\hat{x_{3}}$ direction, and a final link in the $\hat{x_{1}}$ direction, successfully landing at the physical integer coordinate $(2,0,1)$. By systematically varying these step sequences, we gather data at three to four physically adjacent lattice sites (e.g., on either side of the target along the $x^3$ slice). 
 
-Once these bounding matrix elements are computed, we perform a spatial interpolation inside the Jackknife resampling loop to extract the value precisely at the continuous target coordinate $\eta \vect{v}/a$. This interpolation drastically mitigates discretization artifacts and staircase errors associated with off-axis Wilson lines. A detailed mathematical description of this interpolation procedure is deferred to the subsequent section. The ideal continuous trajectories, alongside their corresponding discrete bounding paths and link sequences for each momentum transfer, are detailed in Figures \ref{fig:v_path_P-1} through \ref{fig:eta_table_P-4}.
+Once these bounding matrix elements are computed, we perform a spatial interpolation inside the Jackknife resampling loop to extract the value precisely at the continuous target coordinate $\eta \vect{v}/a$. This interpolation reduces discretization artifacts and staircase errors associated with off-axis Wilson lines. A detailed mathematical description of this interpolation procedure is deferred to the subsequent section. The ideal continuous trajectories, alongside their corresponding discrete bounding paths and link sequences for each momentum transfer, are detailed in Figures \ref{fig:v_path_P-1} through \ref{fig:eta_table_P-4}.
 
 % ---------------------------------------------------------
 % P_1 = -1 Figures
@@ -524,7 +524,7 @@ Evaluating the system for the negated separation ($-b^1$) introduces selective s
       \rule{0pt}{16pt} - \mN  \frac{|\vec{P}^1|}{E_N} \bvec^2  \tilde a^{\text{Re}}_{12}- \frac{  \mN^3}{E_N}  \bvec^2 \eta v^1  \tilde b^{\text{Re}}_8 + \frac{ \mN^3}{E_N}  |\vec{P}^1| \bvec^2 \eta^2 (v^3)^2 \tilde b^{\text{Re}}_{10}\textcolor{red}{-}\tilde a^{\text{Im}}_2
     \end{pmatrix}
 \end{align}
-By taking the symmetric average of the two matrices, $\frac{1}{2}\left(R^{[+b]} + R^{[-b]}\right)$, we mathematically project out the $b$-even combination, thereby naturally isolating the real parts of the requisite amplitudes:
+By taking the symmetric average of the two matrices, $\frac{1}{2}\left(R^{[+b]} + R^{[-b]}\right)$, we project out the $b$-even combination, isolating the real parts of the requisite amplitudes:
 \begin{align}
     \begin{pmatrix}
         \rule{0pt}{16pt} \text{Re}\{ R_{\Gamma(1)}\}^{[b^{1}\text{-even}]} \\
@@ -548,7 +548,7 @@ By taking the symmetric average of the two matrices, $\frac{1}{2}\left(R^{[+b]} 
       \rule{0pt}{16pt} -  \mN  \frac{|\vec{P}^1|}{E_N} \bvec^2  \tilde a^{\text{Re}}_{12}- \frac{  \mN^3}{E_N}  \bvec^2 \eta v^1  \tilde b^{\text{Re}}_8+ \frac{ \mN^3}{E_N}  |\vec{P}^1| \bvec^2 \eta^2 (v^3)^2 \tilde b^{\text{Re}}_{10}
     \end{pmatrix}
 \end{align}
-Conversely, taking the antisymmetric half-difference of the two matrices, $\frac{1}{2}\left(R^{[+b]} - R^{[-b]}\right)$, projects out the $b$-odd combination, strictly isolating the imaginary parts:
+Conversely, taking the antisymmetric half-difference of the two matrices, $\frac{1}{2}\left(R^{[+b]} - R^{[-b]}\right)$, projects out the $b$-odd combination, isolating the imaginary parts:
 \begin{align}
     \begin{pmatrix}
         \rule{0pt}{16pt} \text{Re}\{ R_{\Gamma(1)}\}^{[b^{1}\text{-odd}]} \\
@@ -628,69 +628,7 @@ where the geometric regularization factor characterizing the approach to the lig
 \label{sec:effective_amplitudes}
 
 With the fundamental invariant amplitudes explicitly isolated via the parity-projection of the lattice correlation functions, we can now synthesize the effective amplitudes that directly govern the unpolarized and Sivers Transverse Momentum Dependent (TMD) distributions. 
-theexplicitly 
-To ground these expressions in our simulated lattice geometry, we map the contravariant spatial indices to our physical grid parameters. We define the longitudinal spatial separation as $b_L \equiv b^1$ and the transverse spatial separation as $b_T \equiv b^2$. Consequently, the squared spatial separation vector becomes $\bvec^2 = b_L^2 + b_T^2$. Likewise, we identify the longitudinal nucleon momentum as $P_L \equiv P^1$. 
-
-We begin with the defining linear combination for the unpolarized effective amplitude, $\tAmp_{2B}$. Splitting this amplitude into its real and imaginary components yields:
-\begin{align}
-    \tAmp_{2B}^{\text{Re}}(b_L, b_T, \hat{\zeta}) &= \tAmp_2^{\text{Re}} + R(\zetahat^2) \tBmp_1^{\text{Re}} \\
-    \tAmp_{2B}^{\text{Im}}(b_L, b_T, \hat{\zeta}) &= \tAmp_2^{\text{Im}} + R(\zetahat^2) \tBmp_1^{\text{Im}}
-\end{align}
-
-Substituting the parity-projected lattice ratio observables derived in the previous section (and applying our $b_L, P_L$ geometric mapping), we form the complete, directly computable expression for the real part of $\tAmp_{2B}$:
-\begin{align}
-    \tAmp_{2B}^{\text{Re}}(b_L, b_T, \hat{\zeta}) &= \frac{1}{2}\text{Re}\{ R_{\Gamma(8)}\}^{[b_L\text{-even}]} + R(\zetahat^2) \frac{E_{N}|P_L|v^1}{2\mN^2 v^3} \text{Im}\{ R_{\Gamma(4)}\}^{[b_L\text{-even}]}
-\end{align}
-
-Applying the exact same substitution to the imaginary component, taking care to utilize the $b_L$-odd projected data sets to preserve the correct time-reversal parity, gives:
-\begin{align}
-    \tAmp_{2B}^{\text{Im}}(b_L, b_T, \hat{\zeta}) &= \frac{1}{2}\text{Im}\{ R_{\Gamma(8)}\}^{[b_L\text{-odd}]} - R(\zetahat^2) \frac{E_{N}|P_L|v^1}{2\mN^2 v^3} \text{Re}\{ R_{\Gamma(4)}\}^{[b_L\text{-odd}]}
-\end{align}
-
-We now turn our attention to the effective amplitude driving the Sivers shift, $\tAmp_{12B}$. This amplitude combines the fundamental structures $\tAmp_{12}$ and $\tBmp_8$. Its real and imaginary decompositions are defined as:
-\begin{align}
-    \tAmp_{12B}^{\text{Re}}(b_L, b_T, \hat{\zeta}) &= \tAmp_{12}^{\text{Re}} - R(\zetahat^2) \tBmp_8^{\text{Re}} \\
-    \tAmp_{12B}^{\text{Im}}(b_L, b_T, \hat{\zeta}) &= \tAmp_{12}^{\text{Im}} - R(\zetahat^2) \tBmp_8^{\text{Im}}
-\end{align}
-
-Because the terms within $\tAmp_{12B}$ are mathematically denser, we first explicitly write out the inner components $\tAmp_{12}^{\text{Re}}$ and $\tBmp_8^{\text{Re}}$ strictly in terms of the grid parameters $b_L$ and $b_T$. Using the kinematic constraint $\bvec^2 = b_L^2 + b_T^2$, the real part of the leading-twist term becomes:
-\begin{align}
-    \tAmp^{\text{Re}}_{12} &= \frac{-1}{2\mN (b_L^2 + b_T^2)} \left[\text{Re}\{ R_{\Gamma(1)}\}^{[b_L\text{-even}]} + \frac{v^3}{v^1}\text{Re}\{ R_{\Gamma(4)}\}^{[b_L\text{-even}]}\right]
-\end{align}
-
-Similarly, the corresponding real part of the rapidity-dependent correction term is expressed as:
-\begin{align}
-    \tBmp^{\text{Re}}_8 &= \frac{-E_N |P_L|}{ 2\mN^3 (b_L^2 + b_T^2) }\left[\text{Im}\{ R_{\Gamma(8)}\}^{[b_L\text{-even}]} + \frac{|P_L|v^3}{E_N v^1}\text{Re}\{ R_{\Gamma(4)}\}^{[b_L\text{-even}]} + 2\mN  \frac{|P_L|}{E_N} (b_L^2 + b_T^2)  \tAmp^{\text{Re}}_{12}\right]
-\end{align}
-
-Inserting these expanded components back into the definition of $\tAmp_{12B}^{\text{Re}}$, we yield the full, uncompressed equation required for the real-part Sivers integration:
-\begin{align}
-    \tAmp_{12B}^{\text{Re}}(b_L, b_T, \hat{\zeta}) &= \tAmp^{\text{Re}}_{12} - R(\zetahat^2) \Bigg( \frac{-E_N |P_L|}{ 2\mN^3 (b_L^2 + b_T^2) }\Bigg[\text{Im}\{ R_{\Gamma(8)}\}^{[b_L\text{-even}]} + \frac{|P_L|v^3}{E_N v^1}\text{Re}\{ R_{\Gamma(4)}\}^{[b_L\text{-even}]} \nonumber\\
-    &~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+ 2\mN  \frac{|P_L|}{E_N} (b_L^2 + b_T^2)  \tAmp^{\text{Re}}_{12}\Bigg] \Bigg)
-\end{align}
-
-To build the matching imaginary component of the Sivers effective amplitude, we first extract the underlying $b_L$-odd constituent structures:
-\begin{align}
-    \tAmp^{\text{Im}}_{12} &= \frac{-1}{2\mN (b_L^2 + b_T^2)} \left[\text{Im}\{ R_{\Gamma(1)}\}^{[b_L\text{-odd}]} + \frac{v^3}{v^1}\text{Im}\{ R_{\Gamma(4)}\}^{[b_L\text{-odd}]}\right]
-\end{align}
-
-And the corresponding imaginary rapidity-correction term:
-\begin{align}
-    \tBmp^{\text{Im}}_8 &= \frac{E_N |P_L|}{ 2\mN^3 (b_L^2 + b_T^2) }\left[\text{Re}\{ R_{\Gamma(8)}\}^{[b_L\text{-odd}]} - \frac{|P_L|v^3}{E_N v^1}\text{Im}\{ R_{\Gamma(4)}\}^{[b_L\text{-odd}]} - 2\mN  \frac{|P_L|}{E_N} (b_L^2 + b_T^2)  \tAmp^{\text{Im}}_{12}\right]
-\end{align}
-
-Substituting these into the $\tAmp_{12B}^{\text{Im}}$ definition provides the complete equation necessary for the odd-parity integration:
-\begin{align}
-    \tAmp_{12B}^{\text{Im}}(b_L, b_T, \hat{\zeta}) &= \tAmp^{\text{Im}}_{12} - R(\zetahat^2) \Bigg( \frac{E_N |P_L|}{ 2\mN^3 (b_L^2 + b_T^2) }\Bigg[\text{Re}\{ R_{\Gamma(8)}\}^{[b_L\text{-odd}]} - \frac{|P_L|v^3}{E_N v^1}\text{Im}\{ R_{\Gamma(4)}\}^{[b_L\text{-odd}]} \nonumber\\
-    &~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~- 2\mN  \frac{|P_L|}{E_N} (b_L^2 + b_T^2)  \tAmp^{\text{Im}}_{12}\Bigg] \Bigg)
-\end{align}
-
-\subsection{Constructing the Effective Amplitudes \texorpdfstring{$\tAmp_{2B}$}{TEXT} and \texorpdfstring{$\tAmp_{12B}$}{TEXT}}
-\label{sec:effective_amplitudes}
-
-With the fundamental invariant amplitudes explicitly isolated via the parity-projection of the lattice correlation functions, we can now synthesize the effective amplitudes that directly govern the unpolarized and Sivers Transverse Momentum Dependent (TMD) distributions. 
-theexplicitly 
-To ground these expressions in our simulated lattice geometry, we map the contravariant spatial indices to our physical grid parameters. We define the longitudinal spatial separation as $b_L \equiv b^1$ and the transverse spatial separation as $b_T \equiv b^2$. Consequently, the squared spatial separation vector expands to $\bvec^2 = b_L^2 + b_T^2$. Likewise, we identify the longitudinal nucleon momentum as $P_L \equiv P^1$. 
+To apply these expressions in our simulated lattice geometry, we map the contravariant spatial indices to our physical grid parameters. We define the longitudinal spatial separation as $b_L \equiv b^1$ and the transverse spatial separation as $b_T \equiv b^2$. Consequently, the squared spatial separation vector expands to $\bvec^2 = b_L^2 + b_T^2$. Likewise, we identify the longitudinal nucleon momentum as $P_L \equiv P^1$. 
 
 We begin with the defining linear combination for the unpolarized effective amplitude, $\tAmp_{2B}$. Splitting this amplitude into its real and imaginary components yields:
 \begin{align}
@@ -714,7 +652,7 @@ We now turn our attention to the effective amplitude driving the Sivers shift, $
     \tAmp_{12B}^{\text{Im}}(b_L, b_T, \hat{\zeta}) &= \tAmp_{12}^{\text{Im}} - R(\zetahat^2) \tBmp_8^{\text{Im}}
 \end{align}
 
-Because the terms within $\tAmp_{12B}$ are mathematically dense, we first explicitly write out the inner constituent $\tAmp_{12}^{\text{Re}}$ strictly in terms of the grid parameters $b_L$ and $b_T$. Using the spatial kinematic constraint $\bvec^2 = b_L^2 + b_T^2$, the real part of the leading-twist term becomes:
+Because the terms within $\tAmp_{12B}$ are more complex, we first write out the inner constituent $\tAmp_{12}^{\text{Re}}$ in terms of the grid parameters $b_L$ and $b_T$. Using the spatial kinematic constraint $\bvec^2 = b_L^2 + b_T^2$, the real part of the leading-twist term becomes:
 \begin{align}
     \tAmp^{\text{Re}}_{12} &= \frac{-1}{2\mN (b_L^2 + b_T^2)} \left[\text{Re}\{ R_{\Gamma(1)}\}^{[b_L\text{-even}]} + \frac{v^3}{v^1}\text{Re}\{ R_{\Gamma(4)}\}^{[b_L\text{-even}]}\right]
 \end{align}
@@ -764,7 +702,7 @@ To complete the geometric mapping, we must also ensure the squared separation te
     \bvec^2 &= \left( \frac{P \cdot b}{-P_L} \right)^2 + b_T^2
 \end{align}
 
-This substitution is the critical theoretical step of this chapter. By replacing $b_L$ and $\bvec^2$ with these invariant expressions, we dynamically transform our discrete, lattice-evaluated amplitudes into continuous mathematical functions formulated entirely within the Lorentz-invariant frame:
+By replacing $b_L$ and $\bvec^2$ with these invariant expressions, we transform our discrete lattice amplitudes into continuous functions within the Lorentz-invariant frame:
 \begin{align}
     \tAmp_{iB}(b_L, b_T, \hat{\zeta}) \quad \xrightarrow{\text{Coordinate Transformation}} \quad \tAmp_{iB}\left( P \cdot b, \bvec^2, \hat{\zeta} \right)
 \end{align}
@@ -775,18 +713,18 @@ With the amplitudes now successfully parameterized by the continuous invariant s
 	&=-m_{N} \frac{\int d(b\cdot P) \left[\cos{\left(x(b\cdot P)\right)}\tAmp_{12B}^{\text{Re}}(\cdots)-\sin{\left(x(b\cdot P)\right)}\tAmp_{12B}^{\text{Im}}(\cdots)\right]}{\int d(b\cdot P)\left[\cos{\left(x(b\cdot P)\right)}\tAmp_{2B}^{\text{Re}}(\cdots)-\sin{\left(x(b\cdot P)\right)}\tAmp_{2B}^{\text{Im}}(\cdots)\right]} \ .
 \end{align}
 
-This completes the rigorous mathematical framework bridging the raw Euclidean correlation ratios evaluated on the discrete lattice grid to the physical, $x$-dependent phenomenological observables required to study the Sivers effect.
+This provides the framework to connect the Euclidean correlation ratios evaluated on the lattice to the physical, $x$-dependent phenomenological observables required to study the Sivers effect.
 
 
 \pagebreak
 \subsection{Numerical Results and Parity Constraints of the Extracted Amplitudes}
 \label{sec:numerical_amplitudes}
 
-Before examining the lattice data across the different Collins-Soper scales ($\hat{\zeta}$), it is crucial to verify the fundamental symmetry properties of the extracted amplitudes. As established in our theoretical framework, Hermitian conjugation of the non-local correlator imposes strict parity constraints on the invariant amplitudes. Specifically, the condition $[\tAmp_{iB}(P \cdot b, \dots)]^* = \tAmp_{iB}(-P \cdot b, \dots)$ dictates the exact mathematical behavior of their real and imaginary components with respect to the longitudinal separation.
+Before examining the lattice data across the different Collins-Soper scales ($\hat{\zeta}$), we must verify the symmetry properties of the extracted amplitudes. As established in our theoretical framework, Hermitian conjugation of the non-local correlator imposes parity constraints on the invariant amplitudes. Specifically, the condition $[\tAmp_{iB}(P \cdot b, \dots)]^* = \tAmp_{iB}(-P \cdot b, \dots)$ dictates the exact mathematical behavior of their real and imaginary components with respect to the longitudinal separation.
 
 For the real parts of the amplitudes, $\tAmp_{2B}^{\text{Re}}$ and $\tAmp_{12B}^{\text{Re}}$, this conjugation relation enforces $\tAmp_{iB}^{\text{Re}}(P \cdot b) = \tAmp_{iB}^{\text{Re}}(-P \cdot b)$. Consequently, these real amplitudes must be strictly even functions of the invariant scalar $P \cdot b$. In our simulated lattice frame, where the inner product evaluates to $P \cdot b = -P_L b_L$, this physical constraint requires the amplitudes to be symmetric (even) with respect to the Cartesian longitudinal separation $b_L$. 
 
-Conversely, for the imaginary parts of the amplitudes, $\tAmp_{2B}^{\text{Im}}$ and $\tAmp_{12B}^{\text{Im}}$, the conjugation relation demands $\tAmp_{iB}^{\text{Im}}(P \cdot b) = -\tAmp_{iB}^{\text{Im}}(-P \cdot b)$. Therefore, the imaginary amplitudes are strictly odd functions of $P \cdot b$, and correspondingly, antisymmetric (odd) functions of $b_L$. The lattice data plotted in the subsequent spaces robustly exhibit these exact even and odd symmetry profiles along the $b_L$ axis, successfully validating our parity-projection methodology.
+Conversely, for the imaginary parts of the amplitudes, $\tAmp_{2B}^{\text{Im}}$ and $\tAmp_{12B}^{\text{Im}}$, the conjugation relation demands $\tAmp_{iB}^{\text{Im}}(P \cdot b) = -\tAmp_{iB}^{\text{Im}}(-P \cdot b)$. Therefore, the imaginary amplitudes are strictly odd functions of $P \cdot b$, and correspondingly, antisymmetric (odd) functions of $b_L$. The lattice data plotted in the subsequent spaces exhibit these even and odd symmetry profiles along the $b_L$ axis, validating our parity-projection methodology.
 
 However, an important distinction emerges when analyzing the statistical quality of the extracted signals. While the unpolarized amplitudes ($\tAmp_{2B}^{\text{Re}}$ and $\tAmp_{2B}^{\text{Im}}$) and the real Sivers amplitude ($\tAmp_{12B}^{\text{Re}}$) exhibit clear, statistically resolvable signals across the simulated Variable Space, the imaginary Sivers amplitude ($\tAmp_{12B}^{\text{Im}}$) does not. Across all evaluated momentum transfers and staple extents, the extracted lattice data for $\tAmp_{12B}^{\text{Im}}$ remains completely dominated by gauge noise and is statistically compatible with zero. Because there is no distinguishable signal, it is impossible to meaningfully constrain or fit a phenomenological model to this component. Consequently, $\tAmp_{12B}^{\text{Im}}$ is discarded from further analysis, and the $x$-dependent Sivers shift will be evaluated relying exclusively on the robust $\tAmp_{12B}^{\text{Re}}$ data.
 
