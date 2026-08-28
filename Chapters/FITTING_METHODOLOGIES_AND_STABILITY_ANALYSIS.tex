@@ -1,9 +1,9 @@
 \section{FITTING METHODOLOGIES AND STABILITY ANALYSIS}
 \label{sec:fitting_methodologies}
 
-The extracted lattice data shows a large difference in statistical precision between the invariant amplitudes. The real part of the unpolarized amplitude, $\tAmp_{2B}^{\text{Re}}$, has small statistical uncertainties across the simulated phase space. In contrast, the imaginary unpolarized amplitude $\tAmp_{2B}^{\text{Im}}$ and the real Sivers amplitude $\tAmp_{12B}^{\text{Re}}$ have larger gauge noise. We already discarded the imaginary Sivers amplitude $\tAmp_{12B}^{\text{Im}}$ because it is statistically consistent with zero. Because $\tAmp_{2B}^{\text{Re}}$ is the leading-twist unpolarized background and has the highest data quality, we first establish a stable global fit for it to serve as the basis for the rest of the numerical analysis.
+The lattice data shows different levels of statistical precision between the invariant amplitudes. The real part of the unpolarized amplitude, $\tAmp_{2B}^{\text{Re}}$, has small statistical uncertainties across the simulated position space, whereas the imaginary unpolarized amplitude $\tAmp_{2B}^{\text{Im}}$ and the real Sivers amplitude $\tAmp_{12B}^{\text{Re}}$ have larger gauge noise. We already discarded the imaginary Sivers amplitude $\tAmp_{12B}^{\text{Im}}$ because it is consistent with zero. We first establish a stable global fit for $\tAmp_{2B}^{\text{Re}}$ to use as the baseline for the remaining numerical analysis, as it is the leading-twist unpolarized background and has the highest data quality.
 
-We parameterize the amplitudes natively in the Cartesian spatial domain $(b_L, b_T)$ rather than the Lorentz-invariant phase space spanned by $(P \cdot b, b^2)$. Fitting directly in the invariant space introduces numerical and physical instabilities.
+We parameterize the amplitudes natively in the Cartesian spatial domain $(b_L, b_T)$ rather than the Lorentz-invariant variable space $(P \cdot b, b^2)$. Fitting directly in the invariant space introduces numerical and physical instabilities.
 
 Fitting in $(b_L, b_T)$ provides a larger, more uniformly distributed set of discrete data points and resolves kinematic degeneracies. Because the squared separation distance $b^2 = b_L^2 + b_T^2$ is strictly non-negative, multiple distinct combinations of longitudinal and transverse separations (such as a large $b_L$ with a small $b_T$, or a small $b_L$ with a large $b_T$) map to the same invariant $b^2$.
 
@@ -12,13 +12,13 @@ Fitting in the $(P \cdot b, b^2)$ basis would compress these distinct orthogonal
 \subsection{Coordinate Transformation and the Simple Gaussian Model}
 \label{sec:gaussian_transformation}
 
-We parameterize the amplitudes natively in the Cartesian $(b_L, b_T)$ lattice space to resolve kinematic degeneracies, then map the resulting functions into the continuous Lorentz-invariant $(P \cdot b, b^2)$ phase space. We begin by testing a simple two-dimensional Gaussian profile.
+We parameterize the amplitudes natively in the Cartesian $(b_L, b_T)$ lattice space to resolve kinematic degeneracies, then map the functions into the continuous Lorentz-invariant variable space $(P \cdot b, b^2)$. We begin by testing a two-dimensional Gaussian profile.
 
 For the real parts of the amplitudes ($\tAmp^{Re}_{iB}$), Hermitian conjugation symmetries require the function to be even in the longitudinal separation $b_L$. We model the real amplitude with a standard 2D Gaussian centered at the origin:
 \begin{align}
     \tAmp^{Re}_{iB}&=\gamma \exp{\left[-\alpha b_L^2-\beta b_T^2\right]}
 \end{align}
-To transform this into the invariant phase space, we must eliminate the transverse coordinate $b_T$. We utilize the geometric constraint defining the squared separation vector, $b^2 = b_L^2 + b_T^2$, which allows us to substitute $b_T^2 = b^2 - b_L^2$:
+To transform this into the invariant variable space, we eliminate the transverse coordinate $b_T$. We use the geometric constraint for the squared separation vector, $b^2 = b_L^2 + b_T^2$, to substitute $b_T^2 = b^2 - b_L^2$:
 \begin{align}
     \tAmp^{Re}_{iB}&=\gamma \exp{\left[-\alpha b_L^2-\beta \left(b^2-b_L^2\right)\right]}
 \end{align}
@@ -81,7 +81,7 @@ Substituting $b_L = (P \cdot b) / (-P_L)$ for both the linear prefactor and the 
 \end{figure}
 
 \subsubsection{Failure of the Simple Gaussian Model}
-The Gaussian parameterization maps easily into the $(P \cdot b, b^2)$ phase space, but it does not satisfy the physical constraints necessary to extract the Sivers shift.
+The Gaussian parameterization maps easily into the $(P \cdot b, b^2)$ variable space, but it fails the physical constraints needed to extract the Sivers shift.
 
 We map these amplitudes into the invariant space to perform a continuous Fourier transform over $P \cdot b$ and extract the momentum fraction $x$-dependence. In the transformed real amplitude, the exponential governing the $P \cdot b$ integration is:
 \begin{equation}
@@ -386,7 +386,7 @@ The extracted parameters from the simultaneous fit for the lowest simulated nucl
 
 \input{SimultaneousFitsCov/Fit_Table_PL\PLval_bmin3}
 
-Figures \ref{fig:A2B_amplitudes_fit_P1} and \ref{fig:combined_fit_P1} show the results of the correlated minimization. The parameterization (represented by the continuous surfaces and shaded error bands) aligns with the discrete lattice data across the Cartesian $(b_L/a, b_T/a)$ grid and the Lorentz-invariant $(P \cdot b, b^2)$ phase space. Excluding the short-distance data ($|\vect{b}| < 3a$) ensures the fit captures the long-range dynamics without skewing from ultraviolet lattice artifacts.
+Figures \ref{fig:A2B_amplitudes_fit_P1} and \ref{fig:combined_fit_P1} show the results of the correlated minimization. The parameterization, shown as continuous surfaces with shaded error bands, matches the discrete lattice data across the Cartesian $(b_L/a, b_T/a)$ grid and the Lorentz-invariant $(P \cdot b, b^2)$ variable space. Excluding the short-distance data ($|\vect{b}| < 3a$) ensures the fit captures long-range dynamics without ultraviolet lattice artifacts skewing the results.
 
 \begin{figure}[htbp]
     \centering
