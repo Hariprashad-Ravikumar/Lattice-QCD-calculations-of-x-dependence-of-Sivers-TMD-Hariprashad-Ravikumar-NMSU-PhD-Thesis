@@ -101,7 +101,7 @@ Because of this divergence and poor fit quality, we cannot use the simple Gaussi
 
 Before fitting the lattice amplitudes, we account for the limits of the discretized spacetime. Lattice QCD defines the theory on a discrete grid with a finite lattice spacing $a$. Observables evaluated at length scales comparable to $a$ contain discretization artifacts.
 
-At short quark-separation distances ($|\vect{b}| \sim 1a$ or $2a$), the continuous rotational symmetry of QCD breaks down to the discrete hypercubic group of the lattice. The step-wise Wilson lines connecting these closely spaced fields also introduce $\mathcal{O}(a)$ and $\mathcal{O}(a^2)$ finite-spacing errors. Fitting continuum models to these short-distance points would cause the algorithm to parameterize ultraviolet lattice artifacts instead of the non-perturbative structure of the nucleon.
+At short quark-separation distances ($|\vect{b}| \sim 1a$ or $2a$), the continuous $O(4)$ rotational symmetry of Euclidean QCD breaks down to the discrete hypercubic group of the lattice. The step-wise Wilson lines connecting these closely spaced fields also introduce $\mathcal{O}(a)$ and $\mathcal{O}(a^2)$ finite-spacing errors. Fitting continuum models to these short-distance points would cause the algorithm to parameterize ultraviolet lattice artifacts instead of the non-perturbative structure of the nucleon.
 
 To separate our parameterizations from these short-distance effects, we apply a spatial cut to our dataset before fitting. We exclude data points where the magnitude of the spatial separation is less than three lattice units:
 \begin{equation}
@@ -113,13 +113,13 @@ With the dataset restricted to $b \ge 3a$, the non-local operator spans enough l
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{plots/short_distance/A2B_Re_b_lessthan3_and_ge3.pdf}
-    \caption{Plots of $\tAmp^{Re}_{2B}$ amplitude showing data $|\vect{b}| < 3a$ curving in opposite way that data at $|\vect{b}| \ge 3a$ for fixed momentum ($P=-1$) and fixed $\eta$ (say $\eta=8$)}
+    \caption{Plots of $\tAmp^{Re}_{2B}$ amplitude showing the short-distance data ($|\vect{b}| < 3a$) exhibiting an opposite curvature compared to the long-distance data ($|\vect{b}| \ge 3a$) for fixed momentum ($P=-1$) and fixed $\eta$ (say $\eta=8$)}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{plots/short_distance/A12B_Re_b_lessthan3_and_ge3.pdf}
-    \caption{Plots of $\tAmp^{Re}_{12B}$ amplitude showing data $|\vect{b}| < 3a$ curving in opposite way that data at $|\vect{b}| \ge 3a$ for fixed momentum ($P=-1$) and fixed $\eta$ (say $\eta=8$)}
+    \caption{Plots of $\tAmp^{Re}_{12B}$ amplitude showing the short-distance data ($|\vect{b}| < 3a$) exhibiting an opposite curvature compared to the long-distance data ($|\vect{b}| \ge 3a$) for fixed momentum ($P=-1$) and fixed $\eta$ (say $\eta=8$)}
 \end{figure}
 
 All subsequent stability analyses, global fits, and extracted phenomenological parameters discussed in this chapter are derived strictly from this artifact-suppressed ($|\vect{b}| \ge 3a$) dataset.
@@ -128,14 +128,14 @@ All subsequent stability analyses, global fits, and extracted phenomenological p
 \subsection{Physics-Informed Symbolic Regression via PySR}
 \label{sec:pysr_methodology}
 
-Guessing the correct functional form of a non-local amplitude in a multi-dimensional space is susceptible to human bias. To address this, we use Symbolic Regression (SR). 
+Selecting a multi-dimensional functional form by hand introduces human bias. To address this, we use Symbolic Regression (SR). 
 
 Unlike traditional regression, which optimizes the parameters of a pre-determined function, symbolic regression searches the space of mathematical expressions and their parameters simultaneously. We utilize \texttt{PySR} \cite{Cranmer2023pysr}, a framework that uses Genetic Programming to discover interpretable equations from data by balancing goodness-of-fit with mathematical parsimony.
 
 \subsubsection{Expression Search and Configuration}
-\texttt{PySR} \cite{Cranmer2023pysr, Koza1992GP, Schmidt2009Distilling} uses a genetic algorithm to iteratively distill mathematical expressions represented as binary trees. The algorithm evaluates a population of expressions against the lattice data using a custom loss function over thousands of generations. 
+\texttt{PySR} \cite{Cranmer2023pysr, Koza1992GP, Schmidt2009Distilling} uses a genetic algorithm to iteratively evolve mathematical expressions represented as binary trees. The algorithm evaluates a population of expressions against the lattice data using a custom loss function over thousands of generations. 
 
-The specific configuration of the \texttt{PySR} search, including the permitted mathematical operators, nesting constraints, and key hyperparameters, is detailed in Table~\ref{tab:pysr_config}. Notably, the operator library includes a custom Lorentzian-type binary operator, $\text{lor}(x, y) = 1/(1 + x^2 + y^2)^2$, alongside standard arithmetic and exponential functions, while nesting constraints prevent the algorithm from generating physically meaningless double-exponential or double-decay structures.
+The specific configuration of the \texttt{PySR} search, including the permitted mathematical operators, nesting constraints, and key hyperparameters, is detailed in Table~\ref{tab:pysr_config}. The operator library includes a custom Lorentzian-type binary operator, $\text{lor}(x, y) = 1/(1 + x^2 + y^2)^2$, alongside standard arithmetic and exponential functions, while nesting constraints prevent the algorithm from generating physically meaningless double-exponential or double-decay structures.
 
 \input{PySR_outputs/pysr_model_config}
 
@@ -144,7 +144,7 @@ The specific configuration of the \texttt{PySR} search, including the permitted 
 
 Standard symbolic regression optimizes metrics like Mean Squared Error (MSE). However, a genetic algorithm might discover a polynomial or diverging exponential function that fits the finite $(b_L, b_T)$ lattice grid well, but diverges as $b_L \to \infty$. As shown in Section \ref{sec:gaussian_transformation}, this would cause the subsequent Fourier transform over $P \cdot b$ to diverge.
 
-We implemented a custom loss function within \texttt{PySR} to enforce the asymptotic physics of the nucleon. The base accuracy of the model is determined by the reduced chi-squared statistic:
+We implemented a custom loss function within \texttt{PySR} to enforce the required asymptotic decay. The base accuracy of the model is determined by the reduced chi-squared statistic:
 \begin{align}
     \mathcal{L}_{\text{base}} = \frac{\chi^2}{\text{dof}} = \frac{1}{N - k} \sum_{i=1}^{N} \left( \frac{\tAmp_{2B}^{\text{Re, lattice}}(i) - \tAmp_{2B}^{\text{Re, model}}(i)}{\sigma_i} \right)^2
 \end{align}
@@ -174,7 +174,7 @@ The symbolic regression outputs a Pareto front of candidate models: a ranked lis
 
 \input{PySR_outputs/pysr_equations_table}
 
-At the lowest complexities ($C \leq 4$), \texttt{PySR} captures the overall $\eta$-dependence of the amplitude as an exponential decay $\sim (0.499)^\eta \approx e^{-0.695\eta}$, consistent with the area-law suppression of the extended Wilson line. At intermediate complexities ($C = 7$--$12$), the algorithm introduces spatial $b$-dependence through Lorentzian-type power-law denominators $(1 + b_L^2 + b_T^2)^{-j}$ alongside linear or power-law $\eta$-models. The algorithm does not select a Gaussian spatial profile $e^{-cb^2}$ at any point along the Pareto front. It instead converges on the power-law tail structure, aligning with the findings in Section~\ref{sec:gaussian_transformation}.
+At the lowest complexities ($C \leq 4$), \texttt{PySR} isolates the overall $\eta$-dependence of the amplitude as an exponential decay $\sim (0.499)^\eta \approx e^{-0.695\eta}$, consistent with the area-law suppression of the extended Wilson line. At intermediate complexities ($C = 7$--$12$), the algorithm introduces spatial $b$-dependence through Lorentzian-type power-law denominators $(1 + b_L^2 + b_T^2)^{-j}$ alongside linear or power-law $\eta$-models. The algorithm does not select a Gaussian spatial profile $e^{-cb^2}$ at any point along the Pareto front. It instead converges on the power-law tail structure, aligning with the findings in Section~\ref{sec:gaussian_transformation}.
 
 The models at complexities $C = 14$ and $C = 16$ provide the best balance of accuracy and structure. The $C = 14$ expression achieves a factorized form:
 \begin{equation}
@@ -188,7 +188,7 @@ which is a product of an exponential decay in $\eta$ and a generalized Lorentzia
 \end{equation}
 Beyond $C = 16$, added complexity provides marginal improvements in loss while reducing interpretability.
 
-The power-law tail $(1 + b^2)^{-j}$ with $j > 1/2$ decays algebraically at large separations. This is slower than a Gaussian decay but remains absolutely integrable over the real line. Unlike the Gaussian model, where the sign of $(\alpha - \beta)$ can render the Fourier integral divergent, the power-law denominator guarantees convergent integrals for positive exponents $j > 1/2$. Additionally, the factorized structure $e^{-f\eta} \times g(b^2)$ allows the shared $\eta$-dependent exponential to cancel analytically in the Sivers shift ratio, which we use in Section~\ref{sec:simultaneous_fit_strategy}.
+The power-law tail $(1 + b^2)^{-j}$ with $j > 1/2$ decays algebraically at large separations. This is slower than a Gaussian decay but remains absolutely integrable over the real line. Unlike the Gaussian model, where the sign of $(\alpha - \beta)$ can render the Fourier integral divergent, the power-law denominator guarantees convergent integrals for positive exponents $j > 1/2$. The factorized structure $e^{-f\eta} \times g(b^2)$ also allows the shared $\eta$-dependent exponential to cancel analytically in the Sivers shift ratio, which we use in Section~\ref{sec:simultaneous_fit_strategy}.
 
 \begin{figure}[htbp]
     \centering
@@ -359,7 +359,7 @@ To enforce this shared $\eta$-dependence across the amplitudes, we use a simulta
 
 \subsection{Simultaneous Fit with Full Covariance Matrix}
 
-Because the amplitudes are extracted from the same gauge field configurations and evaluated across nearby spatial coordinates ($b_L, b_T$), their statistical fluctuations are highly correlated. A simple uncorrelated $\chi^2$ minimization would improperly weight these data points, leading to deflated uncertainties and biased central values.
+Because the amplitudes are extracted from the same gauge field configurations and evaluated across nearby spatial coordinates $(b_L, b_T)$, their statistical fluctuations are highly correlated. A simple uncorrelated $\chi^2$ minimization improperly weights these data points, which deflates uncertainties and biases the central values.
 
 To resolve this, we perform a correlated $\chi^2$ minimization utilizing the full covariance matrix. This accounts for the cross-correlations inherent in the lattice data, both across different spatial separations and across the real and imaginary amplitude components. 
 
