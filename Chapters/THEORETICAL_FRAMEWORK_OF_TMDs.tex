@@ -21,7 +21,7 @@ Depending on the specific factorization scheme employed, the soft factor $\widet
     { \tilde S_{(0)}( \vprp{\bvec}, + \infty, y_s ) }
   } \ ,
 \end{equation}
-where $\tilde S_{(0)}( \vprp{\bvec}, \ldots )$ represents these vacuum expectation values. In this scheme, the Wilson lines are initially space-like, with some remaining tilted off the light cone (characterized by the rapidity $y_s$). The lines within $\WlineC{\mathcal{C}_\bvec}$ in the numerator of Eq.~\eqref{eq-corr} are formally taken to the light-cone limit ($\pm\infty$). While space-like Wilson line structures are directly computable on the Euclidean lattice, executing the strict light-cone limit numerically remains a profound challenge. However, for the specific observables constructed in this work, the explicit functional form of $\widetilde{\softf}(\bvec^2;\ldots)$ does not need to be rigorously evaluated, as it strategically cancels out in appropriately constructed ratios.
+where $\tilde S_{(0)}( \vprp{\bvec}, \ldots )$ represents these vacuum expectation values. In this scheme, the Wilson lines are initially space-like, with some remaining tilted off the light cone (characterized by the rapidity $y_s$). The lines within $\WlineC{\mathcal{C}_\bvec}$ in the numerator of Eq.~\eqref{eq-corr} are formally taken to the light-cone limit ($\pm\infty$). While space-like Wilson line structures are directly computable on the Euclidean lattice, executing the strict light-cone limit numerically remains challenging. However, for the specific observables constructed in this work, the explicit functional form of $\widetilde{\softf}(\bvec^2;\ldots)$ does not need to be rigorously evaluated, as it cancels out in appropriately constructed ratios.
 
 Projecting the correlator onto the relevant kinematic space requires integrating over the suppressed momentum component $k^-$, which corresponds to evaluating the position-space separation at $b^+ = 0$:
 \begin{align}
@@ -34,10 +34,10 @@ In this regime, $x$ and $(\bvec \tcdot P)$ form a Fourier conjugate pair, as do 
 \begin{align}
 	\Phi^{[\gamma^+]}(x,\vprp{k};P,S,\ldots) & = f_1 - \toddmark{\frac{\myeps_{ij}\, \vect{k}_{i}\, \vect{S}_{j}}{m_N}\ f_{1T}^\prp} \label{eq-phigammaplus}\ . 
 \end{align}
-The term enclosed in $[\ ]_\text{odd}$ isolates the naively time-reversal odd (T-odd) Sivers function $f_{1T}^\perp$ \cite{Sivers:1989cc}, representing the distribution of unpolarized quarks inside a transversely polarized nucleon. The emergence and survival of this T-odd structure is inextricably linked to the extended gauge link geometry and symmetry transformations discussed in the subsequent sections.
+The term enclosed in $[\ ]_\text{odd}$ isolates the naively time-reversal odd (T-odd) Sivers function $f_{1T}^\perp$ \cite{Sivers:1989cc}, representing the distribution of unpolarized quarks inside a transversely polarized nucleon. The emergence and survival of this T-odd structure depends on the extended gauge link geometry and symmetry transformations discussed in the subsequent sections.
 
 \subsection{General strategy}
-Transitioning this continuous framework onto a discrete Euclidean spacetime lattice introduces profound theoretical constraints. Evaluating standard collinear PDFs utilizes a straightforward, light-like Wilson line:
+Transitioning this continuous framework onto a discrete Euclidean spacetime lattice introduces significant theoretical constraints. Evaluating standard collinear PDFs utilizes a straightforward, light-like Wilson line:
 \begin{equation*}
   f_1(x) \equiv \frac{1}{2 (2\pi)} \int db^- e^{i x P^+ b^-} \, \bra{P,S}\ \bar{q}(0)\, \gamma^+\ \Wline{0,n b^-}\ q(n b^-)\ \ket{P,S} \ .
 \end{equation*}
@@ -46,7 +46,7 @@ Because this interval is strictly Minkowskian, it cannot be rotated into Euclide
 Extracting the $x$-dependence of the Sivers TMD, however, deviates from this collinear constraint and presents unique lattice opportunities:
 \begin{enumerate}
   \item \textbf{Space-like Transverse Separation:} The operator separation acquires a transverse component, $\bvec = n \bvec^- + \bvec_\perp$. This ensures the interval is generally space-like, permitting a direct representation of the non-local operator in Euclidean spacetime.
-  \item \textbf{Extended Gauge Link Geometries:} The Wilson line $\WlineC{\mathcal{C}_\bvec}$ is process-dependent and typically extends to infinity to model initial or final state interactions. This complex topology fundamentally precludes a simple expansion into local operators. 
+  \item \textbf{Extended Gauge Link Geometries:} The Wilson line $\WlineC{\mathcal{C}_\bvec}$ is process-dependent and typically extends to infinity to model initial or final state interactions. This complex topology prevents a simple expansion into local operators. 
   \item \textbf{Soft Factor Regularization:} Standard $\overline{\mathrm{MS}}$ dimensional regularization fails to capture the rapidity divergences associated with these extended links, forcing the inclusion of the soft factor $\tilde \softf$ and mandating evolution across additional regularization scales.
 \end{enumerate}
 
@@ -84,7 +84,7 @@ The approach toward the physical light-like limit ($v = \nminus$) is parameteriz
 highlighting that $\hat \zeta$ effectively measures the rapidity difference between the nucleon momentum and the Wilson line direction. Crucially for our methodology, this permits boosting the system to a frame where $v$ is purely spatial ($v^0 = 0, y_v=0$).
 
 \subsection{Symmetry Constraints}
-The correlation function is severely restricted by discrete symmetries. Consider the unsubtracted correlator \cite{Boer:2011xd}:
+The correlation function is constrained by discrete symmetries. Consider the unsubtracted correlator \cite{Boer:2011xd}:
 \begin{align}
   \Phi^{[\GammaOp]}_{\text{unsub}} (\kei,P,S;v,\mu) & = \int \frac{d^4 \elll}{(2\pi)^4} \ 
   e^{i\kei \cdot \elll} 
@@ -107,7 +107,7 @@ Enforcing Lorentz ($L$), Parity ($P$), Time-reversal ($T$), and Hermitian conjug
 	&(T): &\left[ \Phi^{[\Gamma]}_{\text{unsub}}(k,P,S;v,\mu) \right]^* &= \Phi^{[\gamma^1 \gamma^3 \Gamma^* \gamma^3 \gamma^1]}_{\text{unsub}}(\overline{k},\overline{P},\overline{S};-\overline{v},\mu) \ , \label{eq-contime} \displaybreak[0] \\
 	&(\dagger): &\left[  \Phi^{[\Gamma]}_{\text{unsub}}(k,P,S;v,\mu) \right]^* &= \Phi^{[\gamma^0 \Gamma^\dagger \gamma^0]}_{\text{unsub}}(k,P,S;v,\mu) \ . \label{eq-conherm}
 \end{align}
-While hermiticity forces $\Amp_i$ and $\Bmp_i$ to be real, time reversal flips the sign of $v \tcdot P$, directly bridging the amplitudes governing Semi-Inclusive Deep Inelastic Scattering (SIDIS) and the Drell-Yan (DY) process—the physical mechanism driving the Sivers sign change.
+While hermiticity forces $\Amp_i$ and $\Bmp_i$ to be real, time reversal flips the sign of $v \tcdot P$, directly bridging the amplitudes governing Semi-Inclusive Deep Inelastic Scattering (SIDIS) and the Drell-Yan (DY) process—which causes the Sivers sign change.
 
 Mapping these systematic restrictions to coordinate space under hermitian conjugation specifically, the position-space correlator transforms as:
 \begin{align}
@@ -162,7 +162,7 @@ where the combined amplitudes are defined as:
 	\tAmp_{12B}  & \ \equiv\  \tAmp_{12} - R(\zetahat^2) \tBmp_8 \ . \displaybreak[0] 
 	\label{eq-ABamps_sivers}
 \end{align}
-The final physics deliverables—the unpolarized distribution $f_1$ and the Sivers distribution $f_{1T}^\perp$—are achieved by applying a standardized Fourier integration operator $\fourint$:
+The final unpolarized distribution $f_1$ and the Sivers distribution $f_{1T}^\perp$ are achieved by applying a standardized Fourier integration operator $\fourint$:
 \begin{align}
 	\fourint \tAmp_i \equiv & \int \frac{d^2 \vprp{\bvec}}{(2\pi)^2}\,e^{-i\vprp{\bvec}\tcdot\vprp{\kei}}\, \frac{1}{\widetilde{\mathcal{S}}(\bvec^2;\ldots)} \int \frac{d(\bvec \tcdot P)}{(2\pi)}\,e^{ix(\bvec \tcdot P)} 
 	\tAmp_i(-\vprp{\bvec}^2,\bvec \tcdot P,(\bvec \tcdot P) R(\zetahat^2)/\mN^2,-1/(\mN\zetahat)^2,\eta v \tcdot P) \ .
