@@ -1,46 +1,26 @@
 \section{FITTING METHODOLOGIES AND STABILITY ANALYSIS}
 \label{sec:fitting_methodologies}
 
-Extracting the momentum-fraction $x$-dependence of transverse momentum-dependent parton distributions (TMDs) from lattice QCD requires reconstructing continuous light-cone correlation functions from discrete Euclidean correlation functions. Our lattice calculations evaluate non-local quark bilinear operators connected by staple-shaped Wilson lines of length $\eta$, simulated across a discrete spatial grid $(b_L, b_T)$ and discrete nucleon boost momenta $P_L$. 
+The lattice data shows different levels of statistical precision between the invariant amplitudes. The real part of the unpolarized amplitude, $\tAmp_{2B}^{\text{Re}}$, has small statistical uncertainties across the simulated position space, whereas the imaginary unpolarized amplitude $\tAmp_{2B}^{\text{Im}}$ and the real Sivers amplitude $\tAmp_{12B}^{\text{Re}}$ have larger gauge noise. We already discarded the imaginary Sivers amplitude $\tAmp_{12B}^{\text{Im}}$ because it is consistent with zero. We first establish a stable global fit for $\tAmp_{2B}^{\text{Re}}$ to use as the baseline for the remaining numerical analysis, as it corresponds to the leading-twist unpolarized TMD and has the highest data quality.
 
-The lattice data exhibits uneven statistical precision across the invariant amplitudes. The real unpolarized amplitude, $\tAmp_{2B}^{\text{Re}}$, has small statistical errors across the entire spatial volume. In contrast, the imaginary unpolarized amplitude $\tAmp_{2B}^{\text{Im}}$ and the real Sivers amplitude $\tAmp_{12B}^{\text{Re}}$ have noticeably larger gauge noise. The imaginary Sivers amplitude $\tAmp_{12B}^{\text{Im}}$ is consistent with zero within statistical uncertainties and is dropped from further numerical fitting. We therefore establish our spatial parameterization strategy primarily on $\tAmp_{2B}^{\text{Re}}$, and then extend the discovered structure to $\tAmp_{2B}^{\text{Im}}$ and $\tAmp_{12B}^{\text{Re}}$ in a joint simultaneous fit.
+We parameterize the amplitudes natively in the Cartesian spatial domain $(b_L, b_T)$ rather than the Lorentz-invariant variable space $(P \cdot b, b^2)$. Fitting directly in the invariant space causes instabilities.
 
-We fit the amplitudes directly in Cartesian coordinates $(b_L, b_T)$ rather than in Lorentz-invariant variables $(P \cdot b, b^2)$. Because $b^2 = b_L^2 + b_T^2 \ge 0$, different physical configurations—such as long longitudinal separation with small transverse separation versus short longitudinal separation with large transverse separation—map onto the identical value of $b^2$. Fitting directly in the invariant variable space compresses these orthogonal directions, causing numerical instabilities. Parameterizing the 2D surface over $(b_L, b_T)$ separates the longitudinal boost profile from the transverse decay before projecting into the continuous Lorentz frame to evaluate the Fourier integrals.
+Fitting in $(b_L, b_T)$ provides a larger, more uniformly distributed set of discrete data points and resolves kinematic degeneracies. Because the squared separation distance $b^2 = b_L^2 + b_T^2$ is strictly non-negative, multiple distinct combinations of longitudinal and transverse separations (such as a large $b_L$ with a small $b_T$, or a small $b_L$ with a large $b_T$) map to the same invariant $b^2$.
 
-\subsection{Methodological Roadmap}
+Fitting in the $(P \cdot b, b^2)$ basis would compress these distinct orthogonal spatial dependencies into a single coordinate. Fitting the two-dimensional surface over the $(b_L, b_T)$ grid allows the model to separate the longitudinal decay profile from the transverse decay profile. After modeling this surface using the precise $\tAmp_{2B}^{\text{Re}}$ data, we can analytically evaluate the continuous parameterization at any invariant kinematic point to perform the final Fourier transforms.
+
+\subsection{Chapter Roadmap}
 \label{sec:chapter_roadmap}
 
-To establish a physically robust and stable parameterization of the lattice amplitudes, our analysis follows a systematic seven-stage workflow, summarized in Table~\ref{tab:methodology_roadmap}.
-
-\begin{table}[htbp]
-\centering
-\renewcommand{\arraystretch}{1.3}
-\caption{Systematic workflow for extracting $x$-dependent TMD distributions and the Sivers shift from lattice correlation functions.}
-\label{tab:methodology_roadmap}
-\scalebox{0.82}{
-\begin{tabular}{|c|l|p{7.2cm}|p{5.5cm}|}
-\hline
-\textbf{Stage} & \textbf{Analysis Step} & \textbf{Objective \& Methodology} & \textbf{Key Finding / Decision} \\
-\hline
-1 & \textbf{UV Filtering} & Exclude data with $|\vect{b}| < 3a$ to eliminate short-distance lattice artifacts and hypercubic rotational symmetry breaking. & Restricts fits to non-perturbative long-range dynamics ($|\vect{b}| \ge 3a$). \\
-\hline
-2 & \textbf{Gaussian Baseline} & Test simple 2D Gaussian ansatz $\gamma e^{-\alpha b_L^2 - \beta b_T^2}$ in Cartesian space. & Fails: yields $\alpha < \beta$, producing a divergent Fourier transform and poor $\chi^2/\text{dof} \approx 235$. \\
-\hline
-3 & \textbf{Symbolic Regression} & Run unbiased genetic programming (\texttt{PySR}) with an asymptotic decay penalty on $\tAmp_{2B}^{\text{Re}}$. & Discovers generalized Lorentzian power-law tails $(1+b^2)^{-j}$ and area-law factor $e^{-f\eta}$. \\
-\hline
-4 & \textbf{Separability Tests} & Test factorized models ($(P\cdot b\text{-part}) \times (b\text{-part})$) across all three surviving amplitudes. & Fails for $\tAmp_{2B}^{\text{Im}}$ and $\tAmp_{12B}^{\text{Re}}$: forces non-separable coupled denominator $[1 + c(P\cdot b)^2/P_L^2 + d b^2]^j$. \\
-\hline
-5 & \textbf{Sequential $\eta$-Slices} & Fit individual staple extents $\eta \in [6, 10]$ at fixed powers to isolate parameter evolution. & Parameter $d$ is independent of $\eta$; $\eta$-variation is isolated strictly to $c(\eta)$ for $\tAmp_{2B}^{\text{Re}}$. \\
-\hline
-6 & \textbf{Asymptotic Selection} & Evaluate candidate $c(\eta)$ models using AIC and physical light-cone boundary conditions. & Model $c(\eta) = c(1 - k_1/\eta - k_2/\eta^2)$ selected for suppressing anti-quarks at large $|x|$ ($x < -0.2$). \\
-\hline
-7 & \textbf{Global Simultaneous Fit} & Correlated $\chi^2$ minimization with full Jackknife covariance matrix across all amplitudes and momenta. & Cancels common $e^{-f\eta}$ factor; yields stable $x$-dependent Sivers shift $\langle k_y \rangle_{TU}(x)$. \\
-\hline
-\end{tabular}
-}
-\end{table}
-
-The following sections detail each step of this progression.
+The fitting and stability analysis in this chapter follows a sequential progression:
+\begin{itemize}
+    \item \textbf{Coordinate transformations and Gaussian baseline (Section~\ref{sec:gaussian_transformation})}: We map Cartesian coordinates $(b_L, b_T)$ into the Lorentz-invariant variable space $(P \cdot b, b^2)$ and demonstrate why the simple Gaussian ansatz fails due to non-integrable longitudinal growth ($\alpha < \beta$).
+    \item \textbf{Short-distance cutoff (Section~\ref{sec:discretization_effects})}: We isolate ultraviolet lattice discretization artifacts by applying a spatial cutoff $|\vect{b}| \ge 3a$.
+    \item \textbf{Symbolic regression via \texttt{PySR} (Section~\ref{sec:pysr_methodology})}: Using genetic programming with an asymptotic decay penalty, we discover the generalized Lorentzian power-law tail $(1+b^2)^{-j}$ and the exponential area-law factor $e^{-f\eta}$.
+    \item \textbf{Separability tests and factorized models (Sections~\ref{sec:rejection_exponential_longitudinal} and~\ref{sec:factorized_ansatze_failure})}: We test factorized models across all three surviving amplitudes, showing that while they describe $\tAmp_{2B}^{\text{Re}}$, they fail on $\tAmp_{2B}^{\text{Im}}$ and $\tAmp_{12B}^{\text{Re}}$, requiring the coupled denominator $[1 + c(P\cdot b)^2/P_L^2 + d b^2]^j$.
+    \item \textbf{Sequential $\eta$-slice fits and candidate selection (Sections~\ref{sec:asymptotic_eta_anti_quark} and~\ref{sec:candidate_selection})}: We analyze parameter behavior across individual staple extents $\eta \in [6, 10]$, select the asymptotic model $c(\eta) = c(1 - k_1/\eta - k_2/\eta^2)$ based on AIC, and enforce physical anti-quark suppression at large negative $x$ ($x < -0.2$).
+    \item \textbf{Global simultaneous fit with full covariance (Section~\ref{sec:simultaneous_fit_strategy})}: We perform a correlated Jackknife $\chi^2$ minimization across all amplitudes, cancel the shared $e^{-f\eta}$ factor, and extract the $x$-dependent Sivers shift.
+\end{itemize}
 
 \subsection{Coordinate Transformation and the Simple Gaussian Model}
 \label{sec:gaussian_transformation}
@@ -257,7 +237,7 @@ The fit results are summarized in Fig.~\ref{fig:rejection_exponential_longitudin
     \label{fig:rejection_exponential_longitudinal}
 \end{figure}
 
-The fitting routine suppresses the separable exponential decay term. This demonstrates that an independent exponential decay $e^{-c|P \cdot b|}$ is incompatible with the lattice data: the longitudinal momentum dependence cannot factor out as an independent function. Instead, the longitudinal boost coordinate $(P \cdot b)^2$ must couple directly into the denominator of the generalized Lorentzian.
+The fitting routine suppresses the separable exponential decay term. This demonstrates that an independent exponential decay $e^{-c|P \cdot b|}$ is incompatible with the lattice data: the longitudinal momentum dependence cannot factor out as an independent function. Instead, the longitudinal invariant coordinate $(P \cdot b)^2$ must couple directly into the denominator of the generalized Lorentzian.
 
 \subsection{Investigation and Systematic Failure of the Four Factorized Ans\"{a}tze}
 \label{sec:factorized_ansatze_failure}
@@ -299,7 +279,7 @@ Each model admits closed-form analytical Fourier transforms, which makes it stra
 \begin{table}[htbp]
 \centering
 \renewcommand{\arraystretch}{1.3}
-\caption{Comparison of the four factorized longitudinal-transverse models across nucleon boost momenta $P_L$, with extracted parameters shown at $P_L = -1$. While models with power-law transverse envelopes describe $\tAmp_{2B}^{\text{Re}}$ passably, all four factorized ans\"{a}tze fail on $\tAmp_{2B}^{\text{Im}}$ and $\tAmp_{12B}^{\text{Re}}$.}
+\caption{Comparison of the four factorized longitudinal-transverse models across nucleon momenta $P_L$, with extracted parameters shown at $P_L = -1$. While models with power-law transverse envelopes describe $\tAmp_{2B}^{\text{Re}}$ passably, all four factorized ans\"{a}tze fail on $\tAmp_{2B}^{\text{Im}}$ and $\tAmp_{12B}^{\text{Re}}$.}
 \label{tab:factorized_ansatze_comparison}
 \scalebox{0.78}{
 \begin{tabular}{|l|c|c|c|c|c|c|c|p{4.2cm}|}
@@ -331,7 +311,7 @@ The numerical results highlight several critical failure mechanisms inherent to 
 
     \item \textbf{Cusp artifacts and analyticity breaking}: Factoring out an exponential $|P\cdot b|$ dependence introduces a discontinuous first derivative (a cusp) at $P\cdot b = 0$. For an odd-parity amplitude like $\tAmp_{2B}^{\text{Im}}$, which must vanish linearly through the origin ($\tAmp_{2B}^{\text{Im}} \propto b_L$), the non-analytic factor $e^{-c|P\cdot b|}$ conflicts with the smooth behavior of the Euclidean correlation function. The fit responds by driving $c_{\text{im}} \to 0$ to minimize the cusp penalty.
 
-    \item \textbf{Physical requirement of relativistic coupling}: Relativistic hadrons do not exhibit factorized $(x, k_T)$ distributions. A Lorentz boost shifts both longitudinal and transverse components of the non-local quark-gluon correlator simultaneously. Coupling $(P\cdot b)^2$ and $b^2$ within a single denominator,
+    \item \textbf{Relativistic coupling in Lorentz-invariant space}: In the Lorentz-invariant variable space $(P\cdot b, b^2)$, the longitudinal separation $b_L = (P\cdot b)/(-P_L)$ and transverse separation $b_T = \sqrt{b^2 - b_L^2}$ are geometrically coupled. Factorized models force an artificial independence between $P\cdot b$ and $b^2$. In contrast, coupling $(P\cdot b)^2$ and $b^2$ within a single denominator,
     \begin{equation}
         D = \left[ 1 + c(\eta) \frac{(P\cdot b)^2}{P_L^2} + d\,b^2 \right]^j \ ,
     \end{equation}
