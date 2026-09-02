@@ -7,3 +7,22 @@ Gaussian, Lorentzian, mix,..
 ------
 Amp is Exp[-a(P.b)] in space like
 Amp is Power-law in light cone - Rigge
+
+-------------------------
+
+Aug 28, 2026,
+
++ give a into of flow or rodemap of the chapter.
+explain the hirarchy eta slice -> global eta --> PySR --> ...
+
+sections 3:
++explain all variables
++ dont talk abouth symmetries again and again
+
+section 5:
++ roadmap
++ make sure gaussian model is just a entry
++ mentions PySR reject gaussina with b only 
++ funnle it to final selection of model
++ we want zero anti-quarks at large x (x>-0.2 or 0.3)
++ 
