@@ -37,11 +37,11 @@ In this regime, $x$ and $(\bvec \tcdot P)$ form a Fourier conjugate pair, as do 
 The term enclosed in $[\ ]_\text{odd}$ isolates the naively time-reversal odd (T-odd) Sivers function $f_{1T}^\perp$ \cite{Sivers:1989cc}, representing the distribution of unpolarized quarks inside a transversely polarized nucleon. The emergence and survival of this T-odd structure depends on the extended gauge link geometry and symmetry transformations discussed in the subsequent sections.
 
 \subsection{General strategy}
-Transitioning this continuous framework onto a discrete Euclidean spacetime lattice introduces significant theoretical constraints. Evaluating standard collinear PDFs utilizes a straightforward, light-like Wilson line:
+Transitioning this continuous framework onto a discrete Euclidean spacetime lattice introduces significant theoretical constraints. Evaluating standard collinear PDFs uses a straightforward, light-like Wilson line:
 \begin{equation*}
   f_1(x) \equiv \frac{1}{2 (2\pi)} \int db^- e^{i x P^+ b^-} \, \bra{P,S}\ \bar{q}(0)\, \gamma^+\ \Wline{0,n b^-}\ q(n b^-)\ \ket{P,S} \ .
 \end{equation*}
-Because this interval is strictly Minkowskian, it cannot be rotated into Euclidean space, necessitating an Operator Product Expansion (OPE) approach to reduce the non-local separation into local matrix elements \cite{Collins:1981uw}. 
+Because this interval is strictly Minkowskian, it cannot be rotated into Euclidean space, requiring an Operator Product Expansion (OPE) approach to reduce the non-local separation into local matrix elements \cite{Collins:1981uw}. 
 
 Extracting the $x$-dependence of the Sivers TMD, however, deviates from this collinear constraint and presents unique lattice opportunities:
 \begin{enumerate}
@@ -59,7 +59,7 @@ Because our lattice methodology natively extracts the $b$-dependent matrix eleme
 	\tilde f(x, \vprp{\bvec}^2;\ldots ) 
 		= \frac{ 2\pi \ n!}{(\mN^2)^n} \int  d |\vprp{\kei}| |\vprp{\kei}|\left( \frac{|\vprp{\kei}|}{|\vprp{\bvec}|}\right)^n J_n(|\vprp{\bvec}||\vprp{\kei}|)\  f(x, {\vprp{\kei}^2};\ldots )\ , \label{eq-dFTMD}
 \end{align}
-where $J_n$ are the Bessel functions of the first kind. As articulated in Ref.~\cite{Boer:2011xd}, these Bessel-weighted quantities provide a robust pathway for structuring evolution equations. 
+where $J_n$ are the Bessel functions of the first kind. As shown in Ref.~\cite{Boer:2011xd}, these Bessel-weighted quantities provide a means of structuring evolution equations.
 
 Taking the strict $|\vprp{\bvec}| \rightarrow 0$ limit theoretically recovers the conventional $\vprp{\kei}$-moments:
 \begin{align}
@@ -81,7 +81,7 @@ The approach toward the physical light-like limit ($v = \nminus$) is parameteriz
 	\hat \zeta \equiv \zeta / 2 \mN =  \frac{v \cdot P}{\sqrt{|v^2|} \sqrt{P^2}} = \sinh(y_P - y_v)\ ,
 	\label{eq-zeta}
 \end{equation}
-highlighting that $\hat \zeta$ effectively measures the rapidity difference between the nucleon momentum and the Wilson line direction. Crucially for our methodology, this permits boosting the system to a frame where $v$ is purely spatial ($v^0 = 0, y_v=0$).
+showing that $\hat \zeta$ measures the rapidity difference between the nucleon momentum and the Wilson line direction. This permits boosting the system to a frame where $v$ is purely spatial ($v^0 = 0, y_v=0$).
 
 \subsection{Symmetry Constraints}
 The correlation function is constrained by discrete symmetries. Consider the unsubtracted correlator \cite{Boer:2011xd}:
@@ -107,7 +107,7 @@ Enforcing Lorentz ($L$), Parity ($P$), Time-reversal ($T$), and Hermitian conjug
 	&(T): &\left[ \Phi^{[\Gamma]}_{\text{unsub}}(k,P,S;v,\mu) \right]^* &= \Phi^{[\gamma^1 \gamma^3 \Gamma^* \gamma^3 \gamma^1]}_{\text{unsub}}(\overline{k},\overline{P},\overline{S};-\overline{v},\mu) \ , \label{eq-contime} \displaybreak[0] \\
 	&(\dagger): &\left[  \Phi^{[\Gamma]}_{\text{unsub}}(k,P,S;v,\mu) \right]^* &= \Phi^{[\gamma^0 \Gamma^\dagger \gamma^0]}_{\text{unsub}}(k,P,S;v,\mu) \ . \label{eq-conherm}
 \end{align}
-While hermiticity forces $\Amp_i$ and $\Bmp_i$ to be real, time reversal flips the sign of $v \tcdot P$, directly bridging the amplitudes governing Semi-Inclusive Deep Inelastic Scattering (SIDIS) and the Drell-Yan (DY) process—which causes the Sivers sign change.
+While hermiticity forces $\Amp_i$ and $\Bmp_i$ to be real, time reversal flips the sign of $v \tcdot P$, directly bridging the amplitudes governing Semi-Inclusive Deep Inelastic Scattering (SIDIS) and the Drell-Yan (DY) process, which causes the Sivers sign change.
 
 Mapping these systematic restrictions to coordinate space under hermitian conjugation specifically, the position-space correlator transforms as:
 \begin{align}
@@ -137,7 +137,7 @@ Extracting the $x$-dependence of the Sivers TMD from Euclidean data requires a r
 		\label{eq-phitildedecomp-vec} \displaybreak[0] 
 		 \ .
 \end{align}
-While prior lattice campaigns utilized straight gauge links—which isolated only T-even structures \cite{Hagler:2009mb,Musch:2010ka}—the explicit inclusion of the staple direction $v$ enables the analysis of T-odd observables like the Sivers shift. 
+While prior lattice campaigns used straight gauge links, which isolated only T-even structures \cite{Hagler:2009mb,Musch:2010ka}, the explicit inclusion of the staple direction $v$ enables the analysis of T-odd observables like the Sivers shift.
 
 To conduct calculations at finite staple extents on the lattice, we redefine the scale-invariant infinite-link amplitudes to explicitly track the extent $\eta$, mapping them via:
 \begin{align}

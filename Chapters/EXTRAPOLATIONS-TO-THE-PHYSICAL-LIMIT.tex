@@ -123,7 +123,7 @@ and reinserted to eliminate $h$, giving a closed, self-consistent equation for $
     g(x) = \left[\int d|b_T| \left[\frac{\int dx'\, f(x',|b_T|)\,g(x')}{\int dx'\, g^2(x')}\right]^2\right]^{-1} \int d|b_T|\, f(x,|b_T|)\,\frac{\int dx'\, f(x',|b_T|)\,g(x')}{\int dx'\, g^2(x')} \ .
     \label{eq:factorization_g_selfconsistent}
 \end{equation}
-Equation~\eqref{eq:factorization_g_selfconsistent} is solved iteratively: starting from an initial guess $g=1$, the right-hand side is evaluated to obtain a refined $g$, which is reinserted, and the process repeated until $g$ (and the resulting relative distance below) stops changing to within a fixed tolerance. Convergence is rapid in practice, typically within 4-6 iterations for the grids used here.
+Equation~\eqref{eq:factorization_g_selfconsistent} is solved iteratively: starting from an initial guess $g=1$, the right-hand side is evaluated to obtain a refined $g$, which is reinserted, and the process repeated until $g$ (and the resulting relative distance below) stops changing to within a fixed tolerance. Convergence is rapid in practice for the grids used here.
 
 Having found the optimal separable pair $g(x)h(|b_T|)$, we compare its residual $\sqrt{J}$ to the overall size of $f$ itself, $N = \int dx\, d|b_T|\, f^2(x,|b_T|)$, giving the relative distance from a factorized form:
 \begin{equation}
@@ -151,17 +151,17 @@ Table~\ref{tab:factorization_sivers} lists the resulting relative distance of th
     \renewcommand{\arraystretch}{1.4}
     \caption{Relative distance of the extrapolated Sivers shift $\langle k_y \rangle_{TU}(x,|b_T|)$ from its optimal factorized approximation $F(x)G(|b_T|)$, Eq.~\eqref{eq:factorization_relative_distance}, over $|b_T| \in [0.3421, 0.9403]$ fm for four choices of $x$-window.}
     \label{tab:factorization_sivers}
-    \begin{tabular}{|c|c|c|}
+    \begin{tabular}{|c|c|}
     \hline
-    $x$-window & ALS iterations to converge & Relative distance \\
+    $x$-window & Relative distance \\
     \hline
-    $[0.0,1.0]$ & 4 & $0.0568(78)$ \\
+    $[0.0,1.0]$ & $0.0568(78)$ \\
     \hline
-    $[0.1,0.9]$ & 5 & $0.0714(95)$ \\
+    $[0.1,0.9]$ & $0.0714(95)$ \\
     \hline
-    $[0.2,0.8]$ & 5 & $0.0758(75)$ \\
+    $[0.2,0.8]$ & $0.0758(75)$ \\
     \hline
-    $[0.3,0.8]$ & 4 & $0.0620(88)$ \\
+    $[0.3,0.8]$ & $0.0620(88)$ \\
     \hline
     \end{tabular}
 \end{table}
