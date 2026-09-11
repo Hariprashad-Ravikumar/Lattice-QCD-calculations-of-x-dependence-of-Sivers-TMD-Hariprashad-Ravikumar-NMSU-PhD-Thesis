@@ -5,7 +5,7 @@ The lattice data show different levels of statistical precision among the invari
 
 We parameterize the amplitudes natively in the Cartesian space $(b_L, b_T)$ rather than the Lorentz-invariant variable space $(P \cdot b, b^2)$. Fitting in $(b_L, b_T)$ provides a larger, more uniformly distributed set of discrete data points and resolves kinematic degeneracies. Because the squared separation distance $b^2 = b_L^2 + b_T^2$ is strictly non-negative, multiple distinct combinations of longitudinal and transverse separations (such as a large $b_L$ with a small $b_T$, or a small $b_L$ with a large $b_T$) map to the same invariant $b^2$. So, fitting in the $(P \cdot b, b^2)$ basis would compress these distinct orthogonal spatial dependencies into a single coordinate. Fitting over the $(b_L, b_T)$ grid allows the model to separate the longitudinal decay profile from the transverse decay profile. 
 
-The fitting and stability analysis in this chapter follows a sequential progression towards finding the final model. In Section~\ref {sec:gaussian_transformation}, we demonstrate why the simple Gaussian ansatz fails due to non-integrable longitudinal growth ($\alpha < \beta$). In Section~\ref{sec:discretization_effects}, we isolate ultraviolet lattice discretization artifacts by applying a spatial cutoff $|\vect{b}| \ge 3a$. In Section~\ref{sec:pysr_methodology}, using genetic programming with an asymptotic decay penalty, we discover the generalized Lorentzian power-law tail $(1+b^2)^{-j}$ and the exponential area-law factor $e^{-f\eta}$. In Sections~\ref{sec:rejection_exponential_longitudinal} and~\ref{sec:factorized_ansatze_failure}, We test factorized models across all three surviving amplitudes, showing that while they describe $\tAmp_{2B}^{\text{Re}}$, they fail on $\tAmp_{2B}^{\text{Im}}$ and $\tAmp_{12B}^{\text{Re}}$, requiring the coupled denominator $[1 + c(P\cdot b)^2/P_L^2 + d b^2]^j$. Then in Sections~\ref{sec:asymptotic_eta_anti_quark} and~\ref{sec:candidate_selection}, we analyze parameter behavior across individual staple extents $\eta \in [6, 10]$, select the asymptotic model $c(\eta) = c(1 - k_1/\eta - k_2/\eta^2)$ based on AIC, and enforce physical anti-quark suppression at large negative $x$ ($x < -0.2$). Finally, in Section~\ref{sec:simultaneous_fit_strategy}, we perform a correlated Jackknife $\chi^2$ minimization across all amplitudes, cancel the shared $e^{-f\eta}$ factor, and extract the $x$-dependent Sivers shift.
+The fitting and stability analysis in this chapter follows a sequential progression towards finding the final model. In Section~\ref{sec:gaussian_transformation}, we demonstrate why the simple Gaussian ansatz fails due to non-integrable longitudinal growth ($\alpha < \beta$). In Section~\ref{sec:discretization_effects}, we isolate ultraviolet lattice discretization artifacts by applying a spatial cutoff $|\vect{b}| \ge 3a$. In Section~\ref{sec:pysr_methodology}, using genetic programming with an asymptotic decay penalty, we discover the generalized Lorentzian power-law tail $(1+b^2)^{-j}$ and the exponential area-law factor $e^{-f\eta}$. In Section~\ref{sec:factorization_test}, we test directly on the lattice data whether the amplitudes factorize as a product of independent $(P\cdot b)$ and $b^2$ profiles; in Section~\ref{sec:rejection_exponential_longitudinal}, we confirm this by fitting explicit factorized models across all three surviving amplitudes, showing that they fail on $\tAmp_{2B}^{\text{Im}}$ and $\tAmp_{12B}^{\text{Re}}$ and require instead the coupled denominator $[1 + c(P\cdot b)^2/P_L^2 + d b^2]^j$. In Section~\ref{sec:systematic_exploration} and Section~\ref{sec:candidate_selection}, we determine this coupled model's parameter behavior across individual staple extents $\eta \in [6, 10]$, select the asymptotic model $c(\eta) = c(1 - k_1/\eta - k_2/\eta^2)$ based on AIC, and enforce physical anti-quark suppression at large negative $x$ ($x < -0.2$). Finally, in Section~\ref{sec:simultaneous_fit_strategy}, we perform a correlated Jackknife $\chi^2$ minimization across all amplitudes, cancel the shared $e^{-f\eta}$ factor, and extract the $x$-dependent Sivers shift at each of our four simulated nucleon momenta.
 
 \subsection{Failure of Simple Gaussian Model}
 \label{sec:gaussian_transformation}
@@ -14,7 +14,7 @@ For the real parts of the amplitudes ($\tAmp^{Re}_{iB}$), Hermitian conjugation 
 \begin{align}
     \tAmp^{Re}_{iB}&=\gamma \exp{\left[-\alpha b_L^2-\beta b_T^2\right]}
 \end{align}
-To transform this into the invariant variable space, we use the lattice four-vector square, $b^2 = b_L^2 + b_T^2$, to substitute $b_T^2 = b^2 - b_L^2$ and also apply the Lorentz-invariant projection derived in Section \ref{sec:lorentz_mapping}, where the longitudinal spatial coordinate is given by $b_L = (P \cdot b) / (-P_L)$. Squaring this substitution gives
+To transform this into the invariant variable space, we substitute $b_T^2 = b^2 - b_L^2$ and apply the Lorentz-invariant projection $b_L = (P \cdot b) / (-P_L)$ derived in Section \ref{sec:lorentz_mapping}. Squaring this substitution gives
 \begin{align}
    \tAmp^{Re}_{iB} &=\gamma \exp{\left[-\frac{\left(\alpha-\beta\right)}{P_{L}^2} (P\cdot b)^{2}-\beta b^{2}\right]}
 \end{align}
@@ -42,7 +42,7 @@ Fitting this Gaussian model to our lattice data yields $\alpha < \beta$ for the 
     \label{fig:gaussian_failure}
 \end{figure}
 
-This means the amplitude decays faster in the transverse direction than in the longitudinal direction, leading to a non-integrable expansion in the $(P \cdot b, b^2)$ space. Additionally, the Gaussian model does not fit the data well, yielding a $\chi^2/\text{dof}\approx 230$. A symmetric 2D Gaussian decay profile is too rigid to describe the non-local operator. 
+This means the amplitude decays faster in the transverse direction than in the longitudinal direction, leading to a non-integrable expansion in the $(P \cdot b, b^2)$ space; Fig.~\ref{fig:gaussian_failure} shows the resulting poor fit quality. A symmetric 2D Gaussian decay profile is too rigid to describe the non-local operator.
 
 Because of this divergence and poor fit quality, we cannot use the simple Gaussian model. We instead use multi-parameter functions that accommodate distinct decay rates and guarantee convergence in the Fourier domain.
 
@@ -79,7 +79,7 @@ All subsequent stability analyses, global fits, and extracted phenomenological p
 
 Selecting a multi-dimensional functional form by hand introduces human bias. To address this, we use Symbolic Regression (SR). 
 
-Unlike traditional regression, which optimizes the parameters of a pre-determined function, symbolic regression searches the space of mathematical expressions and their parameters simultaneously. We utilize \texttt{PySR} \cite{Cranmer2023pysr}, a framework that uses Genetic Programming to discover interpretable equations from data by balancing accuracy and simplicity.
+Unlike traditional regression, which optimizes the parameters of a pre-determined function, symbolic regression searches the space of mathematical expressions and their parameters simultaneously. We use \texttt{PySR} \cite{Cranmer2023pysr}, a framework that uses Genetic Programming to discover interpretable equations from data by balancing accuracy and simplicity.
 
 \subsubsection{Expression Search and Configuration}
 \texttt{PySR} \cite{Cranmer2023pysr, Koza1992GP, Schmidt2009Distilling} uses a genetic algorithm to evolve mathematical expressions represented as binary trees iteratively. The algorithm evaluates a population of expressions against the lattice data using a custom loss function over thousands of generations. 
@@ -137,7 +137,7 @@ which is a product of an exponential decay in $\eta$ and a generalized Lorentzia
 \end{equation}
 Beyond $C = 16$, added complexity yields marginal loss improvements while reducing interpretability.
 
-The power-law tail $(1 + b^2)^{-j}$ with $j > 1/2$ decays algebraically at large separations. This decays more slowly than a Gaussian but remains absolutely integrable over the real line. Unlike the Gaussian model, where the sign of $(\alpha - \beta)$ can render the Fourier integral divergent, the power-law denominator guarantees convergent integrals for positive exponents $j > 1/2$. The factorized structure $e^{-f\eta} \times g(b^2)$ also allows the shared $\eta$-dependent exponential to cancel analytically in the Sivers shift ratio, which we use in Section~\ref{sec:simultaneous_fit_strategy}.
+The power-law tail $(1 + b^2)^{-j}$ with $j > 1/2$ decays algebraically at large separations, more slowly than a Gaussian but still absolutely integrable over the real line. Unlike the Gaussian model rejected in Section~\ref{sec:gaussian_transformation}, the power-law denominator guarantees convergent Fourier integrals for any positive exponent $j > 1/2$. The factorized structure $e^{-f\eta} \times g(b^2)$ also allows the shared $\eta$-dependent exponential to cancel analytically in the Sivers shift ratio, which we use in Section~\ref{sec:simultaneous_fit_strategy}.
 
 \begin{figure}[htbp]
     \centering
@@ -155,11 +155,11 @@ The power-law tail $(1 + b^2)^{-j}$ with $j > 1/2$ decays algebraically at large
 
 As shown in Fig.~\ref{fig:pysr_benchmark_fits}, the factorized $C = 14$ and $C = 16$ expressions track the lattice data throughout the accessible $(b_L, b_T)$ grid across all staple extents. The pure power-law-$\eta$ models ($C = 11, 17$) exhibit slight systematic tension at the boundary $\eta$ values, where their $\eta^{-n}$ dependence departs from the exponential decay.
 
-The straight-line diagnostic in Fig.~\ref{fig:gaussian_straightline_test} tests the Gaussian hypothesis. If the amplitude followed a Gaussian decay, plotting $\tAmp_{2B}^{\text{Re}}$ on a logarithmic ordinate against $b^2$ would yield a straight line with slope $-c$. The lattice data shows upward curvature at large $b^2$, indicating that the amplitude decays more slowly than an exponential. This behavior matches the generalized Lorentzian power-law tail discovered by the genetic algorithm.
+The straight-line diagnostic in Fig.~\ref{fig:gaussian_straightline_test} confirms this directly: the lattice data curve upward at large $b^2$ rather than following the Gaussian's expected straight line, consistent with the generalized Lorentzian power-law tail discovered by the genetic algorithm.
 
 Based on these results, we adopt the Lorentzian power-law structure as the spatial profile for $\tAmp_{2B}^{\text{Re}}$. In the following sections, we extend this functional form to the remaining amplitudes for the global simultaneous fit.
 
-\subsection{Test for Factorization in $(P\cdot b)$ and $b^2$} \label{Test-for-Factorization}
+\subsection{Test for Factorization in $(P\cdot b)$ and $b^2$} \label{sec:factorization_test}
 
 To probe, directly at the level of the raw lattice data and independent of any fitted parameterization, whether the extracted amplitude factorizes as $\tAmp(P\cdot b,b^2) = F(P\cdot b) G(b^2)$, we performed a ratio test at fixed $P\cdot b$, which has multiple $b^2$, for example $b^2_1,b^2_2, b^2_3$, at the given momentum $P_L$. We formed
 $$
@@ -177,189 +177,25 @@ The two rows in Fig.~\ref{fig:FixedPb_Bsq_RatioTest_eta8_PL-1} do not trace a co
 
 
 
-\subsection{Systematical exploration of the best physical model}
-Based on the \texttt{PySR} analysis, we started exploring numerous power-law models for $\tAmp_{2B}^{\text{Re}}$ for momentum $P_L=-1$, $6\leq\eta\leq10$, and $b\geq3$. For completeness, we started with a Gaussian model and introduced several $\eta$-dependent ans\"atzes. For each model, the table lists the model expression, the list of fit parameters, the jackknife-averaged fitted values with statistical uncertainties, and the resulting $\chi^2/\mathrm{DoF}$.
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.8\linewidth]{plots/fit_exploration_mathematica/fit_list_gaussian_c_d_etas.eps}
-    \caption{3D jackknife fits of $\mathrm{Re}\,\tilde{A}_{2B}(b_L,b_T,\eta)$ to a family of 16 Gaussian ans\"atze, all built on the common baseline $\tilde{A}_{2B} = a\, e^{-f\eta}\, \exp\!\big[-c\,(b_L P_L)^2 - d\,(b_L^2+b_T^2)\big]$, in which the coefficients $c$ and $d$ are each independently allowed to be either constant or one of three $\eta$-dependent forms, $c\to c(\eta)$ and/or $d\to d(\eta)$.}
-    \label{fig:rejection_fit_list_gaussian_c_d_etas}
-\end{figure}
-
-From our physics requirements, we strictly want the fit parameter $c$ to be positive and statistically stable, because $c$ is the coefficient of $P.b$, and having a stable, positive $c$ is needed for a physical Fourier-transformed space in $x$. From Figure \ref{fig:rejection_fit_list_gaussian_c_d_etas}, most $c$ parameters are either unstable or negative, and everything still has a higher $\chi^2/\mathrm{DoF}$. On exploring power-law ans\"atze for for $\tAmp_{2B}^{\text{Re}}$ for momentum $P_L=-1$, $6\leq\eta\leq10$, and $b\geq3$, we could able to further reduce the $\chi^2/\mathrm{DoF}$ $\approx1.5$. We found that $\eta$-dependence in the fit parameter $d$ worsens the fit, while $\eta$-dependence in the fit parameter $c$ improves it. New ambiguity arises: there exist multiple $\eta$ dependencies that all give consistently the same $\chi^2/\mathrm{DoF}$. For each power-law model, the table lists the model expression, the list of fit parameters, the jackknife-averaged fitted values with statistical uncertainties, $\chi^2/\mathrm{DoF}$, AIC, and the resulting Fourier transform in $x$ space.
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.8\linewidth]{PowerLaw_etaAsymptotic/A2BfitFT_eta_Asymptotic_P1.pdf}
-    \caption{3D Jackknife fits of $\mathrm{Re}\,\tilde{A}_{2B}(b_L,b_T,\eta)$ to a family of power-law ans\"atze, all built on the common baseline $\tilde{A}_{2B} = a\, e^{-f\eta}\, \left(1+(c+d)b^2_L+db^2_T\right)^j$, in which the coefficient $c$ is each independently allowed to be either constant or one of $\eta$-dependent forms, $c\to c(\eta)$.}
-\end{figure}
-\pagebreak
-
-For completeness, we explored more $\eta$-dependent forms $c\to c(\eta)$, which yield wider Fourier transforms in $x$ space.
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.8\linewidth]{PowerLaw_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_P1.pdf}
-    \caption{3D jackknife fits of $\mathrm{Re}\,\tilde{A}_{2B}(b_L,b_T,\eta)$ to a family of power-law ans\"atze, all built on the common baseline $\tilde{A}_{2B} = a\, e^{-f\eta}\, \left(1+(c+d)b^2_L+db^2_T\right)^j$, in which the coefficient $c$ is each independently allowed to $\eta$-dependent forms, $c\to c(\eta)$ which yield wider Fourier transforms in $x$ space.}
-\end{figure}
-
-All viable asymptotic functions in $\eta$ have a common power-law profile with a power $j \approx 2$ and an amplitude scale $a \approx 4$, damped by the area-law-like suppression factor $e^{-0.5\eta}$. We isolate the specific $\eta$-dependence of the width parameters $c$ and $d$ by fixing these structural parameters ($j=2$, $a=4$) and performing sequential fits at individual $\eta$ slices. The results are shown below:
-\pagebreak
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.6\linewidth]{Gaussian_type_fit_Real_A2B/LorentzianFixedA_P-1_b3.pdf}
-    \caption{Sequential Lorentzian fits for $\tAmp^{Re}_{2B}$ at individual $\eta$ slices, holding the global power $j=2$ and amplitude $a=4$ constant.}
-    \label{fig:ReA2B_fixed_eta_slices}
-\end{figure}
-
-From these fits, we extract the parameters $c$ and $d$. The fit parameter $c$ acts as a coefficient of the longitudinal separation $(P \cdot b)$, while $d$ acts as a coefficient of the invariant squared separation $b^2$. We plot the extracted values of $c$ and $d$ against our candidate asymptotic models to analyze their $\eta$-dependence:
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.5\linewidth]{PowerLaw_etaAsymptotic/A2B_c_eta_AllAsymptoticModels_P1.pdf}
-    \caption{The extracted parameter $c(\eta)$ overlaid with various candidate asymptotic models, demonstrating its asymptotic approach at large $\eta$.}
-\end{figure}
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.4\linewidth]{PowerLaw_etaAsymptotic/A2B_d_eta_Independence_P1.pdf}
-    \caption{The extracted parameter $d(\eta)$, exhibiting a clear independence from the staple extent $\eta$.}
-\end{figure}
-
-
-\subsection{Candidate Selection}
-\label{sec:candidate_selection}
-
-Based on the $\chi^2/\text{dof}$ minimizations and sequential fitting at individual $\eta$ slices, we determined the structural parameterizations for the invariant amplitudes: $\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$, and $\tAmp_{12B}^{\text{Re}}$. We exclude $\tAmp_{12B}^{\text{Im}}$ because the lattice data is consistent with zero.
-
-For the unpolarized real amplitude $\tAmp_{2B}^{\text{Re}}$, the transverse width parameter $d$ remains constant across all $\eta$, but the longitudinal width parameter $c(\eta)$ requires an asymptotic model. We select the model $c(\eta) = c\left(1 - \frac{k_1}{\eta} - \frac{k_2}{\eta^2}\right)$ because its Fourier transform suppresses negative-$x$ contributions, which we discuss in later sections.
-
-For the real Sivers amplitude $\tAmp_{12B}^{\text{Re}}$, we repeated the sequential Lorentzian fitting at fixed $\eta$ slices. As shown in Fig.~\ref{fig:ReA12B_eta_independence} and Table \ref{tab:ReA12B_fixed_eta}, the longitudinal parameter $c$ and transverse parameter $d$ are independent of $\eta$. We therefore model $c$ and $d$ as constants for $\tAmp_{12B}^{\text{Re}}$.
-
-\begin{table}[h!]
-    \centering
-    \includegraphics[width=0.55\linewidth]{Gaussian_type_fit_Real_A2B/LorentzianFixed_ReA12B_P-1_b3.pdf}
-    \caption{Sequential Lorentzian fits for $\tAmp_{12B}^{\text{Re}}$ at individual $\eta$ slices showing consistent $\chi^2/\text{dof}$ and stable parameters.}
-    \label{tab:ReA12B_fixed_eta}
-\end{table}
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.49\linewidth]{PowerLaw_etaAsymptotic/ReA12B_c_eta_Independence_P1.pdf}
-    \includegraphics[width=0.49\linewidth]{PowerLaw_etaAsymptotic/ReA12B_d_eta_Independence_P1.pdf}
-    \caption{Lattice extracted parameters $c$ (left) and $d$ (right) for $\tAmp_{12B}^{\text{Re}}$ as a function of $\eta$. Both parameters demonstrate clear independence from $\eta$.}
-    \label{fig:ReA12B_eta_independence}
-\end{figure}
-
-For the imaginary unpolarized amplitude $\tAmp_{2B}^{\text{Im}}$, the lattice data has more statistical noise, but the sequential fitting yields a similar trend. We model $c$ and $d$ as constant in $\eta$, mirroring the structural stability of the real amplitudes. The resulting fits are shown in Fig.~\ref{fig:ImA2B_eta_independence} and Table \ref{tab:ImA2B_fixed_eta}.
-
-\begin{table}[h!]
-    \centering
-    \includegraphics[width=0.55\linewidth]{Gaussian_type_fit_Real_A2B/LorentzianFixed_ImA2B_P-1_b3.pdf}
-    \caption{Sequential Lorentzian fits for $\tAmp_{2B}^{\text{Im}}$ at individual $\eta$ slices showing consistent $\chi^2/\text{dof}$.}
-    \label{tab:ImA2B_fixed_eta}
-\end{table}
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.49\linewidth]{PowerLaw_etaAsymptotic/ImA2B_c_eta_Independence_P1.pdf}
-    \includegraphics[width=0.49\linewidth]{PowerLaw_etaAsymptotic/ImA2B_d_eta_Independence_P1.pdf}
-    \caption{Lattice extracted parameters $c$ (left) and $d$ (right) for $\tAmp_{2B}^{\text{Im}}$ as a function of $\eta$. Despite increased statistical noise, the data are highly consistent with the constant-parameter ansatz.}
-    \label{fig:ImA2B_eta_independence}
-\end{figure}
-
-The analytical models in invariant $(b_L,b_T)$ space for the three amplitudes are:
-\begin{align}
-    \tAmp_{2B}^{\text{Re}}&=\left[\frac{a e^{-f \eta}}{\left[1 + \left(d + c\left(1 - \frac{k_1}{\eta} - \frac{k_2}{\eta^2}\right)\right) b_L^2 + d b_T^2\right]^j}\right]\label{eq:model_ReA2B}\\
-    \tAmp_{12B}^{\text{Re}}&=\left[\frac{-a^{\prime} e^{-f \eta}}{\left[1 + (c^{\prime} + d^{\prime}) b_L^2 + d^{\prime} b_T^2\right]^{j^{\prime}}}\right]\label{eq:model_ReA12B}\\
-    \tAmp_{2B}^{\text{Im}}&=\left[\frac{a^{\prime\prime} b_L e^{-f \eta}}{\left[1 + (c^{\prime\prime} + d^{\prime\prime}) b_L^2 + d^{\prime\prime} b_T^2\right]^{j^{\prime\prime}}}\right]\label{eq:model_ImA2B}
-\end{align}
-
-
-\subsection{Simultaneous Fitting Strategy}
-\label{sec:simultaneous_fit_strategy}
-
-The structural models in Eq. (\ref{eq:model_ReA2B})-(\ref{eq:model_ImA2B}) show that all three surviving amplitudes share an $\eta$-dependence damped by a common exponential decay factor, $e^{-f\eta}$. Because the Sivers shift is a ratio of transverse momentum moments, this shared exponential behavior cancels out in the physical momentum fraction $x$ calculation. 
-
-The Sivers shift is the ratio of the first transverse momentum moment of the Sivers function to the unpolarized TMD distribution:
-\begin{equation}
-   \langle \vect{k}_y \rangle_{TU}(\vprp{\bvec}^2,x,\zetahat,\eta v \tcdot P) 
-	\ \equiv\ \mN \frac{\tilde f_{1T}^{\perp(1)}(\vprp{\bvec}^2;\zetahat,\ldots,\eta v \tcdot P)}{\tilde f_1^{(0)}(\vprp{\bvec}^2;\zetahat,\ldots,\eta v \tcdot P)} \ .
-\end{equation}
-
-Expanding these Fourier-transformed distributions in terms of the invariant effective amplitudes $\tAmp_{12B}$ and $\tAmp_{2B}$, we rewrite the ratio as an integration over the longitudinal quark spatial separation $b \cdot P$:
-\begin{equation}
-    \langle \vect{k}_y \rangle_{TU} = -m_{N} \frac{\int d(b\cdot P)e^{ix(b\cdot P)} \tAmp_{12B}(\bvec^2,\bvec \tcdot P,(\bvec \tcdot P) R(\zetahat^2)/\mN^2,-1/(\mN\zetahat)^2,\eta v \tcdot P)}{\int d(b\cdot P)e^{ix(b\cdot P)}\tAmp_{2B}(\bvec^2,\bvec \tcdot P,(\bvec \tcdot P) R(\zetahat^2)/\mN^2,-1/(\mN\zetahat)^2,\eta v \tcdot P)} \ .
-\end{equation}
-
-We then decompose the complex effective amplitudes into their real (T-even) and imaginary (T-odd) components. The imaginary Sivers amplitude is statistically consistent with zero, so we remove $\tAmp_{12B}^{\text{Im}}$ from the numerator:
-\begin{equation}
-    \langle \vect{k}_y \rangle_{TU} = -m_{N} \frac{\int d(b\cdot P)e^{ix(b\cdot P)} \left[\tAmp_{12B}^{\text{Re}}(\cdots)+i\cancelto{0}{\tAmp_{12B}^{\text{Im}}(\cdots)}\right]}{\int d(b\cdot P)e^{ix(b\cdot P)}\left[\tAmp_{2B}^{\text{Re}}(\cdots)+i\tAmp_{2B}^{\text{Im}}(\cdots)\right]} \ .
-\end{equation}
-
-We use Euler's formula to expand the Fourier kernel $e^{ix(b\cdot P)}$ into cosine and sine components. Because the integration domain is symmetric, any integrand that is odd in $b \cdot P$ integrates to zero. Retaining only the non-vanishing even-parity combinations yields:
-\begin{equation}
-    \langle \vect{k}_y \rangle_{TU} = -m_{N} \frac{\int d(b\cdot P) \cos{\left(x(b\cdot P)\right)}\tAmp_{12B}^{\text{Re}}(\cdots)}{\int d(b\cdot P)\left[\cos{\left(x(b\cdot P)\right)}\tAmp_{2B}^{\text{Re}}(\cdots)-\sin{\left(x(b\cdot P)\right)}\tAmp_{2B}^{\text{Im}}(\cdots)\right]} \ .
-\end{equation}
-Substituting the analytical models from Eq. (\ref{eq:model_ReA2B})-(\ref{eq:model_ImA2B}) shows the shared asymptotic parameter $e^{-f \eta}$. Because the $e^{-f\eta}$ term is independent of the integration variable $b \cdot P$, it factors out of both the numerator and denominator integrals, canceling the shared exponential decay parameter. Applying the Lorentz-invariant projection $b_L = \frac{P \cdot b}{-P_L}$ and $b_T^2=b^2-b_L^2$, we arrive at the final integrands in the invariant frame:
-\begin{equation}
-\begin{aligned}
-    \langle \vect{k}_y \rangle_{TU} &= m_{N} \frac{\int d(b\cdot P) \cos{\left(x(b\cdot P)\right)} \frac{a^{\prime}}{D_{12B}^{\text{Re}}}}{\int d(b\cdot P)\left[\cos{\left(x(b\cdot P)\right)} \frac{a}{D_{2B}^{\text{Re}}} - \sin{\left(x(b\cdot P)\right)}\frac{a^{\prime\prime} (P \cdot b) / (-P_L)}{D_{2B}^{\text{Im}}}\right]} \ , \\
-    D_{12B}^{\text{Re}} &= \left[1 + (c^{\prime}) \frac{(P \cdot b)^2}{P_L^2} + d^{\prime} b^2\right]^{j^{\prime}} \ , \\
-    D_{2B}^{\text{Re}} &= \left[1 + \left(c\left(1 - \frac{k_1}{\eta} - \frac{k_2}{\eta^2}\right)\right) \frac{(P \cdot b)^2}{P_L^2} + d b^2\right]^j \ , \\
-    D_{2B}^{\text{Im}} &= \left[1 + (c^{\prime\prime}) \frac{(P \cdot b)^2}{P_L^2} + d^{\prime\prime} b^2\right]^{j^{\prime\prime}} \ .
-\end{aligned}
-\end{equation}
-To enforce this shared $\eta$-dependence across the amplitudes, we use a simultaneous global fit. Forcing the parameter $f$ to be identical across all three amplitude models ($\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$, and $\tAmp_{12B}^{\text{Re}}$) ensures theoretical consistency and stabilizes the parameter extraction, reflecting the physical cancellation mechanism above.
-
-
-For the unpolarized real amplitude $\tAmp_{2B}^{\text{Re}}$, the transverse width parameter $d$ remains constant across all $\eta$, but the longitudinal width parameter $c(\eta)$ requires an asymptotic model.
-
-In selecting the final model for $c(\eta)$, statistical goodness-of-fit must be paired with physical boundary conditions on the light-cone momentum fraction $x \in [-1, 1]$:
-
-\begin{itemize}
-    \item \textbf{Quark versus Anti-quark Domains}: In light-cone field theory, positive momentum fractions ($x > 0$) correspond to quark distributions $q(x) = f_1(x)$, while negative momentum fractions ($x < 0$) govern anti-quark distributions through $\bar{q}(x) = -f_1(-x)$.
-    \item \textbf{Anti-quark Suppression at Large $|x|$}: In physical nucleons, sea anti-quark densities are concentrated strictly at low momentum fractions ($|x| \lesssim 0.1$). As $|x|$ increases, the anti-quark distribution falls rapidly to zero. At moderate-to-large values ($x < -0.2$ or $x < -0.3$), the anti-quark density is negligible.
-    \item \textbf{Fourier Artifact Suppression}: Candidate models that approach the asymptote too slowly or fail to capture the curvature in $\eta$ (such as Candidates 2 and 5) produce unphysical oscillatory behavior or non-vanishing tails in the negative-$x$ region ($x < -0.2$) upon Fourier transformation. Candidate 1 cleanly suppresses anti-quark contributions in this regime while maintaining an optimal balance of minimal $\chi^2/\text{dof}$ and AIC score.
-\end{itemize}
-
-\subsubsection{Simultaneous Fit with Full Covariance Matrix}
-
-Because we extract the amplitudes from the same gauge field configurations and evaluate them across nearby spatial coordinates $(b_L, b_T)$, their statistical fluctuations are highly correlated. A simple uncorrelated $\chi^2$ minimization improperly weights these data points, deflating uncertainties and biasing the central values.
-
-To resolve this, we perform a correlated $\chi^2$ minimization utilizing the full covariance matrix. This accounts for the cross-correlations inherent in the lattice data, both across different quark spatial separations and across the real and imaginary amplitude components. 
-
-We estimate these correlations using Jackknife resampling. Let $y_i^{(k)}$ represent the lattice evaluation of the $i$-th data point (spanning all spatial coordinates across $\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$, and $\tAmp_{12B}^{\text{Re}}$) in the $k$-th Jackknife bin. The full Jackknife covariance matrix $C_{ij}$ is defined as \cite{Boram2011Covariance}:
-\begin{equation}
-    C_{ij} = \frac{N-1}{N} \sum_{k=1}^{N} \left( y_i^{(k)} - \bar{y}_i \right) \left( y_j^{(k)} - \bar{y}_j \right) \ ,
-\end{equation}
-where $N$ is the total number of Jackknife samples and $\bar{y}_i = \frac{1}{N}\sum_k y_i^{(k)}$ is the sample mean. 
-
-The global simultaneous fit minimizes the correlated $\chi^2$ objective function with respect to the model parameters $\mathbf{p}$:
-\begin{equation}
-    \chi^2(\mathbf{p}) = \sum_{i,j} \left( \bar{y}_i - F_i(\mathbf{p}) \right) C_{ij}^{-1} \left( \bar{y}_j - F_j(\mathbf{p}) \right) \ ,
-\end{equation}
-where $F_i(\mathbf{p})$ represents the analytical models evaluated at the corresponding kinematics. 
-
-We utilize the \texttt{lsqfit} \cite{Lepage:2001ym} non-linear least squares fitting package and the \texttt{gvar} library for Gaussian error propagation. We construct the full Jackknife covariance matrix that captures the cross-correlations between $\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$, and $\tAmp_{12B}^{\text{Re}}$. The \texttt{gvar} framework binds the combined lattice data array to the inverse covariance matrix.
-
 \subsection{Rejection of Separable Longitudinal and Transverse Factorization}
 \label{sec:rejection_exponential_longitudinal}
-To test this separability hypothesis discussed in Section \ref{Test-for-Factorization}, we constructed candidate models that multiply an independent longitudinal profile by various transverse $b^2$ profiles, including combinations of Gaussian, Lorentzian power-law, and exponential-decay forms. We evaluated each model with full Jackknife fits.
+To test this separability hypothesis discussed in Section \ref{sec:factorization_test}, we constructed candidate models that multiply an independent longitudinal profile by various transverse $b^2$ profiles, including combinations of Gaussian, Lorentzian power-law, and exponential-decay forms. We evaluated each model with full Jackknife fits.
 
-The fit results are summarized in Fig.~\ref{fig:rejection_exponential_longitudinal}. When exponential decay in $(P\cdot b)$ is paired with a Gaussian transverse profile, the fit is poor ($\chi^2/\text{dof} \approx 4.98$). Even for the other models, the $\chi^2/\text{dof} \approx 2$, and the coefficient $c$ governing the $(P\cdot b)$ evaluates to a negative value and is also consistent with zero within Jackknife uncertainties; this is unstable and divergent when performing a Fourier transform. 
+The fit results are summarized in Fig.~\ref{fig:rejection_gaussian_transverse} (see its caption for the poor $\chi^2/\text{dof}$ when exponential decay in $(P\cdot b)$ is paired with a Gaussian transverse profile). Even the better-performing combinations give $\chi^2/\text{dof}\approx 2$, with the coefficient $c$ governing $(P\cdot b)$ evaluating to a negative value consistent with zero within Jackknife uncertainties, which is unstable and divergent under a Fourier transform.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=1\linewidth]{plots/Rejection-of-Separable-Exponential-Longitudinal-Decay.pdf}
     \caption{Fit results testing the validity of the separability hypothesis: an exponential decay in $(P\cdot b)$ is paired with a Gaussian transverse profile; the fit is poor ($\chi^2/\text{dof} \approx 4.98$). In models that achieve a lower $\chi^2/\text{dof}$, the coefficient $c$ consistently fits to zero within uncertainties and is negative in each Jackknife set, demonstrating that the data rejects the separability hypothesis.}
-    \label{fig:rejection_exponential_longitudinal}
+    \label{fig:rejection_gaussian_transverse}
 \end{figure}
 
-We also explored the separability hypothesis with $\eta$-dependent $c$, as $c(\eta)$, which governs $(P\cdot b)$; in the asymptotic limit, this forces $c$ to be positive. By introducing the asymptotic $c(\eta)$, we lowered the $\chi^2/\text{dof}$ to $ \approx 1.35$, and in the asymptotic limit $c$ is positive. From the fitting routine, we find that the lattice data prefer a power-law in $(P \cdot b)$ rather than an exponential decay in $|(P \cdot b)|$.
+We also explored the separability hypothesis with $\eta$-dependent $c$, as $c(\eta)$, which governs $(P\cdot b)$; in the asymptotic limit, this forces $c$ to be positive. By introducing the asymptotic $c(\eta)$, we lowered the $\chi^2/\text{dof}$ to $\approx 1.35$ with $c$ positive in the asymptotic limit (Fig.~\ref{fig:rejection_etadep_c}). From the fitting routine, we find that the lattice data prefer a power-law in $(P \cdot b)$ rather than an exponential decay in $|(P \cdot b)|$.
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=1\linewidth]{plots/Rejection-of-Separable-Exponential-Longitudinal-Decay-ceta.eps}
     \caption{Fit results testing the validity of the separability hypothesis with $\eta$-dependent $c$, as $c(\eta)$. In models that achieve a lower $\chi^2/\text{dof}$, the coefficient $c$ is now positive}
-    \label{fig:rejection_exponential_longitudinal}
+    \label{fig:rejection_etadep_c}
 \end{figure}
 
 
@@ -422,7 +258,7 @@ Each model admits closed-form analytical Fourier transforms, which makes it stra
 }
 \end{table}
 
-The numerical results highlight several critical failure mechanisms inherent to factorized models. In \texttt{ExpPb\_PowerLawb}, the real unpolarized amplitude fits with $\chi^2/\text{dof} \approx 1.286$. Because $\tAmp_{2B}^{\text{Re}}$ dominates the statistical weight, an uncritical fit can give the false impression of an adequate model. However, the same parameterization fails for the imaginary amplitude $\tAmp_{2B}^{\text{Im}}$: the longitudinal decay width $c_{\text{im}} = 0.0045 \pm 0.0248$ evaluates to zero within errors. This means the model loses its longitudinal decay profile, producing an essentially flat distribution in $P\cdot b$. Furthermore, the overall amplitude flips to an unphysical negative sign ($a_{\text{im}} = -0.167$).
+The numerical results reveal several critical failure mechanisms inherent to factorized models. In \texttt{ExpPb\_PowerLawb}, the real unpolarized amplitude fits with $\chi^2/\text{dof} \approx 1.286$. Because $\tAmp_{2B}^{\text{Re}}$ dominates the statistical weight, an uncritical fit can give the false impression of an adequate model. However, the same parameterization fails for the imaginary amplitude $\tAmp_{2B}^{\text{Im}}$: the longitudinal decay width $c_{\text{im}} = 0.0045 \pm 0.0248$ evaluates to zero within errors. This means the model loses its longitudinal decay profile, producing an essentially flat distribution in $P\cdot b$. Furthermore, the overall amplitude flips to an unphysical negative sign ($a_{\text{im}} = -0.167$).
 
 For the real Sivers amplitude $\tAmp_{12B}^{\text{Re}}$, the longitudinal parameter $c_{\text{reA12B}}$ is similarly suppressed across all factorized models ($0.028 \pm 0.024$ for \texttt{ExpPb\_PowerLawb} and $0.0016 \pm 0.0061$ for \texttt{GaussianPb\_PowerLawb}). The factorized models cannot capture the distinct longitudinal curvature of the spin-dependent correlator without forcing the decay parameter to its lower boundary. Factoring out an exponential $|P\cdot b|$ dependence introduces a discontinuous first derivative (a cusp) at $P\cdot b = 0$. For an odd-parity amplitude like $\tAmp_{2B}^{\text{Im}}$, which must vanish linearly through the origin ($\tAmp_{2B}^{\text{Im}} \propto b_L$), the non-analytic factor $e^{-c|P\cdot b|}$ conflicts with the smooth behavior of the Euclidean correlation function. The fit responds by driving $c_{\text{im}} \to 0$ to minimize the cusp penalty.
 
@@ -432,12 +268,177 @@ In the Lorentz-invariant variable space $(P\cdot b, b^2)$, the longitudinal sepa
     \end{equation}
 preserves smooth analyticity at $P\cdot b = 0$, satisfies power-law integrability, and yields stable, positive parameters across all three amplitudes (e.g., $c_{\text{im}} = 0.2253(69)$, $c_{\text{reA12B}} = 0.0773(46)$, $a_{\text{im}} = +0.267(13)$). We therefore exclude factorized ansatze and adopt the coupled Lorentzian denominator for the global analysis.
 
+With this structural form established, the following sections determine its detailed $\eta$-dependence for each amplitude and finalize the candidate models before the global simultaneous fit.
+
+\subsection{Systematical exploration of the best physical model}
+\label{sec:systematic_exploration}
+
+Having established that a coupled Lorentzian denominator outperforms factorized alternatives, we now determine its detailed $\eta$-dependence for each amplitude. Based on the \texttt{PySR} analysis, we explored numerous power-law models for $\tAmp_{2B}^{\text{Re}}$ for momentum $P_L=-1$, $6\leq\eta\leq10$, and $b\geq3$, starting for completeness with a Gaussian model and several $\eta$-dependent ans\"atzes. For each model, the table lists the model expression, the list of fit parameters, the jackknife-averaged fitted values with statistical uncertainties, and the resulting $\chi^2/\mathrm{DoF}$.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\linewidth]{plots/fit_exploration_mathematica/fit_list_gaussian_c_d_etas.eps}
+    \caption{3D jackknife fits of $\mathrm{Re}\,\tilde{A}_{2B}(b_L,b_T,\eta)$ to a family of 16 Gaussian ans\"atze, all built on the common baseline $\tilde{A}_{2B} = a\, e^{-f\eta}\, \exp\!\big[-c\,(b_L P_L)^2 - d\,(b_L^2+b_T^2)\big]$, in which the coefficients $c$ and $d$ are each independently allowed to be either constant or one of three $\eta$-dependent forms, $c\to c(\eta)$ and/or $d\to d(\eta)$.}
+    \label{fig:rejection_fit_list_gaussian_c_d_etas}
+\end{figure}
+
+From our physics requirements, we strictly want the fit parameter $c$ to be positive and statistically stable, because $c$ is the coefficient of $P.b$, and having a stable, positive $c$ is needed for a physical Fourier-transformed space in $x$. From Figure \ref{fig:rejection_fit_list_gaussian_c_d_etas}, most $c$ parameters are either unstable or negative, and everything still has a higher $\chi^2/\mathrm{DoF}$. On exploring power-law ans\"atze for $\tAmp_{2B}^{\text{Re}}$ for momentum $P_L=-1$, $6\leq\eta\leq10$, and $b\geq3$, we were able to further reduce the $\chi^2/\mathrm{DoF}$ to $\approx1.5$. We found that $\eta$-dependence in the fit parameter $d$ worsens the fit, while $\eta$-dependence in the fit parameter $c$ improves it. New ambiguity arises: there exist multiple $\eta$ dependencies that all give consistently the same $\chi^2/\mathrm{DoF}$. For each power-law model, the table lists the model expression, the list of fit parameters, the jackknife-averaged fitted values with statistical uncertainties, $\chi^2/\mathrm{DoF}$, AIC, and the resulting Fourier transform in $x$ space.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\linewidth]{PowerLaw_etaAsymptotic/A2BfitFT_eta_Asymptotic_P1.pdf}
+    \caption{3D Jackknife fits of $\mathrm{Re}\,\tilde{A}_{2B}(b_L,b_T,\eta)$ to a family of power-law ans\"atze, all built on the common baseline $\tilde{A}_{2B} = a\, e^{-f\eta}\, \left(1+(c+d)b^2_L+db^2_T\right)^j$, in which the coefficient $c$ is each independently allowed to be either constant or one of $\eta$-dependent forms, $c\to c(\eta)$.}
+\end{figure}
+\pagebreak
+
+For completeness, we explored more $\eta$-dependent forms $c\to c(\eta)$, which yield wider Fourier transforms in $x$ space.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\linewidth]{PowerLaw_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_P1.pdf}
+    \caption{3D jackknife fits of $\mathrm{Re}\,\tilde{A}_{2B}(b_L,b_T,\eta)$ to a family of power-law ans\"atze, all built on the common baseline $\tilde{A}_{2B} = a\, e^{-f\eta}\, \left(1+(c+d)b^2_L+db^2_T\right)^j$, in which the coefficient $c$ is each independently allowed to $\eta$-dependent forms, $c\to c(\eta)$ which yield wider Fourier transforms in $x$ space.}
+\end{figure}
+
+All viable asymptotic functions in $\eta$ have a common power-law profile with a power $j \approx 2$ and an amplitude scale $a \approx 4$, damped by the area-law-like suppression factor $e^{-0.5\eta}$. We isolate the specific $\eta$-dependence of the width parameters $c$ and $d$ by fixing these structural parameters ($j=2$, $a=4$) and performing sequential fits at individual $\eta$ slices, shown in Fig.~\ref{fig:ReA2B_fixed_eta_slices}.
+\pagebreak
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.6\linewidth]{Gaussian_type_fit_Real_A2B/LorentzianFixedA_P-1_b3.pdf}
+    \caption{Sequential Lorentzian fits for $\tAmp^{Re}_{2B}$ at individual $\eta$ slices, holding the global power $j=2$ and amplitude $a=4$ constant.}
+    \label{fig:ReA2B_fixed_eta_slices}
+\end{figure}
+
+From these fits, we extract the parameters $c$ and $d$. The fit parameter $c$ acts as a coefficient of the longitudinal separation $(P \cdot b)$, while $d$ acts as a coefficient of the invariant squared separation $b^2$. We plot the extracted values of $c$ and $d$ against our candidate asymptotic models to analyze their $\eta$-dependence:
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\linewidth]{PowerLaw_etaAsymptotic/A2B_c_eta_AllAsymptoticModels_P1.pdf}
+    \caption{The extracted parameter $c(\eta)$ overlaid with various candidate asymptotic models, demonstrating its asymptotic approach at large $\eta$.}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.4\linewidth]{PowerLaw_etaAsymptotic/A2B_d_eta_Independence_P1.pdf}
+    \caption{The extracted parameter $d(\eta)$, exhibiting a clear independence from the staple extent $\eta$.}
+\end{figure}
+
+
+\subsection{Candidate Selection}
+\label{sec:candidate_selection}
+
+Based on the $\chi^2/\text{dof}$ minimizations and sequential fitting at individual $\eta$ slices, we determined the structural parameterizations for the three surviving invariant amplitudes ($\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$, and $\tAmp_{12B}^{\text{Re}}$; $\tAmp_{12B}^{\text{Im}}$ remains excluded, as noted above).
+
+For the unpolarized real amplitude $\tAmp_{2B}^{\text{Re}}$, the transverse width parameter $d$ remains constant across all $\eta$, but the longitudinal width parameter $c(\eta)$ requires an asymptotic model. We select the model $c(\eta) = c\left(1 - \frac{k_1}{\eta} - \frac{k_2}{\eta^2}\right)$ because its Fourier transform suppresses negative-$x$ contributions, which we discuss in later sections.
+
+For the real Sivers amplitude $\tAmp_{12B}^{\text{Re}}$, we repeated the sequential Lorentzian fitting at fixed $\eta$ slices. As shown in Fig.~\ref{fig:ReA12B_eta_independence} and Table \ref{tab:ReA12B_fixed_eta}, the longitudinal parameter $c$ and transverse parameter $d$ are independent of $\eta$. We therefore model $c$ and $d$ as constants for $\tAmp_{12B}^{\text{Re}}$.
+
+\begin{table}[h!]
+    \centering
+    \includegraphics[width=0.55\linewidth]{Gaussian_type_fit_Real_A2B/LorentzianFixed_ReA12B_P-1_b3.pdf}
+    \caption{Sequential Lorentzian fits for $\tAmp_{12B}^{\text{Re}}$ at individual $\eta$ slices showing consistent $\chi^2/\text{dof}$ and stable parameters.}
+    \label{tab:ReA12B_fixed_eta}
+\end{table}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.49\linewidth]{PowerLaw_etaAsymptotic/ReA12B_c_eta_Independence_P1.pdf}
+    \includegraphics[width=0.49\linewidth]{PowerLaw_etaAsymptotic/ReA12B_d_eta_Independence_P1.pdf}
+    \caption{Lattice extracted parameters $c$ (left) and $d$ (right) for $\tAmp_{12B}^{\text{Re}}$ as a function of $\eta$. Both parameters demonstrate clear independence from $\eta$.}
+    \label{fig:ReA12B_eta_independence}
+\end{figure}
+
+For the imaginary unpolarized amplitude $\tAmp_{2B}^{\text{Im}}$, the lattice data has more statistical noise, but the sequential fitting yields a similar trend. We model $c$ and $d$ as constant in $\eta$, mirroring the structural stability of the real amplitudes. The resulting fits are shown in Fig.~\ref{fig:ImA2B_eta_independence} and Table \ref{tab:ImA2B_fixed_eta}.
+
+\begin{table}[h!]
+    \centering
+    \includegraphics[width=0.55\linewidth]{Gaussian_type_fit_Real_A2B/LorentzianFixed_ImA2B_P-1_b3.pdf}
+    \caption{Sequential Lorentzian fits for $\tAmp_{2B}^{\text{Im}}$ at individual $\eta$ slices showing consistent $\chi^2/\text{dof}$.}
+    \label{tab:ImA2B_fixed_eta}
+\end{table}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.49\linewidth]{PowerLaw_etaAsymptotic/ImA2B_c_eta_Independence_P1.pdf}
+    \includegraphics[width=0.49\linewidth]{PowerLaw_etaAsymptotic/ImA2B_d_eta_Independence_P1.pdf}
+    \caption{Lattice extracted parameters $c$ (left) and $d$ (right) for $\tAmp_{2B}^{\text{Im}}$ as a function of $\eta$. Despite increased statistical noise, the data are highly consistent with the constant-parameter ansatz.}
+    \label{fig:ImA2B_eta_independence}
+\end{figure}
+
+The analytical models in invariant $(b_L,b_T)$ space for the three amplitudes are:
+\begin{align}
+    \tAmp_{2B}^{\text{Re}}&=\left[\frac{a e^{-f \eta}}{\left[1 + \left(d + c\left(1 - \frac{k_1}{\eta} - \frac{k_2}{\eta^2}\right)\right) b_L^2 + d b_T^2\right]^j}\right]\label{eq:model_ReA2B}\\
+    \tAmp_{12B}^{\text{Re}}&=\left[\frac{-a^{\prime} e^{-f \eta}}{\left[1 + (c^{\prime} + d^{\prime}) b_L^2 + d^{\prime} b_T^2\right]^{j^{\prime}}}\right]\label{eq:model_ReA12B}\\
+    \tAmp_{2B}^{\text{Im}}&=\left[\frac{a^{\prime\prime} b_L e^{-f \eta}}{\left[1 + (c^{\prime\prime} + d^{\prime\prime}) b_L^2 + d^{\prime\prime} b_T^2\right]^{j^{\prime\prime}}}\right]\label{eq:model_ImA2B}
+\end{align}
+
+
+\subsection{Simultaneous Fitting Strategy}
+\label{sec:simultaneous_fit_strategy}
+
+The structural models in Eq. (\ref{eq:model_ReA2B})-(\ref{eq:model_ImA2B}) show that all three surviving amplitudes share an $\eta$-dependence damped by a common exponential decay factor, $e^{-f\eta}$. Because the Sivers shift is a ratio of transverse momentum moments, this shared exponential behavior cancels out in the physical momentum fraction $x$ calculation. 
+
+The Sivers shift is the ratio of the first transverse momentum moment of the Sivers function to the unpolarized TMD distribution:
+\begin{equation}
+   \langle \vect{k}_y \rangle_{TU}(\vprp{\bvec}^2,x,\zetahat,\eta v \tcdot P) 
+	\ \equiv\ \mN \frac{\tilde f_{1T}^{\perp(1)}(\vprp{\bvec}^2;\zetahat,\ldots,\eta v \tcdot P)}{\tilde f_1^{(0)}(\vprp{\bvec}^2;\zetahat,\ldots,\eta v \tcdot P)} \ .
+\end{equation}
+
+Expanding these Fourier-transformed distributions in terms of the invariant effective amplitudes $\tAmp_{12B}$ and $\tAmp_{2B}$, we rewrite the ratio as an integration over the longitudinal quark spatial separation $b \cdot P$:
+\begin{equation}
+    \langle \vect{k}_y \rangle_{TU} = -m_{N} \frac{\int d(b\cdot P)e^{ix(b\cdot P)} \tAmp_{12B}(\bvec^2,\bvec \tcdot P,(\bvec \tcdot P) R(\zetahat^2)/\mN^2,-1/(\mN\zetahat)^2,\eta v \tcdot P)}{\int d(b\cdot P)e^{ix(b\cdot P)}\tAmp_{2B}(\bvec^2,\bvec \tcdot P,(\bvec \tcdot P) R(\zetahat^2)/\mN^2,-1/(\mN\zetahat)^2,\eta v \tcdot P)} \ .
+\end{equation}
+
+We then decompose the complex effective amplitudes into their real (T-even) and imaginary (T-odd) components, dropping $\tAmp_{12B}^{\text{Im}}$ from the numerator as noted above:
+\begin{equation}
+    \langle \vect{k}_y \rangle_{TU} = -m_{N} \frac{\int d(b\cdot P)e^{ix(b\cdot P)} \left[\tAmp_{12B}^{\text{Re}}(\cdots)+i\cancelto{0}{\tAmp_{12B}^{\text{Im}}(\cdots)}\right]}{\int d(b\cdot P)e^{ix(b\cdot P)}\left[\tAmp_{2B}^{\text{Re}}(\cdots)+i\tAmp_{2B}^{\text{Im}}(\cdots)\right]} \ .
+\end{equation}
+
+We use Euler's formula to expand the Fourier kernel $e^{ix(b\cdot P)}$ into cosine and sine components. Because the integration domain is symmetric, any integrand that is odd in $b \cdot P$ integrates to zero. Retaining only the non-vanishing even-parity combinations yields:
+\begin{equation}
+    \langle \vect{k}_y \rangle_{TU} = -m_{N} \frac{\int d(b\cdot P) \cos{\left(x(b\cdot P)\right)}\tAmp_{12B}^{\text{Re}}(\cdots)}{\int d(b\cdot P)\left[\cos{\left(x(b\cdot P)\right)}\tAmp_{2B}^{\text{Re}}(\cdots)-\sin{\left(x(b\cdot P)\right)}\tAmp_{2B}^{\text{Im}}(\cdots)\right]} \ .
+\end{equation}
+Substituting the analytical models from Eq. (\ref{eq:model_ReA2B})-(\ref{eq:model_ImA2B}), the shared $e^{-f\eta}$ term is independent of the integration variable $b\cdot P$ and cancels between the numerator and denominator integrals. Applying the Lorentz-invariant projection $b_L=\frac{P\cdot b}{-P_L}$ and $b_T^2=b^2-b_L^2$, we arrive at the final integrands in the invariant frame:
+\begin{equation}
+\begin{aligned}
+    \langle \vect{k}_y \rangle_{TU} &= m_{N} \frac{\int d(b\cdot P) \cos{\left(x(b\cdot P)\right)} \frac{a^{\prime}}{D_{12B}^{\text{Re}}}}{\int d(b\cdot P)\left[\cos{\left(x(b\cdot P)\right)} \frac{a}{D_{2B}^{\text{Re}}} - \sin{\left(x(b\cdot P)\right)}\frac{a^{\prime\prime} (P \cdot b) / (-P_L)}{D_{2B}^{\text{Im}}}\right]} \ , \\
+    D_{12B}^{\text{Re}} &= \left[1 + (c^{\prime}) \frac{(P \cdot b)^2}{P_L^2} + d^{\prime} b^2\right]^{j^{\prime}} \ , \\
+    D_{2B}^{\text{Re}} &= \left[1 + \left(c\left(1 - \frac{k_1}{\eta} - \frac{k_2}{\eta^2}\right)\right) \frac{(P \cdot b)^2}{P_L^2} + d b^2\right]^j \ , \\
+    D_{2B}^{\text{Im}} &= \left[1 + (c^{\prime\prime}) \frac{(P \cdot b)^2}{P_L^2} + d^{\prime\prime} b^2\right]^{j^{\prime\prime}} \ .
+\end{aligned}
+\end{equation}
+To enforce this shared $\eta$-dependence across the amplitudes, we use a simultaneous global fit. Forcing the parameter $f$ to be identical across all three amplitude models ($\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$, and $\tAmp_{12B}^{\text{Re}}$) ensures theoretical consistency and stabilizes the parameter extraction.
+
+In selecting the final model for $c(\eta)$, statistical goodness-of-fit must be paired with physical boundary conditions on the light-cone momentum fraction $x \in [-1, 1]$:
+
+\begin{itemize}
+    \item \textbf{Quark versus Anti-quark Domains}: In light-cone field theory, positive momentum fractions ($x > 0$) correspond to quark distributions $q(x) = f_1(x)$, while negative momentum fractions ($x < 0$) govern anti-quark distributions through $\bar{q}(x) = -f_1(-x)$.
+    \item \textbf{Anti-quark Suppression at Large $|x|$}: In physical nucleons, sea anti-quark densities are concentrated strictly at low momentum fractions ($|x| \lesssim 0.1$). As $|x|$ increases, the anti-quark distribution falls rapidly to zero. At moderate-to-large values ($x < -0.2$ or $x < -0.3$), the anti-quark density is negligible.
+    \item \textbf{Fourier Artifact Suppression}: Candidate models that approach the asymptote too slowly or fail to capture the curvature in $\eta$ (such as Candidates 2 and 5) produce unphysical oscillatory behavior or non-vanishing tails in the negative-$x$ region ($x < -0.2$) upon Fourier transformation. Candidate 1 cleanly suppresses anti-quark contributions in this regime while maintaining an optimal balance of minimal $\chi^2/\text{dof}$ and AIC score.
+\end{itemize}
+
+\subsubsection{Simultaneous Fit with Full Covariance Matrix}
+
+Because we extract the amplitudes from the same gauge field configurations and evaluate them across nearby spatial coordinates $(b_L, b_T)$, their statistical fluctuations are highly correlated. A simple uncorrelated $\chi^2$ minimization improperly weights these data points, deflating uncertainties and biasing the central values.
+
+To resolve this, we perform a correlated $\chi^2$ minimization using the full covariance matrix. This accounts for the cross-correlations inherent in the lattice data, both across different quark spatial separations and across the real and imaginary amplitude components. 
+
+We estimate these correlations using Jackknife resampling. Let $y_i^{(k)}$ represent the lattice evaluation of the $i$-th data point (spanning all spatial coordinates across $\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$, and $\tAmp_{12B}^{\text{Re}}$) in the $k$-th Jackknife bin. The full Jackknife covariance matrix $C_{ij}$ is defined as \cite{Boram2011Covariance}:
+\begin{equation}
+    C_{ij} = \frac{N-1}{N} \sum_{k=1}^{N} \left( y_i^{(k)} - \bar{y}_i \right) \left( y_j^{(k)} - \bar{y}_j \right) \ ,
+\end{equation}
+where $N$ is the total number of Jackknife samples and $\bar{y}_i = \frac{1}{N}\sum_k y_i^{(k)}$ is the sample mean. 
+
+The global simultaneous fit minimizes the correlated $\chi^2$ objective function with respect to the model parameters $\mathbf{p}$:
+\begin{equation}
+    \chi^2(\mathbf{p}) = \sum_{i,j} \left( \bar{y}_i - F_i(\mathbf{p}) \right) C_{ij}^{-1} \left( \bar{y}_j - F_j(\mathbf{p}) \right) \ ,
+\end{equation}
+where $F_i(\mathbf{p})$ represents the analytical models evaluated at the corresponding kinematics. 
+
+We use the \texttt{lsqfit} \cite{Lepage:2001ym} non-linear least squares fitting package and the \texttt{gvar} library for Gaussian error propagation. We construct the full Jackknife covariance matrix that captures the cross-correlations between $\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$, and $\tAmp_{12B}^{\text{Re}}$. The \texttt{gvar} framework binds the combined lattice data array to the inverse covariance matrix.
+
 The following subsections present the results of these simultaneous covariance matrix fits evaluated at discrete lattice momenta.
 
 \renewcommand{\PLval}{-1}
 \subsubsection{\texorpdfstring{Simultaneous Fit Results for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$}{TEXT}}
 
-The extracted parameters from the simultaneous fit for the lowest simulated nucleon momentum, $P_1 = -1$ ($\hat{\zeta} \approx 0.091$), are summarized below. Enforcing the shared asymptotic decay parameter $f$ across all three effective amplitudes ($\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$, and $\tAmp_{12B}^{\text{Re}}$) stabilizes the extraction of the spatial profiles and preserves the cancellation required for the Sivers shift ratio.
+The extracted parameters from the simultaneous fit for the lowest simulated nucleon momentum, $P_1 = -1$ ($\hat{\zeta} \approx 0.091$), are summarized below.
 
 \input{SimultaneousFitsCov/Fit_Table_PL\PLval_bmin3}
 
@@ -475,12 +476,12 @@ Using the continuous parametrization of the effective amplitudes, we analyticall
 
 \input{SimultaneousFitsCov/Integration_Table_PL\PLval_bmin3}
 
-The figures below show the Jackknife covariance matrix. The off-diagonal elements in the 2D correlation matrix and the 3D surface plot show cross-correlations between spatial lattice points and across amplitude components. Incorporating this covariance structure into the fitting pipeline via \texttt{lsqfit} properly weights the correlated fluctuations to determine the error bands on the final extracted Sivers shift.
+Figs.~\ref{fig:cov_matrix_2d_P1} and \ref{fig:cov_matrix_3d_P1} show the Jackknife covariance matrix. The off-diagonal elements in the 2D correlation matrix and the 3D surface plot show cross-correlations between spatial lattice points and across amplitude components. Incorporating this covariance structure into the fitting pipeline via \texttt{lsqfit} properly weights the correlated fluctuations to determine the error bands on the final extracted Sivers shift.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.5\linewidth]{SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-a_im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_PL\PLval.pdf}
-    \caption{2D representation of the full Jackknife covariance matrix utilized in the simultaneous fit for $P_1=-1$. The prominent off-diagonal bands highlight the strong correlations across the parameter space.}
+    \caption{2D representation of the full Jackknife covariance matrix used in the simultaneous fit for $P_1=-1$. The prominent off-diagonal bands show the strong correlations across the parameter space.}
     \label{fig:cov_matrix_2d_P1}
 \end{figure}
 
@@ -495,6 +496,7 @@ The figures below show the Jackknife covariance matrix. The off-diagonal element
 \pagebreak
 \renewcommand{\PLval}{-2}
 \subsubsection{\texorpdfstring{Simultaneous Fit Results for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$}{TEXT}}
+Figs.~\ref{fig:A2B_amplitudes_fit_P2}, \ref{fig:combined_fit_P2}, \ref{fig:cov_matrix_2d_P2}, and \ref{fig:cov_matrix_3d_P2} show the corresponding fit and covariance matrix at this momentum.
 \input{SimultaneousFitsCov/Fit_Table_PL\PLval_bmin3}
 \begin{figure}[htbp]
     \centering
@@ -528,7 +530,7 @@ The figures below show the Jackknife covariance matrix. The off-diagonal element
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.5\linewidth]{SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-a_im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_PL\PLval.pdf}
-    \caption{2D representation of the full Jackknife covariance matrix utilized in the simultaneous fit for $P_L=-2$.}
+    \caption{2D representation of the full Jackknife covariance matrix used in the simultaneous fit for $P_L=-2$.}
     \label{fig:cov_matrix_2d_P2}
 \end{figure}
 
@@ -542,6 +544,7 @@ The figures below show the Jackknife covariance matrix. The off-diagonal element
 \pagebreak
 \renewcommand{\PLval}{-3}
 \subsubsection{\texorpdfstring{Simultaneous Fit Results for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$}{TEXT}}
+Figs.~\ref{fig:A2B_amplitudes_fit_P3}, \ref{fig:combined_fit_P3}, \ref{fig:cov_matrix_2d_P3}, and \ref{fig:cov_matrix_3d_P3} show the corresponding fit and covariance matrix at this momentum.
 \input{SimultaneousFitsCov/Fit_Table_PL\PLval_bmin3}
 \begin{figure}[htbp]
     \centering
@@ -575,7 +578,7 @@ The figures below show the Jackknife covariance matrix. The off-diagonal element
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.5\linewidth]{SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-a_im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_PL\PLval.pdf}
-    \caption{2D representation of the full Jackknife covariance matrix utilized in the simultaneous fit for $P_L=-3$.}
+    \caption{2D representation of the full Jackknife covariance matrix used in the simultaneous fit for $P_L=-3$.}
     \label{fig:cov_matrix_2d_P3}
 \end{figure}
 
@@ -589,6 +592,7 @@ The figures below show the Jackknife covariance matrix. The off-diagonal element
 \pagebreak
 \renewcommand{\PLval}{-4}
 \subsubsection{\texorpdfstring{Simultaneous Fit Results for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$}{TEXT}}
+Figs.~\ref{fig:A2B_amplitudes_fit_P4}, \ref{fig:combined_fit_P4}, \ref{fig:cov_matrix_2d_P4}, and \ref{fig:cov_matrix_3d_P4} show the corresponding fit and covariance matrix at this momentum.
 \input{SimultaneousFitsCov/Fit_Table_PL\PLval_bmin3}
 \begin{figure}[htbp]
     \centering
@@ -622,7 +626,7 @@ The figures below show the Jackknife covariance matrix. The off-diagonal element
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.5\linewidth]{SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-a_im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_PL\PLval.pdf}
-    \caption{2D representation of the full Jackknife covariance matrix utilized in the simultaneous fit for $P_L=-4$.}
+    \caption{2D representation of the full Jackknife covariance matrix used in the simultaneous fit for $P_L=-4$.}
     \label{fig:cov_matrix_2d_P4}
 \end{figure}
 
