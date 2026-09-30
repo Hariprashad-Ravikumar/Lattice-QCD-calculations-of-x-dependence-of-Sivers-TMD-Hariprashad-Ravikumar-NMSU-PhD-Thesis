@@ -10,19 +10,13 @@ Amp is Power-law in light cone - Rigge
 
 -------------------------
 
-Aug 28, 2026,
+--------------------
+Corrections for Sep 11, 2026
 
-+ give a into of flow or rodemap of the chapter.
-explain the hirarchy eta slice -> global eta --> PySR --> ...
++ 5.2 small b needs more physics of the non-perturbative regime 
++++++++++++ legend size is small
++ PySR above Table 3: there is a Table ??
++ add a note about other amplitudes and why it's hard
++ add powere law and exponent
 
-sections 3:
-+explain all variables
-+ dont talk abouth symmetries again and again
-
-section 5:
-+ roadmap
-+ make sure gaussian model is just a entry
-+ mentions PySR reject gaussina with b only 
-+ funnle it to final selection of model
-+ we want zero anti-quarks at large x (x>-0.2 or 0.3)
-+ 
++ ratio test is wront we want to show x-axis as P.b
