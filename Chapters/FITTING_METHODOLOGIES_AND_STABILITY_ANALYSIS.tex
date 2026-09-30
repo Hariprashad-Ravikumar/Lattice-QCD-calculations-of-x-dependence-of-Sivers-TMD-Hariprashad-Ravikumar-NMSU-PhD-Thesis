@@ -159,6 +159,66 @@ The straight-line diagnostic in Fig.~\ref{fig:gaussian_straightline_test} confir
 
 Based on these results, we adopt the Lorentzian power-law structure as the spatial profile for $\tAmp_{2B}^{\text{Re}}$. In the following sections, we extend this functional form to the remaining amplitudes for the global simultaneous fit.
 
+\subsection{Test for Factorization in $(P\cdot b)$ and $b^2$} \label{sec:factorization_test}
+
+Before fitting, we check directly on the lattice data whether an amplitude can be written as a product of a longitudinal and a transverse profile, $\tAmp(P\cdot b,b^2) = F(P\cdot b)\,G(b^2)$. If it can, any ratio taken at a common $b^2$ between two values of $P\cdot b$ is a constant, and any ratio taken at a common $P\cdot b$ between two values of $b^2$ does not depend on $P\cdot b$. We form
+\begin{align}
+    T(P\cdot b, b^2) &= \frac{\tAmp(P\cdot b, b^2)}{\tAmp(P\cdot b = 4, b^2)} = \frac{F(P\cdot b)}{F(4)} \ , \label{eq:factorization_T}\\
+    B(P\cdot b, b^2) &= \frac{\tAmp(P\cdot b, b^2)}{\tAmp(P\cdot b, b^2 = 18)} = \frac{G(b^2)}{G(18)} \ , \label{eq:factorization_B}
+\end{align}
+where the second equality in each line holds only under factorization. $T$ should be flat in $b^2$ and $B$ should be flat in $P\cdot b$. Both ratios are computed on each Jackknife sample, and the error comes from the Jackknife spread of the ratio.
+
+The limitation is in how the data are sampled. At fixed $\eta$ and $P_L$, the $(b_L, b_T)$ points computed on the lattice map onto an irregular set of $(P\cdot b, b^2)$ pairs, listed in Table~\ref{tab:Pb_bsq_pairs} for $\eta|v|/a = 8$ and $P_L = -1$. There are 34 pairs, but the rows at $\pm P\cdot b$ are symmetric copies of each other (identical for the real amplitudes and opposite in sign for $\tAmp_{2B}^{\text{Im}}$), so only $P\cdot b \ge 0$ carries independent information. At each $(P\cdot b, b^2)$ the two points with $\pm b_T$ are independent measurements, and we average them sample by sample. After the cut $|\vect{b}| \ge 3a$, that is $b^2 \ge 9$, only three values of $P\cdot b$ have more than one $b^2$: $P\cdot b = 0$ with $b^2 = 9, 16, 25, 36, 49$; $P\cdot b = 3$ with $b^2 = 18, 45$; and $P\cdot b = 4$ with $b^2 = 17, 20, 32$. No two of these rows share two $b^2$ values, so the ratios in Eqs.~\eqref{eq:factorization_T} and~\eqref{eq:factorization_B} cannot be built from data alone.
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{c|l}
+        \hline
+        $P\cdot b$ & $b^2/a^2$ \\
+        \hline
+        $0$      & \textcolor{gray}{0, 1, 4}, \textbf{9, 16, 25, 36, 49} \\
+        $\pm 1$  & \textcolor{gray}{2, 5} \\
+        $\pm 2$  & \textcolor{gray}{5, 8}, 20 \\
+        $\pm 3$  & \textbf{18, 45} \\
+        $\pm 4$  & \textbf{17, 20, 32} \\
+        $\pm 5$  & 50 \\
+        $\pm 6$  & 45 \\
+        $\pm 8$  & 68 \\
+        \hline
+    \end{tabular}
+    \caption{All 34 $(P\cdot b, b^2)$ pairs available at $\eta|v|/a = 8$ and $P_L = -1$, where $P\cdot b = -P_L\,b_L = b_L$ and $b^2 = b_L^2 + b_T^2$. Grey entries fail the cut $|\vect{b}| \ge 3a$. Bold entries are the data used in the factorization test of Fig.~\ref{fig:Factorization_ratios_Pb034_eta8_PL-1}.}
+    \label{tab:Pb_bsq_pairs}
+\end{table}
+
+To get around this, we place the three rows on a common grid $b^2 = 18, 20, 25, 32$, the range that all three rows span, using linear interpolation in $b^2$ between the nearest data points above and below on the same $P\cdot b$ row. There is no extrapolation. Table~\ref{tab:factorization_grid} lists which grid values are data and which are interpolated: 4 of the 12 are data, and the other 8 are interpolated. For $\tAmp_{2B}^{\text{Im}}$, which is odd in $P\cdot b$ and vanishes at $P\cdot b = 0$, only the $P\cdot b = 3$ and $4$ rows are used.
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{c|cccc}
+        \hline
+        $P\cdot b$ & $b^2 = 18$ & $b^2 = 20$ & $b^2 = 25$ & $b^2 = 32$ \\
+        \hline
+        $0$ & interp.\ $[16, 25]$ & interp.\ $[16, 25]$ & \textbf{data} & interp.\ $[25, 36]$ \\
+        $3$ & \textbf{data} & interp.\ $[18, 45]$ & interp.\ $[18, 45]$ & interp.\ $[18, 45]$ \\
+        $4$ & interp.\ $[17, 20]$ & \textbf{data} & interp.\ $[20, 32]$ & \textbf{data} \\
+        \hline
+    \end{tabular}
+    \caption{Origin of each grid value used in Fig.~\ref{fig:Factorization_ratios_Pb034_eta8_PL-1}. ``Interp.\ $[b_a^2, b_b^2]$'' means linear interpolation in $b^2$ between the data at $b_a^2$ and $b_b^2$ on the same $P\cdot b$ row. The pattern is the same for all three amplitudes.}
+    \label{tab:factorization_grid}
+\end{table}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\linewidth]{plots/Factorization_ratios_Pb034_eta8_PL-1.pdf}
+    \caption{Factorization ratio test at $\eta|v|/a = 8$, $P_L = -1$ ($\hat{\zeta} = 0.090772$) for $\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$ and $\tAmp_{12B}^{\text{Re}}$. Top row: $T(P\cdot b, b^2)$ of Eq.~\eqref{eq:factorization_T}, the ratio to the $P\cdot b = 4$ row, plotted against $b^2$. Bottom row: $B(P\cdot b, b^2)$ of Eq.~\eqref{eq:factorization_B}, the ratio to $b^2 = 18$, plotted against $P\cdot b$. Under factorization every set of points is flat. Values off the data points are obtained by linear interpolation in $b^2$ (Table~\ref{tab:factorization_grid}). Error bars are Jackknife errors and do not include any uncertainty from the interpolation.}
+    \label{fig:Factorization_ratios_Pb034_eta8_PL-1}
+\end{figure}
+
+For $\tAmp_{2B}^{\text{Re}}$, the ratio of the $P\cdot b = 0$ row to the $P\cdot b = 4$ row stays between 0.91 and 1.14 over the whole grid, compatible with a constant within errors. The $P\cdot b = 3$ row does not: its ratio rises from 0.92 at $b^2 = 18$ to 1.55 at $b^2 = 32$. The bottom row shows the same pattern: the $P\cdot b = 0$ and $4$ points fall close together at each $b^2$ (for example 0.40 and 0.35 at $b^2 = 32$), while the $P\cdot b = 3$ point sits above them (0.60). $\tAmp_{2B}^{\text{Im}}$ shows a milder rise, from 0.80 to 1.08, and $\tAmp_{12B}^{\text{Re}}$ is compatible with flat ratios, although its errors are between 20\% and 45\% of the central values.
+
+The deviations all come from the $P\cdot b = 3$ row, and that row is where the interpolation is least reliable. It has data only at $b^2 = 18$ and $45$, so its values at $b^2 = 20$, $25$ and $32$ come from a single straight line across a gap of 27 units in $b^2$. The amplitudes fall steeply and are convex in $b^2$ in this range, and a straight line between two points of a convex curve lies above it, so the interpolated $P\cdot b = 3$ values are too large and the ratios in the top row are pushed up. That one line fixes all three $P\cdot b = 3$ points in the bottom row, which is why their error bars look so small: the Jackknife error does not include the uncertainty of the interpolation. The other interpolations span at most 12 units and are less affected. We therefore cannot tell whether the $P\cdot b = 3$ deviation is a genuine breaking of factorization or an interpolation artifact.
+
+This test is therefore only a qualitative check. Where the interpolation spans a short gap, the data are compatible with factorization, but the sampling is too sparse to settle the question. We return to it with an explicit factorized fit later in the chapter, once the global simultaneous fit gives us a coupled-model benchmark to test it against.
 
 \subsection{Systematical exploration of the best physical model}
 \label{sec:systematic_exploration}
@@ -528,22 +588,6 @@ Figs.~\ref{fig:A2B_amplitudes_fit_P4}, \ref{fig:combined_fit_P4}, \ref{fig:cov_m
 
 
 \pagebreak
-\subsection{Test for Factorization in $(P\cdot b)$ and $b^2$} \label{sec:factorization_test}
-
-To probe, directly at the level of the raw lattice data and independent of any fitted parameterization, whether the extracted amplitude factorizes as $\tAmp(P\cdot b,b^2) = F(P\cdot b) G(b^2)$, we performed a ratio test at fixed $P\cdot b$, which has multiple $b^2$, for example $b^2_1,b^2_2, b^2_3$, at the given momentum $P_L$. We formed
-$$
-R(b^2_i) = \frac{\tAmp(P\cdot b, b^2_i)}{\tAmp(P\cdot b, b^2_3)}
-$$
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=1\linewidth]{plots/FixedPb_Bsq_RatioTest_eta8_PL-1.pdf}
-    \caption{Ratio test for $(P\cdot b,b^2)$ factorization at fixed $P\cdot b$, for $\tAmp_{2B}^{\rm Re}$, $\tAmp_{12B}^{\rm Re}$, and $\tAmp_{2B}^{\rm Im}$ at $\eta|v|/a=8$, $P_L=-1$. Top row: $P\cdot b=-2$; bottom row: $P\cdot b=-4$; each point is ratioed against that row's own smallest available $b^2$, with the explicit ratio given in the legend.}
-    \label{fig:FixedPb_Bsq_RatioTest_eta8_PL-1}
-\end{figure}
-
-The two rows in Fig.~\ref{fig:FixedPb_Bsq_RatioTest_eta8_PL-1} do not trace a common zero-slope line in $b^2$, as a factorized ansatz would predict. A fully model-independent version of this test would additionally require ratioing at fixed $b^2$ between different values of $P\cdot b$; however, the $(b_L,b_T)$ points computed on the lattice do not form a regular grid in $(P\cdot b,b^2)$, and at most two distinct $P\cdot b$ values ever coincide at a common $b^2$ anywhere in the dataset, with no two $P\cdot b$ rows sharing two or more common $b^2$ values. This limited sampling prevents us from carrying out the complementary ratio test at fixed $b^2$. Given this limitation, while the data appears to disfavor an exactly factorized ansatz, we treat this observation only as a qualitative guide rather than a firm conclusion. We return to this question with an explicit factorized fit later in the chapter, once the global simultaneous fit gives us a coupled-model benchmark to test it against.
-
 \subsubsection{Rejection of Separable Longitudinal and Transverse Factorization}
 \label{sec:rejection_exponential_longitudinal}
 Having completed the global simultaneous fit above, we return to the separability hypothesis discussed in Section \ref{sec:factorization_test} and test it directly. We constructed candidate models that multiply an independent longitudinal profile by various transverse $b^2$ profiles, including combinations of Gaussian, Lorentzian power-law, and exponential-decay forms, and evaluated each with full Jackknife fits.
