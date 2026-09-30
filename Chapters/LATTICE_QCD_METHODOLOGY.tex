@@ -1,11 +1,7 @@
 \section{LATTICE QCD METHODOLOGY}
+\label{sec:lattice_methodology}
 
-\subsection{Quantum Chromodynamics}
-The fundamental theory of the strong interaction, Quantum Chromodynamics (QCD), describes the dynamics of quarks and gluons. The formulation of QCD in the continuum is defined by the Lagrangian density,
-\begin{equation}
-    \mathcal{L}_{\text{QCD}} = \sum_{f} \overline{\psi}_f(x) \left( i \gamma^\mu D_\mu - m_f \right) \psi_f(x) - \frac{1}{4} F_{\mu\nu}^a(x) F^{a \mu\nu}(x),
-\end{equation}
-where $\psi_f$ denotes the quark field of flavor $f$ with bare mass $m_f$, and $D_\mu = \partial_\mu - i g \frac{\lambda^a}{2} A_\mu^a$ is the gauge covariant derivative containing the gluon field $A_\mu^a$. The gluon field strength tensor is $F_{\mu\nu}^a$. Since QCD is asymptotically free at high energies, perturbation theory is successfully applied to hard scattering processes. However, at the energy scales characteristic of hadron structure, the strong coupling constant becomes large, rendering perturbative techniques invalid \cite{Gattringer:2010zz}. Accessing non-perturbative phenomena, such as the transverse momentum structure of partons, requires a first-principles regularization of the theory.
+QCD and its gauge symmetry were introduced in Section~\ref{sec:qcd_lagrangian}. As discussed in Section~\ref{sec:af_confinement}, the strong coupling is large at the energy scales characteristic of hadron structure, and perturbative techniques do not apply \cite{Gattringer:2010zz}. Accessing non-perturbative phenomena, such as the transverse momentum structure of partons, requires a first-principles regularization of the theory. This chapter describes the lattice formulation used in this work.
 
 \subsection{Lattice QCD}
 Lattice QCD provides a rigorous, non-perturbative framework for evaluating the QCD path integral. By transitioning to Euclidean spacetime ($t \to -i \tau$) and discretizing the continuous spacetime onto a four-dimensional hypercubic grid with lattice spacing $a$, the path integral becomes mathematically well-defined \cite{Wilson:1974sk}. The spacetime coordinates are restricted to $x_\mu = n_\mu a$, where $n_\mu \in \mathbb{Z}$.
