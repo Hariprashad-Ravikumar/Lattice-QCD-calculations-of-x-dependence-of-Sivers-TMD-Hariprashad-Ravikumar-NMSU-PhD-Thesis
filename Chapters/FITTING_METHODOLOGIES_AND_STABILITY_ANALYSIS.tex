@@ -398,98 +398,6 @@ Figs.~\ref{fig:cov_matrix_2d_P1} and \ref{fig:cov_matrix_3d_P1} show the Jackkni
 \end{figure}
 \pagebreak
 
-\pagebreak
-\subsubsection{Rejection of Separable Longitudinal and Transverse Factorization}
-\label{sec:rejection_exponential_longitudinal}
-Having completed the global simultaneous fit above, we return to the separability hypothesis discussed in Section \ref{sec:factorization_test} and test it directly. We constructed candidate models that multiply an independent longitudinal profile by various transverse $b^2$ profiles, including combinations of Gaussian, Lorentzian power-law, and exponential-decay forms, and evaluated each with full Jackknife fits.
-
-The fit results are summarized in Fig.~\ref{fig:rejection_gaussian_transverse} (see its caption for the poor $\chi^2/\text{dof}$ when exponential decay in $(P\cdot b)$ is paired with a Gaussian transverse profile). Even the better-performing combinations give $\chi^2/\text{dof}\approx 2$, with the coefficient $c$ governing $(P\cdot b)$ evaluating to a negative value consistent with zero within Jackknife uncertainties, which is unstable and divergent under a Fourier transform.
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=1\linewidth]{plots/Rejection-of-Separable-Exponential-Longitudinal-Decay.pdf}
-    \caption{Fit results testing the validity of the separability hypothesis: an exponential decay in $(P\cdot b)$ is paired with a Gaussian transverse profile; the fit is poor ($\chi^2/\text{dof} \approx 4.98$). In models that achieve a lower $\chi^2/\text{dof}$, the coefficient $c$ consistently fits to zero within uncertainties and is negative in each Jackknife set, demonstrating that the data rejects the separability hypothesis.}
-    \label{fig:rejection_gaussian_transverse}
-\end{figure}
-
-We also explored the separability hypothesis with $\eta$-dependent $c$, as $c(\eta)$, which governs $(P\cdot b)$; in the asymptotic limit, this forces $c$ to be positive. By introducing the asymptotic $c(\eta)$, we lowered the $\chi^2/\text{dof}$ to $\approx 1.35$ with $c$ positive in the asymptotic limit (Fig.~\ref{fig:rejection_etadep_c}). From the fitting routine, we find that the lattice data prefer a power-law in $(P \cdot b)$ rather than an exponential decay in $|(P \cdot b)|$.
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=1\linewidth]{plots/Rejection-of-Separable-Exponential-Longitudinal-Decay-ceta.eps}
-    \caption{Fit results testing the validity of the separability hypothesis with $\eta$-dependent $c$, as $c(\eta)$. In models that achieve a lower $\chi^2/\text{dof}$, the coefficient $c$ is now positive}
-    \label{fig:rejection_etadep_c}
-\end{figure}
-
-
-We systematically investigated four distinct factorized ansatze with lower $\chi^2/\text{dof}$ and propagated the same ansatze to all three invariant amplitudes ($\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$, and $\tAmp_{12B}^{\text{Re}}$). These models combine either an exponential ($e^{-c|P\cdot b|}$) or Gaussian ($e^{-c(P\cdot b)^2}$) longitudinal profile with either an exponential ($e^{-d|b|}$) or power-law ($(1+db^2)^{-j}$) transverse envelope:
-\begin{enumerate}
-    \item \textbf{\texttt{ExpPb\_Expb}}:
-    \begin{align}
-        \tAmp_{2B}^{\text{Re}} &= a_{\text{re}} \, e^{-c_{\text{re}}|P\cdot b| - d_{\text{re}}|b|} \, e^{-f\eta} \ , \\
-        \tAmp_{2B}^{\text{Im}} &= a_{\text{im}} \, (P\cdot b) \, e^{-c_{\text{im}}|P\cdot b| - d_{\text{im}}|b|} \, e^{-f\eta} \ , \\
-        \tAmp_{12B}^{\text{Re}} &= -a_{\text{reA12B}} \, e^{-c_{\text{reA12B}}|P\cdot b| - d_{\text{reA12B}}|b|} \, e^{-f\eta} \ .
-    \end{align}
-    
-    \item \textbf{\texttt{ExpPb\_PowerLawb}}:
-    \begin{align}
-        \tAmp_{2B}^{\text{Re}} &= \frac{a_{\text{re}} \, e^{-c_{\text{re}}|P\cdot b| - f\eta}}{\left(1 + d_{\text{re}} b^2\right)^{j_{\text{re}}}} \ , \\
-        \tAmp_{2B}^{\text{Im}} &= \frac{a_{\text{im}} \, (P\cdot b) \, e^{-c_{\text{im}}|P\cdot b| - f\eta}}{\left(1 + d_{\text{im}} b^2\right)^{j_{\text{im}}}} \ , \\
-        \tAmp_{12B}^{\text{Re}} &= \frac{-a_{\text{reA12B}} \, e^{-c_{\text{reA12B}}|P\cdot b| - f\eta}}{\left(1 + d_{\text{reA12B}} b^2\right)^{j_{\text{reA12B}}}} \ .
-    \end{align}
-
-    \item \textbf{\texttt{GaussianPb\_Expb}}:
-    \begin{align}
-        \tAmp_{2B}^{\text{Re}} &= a_{\text{re}} \, e^{-c_{\text{re}}(P\cdot b)^2 - d_{\text{re}}|b|} \, e^{-f\eta} \ , \\
-        \tAmp_{2B}^{\text{Im}} &= a_{\text{im}} \, (P\cdot b) \, e^{-c_{\text{im}}(P\cdot b)^2 - d_{\text{im}}|b|} \, e^{-f\eta} \ , \\
-        \tAmp_{12B}^{\text{Re}} &= -a_{\text{reA12B}} \, e^{-c_{\text{reA12B}}(P\cdot b)^2 - d_{\text{reA12B}}|b|} \, e^{-f\eta} \ .
-    \end{align}
-
-    \item \textbf{\texttt{GaussianPb\_PowerLawb}}:
-    \begin{align}
-        \tAmp_{2B}^{\text{Re}} &= \frac{a_{\text{re}} \, e^{-c_{\text{re}}(P\cdot b)^2 - f\eta}}{\left(1 + d_{\text{re}} b^2\right)^{j_{\text{re}}}} \ , \\
-        \tAmp_{2B}^{\text{Im}} &= \frac{a_{\text{im}} \, (P\cdot b) \, e^{-c_{\text{im}}(P\cdot b)^2 - f\eta}}{\left(1 + d_{\text{im}} b^2\right)^{j_{\text{im}}}} \ , \\
-        \tAmp_{12B}^{\text{Re}} &= \frac{-a_{\text{reA12B}} \, e^{-c_{\text{reA12B}}(P\cdot b)^2 - f\eta}}{\left(1 + d_{\text{reA12B}} b^2\right)^{j_{\text{reA12B}}}} \ .
-    \end{align}
-\end{enumerate}
-
-Each model admits closed-form analytical Fourier transforms, which makes it straightforward to inspect the resulting $x$-space distributions. We performed global simultaneous Jackknife fits on these four ansatze using the same kinematic cuts ($|\vect{b}| \ge 3a$, $\eta \in [6, 10]$) and shared area-law factor $e^{-f\eta}$. The fit quality and extracted parameters are summarized in Table~\ref{tab:factorized_ansatze_comparison}.
-
-\begin{table}[htbp]
-\centering
-\renewcommand{\arraystretch}{1.3}
-\caption{Comparison of the four factorized longitudinal-transverse models across nucleon momenta $P_L$, with extracted parameters shown at $P_L = -1$. While models with power-law transverse envelopes describe $\tAmp_{2B}^{\text{Re}}$ passably, all four factorized ansatze fail on $\tAmp_{2B}^{\text{Im}}$ and $\tAmp_{12B}^{\text{Re}}$.}
-\label{tab:factorized_ansatze_comparison}
-\scalebox{0.7}{
-\begin{tabular}{|l|c|c|c|c|c|c|c|p{4.2cm}|}
-\hline
-\textbf{Model Ansatz} & \multicolumn{4}{c|}{\textbf{$\chi^2/\text{dof}$ Across Momenta}} & \multicolumn{3}{c|}{\textbf{Key Fitted Parameters at $P_L = -1$}} & \textbf{Primary Failure Mode} \\
-\cline{2-8}
-& $P_L = -1$ & $P_L = -2$ & $P_L = -3$ & $P_L = -4$ & $c_{\text{im}}$ & $c_{\text{reA12B}}$ & $a_{\text{im}}$ & \\
-\hline
-\texttt{ExpPb\_Expb} & $1.406(92)$ & $0.956(75)$ & $0.622(61)$ & $0.455(53)$ & $0.0010(262)$ & $0.045(23)$ & $-0.167(16)$ & $c_{\text{im}} \to 0$; unphysical sign on $a_{\text{im}}$. \\
-\hline
-\texttt{ExpPb\_PowerLawb} & $1.286(89)$ & $0.938(75)$ & $0.623(61)$ & $0.447(53)$ & $0.0045(248)$ & $0.028(24)$ & $-0.167(31)$ & Fits $\tAmp_{2B}^{\text{Re}}$ well, but $c_{\text{im}}$ and $c_{\text{reA12B}}$ vanish within error; flips sign of $a_{\text{im}}$. \\
-\hline
-\texttt{GaussianPb\_Expb} & $2.389(121)$ & $2.005(111)$ & $0.945(76)$ & $0.453(52)$ & $0.568(171)$ & $0.0038(69)$ & $+0.050(121)$ & Poor $\chi^2/\text{dof}$; $c_{\text{reA12B}}$ pinned near zero; Gaussian over-damping at large $x$. \\
-\hline
-\texttt{GaussianPb\_PowerLawb} & $2.316(120)$ & $1.981(111)$ & $0.948(76)$ & $0.448(52)$ & $0.602(48)$ & $0.0016(61)$ & $+0.168(92)$ & Poor global fit at low momenta; $c_{\text{reA12B}} \approx 0$; unphysical truncation of valence tails. \\
-\hline
-\textbf{Powere-law in $((P\cdot b), b^2)$} & \multicolumn{4}{c|}{\textbf{$1.85(10)$ (Correlated Covariance Fit)}} & $\mathbf{0.2253(69)}$ & $\mathbf{0.0773(46)}$ & $\mathbf{+0.267(13)}$ & \textbf{All parameters stable, positive, and well-constrained across all amplitudes.} \\
-\hline
-\end{tabular}
-}
-\end{table}
-
-The numerical results reveal several critical failure mechanisms inherent to factorized models. In \texttt{ExpPb\_PowerLawb}, the real unpolarized amplitude fits with $\chi^2/\text{dof} \approx 1.286$. Because $\tAmp_{2B}^{\text{Re}}$ dominates the statistical weight, an uncritical fit can give the false impression of an adequate model. However, the same parameterization fails for the imaginary amplitude $\tAmp_{2B}^{\text{Im}}$: the longitudinal decay width $c_{\text{im}} = 0.0045 \pm 0.0248$ evaluates to zero within errors. This means the model loses its longitudinal decay profile, producing an essentially flat distribution in $P\cdot b$. Furthermore, the overall amplitude flips to an unphysical negative sign ($a_{\text{im}} = -0.167$).
-
-For the real Sivers amplitude $\tAmp_{12B}^{\text{Re}}$, the longitudinal parameter $c_{\text{reA12B}}$ is similarly suppressed across all factorized models ($0.028 \pm 0.024$ for \texttt{ExpPb\_PowerLawb} and $0.0016 \pm 0.0061$ for \texttt{GaussianPb\_PowerLawb}). The factorized models cannot capture the distinct longitudinal curvature of the spin-dependent correlator without forcing the decay parameter to its lower boundary. Factoring out an exponential $|P\cdot b|$ dependence introduces a discontinuous first derivative (a cusp) at $P\cdot b = 0$. For an odd-parity amplitude like $\tAmp_{2B}^{\text{Im}}$, which must vanish linearly through the origin ($\tAmp_{2B}^{\text{Im}} \propto b_L$), the non-analytic factor $e^{-c|P\cdot b|}$ conflicts with the smooth behavior of the Euclidean correlation function. The fit responds by driving $c_{\text{im}} \to 0$ to minimize the cusp penalty.
-
-In the Lorentz-invariant variable space $(P\cdot b, b^2)$, the longitudinal separation $b_L = (P\cdot b)/(-P_L)$ and transverse separation $b_T = \sqrt{b^2 - b_L^2}$ are geometrically coupled. Factorized models force an artificial independence between $P\cdot b$ and $b^2$. In contrast, coupling $(P\cdot b)^2$ and $b^2$ within a single denominator,
-    \begin{equation}
-        D = \left[ 1 + c(\eta) \frac{(P\cdot b)^2}{P_L^2} + d\,b^2 \right]^j \ ,
-    \end{equation}
-preserves smooth analyticity at $P\cdot b = 0$, satisfies power-law integrability, and yields stable, positive parameters across all three amplitudes, matching the values already obtained from the global fit above (e.g., $c_{\text{im}} = 0.2253(69)$, $c_{\text{reA12B}} = 0.0773(46)$, $a_{\text{im}} = +0.267(13)$). This confirms that the Powere-law in $((P\cdot b), b^2)$ structure adopted for the global fit is indeed preferred over any explicit factorization of $(P\cdot b)$ and $b^2$.
-
 \renewcommand{\PLval}{-2}
 \subsubsection{\texorpdfstring{Simultaneous Fit Results for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$}{TEXT}}
 Figs.~\ref{fig:A2B_amplitudes_fit_P2}, \ref{fig:combined_fit_P2}, \ref{fig:cov_matrix_2d_P2}, and \ref{fig:cov_matrix_3d_P2} show the corresponding fit and covariance matrix at this momentum.
@@ -633,5 +541,97 @@ Figs.~\ref{fig:A2B_amplitudes_fit_P4}, \ref{fig:combined_fit_P4}, \ref{fig:cov_m
     \label{fig:cov_matrix_3d_P4}
 \end{figure}
 
+
+\pagebreak
+\subsubsection{Rejection of Separable Longitudinal and Transverse Factorization}
+\label{sec:rejection_exponential_longitudinal}
+Having completed the global simultaneous fit above, we return to the separability hypothesis discussed in Section \ref{sec:factorization_test} and test it directly. We constructed candidate models that multiply an independent longitudinal profile by various transverse $b^2$ profiles, including combinations of Gaussian, Lorentzian power-law, and exponential-decay forms, and evaluated each with full Jackknife fits.
+
+The fit results are summarized in Fig.~\ref{fig:rejection_gaussian_transverse} (see its caption for the poor $\chi^2/\text{dof}$ when exponential decay in $(P\cdot b)$ is paired with a Gaussian transverse profile). Even the better-performing combinations give $\chi^2/\text{dof}\approx 2$, with the coefficient $c$ governing $(P\cdot b)$ evaluating to a negative value consistent with zero within Jackknife uncertainties, which is unstable and divergent under a Fourier transform.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\linewidth]{plots/Rejection-of-Separable-Exponential-Longitudinal-Decay.pdf}
+    \caption{Fit results testing the validity of the separability hypothesis: an exponential decay in $(P\cdot b)$ is paired with a Gaussian transverse profile; the fit is poor ($\chi^2/\text{dof} \approx 4.98$). In models that achieve a lower $\chi^2/\text{dof}$, the coefficient $c$ consistently fits to zero within uncertainties and is negative in each Jackknife set, demonstrating that the data rejects the separability hypothesis.}
+    \label{fig:rejection_gaussian_transverse}
+\end{figure}
+
+We also explored the separability hypothesis with $\eta$-dependent $c$, as $c(\eta)$, which governs $(P\cdot b)$; in the asymptotic limit, this forces $c$ to be positive. By introducing the asymptotic $c(\eta)$, we lowered the $\chi^2/\text{dof}$ to $\approx 1.35$ with $c$ positive in the asymptotic limit (Fig.~\ref{fig:rejection_etadep_c}). From the fitting routine, we find that the lattice data prefer a power-law in $(P \cdot b)$ rather than an exponential decay in $|(P \cdot b)|$.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\linewidth]{plots/Rejection-of-Separable-Exponential-Longitudinal-Decay-ceta.eps}
+    \caption{Fit results testing the validity of the separability hypothesis with $\eta$-dependent $c$, as $c(\eta)$. In models that achieve a lower $\chi^2/\text{dof}$, the coefficient $c$ is now positive}
+    \label{fig:rejection_etadep_c}
+\end{figure}
+
+
+We systematically investigated four distinct factorized ansatze with lower $\chi^2/\text{dof}$ and propagated the same ansatze to all three invariant amplitudes ($\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$, and $\tAmp_{12B}^{\text{Re}}$). These models combine either an exponential ($e^{-c|P\cdot b|}$) or Gaussian ($e^{-c(P\cdot b)^2}$) longitudinal profile with either an exponential ($e^{-d|b|}$) or power-law ($(1+db^2)^{-j}$) transverse envelope:
+\begin{enumerate}
+    \item \textbf{\texttt{ExpPb\_Expb}}:
+    \begin{align}
+        \tAmp_{2B}^{\text{Re}} &= a_{\text{re}} \, e^{-c_{\text{re}}|P\cdot b| - d_{\text{re}}|b|} \, e^{-f\eta} \ , \\
+        \tAmp_{2B}^{\text{Im}} &= a_{\text{im}} \, (P\cdot b) \, e^{-c_{\text{im}}|P\cdot b| - d_{\text{im}}|b|} \, e^{-f\eta} \ , \\
+        \tAmp_{12B}^{\text{Re}} &= -a_{\text{reA12B}} \, e^{-c_{\text{reA12B}}|P\cdot b| - d_{\text{reA12B}}|b|} \, e^{-f\eta} \ .
+    \end{align}
+    
+    \item \textbf{\texttt{ExpPb\_PowerLawb}}:
+    \begin{align}
+        \tAmp_{2B}^{\text{Re}} &= \frac{a_{\text{re}} \, e^{-c_{\text{re}}|P\cdot b| - f\eta}}{\left(1 + d_{\text{re}} b^2\right)^{j_{\text{re}}}} \ , \\
+        \tAmp_{2B}^{\text{Im}} &= \frac{a_{\text{im}} \, (P\cdot b) \, e^{-c_{\text{im}}|P\cdot b| - f\eta}}{\left(1 + d_{\text{im}} b^2\right)^{j_{\text{im}}}} \ , \\
+        \tAmp_{12B}^{\text{Re}} &= \frac{-a_{\text{reA12B}} \, e^{-c_{\text{reA12B}}|P\cdot b| - f\eta}}{\left(1 + d_{\text{reA12B}} b^2\right)^{j_{\text{reA12B}}}} \ .
+    \end{align}
+
+    \item \textbf{\texttt{GaussianPb\_Expb}}:
+    \begin{align}
+        \tAmp_{2B}^{\text{Re}} &= a_{\text{re}} \, e^{-c_{\text{re}}(P\cdot b)^2 - d_{\text{re}}|b|} \, e^{-f\eta} \ , \\
+        \tAmp_{2B}^{\text{Im}} &= a_{\text{im}} \, (P\cdot b) \, e^{-c_{\text{im}}(P\cdot b)^2 - d_{\text{im}}|b|} \, e^{-f\eta} \ , \\
+        \tAmp_{12B}^{\text{Re}} &= -a_{\text{reA12B}} \, e^{-c_{\text{reA12B}}(P\cdot b)^2 - d_{\text{reA12B}}|b|} \, e^{-f\eta} \ .
+    \end{align}
+
+    \item \textbf{\texttt{GaussianPb\_PowerLawb}}:
+    \begin{align}
+        \tAmp_{2B}^{\text{Re}} &= \frac{a_{\text{re}} \, e^{-c_{\text{re}}(P\cdot b)^2 - f\eta}}{\left(1 + d_{\text{re}} b^2\right)^{j_{\text{re}}}} \ , \\
+        \tAmp_{2B}^{\text{Im}} &= \frac{a_{\text{im}} \, (P\cdot b) \, e^{-c_{\text{im}}(P\cdot b)^2 - f\eta}}{\left(1 + d_{\text{im}} b^2\right)^{j_{\text{im}}}} \ , \\
+        \tAmp_{12B}^{\text{Re}} &= \frac{-a_{\text{reA12B}} \, e^{-c_{\text{reA12B}}(P\cdot b)^2 - f\eta}}{\left(1 + d_{\text{reA12B}} b^2\right)^{j_{\text{reA12B}}}} \ .
+    \end{align}
+\end{enumerate}
+
+Each model admits closed-form analytical Fourier transforms, which makes it straightforward to inspect the resulting $x$-space distributions. We performed global simultaneous Jackknife fits on these four ansatze using the same kinematic cuts ($|\vect{b}| \ge 3a$, $\eta \in [6, 10]$) and shared area-law factor $e^{-f\eta}$. The fit quality and extracted parameters are summarized in Table~\ref{tab:factorized_ansatze_comparison}.
+
+\begin{table}[htbp]
+\centering
+\renewcommand{\arraystretch}{1.3}
+\caption{Comparison of the four factorized longitudinal-transverse models across nucleon momenta $P_L$, with extracted parameters shown at $P_L = -1$. While models with power-law transverse envelopes describe $\tAmp_{2B}^{\text{Re}}$ passably, all four factorized ansatze fail on $\tAmp_{2B}^{\text{Im}}$ and $\tAmp_{12B}^{\text{Re}}$.}
+\label{tab:factorized_ansatze_comparison}
+\scalebox{0.7}{
+\begin{tabular}{|l|c|c|c|c|c|c|c|p{4.2cm}|}
+\hline
+\textbf{Model Ansatz} & \multicolumn{4}{c|}{\textbf{$\chi^2/\text{dof}$ Across Momenta}} & \multicolumn{3}{c|}{\textbf{Key Fitted Parameters at $P_L = -1$}} & \textbf{Primary Failure Mode} \\
+\cline{2-8}
+& $P_L = -1$ & $P_L = -2$ & $P_L = -3$ & $P_L = -4$ & $c_{\text{im}}$ & $c_{\text{reA12B}}$ & $a_{\text{im}}$ & \\
+\hline
+\texttt{ExpPb\_Expb} & $1.406(92)$ & $0.956(75)$ & $0.622(61)$ & $0.455(53)$ & $0.0010(262)$ & $0.045(23)$ & $-0.167(16)$ & $c_{\text{im}} \to 0$; unphysical sign on $a_{\text{im}}$. \\
+\hline
+\texttt{ExpPb\_PowerLawb} & $1.286(89)$ & $0.938(75)$ & $0.623(61)$ & $0.447(53)$ & $0.0045(248)$ & $0.028(24)$ & $-0.167(31)$ & Fits $\tAmp_{2B}^{\text{Re}}$ well, but $c_{\text{im}}$ and $c_{\text{reA12B}}$ vanish within error; flips sign of $a_{\text{im}}$. \\
+\hline
+\texttt{GaussianPb\_Expb} & $2.389(121)$ & $2.005(111)$ & $0.945(76)$ & $0.453(52)$ & $0.568(171)$ & $0.0038(69)$ & $+0.050(121)$ & Poor $\chi^2/\text{dof}$; $c_{\text{reA12B}}$ pinned near zero; Gaussian over-damping at large $x$. \\
+\hline
+\texttt{GaussianPb\_PowerLawb} & $2.316(120)$ & $1.981(111)$ & $0.948(76)$ & $0.448(52)$ & $0.602(48)$ & $0.0016(61)$ & $+0.168(92)$ & Poor global fit at low momenta; $c_{\text{reA12B}} \approx 0$; unphysical truncation of valence tails. \\
+\hline
+\textbf{Powere-law in $((P\cdot b), b^2)$} & \multicolumn{4}{c|}{\textbf{$1.85(10)$ (Correlated Covariance Fit)}} & $\mathbf{0.2253(69)}$ & $\mathbf{0.0773(46)}$ & $\mathbf{+0.267(13)}$ & \textbf{All parameters stable, positive, and well-constrained across all amplitudes.} \\
+\hline
+\end{tabular}
+}
+\end{table}
+
+The numerical results reveal several critical failure mechanisms inherent to factorized models. In \texttt{ExpPb\_PowerLawb}, the real unpolarized amplitude fits with $\chi^2/\text{dof} \approx 1.286$. Because $\tAmp_{2B}^{\text{Re}}$ dominates the statistical weight, an uncritical fit can give the false impression of an adequate model. However, the same parameterization fails for the imaginary amplitude $\tAmp_{2B}^{\text{Im}}$: the longitudinal decay width $c_{\text{im}} = 0.0045 \pm 0.0248$ evaluates to zero within errors. This means the model loses its longitudinal decay profile, producing an essentially flat distribution in $P\cdot b$. Furthermore, the overall amplitude flips to an unphysical negative sign ($a_{\text{im}} = -0.167$).
+
+For the real Sivers amplitude $\tAmp_{12B}^{\text{Re}}$, the longitudinal parameter $c_{\text{reA12B}}$ is similarly suppressed across all factorized models ($0.028 \pm 0.024$ for \texttt{ExpPb\_PowerLawb} and $0.0016 \pm 0.0061$ for \texttt{GaussianPb\_PowerLawb}). The factorized models cannot capture the distinct longitudinal curvature of the spin-dependent correlator without forcing the decay parameter to its lower boundary. Factoring out an exponential $|P\cdot b|$ dependence introduces a discontinuous first derivative (a cusp) at $P\cdot b = 0$. For an odd-parity amplitude like $\tAmp_{2B}^{\text{Im}}$, which must vanish linearly through the origin ($\tAmp_{2B}^{\text{Im}} \propto b_L$), the non-analytic factor $e^{-c|P\cdot b|}$ conflicts with the smooth behavior of the Euclidean correlation function. The fit responds by driving $c_{\text{im}} \to 0$ to minimize the cusp penalty.
+
+In the Lorentz-invariant variable space $(P\cdot b, b^2)$, the longitudinal separation $b_L = (P\cdot b)/(-P_L)$ and transverse separation $b_T = \sqrt{b^2 - b_L^2}$ are geometrically coupled. Factorized models force an artificial independence between $P\cdot b$ and $b^2$. In contrast, coupling $(P\cdot b)^2$ and $b^2$ within a single denominator,
+    \begin{equation}
+        D = \left[ 1 + c(\eta) \frac{(P\cdot b)^2}{P_L^2} + d\,b^2 \right]^j \ ,
+    \end{equation}
+preserves smooth analyticity at $P\cdot b = 0$, satisfies power-law integrability, and yields stable, positive parameters across all three amplitudes, matching the values already obtained from the global fit above (e.g., $c_{\text{im}} = 0.2253(69)$, $c_{\text{reA12B}} = 0.0773(46)$, $a_{\text{im}} = +0.267(13)$). This confirms that the Powere-law in $((P\cdot b), b^2)$ structure adopted for the global fit is indeed preferred over any explicit factorization of $(P\cdot b)$ and $b^2$.
 
 \pagebreak
