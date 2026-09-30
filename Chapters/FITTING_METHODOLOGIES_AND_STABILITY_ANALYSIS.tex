@@ -159,21 +159,6 @@ The straight-line diagnostic in Fig.~\ref{fig:gaussian_straightline_test} confir
 
 Based on these results, we adopt the Lorentzian power-law structure as the spatial profile for $\tAmp_{2B}^{\text{Re}}$. In the following sections, we extend this functional form to the remaining amplitudes for the global simultaneous fit.
 
-\subsection{Test for Factorization in $(P\cdot b)$ and $b^2$} \label{sec:factorization_test}
-
-To probe, directly at the level of the raw lattice data and independent of any fitted parameterization, whether the extracted amplitude factorizes as $\tAmp(P\cdot b,b^2) = F(P\cdot b) G(b^2)$, we performed a ratio test at fixed $P\cdot b$, which has multiple $b^2$, for example $b^2_1,b^2_2, b^2_3$, at the given momentum $P_L$. We formed
-$$
-R(b^2_i) = \frac{\tAmp(P\cdot b, b^2_i)}{\tAmp(P\cdot b, b^2_3)}
-$$
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=1\linewidth]{plots/FixedPb_Bsq_RatioTest_eta8_PL-1.pdf}
-    \caption{Ratio test for $(P\cdot b,b^2)$ factorization at fixed $P\cdot b$, for $\tAmp_{2B}^{\rm Re}$, $\tAmp_{12B}^{\rm Re}$, and $\tAmp_{2B}^{\rm Im}$ at $\eta|v|/a=8$, $P_L=-1$. Top row: $P\cdot b=-2$; bottom row: $P\cdot b=-4$; each point is ratioed against that row's own smallest available $b^2$, with the explicit ratio given in the legend.}
-    \label{fig:FixedPb_Bsq_RatioTest_eta8_PL-1}
-\end{figure}
-
-The two rows in Fig.~\ref{fig:FixedPb_Bsq_RatioTest_eta8_PL-1} do not trace a common zero-slope line in $b^2$, as a factorized ansatz would predict. A fully model-independent version of this test would additionally require ratioing at fixed $b^2$ between different values of $P\cdot b$; however, the $(b_L,b_T)$ points computed on the lattice do not form a regular grid in $(P\cdot b,b^2)$, and at most two distinct $P\cdot b$ values ever coincide at a common $b^2$ anywhere in the dataset, with no two $P\cdot b$ rows sharing two or more common $b^2$ values. This limited sampling prevents us from carrying out the complementary ratio test at fixed $b^2$. Given this limitation, while the data appears to disfavor an exactly factorized ansatz, we treat this observation only as a qualitative guide rather than a firm conclusion. We return to this question with an explicit factorized fit later in the chapter, once the global simultaneous fit gives us a coupled-model benchmark to test it against.
 
 \subsection{Systematical exploration of the best physical model}
 \label{sec:systematic_exploration}
@@ -543,6 +528,22 @@ Figs.~\ref{fig:A2B_amplitudes_fit_P4}, \ref{fig:combined_fit_P4}, \ref{fig:cov_m
 
 
 \pagebreak
+\subsection{Test for Factorization in $(P\cdot b)$ and $b^2$} \label{sec:factorization_test}
+
+To probe, directly at the level of the raw lattice data and independent of any fitted parameterization, whether the extracted amplitude factorizes as $\tAmp(P\cdot b,b^2) = F(P\cdot b) G(b^2)$, we performed a ratio test at fixed $P\cdot b$, which has multiple $b^2$, for example $b^2_1,b^2_2, b^2_3$, at the given momentum $P_L$. We formed
+$$
+R(b^2_i) = \frac{\tAmp(P\cdot b, b^2_i)}{\tAmp(P\cdot b, b^2_3)}
+$$
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\linewidth]{plots/FixedPb_Bsq_RatioTest_eta8_PL-1.pdf}
+    \caption{Ratio test for $(P\cdot b,b^2)$ factorization at fixed $P\cdot b$, for $\tAmp_{2B}^{\rm Re}$, $\tAmp_{12B}^{\rm Re}$, and $\tAmp_{2B}^{\rm Im}$ at $\eta|v|/a=8$, $P_L=-1$. Top row: $P\cdot b=-2$; bottom row: $P\cdot b=-4$; each point is ratioed against that row's own smallest available $b^2$, with the explicit ratio given in the legend.}
+    \label{fig:FixedPb_Bsq_RatioTest_eta8_PL-1}
+\end{figure}
+
+The two rows in Fig.~\ref{fig:FixedPb_Bsq_RatioTest_eta8_PL-1} do not trace a common zero-slope line in $b^2$, as a factorized ansatz would predict. A fully model-independent version of this test would additionally require ratioing at fixed $b^2$ between different values of $P\cdot b$; however, the $(b_L,b_T)$ points computed on the lattice do not form a regular grid in $(P\cdot b,b^2)$, and at most two distinct $P\cdot b$ values ever coincide at a common $b^2$ anywhere in the dataset, with no two $P\cdot b$ rows sharing two or more common $b^2$ values. This limited sampling prevents us from carrying out the complementary ratio test at fixed $b^2$. Given this limitation, while the data appears to disfavor an exactly factorized ansatz, we treat this observation only as a qualitative guide rather than a firm conclusion. We return to this question with an explicit factorized fit later in the chapter, once the global simultaneous fit gives us a coupled-model benchmark to test it against.
+
 \subsubsection{Rejection of Separable Longitudinal and Transverse Factorization}
 \label{sec:rejection_exponential_longitudinal}
 Having completed the global simultaneous fit above, we return to the separability hypothesis discussed in Section \ref{sec:factorization_test} and test it directly. We constructed candidate models that multiply an independent longitudinal profile by various transverse $b^2$ profiles, including combinations of Gaussian, Lorentzian power-law, and exponential-decay forms, and evaluated each with full Jackknife fits.
