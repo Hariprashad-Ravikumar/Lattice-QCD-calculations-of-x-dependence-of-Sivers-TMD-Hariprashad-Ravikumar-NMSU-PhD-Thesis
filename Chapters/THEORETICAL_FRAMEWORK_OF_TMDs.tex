@@ -73,7 +73,7 @@ However, the first transverse moment of the Sivers function, $f_{1T}^{\perp(1)}(
 \subsection{Link geometry}
 The geometry of the gauge link path $\mathcal{C}_\bvec$ affects both the number of allowed TMD structures and the numerical result. 
 
-The simplest link geometry is a straight line connecting the quark fields at $0$ and $\bvec$. Refs. \cite{Hagler:2009mb, Musch:2010ka} have studied TMDs with straight gauge links on the lattice. \cite{Hagler:2009mb,Musch:2010ka}. While these ``process-independent'' TMDs are interesting from a theoretical point of view in their own right, it is so far not known how to relate these quantitatively to the TMDs that play a role in scattering experiments. The operator with straight gauge links offers the greatest possible symmetry. As a result, T-odd TMDs vanish for straight gauge links.
+The simplest link geometry is a straight line connecting the quark fields at $0$ and $\bvec$. Refs.~\cite{Hagler:2009mb, Musch:2010ka} have studied TMDs with straight gauge links on the lattice. While these ``process-independent'' TMDs are interesting from a theoretical point of view in their own right, it is so far not known how to relate these quantitatively to the TMDs that play a role in scattering experiments. The operator with straight gauge links offers the greatest possible symmetry. As a result, T-odd TMDs vanish for straight gauge links.
 
 To accommodate the symmetries required to isolate the Sivers effect and its $x$ dependence, we employ a staple-shaped gauge link; see Fig. \ref{fig:staple}:
 \begin{align}
@@ -131,66 +131,6 @@ The approach toward the physical light-like limit ($v = \nminus$) is parameteriz
 	\label{eq-zeta}
 \end{equation}
 showing that $\hat \zeta$ measures the rapidity difference between the nucleon momentum and the Wilson line direction. This allows boosting to a frame where $v$ is purely spatial ($v^0 = 0, y_v = 0$).
-
-
-\subsection{Correlator Parametrization}
-\label{sec-parametr}
-The parametrization of the correlator $\tilde \Phi_\unsub$ in terms of manifestly Lorentz-invariant amplitudes is essential to translate Euclidean space lattice calculations into TMDs defined and interpreted in the context of light cone coordinates. A parametrization of the correlator 
-$\Phi_\unsub(\kei,P,S;\infty v,\mu)$
-for link paths that extend to infinity in a direction $v$
-has been worked out in Ref. \cite{Goeke:2005hb} and involves 32 independent amplitudes $A_i$ and $B_i$ that depend on the Lorentz-invariant quantities 
-$\kei^2$, $\kei \cdot P$, $\kei \tcdot v/v \tcdot P$ and $\hat \zeta$.
-Extracting the $x$-dependence of the Sivers TMD from Euclidean data requires a rigorous mapping between the discretized observables and the manifestly Lorentz-invariant amplitudes. Building on the infinite-link parameterization of Goeke et al. \cite{Goeke:2005hb}, and identifying $k \rightarrow - i \mN^2 \bvec$ \cite{Boer-Bessel-Weighted-Asymmetries} (is detailed in Section. \ref{Symmetry Constraints}), the unpolarized $b$-dependent correlator yields:
-\begin{align}
-	\frac{1}{2}\widetilde \Phi^{[\gamma^\mu]}_{\unsub} & = 
-		P^\mu\, \tAmp_2 - i \mN^2 \bvec^\mu\, \tAmp_3
-		- i \mN \epsilon^{\mu \nu \alpha \beta} P_\nu \bvec_\alpha S_\beta\, \tAmp_{12} \nonumber \\ &
-		+ \frac{\mN^2}{(v \tcdot P)} v^\mu\, \tBmp_1 
-		+ \frac{\mN}{v \tcdot P} \epsilon^{\mu \nu \alpha \beta} P_\nu v_\alpha S_\beta\, \tBmp_7  
-		- \frac{ i \mN^3}{v \tcdot P} \epsilon^{\mu \nu \alpha \beta} \bvec_\nu v_\alpha S_\beta\, \tBmp_8 \nonumber \\ &
-		- \frac{\mN^3}{v \tcdot P} (\bvec \tcdot S) \epsilon^{\mu \nu \alpha \beta} P_\nu \bvec_\alpha v_\beta\, \tBmp_9
-		- \frac{i \mN^3}{(v \tcdot P)^2} (v \tcdot S) \epsilon^{\mu \nu \alpha \beta} P_\nu \bvec_\alpha v_\beta \tBmp_{10}
-		\label{eq-phitildedecomp-vec} \displaybreak[0] 
-		 \ .
-\end{align}
-While prior lattice campaigns used straight gauge links, which isolated only T-even structures \cite{Hagler:2009mb,Musch:2010ka}, the explicit inclusion of the staple direction $v$ enables the analysis of T-odd observables like the Sivers shift.
-
-To conduct calculations at finite staple extents on the lattice, we redefine the scale-invariant infinite-link amplitudes to explicitly track the extent $\eta$, mapping them via:
-\begin{align}
-	\tAmp_i\left(\bvec^2,\bvec \tcdot P,\frac{v \tcdot \bvec}{v \tcdot P}, \frac{v^2}{(v \tcdot P)^2}, \eta v \tcdot P\right) & = \tilde a_i(\bvec^2,\bvec \tcdot P, \eta v \tcdot b, (\eta v)^2, \eta v \tcdot P)   \, , \nonumber \\
-	 \tBmp_i\left(\bvec^2,\bvec \tcdot P,\frac{v \tcdot \bvec}{v \tcdot P}, \frac{v^2}{(v \tcdot P)^2}, \eta v \tcdot P\right) & = (\eta v \tcdot P)^n\ \tilde b_i(\bvec^2,\bvec \tcdot P, \eta v \tcdot b, (\eta v)^2, \eta v \tcdot P)   \, .
-	\label{eq-ab}
-\end{align}
-In our frame choice ($b^+=0$, $\vprp{v}=\vprp{P}=0$), kinematic constraints enforce a rigid relationship between the invariants \cite{MuschThesis2, Accardi:2009au}:
-\begin{align}
-	\frac{v \tcdot b}{v \tcdot P} = b \tcdot P \frac{R(\zetahat^2)}{\mN^2}\, , \quad \text{where} \quad R(\zetahat^2) \equiv 1- \sqrt{1 + \hat \zeta^{-2}} = \frac{\mN^2}{v \tcdot P} \frac{v^+}{P^+} \, .
-	\label{eq-lindeprel}
-\end{align}
-Focusing exclusively on the $\gamma^+$ projection necessary to isolate the unpolarized quark distribution, we combine the amplitudes tailored for Sivers extraction:
-\begin{align}
-	\frac{1}{2 P^+}\widetilde \Phi^{[\gamma^+]}_{\unsub} & = 	
-		\tAmp_{2B} 
-		+ i \mN \epsilon_{ij} \vect{\bvec}_i \vect{S}_j\, \tAmp_{12B} \ ,
-\end{align}
-where the combined amplitudes are defined as:
-\begin{align}
-	\tAmp_{2B}  & \ \equiv\  \tAmp_2 + R(\zetahat^2) \tBmp_1 \nonumber \displaybreak[0] \\
-	\tAmp_{12B}  & \ \equiv\  \tAmp_{12} - R(\zetahat^2) \tBmp_8 \ . \displaybreak[0] 
-	\label{eq-ABamps_sivers}
-\end{align}
-The final unpolarized distribution $f_1$ and the Sivers distribution $f_{1T}^\perp$ are achieved by applying a standardized Fourier integration operator $\fourint$:
-\begin{align}
-	\fourint \tAmp_i \equiv & \int \frac{d^2 \vprp{\bvec}}{(2\pi)^2}\,e^{-i\vprp{\bvec}\tcdot\vprp{\kei}}\, \frac{1}{\widetilde{\mathcal{S}}(\bvec^2;\ldots)} \int \frac{d(\bvec \tcdot P)}{(2\pi)}\,e^{ix(\bvec \tcdot P)} 
-	\tAmp_i(-\vprp{\bvec}^2,\bvec \tcdot P,(\bvec \tcdot P) R(\zetahat^2)/\mN^2,-1/(\mN\zetahat)^2,\eta v \tcdot P) \ .
-	\label{eq-fourint}
-\end{align}
-Applying this to the combined amplitudes reconstructs the target leading-twist distributions:
-\begin{align}
-	 f_1(x,\vprp{\kei}^2;\zetahat,\ldots,\eta v \tcdot P) & = 2 \fourint\ \widetilde{A}_{2B} \,,\nonumber \displaybreak[0] \\
-	 f_{1T}^\perp(x,\vprp{\kei}^2;\zetahat,\ldots,\eta v \tcdot P) & =  4 m_N^2 \partial_{\vprp{\kei}^2} \fourint\ \widetilde{A}_{12B} \ .
-	 \label{eq-tmdsfromampsodd}
-\end{align} 
-Through this framework, the symmetry constraint $f_1(\eta v \tcdot P) = f_1(-\eta v \tcdot P)$ guarantees process independence for the unpolarized distribution, whereas the Sivers function $f_{1T}^\perp$ strictly depends on the direction of the staple link, structurally enforcing the critical sign reversal between SIDIS and DY processes, and laying the groundwork for extracting its $x$-dependence.
 
 
 \subsection{Symmetry Constraints}
@@ -270,10 +210,59 @@ In general, the amplitudes are complex,
     \tilde{B}_i&=\tilde{B}^{\text{Re}}_i+i\tilde{B}^{\text{Im}}_i
 \end{align}
 Because of Eq.\ \eqref{conditi_hermitian}, provided we have the amplitudes for both $\pm b$, we find
+\begin{subequations}
+\label{eq-ReIm-parity}
 \begin{align}
     \tilde{A}^{\text{Re}}_i&=\tilde{A}^{\text{(b-even)}}_i\\
     \tilde{A}^{\text{Im}}_i&=\tilde{A}^{\text{(b-odd})}_i\\
     \tilde{B}^{\text{Re}}_i&=\tilde{B}^{\text{(b-even)}}_i\\
     \tilde{B}^{\text{Im}}_i&=\tilde{B}^{\text{(b-odd})}_i
 \end{align}
+\end{subequations}
 
+
+\subsection{Correlator Parametrization}
+\label{sec-parametr}
+The parametrization of the correlator $\tilde \Phi_\unsub$ in terms of manifestly Lorentz-invariant amplitudes is essential to translate Euclidean space lattice calculations into TMDs defined and interpreted in the context of light cone coordinates. A parametrization of the correlator 
+$\Phi_\unsub(\kei,P,S;\infty v,\mu)$
+for link paths that extend to infinity in a direction $v$
+has been worked out in Ref. \cite{Goeke:2005hb} and involves 32 independent amplitudes $A_i$ and $B_i$ that depend on the Lorentz-invariant quantities 
+$\kei^2$, $\kei \cdot P$, $\kei \tcdot v/v \tcdot P$ and $\hat \zeta$.
+Extracting the $x$-dependence of the Sivers TMD from Euclidean data requires a rigorous mapping between the discretized observables and the manifestly Lorentz-invariant amplitudes. Building on the infinite-link parameterization of Goeke et al.\ \cite{Goeke:2005hb}, the substitution $\kei \rightarrow - i \mN^2 \bvec$ \cite{Boer-Bessel-Weighted-Asymmetries} derived in Section~\ref{Symmetry Constraints} gives the unpolarized $b$-dependent correlator of Eq.~\eqref{eq-phitildedecomp}. Prior lattice studies used straight gauge links, which give access only to T-even structures \cite{Hagler:2009mb,Musch:2010ka}; the staple direction $v$ in Eq.~\eqref{eq-phitildedecomp} is what makes T-odd observables such as the Sivers shift accessible.
+
+To conduct calculations at finite staple extents on the lattice, we redefine the scale-invariant infinite-link amplitudes to explicitly track the extent $\eta$, mapping them via:
+\begin{align}
+	\tAmp_i\left(\bvec^2,\bvec \tcdot P,\frac{v \tcdot \bvec}{v \tcdot P}, \frac{v^2}{(v \tcdot P)^2}, \eta v \tcdot P\right) & = \tilde a_i(\bvec^2,\bvec \tcdot P, \eta v \tcdot b, (\eta v)^2, \eta v \tcdot P)   \, , \nonumber \\
+	 \tBmp_i\left(\bvec^2,\bvec \tcdot P,\frac{v \tcdot \bvec}{v \tcdot P}, \frac{v^2}{(v \tcdot P)^2}, \eta v \tcdot P\right) & = (\eta v \tcdot P)^n\ \tilde b_i(\bvec^2,\bvec \tcdot P, \eta v \tcdot b, (\eta v)^2, \eta v \tcdot P)   \, .
+	\label{eq-ab}
+\end{align}
+In our frame choice ($b^+=0$, $\vprp{v}=\vprp{P}=0$), kinematic constraints enforce a rigid relationship between the invariants \cite{MuschThesis2, Accardi:2009au}:
+\begin{align}
+	\frac{v \tcdot b}{v \tcdot P} = b \tcdot P \frac{R(\zetahat^2)}{\mN^2}\, , \quad \text{where} \quad R(\zetahat^2) \equiv 1- \sqrt{1 + \hat \zeta^{-2}} = \frac{\mN^2}{v \tcdot P} \frac{v^+}{P^+} \, .
+	\label{eq-lindeprel}
+\end{align}
+Focusing exclusively on the $\gamma^+$ projection necessary to isolate the unpolarized quark distribution, we combine the amplitudes tailored for Sivers extraction:
+\begin{align}
+	\frac{1}{2 P^+}\widetilde \Phi^{[\gamma^+]}_{\unsub} & = 	
+		\tAmp_{2B} 
+		+ i \mN \epsilon_{ij} \vect{\bvec}_i \vect{S}_j\, \tAmp_{12B} \ ,
+\end{align}
+where the combined amplitudes are defined as:
+\begin{align}
+	\tAmp_{2B}  & \ \equiv\  \tAmp_2 + R(\zetahat^2) \tBmp_1 \nonumber \displaybreak[0] \\
+	\tAmp_{12B}  & \ \equiv\  \tAmp_{12} - R(\zetahat^2) \tBmp_8 \ . \displaybreak[0] 
+	\label{eq-ABamps_sivers}
+\end{align}
+The final unpolarized distribution $f_1$ and the Sivers distribution $f_{1T}^\perp$ are achieved by applying a standardized Fourier integration operator $\fourint$:
+\begin{align}
+	\fourint \tAmp_i \equiv & \int \frac{d^2 \vprp{\bvec}}{(2\pi)^2}\,e^{-i\vprp{\bvec}\tcdot\vprp{\kei}}\, \frac{1}{\widetilde{\mathcal{S}}(\bvec^2;\ldots)} \int \frac{d(\bvec \tcdot P)}{(2\pi)}\,e^{ix(\bvec \tcdot P)} 
+	\tAmp_i(-\vprp{\bvec}^2,\bvec \tcdot P,(\bvec \tcdot P) R(\zetahat^2)/\mN^2,-1/(\mN\zetahat)^2,\eta v \tcdot P) \ .
+	\label{eq-fourint}
+\end{align}
+Applying this to the combined amplitudes reconstructs the target leading-twist distributions:
+\begin{align}
+	 f_1(x,\vprp{\kei}^2;\zetahat,\ldots,\eta v \tcdot P) & = 2 \fourint\ \widetilde{A}_{2B} \,,\nonumber \displaybreak[0] \\
+	 f_{1T}^\perp(x,\vprp{\kei}^2;\zetahat,\ldots,\eta v \tcdot P) & =  4 m_N^2 \partial_{\vprp{\kei}^2} \fourint\ \widetilde{A}_{12B} \ .
+	 \label{eq-tmdsfromampsodd}
+\end{align} 
+Through this framework, the symmetry constraint $f_1(\eta v \tcdot P) = f_1(-\eta v \tcdot P)$ guarantees process independence for the unpolarized distribution, whereas the Sivers function $f_{1T}^\perp$ strictly depends on the direction of the staple link, structurally enforcing the critical sign reversal between SIDIS and DY processes, and laying the groundwork for extracting its $x$-dependence.

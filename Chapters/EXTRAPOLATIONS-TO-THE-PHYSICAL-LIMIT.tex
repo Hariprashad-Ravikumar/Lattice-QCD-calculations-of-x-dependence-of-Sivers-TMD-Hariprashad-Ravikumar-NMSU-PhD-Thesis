@@ -6,7 +6,7 @@
 
 Section~\ref{sec:fitting_methodologies} established stable global simultaneous fits to the invariant amplitudes $\tAmp_{2B}$ and $\tAmp_{12B}$ at each of our four simulated nucleon momenta, corresponding to the finite Collins-Soper parameters $\hat\zeta = 0.090772,\ 0.294367,\ 0.539684,\ 0.785756$ for $P_L=-1,-2,-3,-4$ respectively (Table~\ref{tab:zeta_directions}). As discussed in Section~\ref{sec:collins_soper_parameter}, these finite-$\hat\zeta$ results are a consequence of the space-like staple direction required by our Euclidean lattice geometry; the physical, light-cone TMDs are recovered only in the limit $\hat\zeta \to \infty$. Before our lattice results can be compared to phenomenological extractions of the Sivers function, each finite-momentum result must therefore be extrapolated to this physical limit.
 
-Figure~\ref{fig:zetahat_discrete_slices} shows why this extrapolation is necessary in practice. At fixed transverse quark separation $|b_T| = 3a \approx 0.34$ fm, we evaluate the reconstructed amplitudes $\tAmp_{2B}^{\text{Re}}$ and $i\tAmp_{2B}^{\text{Im}}$, the corresponding unpolarized and Sivers TMD combinations $\tilde f_1^{(0)} = 2\tAmp_{2B}$ and $\tilde f_1^{\perp(1)} = -2\tAmp_{12B}$, and the resulting Sivers shift $\langle k_y \rangle_{TU}$ and $x\langle k_y \rangle_{TU}$, as continuous functions of $x$ at each of our four simulated momenta. Plotting these six quantities against $1/\hat\zeta$ shows that every one of them varies systematically with the momentum: none of our finite lattice momenta has yet reached the physical limit, and the extrapolation to $1/\hat\zeta \to 0$ carried out in the remainder of this chapter is required before the results can be interpreted physically.
+Figure~\ref{fig:zetahat_discrete_slices} shows why this extrapolation is necessary in practice. At fixed transverse quark separation $|b_T| = 3a \approx 0.34$ fm, we evaluate the reconstructed amplitudes $\tAmp_{2B}^{\text{Re}}$ and $i\tAmp_{2B}^{\text{Im}}$, the corresponding unpolarized and Sivers TMD combinations $\tilde f_1^{(0)} = 2\tAmp_{2B}$ and $\tilde f_{1T}^{\perp(1)} = -2\tAmp_{12B}$, and the resulting Sivers shift $\langle k_y \rangle_{TU}$ and $x\langle k_y \rangle_{TU}$, as continuous functions of $x$ at each of our four simulated momenta. Plotting these six quantities against $1/\hat\zeta$ shows that every one of them varies systematically with the momentum: none of our finite lattice momenta has yet reached the physical limit, and the extrapolation to $1/\hat\zeta \to 0$ carried out in the remainder of this chapter is required before the results can be interpreted physically.
 
 \begin{figure}[h!]
     \centering
@@ -20,7 +20,9 @@ Figure~\ref{fig:zetahat_discrete_slices} shows why this extrapolation is necessa
 
 The lowest simulated momentum, $P_L=-1$ ($\hat\zeta = 0.090772$), sits too close to the origin in $1/\hat\zeta$ to resolve the curvature required to anchor an extrapolation; including it risks biasing the fit away from the true asymptotic ($\hat\zeta \to \infty$) behavior rather than constraining it. We therefore exclude $P_L=-1$ and extrapolate using only the three higher, better-separated momenta $P_L = -2,-3,-4$.
 
-Rather than extrapolate the amplitudes point by point in $x$, we extrapolate each of the twelve parameters of the global simultaneous-fit models directly: the four parameters $\{a,c,d,j\}$ appearing in each of the coupled Lorentzian models for $\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$, and $\tAmp_{12B}^{\text{Re}}$ (Eq.~(\ref{eq:model_ReA2B})-(\ref{eq:model_ImA2B})). Following the kinematic scaling identified in Section~\ref{sec:fitting_methodologies}, the parameters $c_{\text{re}}$, $c_{\text{im}}$, and $c_{\text{reA12B}}$ are first rescaled by $1/P_L^2$ and $a_{\text{im}}$ by $1/P_L$, so that all three momenta can be fit on a common footing. For the resulting $\hat\zeta$-dependence of each rescaled parameter, we tested two functional forms,
+Rather than extrapolate the amplitudes point by point in $x$, we extrapolate each of the twelve parameters of the global simultaneous-fit models directly: the four parameters $\{a,c,d,j\}$ appearing in each of the coupled Lorentzian models for $\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$, and $\tAmp_{12B}^{\text{Re}}$ (Eq.~(\ref{eq:model_ReA2B})-(\ref{eq:model_ImA2B})).
+% TODO(Hari): the global fit also has f, k1, k2 (Fig. cov_matrix_2d_P1). State how they enter the extrapolation (f cancels in the Sivers shift, but what about the amplitude plots, and how is c(eta) with k1, k2 evaluated?).
+In these models $c$ multiplies $b_L^2 = (P\cdot b)^2/P_L^2$ and $a_{\text{im}}$ multiplies $b_L = (P\cdot b)/(-P_L)$, so the parameters $c_{\text{re}}$, $c_{\text{im}}$, and $c_{\text{reA12B}}$ are first rescaled by $1/P_L^2$ and $a_{\text{im}}$ by $1/P_L$. After rescaling they multiply powers of the invariant $P\cdot b$ directly (up to an overall sign for $a_{\text{im}}$), so all three momenta can be fit on a common footing. For the resulting $\hat\zeta$-dependence of each rescaled parameter, we tested two functional forms,
 \begin{equation}
     p(\hat\zeta) = c + \frac{d}{\hat\zeta} \qquad \text{and} \qquad p(\hat\zeta) = c + \frac{d}{\hat\zeta^2} \ ,
     \label{eq:zetahat_extrap_ansatz}
@@ -39,7 +41,7 @@ Reconstructing the amplitudes from these twelve extrapolated parameters gives th
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.8\linewidth]{SimultaneousFitsCov/extrapolation_para_level/Extrapolated_AmpLevel_P234_Sivers_1_over_zetahat_sq_bmin3_eta610_b29.0.pdf}
-    \caption{Unpolarized and Sivers TMD amplitudes reconstructed from the extrapolated ($\hat\zeta\to\infty$) fit parameters of Fig.~\ref{fig:param_extrapolation_zetahat}, evaluated as continuous functions of $x$ at fixed transverse separation $|b_T| = 3a \approx 0.34$ fm: $\tAmp_{2B}^{\text{Re}}$, $i\tAmp_{2B}^{\text{Im}}$, the full unpolarized combination $\tilde f_1^{(0)}=2\tAmp_{2B}$, the Sivers combination $\tilde f_1^{\perp(1)}=-2\tAmp_{12B}^{\text{Re}}$, and the resulting Sivers shift $\langle k_y \rangle_{TU}$ and $x\langle k_y \rangle_{TU}$, the latter two restricted to the quark region $x\ge0$. Shaded bands are the Jackknife uncertainty propagated from the twelve extrapolated parameters.}
+    \caption{Unpolarized and Sivers TMD amplitudes reconstructed from the extrapolated ($\hat\zeta\to\infty$) fit parameters of Fig.~\ref{fig:param_extrapolation_zetahat}, evaluated as continuous functions of $x$ at fixed transverse separation $|b_T| = 3a \approx 0.34$ fm: $\tAmp_{2B}^{\text{Re}}$, $i\tAmp_{2B}^{\text{Im}}$, the full unpolarized combination $\tilde f_1^{(0)}=2\tAmp_{2B}$, the Sivers combination $\tilde f_{1T}^{\perp(1)}=-2\tAmp_{12B}^{\text{Re}}$, and the resulting Sivers shift $\langle k_y \rangle_{TU}$ and $x\langle k_y \rangle_{TU}$, the latter two restricted to the quark region $x\ge0$. Shaded bands are the Jackknife uncertainty propagated from the twelve extrapolated parameters.}
     \label{fig:extrapolated_amplitude_level}
 \end{figure}
 
@@ -49,6 +51,7 @@ Table~\ref{tab:numerical_integration_fourier} lists the corresponding numerical 
     \centering
     \renewcommand{\arraystretch}{1.5}
     \caption{Numerical integration of the Fourier-transform integrals at $|b_T| = 3a \approx 0.34$ fm, evaluated using the extrapolated ($\hat\zeta\to\infty$) amplitudes of Fig.~\ref{fig:extrapolated_amplitude_level}, over the full range and three restricted $x$-ranges isolating the quark, antiquark, and combined contributions.}
+    % TODO(Hari): define the notation \tilde f^{[1](0)} and \tilde f_{1T}^{\perp[1](1)} (x-integrated moments) in the text before this table.
     \label{tab:numerical_integration_fourier}
     \resizebox{\textwidth}{!}{%
     \begin{tabular}{|l|c|c|c|c|}
@@ -88,8 +91,11 @@ Figure~\ref{fig:extrapolated_amplitude_3d} extends this reconstruction to the fu
     \label{fig:momenta_vs_extrapolated}
 \end{figure}
 
-\subsection{Testing Factorization in \texorpdfstring{$x$}{TEXT} and \texorpdfstring{$|b_T|$}{TEXT}}
+\subsection{Testing Factorization in \texorpdfstring{$x$}{TEXT} and \texorpdfstring{$|b_T|$}{TEXT} at the Physical Limit}
 \label{sec:factorization_xbt}
+
+Section~\ref{sec:factorization_test} tested factorization of the position-space amplitudes in $(P\cdot b)$ and $b^2$. Here we ask a different question: whether the extrapolated distributions factorize in the momentum fraction $x$ and the transverse separation $|b_T|$.
+
 
 Figures~\ref{fig:extrapolated_amplitude_3d} and~\ref{fig:momenta_vs_extrapolated} show that the extrapolated Sivers shift and amplitudes depend on both $x$ and $|b_T|$ jointly. A natural question is whether this joint dependence is actually separable: does the extrapolated Sivers shift factorize as
 \begin{equation}
@@ -99,6 +105,7 @@ with all of the $x$-shape carried by $F(x)$ and all of the $|b_T|$-shape by $G(|
 \begin{equation}
     \tAmp_X(x,b^2) \ \propto\ N_X(b^2)\ |x|^{-1/2+j_X}\ K_{\nu_X}\!\left(|x|\sqrt{d_X(b^2)/c_X}\right) \ ,
 \end{equation}
+% TODO(Hari): this closed form (and nu_X, N_X) is not derived earlier in the thesis. Add the Fourier transform of the power-law model in the Fitting chapter (Simultaneous Fitting Strategy) or an appendix, and cite it here.
 so $|b_T|$ rescales the argument of the same Bessel function that carries the $x$-dependence, rather than multiplying it by an overall $x$-independent prefactor. The Sivers shift is a ratio of three such amplitudes ($\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$, $\tAmp_{12B}^{\text{Re}}$), each with its own independently fitted $(j_X,d_X)$; an exact factorization would require these parameters to coincide across the three amplitudes so that the $x$- and $|b_T|$-dependence separates cleanly. Whether the extrapolated fit lands close enough to that coincidence is a numerical question, which we answer quantitatively below.
 
 \subsubsection{Quantifying the Distance from a Factorized Form}

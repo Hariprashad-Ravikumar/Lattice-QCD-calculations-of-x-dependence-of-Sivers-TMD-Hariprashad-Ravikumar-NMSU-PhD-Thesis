@@ -11,27 +11,19 @@ Because $x$ and the longitudinal spatial separation $b \cdot P$ act as Fourier c
 	&\ \equiv\ \mN \frac{\tilde f_{1T}^{\perp(1)}(\vprp{\bvec}^2;\zetahat,\ldots,\eta v \tcdot P)}{\tilde f_1^{(0)}(\vprp{\bvec}^2;\zetahat,\ldots,\eta v \tcdot P)} \nonumber \\
  &=-m_{N} \frac{\int d(b\cdot P)e^{ix(b\cdot P)} \tAmp_{12B}(\bvec^2,\bvec \tcdot P,(\bvec \tcdot P) R(\zetahat^2)/\mN^2,-1/(\mN\zetahat)^2,\eta v \tcdot P)}{\int d(b\cdot P)e^{ix(b\cdot P)}\tAmp_{2B}(\bvec^2,\bvec \tcdot P,(\bvec \tcdot P) R(\zetahat^2)/\mN^2,-1/(\mN\zetahat)^2,\eta v \tcdot P)} \nonumber \\
  &=-m_{N} \frac{\int d(b\cdot P)e^{ix(b\cdot P)} \left[\tAmp_{12B}^{\text{Re}}(\cdots)+i\tAmp_{12B}^{\text{Im}}(\cdots)\right]}{\int d(b\cdot P)e^{ix(b\cdot P)}\left[\tAmp_{2B}^{\text{Re}}(\cdots)+i\tAmp_{2B}^{\text{Im}}(\cdots)\right]}\\
- &=-m_{N} \frac{\int d(b\cdot P) \left[\cos{\left(x(b\cdot P)\right)}\tAmp_{12B}^{\text{Re}}(\cdots)-\sin{\left(x(b\cdot P)\right)}\tAmp_{12B}^{\text{Im}}(\cdots)\right]}{\int d(b\cdot P)\left[\cos{\left(x(b\cdot P)\right)}\tAmp_{2B}^{\text{Re}}(\cdots)-\sin{\left(x(b\cdot P)\right)}\tAmp_{2B}^{\text{Im}}(\cdots)\right]} \ .
+ &=-m_{N} \frac{\int d(b\cdot P) \left[\cos{\left(x(b\cdot P)\right)}\tAmp_{12B}^{\text{Re}}(\cdots)-\sin{\left(x(b\cdot P)\right)}\tAmp_{12B}^{\text{Im}}(\cdots)\right]}{\int d(b\cdot P)\left[\cos{\left(x(b\cdot P)\right)}\tAmp_{2B}^{\text{Re}}(\cdots)-\sin{\left(x(b\cdot P)\right)}\tAmp_{2B}^{\text{Im}}(\cdots)\right]} \ . \label{eq:sivers_shift_xdep}
  \end{align}
  Expanding the Fourier phase factor into its trigonometric components isolates the real and imaginary contributions of the amplitudes to the Sivers shift. Because the integration over $d(b \cdot P)$ is performed over a symmetric domain, the non-vanishing terms of the integral are dictated by the parity of the integrands with respect to $b \cdot P$. The trigonometric weights $\cos\left(x(b\cdot P)\right)$ and $\sin\left(x(b\cdot P)\right)$ are inherently even and odd, respectively.
 
-This harmonic symmetry filters the invariant amplitudes based on their behavior under Hermitian conjugation. Due to symmetry constraints, the real components $\tAmp_{2B}^{\text{Re}}$ and $\tAmp_{12B}^{\text{Re}}$ must be even functions of $b \cdot P$, while the imaginary components $\tAmp_{2B}^{\text{Im}}$ and $\tAmp_{12B}^{\text{Im}}$ must be odd. Consequently, only the symmetric products, i.e., the even real amplitudes coupled with the cosine term, and the odd imaginary amplitudes coupled with the sine term, survive the integration. The next step is extracting these specific parity components from the discrete lattice data. The following section describes how we construct our correlation functions to extract these distinct real and imaginary amplitudes.
+This harmonic symmetry filters the invariant amplitudes based on their behavior under Hermitian conjugation. By Eqs.~\eqref{conditi_hermitian} and~\eqref{eq-ReIm-parity}, the real components $\tAmp_{2B}^{\text{Re}}$ and $\tAmp_{12B}^{\text{Re}}$ are even functions of $b \cdot P$, while the imaginary components $\tAmp_{2B}^{\text{Im}}$ and $\tAmp_{12B}^{\text{Im}}$ are odd. (Parity in $b$ is parity in $b\cdot P$ here, because $\bvec^2$ is unchanged under $b\to-b$, $v\cdot b$ is tied to $b\cdot P$ by Eq.~\eqref{eq-lindeprel}, and $R(\zetahat^2)$ is real.) Consequently, only the symmetric products, i.e., the even real amplitudes coupled with the cosine term, and the odd imaginary amplitudes coupled with the sine term, survive the integration. The next step is extracting these parity components from the discrete lattice data; Sections~\ref{sec:b_separation_paths} and~\ref{sec:solving_amplitudes} describe how the correlation functions are built to separate them.
 
 
 \subsection{The Collins-Soper Parameter (\texorpdfstring{$\hat{\zeta}$}{TEXT})}
 \label{sec:collins_soper_parameter}
-Calculating TMDs involves rapidity divergences induced by the gauge link extending to infinity. In the continuum, these divergences are regulated by tilting the Wilson line slightly off the light cone. In our Euclidean lattice framework, the staple direction $v$ must be strictly space-like ($v^2 < 0$). The Lorentz-invariant quantity that characterizes the proximity of our space-like gauge link to the physical light-like trajectory is the Collins-Soper parameter:
-\begin{equation}
-    \hat{\zeta} = \frac{v \cdot P}{m_N \sqrt{|v^2|}} \ .
-\end{equation}
-The physical TMD limit is recovered by extrapolating $\hat{\zeta} \to \infty$. In practice, since $v$ is a purely spatial vector on the lattice ($v_0 = 0$), increasing $\hat{\zeta}$ requires simulating the nucleon at progressively higher spatial momenta $\vect{P}$. Tracking the evolution of the Sivers shift across multiple values of $\hat{\zeta}$ is therefore a necessary step for phenomenological predictions.
+On the lattice the staple direction $v$ must be space-like ($v^2 < 0$), so the Collins-Soper parameter $\hat{\zeta}$ of Eq.~\eqref{eq-zeta} stays finite, and the physical TMD limit is recovered only by extrapolating $\hat{\zeta} \to \infty$. In practice, since $v$ is a purely spatial vector on the lattice ($v_0 = 0$), increasing $\hat{\zeta}$ requires simulating the nucleon at progressively higher spatial momenta $\vect{P}$. Tracking the evolution of the Sivers shift across multiple values of $\hat{\zeta}$ is therefore a necessary step for phenomenological predictions.
 
 \subsection{Kinematic Constraints for \texorpdfstring{$b\cdot P \neq 0$}{TEXT}}
-To perform the Fourier transform over $b \cdot P$, we require a lattice geometry where $b \cdot P$ is non-zero. However, the Lorentz-invariant arguments of the amplitudes are not independent. Our chosen frame ($b^+=0, \vprp{P}=0$) enforces the constraint:
-\begin{align}
-    \frac{v \tcdot b}{v \tcdot P} = b \tcdot P \frac{R(\zetahat^2)}{\mN^2} \ ,
-\end{align}
-where $R(\zetahat^2) = 1 - \sqrt{1 + \zetahat^{-2}}$. Expanding the dot products in a frame where the momentum is directed along the 1-axis ($P = (E, P_1, 0, 0)$), we find:
+To perform the Fourier transform over $b \cdot P$, we require a lattice geometry where $b \cdot P$ is non-zero. However, the Lorentz-invariant arguments of the amplitudes are not independent. Our chosen frame ($b^+=0, \vprp{P}=0$) enforces the constraint of Eq.~\eqref{eq-lindeprel}. Expanding the dot products in a frame where the momentum is directed along the 1-axis ($P = (E, P_1, 0, 0)$), we find:
 \begin{align}
     b_{1}|v|\left[\frac{P_{1}}{m_{N}}\left(\hat{\zeta}-\sqrt{\hat{\zeta}^2+1}\right)+\hat{\zeta}\frac{m_{N}}{P_{1}}\right]=\vec{v}_{T}\cdot\vec{b}_{T} \ .
 \end{align}
@@ -113,7 +105,7 @@ To evaluate the correlation function as a function of the staple extent, we scal
  
  These bounding coordinates are reached via specific permutations of fundamental links. Within our methodology, a path sequence denoted as $\{1,3,1\}$ corresponds to a single link in the $\hat{x_{1}}$ direction, followed by one in the $\hat{x_{3}}$ direction, and a final link in the $\hat{x_{1}}$ direction, successfully landing at the physical integer coordinate $(2,0,1)$. By systematically varying these step sequences, we gather data at three to four physically adjacent lattice sites (e.g., on either side of the target along the $x^3$ slice). 
 
-Once these bounding matrix elements are computed, we perform a spatial interpolation inside the Jackknife resampling loop to extract the value precisely at the continuous target coordinate $\eta \vect{v}/a$. This interpolation reduces discretization artifacts and staircase errors associated with off-axis Wilson lines. This interpolation procedure is detailed in the next section. The ideal continuous trajectories, alongside their corresponding discrete bounding paths and link sequences for each momentum transfer, are detailed in Figures \ref{fig:v_path_P-1} through \ref{fig:eta_table_P-4}.
+Once these bounding matrix elements are computed, we perform a spatial interpolation inside the Jackknife resampling loop to extract the value precisely at the continuous target coordinate $\eta \vect{v}/a$. This interpolation reduces discretization artifacts and staircase errors associated with off-axis Wilson lines. This interpolation procedure is detailed in the next section. The ideal continuous trajectories, alongside their corresponding discrete bounding paths and link sequences for each nucleon momentum, are detailed in Figures \ref{fig:v_path_P-1} through \ref{fig:eta_table_P-4}.
 
 % ---------------------------------------------------------
 % P_1 = -1 Figures
@@ -195,9 +187,7 @@ Once these bounding matrix elements are computed, we perform a spatial interpola
 \subsubsection{Spatial Interpolation of Off-Axis Coordinates}
 \label{sec:spatial_interpolation}
 
-As established in the previous section, the ideal spatial trajectory of the gauge link, $\eta \vect{v}/a$, rarely falls on an exact integer lattice site. To evaluate the correlation function along this continuous trajectory, we compute the non-local matrix elements at several discrete bounding coordinates and interpolate between them. 
-
-Before interpolating, we must account for path degeneracy. Because the lattice gauge links are restricted to the Cartesian axes, there are multiple step-wise permutations (different side-link paths) that terminate at the exact same physical lattice coordinate. While these paths are geometrically equivalent at their endpoints, they traverse different local gauge field configurations and thus exhibit distinct discretization artifacts and gauge noise. As illustrated in Figure \ref{fig:example_2path}, we average the correlation functions evaluated over all degenerate paths that share the same endpoint. This path-averaging procedure significantly improves the signal-to-noise ratio before any interpolation is performed.
+Before interpolating to the off-axis target $\eta \vect{v}/a$, we must account for path degeneracy. Because the lattice gauge links are restricted to the Cartesian axes, there are multiple step-wise permutations (different side-link paths) that terminate at the exact same physical lattice coordinate. While these paths are geometrically equivalent at their endpoints, they traverse different local gauge field configurations and thus exhibit distinct discretization artifacts and gauge noise. As illustrated in Figure \ref{fig:example_2path}, we average the correlation functions evaluated over all degenerate paths that share the same endpoint. This path-averaging procedure significantly improves the signal-to-noise ratio before any interpolation is performed.
 
 \begin{figure}[htpb]
     \centering
@@ -227,7 +217,7 @@ fninterpol = Interpolation[plotforinterpolation,
 interpol0 = {{0, fninterpol[0]}};
 \end{lstlisting}
 
-A representative example of this interpolation procedure is shown in Figure \ref{fig:interpolation_ex} for a specific staple extent ($\eta=7$) and momentum transfer ($P_1 = -1$). The red data points represent the path-averaged lattice evaluations at the discrete bounding sites, plotted against their deviation from the ideal trajectory. The solid gray curve denotes the quadratic interpolation, and the blue point highlights the final extracted physical value at $\Delta v_1 = 0$. This procedure is systematically applied across all Dirac structures ($\Gamma$) and separately for both the real ($b\cdot P$-even) and imaginary ($b\cdot P$-odd) parts of the amplitudes.
+A representative example of this interpolation procedure is shown in Figure \ref{fig:interpolation_ex} for a specific staple extent ($\eta=7$) and nucleon momentum ($P_1 = -1$). The red data points represent the path-averaged lattice evaluations at the discrete bounding sites, plotted against their deviation from the ideal trajectory. The solid gray curve denotes the quadratic interpolation, and the blue point highlights the final extracted physical value at $\Delta v_1 = 0$. This procedure is systematically applied across all Dirac structures ($\Gamma$) and separately for both the real ($b\cdot P$-even) and imaginary ($b\cdot P$-odd) parts of the amplitudes.
 
 \begin{figure}[htpb]
     \centering
@@ -272,7 +262,7 @@ For strictly transverse separations, where $b \cdot P = 0$, the gauge links are 
 \begin{figure}[htpb]
     \centering
     \includegraphics[width=0.65\linewidth]{plots/kinematics_interpolation/b_gauge_links_for_table1.pdf}
-    \caption{Discrete gauge link configurations for strictly transverse quark separations ($\vect{b} = \{0, b_2, b_3\}$). Numerical arrays dictate the sequential lattice steps (e.g., `2` represents a shift in the $x_2$ direction).}
+    \caption{Discrete gauge link configurations for strictly transverse quark separations ($\vect{b} = \{0, b_2, 0\}$). Numerical arrays dictate the sequential lattice steps (e.g., `2` represents a shift in the $x_2$ direction).}
     \label{fig:b_table_transverse}
 \end{figure}
 
@@ -298,9 +288,7 @@ To access finite $b \cdot P$, we construct off-axis paths with simultaneous step
 
 \subsubsection{Path Averaging for \texorpdfstring{$\vect{b}$}{TEXT}}
 
-Similar to the logic applied to the off-axis staple vector $\vect{v}$, the off-axis separation vector $\vect{b}$ suffers from path degeneracy. Multiple distinct sequences of orthogonal lattice links can terminate at the identical spatial coordinate $\vect{b}$. Because these different paths traverse slightly different local gauge field fluctuations, computing the observable along just one path introduces arbitrary discretization noise. 
-
-To mitigate this, we average the correlation function over multiple equivalent step-wise paths that share the same origin and endpoint, as illustrated for a single coordinate in Figure \ref{fig:b_path_example}. Applying this path-averaging strategy across the entire target grid yields the full network of smoothed off-axis trajectories, visualized in Figure \ref{fig:b_full_network}. This path-averaged dataset provides the statistically robust, parity-separated amplitudes required for the final Fourier transform.
+The off-axis separation vector $\vect{b}$ has the same path degeneracy as the staple vector (Section~\ref{sec:spatial_interpolation}), and we treat it the same way: we average the correlation function over all equivalent step-wise paths that share the same origin and endpoint, as illustrated for a single coordinate in Figure \ref{fig:b_path_example}. Applying this path-averaging strategy across the entire target grid yields the full network of smoothed off-axis trajectories, visualized in Figure \ref{fig:b_full_network}. This path-averaged dataset provides the statistically robust, parity-separated amplitudes required for the final Fourier transform.
 
 \begin{figure}[htpb]
     \centering
@@ -319,18 +307,7 @@ To mitigate this, we average the correlation function over multiple equivalent s
 \subsection{Solving for Real and Imaginary Amplitudes \texorpdfstring{$\tAmp_{iB}^{\text{Re}}$ and $\tAmp_{iB}^{\text{Im}}$}{TEXT}}
 \label{sec:solving_amplitudes}
 
-To extract the physical Sivers shift from the lattice, we must isolate the specific invariant amplitudes $\tAmp_{2B}$ and $\tAmp_{12B}$ from the raw correlator data. Let us start with the standard parametrization of the unsubtracted correlator \cite{Musch:2011er}:
-\begin{align}
-    \frac{1}{2}\widetilde \Phi^{[\gamma^\mu]}_{\unsub} & = 
-		P^\mu\, \tAmp_2 - i \mN^2 \bvec^\mu\, \tAmp_3
-		- i \mN \epsilon^{\mu \nu \alpha \beta} P_\nu \bvec_\alpha S_\beta\, \tAmp_{12} \nonumber \\ &
-		~~+ \frac{\mN^2}{(v \tcdot P)} v^\mu\, \tBmp_1 
-		+ \frac{\mN}{v \tcdot P} \epsilon^{\mu \nu \alpha \beta} P_\nu v_\alpha S_\beta\, \tBmp_7  
-		- \frac{ i \mN^3}{v \tcdot P} \epsilon^{\mu \nu \alpha \beta} \bvec_\nu v_\alpha S_\beta\, \tBmp_8 \nonumber \\ &
-		~~- \frac{\mN^3}{v \tcdot P} (\bvec \tcdot S) \epsilon^{\mu \nu \alpha \beta} P_\nu \bvec_\alpha v_\beta\, \tBmp_9
-		- \frac{i \mN^3}{(v \tcdot P)^2} (v \tcdot S) \epsilon^{\mu \nu \alpha \beta} P_\nu \bvec_\alpha v_\beta \tBmp_{10}
-\end{align}
-While this parametrization describes a continuous gauge link extending to infinity, for practical lattice calculations it is highly advantageous to adopt an equivalent representation in which the structures explicitly depend on the finite staple extent $\eta$. This ensures the parametrization remains mathematically well-defined even in the $v \cdot P = 0$ limit. This alternative form is obtained by making the substitution $v \rightarrow \eta v$ and extracting the scaling factors $(v \tcdot P)^{-n}$:
+To extract the physical Sivers shift from the lattice, we must isolate the specific invariant amplitudes $\tAmp_{2B}$ and $\tAmp_{12B}$ from the raw correlator data. We start from the parametrization of the unsubtracted correlator in Eq.~\eqref{eq-phitildedecomp} \cite{Musch:2011er}. While this parametrization describes a continuous gauge link extending to infinity, for practical lattice calculations it is highly advantageous to adopt an equivalent representation in which the structures explicitly depend on the finite staple extent $\eta$. This ensures the parametrization remains mathematically well-defined even in the $v \cdot P = 0$ limit. This alternative form is obtained by making the substitution $v \rightarrow \eta v$ and extracting the scaling factors $(v \tcdot P)^{-n}$:
  \begin{align}
     \frac{1}{2}\widetilde \Phi^{[\gamma^\mu]}_{\unsub}=\frac{1}{2} R_{\gamma^{\mu}} E_N & =  
 		P^\mu\, \tilde a_2 - i \mN^2 \bvec^\mu\, \tilde a_3
@@ -341,7 +318,7 @@ While this parametrization describes a continuous gauge link extending to infini
 		~~- \mN^3 (\bvec \tcdot S) \epsilon^{\mu \nu \alpha \beta} P_\nu \bvec_\alpha \eta v_\beta\, \tilde b_9
 		-i \mN^3 (v \tcdot S) \epsilon^{\mu \nu \alpha \beta} P_\nu \bvec_\alpha \eta^2 v_\beta \tilde b_{10}
 \end{align}
-To evaluate this tensor equation, we project it onto the specific kinematics optimized for our lattice setup. We choose a frame where the nucleon moves along the negative $\hat{1}$-axis, the spin is polarized along the $\hat{3}$-axis, and the separation and staple vectors lie in the transverse/longitudinal planes. Explicitly, we set $P^{\mu}=(E_N, -|\vec{P}^1|,0,0)$, $b^{\mu}=(0,b_{1},b_{2},0)$, $v^{\mu}=\pm n^{\prime}(0,v_{1},0,v_{3})$, and $S^{\mu}=(0,0,0,1)$. Expanding the sum over Lorentz indices for the temporal component ($\mu = 0$) and explicitly canceling the vanishing terms (such as $b^0 = 0$, $v^0 = 0$, and $\bvec \tcdot S = 0$), we find:
+To evaluate Eq.~\eqref{eq-phitildedecomp}, we project it onto the specific kinematics optimized for our lattice setup. We choose a frame where the nucleon moves along the negative $\hat{1}$-axis, the spin is polarized along the $\hat{3}$-axis, and the separation and staple vectors lie in the transverse/longitudinal planes. Explicitly, we set $P^{\mu}=(E_N, -|\vec{P}^1|,0,0)$, $b^{\mu}=(0,b_{1},b_{2},0)$, $v^{\mu}=\pm n^{\prime}(0,v_{1},0,v_{3})$, and $S^{\mu}=(0,0,0,1)$. Expanding the sum over Lorentz indices for the temporal component ($\mu = 0$) and explicitly canceling the vanishing terms (such as $b^0 = 0$, $v^0 = 0$, and $\bvec \tcdot S = 0$), we find:
 \begin{align}
     \frac{1}{2}\widetilde \Phi^{[\gamma^{0}]}_{\unsub} & = 
 		P^0\, \tAmp_2 - \cancelto{0}{i \mN^2 \bvec^0\, \tAmp_3}
@@ -430,13 +407,7 @@ To formally align with standard contravariant Lorentz notation, we raise the spa
         \rule{0pt}{16pt} \frac{\mN^2}{(v \tcdot P)} v^3\, \tBmp_1- \frac{i \mN^3}{(v \tcdot P)^2} (v \tcdot S)  P^0 \bvec^2 v^1 \tBmp_{10}
     \end{pmatrix}
 \end{align}
-To connect these continuous amplitudes to the discretized finite-link observables simulated on the lattice, we apply the scaling dictionary bridging the infinite-link parametrization ($\tAmp_i$, $\tBmp_i$) to the finite-link parametrization ($\tilde{a}_i$, $\tilde{b}_i$):
-\begin{align}
-	\tAmp_i\left(\bvec^2,\bvec \tcdot P,\frac{v \tcdot \bvec}{v \tcdot P}, \frac{v^2}{(v \tcdot P)^2}, \eta v \tcdot P\right) & = \tilde a_i(\bvec^2,\bvec \tcdot P, \eta v \tcdot b, (\eta v)^2, \eta v \tcdot P)   \, , \nonumber \\
-	 \tBmp_i\left(\bvec^2,\bvec \tcdot P,\frac{v \tcdot \bvec}{v \tcdot P}, \frac{v^2}{(v \tcdot P)^2}, \eta v \tcdot P\right) & = (\eta v \tcdot P)^n\ \tilde b_i(\bvec^2,\bvec \tcdot P, \eta v \tcdot b, (\eta v)^2, \eta v \tcdot P)   \, ,
-	\label{eq-ab}
-\end{align}
-These invariant amplitudes are complex-valued functions, formally decomposed into their real and imaginary components:
+To connect these continuous amplitudes to the discretized finite-link observables simulated on the lattice, we use the mapping of Eq.~\eqref{eq-ab} between the infinite-link amplitudes ($\tAmp_i$, $\tBmp_i$) and the finite-link amplitudes ($\tilde{a}_i$, $\tilde{b}_i$). The finite-link amplitudes are complex-valued functions, formally decomposed into their real and imaginary components:
 \begin{align}
     \tilde{a}_i&=\tilde{a}^{\text{Re}}_i+i\tilde{a}^{\text{Im}}_i\\
     \tilde{b}_i&=\tilde{b}^{\text{Re}}_i+i\tilde{b}^{\text{Im}}_i
@@ -497,7 +468,7 @@ To analytically separate the real and imaginary amplitude contributions, we spli
       \rule{0pt}{16pt} -  \mN  \frac{|\vec{P}^1|}{E_N} \bvec^2  \tilde a^{\text{Re}}_{12}- \frac{  \mN^3}{E_N}  \bvec^2 \eta v^1  \tilde b^{\text{Re}}_8+ \frac{ \mN^3}{E_N}  |\vec{P}^1| \bvec^2 \eta^2 (v^3)^2 \tilde b^{\text{Re}}_{10}+\tilde a^{\text{Im}}_2
     \end{pmatrix}
 \end{align}
-Evaluating the system for the negated separation ($-b^1$) introduces selective sign flips based on the parity constraints established in Section~\ref{sec:b_separation_paths}. By construction, the imaginary parts of the amplitudes are strictly odd functions of $b^1$ ($\tilde{A}^{\text{Im}}_i=\tilde{A}^{\text{(b-odd})}_i=\tilde{A}^{\text{($b^1$-odd})}_i$ and  $\tilde{B}^{\text{Im}}_i=\tilde{B}^{\text{(b-odd})}_i=\tilde{B}^{\text{($b^1$-odd})}_i$). Applying these parity reversals yields the conjugate matrix:
+Evaluating the system for the negated separation ($-b^1$) introduces selective sign flips based on the parity constraints of Eq.~\eqref{eq-ReIm-parity}. By construction, the imaginary parts of the amplitudes are strictly odd functions of $b^1$ ($\tilde{A}^{\text{Im}}_i=\tilde{A}^{\text{(b-odd})}_i=\tilde{A}^{\text{($b^1$-odd})}_i$ and  $\tilde{B}^{\text{Im}}_i=\tilde{B}^{\text{(b-odd})}_i=\tilde{B}^{\text{($b^1$-odd})}_i$). Applying these parity reversals yields the conjugate matrix:
 \begin{align}
     \begin{pmatrix}
         \rule{0pt}{16pt} \text{Re}\{ R_{\Gamma(1)}\}^{[-b^1]} \\
@@ -611,20 +582,10 @@ Applying the same scaling factors to the imaginary counterparts provides the com
     \Aboxed{\tAmp^{\text{Im}}_{12}=&\frac{-1}{2\mN  \bvec^2}\left[\text{Im}\{ R_{\Gamma(1)}\}^{[b^{1}\text{-odd}]}+\frac{v^3}{v^1}\text{Im}\{ R_{\Gamma(4)}\}^{[b^{1}\text{-odd}]}\right]}\\
      \Aboxed{\tBmp^{\text{Im}}_8=&\frac{E_N|P^1|}{ 2\mN^3 \bvec^2  }\left[\text{Re}\{ R_{\Gamma(8)}\}^{[b^{1}\text{-odd}]}-\frac{|\vec{P}^1|v^3}{E_N v^1}\text{Im}\{ R_{\Gamma(4)}\}^{[b^{1}\text{-odd}]}- 2\mN  \frac{|\vec{P}^1|}{E_N} \bvec^2  \tAmp^{\text{Im}}_{12}\right]}
 \end{align}
-With the fundamental invariant amplitudes explicitly extracted, the final step to reconstruct the effective amplitudes governing the unpolarized and Sivers TMDs ($\tAmp_{2B}$ and $\tAmp_{12B}$ respectively) is to combine them according to the kinematic constraint of the Collins-Soper parameter:
-\begin{align}
-    \Aboxed{\tAmp_{2B}  & \ \equiv\  \tAmp_2 + R(\zetahat^2) \tBmp_1}\\
-    \Aboxed{\tAmp_{12B}  & \ \equiv\  \tAmp_{12} - R(\zetahat^2) \tBmp_8}
-\end{align}
-where the geometric regularization factor characterizing the approach to the light cone is strictly defined by:
-\begin{align}
-    \Aboxed{R(\zetahat^2) \equiv 1- \sqrt{1 + \hat \zeta^{-2}}}
-\end{align}
-
 \subsection{Constructing the Effective Amplitudes \texorpdfstring{$\tAmp_{2B}$}{TEXT} and \texorpdfstring{$\tAmp_{12B}$}{TEXT}}
 \label{sec:effective_amplitudes}
 
-With the fundamental invariant amplitudes explicitly isolated via the parity-projection of the lattice correlation functions, we can now synthesize the effective amplitudes that directly govern the unpolarized and Sivers Transverse Momentum Dependent (TMD) distributions. 
+With the fundamental invariant amplitudes isolated by parity projection, we now combine them into the effective amplitudes $\tAmp_{2B}$ and $\tAmp_{12B}$ of Eq.~\eqref{eq-ABamps_sivers}, with $R(\zetahat^2)$ from Eq.~\eqref{eq-lindeprel}. 
 To apply these expressions in our simulated lattice geometry, we map the contravariant spatial indices to our physical grid parameters. We define the longitudinal spatial separation as $b_L \equiv b^1$ and the transverse spatial separation as $b_T \equiv b^2$. Consequently, the squared spatial separation vector expands to $\bvec^2 = b_L^2 + b_T^2$. Likewise, we identify the longitudinal nucleon momentum as $P_L \equiv P^1$. 
 
 We begin with the defining linear combination for the unpolarized effective amplitude, $\tAmp_{2B}$. Splitting this amplitude into its real and imaginary components yields:
@@ -704,26 +665,16 @@ By replacing $b_L$ and $\bvec^2$ with these invariant expressions, we transform 
     \tAmp_{iB}(b_L, b_T, \hat{\zeta}) \quad \xrightarrow{\text{Coordinate Transformation}} \quad \tAmp_{iB}\left( P \cdot b, \bvec^2, \hat{\zeta} \right)
 \end{align}
 
-With the amplitudes now successfully parameterized by the continuous invariant scalar $P \cdot b$, we are formally equipped to evaluate the integral. As introduced at the beginning of this chapter, the momentum fraction $x$-dependent Sivers shift is extracted by performing the continuous Fourier transform strictly over this newly constructed Lorentz-invariant Variable Space:
-\begin{align}
-   \langle \vect{k}_y \rangle_{TU}(\vprp{\bvec}^2,x,\zetahat,\eta v \tcdot P)
-	&=-m_{N} \frac{\int d(b\cdot P) \left[\cos{\left(x(b\cdot P)\right)}\tAmp_{12B}^{\text{Re}}(\cdots)-\sin{\left(x(b\cdot P)\right)}\tAmp_{12B}^{\text{Im}}(\cdots)\right]}{\int d(b\cdot P)\left[\cos{\left(x(b\cdot P)\right)}\tAmp_{2B}^{\text{Re}}(\cdots)-\sin{\left(x(b\cdot P)\right)}\tAmp_{2B}^{\text{Im}}(\cdots)\right]} \ . \label{eq:sivers_shift_xdep}
-\end{align}
-
-This provides the framework to connect the Euclidean correlation ratios evaluated on the lattice to the physical, $x$-dependent phenomenological observables required to study the Sivers effect.
+With the amplitudes now expressed as functions of $P \cdot b$, the Fourier transform of Eq.~\eqref{eq:sivers_shift_xdep} can be evaluated directly. This provides the framework to connect the Euclidean correlation ratios evaluated on the lattice to the physical, $x$-dependent phenomenological observables required to study the Sivers effect.
 
 
 \pagebreak
 \subsection{Numerical Results and Parity Constraints of the Extracted Amplitudes}
 \label{sec:numerical_amplitudes}
 
-Before examining the lattice data across the different Collins-Soper scales ($\hat{\zeta}$), we must verify the symmetry properties of the extracted amplitudes. As established in our theoretical framework, Hermitian conjugation of the non-local correlator imposes parity constraints on the invariant amplitudes. Specifically, the condition $[\tAmp_{iB}(P \cdot b, \dots)]^* = \tAmp_{iB}(-P \cdot b, \dots)$ dictates the exact mathematical behavior of their real and imaginary components with respect to the longitudinal separation.
+Before examining the lattice data across the different Collins-Soper scales ($\hat{\zeta}$), we check the parity constraints of Eq.~\eqref{eq-ReIm-parity}. Since $P\cdot b=-P_Lb_L$ (Eq.~\eqref{eq:pb_minus_pl_bl}), the real amplitudes $\tAmp_{2B}^{\text{Re}}$ and $\tAmp_{12B}^{\text{Re}}$ must be even in the Cartesian longitudinal separation $b_L$, and the imaginary amplitudes $\tAmp_{2B}^{\text{Im}}$ and $\tAmp_{12B}^{\text{Im}}$ must be odd. The lattice data in the figures below show these even and odd profiles along the $b_L$ axis, which validates the parity projection.
 
-For the real parts of the amplitudes, $\tAmp_{2B}^{\text{Re}}$ and $\tAmp_{12B}^{\text{Re}}$, this conjugation relation enforces $\tAmp_{iB}^{\text{Re}}(P \cdot b) = \tAmp_{iB}^{\text{Re}}(-P \cdot b)$. Consequently, these real amplitudes must be strictly even functions of the invariant scalar $P \cdot b$. In our simulated lattice frame, where $P\cdot b=-P_Lb_L$ (Eq.~\eqref{eq:pb_minus_pl_bl}), this physical constraint requires the amplitudes to be symmetric (even) with respect to the Cartesian longitudinal separation $b_L$.
-
-Conversely, for the imaginary parts of the amplitudes, $\tAmp_{2B}^{\text{Im}}$ and $\tAmp_{12B}^{\text{Im}}$, the conjugation relation demands $\tAmp_{iB}^{\text{Im}}(P \cdot b) = -\tAmp_{iB}^{\text{Im}}(-P \cdot b)$. Therefore, the imaginary amplitudes are strictly odd functions of $P \cdot b$, and correspondingly, antisymmetric (odd) functions of $b_L$. The lattice data plotted in the subsequent spaces exhibit these even and odd symmetry profiles along the $b_L$ axis, validating our parity-projection methodology.
-
-However, an important distinction emerges when analyzing the statistical quality of the extracted signals. While the unpolarized amplitudes ($\tAmp_{2B}^{\text{Re}}$ and $\tAmp_{2B}^{\text{Im}}$) and the real Sivers amplitude ($\tAmp_{12B}^{\text{Re}}$) exhibit clear, statistically resolvable signals across the simulated Variable Space, the imaginary Sivers amplitude ($\tAmp_{12B}^{\text{Im}}$) does not. Across all evaluated momentum transfers and staple extents, the extracted lattice data for $\tAmp_{12B}^{\text{Im}}$ remains completely dominated by gauge noise and is statistically compatible with zero. Because there is no distinguishable signal, it is impossible to meaningfully constrain or fit a phenomenological model to this component. Consequently, $\tAmp_{12B}^{\text{Im}}$ is discarded from further analysis: the $\sin(x(b\cdot P))\tAmp_{12B}^{\text{Im}}$ term in Eq.~\eqref{eq:sivers_shift_xdep} is dropped, and the $x$-dependent Sivers shift is evaluated relying exclusively on the robust $\tAmp_{12B}^{\text{Re}}$ data.
+However, an important distinction emerges when analyzing the statistical quality of the extracted signals. While the unpolarized amplitudes ($\tAmp_{2B}^{\text{Re}}$ and $\tAmp_{2B}^{\text{Im}}$) and the real Sivers amplitude ($\tAmp_{12B}^{\text{Re}}$) exhibit clear, statistically resolvable signals across the simulated Variable Space, the imaginary Sivers amplitude ($\tAmp_{12B}^{\text{Im}}$) does not. Across all evaluated nucleon momenta and staple extents, the extracted lattice data for $\tAmp_{12B}^{\text{Im}}$ remains completely dominated by gauge noise and is statistically compatible with zero. Because there is no distinguishable signal, it is impossible to meaningfully constrain or fit a phenomenological model to this component. Consequently, $\tAmp_{12B}^{\text{Im}}$ is discarded from further analysis: the $\sin(x(b\cdot P))\tAmp_{12B}^{\text{Im}}$ term in Eq.~\eqref{eq:sivers_shift_xdep} is dropped, and the $x$-dependent Sivers shift is evaluated relying exclusively on the robust $\tAmp_{12B}^{\text{Re}}$ data.
 
 \subsubsection{Amplitude Profiles at \texorpdfstring{$\hat{\zeta}=0.090772$ ($P_L = -1$)}{TEXT}}
 \newcommand{\PLval}{-1}
@@ -892,4 +843,4 @@ Figures \ref{fig:A2B_amplitudes_P4} through \ref{fig:combined_eta8_P4} complete 
     \label{fig:combined_eta8_P4}
 \end{figure}
 
-With the real and imaginary parts of $\tAmp_{2B}$ and $\tAmp_{12B}$ verified across all four simulated Collins-Soper momenta, these path-averaged, interpolated amplitude sets are the direct numerical input to the Fourier-transform integral of Eq.~\eqref{eq:sivers_shift_xdep}, from which the $x$-dependent Sivers shift is extracted.
+With the real and imaginary parts of $\tAmp_{2B}$ and $\tAmp_{12B}$ verified across all four simulated Collins-Soper momenta, these path-averaged, interpolated amplitude sets are the data fitted in Section~\ref{sec:fitting_methodologies}; the fitted models then enter the Fourier-transform integral of Eq.~\eqref{eq:sivers_shift_xdep}, from which the $x$-dependent Sivers shift is extracted.
