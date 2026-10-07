@@ -1,7 +1,10 @@
 \section{THEORETICAL FRAMEWORK OF TMDs}
 \label{sec:tmd_framework}
 
+This chapter sets out the definitions used in the rest of the thesis. Section~\ref{sec:tmd_definition} defines the TMD correlator as the Fourier transform of a bare non-local matrix element divided by the soft factor, and identifies the unpolarized distribution $f_1$ and the T-odd Sivers function $f_{1T}^\perp$ in its $\gamma^+$ projection. Section~\ref{sec:tmd_fourier} introduces $\vprp{b}$-dependent TMDs and their derivatives, which the lattice evaluates directly, and keeps $|\vprp{\bvec}|$ finite because $f_{1T}^{\perp(1)}(x)$ diverges without additional regularization. Section~\ref{sec:link_geometry} introduces the staple-shaped gauge link and the Collins-Soper parameter $\hat\zeta$. Section~\ref{Symmetry Constraints} lists the Lorentz, parity, time-reversal and Hermitian conjugation transformations, parametrizes the $b$-dependent correlator in terms of the amplitudes $\tAmp_i$ and $\tBmp_i$, and uses hermiticity to show that their real and imaginary parts are even and odd in $b$. Section~\ref{sec-parametr} combines these amplitudes into $\tAmp_{2B}$ and $\tAmp_{12B}$, from which $f_1$ and $f_{1T}^\perp$ follow by Fourier transformation.
+
 \subsection{Definition of TMDs} 
+\label{sec:tmd_definition}
 Consider a frame of reference where the nucleon has large momentum in the $z$-direction, i.e., $P^+ \gg m_N$, $\vprp{P} = 0$.
 In light cone coordinates, the components $\kei^+$,~$\vprp{\kei}$,~$\kei^-$ of the quark momentum $\kei$ scale as $P^+/m_N$,~$1$,~$m_N/P^+$, respectively, under boosts along the $z$-axis. Thus, the quark longitudinal momentum fraction $x = k^+ / P^+$ and its transverse momentum $\vprp{\kei}$ are invariant under boosts along the $z$-axis, while the $k^-$ component is suppressed. 
 This leads to transverse momentum-dependent parton distribution functions (TMDs), which depend on the longitudinal momentum fraction $x \equiv \kei^+ / P^+$ and the quark transverse momentum $\vprp{\kei}$. 
@@ -53,6 +56,7 @@ By selecting the Dirac matrix $\Gamma = \gamma^+$ to project onto the leading-tw
 The term enclosed in $[\ ]_\text{odd}$ isolates the naively time-reversal odd (T-odd) Sivers function $f_{1T}^\perp$ \cite{Sivers:1989cc}, representing the distribution of unpolarized quarks inside a transversely polarized nucleon. The origin of the above parametrization and the special role of T-odd TMDs will become clear after we have discussed the geometry of the gauge link path $\mathcal{C}_\bvec $ and symmetry transformation properties.
 
 \subsection{TMDs in Fourier space}
+\label{sec:tmd_fourier}
 The lattice method we use allows us to evaluate the $b$-dependent matrix elements $\widetilde \Phi_\unsub^{[\Gamma]}(\bvec,P,S;\ldots)$ introduced in Eq. \eqref{eq-corr}. As a result, it is more direct and natural to state our results in terms of Fourier-transformed, $\vprp{b}$-dependent TMDs and their $\vprp{b}$-derivatives. For a generic TMD $f$, we define the Fourier transform and its derivatives:
 \begin{align}
 	\tilde f(x, \vprp{\bvec}^2;\ldots) & \equiv \int  d^2 \vprp{\kei} \, e^{i \vprp{\bvec} \cdot \vprp{\kei} }\; f(x, \vprp{\kei}^2;\ldots)
@@ -71,6 +75,7 @@ Taking the strict $|\vprp{\bvec}| \rightarrow 0$ limit theoretically recovers th
 However, the first transverse moment of the Sivers function, $f_{1T}^{\perp(1)}(x)$, is notoriously divergent without additional regularization, as the perturbatively calculable high-$\vprp{\kei}$ tails do not decay fast enough \cite{Bacchetta:2008xw}. To circumvent this divergence, we avoid the $\vprp{\bvec}=0$ extrapolation entirely. By retaining finite $|\vprp{\bvec}|$, the integrals remain convergent. The corresponding $x$-dependence of the Sivers TMD is then accessed by mapping the conjugate variable $\bvec \tcdot P$ \cite{Hagler:2009mb,Musch:2010ka}.
 
 \subsection{Link geometry}
+\label{sec:link_geometry}
 The geometry of the gauge link path $\mathcal{C}_\bvec$ affects both the number of allowed TMD structures and the numerical result. 
 
 The simplest link geometry is a straight line connecting the quark fields at $0$ and $\bvec$. Refs.~\cite{Hagler:2009mb, Musch:2010ka} have studied TMDs with straight gauge links on the lattice. While these ``process-independent'' TMDs are interesting from a theoretical point of view in their own right, it is so far not known how to relate these quantitatively to the TMDs that play a role in scattering experiments. The operator with straight gauge links offers the greatest possible symmetry. As a result, T-odd TMDs vanish for straight gauge links.

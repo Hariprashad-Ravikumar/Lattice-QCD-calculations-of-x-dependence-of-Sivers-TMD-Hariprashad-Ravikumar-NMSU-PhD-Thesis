@@ -1,7 +1,12 @@
 \section{EXTRACTING THE \texorpdfstring{$x-$}{TEXT}DEPENDENCE}
 \label{sec:x_dependence}
 
+This chapter connects the lattice correlators to the $x$-dependent Sivers shift. Section~\ref{sec:sivers_shift_x} writes the Sivers shift as a ratio of Fourier transforms over $b\cdot P$ of the amplitudes $\tAmp_{12B}$ and $\tAmp_{2B}$, and shows that the real parts enter with the cosine and the imaginary parts with the sine. Section~\ref{sec:collins_soper_parameter} explains why $\hat\zeta$ is finite on the lattice. Sections~\ref{sec:kinematic_constraints} and~\ref{sec:lattice_parameter_space} fix the staple direction $v$ for each nucleon momentum so that $b\cdot P\neq0$, and describe how the correlator at the off-axis target $\eta \vect{v}/a$ is obtained by path averaging and quadratic interpolation. Section~\ref{sec:b_separation_paths} describes the quark separation vectors $\vect{b}$, sampled at $\pm b_1$, and the gauge link paths that reach them.
+
+Section~\ref{sec:solving_amplitudes} projects the correlator parametrization onto the lattice kinematics and solves for the real and imaginary amplitudes from the symmetric and antisymmetric combinations of the $+b^1$ and $-b^1$ data. Section~\ref{sec:effective_amplitudes} combines them into $\tAmp_{2B}$ and $\tAmp_{12B}$, and Section~\ref{sec:lorentz_mapping} maps these from $(b_L,b_T)$ to $(P\cdot b,\bvec^2)$. Section~\ref{sec:numerical_amplitudes} checks the parity of the extracted amplitudes, shows them at the four simulated momenta, and discards $\tAmp_{12B}^{\text{Im}}$, which is statistically compatible with zero.
+
 \subsection{The Sivers Shift as a Function of Momentum Fraction}
+\label{sec:sivers_shift_x}
 To connect our lattice observables to the physical, $x$-dependent Transverse Momentum Dependent Parton Distribution Functions (TMDs), we must isolate the relevant amplitudes from the correlation function. Focusing on the leading-twist unpolarized quark distribution, the correlator is parameterized by the Lorentz-invariant amplitudes $\tAmp_{2B}$ and $\tAmp_{12B}$, which we construct explicitly from the primitive correlator amplitudes in Section \ref{sec:effective_amplitudes}.
 Our primary goal is to extract the generalized Sivers shift, $\langle \vect{k}_y \rangle_{TU}$, as a continuous function of the longitudinal momentum fraction $x = k^+ / P^+$. The Sivers shift is defined phenomenologically as the ratio of the first transverse momentum moment of the Sivers function to the unpolarized distribution. 
 
@@ -23,6 +28,7 @@ This harmonic symmetry filters the invariant amplitudes based on their behavior 
 On the lattice the staple direction $v$ must be space-like ($v^2 < 0$), so the Collins-Soper parameter $\hat{\zeta}$ of Eq.~\eqref{eq-zeta} stays finite, and the physical TMD limit is recovered only by extrapolating $\hat{\zeta} \to \infty$. In practice, since $v$ is a purely spatial vector on the lattice ($v_0 = 0$), increasing $\hat{\zeta}$ requires simulating the nucleon at progressively higher spatial momenta $\vect{P}$. Tracking the evolution of the Sivers shift across multiple values of $\hat{\zeta}$ is therefore a necessary step for phenomenological predictions.
 
 \subsection{Kinematic Constraints for \texorpdfstring{$b\cdot P \neq 0$}{TEXT}}
+\label{sec:kinematic_constraints}
 To perform the Fourier transform over $b \cdot P$, we require a lattice geometry where $b \cdot P$ is non-zero. However, the Lorentz-invariant arguments of the amplitudes are not independent. Our chosen frame ($b^+=0, \vprp{P}=0$) enforces the constraint of Eq.~\eqref{eq-lindeprel}. Expanding the dot products in a frame where the momentum is directed along the 1-axis ($P = (E, P_1, 0, 0)$), we find:
 \begin{align}
     b_{1}|v|\left[\frac{P_{1}}{m_{N}}\left(\hat{\zeta}-\sqrt{\hat{\zeta}^2+1}\right)+\hat{\zeta}\frac{m_{N}}{P_{1}}\right]=\vec{v}_{T}\cdot\vec{b}_{T} \ .
@@ -52,6 +58,7 @@ Solving for the longitudinal staple component $v_1$ in terms of the transverse c
 \end{align}
 
 \subsection{Lattice Parameter Space and Off-Axis Links}
+\label{sec:lattice_parameter_space}
 This geometric calculation is repeated over a range of nucleon momenta to increase $\hat{\zeta}$ systematically. The resulting constraint parameters are summarized in Table \ref{tab:zeta_directions}.
 
 \begin{table}[h!]
@@ -97,7 +104,10 @@ A consequence of Table \ref{tab:zeta_directions} is that the staple vector $v$ c
     \label{fig:v_allzetahat}
 \end{figure}
 
+Section~\ref{sec:offaxis_v} identifies the integer lattice sites that bound each off-axis target, and Section~\ref{sec:spatial_interpolation} averages over degenerate paths and interpolates to the target.
+
 \subsubsection{Off-Axis \texorpdfstring{$\vect{v}$}{TEXT} and Spatial Interpolation}
+\label{sec:offaxis_v}
 
 To evaluate the correlation function as a function of the staple extent, we scale the direction vector $\vect{v}$ by an increment $\eta$, and $\vect{v}$ is a unit vector. The physical length of the staple is thus governed by the coordinate $\eta \vect{v}/a$. Because $\vect{v}$ points in a continuous, off-axis direction, scaling it by integer values of $\eta$ generally yields target coordinates that fall somewhere between the discrete Cartesian lattice sites. 
 
@@ -254,7 +264,10 @@ To perform a robust numerical Fourier transform over $b \cdot P$, we must sample
     \label{fig:b_phase_space}
 \end{figure}
 
+Section~\ref{sec:b_gauge_links} lists the gauge link paths used to reach each $\vect{b}$, and Section~\ref{sec:b_path_averaging} averages over degenerate paths.
+
 \subsubsection{Gauge Link Construction for \texorpdfstring{$\vect{b}$}{TEXT}}
+\label{sec:b_gauge_links}
 Constructing the direct Wilson line connecting the quark fields at $0$ and $\vect{b}$ requires generating step-wise paths across the lattice. We categorize these paths into purely transverse separations ($b_1 = 0$) and off-axis separations with a longitudinal component ($b_1 \neq 0$).
 
 For strictly transverse separations, where $b \cdot P = 0$, the gauge links are constructed entirely within the transverse plane. Figure \ref{fig:b_table_transverse} lists the fundamental link sequences used to reach these target coordinates. An empty bracket $\{\}$ denotes the local origin, while arrays such as $\{2,2\}$ indicate a sequence of two consecutive links in the $\hat{x_{2}}$-direction.
@@ -287,6 +300,7 @@ To access finite $b \cdot P$, we construct off-axis paths with simultaneous step
 \end{figure}
 
 \subsubsection{Path Averaging for \texorpdfstring{$\vect{b}$}{TEXT}}
+\label{sec:b_path_averaging}
 
 The off-axis separation vector $\vect{b}$ has the same path degeneracy as the staple vector (Section~\ref{sec:spatial_interpolation}), and we treat it the same way: we average the correlation function over all equivalent step-wise paths that share the same origin and endpoint, as illustrated for a single coordinate in Figure \ref{fig:b_path_example}. Applying this path-averaging strategy across the entire target grid yields the full network of smoothed off-axis trajectories, visualized in Figure \ref{fig:b_full_network}. This path-averaged dataset provides the statistically robust, parity-separated amplitudes required for the final Fourier transform.
 
@@ -676,7 +690,10 @@ Before examining the lattice data across the different Collins-Soper scales ($\h
 
 However, an important distinction emerges when analyzing the statistical quality of the extracted signals. While the unpolarized amplitudes ($\tAmp_{2B}^{\text{Re}}$ and $\tAmp_{2B}^{\text{Im}}$) and the real Sivers amplitude ($\tAmp_{12B}^{\text{Re}}$) exhibit clear, statistically resolvable signals across the simulated Variable Space, the imaginary Sivers amplitude ($\tAmp_{12B}^{\text{Im}}$) does not. Across all evaluated nucleon momenta and staple extents, the extracted lattice data for $\tAmp_{12B}^{\text{Im}}$ remains completely dominated by gauge noise and is statistically compatible with zero. Because there is no distinguishable signal, it is impossible to meaningfully constrain or fit a phenomenological model to this component. Consequently, $\tAmp_{12B}^{\text{Im}}$ is discarded from further analysis: the $\sin(x(b\cdot P))\tAmp_{12B}^{\text{Im}}$ term in Eq.~\eqref{eq:sivers_shift_xdep} is dropped, and the $x$-dependent Sivers shift is evaluated relying exclusively on the robust $\tAmp_{12B}^{\text{Re}}$ data.
 
+Sections~\ref{sec:amp_profiles_P1}--\ref{sec:amp_profiles_P4} show the amplitudes at $P_L=-1,-2,-3,-4$.
+
 \subsubsection{Amplitude Profiles at \texorpdfstring{$\hat{\zeta}=0.090772$ ($P_L = -1$)}{TEXT}}
+\label{sec:amp_profiles_P1}
 \newcommand{\PLval}{-1}
 Figures \ref{fig:A2B_amplitudes_P1} through \ref{fig:combined_eta8_P1} show the extracted amplitudes at this momentum, first in the discrete $(b_L/a,b_T/a,\eta|\vect{v}|/a)$ lattice grid and then mapped into the Lorentz-invariant $(P\cdot b,b^2)$ variable space of Section \ref{sec:lorentz_mapping}.
 \begin{figure}[htbp]
@@ -719,6 +736,7 @@ Figures \ref{fig:A2B_amplitudes_P1} through \ref{fig:combined_eta8_P1} show the 
 
 \pagebreak
 \subsubsection{Amplitude Profiles at \texorpdfstring{$\hat{\zeta}=0.294367$ ($P_L = -2$)}{TEXT}}
+\label{sec:amp_profiles_P2}
 \renewcommand{\PLval}{-2}
 Figures \ref{fig:A2B_amplitudes_P2} through \ref{fig:combined_eta8_P2} show the corresponding amplitudes at this larger Collins-Soper value.
 \begin{figure}[htbp]
@@ -761,6 +779,7 @@ Figures \ref{fig:A2B_amplitudes_P2} through \ref{fig:combined_eta8_P2} show the 
 
 \pagebreak
 \subsubsection{Amplitude Profiles at \texorpdfstring{$\hat{\zeta}=0.539684$ ($P_L = -3$)}{TEXT}}
+\label{sec:amp_profiles_P3}
 \renewcommand{\PLval}{-3}
 Figures \ref{fig:A2B_amplitudes_P3} through \ref{fig:combined_eta8_P3} give the same amplitude decomposition at $P_L=-3$.
 \begin{figure}[htbp]
@@ -803,6 +822,7 @@ Figures \ref{fig:A2B_amplitudes_P3} through \ref{fig:combined_eta8_P3} give the 
 
 \pagebreak
 \subsubsection{Amplitude Profiles at \texorpdfstring{$\hat{\zeta}=0.785756$ ($P_L = -4$)}{TEXT}}
+\label{sec:amp_profiles_P4}
 \renewcommand{\PLval}{-4}
 Figures \ref{fig:A2B_amplitudes_P4} through \ref{fig:combined_eta8_P4} complete the set at our largest simulated momentum, $P_L=-4$.
 \begin{figure}[htbp]

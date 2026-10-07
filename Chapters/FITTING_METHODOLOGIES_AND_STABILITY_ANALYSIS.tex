@@ -5,7 +5,7 @@ The lattice data show different levels of statistical precision among the invari
 
 We parameterize the amplitudes natively in the Cartesian space $(b_L, b_T)$ rather than the Lorentz-invariant variable space $(P \cdot b, b^2)$. Fitting in $(b_L, b_T)$ provides a larger, more uniformly distributed set of discrete data points and resolves kinematic degeneracies. Because the squared separation distance $b^2 = b_L^2 + b_T^2$ is strictly non-negative, multiple distinct combinations of longitudinal and transverse separations (such as a large $b_L$ with a small $b_T$, or a small $b_L$ with a large $b_T$) map to the same invariant $b^2$. So, fitting in the $(P \cdot b, b^2)$ basis would compress these distinct orthogonal spatial dependencies into a single coordinate. Fitting over the $(b_L, b_T)$ grid allows the model to separate the longitudinal decay profile from the transverse decay profile. 
 
-The chapter follows the path to the final model. Section~\ref{sec:discretization_effects} removes ultraviolet lattice artifacts with the spatial cut $|\vect{b}| \ge 3a$. Section~\ref{sec:gaussian_transformation} shows that a simple Gaussian ansatz fails because it grows without bound in the longitudinal direction ($\alpha < \beta$). In Section~\ref{sec:pysr_methodology}, symbolic regression with an asymptotic-decay penalty finds the generalized Lorentzian power-law tail $(1+b^2)^{-j}$ and the exponential area-law factor $e^{-f\eta}$. Sections~\ref{sec:systematic_exploration} and~\ref{sec:candidate_selection} fix the $\eta$-dependence of the power-law model on individual staple extents $\eta \in [6, 10]$ and select $c(\eta) = c(1 - k_1/\eta - k_2/\eta^2)$ using AIC and the requirement of antiquark suppression at large negative $x$. In Section~\ref{sec:simultaneous_fit_strategy} we perform a correlated Jackknife $\chi^2$ minimization across all amplitudes, cancel the shared $e^{-f\eta}$ factor, and extract the $x$-dependent Sivers shift at each of our four simulated nucleon momenta. Finally, Section~\ref{sec:factorization_test} asks whether the amplitudes factorize into independent $(P\cdot b)$ and $b^2$ profiles, first with a ratio test on the data and then with explicit factorized fits, and finds that they require the coupled denominator $[1 + c(P\cdot b)^2/P_L^2 + d b^2]^j$.
+Section~\ref{sec:discretization_effects} removes the data with $|\vect{b}|<3a$, which contain discretization artifacts. Section~\ref{sec:gaussian_transformation} shows that a Gaussian model gives $\alpha<\beta$ for $\tAmp_{2B}^{\text{Re}}$, which makes the Fourier integral over $P\cdot b$ diverge. Section~\ref{sec:pysr_methodology} searches for a functional form by symbolic regression with an asymptotic penalty and finds a power-law tail $(1+b^2)^{-j}$ multiplied by $e^{-f\eta}$. Section~\ref{sec:systematic_exploration} compares Gaussian and power-law fits over $6\leq\eta\leq10$ and fits individual $\eta$ slices to determine the $\eta$-dependence of $c$ and $d$, and Section~\ref{sec:candidate_selection} selects the model for $c(\eta)$ and gives the models for the three amplitudes. Section~\ref{sec:simultaneous_fit_strategy} fits the three amplitudes simultaneously with the full Jackknife covariance matrix, cancels the shared $e^{-f\eta}$ factor, and evaluates the $x$-dependent Sivers shift at each of the four momenta. Section~\ref{sec:factorization_test} tests whether the amplitudes factorize into separate $(P\cdot b)$ and $b^2$ profiles, first with ratios of the lattice data and then with explicit factorized fits.
 
 \subsection{Discretization Effects and Short-Distance Data Exclusion}
 \label{sec:discretization_effects}
@@ -84,7 +84,10 @@ Selecting a multi-dimensional functional form by hand introduces human bias. To 
 
 Unlike traditional regression, which optimizes the parameters of a pre-determined function, symbolic regression searches the space of mathematical expressions and their parameters simultaneously. We use \texttt{PySR} \cite{Cranmer2023pysr}, a framework that uses Genetic Programming to discover interpretable equations from data by balancing accuracy and simplicity.
 
+Section~\ref{sec:pysr_config} describes the search configuration, Section~\ref{sec:pysr_loss} the custom loss function, and Section~\ref{sec:pysr_pareto} the resulting Pareto front.
+
 \subsubsection{Expression Search and Configuration}
+\label{sec:pysr_config}
 \texttt{PySR} \cite{Cranmer2023pysr, Koza1992GP, Schmidt2009Distilling} uses a genetic algorithm to evolve mathematical expressions represented as binary trees iteratively. The algorithm evaluates a population of expressions against the lattice data using a custom loss function over thousands of generations. 
 
 Table~\ref{tab:pysr_config} details the \texttt{PySR} search configuration, including the permitted mathematical operators, nesting constraints, and key hyperparameters. The operator library includes a custom Lorentzian-type binary operator, $\text{lor}(x, y) = 1/(1 + x^2 + y^2)^2$, alongside standard arithmetic and exponential functions. At the same time, nesting constraints prevent the algorithm from generating physically meaningless double-exponential or double-decay structures.
@@ -93,6 +96,7 @@ Table~\ref{tab:pysr_config} details the \texttt{PySR} search configuration, incl
 
 
 \subsubsection{The Physics-Informed Custom Loss Function}
+\label{sec:pysr_loss}
 
 Standard symbolic regression optimizes metrics like Mean Squared Error (MSE). However, a genetic algorithm might discover a polynomial or diverging exponential function that fits the finite $(b_L, b_T)$ lattice grid well, but diverges as $b_L \to \infty$. As shown in Section \ref{sec:gaussian_transformation}, this would cause the subsequent Fourier transform over $P \cdot b$ to diverge.
 
@@ -121,6 +125,7 @@ By evaluating fitness using $\mathcal{L}_{\text{custom}}$, \texttt{PySR} restric
 \input{PySR_outputs/pysr_custom_loss_code}
 
 \subsubsection{Pareto Front of Discovered Models}
+\label{sec:pysr_pareto}
 
 Symbolic regression outputs a Pareto front of candidate models: a ranked list of equations that trade off mathematical simplicity (measured by expression tree complexity $C$) and predictive accuracy (measured by the custom loss $\mathcal{L}_{\text{custom}}$). The Pareto front for the real unpolarized amplitude $\tAmp_{2B}^{\text{Re}}$ is presented in Table~\ref{tab:pysr_pareto_front}.
 
@@ -299,7 +304,10 @@ Substituting the analytical models from Eq. (\ref{eq:model_ReA2B})-(\ref{eq:mode
 \end{equation}
 To enforce this shared $\eta$-dependence across the amplitudes, we use a simultaneous global fit. Forcing the parameter $f$ to be identical across all three amplitude models ($\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$, and $\tAmp_{12B}^{\text{Re}}$) ensures theoretical consistency and stabilizes the parameter extraction.
 
+Section~\ref{sec:cov_fit} describes the correlated fit used at each momentum.
+
 \subsubsection{Simultaneous Fit with Full Covariance Matrix}
+\label{sec:cov_fit}
 
 Because we extract the amplitudes from the same gauge field configurations and evaluate them across nearby spatial coordinates $(b_L, b_T)$, their statistical fluctuations are highly correlated. A simple uncorrelated $\chi^2$ minimization improperly weights these data points, deflating uncertainties and biasing the central values.
 
@@ -527,9 +535,10 @@ Figs.~\ref{fig:A2B_amplitudes_fit_P4}, \ref{fig:combined_fit_P4}, \ref{fig:cov_m
 
 \subsection{Test for Factorization in $(P\cdot b)$ and $b^2$} \label{sec:factorization_test}
 
-The global fit couples $(P\cdot b)^2$ and $b^2$ inside a single denominator. Here we ask whether a simpler, factorized description would do.
+The global fit couples $(P\cdot b)^2$ and $b^2$ inside a single denominator. Here we ask whether a simpler, factorized description would do: Section~\ref{sec:ratio_test} uses ratios of the lattice data, and Section~\ref{sec:rejection_exponential_longitudinal} uses explicit factorized fits.
 
 \subsubsection{Ratio Test on the Lattice Data}
+\label{sec:ratio_test}
 
 We first check directly on the lattice data whether an amplitude can be written as a product of a longitudinal and a transverse profile, $\tAmp(P\cdot b,b^2) = F(P\cdot b)\,G(b^2)$. If it can, any ratio taken at a common $b^2$ between two values of $P\cdot b$ is a constant, and any ratio taken at a common $P\cdot b$ between two values of $b^2$ does not depend on $P\cdot b$. We form
 \begin{align}

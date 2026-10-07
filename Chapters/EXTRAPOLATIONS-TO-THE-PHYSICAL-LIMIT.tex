@@ -1,6 +1,8 @@
 \section{EXTRAPOLATIONS TO THE PHYSICAL LIMIT}
 \label{sec:physical_limit_extrapolation}
 
+Section~\ref{sec:zetahat_extrapolation_motivation} shows that the amplitudes, the TMD combinations and the Sivers shift change systematically with $1/\hat\zeta$ across the four simulated momenta. Section~\ref{sec:extrap_fit_param_level} extrapolates the fit parameters to $1/\hat\zeta\to0$ using $P_L=-2,-3,-4$, reconstructs the amplitudes and the Sivers shift in this limit, and lists the numerical Fourier-transform integrals over $x$ at $|b_T|=3a$. Section~\ref{sec:factorization_xbt} tests whether the extrapolated Sivers shift and amplitudes factorize in $x$ and $|b_T|$.
+
 \subsection{Motivation for the \texorpdfstring{$\hat{\zeta} \to \infty$}{TEXT} Extrapolation}
 \label{sec:zetahat_extrapolation_motivation}
 
@@ -107,6 +109,8 @@ with all of the $x$-shape carried by $F(x)$ and all of the $|b_T|$-shape by $G(|
 \end{equation}
 % TODO(Hari): this closed form (and nu_X, N_X) is not derived earlier in the thesis. Add the Fourier transform of the power-law model in the Fitting chapter (Simultaneous Fitting Strategy) or an appendix, and cite it here.
 so $|b_T|$ rescales the argument of the same Bessel function that carries the $x$-dependence, rather than multiplying it by an overall $x$-independent prefactor. The Sivers shift is a ratio of three such amplitudes ($\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$, $\tAmp_{12B}^{\text{Re}}$), each with its own independently fitted $(j_X,d_X)$; an exact factorization would require these parameters to coincide across the three amplitudes so that the $x$- and $|b_T|$-dependence separates cleanly. Whether the extrapolated fit lands close enough to that coincidence is a numerical question, which we answer quantitatively below.
+
+Section~\ref{sec:factorization_metric} defines the relative distance from a factorized form, and Sections~\ref{sec:factorization_sivers_test} and~\ref{sec:factorization_amplitude_test} apply it to the Sivers shift and to the individual amplitudes.
 
 \subsubsection{Quantifying the Distance from a Factorized Form}
 \label{sec:factorization_metric}
