@@ -2,7 +2,14 @@
 \label{sec:tmd_framework}
 
 \subsection{Definition of TMDs} 
-The theoretical foundation for accessing Transverse Momentum Dependent Parton Distribution Functions (TMDs) relies on analyzing a quark-quark correlation function. We define the general unsubtracted correlator as:
+Consider a frame of reference where the nucleon has large momentum in the $z$-direction, i.e., $P^+ \gg m_N$, $\vprp{P} = 0$.
+In light cone coordinates, the components $\kei^+$,~$\vprp{\kei}$,~$\kei^-$ of the quark momentum $\kei$ scale as $P^+/m_N$,~$1$,~$m_N/P^+$, respectively, under boosts along the $z$-axis. Thus, the quark longitudinal momentum fraction $x = k^+ / P^+$ and its transverse momentum $\vprp{\kei}$ are invariant under boosts along the $z$-axis, while the $k^-$ component is suppressed. 
+This leads to transverse momentum-dependent parton distribution functions (TMDs), which depend on the longitudinal momentum fraction $x \equiv \kei^+ / P^+$ and the quark transverse momentum $\vprp{\kei}$. 
+The transverse momentum components $\vprp{\kei}$ describe an intrinsic motion of the quarks inside the proton that occurs independent of the momentum of the proton itself. Moreover, TMDs are an important ingredient in our understanding of the origin of large angular and spin asymmetries found in experiments studying, e.g., semi-inclusive deep inelastic scattering (SIDIS) or the Drell-Yan process (DY).
+
+Let's construct a correlator of the general form with the gauge invariant bi-local operator $\bar q(0) \Gamma \WlineC{\mathcal{C}_\bvec} q(\bvec)$ acting on the nucleon state $\ket{P,S}$, where $\bar q$ and $q$ are the annihilation operators in terms of local quark field operators, and the Wilson line $\WlineC{\mathcal{C}_\bvec}$ fixes the gauge. The Fourier transform of such a position space correlator $\bra{P,S}\ \bar{q}(0)\, \Gamma\ \WlineC{\mathcal{C}_\bvec}\ q(\bvec)\ \ket{P,S}$ gives momentum space correlator $\Phi^{[\Gamma]}(\kei,P,S;\ldots)$ equivalently TMDs. The Wilson
+line introduces divergences that cannot be treated by conventional dimensional
+regularization \cite{BMush_Engelhardt2012}, so we divide it by soft factor, $\widetilde{\softf}(\bvec^2;\ldots)$, 
 \begin{align}
 	\Phi^{[\Gamma]}(\kei,P,S;\ldots)\ \equiv\ \ 
 	\int \frac{d^4 \bvec}{(2\pi)^4}\, e^{i \kei\cdot \bvec}\,
@@ -14,7 +21,9 @@ The theoretical foundation for accessing Transverse Momentum Dependent Parton Di
 \end{align}
 The numerator, $\widetilde \Phi_\unsub^{[\Gamma]}(\bvec,P,S;\ldots)$, captures the bare non-local matrix element where the quark fields are connected by a gauge link $\WlineC{\mathcal{C}_\bvec}$. The denominator introduces the soft factor, $\widetilde{\softf}(\bvec^2;\ldots)$, which is essential for regulating rapidity divergences. The ellipses (``$\ldots$'') denote additional dependence on parameters governing the Wilson line geometry and the soft factor, as well as an implicit dependence on the ultraviolet renormalization scale $\mu$.
 
-Depending on the specific factorization scheme employed, the soft factor $\widetilde{\softf}$ is constructed from vacuum expectation values of Wilson lines. Following the framework established by Collins and Aybat \cite{Aybat:2011zv,CollinsBook2011,Aybat:2011ge}, this takes the specific form:
+The soft factor, $\tilde \softf$, stands symbolically for an
+expression that can, depending on the formalism, involve several vacuum
+expectation values. Following the framework established by Collins and Aybat \cite{Aybat:2011zv,CollinsBook2011,Aybat:2011ge}, this takes the specific form:
 \begin{equation}
 \widetilde{\softf}(\bvec^2;\ldots) = 
   \sqrt{ \frac
@@ -22,37 +31,29 @@ Depending on the specific factorization scheme employed, the soft factor $\widet
     { \tilde S_{(0)}( \vprp{\bvec}, + \infty, y_s ) }
   } \ ,
 \end{equation}
-where $\tilde S_{(0)}( \vprp{\bvec}, \ldots )$ represents these vacuum expectation values. In this scheme, the Wilson lines are initially space-like, with some remaining tilted off the light cone (characterized by the rapidity $y_s$). The lines within $\WlineC{\mathcal{C}_\bvec}$ in the numerator of Eq.~\eqref{eq-corr} are formally taken to the light-cone limit ($\pm\infty$). While space-like Wilson line structures are directly computable on the Euclidean lattice, executing the strict light-cone limit numerically remains challenging. However, for the specific observables constructed in this work, the explicit functional form of $\widetilde{\softf}(\bvec^2;\ldots)$ does not need to be rigorously evaluated, as it cancels out in appropriately constructed ratios.
+here each of the objects $\tilde S_{(0)}( \vprp{\bvec}, \ldots )$ is a
+vacuum expectation value of Wilson line structures.
+In this framework, we start with space-like Wilson lines. Some Wilson lines remain tilted away from the light cone, leading to the dependence on the rapidity parameter $y_s$ in the above expression. For our treatment, $\tilde \softf$ does not need to be specified more explicitly, since it will cancel in the observables we consider. 
 
-Projecting the correlator onto the relevant kinematic space requires integrating over the suppressed momentum component $k^-$, which corresponds to evaluating the position-space separation at $b^+ = 0$:
+Projecting the correlator onto the relevant kinematics requires integrating over the suppressed momentum component $k^-$, which corresponds to evaluating the position-space separation at $b^+ = 0$:
 \begin{align}
 	\Phi^{[\Gamma]}(x,\vprp{k};P,S;\ldots) & \equiv \int dk^{-} \Phi^{[\Gamma]}(\kei,P,S;\ldots) \nonumber \\ 
+ &=\int dk^{-}\int \frac{d^4 \bvec}{(2\pi)^4}\, e^{i \kei\cdot \bvec} \frac{\frac{1}{2}\, \bra{P,S}\ \bar{q}(0)\, \Gamma\ \WlineC{\mathcal{C}_\bvec}\ q(\bvec)\ \ket{P,S}}{ \widetilde{\mathcal{S}}(-\vprp{\bvec}^2;\ldots) }\\
+ &=\int dk^{-}\int \frac{db^{+}}{2\pi}e^{ik^-b^+}\int \frac{d^2\textbf{b}_T}{(2\pi)^2}\int \frac{db^-}{2\pi}e^{ik^+b^--i\textbf{k}_T\tcdot\textbf{b}_T}\frac{\frac{1}{2}\, \bra{P,S}\ \bar{q}(0)\, \Gamma\ \WlineC{\mathcal{C}_\bvec}\ q(\bvec)\ \ket{P,S}}{ \widetilde{\mathcal{S}}(-\vprp{\bvec}^2;\ldots) }\\
+ &=\int {db^{+}}\delta(b^+)\int \frac{d^2\textbf{b}_T}{(2\pi)^2}\int \frac{db^-}{2\pi}e^{ik^+b^--i\textbf{k}_T\tcdot\textbf{b}_T}\frac{\frac{1}{2}\, \bra{P,S}\ \bar{q}(0)\, \Gamma\ \WlineC{\mathcal{C}_\bvec}\ q(\bvec)\ \ket{P,S}}{ \widetilde{\mathcal{S}}(-\vprp{\bvec}^2;\ldots) }\\
 	& =\int \frac{d^2 \vprp{\bvec}}{(2\pi)^2} \int \frac{d (\bvec \tcdot P)}{(2\pi) P^+}\ e^{i x (\bvec \tcdot P) - i\vprp{\bvec} \tcdot \vprp{\kei}}\,
 		\left. \frac{\frac{1}{2}\, \bra{P,S}\ \bar{q}(0)\, \Gamma\ \WlineC{\mathcal{C}_\bvec}\ q(\bvec)\ \ket{P,S}}
 		{ \widetilde{\mathcal{S}}(-\vprp{\bvec}^2;\ldots) } \right|_{b^+ = 0} \ .
 \end{align}
-In this regime, $x$ and $(\bvec \tcdot P)$ form a Fourier conjugate pair, as do $\vprp{k}$ and $\vprp{b}$. By selecting the Dirac matrix $\Gamma = \gamma^+$ to project onto the leading-twist unpolarized quark distribution, the correlator yields \cite{Ralston:1979ys,Tangerman:1994eh,Mulders:1995dh,Goeke:2005hb}:
+As a consequence, $x \leftrightarrow (\bvec \tcdot P)$ and $\vprp{k} \leftrightarrow \vprp{b}$ act as independent pairs of Fourier conjugate variables in the expression above.
+By selecting the Dirac matrix $\Gamma = \gamma^+$ to project onto the leading-twist unpolarized quark distribution, the correlator yields \cite{Ralston:1979ys,Tangerman:1994eh,Mulders:1995dh,Goeke:2005hb}:
 \begin{align}
 	\Phi^{[\gamma^+]}(x,\vprp{k};P,S,\ldots) & = f_1 - \toddmark{\frac{\myeps_{ij}\, \vect{k}_{i}\, \vect{S}_{j}}{m_N}\ f_{1T}^\prp} \label{eq-phigammaplus}\ . 
 \end{align}
-The term enclosed in $[\ ]_\text{odd}$ isolates the naively time-reversal odd (T-odd) Sivers function $f_{1T}^\perp$ \cite{Sivers:1989cc}, representing the distribution of unpolarized quarks inside a transversely polarized nucleon. The emergence and survival of this T-odd structure depends on the extended gauge link geometry and symmetry transformations discussed in the subsequent sections.
-
-\subsection{General strategy}
-Transitioning this continuous framework onto a discrete Euclidean spacetime lattice introduces significant theoretical constraints. Evaluating standard collinear PDFs uses a straightforward, light-like Wilson line:
-\begin{equation*}
-  f_1(x) \equiv \frac{1}{2 (2\pi)} \int db^- e^{i x P^+ b^-} \, \bra{P,S}\ \bar{q}(0)\, \gamma^+\ \Wline{0,n b^-}\ q(n b^-)\ \ket{P,S} \ .
-\end{equation*}
-Because this interval is strictly Minkowskian, it cannot be rotated into Euclidean space, requiring an Operator Product Expansion (OPE) approach to reduce the non-local separation into local matrix elements \cite{Collins:1981uw}. 
-
-Extracting the $x$-dependence of the Sivers TMD, however, deviates from this collinear constraint and presents unique lattice opportunities:
-\begin{enumerate}
-  \item \textbf{Space-like Transverse Separation:} The operator separation acquires a transverse component, $\bvec = n \bvec^- + \bvec_\perp$. This ensures the interval is generally space-like, permitting a direct representation of the non-local operator in Euclidean spacetime.
-  \item \textbf{Extended Gauge Link Geometries:} The Wilson line $\WlineC{\mathcal{C}_\bvec}$ is process-dependent and typically extends to infinity to model initial or final state interactions. This complex topology prevents a simple expansion into local operators. 
-  \item \textbf{Soft Factor Regularization:} Standard $\overline{\mathrm{MS}}$ dimensional regularization fails to capture the rapidity divergences associated with these extended links, forcing the inclusion of the soft factor $\tilde \softf$ and mandating evolution across additional regularization scales.
-\end{enumerate}
+The term enclosed in $[\ ]_\text{odd}$ isolates the naively time-reversal odd (T-odd) Sivers function $f_{1T}^\perp$ \cite{Sivers:1989cc}, representing the distribution of unpolarized quarks inside a transversely polarized nucleon. The origin of the above parametrization and the special role of T-odd TMDs will become clear after we have discussed the geometry of the gauge link path $\mathcal{C}_\bvec $ and symmetry transformation properties.
 
 \subsection{TMDs in Fourier space}
-Because our lattice methodology natively extracts the $b$-dependent matrix elements $\widetilde \Phi_\unsub^{[\Gamma]}(\bvec,P,S;\ldots)$, evaluating the Sivers observable directly in Fourier space ($\vprp{b}$-space) is phenomenologically preferred. For a generic TMD $f$, we define the Fourier transform and its derivatives:
+The lattice method we use allows us to evaluate the $b$-dependent matrix elements $\widetilde \Phi_\unsub^{[\Gamma]}(\bvec,P,S;\ldots)$ introduced in Eq. \eqref{eq-corr}. As a result, it is more direct and natural to state our results in terms of Fourier-transformed, $\vprp{b}$-dependent TMDs and their $\vprp{b}$-derivatives. For a generic TMD $f$, we define the Fourier transform and its derivatives:
 \begin{align}
 	\tilde f(x, \vprp{\bvec}^2;\ldots) & \equiv \int  d^2 \vprp{\kei} \, e^{i \vprp{\bvec} \cdot \vprp{\kei} }\; f(x, \vprp{\kei}^2;\ldots)
 		= 2\pi \int      d|\vprp{\kei}| |\vprp{\kei}|\ J_0(|\vprp{\bvec}||\vprp{\kei}|)\  f(x, {\vprp{\kei}^2};\ldots )\ , \label{eq-FTMD} \\
@@ -60,7 +61,7 @@ Because our lattice methodology natively extracts the $b$-dependent matrix eleme
 	\tilde f(x, \vprp{\bvec}^2;\ldots ) 
 		= \frac{ 2\pi \ n!}{(\mN^2)^n} \int  d |\vprp{\kei}| |\vprp{\kei}|\left( \frac{|\vprp{\kei}|}{|\vprp{\bvec}|}\right)^n J_n(|\vprp{\bvec}||\vprp{\kei}|)\  f(x, {\vprp{\kei}^2};\ldots )\ , \label{eq-dFTMD}
 \end{align}
-where $J_n$ are the Bessel functions of the first kind. As shown in Ref.~\cite{Boer:2011xd}, these Bessel-weighted quantities provide a means of structuring evolution equations.
+where $J_n$ are the Bessel functions of the first kind, as shown in Ref.~\cite{Boer-Bessel-Weighted-Asymmetries}; these Bessel-weighted quantities provide a means of structuring evolution equations.
 
 Taking the strict $|\vprp{\bvec}| \rightarrow 0$ limit theoretically recovers the conventional $\vprp{\kei}$-moments:
 \begin{align}
@@ -70,62 +71,76 @@ Taking the strict $|\vprp{\bvec}| \rightarrow 0$ limit theoretically recovers th
 However, the first transverse moment of the Sivers function, $f_{1T}^{\perp(1)}(x)$, is notoriously divergent without additional regularization, as the perturbatively calculable high-$\vprp{\kei}$ tails do not decay fast enough \cite{Bacchetta:2008xw}. To circumvent this divergence, we avoid the $\vprp{\bvec}=0$ extrapolation entirely. By retaining finite $|\vprp{\bvec}|$, the integrals remain convergent. The corresponding $x$-dependence of the Sivers TMD is then accessed by mapping the conjugate variable $\bvec \tcdot P$ \cite{Hagler:2009mb,Musch:2010ka}.
 
 \subsection{Link geometry}
-To accommodate the symmetries required to isolate the Sivers effect, we employ a staple-shaped gauge link:
+The geometry of the gauge link path $\mathcal{C}_\bvec$ affects both the number of allowed TMD structures and the numerical result. 
+
+The simplest link geometry is a straight line connecting the quark fields at $0$ and $\bvec$. Refs. \cite{Hagler:2009mb, Musch:2010ka} have studied TMDs with straight gauge links on the lattice. \cite{Hagler:2009mb,Musch:2010ka}. While these ``process-independent'' TMDs are interesting from a theoretical point of view in their own right, it is so far not known how to relate these quantitatively to the TMDs that play a role in scattering experiments. The operator with straight gauge links offers the greatest possible symmetry. As a result, T-odd TMDs vanish for straight gauge links.
+
+To accommodate the symmetries required to isolate the Sivers effect and its $x$ dependence, we employ a staple-shaped gauge link; see Fig. \ref{fig:staple}:
 \begin{align}
 	\WlineC{\mathcal{C}_\bvec^{(\eta v)}} = \Wline{0, \eta v, \eta v + b, b}\ .
 	\label{eq-staplelink}
 \end{align}
-The vector $v$ governs the direction of the staple, and $\eta$ controls its extent. By ensuring $v$ is space-like ($\vprp{v}=0$), we maintain the ability to simulate this operator on a Euclidean lattice \cite{Ji:2004wu,Aybat:2011zv,CollinsBook2011}. Focusing on the lowest $x$-moment ($b^- = b^+ = 0$), the link at $\eta v$ acts as a purely transverse connector.
 
-The approach toward the physical light-like limit ($v = \nminus$) is parameterized by the Lorentz-invariant Collins-Soper parameter, $\zeta \equiv 2 v \tcdot P/\sqrt{|v^2|}$. As $v$ becomes light-like, $\zeta \rightarrow \infty$, acting as an artificial scale regulating the rapidity divergences \cite{Collins:1981uk, Idilbi:2004vb, Aybat:2011ge}. Expressing the vectors $P$ and $v$ via rapidities ($y_P$ and $y_v$), we define the dimensionless variable:
+\usetikzlibrary{calc}
+\begin{figure}[htbp]
+  \centering
+  \begin{tikzpicture}[
+    link/.style={double, double distance=1.3pt, line width=0.45pt},
+    >=latex]
+  % --- parameters ---
+  \def\ang{35}      % staple direction (unlabeled)
+  \def\L{4.2}       % leg length |eta v|
+  \def\bx{0.30}     % b offset (set \bx=0 for a vertical connector)
+  \def\by{0.75}
+  % --- points ---
+  \coordinate (O)   at (0,0);
+  \coordinate (B)   at (\bx,\by);
+  \coordinate (V)   at (\ang:\L);
+  \coordinate (VB)  at ($(V)+(B)$);
+  % --- axes ---
+  \def\ax{5.0}      % both axes have length \ax
+  \draw[->] (-0.4,0) -- (\ax,0) node[right] {$x^+$};
+  \draw[->] (0,-0.4) -- (0,\ax) node[above] {$x^\perp$};
+  % force a square picture
+  \path[use as bounding box] (-0.7,-0.7) rectangle (\ax+0.7,\ax+0.7);
+  % --- staple: solid / dashed gap / solid on each leg ---
+  \foreach \s in {O,B}{
+    \draw[link] (\s) -- ($(\s)+(\ang:0.52*\L)$);
+    \draw[link, dash pattern=on 6pt off 4pt]
+      ($(\s)+(\ang:0.55*\L)$) -- ($(\s)+(\ang:0.72*\L)$);
+  }
+  \draw[link] ($(O)+(\ang:0.75*\L)$) -- (V) -- (VB) -- ($(B)+(\ang:0.75*\L)$);
+  % --- endpoints and labels ---
+  \fill (O) circle (2.2pt) node[below right=1pt] {$0$};
+  \fill (B) circle (2.2pt) node[above=2pt] {$b$};
+  \node[below right] at (V)  {$\eta v$};
+  \node[above left]  at (VB) {$\eta v{+}b$};
+  % --- eta -> infinity ---
+  \draw[dashed,->,thick] ($(V)!0.5!(VB)+(0.2,0)$) -- ++(\ang:1.2)
+    node[midway, sloped, below] {$\eta\to\infty$};
+  \end{tikzpicture}
+  \caption{Staple-shaped gauge link $\Wline{0, \eta v, \eta v + b, b}$. The staple is along the direction $v$, in general, $v=(0,v_1,v_2,v_3)$, and the
+           limit $\eta\to\infty$ extends the staple.}
+  \label{fig:staple}
+\end{figure}
+Here, $v$ is purely spatial $v=(0,v_1,v_2,v_3)$ and also $b$ is purely spatial $b=(0,b_1,b_2,b_3)$. The vector $v$ governs the direction of the staple, and $\eta$ controls its extent. This off-axis staple is required because, to get the $x$ dependence, we need a wide scan of $P\cdot b$ space, equivalently $b$ space. We will discuss this constraint in detail in subsequent sections. 
+
+The approach toward the physical light-like limit ($v = \nminus$) is parameterized by the Lorentz-invariant Collins-Soper parameter, $\zeta \equiv 2 v \tcdot P/\sqrt{|v^2|}$. As $v$ becomes light-like, $\zeta \rightarrow \infty$, acting as an artificial scale regulating the rapidity divergences \cite{Collins:1981uk, Idilbi:2004vb, Aybat:2011ge}. Expressing the vectors $P$ and $v$ via rapidities $y_P$ and $y_v$ (we use $P^{\pm} = \mN e^{\pm y_P} / \sqrt{2}$ and $v^+/v^- = - e^{2y_v}$), we define the dimensionless variable:
 \begin{equation}
-	\hat \zeta \equiv \zeta / 2 \mN =  \frac{v \cdot P}{\sqrt{|v^2|} \sqrt{P^2}} = \sinh(y_P - y_v)\ ,
+	\hat \zeta \equiv \zeta / 2 \mN =  \frac{v \cdot P}{\sqrt{|v^2|} \sqrt{P^2}}=  \frac{v^+P^-+v^-P^+}{\sqrt{|v^2|} \mN} = \sinh(y_P - y_v)\ ,
 	\label{eq-zeta}
 \end{equation}
-showing that $\hat \zeta$ measures the rapidity difference between the nucleon momentum and the Wilson line direction. This permits boosting the system to a frame where $v$ is purely spatial ($v^0 = 0, y_v=0$).
+showing that $\hat \zeta$ measures the rapidity difference between the nucleon momentum and the Wilson line direction. This allows boosting to a frame where $v$ is purely spatial ($v^0 = 0, y_v = 0$).
 
-\subsection{Symmetry Constraints}
-The correlation function is constrained by discrete symmetries. Consider the unsubtracted correlator \cite{Boer:2011xd}:
-\begin{align}
-  \Phi^{[\GammaOp]}_{\text{unsub}} (\kei,P,S;v,\mu) & = \int \frac{d^4 \elll}{(2\pi)^4} \ 
-  e^{i\kei \cdot \elll} 
-  \underbrace{ \frac{1}{2} \bra{\nucl{P,S}}\ \bar \quark(0)\ \overbrace{ \mathcal{U}[0,\infty v]\ \mathcal{U}[\infty v,\elll] }^{\displaystyle \U} \GammaOp\ \quark(\elll)\ \ket{\nucl{P,S}} }_{\displaystyle \widetilde \Phi^{[\GammaOp]}_{\text{unsub}}(\elll,P,S;v,\mu) }\ .
-  \label{eq-corrunmod}
-\end{align}
-Decomposing this into real-valued Lorentz-invariant amplitudes for the unpolarized quark fields ($\Gamma = \gamma^\mu$) yields:
-\begin{align}
-\frac{1}{2} \Phi^{[\gamma^\mu]}_{\text{unsub}} & = P^\mu\, \Amp_2 +\kei^\mu\, \Amp_3 + \frac{1}{\mN} \epsilon^{\mu \nu \alpha \beta} P_\nu \kei_\alpha S_\beta\, \Amp_{12} + \frac{\mN^2}{(v \tcdot P)} v^\mu\, \Bmp_1 \nonumber\\
-& + \frac{\mN}{v \tcdot P} \epsilon^{\mu \nu \alpha \beta} P_\nu v_\alpha S_\beta\, \Bmp_7 + \frac{ \mN}{v \tcdot P} \epsilon^{\mu \nu \alpha \beta} \kei_\nu v_\alpha S_\beta\, \Bmp_8 \nonumber\\ 
-& + \frac{1}{\mN (v \tcdot P)} (\kei \tcdot S) \epsilon^{\mu \nu \alpha \beta} P_\nu \kei_\alpha v_\beta\, \Bmp_9  + \frac{\mN}{(v \tcdot P)^2} (v \tcdot S) \epsilon^{\mu \nu \alpha \beta} P_\nu \kei_\alpha v_\beta \Bmp_{10}\ . 
-\label{eq-phidecomp}
-\end{align}
-Enforcing Lorentz ($L$), Parity ($P$), Time-reversal ($T$), and Hermitian conjugation ($\dagger$) transformations imposes the following constraints:
-\begin{align}
-	&(L): &\Phi^{[\Gamma]}_{\text{unsub}}(k,P,S;v,\mu)  
-	&= \Phi^{[\Lambda_{1/2}^{-1}\Gamma\Lambda_{1/2}^{\phantom{-1}}]}_{\text{unsub}}(\Lambda k,\Lambda P, \Lambda S;\Lambda v,\mu) \ ,\label{eq-lortrans} \displaybreak[0] \\
-	&(P): &\Phi^{[\Gamma]}_{\text{unsub}}(k,P,S;v,\mu)  
-	&= \Phi^{[\gamma^0\Gamma\gamma^0]}_{\text{unsub}}(\overline{k},\overline{P},-\overline{S};\overline{v},\mu) \ ,\label{eq-conpar} \displaybreak[0] \\
-	&(T): &\left[ \Phi^{[\Gamma]}_{\text{unsub}}(k,P,S;v,\mu) \right]^* &= \Phi^{[\gamma^1 \gamma^3 \Gamma^* \gamma^3 \gamma^1]}_{\text{unsub}}(\overline{k},\overline{P},\overline{S};-\overline{v},\mu) \ , \label{eq-contime} \displaybreak[0] \\
-	&(\dagger): &\left[  \Phi^{[\Gamma]}_{\text{unsub}}(k,P,S;v,\mu) \right]^* &= \Phi^{[\gamma^0 \Gamma^\dagger \gamma^0]}_{\text{unsub}}(k,P,S;v,\mu) \ . \label{eq-conherm}
-\end{align}
-While hermiticity forces $\Amp_i$ and $\Bmp_i$ to be real, time reversal flips the sign of $v \tcdot P$, directly bridging the amplitudes governing Semi-Inclusive Deep Inelastic Scattering (SIDIS) and the Drell-Yan (DY) process, which causes the Sivers sign change.
 
-Mapping these systematic restrictions to coordinate space under hermitian conjugation specifically, the position-space correlator transforms as:
-\begin{align}
-	&(\dagger): &\left[ \widetilde{\Phi}^{[\GammaOp]}_{\text{unsub}}(\elll,P,S;v)  \right]^* &= \widetilde{\Phi}^{[\gamma^0 \GammaOp^\dagger \gamma^0]}_{\text{unsub}}(-\elll,P,S;v)  \ .\label{eq-conhermtilde}
-\end{align}
-Substituting $\kei \rightarrow -i \mN^2 \elll$, the coordinate parameterization of $\widetilde{\Phi}$ is explicitly constructed. The amplitudes $\tAmp_i$ and $\tBmp_i$ in this space are complex, where their real and imaginary parts strictly map to $b$-even and $b$-odd functions, respectively:
-\begin{align}
-	\left[ \tAmp_i(\elll^2,\elll \tcdot P, v \tcdot \elll / (v \tcdot P), \zeta^{-2},\mu^2) \right]^* = \tAmp_i(\elll^2,-\elll \tcdot P, -v \tcdot \elll / (v \tcdot P), \zeta^{-2},\mu^2)\, .\label{conditi_hermitian}
-\end{align}
-\begin{align}
-    \tilde{A}^{\text{Re}}_i&=\tilde{A}^{\text{(b-even)}}_i, \quad  \tilde{A}^{\text{Im}}_i=\tilde{A}^{\text{(b-odd})}_i \\
-    \tilde{B}^{\text{Re}}_i&=\tilde{B}^{\text{(b-even)}}_i, \quad  \tilde{B}^{\text{Im}}_i=\tilde{B}^{\text{(b-odd})}_i
-\end{align}
-
-\subsection{Parametrization of the correlator}
+\subsection{Correlator Parametrization}
 \label{sec-parametr}
-Extracting the $x$-dependence of the Sivers TMD from Euclidean data requires a rigorous mapping between the discretized observables and the manifestly Lorentz-invariant amplitudes. Building on the infinite-link parameterization of Goeke et al. \cite{Goeke:2005hb}, and identifying $k \rightarrow - i \mN^2 \bvec$ \cite{Boer:2011xd}, the unpolarized $b$-dependent correlator yields:
+The parametrization of the correlator $\tilde \Phi_\unsub$ in terms of manifestly Lorentz-invariant amplitudes is essential to translate Euclidean space lattice calculations into TMDs defined and interpreted in the context of light cone coordinates. A parametrization of the correlator 
+$\Phi_\unsub(\kei,P,S;\infty v,\mu)$
+for link paths that extend to infinity in a direction $v$
+has been worked out in Ref. \cite{Goeke:2005hb} and involves 32 independent amplitudes $A_i$ and $B_i$ that depend on the Lorentz-invariant quantities 
+$\kei^2$, $\kei \cdot P$, $\kei \tcdot v/v \tcdot P$ and $\hat \zeta$.
+Extracting the $x$-dependence of the Sivers TMD from Euclidean data requires a rigorous mapping between the discretized observables and the manifestly Lorentz-invariant amplitudes. Building on the infinite-link parameterization of Goeke et al. \cite{Goeke:2005hb}, and identifying $k \rightarrow - i \mN^2 \bvec$ \cite{Boer-Bessel-Weighted-Asymmetries} (is detailed in Section. \ref{Symmetry Constraints}), the unpolarized $b$-dependent correlator yields:
 \begin{align}
 	\frac{1}{2}\widetilde \Phi^{[\gamma^\mu]}_{\unsub} & = 
 		P^\mu\, \tAmp_2 - i \mN^2 \bvec^\mu\, \tAmp_3
@@ -146,7 +161,7 @@ To conduct calculations at finite staple extents on the lattice, we redefine the
 	 \tBmp_i\left(\bvec^2,\bvec \tcdot P,\frac{v \tcdot \bvec}{v \tcdot P}, \frac{v^2}{(v \tcdot P)^2}, \eta v \tcdot P\right) & = (\eta v \tcdot P)^n\ \tilde b_i(\bvec^2,\bvec \tcdot P, \eta v \tcdot b, (\eta v)^2, \eta v \tcdot P)   \, .
 	\label{eq-ab}
 \end{align}
-In our frame choice ($b^+=0$, $\vprp{v}=\vprp{P}=0$), kinematic constraints enforce a rigid relationship between the invariants \cite{MuschThesis2,Accardi:2009au}:
+In our frame choice ($b^+=0$, $\vprp{v}=\vprp{P}=0$), kinematic constraints enforce a rigid relationship between the invariants \cite{MuschThesis2, Accardi:2009au}:
 \begin{align}
 	\frac{v \tcdot b}{v \tcdot P} = b \tcdot P \frac{R(\zetahat^2)}{\mN^2}\, , \quad \text{where} \quad R(\zetahat^2) \equiv 1- \sqrt{1 + \hat \zeta^{-2}} = \frac{\mN^2}{v \tcdot P} \frac{v^+}{P^+} \, .
 	\label{eq-lindeprel}
@@ -176,3 +191,89 @@ Applying this to the combined amplitudes reconstructs the target leading-twist d
 	 \label{eq-tmdsfromampsodd}
 \end{align} 
 Through this framework, the symmetry constraint $f_1(\eta v \tcdot P) = f_1(-\eta v \tcdot P)$ guarantees process independence for the unpolarized distribution, whereas the Sivers function $f_{1T}^\perp$ strictly depends on the direction of the staple link, structurally enforcing the critical sign reversal between SIDIS and DY processes, and laying the groundwork for extracting its $x$-dependence.
+
+
+\subsection{Symmetry Constraints}
+\label{Symmetry Constraints}
+Discrete symmetries constrain the correlation function. Consider the unsubtracted correlator \cite{Boer-Bessel-Weighted-Asymmetries}:
+\begin{align}
+  \Phi^{[\GammaOp]}_{\text{unsub}} (\kei,P,S;v,\mu) & = \int \frac{d^4 \elll}{(2\pi)^4} \ 
+  e^{i\kei \cdot \elll} 
+  \underbrace{ \frac{1}{2} \bra{\nucl{P,S}}\ \bar \quark(0)\ \overbrace{ \mathcal{U}[0,\infty v]\ \mathcal{U}[\infty v,\elll] }^{\displaystyle \U} \GammaOp\ \quark(\elll)\ \ket{\nucl{P,S}} }_{\displaystyle \widetilde \Phi^{[\GammaOp]}_{\text{unsub}}(\elll,P,S;v,\mu) }\ .
+  \label{eq-corrunmod}
+\end{align}
+Decomposing this into real-valued Lorentz-invariant amplitudes for the unpolarized quark fields ($\Gamma = \gamma^\mu$) yields:
+\begin{align}
+\frac{1}{2} \Phi^{[\gamma^\mu]}_{\text{unsub}} & = P^\mu\, \Amp_2 +\kei^\mu\, \Amp_3 + \frac{1}{\mN} \epsilon^{\mu \nu \alpha \beta} P_\nu \kei_\alpha S_\beta\, \Amp_{12} + \frac{\mN^2}{(v \tcdot P)} v^\mu\, \Bmp_1 \nonumber\\
+& + \frac{\mN}{v \tcdot P} \epsilon^{\mu \nu \alpha \beta} P_\nu v_\alpha S_\beta\, \Bmp_7 + \frac{ \mN}{v \tcdot P} \epsilon^{\mu \nu \alpha \beta} \kei_\nu v_\alpha S_\beta\, \Bmp_8 \nonumber\\ 
+& + \frac{1}{\mN (v \tcdot P)} (\kei \tcdot S) \epsilon^{\mu \nu \alpha \beta} P_\nu \kei_\alpha v_\beta\, \Bmp_9  + \frac{\mN}{(v \tcdot P)^2} (v \tcdot S) \epsilon^{\mu \nu \alpha \beta} P_\nu \kei_\alpha v_\beta \Bmp_{10}\ . 
+\label{eq-phidecomp}
+\end{align}
+Enforcing Lorentz ($L$), Parity ($P$), Time-reversal ($T$), and Hermitian conjugation ($\dagger$) transformations imposes the following constraints \cite{BMush_Engelhardt2012, Boer-Bessel-Weighted-Asymmetries}:
+\begin{align}
+	&(L): &\Phi^{[\Gamma]}_{\text{unsub}}(k,P,S;v,\mu)  
+	&= \Phi^{[\Lambda_{1/2}^{-1}\Gamma\Lambda_{1/2}^{\phantom{-1}}]}_{\text{unsub}}(\Lambda k,\Lambda P, \Lambda S;\Lambda v,\mu) \ ,\label{eq-lortrans} \displaybreak[0] \\
+	&(P): &\Phi^{[\Gamma]}_{\text{unsub}}(k,P,S;v,\mu)  
+	&= \Phi^{[\gamma^0\Gamma\gamma^0]}_{\text{unsub}}(\overline{k},\overline{P},-\overline{S};\overline{v},\mu) \ ,\label{eq-conpar} \displaybreak[0] \\
+	&(T): &\left[ \Phi^{[\Gamma]}_{\text{unsub}}(k,P,S;v,\mu) \right]^* &= \Phi^{[\gamma^1 \gamma^3 \Gamma^* \gamma^3 \gamma^1]}_{\text{unsub}}(\overline{k},\overline{P},\overline{S};-\overline{v},\mu) \ , \label{eq-contime} \displaybreak[0] \\
+	&(\dagger): &\left[  \Phi^{[\Gamma]}_{\text{unsub}}(k,P,S;v,\mu) \right]^* &= \Phi^{[\gamma^0 \Gamma^\dagger \gamma^0]}_{\text{unsub}}(k,P,S;v,\mu) \ . \label{eq-conherm}
+\end{align}
+where we denote the sign change of spatial components of a given vector $c$; that is,  $\overline{c} \equiv (c^0, -c^1, -c^2, -c^3)$. From hermiticity $(\dagger)$ follows that the $\Amp_i$ and $\Bmp_i$ in Eq.\ \eqref{eq-phidecomp} are real valued. Time reversal $(T)$ does not constrain the number of allowed structures, because it changes the sign of $v\tcdot P$. Instead, time reversal $(T)$ establishes relations between SIDIS amplitudes $A_i^{(+)}$, $B_i^{(+)}$ and Drell-Yan amplitudes $A_i^{(-)}$, $B_i^{(-)}$.
+	
+For any of the transformations $\mathcal{T} \in \{ L, P, T, \dagger \}$, the Eqs.\ \eqref{eq-lortrans}-\eqref{eq-conherm} are of the general form 
+\begin{equation}
+	\mathcal{T}_\Phi\left(\Phi(\kei,w)\right) = \Phi\left(\mathcal{T}_\kei(\kei),\mathcal{T}_w(w)\right)
+\end{equation}
+where we have omitted the subscript ``unsub'' and the renormalization scale $\mu$, and where the symbol $w$ summarizes all dependences on $\GammaOp$, $P$, $S$ and $v$. Here $\mathcal{T}_\Phi$ is either the identity function or complex conjugation. The transformation rule $\mathcal{T}_\kei(\kei)$ maps onto $\Lambda \kei$, $\kei$ or $\overline{\kei}$ and thus fulfills $a \tcdot b = \mathcal{T}_\kei(a) \tcdot \mathcal{T}_\kei(b)$ for any two vectors $a$ and $b$. The Fourier-transformed correlator 
+\begin{equation}
+	\widetilde{\Phi}(\elll,w) =  \int d^4 \kei \ e^{-i \kei \tcdot \elll} \Phi(\kei, w)
+\end{equation}
+transforms according to
+\begin{align}
+	\mathcal{T}_\Phi\left(\widetilde{\Phi}(\elll,w) \right) & =  \int d^4 \kei \ e^{\mathcal{T}_\Phi(-i)\, \kei \tcdot \elll}\ \mathcal{T}_\Phi \left( \Phi(\kei, w) \right) \nonumber \\
+	& =  \int d^4 q \ e^{\mathcal{T}_\Phi(-i)\, \mathcal{T}^{-1}_\kei(q) \tcdot \elll} \ \Phi\left(q, \mathcal{T}_w( w) \right)..........\text{(change of Variables: $\kei\rightarrow q=\mathcal{T}_\kei(\kei)$ or $\kei=\mathcal{T}^{-1}_\kei(q)$)}  \nonumber \\
+	& =  \int d^4 q \ e^{\mathcal{T}_\Phi(-i)\, q \tcdot \mathcal{T}_\kei(\elll)} \ \Phi\left(q, \mathcal{T}_w( w) \right)..........(\because q \tcdot b = \mathcal{T}_\kei(q) \tcdot \mathcal{T}_\kei(b)) \nonumber \\
+    & =  \int d^4 q \ e^{-iq\left(\frac{\mathcal{T}_\Phi(i)}{i}\,  \tcdot \mathcal{T}_\kei(\elll)\right)} \ \Phi\left(q, \mathcal{T}_w( w) \right)\nonumber \\
+	& = \widetilde{\Phi}\left( \frac{\mathcal{T}_\Phi(i)}{i} \mathcal{T}_\kei(\elll), \mathcal{T}_w(w) \right)\, .
+	\label{eq-phitildetrafo}
+\end{align}
+
+Mapping these systematic restrictions to coordinate space under Hermitian conjugation, specifically, the position-space correlator transforms as:
+\begin{align}
+	&(\dagger): &\left[ \widetilde{\Phi}^{[\GammaOp]}_{\text{unsub}}(\elll,P,S;v)  \right]^* &= \widetilde{\Phi}^{[\gamma^0 \GammaOp^\dagger \gamma^0]}_{\text{unsub}}(-\elll,P,S;v)  \ .\label{eq-conhermtilde}
+\end{align}
+Let $f(\kei,w)$ be any of the structures preceding the invariant amplitudes in the parameterization of $\Phi$.
+The structure $f(\kei,w)$ is a homogeneous function of some degree $n$ in $\kei$, i.e., $f(\alpha \kei,w) = \alpha^n f(\kei,w)$ for any number $\alpha$. 
+For example, the structure $f(\kei,w) = \frac{1}{\mN (v \tcdot P)} (\kei \tcdot S) \epsilon^{\mu \nu \alpha \beta} P_\nu \kei_\alpha v_\beta$ preceding $\Bmp_9$ in Eq.\ \eqref{eq-phidecomp} has degree $n=2$.
+If we define $\tilde f(\elll,w) \equiv f(- i \mN^2 \elll,w)$, then 
+\begin{align}
+	\mathcal{T}_\Phi\left( \tilde f(\elll, w) \right) =
+	\mathcal{T}_\Phi(-i \mN^2)^n\, \mathcal{T}_\Phi\left( f( \elll, w) \right) =
+	f\left( \mathcal{T}_\Phi(-i \mN^2) \mathcal{T}_\kei(\elll) , \mathcal{T}_w(w) \right) =
+	\tilde f \left(  \frac{\mathcal{T}_\Phi(i)}{i} \elll, w \right)\, .
+	\end{align}
+This shows that $\tilde f$ transforms like $\widetilde \Phi$ in Eq.\ \eqref{eq-phitildetrafo}.
+We conclude that the parameterization of $\widetilde{\Phi}$ can be found by the substitution $\kei \rightarrow -i \mN^2 \elll$ in the structures parameterizing $\Phi$, and we arrive at 
+\begin{align}  \frac{1}{2}\widetilde \Phi^{[\gamma^\mu]}_{\text{unsub}}  = & P^\mu\, \tAmp_2 - i \mN^2 \elll^\mu\, \tAmp_3 - i \mN \epsilon^{\mu \nu \alpha \beta} P_\nu \elll_\alpha S_\beta\, \tAmp_{12} + \frac{\mN^2}{(v \tcdot P)} v^\mu\, \tBmp_1\nonumber\\
+& + \frac{\mN}{v \tcdot P} \epsilon^{\mu \nu \alpha \beta} P_\nu v_\alpha S_\beta\, \tBmp_7  - \frac{ i \mN^3}{v \tcdot P} \epsilon^{\mu \nu \alpha \beta} \elll_\nu v_\alpha S_\beta\, \tBmp_8 \nonumber\\
+& - \frac{\mN^3}{v \tcdot P} (\elll \tcdot S) \epsilon^{\mu \nu \alpha \beta} P_\nu \elll_\alpha v_\beta\, \tBmp_9  - \frac{i \mN^3}{(v \tcdot P)^2} (v \tcdot S) \epsilon^{\mu \nu \alpha \beta} P_\nu \elll_\alpha v_\beta \tBmp_{10}\ . 
+\label{eq-phitildedecomp}
+\end{align}
+
+The amplitudes $\tAmp_i$ and $\tBmp_i$ introduced this way are no longer constrained to be real-valued functions. Instead, hermitian conjugation Eq.\ \eqref{eq-conhermtilde} yields the relation
+\begin{equation}
+	\left[ \tAmp_i(\elll^2,\elll \tcdot P, v \tcdot \elll / (v \tcdot P), \zeta^{-2},\mu^2) \right]^* = \tAmp_i(\elll^2,-\elll \tcdot P, -v \tcdot \elll / (v \tcdot P), \zeta^{-2},\mu^2)\, .\label{conditi_hermitian}
+\end{equation}
+In general, the amplitudes are complex,
+\begin{align}
+    \tilde{A}_i&=\tilde{A}^{\text{Re}}_i+i\tilde{A}^{\text{Im}}_i\\
+    \tilde{B}_i&=\tilde{B}^{\text{Re}}_i+i\tilde{B}^{\text{Im}}_i
+\end{align}
+Because of Eq.\ \eqref{conditi_hermitian}, provided we have the amplitudes for both $\pm b$, we find
+\begin{align}
+    \tilde{A}^{\text{Re}}_i&=\tilde{A}^{\text{(b-even)}}_i\\
+    \tilde{A}^{\text{Im}}_i&=\tilde{A}^{\text{(b-odd})}_i\\
+    \tilde{B}^{\text{Re}}_i&=\tilde{B}^{\text{(b-even)}}_i\\
+    \tilde{B}^{\text{Im}}_i&=\tilde{B}^{\text{(b-odd})}_i
+\end{align}
+
