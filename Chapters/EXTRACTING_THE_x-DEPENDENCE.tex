@@ -5,7 +5,7 @@ This chapter connects the lattice correlators to the $x$-dependent Sivers shift.
 
 Section~\ref{sec:solving_amplitudes} projects the correlator parametrization onto the lattice kinematics and solves for the real and imaginary amplitudes from the symmetric and antisymmetric combinations of the $+b^1$ and $-b^1$ data. Section~\ref{sec:effective_amplitudes} combines them into $\tAmp_{2B}$ and $\tAmp_{12B}$, and Section~\ref{sec:lorentz_mapping} maps these from $(b_L,b_T)$ to $(P\cdot b,\bvec^2)$. Section~\ref{sec:numerical_amplitudes} checks the parity of the extracted amplitudes, shows them at the four simulated momenta, and discards $\tAmp_{12B}^{\text{Im}}$, which is statistically compatible with zero.
 
-\subsection{The Sivers Shift as a Function of Momentum Fraction}
+\subsection{The Sivers Shift as a Function of Momentum Fraction $x$}
 \label{sec:sivers_shift_x}
 To connect our lattice observables to the physical, $x$-dependent Transverse Momentum Dependent Parton Distribution Functions (TMDs), we must isolate the relevant amplitudes from the correlation function. Focusing on the leading-twist unpolarized quark distribution, the correlator is parameterized by the Lorentz-invariant amplitudes $\tAmp_{2B}$ and $\tAmp_{12B}$, which we construct from the primitive correlator amplitudes in Section \ref{sec:effective_amplitudes}.
 Our primary goal is to extract the generalized Sivers shift, $\langle \vect{k}_y \rangle_{TU}$, as a continuous function of the longitudinal momentum fraction $x = k^+ / P^+$. The Sivers shift is defined phenomenologically as the ratio of the first transverse momentum moment of the Sivers function to the unpolarized distribution. 
@@ -197,16 +197,16 @@ Once these bounding matrix elements are computed, we perform a spatial interpola
 \subsubsection{Spatial Interpolation of Off-Axis Coordinates}
 \label{sec:spatial_interpolation}
 
-Before interpolating to the off-axis target $\eta \vect{v}/a$, we must account for path degeneracy. Because the lattice gauge links are restricted to the Cartesian axes, there are multiple step-wise permutations (different side-link paths) that terminate at the exact same physical lattice coordinate. While these paths are geometrically equivalent at their endpoints, they traverse different local gauge field configurations and thus exhibit distinct discretization artifacts and gauge noise. As illustrated in Figure \ref{fig:example_2path}, we average the correlation functions evaluated over all degenerate paths that share the same endpoint. Path averaging significantly improves the signal-to-noise ratio before any interpolation.
+Before interpolating to the off-axis target $\eta \vect{v}/a$, we must account for path degeneracy. Because the lattice gauge links are restricted to the Cartesian axes, there are multiple step-wise permutations (different side-link paths) that terminate at the same physical lattice coordinate. While these paths are geometrically equivalent at their endpoints, they traverse different local gauge field configurations and thus exhibit distinct discretization artifacts and gauge noise. As illustrated in Figure \ref{fig:example_2path}, we average the correlation functions evaluated over all degenerate paths that share the same endpoint. Path averaging significantly improves the signal-to-noise ratio before any interpolation.
 
 \begin{figure}[htpb]
     \centering
     \includegraphics[width=0.25\linewidth]{plots/kinematics_interpolation/Example_v_plot_with_2path.pdf}
-    \caption{Illustration of path degeneracy. Two distinct step-wise gauge link permutations (e.g., solid and dashed lines) terminate at the identical discrete lattice coordinate. The correlators from these equivalent paths are averaged to suppress local gauge noise prior to interpolation.}
+    \caption{Illustration of path degeneracy. Two distinct step-wise gauge link permutations (e.g., solid and dashed lines) terminate at the identical discrete lattice coordinate. We average the correlators from these equivalent paths to suppress local gauge noise before interpolation.}
     \label{fig:example_2path}
 \end{figure}
 
-Once the path-averaged correlators are obtained at the discrete bounding sites, we perform a 1-dimensional interpolation. For a fixed transverse staple extent $v_3$, the kinematic constraint dictates an ideal continuous longitudinal component, $v_1^{\text{constraint}}$. The surrounding discrete lattice sites provide correlators at actual simulated coordinates, $v_1^{\text{lattice}}$. We define the fractional deviation from the ideal path as:
+Once we obtain the path-averaged correlators at the discrete bounding sites, we perform a 1-dimensional interpolation. For a fixed transverse staple extent $v_3$, the kinematic constraint dictates an ideal continuous longitudinal component, $v_1^{\text{constraint}}$. The surrounding discrete lattice sites provide correlators at actual simulated coordinates, $v_1^{\text{lattice}}$. We define the fractional deviation from the ideal path as:
 \begin{equation}
     \Delta v_1 = \frac{v_1^{\text{constraint}} - v_1^{\text{lattice}}}{a} \ .
 \end{equation}
@@ -302,7 +302,7 @@ To access finite $b \cdot P$, we construct off-axis paths with simultaneous step
 \subsubsection{Path Averaging for \texorpdfstring{$\vect{b}$}{TEXT}}
 \label{sec:b_path_averaging}
 
-The off-axis separation vector $\vect{b}$ has the same path degeneracy as the staple vector (Section~\ref{sec:spatial_interpolation}), and we treat it the same way: we average the correlation function over all equivalent step-wise paths that share the same origin and endpoint, as illustrated for a single coordinate in Figure \ref{fig:b_path_example}. Applying this path-averaging strategy across the entire target grid yields the full network of smoothed off-axis trajectories, visualized in Figure \ref{fig:b_full_network}. From this path-averaged dataset we obtain the parity-separated amplitudes used in the final Fourier transform.
+The off-axis separation vector $\vect{b}$ has the same path degeneracy as the staple vector (Section~\ref{sec:spatial_interpolation}. We treat it the same way: we average the correlation function over all equivalent step-wise paths that share the same origin and endpoint, as illustrated for a single coordinate in Figure \ref{fig:b_path_example}. Applying this path-averaging strategy across the entire target grid yields the full network of smoothed off-axis trajectories, visualized in Figure \ref{fig:b_full_network}. From this path-averaged dataset, we obtain the parity-separated amplitudes used in the final Fourier transform.
 
 \begin{figure}[htpb]
     \centering
@@ -682,13 +682,12 @@ By replacing $b_L$ and $\bvec^2$ with these invariant expressions, we transform 
 With the amplitudes now expressed as functions of $P \cdot b$, the Fourier transform of Eq.~\eqref{eq:sivers_shift_xdep} can be evaluated directly. This connects the Euclidean correlation ratios evaluated on the lattice to the physical, $x$-dependent phenomenological observables needed to study the Sivers effect.
 
 
-\pagebreak
 \subsection{Numerical Results and Parity Constraints of the Extracted Amplitudes}
 \label{sec:numerical_amplitudes}
 
 Before examining the lattice data across the different Collins-Soper scales ($\hat{\zeta}$), we check the parity constraints of Eq.~\eqref{eq-ReIm-parity}. Since $P\cdot b=-P_Lb_L$ (Eq.~\eqref{eq:pb_minus_pl_bl}), the real amplitudes $\tAmp_{2B}^{\text{Re}}$ and $\tAmp_{12B}^{\text{Re}}$ must be even in the Cartesian longitudinal separation $b_L$, and the imaginary amplitudes $\tAmp_{2B}^{\text{Im}}$ and $\tAmp_{12B}^{\text{Im}}$ must be odd. The lattice data in the figures below show these even and odd profiles along the $b_L$ axis, which validates the parity projection.
 
-The statistical quality of the extracted signals, however, differs between amplitudes. While the unpolarized amplitudes ($\tAmp_{2B}^{\text{Re}}$ and $\tAmp_{2B}^{\text{Im}}$) and the real Sivers amplitude ($\tAmp_{12B}^{\text{Re}}$) show clear, statistically resolvable signals across the simulated Variable Space, the imaginary Sivers amplitude ($\tAmp_{12B}^{\text{Im}}$) does not. Across all evaluated nucleon momenta and staple extents, the extracted lattice data for $\tAmp_{12B}^{\text{Im}}$ remains completely dominated by gauge noise and is statistically compatible with zero. With no distinguishable signal, we cannot meaningfully constrain or fit a phenomenological model to this component. We therefore discard $\tAmp_{12B}^{\text{Im}}$ from further analysis: we drop the $\sin(x(b\cdot P))\tAmp_{12B}^{\text{Im}}$ term in Eq.~\eqref{eq:sivers_shift_xdep} and evaluate the $x$-dependent Sivers shift using only the $\tAmp_{12B}^{\text{Re}}$ data.
+However, the statistical quality of the extracted signals differs between amplitudes. While the unpolarized amplitudes ($\tAmp_{2B}^{\text{Re}}$ and $\tAmp_{2B}^{\text{Im}}$) and the real Sivers amplitude ($\tAmp_{12B}^{\text{Re}}$) show clear, statistically resolvable signals across the simulated Variable Space, the imaginary Sivers amplitude ($\tAmp_{12B}^{\text{Im}}$) does not. Across all evaluated nucleon momenta and staple extents, the extracted lattice data for $\tAmp_{12B}^{\text{Im}}$ remains completely dominated by gauge noise and is statistically compatible with zero. With no distinguishable signal, we cannot meaningfully constrain or fit a phenomenological model to this component. We therefore discard $\tAmp_{12B}^{\text{Im}}$ from further analysis: we drop the $\sin(x(b\cdot P))\tAmp_{12B}^{\text{Im}}$ term in Eq.~\eqref{eq:sivers_shift_xdep} and evaluate the $x$-dependent Sivers shift using only the $\tAmp_{12B}^{\text{Re}}$ data.
 
 Sections~\ref{sec:amp_profiles_P1}--\ref{sec:amp_profiles_P4} show the amplitudes at $P_L=-1,-2,-3,-4$.
 

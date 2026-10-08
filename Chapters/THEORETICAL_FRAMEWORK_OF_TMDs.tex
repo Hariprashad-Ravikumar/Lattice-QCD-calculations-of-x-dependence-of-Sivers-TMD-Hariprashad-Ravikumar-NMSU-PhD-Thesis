@@ -1,7 +1,7 @@
-\section{THEORETICAL FRAMEWORK OF TMDs}
+\section{TMD correlator}
 \label{sec:tmd_framework}
 
-This chapter sets out the definitions used in the rest of the thesis. Section~\ref{sec:tmd_definition} defines the TMD correlator as the Fourier transform of a bare non-local matrix element divided by the soft factor, and identifies the unpolarized distribution $f_1$ and the T-odd Sivers function $f_{1T}^\perp$ in its $\gamma^+$ projection. Section~\ref{sec:tmd_fourier} introduces $\vprp{b}$-dependent TMDs and their derivatives, which the lattice evaluates directly, and keeps $|\vprp{\bvec}|$ finite because $f_{1T}^{\perp(1)}(x)$ diverges without additional regularization. Section~\ref{sec:link_geometry} introduces the staple-shaped gauge link and the Collins-Soper parameter $\hat\zeta$. Section~\ref{Symmetry Constraints} lists the Lorentz, parity, time-reversal and Hermitian conjugation transformations, parametrizes the $b$-dependent correlator in terms of the amplitudes $\tAmp_i$ and $\tBmp_i$, and uses hermiticity to show that their real and imaginary parts are even and odd in $b$. Section~\ref{sec-parametr} combines these amplitudes into $\tAmp_{2B}$ and $\tAmp_{12B}$, from which $f_1$ and $f_{1T}^\perp$ follow by Fourier transformation.
+This chapter defines the terms used in the rest of the thesis. Section~\ref{sec:tmd_definition} defines the TMD correlator as the Fourier transform of a bare non-local matrix element divided by the soft factor, and identifies the unpolarized distribution $f_1$ and the T-odd Sivers function $f_{1T}^\perp$ in its $\gamma^+$ projection. Section~\ref{sec:tmd_fourier} introduces $\vprp{b}$-dependent TMDs and their derivatives, which the lattice evaluates directly, and keeps $|\vprp{\bvec}|$ finite because $f_{1T}^{\perp(1)}(x)$ diverges without additional regularization. Section~\ref{sec:link_geometry} introduces the staple-shaped gauge link and the Collins-Soper parameter $\hat\zeta$. Section~\ref{Symmetry Constraints} lists the Lorentz, parity, time-reversal, and Hermitian conjugation transformations, parametrizes the $b$-dependent correlator in terms of the Lorentz invariant amplitudes $\tAmp_i$ and $\tBmp_i$, and uses hermiticity to show that their real and imaginary parts are even and odd in $b$. Section~\ref{sec-parametr} combines these amplitudes into $\tAmp_{2B}$ and $\tAmp_{12B}$, from which $f_1$ and $f_{1T}^\perp$ follow by Fourier transformation.
 
 \subsection{Definition of TMDs} 
 \label{sec:tmd_definition}
@@ -22,7 +22,7 @@ regularization cannot treat \cite{BMush_Engelhardt2012}, so we divide by the sof
 		{ \widetilde{\softf}(\bvec^2;\ldots) } \ .
 		\label{eq-corr}	
 \end{align}
-The numerator, $\widetilde \Phi_\unsub^{[\Gamma]}(\bvec,P,S;\ldots)$, is the bare non-local matrix element in which a gauge link $\WlineC{\mathcal{C}_\bvec}$ connects the quark fields. The denominator is the soft factor, $\widetilde{\softf}(\bvec^2;\ldots)$, which is needed to regulate rapidity divergences. The ellipses (``$\ldots$'') denote additional dependence on parameters governing the Wilson line geometry and the soft factor, as well as an implicit dependence on the ultraviolet renormalization scale $\mu$.
+The numerator, $\widetilde \Phi_\unsub^{[\Gamma]}(\bvec,P,S;\ldots)$, is the bare non-local matrix element in which a gauge link $\WlineC{\mathcal{C}_\bvec}$ connects the quark fields. The denominator is the soft factor, $\widetilde{\softf}(\bvec^2;\ldots)$, which regulates rapidity divergences. The ellipses (``$\ldots$'') denote additional dependence on parameters governing the Wilson line geometry and the soft factor, as well as an implicit dependence on the ultraviolet renormalization scale $\mu$.
 
 The soft factor, $\tilde \softf$, stands symbolically for an
 expression that can, depending on the formalism, involve several vacuum
@@ -72,13 +72,13 @@ In the formal limit $|\vprp{\bvec}| \rightarrow 0$, they reduce to the conventio
 	\tilde f^{(n)}(x, 0;\ldots ) & = \int  d^2 \vprp{\kei} \left( \frac{\vprp{\kei}^2}{2 \mN^2 }\right)^n  f(x, \vprp{\kei}^2;\ldots ) \equiv  f^{(n)}(x)\ .
 	\label{eq-btder2}
 \end{align}
-However, the first transverse moment of the Sivers function, $f_{1T}^{\perp(1)}(x)$, diverges without additional regularization, because the perturbatively calculable high-$\vprp{\kei}$ tails do not decay fast enough \cite{Bacchetta:2008xw}. We therefore do not extrapolate to $\vprp{\bvec}=0$. At finite $|\vprp{\bvec}|$ the integrals converge, and we access the $x$-dependence of the Sivers TMD through the conjugate variable $\bvec \tcdot P$ \cite{Hagler:2009mb,Musch:2010ka}.
+However, the first transverse moment of the Sivers function, $f_{1T}^{\perp(1)}(x)$, diverges without additional regularization, because the perturbatively calculable high-$\vprp{\kei}$ tails do not decay fast enough \cite{Bacchetta:2008xw}. We therefore do not extrapolate to $\vprp{\bvec}=0$. At finite $|\vprp{\bvec}|$, the integrals converge, and we access the $x$-dependence of the Sivers TMD through the conjugate variable $\bvec \tcdot P$ \cite{Hagler:2009mb,Musch:2010ka}.
 
 \subsection{Link geometry}
 \label{sec:link_geometry}
 The geometry of the gauge link path $\mathcal{C}_\bvec$ affects both the number of allowed TMD structures and the numerical result. 
 
-The simplest link geometry is a straight line connecting the quark fields at $0$ and $\bvec$. Refs.~\cite{Hagler:2009mb, Musch:2010ka} have studied TMDs with straight gauge links on the lattice. These ``process-independent'' TMDs are of theoretical interest in their own right, but it is not yet known how to relate them quantitatively to the TMDs that play a role in scattering experiments. The operator with straight gauge links has the greatest possible symmetry, and as a result T-odd TMDs vanish for straight gauge links.
+The simplest link geometry is a straight line connecting the quark fields at $0$ and $\bvec$. Refs.~\cite{Hagler:2009mb, Musch:2010ka} have studied TMDs with straight gauge links on the lattice. These ``process-independent'' TMDs are of theoretical interest in their own right, but it is not yet known how to relate them quantitatively to the TMDs that play a role in scattering experiments. The operator with straight gauge links has the greatest possible symmetry; as a result, T-odd TMDs vanish for straight gauge links.
 
 To accommodate the symmetries required to isolate the Sivers effect and its $x$ dependence, we use a staple-shaped gauge link; see Fig. \ref{fig:staple}:
 \begin{align}
@@ -135,7 +135,7 @@ The Lorentz-invariant Collins-Soper parameter, $\zeta \equiv 2 v \tcdot P/\sqrt{
 	\hat \zeta \equiv \zeta / 2 \mN =  \frac{v \cdot P}{\sqrt{|v^2|} \sqrt{P^2}}=  \frac{v^+P^-+v^-P^+}{\sqrt{|v^2|} \mN} = \sinh(y_P - y_v)\ ,
 	\label{eq-zeta}
 \end{equation}
-so $\hat \zeta$ measures the rapidity difference between the nucleon momentum and the Wilson line direction. This allows us to boost to a frame where $v$ is purely spatial ($v^0 = 0, y_v = 0$).
+So $\hat \zeta$ measures the rapidity difference between the nucleon momentum and the Wilson line direction. This allows us to boost to a frame where $v$ is purely spatial ($v^0 = 0, y_v = 0$).
 
 
 \subsection{Symmetry Constraints}
@@ -163,7 +163,7 @@ Invariance under Lorentz ($L$), parity ($P$), time-reversal ($T$) and Hermitian 
 	&(T): &\left[ \Phi^{[\Gamma]}_{\text{unsub}}(k,P,S;v,\mu) \right]^* &= \Phi^{[\gamma^1 \gamma^3 \Gamma^* \gamma^3 \gamma^1]}_{\text{unsub}}(\overline{k},\overline{P},\overline{S};-\overline{v},\mu) \ , \label{eq-contime} \displaybreak[0] \\
 	&(\dagger): &\left[  \Phi^{[\Gamma]}_{\text{unsub}}(k,P,S;v,\mu) \right]^* &= \Phi^{[\gamma^0 \Gamma^\dagger \gamma^0]}_{\text{unsub}}(k,P,S;v,\mu) \ . \label{eq-conherm}
 \end{align}
-where, for a vector $c$, $\overline{c} \equiv (c^0, -c^1, -c^2, -c^3)$ denotes the vector with its spatial components reversed in sign. Hermiticity $(\dagger)$ implies that the $\Amp_i$ and $\Bmp_i$ in Eq.\ \eqref{eq-phidecomp} are real valued. Time reversal $(T)$ does not constrain the number of allowed structures, because it changes the sign of $v\tcdot P$. Instead, time reversal $(T)$ relates the SIDIS amplitudes $A_i^{(+)}$, $B_i^{(+)}$ to the Drell-Yan amplitudes $A_i^{(-)}$, $B_i^{(-)}$.
+where, for a vector $c$, $\overline{c} \equiv (c^0, -c^1, -c^2, -c^3)$ denotes the vector with its spatial components reversed in sign. Hermiticity $(\dagger)$ implies that the $\Amp_i$ and $\Bmp_i$ in Eq.\ \eqref{eq-phidecomp} are real valued. Time reversal $(T)$ does not constrain the number of allowed structures, because it changes the sign of $ v\cdot P$. Instead, time reversal $(T)$ relates the SIDIS amplitudes $A_i^{(+)}$, $B_i^{(+)}$ to the Drell-Yan amplitudes $A_i^{(-)}$, $B_i^{(-)}$.
 	
 For any of the transformations $\mathcal{T} \in \{ L, P, T, \dagger \}$, the Eqs.\ \eqref{eq-lortrans}-\eqref{eq-conherm} are of the general form 
 \begin{equation}
@@ -233,7 +233,7 @@ $\Phi_\unsub(\kei,P,S;\infty v,\mu)$
 for link paths that extend to infinity in a direction $v$
 has been worked out in Ref. \cite{Goeke:2005hb} and involves 32 independent amplitudes $A_i$ and $B_i$ that depend on the Lorentz-invariant quantities 
 $\kei^2$, $\kei \cdot P$, $\kei \tcdot v/v \tcdot P$ and $\hat \zeta$.
-Extracting the $x$-dependence of the Sivers TMD from Euclidean data requires a mapping between the discretized observables and the manifestly Lorentz-invariant amplitudes. Starting from the infinite-link parameterization of Goeke et al.\ \cite{Goeke:2005hb}, the substitution $\kei \rightarrow - i \mN^2 \bvec$ \cite{Boer-Bessel-Weighted-Asymmetries} derived in Section~\ref{Symmetry Constraints} gives the unpolarized $b$-dependent correlator of Eq.~\eqref{eq-phitildedecomp}. The lattice studies of Refs.~\cite{Hagler:2009mb,Musch:2010ka} used straight gauge links, which give access only to T-even structures; the staple direction $v$ in Eq.~\eqref{eq-phitildedecomp} makes T-odd observables, such as the Sivers shift, accessible.
+Extracting the $x$-dependence of the Sivers TMD from Euclidean data requires a mapping between the discretized observables and the manifestly Lorentz-invariant amplitudes. Starting from the infinite-link parameterization of Goeke et al.\ \cite{Goeke:2005hb}, the substitution $\kei \rightarrow - i \mN^2 \bvec$ \cite{Boer-Bessel-Weighted-Asymmetries} derived in Section~\ref{Symmetry Constraints} gives the unpolarized $b$-dependent correlator of Eq.~\eqref{eq-phitildedecomp}—the lattice studies of Refs.~\cite{Hagler:2009mb,Musch:2010ka} used straight gauge links, which give access only to T-even structures; the staple direction $v$ in Eq.~\eqref{eq-phitildedecomp} makes T-odd observables, such as the Sivers shift, accessible.
 
 For lattice calculations at finite staple extent, we redefine the scale-invariant infinite-link amplitudes so that they explicitly track the extent $\eta$:
 \begin{align}
