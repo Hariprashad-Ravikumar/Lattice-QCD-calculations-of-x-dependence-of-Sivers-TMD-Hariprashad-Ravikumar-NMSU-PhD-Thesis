@@ -1,4 +1,4 @@
-\section{EXTRACTING THE \texorpdfstring{$x-$}{TEXT}DEPENDENCE}
+\section{EXTRACTING THE \texorpdfstring{$x-$}{TEXT}DEPENDENCE OF SIVERS SHIFT}
 \label{sec:x_dependence}
 
 This chapter connects the lattice correlators to the $x$-dependent Sivers shift. Section~\ref{sec:sivers_shift_x} writes the Sivers shift as a ratio of Fourier transforms over $b\cdot P$ of the amplitudes $\tAmp_{12B}$ and $\tAmp_{2B}$, and shows that the real parts enter with the cosine and the imaginary parts with the sine. Section~\ref{sec:collins_soper_parameter} explains why $\hat\zeta$ is finite on the lattice. Sections~\ref{sec:kinematic_constraints} and~\ref{sec:lattice_parameter_space} fix the staple direction $v$ for each nucleon momentum so that $b\cdot P\neq0$, and describe how the correlator at the off-axis target $\eta \vect{v}/a$ is obtained by path averaging and quadratic interpolation. Section~\ref{sec:b_separation_paths} describes the quark separation vectors $\vect{b}$, sampled at $\pm b_1$, and the gauge link paths that reach them.
@@ -13,8 +13,8 @@ Our primary goal is to extract the generalized Sivers shift, $\langle \vect{k}_y
 Because $x$ and the longitudinal spatial separation $b \cdot P$ act as Fourier conjugate variables, mapping the $x$-dependence requires a Fourier transform of these amplitudes with respect to $b \cdot P$. Analytically, the $x$-dependent Sivers shift takes the form:
 \begin{align}
    \langle \vect{k}_y \rangle_{TU}(\vprp{\bvec}^2,x,\zetahat,\eta v \tcdot P) 
-	&\ \equiv\ \mN \frac{\tilde f_{1T}^{\perp(1)}(\vprp{\bvec}^2;\zetahat,\ldots,\eta v \tcdot P)}{\tilde f_1^{(0)}(\vprp{\bvec}^2;\zetahat,\ldots,\eta v \tcdot P)} \nonumber \\
- &=-m_{N} \frac{\int d(b\cdot P)e^{ix(b\cdot P)} \tAmp_{12B}(\bvec^2,\bvec \tcdot P,(\bvec \tcdot P) R(\zetahat^2)/\mN^2,-1/(\mN\zetahat)^2,\eta v \tcdot P)}{\int d(b\cdot P)e^{ix(b\cdot P)}\tAmp_{2B}(\bvec^2,\bvec \tcdot P,(\bvec \tcdot P) R(\zetahat^2)/\mN^2,-1/(\mN\zetahat)^2,\eta v \tcdot P)} \nonumber \\
+	&\ \equiv\ \mN \frac{\tilde f_{1T}^{\perp(1)}(\vprp{\bvec}^2,x;\zetahat,\ldots,\eta v \tcdot P)}{\tilde f_1^{(0)}(\vprp{\bvec}^2,x;\zetahat,\ldots,\eta v \tcdot P)}  \\
+ &=-m_{N} \frac{\int d(b\cdot P)e^{ix(b\cdot P)} \tAmp_{12B}(\bvec^2,\bvec \tcdot P,(\bvec \tcdot P) R(\zetahat^2)/\mN^2,-1/(\mN\zetahat)^2,\eta v \tcdot P)}{\int d(b\cdot P)e^{ix(b\cdot P)}\tAmp_{2B}(\bvec^2,\bvec \tcdot P,(\bvec \tcdot P) R(\zetahat^2)/\mN^2,-1/(\mN\zetahat)^2,\eta v \tcdot P)}  \\
  &=-m_{N} \frac{\int d(b\cdot P)e^{ix(b\cdot P)} \left[\tAmp_{12B}^{\text{Re}}(\cdots)+i\tAmp_{12B}^{\text{Im}}(\cdots)\right]}{\int d(b\cdot P)e^{ix(b\cdot P)}\left[\tAmp_{2B}^{\text{Re}}(\cdots)+i\tAmp_{2B}^{\text{Im}}(\cdots)\right]}\\
  &=-m_{N} \frac{\int d(b\cdot P) \left[\cos{\left(x(b\cdot P)\right)}\tAmp_{12B}^{\text{Re}}(\cdots)-\sin{\left(x(b\cdot P)\right)}\tAmp_{12B}^{\text{Im}}(\cdots)\right]}{\int d(b\cdot P)\left[\cos{\left(x(b\cdot P)\right)}\tAmp_{2B}^{\text{Re}}(\cdots)-\sin{\left(x(b\cdot P)\right)}\tAmp_{2B}^{\text{Im}}(\cdots)\right]} \ . \label{eq:sivers_shift_xdep}
  \end{align}
