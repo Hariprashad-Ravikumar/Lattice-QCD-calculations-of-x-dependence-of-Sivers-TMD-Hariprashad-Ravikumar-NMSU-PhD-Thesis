@@ -1,6 +1,6 @@
 \babel@toc {english}{}\relax 
-\contentsline {section}{LIST OF TABLES}{xiii}{section*.2}%
-\contentsline {section}{LIST OF FIGURES}{xxiii}{section*.3}%
+\contentsline {section}{LIST OF TABLES}{xiv}{section*.2}%
+\contentsline {section}{LIST OF FIGURES}{xxiv}{section*.3}%
 \contentsline {section}{\numberline {1}INTRODUCTION AND MOTIVATION}{1}{section.1}%
 \contentsline {subsection}{\numberline {1.1}From form factors to partons}{1}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Beyond one dimension}{2}{subsection.1.2}%
@@ -9,81 +9,98 @@
 \contentsline {subsection}{\numberline {1.5}Lattice QCD and the $x$-dependence problem}{7}{subsection.1.5}%
 \contentsline {subsection}{\numberline {1.6}This thesis}{8}{subsection.1.6}%
 \contentsline {subsection}{\numberline {1.7}Outline}{9}{subsection.1.7}%
-\contentsline {section}{\numberline {2}QCD AND HADRON STRUCTURE}{11}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Conventions}{11}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Quantum field theory and the path integral}{12}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Gauge invariance and QCD}{13}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Asymptotic freedom, confinement and chiral symmetry}{15}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Deep inelastic scattering and the parton model}{16}{subsection.2.5}%
-\contentsline {subsection}{\numberline {2.6}Form factors, GPDs and the transverse structure of the nucleon}{18}{subsection.2.6}%
-\contentsline {subsection}{\numberline {2.7}SIDIS, Drell-Yan and TMD factorization}{20}{subsection.2.7}%
-\contentsline {subsection}{\numberline {2.8}The TMD correlator and gauge links}{21}{subsection.2.8}%
-\contentsline {subsubsection}{\numberline {2.8.1}Process-dependent gauge links}{21}{subsubsection.2.8.1}%
-\contentsline {subsubsection}{\numberline {2.8.2}Leading-twist TMDs}{22}{subsubsection.2.8.2}%
-\contentsline {subsubsection}{\numberline {2.8.3}Time reversal and the sign change}{23}{subsubsection.2.8.3}%
-\contentsline {subsection}{\numberline {2.9}Rapidity divergences, the soft factor and evolution}{24}{subsection.2.9}%
-\contentsline {subsection}{\numberline {2.10}Transverse position space and the Sivers shift}{25}{subsection.2.10}%
-\contentsline {subsection}{\numberline {2.11}From $b{\cdot }P$ to $x$}{26}{subsection.2.11}%
-\contentsline {subsection}{\numberline {2.12}TMDs from lattice QCD}{28}{subsection.2.12}%
-\contentsline {section}{\numberline {3}LATTICE QCD METHODOLOGY}{30}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Lattice QCD}{30}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Wilson Gauge Action}{30}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Fermions on the Lattice}{31}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Two-Point Correlation Functions}{31}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Three-Point Correlation Functions}{32}{subsection.3.5}%
-\contentsline {subsection}{\numberline {3.6}Non-Local Operators}{32}{subsection.3.6}%
-\contentsline {subsection}{\numberline {3.7}Introduction to TMD Three-Point Functions}{33}{subsection.3.7}%
-\contentsline {subsection}{\numberline {3.8}Extracting Matrix Elements: The Ratio Method}{33}{subsection.3.8}%
-\contentsline {section}{\numberline {4}THEORETICAL FRAMEWORK OF TMDs}{35}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Definition of TMDs}{35}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}General strategy}{36}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}TMDs in Fourier space}{37}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Link geometry}{37}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Symmetry Constraints}{38}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Parametrization of the correlator}{39}{subsection.4.6}%
-\contentsline {section}{\numberline {5}EXTRACTING THE $x-$DEPENDENCE}{41}{section.5}%
-\contentsline {subsection}{\numberline {5.1}The Sivers Shift as a Function of Momentum Fraction}{41}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}The Collins-Soper Parameter ($\hat {\zeta }$)}{42}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Kinematic Constraints for $b\cdot P \neq 0$}{42}{subsection.5.3}%
-\contentsline {subsubsection}{\numberline {5.3.1}Explicit Calculation for $P_1=-1$}{43}{subsubsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.4}Lattice Parameter Space and Off-Axis Links}{43}{subsection.5.4}%
-\contentsline {subsubsection}{\numberline {5.4.1}Off-Axis $\ensuremath {\boldsymbol {v}}$ and Spatial Interpolation}{45}{subsubsection.5.4.1}%
-\contentsline {subsubsection}{\numberline {5.4.2}Spatial Interpolation of Off-Axis Coordinates}{47}{subsubsection.5.4.2}%
-\contentsline {subsection}{\numberline {5.5}Quark Separation Vectors ($\ensuremath {\boldsymbol {b}}$) and Amplitude Parity}{50}{subsection.5.5}%
-\contentsline {subsubsection}{\numberline {5.5.1}Gauge Link Construction for $\ensuremath {\boldsymbol {b}}$}{51}{subsubsection.5.5.1}%
-\contentsline {subsubsection}{\numberline {5.5.2}Path Averaging for $\ensuremath {\boldsymbol {b}}$}{53}{subsubsection.5.5.2}%
-\contentsline {subsection}{\numberline {5.6}Solving for Real and Imaginary Amplitudes $\setbox \z@ \hbox {\mathsurround \z@ $\textstyle A$}\mathaccent "0365{A}_{iB}^{\text {Re}}$ and $\setbox \z@ \hbox {\mathsurround \z@ $\textstyle A$}\mathaccent "0365{A}_{iB}^{\text {Im}}$}{54}{subsection.5.6}%
-\contentsline {subsection}{\numberline {5.7}Constructing the Effective Amplitudes $\setbox \z@ \hbox {\mathsurround \z@ $\textstyle A$}\mathaccent "0365{A}_{2B}$ and $\setbox \z@ \hbox {\mathsurround \z@ $\textstyle A$}\mathaccent "0365{A}_{12B}$}{61}{subsection.5.7}%
-\contentsline {subsection}{\numberline {5.8}Transformation to the Lorentz-Invariant Variable Space}{63}{subsection.5.8}%
-\contentsline {subsection}{\numberline {5.9}Numerical Results and Parity Constraints of the Extracted Amplitudes}{65}{subsection.5.9}%
-\contentsline {subsubsection}{\numberline {5.9.1}Amplitude Profiles at $\hat {\zeta }=0.090772$ ($P_L = -1$)}{65}{subsubsection.5.9.1}%
-\contentsline {subsubsection}{\numberline {5.9.2}Amplitude Profiles at $\hat {\zeta }=0.294367$ ($P_L = -2$)}{68}{subsubsection.5.9.2}%
-\contentsline {subsubsection}{\numberline {5.9.3}Amplitude Profiles at $\hat {\zeta }=0.539684$ ($P_L = -3$)}{70}{subsubsection.5.9.3}%
-\contentsline {subsubsection}{\numberline {5.9.4}Amplitude Profiles at $\hat {\zeta }=0.785756$ ($P_L = -4$)}{72}{subsubsection.5.9.4}%
-\contentsline {section}{\numberline {6}FITTING METHODOLOGIES AND STABILITY ANALYSIS}{74}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Failure of Simple Gaussian Model}{75}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Discretization Effects and Short-Distance Data Exclusion}{76}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Physics-Informed Symbolic Regression via PySR}{77}{subsection.6.3}%
-\contentsline {subsubsection}{\numberline {6.3.1}Expression Search and Configuration}{78}{subsubsection.6.3.1}%
-\contentsline {subsubsection}{\numberline {6.3.2}The Physics-Informed Custom Loss Function}{78}{subsubsection.6.3.2}%
-\contentsline {subsubsection}{\numberline {6.3.3}Pareto Front of Discovered Models}{80}{subsubsection.6.3.3}%
-\contentsline {subsection}{\numberline {6.4}Test for Factorization in $(P\cdot b)$ and $b^2$}{84}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}Systematical exploration of the best physical model}{87}{subsection.6.5}%
-\contentsline {subsection}{\numberline {6.6}Candidate Selection}{91}{subsection.6.6}%
-\contentsline {subsection}{\numberline {6.7}Simultaneous Fitting Strategy}{93}{subsection.6.7}%
-\contentsline {subsubsection}{\numberline {6.7.1}Simultaneous Fit with Full Covariance Matrix}{94}{subsubsection.6.7.1}%
-\contentsline {subsubsection}{\numberline {6.7.2}Simultaneous Fit Results for $\ensuremath {\boldsymbol {P}}\cdot a\hat {L}/(2\pi )=\{-1,0,0\}$}{95}{subsubsection.6.7.2}%
-\contentsline {subsubsection}{\numberline {6.7.3}Simultaneous Fit Results for $\ensuremath {\boldsymbol {P}}\cdot a\hat {L}/(2\pi )=\{-2,0,0\}$}{99}{subsubsection.6.7.3}%
-\contentsline {subsubsection}{\numberline {6.7.4}Simultaneous Fit Results for $\ensuremath {\boldsymbol {P}}\cdot a\hat {L}/(2\pi )=\{-3,0,0\}$}{103}{subsubsection.6.7.4}%
-\contentsline {subsubsection}{\numberline {6.7.5}Simultaneous Fit Results for $\ensuremath {\boldsymbol {P}}\cdot a\hat {L}/(2\pi )=\{-4,0,0\}$}{106}{subsubsection.6.7.5}%
-\contentsline {subsubsection}{\numberline {6.7.6}Rejection of Separable Longitudinal and Transverse Factorization}{110}{subsubsection.6.7.6}%
-\contentsline {section}{\numberline {7}EXTRAPOLATIONS TO THE PHYSICAL LIMIT}{114}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Motivation for the $\hat {\zeta } \to \infty $ Extrapolation}{114}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Extrapolation at fit-parameters level}{114}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Testing Factorization in $x$ and $|b_T|$}{118}{subsection.7.3}%
-\contentsline {subsubsection}{\numberline {7.3.1}Quantifying the Distance from a Factorized Form}{119}{subsubsection.7.3.1}%
-\contentsline {subsubsection}{\numberline {7.3.2}Factorization Test for the Sivers Shift}{120}{subsubsection.7.3.2}%
-\contentsline {subsubsection}{\numberline {7.3.3}Factorization Test at the Amplitude Level}{122}{subsubsection.7.3.3}%
-\contentsline {section}{\numberline {8}CONCLUSION}{127}{section.8}%
-\contentsline {section}{\numberline {A}QLUA: Gamma $\Gamma (n)$}{128}{appendix.A}%
-\contentsline {section}{REFERENCES}{129}{section*.99}%
+\contentsline {section}{\numberline {2}QCD AND HADRON STRUCTURE}{12}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Conventions}{12}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Quantum field theory and the path integral}{13}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Gauge invariance and QCD}{14}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Asymptotic freedom, confinement and chiral symmetry}{16}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Deep inelastic scattering and the parton model}{17}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Form factors, GPDs and the transverse structure of the nucleon}{19}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}SIDIS, Drell-Yan and TMD factorization}{21}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}The TMD correlator and gauge links}{22}{subsection.2.8}%
+\contentsline {subsubsection}{\numberline {2.8.1}Process-dependent gauge links}{22}{subsubsection.2.8.1}%
+\contentsline {subsubsection}{\numberline {2.8.2}Leading-twist TMDs}{23}{subsubsection.2.8.2}%
+\contentsline {subsubsection}{\numberline {2.8.3}Time reversal and the sign change}{24}{subsubsection.2.8.3}%
+\contentsline {subsection}{\numberline {2.9}Rapidity divergences, the soft factor and evolution}{25}{subsection.2.9}%
+\contentsline {subsection}{\numberline {2.10}Transverse position space and the Sivers shift}{26}{subsection.2.10}%
+\contentsline {subsection}{\numberline {2.11}From $b{\cdot }P$ to $x$}{27}{subsection.2.11}%
+\contentsline {subsection}{\numberline {2.12}TMDs from lattice QCD}{29}{subsection.2.12}%
+\contentsline {section}{\numberline {3}LATTICE QCD METHODOLOGY}{32}{section.3}%
+\contentsline {subsection}{\numberline {3.1}The Euclidean Lattice}{32}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Euclidean Dirac matrices.}{32}{subsubsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.2}Gauge Fields on the Lattice}{33}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Continuum limit of the Wilson action.}{34}{subsubsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.3}Fermions on the Lattice}{35}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Naive discretization and doublers.}{35}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Wilson fermions.}{36}{subsubsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3}Clover improvement.}{37}{subsubsection.3.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.4}Other formulations.}{37}{subsubsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.4}Path Integral, Wick Contractions and Quark Propagators}{37}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}Monte Carlo evaluation.}{38}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}Computing propagators.}{38}{subsubsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {3.4.3}Example: the pion two-point function.}{38}{subsubsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.5}The Nucleon Two-Point Function}{39}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}Interpolating operator and contraction.}{39}{subsubsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.2}Spectral decomposition.}{39}{subsubsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.6}Three-Point Functions of Local Operators}{40}{subsection.3.6}%
+\contentsline {subsubsection}{\numberline {3.6.1}Definition and spectral decomposition.}{40}{subsubsection.3.6.1}%
+\contentsline {subsubsection}{\numberline {3.6.2}Quark-level contraction and sequential propagators.}{41}{subsubsection.3.6.2}%
+\contentsline {subsubsection}{\numberline {3.6.3}Ratio and zero momentum transfer.}{41}{subsubsection.3.6.3}%
+\contentsline {subsection}{\numberline {3.7}Non-Local Staple-Link Operators}{42}{subsection.3.7}%
+\contentsline {subsubsection}{\numberline {3.7.1}Lattice operator and three-point function.}{42}{subsubsection.3.7.1}%
+\contentsline {subsubsection}{\numberline {3.7.2}Contraction.}{43}{subsubsection.3.7.2}%
+\contentsline {subsubsection}{\numberline {3.7.3}Ratio and matrix element.}{44}{subsubsection.3.7.3}%
+\contentsline {section}{\numberline {4}TMD correlator}{46}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Definition of TMDs}{46}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}TMDs in Fourier space}{48}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Link geometry}{48}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Symmetry Constraints}{50}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Correlator Parametrization}{52}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Generalized Sivers shift from amplitudes}{55}{subsection.4.6}%
+\contentsline {section}{\numberline {5}EXTRACTING THE $x-$DEPENDENCE OF SIVERS SHIFT}{59}{section.5}%
+\contentsline {subsection}{\numberline {5.1}The Sivers Shift as a Function of Momentum Fraction $x$}{59}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}The Collins-Soper Parameter ($\hat {\zeta }$)}{60}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Kinematic Constraints for $b\cdot P \neq 0$}{61}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {5.3.1}Explicit Calculation for $P_1=-1$}{61}{subsubsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.4}Lattice Parameter Space and Off-Axis Links}{62}{subsection.5.4}%
+\contentsline {subsubsection}{\numberline {5.4.1}Off-Axis $\ensuremath {\boldsymbol {v}}$ and Spatial Interpolation}{62}{subsubsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.2}Spatial Interpolation of Off-Axis Coordinates}{65}{subsubsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.5}Quark Separation Vectors ($\ensuremath {\boldsymbol {b}}$) and Amplitude Parity}{66}{subsection.5.5}%
+\contentsline {subsubsection}{\numberline {5.5.1}Gauge Link Construction for $\ensuremath {\boldsymbol {b}}$}{68}{subsubsection.5.5.1}%
+\contentsline {subsubsection}{\numberline {5.5.2}Path Averaging for $\ensuremath {\boldsymbol {b}}$}{69}{subsubsection.5.5.2}%
+\contentsline {subsection}{\numberline {5.6}Solving for Real and Imaginary Amplitudes $\setbox \z@ \hbox {\mathsurround \z@ $\textstyle A$}\mathaccent "0365{A}_{iB}^{\text {Re}}$ and $\setbox \z@ \hbox {\mathsurround \z@ $\textstyle A$}\mathaccent "0365{A}_{iB}^{\text {Im}}$}{72}{subsection.5.6}%
+\contentsline {subsection}{\numberline {5.7}Constructing the Effective Amplitudes $\setbox \z@ \hbox {\mathsurround \z@ $\textstyle A$}\mathaccent "0365{A}_{2B}$ and $\setbox \z@ \hbox {\mathsurround \z@ $\textstyle A$}\mathaccent "0365{A}_{12B}$}{78}{subsection.5.7}%
+\contentsline {subsection}{\numberline {5.8}Transformation to the Lorentz-Invariant Variable Space}{80}{subsection.5.8}%
+\contentsline {subsection}{\numberline {5.9}Numerical Results and Parity Constraints of the Extracted Amplitudes}{81}{subsection.5.9}%
+\contentsline {subsubsection}{\numberline {5.9.1}Amplitude Profiles at $\hat {\zeta }=0.090772$ ($P_L = -1$)}{81}{subsubsection.5.9.1}%
+\contentsline {subsubsection}{\numberline {5.9.2}Amplitude Profiles at $\hat {\zeta }=0.294367$ ($P_L = -2$)}{84}{subsubsection.5.9.2}%
+\contentsline {subsubsection}{\numberline {5.9.3}Amplitude Profiles at $\hat {\zeta }=0.539684$ ($P_L = -3$)}{86}{subsubsection.5.9.3}%
+\contentsline {subsubsection}{\numberline {5.9.4}Amplitude Profiles at $\hat {\zeta }=0.785756$ ($P_L = -4$)}{88}{subsubsection.5.9.4}%
+\contentsline {section}{\numberline {6}FITTING METHODOLOGIES AND STABILITY ANALYSIS}{91}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Discretization Effects and Short-Distance Data Exclusion}{92}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Failure of Simple Gaussian Model}{93}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Physics-Informed Symbolic Regression via PySR}{94}{subsection.6.3}%
+\contentsline {subsubsection}{\numberline {6.3.1}Expression Search and Configuration}{95}{subsubsection.6.3.1}%
+\contentsline {subsubsection}{\numberline {6.3.2}The Physics-Informed Custom Loss Function}{95}{subsubsection.6.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.3}Pareto Front of Discovered Models}{97}{subsubsection.6.3.3}%
+\contentsline {subsection}{\numberline {6.4}Systematic Exploration of the Power-Law Model}{101}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Candidate Selection}{103}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}Simultaneous Fitting Strategy}{106}{subsection.6.6}%
+\contentsline {subsubsection}{\numberline {6.6.1}Simultaneous Fit with Full Covariance Matrix}{107}{subsubsection.6.6.1}%
+\contentsline {subsubsection}{\numberline {6.6.2}Simultaneous Fit Results for $\ensuremath {\boldsymbol {P}}\cdot a\hat {L}/(2\pi )=\{-1,0,0\}$}{108}{subsubsection.6.6.2}%
+\contentsline {subsubsection}{\numberline {6.6.3}Simultaneous Fit Results for $\ensuremath {\boldsymbol {P}}\cdot a\hat {L}/(2\pi )=\{-2,0,0\}$}{112}{subsubsection.6.6.3}%
+\contentsline {subsubsection}{\numberline {6.6.4}Simultaneous Fit Results for $\ensuremath {\boldsymbol {P}}\cdot a\hat {L}/(2\pi )=\{-3,0,0\}$}{115}{subsubsection.6.6.4}%
+\contentsline {subsubsection}{\numberline {6.6.5}Simultaneous Fit Results for $\ensuremath {\boldsymbol {P}}\cdot a\hat {L}/(2\pi )=\{-4,0,0\}$}{119}{subsubsection.6.6.5}%
+\contentsline {subsection}{\numberline {6.7}Test for Factorization in $(P\cdot b)$ and $b^2$}{122}{subsection.6.7}%
+\contentsline {subsubsection}{\numberline {6.7.1}Ratio Test on the Lattice Data}{122}{subsubsection.6.7.1}%
+\contentsline {subsubsection}{\numberline {6.7.2}Rejection of Separable Longitudinal and Transverse Factorization}{126}{subsubsection.6.7.2}%
+\contentsline {section}{\numberline {7}EXTRAPOLATIONS TO THE PHYSICAL LIMIT}{131}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Motivation for the $\hat {\zeta } \to \infty $ Extrapolation}{131}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Extrapolation at fit-parameters level}{131}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Testing Factorization in $x$ and $|b_T|$ at the Physical Limit}{135}{subsection.7.3}%
+\contentsline {subsubsection}{\numberline {7.3.1}Quantifying the Distance from a Factorized Form}{136}{subsubsection.7.3.1}%
+\contentsline {subsubsection}{\numberline {7.3.2}Factorization Test for the Sivers Shift}{137}{subsubsection.7.3.2}%
+\contentsline {subsubsection}{\numberline {7.3.3}Factorization Test at the Amplitude Level}{139}{subsubsection.7.3.3}%
+\contentsline {section}{\numberline {8}CONCLUSION}{144}{section.8}%
+\contentsline {section}{\numberline {A}QLUA: Gamma $\Gamma (n)$}{145}{appendix.A}%
+\contentsline {section}{REFERENCES}{146}{section*.101}%

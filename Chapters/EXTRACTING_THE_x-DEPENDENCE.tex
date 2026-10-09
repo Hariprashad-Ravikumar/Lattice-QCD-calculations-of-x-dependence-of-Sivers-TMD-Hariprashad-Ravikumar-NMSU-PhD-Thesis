@@ -482,7 +482,7 @@ To separate the real and imaginary amplitude contributions analytically, we spli
       \rule{0pt}{16pt} -  \mN  \frac{|\vec{P}^1|}{E_N} \bvec^2  \tilde a^{\text{Re}}_{12}- \frac{  \mN^3}{E_N}  \bvec^2 \eta v^1  \tilde b^{\text{Re}}_8+ \frac{ \mN^3}{E_N}  |\vec{P}^1| \bvec^2 \eta^2 (v^3)^2 \tilde b^{\text{Re}}_{10}+\tilde a^{\text{Im}}_2
     \end{pmatrix}
 \end{align}
-Evaluating the system for the negated separation ($-b^1$) flips the signs of selected terms according to the parity constraints of Eq.~\eqref{eq-ReIm-parity}. By construction, the imaginary parts of the amplitudes are odd functions of $b^1$ ($\tilde{A}^{\text{Im}}_i=\tilde{A}^{\text{(b-odd})}_i=\tilde{A}^{\text{($b^1$-odd})}_i$ and  $\tilde{B}^{\text{Im}}_i=\tilde{B}^{\text{(b-odd})}_i=\tilde{B}^{\text{($b^1$-odd})}_i$). Applying these parity reversals yields the conjugate matrix:
+Evaluating the system for the negated separation ($-b^1$) flips the signs of selected terms according to the parity constraints of Eq.~\eqref{eq-ReIm-parity}. By construction, the imaginary parts of the amplitudes are odd functions of $b^1$ ($\tAmp_i^{\text{Im}}=\tAmp_i^{\text{(b-odd)}}=\tAmp_i^{\text{($b^1$-odd)}}$ and  $\tBmp_i^{\text{Im}}=\tBmp_i^{\text{(b-odd)}}=\tBmp_i^{\text{($b^1$-odd)}}$). Applying these parity reversals yields the conjugate matrix:
 \begin{align}
     \begin{pmatrix}
         \rule{0pt}{16pt} \text{Re}\{ R_{\Gamma(1)}\}^{[-b^1]} \\
@@ -699,13 +699,13 @@ Figures \ref{fig:A2B_amplitudes_P1} through \ref{fig:combined_eta8_P1} show the 
     \centering
     \begin{tabular}{cc}
         % Column Headers
-        \textbf{$\widetilde{A}^{Re}_{2B}$} & \textbf{$\widetilde{A}^{Im}_{2B}$} \\[2ex]
+        \textbf{$\tAmp_{2B}^{\text{Re}}$} & \textbf{$\tAmp_{2B}^{\text{Im}}$} \\[2ex]
         \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ReA2B_PL\PLval_3D.pdf} &
         \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ImA2B_PL\PLval_3D.pdf} \\[2ex]
         \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ReA2B_Pb_bsq_PL\PLval_3D.pdf} &
         \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ImA2B_Pb_bsq_PL\PLval_3D.pdf} \\
     \end{tabular}
-    \caption{Real and imaginary parts of the $\widetilde{A}_{2B}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space.}
+    \caption{Real and imaginary parts of the $\tAmp_{2B}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space.}
     \label{fig:A2B_amplitudes_P1}
 \end{figure}
 
@@ -713,13 +713,13 @@ Figures \ref{fig:A2B_amplitudes_P1} through \ref{fig:combined_eta8_P1} show the 
     \centering
     \begin{tabular}{cc}
         % Header
-        \textbf{$\widetilde{A}^{Re}_{12B}$} & \textbf{$\widetilde{A}^{Im}_{12B}$} \\[2ex]
+        \textbf{$\tAmp_{12B}^{\text{Re}}$} & \textbf{$\tAmp_{12B}^{\text{Im}}$} \\[2ex]
         \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ReA12B_PL\PLval_3D.pdf} &
         \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ImA12B_PL\PLval_3D.pdf} \\[2ex]
         \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ReA12B_Pb_bsq_PL\PLval_3D.pdf} &
         \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ImA12B_Pb_bsq_PL\PLval_3D.pdf} \\
     \end{tabular}
-    \caption{Real and imaginary parts of the $\widetilde{A}_{12B}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space.}
+    \caption{Real and imaginary parts of the $\tAmp_{12B}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space.}
     \label{fig:A12B_amplitude_P1}
 \end{figure}
 
@@ -729,7 +729,7 @@ Figures \ref{fig:A2B_amplitudes_P1} through \ref{fig:combined_eta8_P1} show the 
         \includegraphics[width=0.9\linewidth]{plots/Amps_Fit/Combined_eta8_PL\PLval_2D.pdf} \\
         \includegraphics[width=0.9\linewidth]{plots/Amps_Fit/Combined_Pb_bsq_eta8_PL\PLval_2D.pdf} \\
     \end{tabular}
-    \caption{$\widetilde{A}^{Re}_{2B}$, $\widetilde{A}^{Im}_{2B}$, $\widetilde{A}^{Re}_{12B}$ \& $\widetilde{A}^{Im}_{12B}$  amplitudes for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ at fixed $\eta|\vect{v}|/a=8$. The top two rows display the $(b_{L}/a,b_{T}/a)-$space, while the bottom two rows display the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2)-$space. Notice the lack of discernible signal in $\widetilde{A}^{Im}_{12B}$.}
+    \caption{$\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$, $\tAmp_{12B}^{\text{Re}}$ \& $\tAmp_{12B}^{\text{Im}}$  amplitudes for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ at fixed $\eta|\vect{v}|/a=8$. The top two rows display the $(b_{L}/a,b_{T}/a)-$space, while the bottom two rows display the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2)-$space. Notice the lack of discernible signal in $\tAmp_{12B}^{\text{Im}}$.}
     \label{fig:combined_eta8_P1}
 \end{figure}
 
@@ -742,13 +742,13 @@ Figures \ref{fig:A2B_amplitudes_P2} through \ref{fig:combined_eta8_P2} show the 
     \centering
     \begin{tabular}{cc}
         % Column Headers
-        \textbf{$\widetilde{A}^{Re}_{2B}$} & \textbf{$\widetilde{A}^{Im}_{2B}$} \\[2ex]
+        \textbf{$\tAmp_{2B}^{\text{Re}}$} & \textbf{$\tAmp_{2B}^{\text{Im}}$} \\[2ex]
         \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ReA2B_PL\PLval_3D.pdf} &
         \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ImA2B_PL\PLval_3D.pdf} \\[2ex]
         \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ReA2B_Pb_bsq_PL\PLval_3D.pdf} &
         \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ImA2B_Pb_bsq_PL\PLval_3D.pdf} \\
     \end{tabular}
-    \caption{Real and imaginary parts of the $\widetilde{A}_{2B}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space.}
+    \caption{Real and imaginary parts of the $\tAmp_{2B}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space.}
     \label{fig:A2B_amplitudes_P2}
 \end{figure}
 
@@ -756,13 +756,13 @@ Figures \ref{fig:A2B_amplitudes_P2} through \ref{fig:combined_eta8_P2} show the 
     \centering
     \begin{tabular}{cc}
         % Header
-        \textbf{$\widetilde{A}^{Re}_{12B}$} & \textbf{$\widetilde{A}^{Im}_{12B}$} \\[2ex]
+        \textbf{$\tAmp_{12B}^{\text{Re}}$} & \textbf{$\tAmp_{12B}^{\text{Im}}$} \\[2ex]
         \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ReA12B_PL\PLval_3D.pdf} &
         \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ImA12B_PL\PLval_3D.pdf} \\[2ex]
         \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ReA12B_Pb_bsq_PL\PLval_3D.pdf} &
         \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ImA12B_Pb_bsq_PL\PLval_3D.pdf} \\
     \end{tabular}
-    \caption{Real and imaginary parts of the $\widetilde{A}_{12B}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space.}
+    \caption{Real and imaginary parts of the $\tAmp_{12B}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space.}
     \label{fig:A12B_amplitude_P2}
 \end{figure}
 
@@ -772,7 +772,7 @@ Figures \ref{fig:A2B_amplitudes_P2} through \ref{fig:combined_eta8_P2} show the 
         \includegraphics[width=0.9\linewidth]{plots/Amps_Fit/Combined_eta8_PL\PLval_2D.pdf} \\
         \includegraphics[width=0.9\linewidth]{plots/Amps_Fit/Combined_Pb_bsq_eta8_PL\PLval_2D.pdf} \\
     \end{tabular}
-    \caption{$\widetilde{A}^{Re}_{2B}$, $\widetilde{A}^{Im}_{2B}$, $\widetilde{A}^{Re}_{12B}$ \& $\widetilde{A}^{Im}_{12B}$  amplitudes for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ at fixed $\eta|\vect{v}|/a=8$. The top two rows display the $(b_{L}/a,b_{T}/a)-$space, while the bottom two rows display the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2)-$space.}
+    \caption{$\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$, $\tAmp_{12B}^{\text{Re}}$ \& $\tAmp_{12B}^{\text{Im}}$  amplitudes for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ at fixed $\eta|\vect{v}|/a=8$. The top two rows display the $(b_{L}/a,b_{T}/a)-$space, while the bottom two rows display the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2)-$space.}
     \label{fig:combined_eta8_P2}
 \end{figure}
 
@@ -785,13 +785,13 @@ Figures \ref{fig:A2B_amplitudes_P3} through \ref{fig:combined_eta8_P3} give the 
     \centering
     \begin{tabular}{cc}
         % Column Headers
-        \textbf{$\widetilde{A}^{Re}_{2B}$} & \textbf{$\widetilde{A}^{Im}_{2B}$} \\[2ex]
+        \textbf{$\tAmp_{2B}^{\text{Re}}$} & \textbf{$\tAmp_{2B}^{\text{Im}}$} \\[2ex]
         \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ReA2B_PL\PLval_3D.pdf} &
         \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ImA2B_PL\PLval_3D.pdf} \\[2ex]
         \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ReA2B_Pb_bsq_PL\PLval_3D.pdf} &
         \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ImA2B_Pb_bsq_PL\PLval_3D.pdf} \\
     \end{tabular}
-    \caption{Real and imaginary parts of the $\widetilde{A}_{2B}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space.}
+    \caption{Real and imaginary parts of the $\tAmp_{2B}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space.}
     \label{fig:A2B_amplitudes_P3}
 \end{figure}
 
@@ -799,13 +799,13 @@ Figures \ref{fig:A2B_amplitudes_P3} through \ref{fig:combined_eta8_P3} give the 
     \centering
     \begin{tabular}{cc}
         % Header
-        \textbf{$\widetilde{A}^{Re}_{12B}$} & \textbf{$\widetilde{A}^{Im}_{12B}$} \\[2ex]
+        \textbf{$\tAmp_{12B}^{\text{Re}}$} & \textbf{$\tAmp_{12B}^{\text{Im}}$} \\[2ex]
         \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ReA12B_PL\PLval_3D.pdf} &
         \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ImA12B_PL\PLval_3D.pdf} \\[2ex]
         \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ReA12B_Pb_bsq_PL\PLval_3D.pdf} &
         \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ImA12B_Pb_bsq_PL\PLval_3D.pdf} \\
     \end{tabular}
-    \caption{Real and imaginary parts of the $\widetilde{A}_{12B}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space.}
+    \caption{Real and imaginary parts of the $\tAmp_{12B}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space.}
     \label{fig:A12B_amplitude_P3}
 \end{figure}
 
@@ -815,7 +815,7 @@ Figures \ref{fig:A2B_amplitudes_P3} through \ref{fig:combined_eta8_P3} give the 
         \includegraphics[width=0.9\linewidth]{plots/Amps_Fit/Combined_eta8_PL\PLval_2D.pdf} \\
         \includegraphics[width=0.9\linewidth]{plots/Amps_Fit/Combined_Pb_bsq_eta8_PL\PLval_2D.pdf} \\
     \end{tabular}
-    \caption{$\widetilde{A}^{Re}_{2B}$, $\widetilde{A}^{Im}_{2B}$, $\widetilde{A}^{Re}_{12B}$ \& $\widetilde{A}^{Im}_{12B}$  amplitudes for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ at fixed $\eta|\vect{v}|/a=8$. The top two rows display the $(b_{L}/a,b_{T}/a)-$space, while the bottom two rows display the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2)-$space.}
+    \caption{$\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$, $\tAmp_{12B}^{\text{Re}}$ \& $\tAmp_{12B}^{\text{Im}}$  amplitudes for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ at fixed $\eta|\vect{v}|/a=8$. The top two rows display the $(b_{L}/a,b_{T}/a)-$space, while the bottom two rows display the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2)-$space.}
     \label{fig:combined_eta8_P3}
 \end{figure}
 
@@ -828,13 +828,13 @@ Figures \ref{fig:A2B_amplitudes_P4} through \ref{fig:combined_eta8_P4} complete 
     \centering
     \begin{tabular}{cc}
         % Column Headers
-        \textbf{$\widetilde{A}^{Re}_{2B}$} & \textbf{$\widetilde{A}^{Im}_{2B}$} \\[2ex]
+        \textbf{$\tAmp_{2B}^{\text{Re}}$} & \textbf{$\tAmp_{2B}^{\text{Im}}$} \\[2ex]
         \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ReA2B_PL\PLval_3D.pdf} &
         \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ImA2B_PL\PLval_3D.pdf} \\[2ex]
         \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ReA2B_Pb_bsq_PL\PLval_3D.pdf} &
         \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ImA2B_Pb_bsq_PL\PLval_3D.pdf} \\
     \end{tabular}
-    \caption{Real and imaginary parts of the $\widetilde{A}_{2B}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space.}
+    \caption{Real and imaginary parts of the $\tAmp_{2B}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space.}
     \label{fig:A2B_amplitudes_P4}
 \end{figure}
 
@@ -842,13 +842,13 @@ Figures \ref{fig:A2B_amplitudes_P4} through \ref{fig:combined_eta8_P4} complete 
     \centering
     \begin{tabular}{cc}
         % Header
-        \textbf{$\widetilde{A}^{Re}_{12B}$} & \textbf{$\widetilde{A}^{Im}_{12B}$} \\[2ex]
+        \textbf{$\tAmp_{12B}^{\text{Re}}$} & \textbf{$\tAmp_{12B}^{\text{Im}}$} \\[2ex]
         \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ReA12B_PL\PLval_3D.pdf} &
         \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ImA12B_PL\PLval_3D.pdf} \\[2ex]
         \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ReA12B_Pb_bsq_PL\PLval_3D.pdf} &
         \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ImA12B_Pb_bsq_PL\PLval_3D.pdf} \\
     \end{tabular}
-    \caption{Real and imaginary parts of the $\widetilde{A}_{12B}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space.}
+    \caption{Real and imaginary parts of the $\tAmp_{12B}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space.}
     \label{fig:A12B_amplitude_P4}
 \end{figure}
 
@@ -858,7 +858,7 @@ Figures \ref{fig:A2B_amplitudes_P4} through \ref{fig:combined_eta8_P4} complete 
         \includegraphics[width=0.9\linewidth]{plots/Amps_Fit/Combined_eta8_PL\PLval_2D.pdf} \\
         \includegraphics[width=0.9\linewidth]{plots/Amps_Fit/Combined_Pb_bsq_eta8_PL\PLval_2D.pdf} \\
     \end{tabular}
-    \caption{$\widetilde{A}^{Re}_{2B}$, $\widetilde{A}^{Im}_{2B}$, $\widetilde{A}^{Re}_{12B}$ \& $\widetilde{A}^{Im}_{12B}$  amplitudes for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ at fixed $\eta|\vect{v}|/a=8$. The top two rows display the $(b_{L}/a,b_{T}/a)-$space, while the bottom two rows display the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2)-$space.}
+    \caption{$\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$, $\tAmp_{12B}^{\text{Re}}$ \& $\tAmp_{12B}^{\text{Im}}$  amplitudes for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ at fixed $\eta|\vect{v}|/a=8$. The top two rows display the $(b_{L}/a,b_{T}/a)-$space, while the bottom two rows display the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2)-$space.}
     \label{fig:combined_eta8_P4}
 \end{figure}
 

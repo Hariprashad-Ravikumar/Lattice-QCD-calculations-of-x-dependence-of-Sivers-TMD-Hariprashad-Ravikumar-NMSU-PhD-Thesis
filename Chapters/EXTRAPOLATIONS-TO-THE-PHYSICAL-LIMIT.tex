@@ -8,7 +8,7 @@ Section~\ref{sec:zetahat_extrapolation_motivation} shows that the amplitudes, th
 
 Section~\ref{sec:fitting_methodologies} established stable global simultaneous fits to the invariant amplitudes $\tAmp_{2B}$ and $\tAmp_{12B}$ at each of our four simulated nucleon momenta, corresponding to the finite Collins-Soper parameters $\hat\zeta = 0.090772,\ 0.294367,\ 0.539684,\ 0.785756$ for $P_L=-1,-2,-3,-4$ respectively (Table~\ref{tab:zeta_directions}). As discussed in Section~\ref{sec:collins_soper_parameter}, these finite-$\hat\zeta$ results follow from the space-like staple direction that our Euclidean lattice geometry requires; the physical light-cone TMDs are recovered only in the limit $\hat\zeta \to \infty$. To compare our lattice results with phenomenological extractions of the Sivers function, we must therefore extrapolate each finite-momentum result to this physical limit.
 
-Figure~\ref{fig:zetahat_discrete_slices} shows why we need this extrapolation. At fixed transverse quark separation $|b_T| = 3a \approx 0.34$ fm, we evaluate the reconstructed amplitudes $\tAmp_{2B}^{\text{Re}}$ and $i\tAmp_{2B}^{\text{Im}}$, the corresponding unpolarized and Sivers TMD combinations $\tilde f_1^{(0)} = 2\tAmp_{2B}$ and $\tilde f_{1T}^{\perp(1)} = -2\tAmp_{12B}$, and the resulting Sivers shift $\langle k_y \rangle_{TU}$ and $x\langle k_y \rangle_{TU}$, as continuous functions of $x$ at each of our four simulated momenta. Plotted against $1/\hat\zeta$, all six quantities vary systematically with the momentum. None of our finite lattice momenta has reached the physical limit, so the results can be interpreted physically only after the extrapolation to $1/\hat\zeta \to 0$ carried out in the rest of this chapter.
+Figure~\ref{fig:zetahat_discrete_slices} shows why we need this extrapolation. At fixed transverse quark separation $|b_T| = 3a \approx 0.34$ fm, we evaluate the reconstructed amplitudes $\tAmp^{[x]\text{Re}}_{2B}$ and $i\tAmp^{[x]\text{Im}}_{2B}$, the corresponding unpolarized and Sivers TMD combinations $\tilde f_1^{(0)} = 2\tAmp^{[x]}_{2B}$ and $\tilde f_{1T}^{\perp(1)} = -2\tAmp^{[x]\text{Re}}_{12B}$, and the resulting Sivers shift $\langle k_y \rangle_{TU}$ and $x\langle k_y \rangle_{TU}$, as continuous functions of $x$ at each of our four simulated momenta. Plotted against $1/\hat\zeta$, all six quantities vary systematically with the momentum. None of our finite lattice momenta has reached the physical limit, so the results can be interpreted physically only after the extrapolation to $1/\hat\zeta \to 0$ carried out in the rest of this chapter.
 
 \begin{figure}[h!]
     \centering
@@ -23,7 +23,7 @@ Figure~\ref{fig:zetahat_discrete_slices} shows why we need this extrapolation. A
 The lowest simulated momentum, $P_L=-1$ ($\hat\zeta = 0.090772$), sits too close to the origin in $1/\hat\zeta$ to resolve the curvature required to anchor an extrapolation; including it risks biasing the fit away from the true asymptotic ($\hat\zeta \to \infty$) behavior rather than constraining it. We therefore exclude $P_L=-1$ and extrapolate using only the three higher, better-separated momenta $P_L = -2,-3,-4$.
 
 Rather than extrapolate the amplitudes point by point in $x$, we extrapolate each of the twelve parameters of the global simultaneous-fit models directly: the four parameters $\{a,c,d,j\}$ appearing in each of the coupled Lorentzian models for $\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$, and $\tAmp_{12B}^{\text{Re}}$ (Eq.~(\ref{eq:model_ReA2B})-(\ref{eq:model_ImA2B})).
-% TODO(Hari): the global fit also has f, k1, k2 (Fig. cov_matrix_2d_P1). State how they enter the extrapolation (f cancels in the Sivers shift, but what about the amplitude plots, and how is c(eta) with k1, k2 evaluated?).
+% TODO(Hari): the global fit also has f, k1, k2 (Fit_Table_PL-1). State how they enter the extrapolation (f cancels in the Sivers shift, but what about the amplitude plots, and how is c(eta) with k1, k2 evaluated?).
 In these models $c$ multiplies $b_L^2 = (P\cdot b)^2/P_L^2$ and $a_{\text{im}}$ multiplies $b_L = (P\cdot b)/(-P_L)$, so the parameters $c_{\text{re}}$, $c_{\text{im}}$, and $c_{\text{reA12B}}$ are first rescaled by $1/P_L^2$ and $a_{\text{im}}$ by $1/P_L$. After rescaling they multiply powers of the invariant $P\cdot b$ directly (up to an overall sign for $a_{\text{im}}$), so all three momenta can be fit on a common footing. For the resulting $\hat\zeta$-dependence of each rescaled parameter, we tested two functional forms,
 \begin{equation}
     p(\hat\zeta) = c + \frac{d}{\hat\zeta} \qquad \text{and} \qquad p(\hat\zeta) = c + \frac{d}{\hat\zeta^2} \ ,
@@ -43,45 +43,44 @@ Reconstructing the amplitudes from these twelve extrapolated parameters gives th
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.8\linewidth]{SimultaneousFitsCov/extrapolation_para_level/Extrapolated_AmpLevel_P234_Sivers_1_over_zetahat_sq_bmin3_eta610_b29.0.pdf}
-    \caption{Unpolarized and Sivers TMD amplitudes reconstructed from the extrapolated ($\hat\zeta\to\infty$) fit parameters of Fig.~\ref{fig:param_extrapolation_zetahat}, evaluated as continuous functions of $x$ at fixed transverse separation $|b_T| = 3a \approx 0.34$ fm: $\tAmp_{2B}^{\text{Re}}$, $i\tAmp_{2B}^{\text{Im}}$, the full unpolarized combination $\tilde f_1^{(0)}=2\tAmp_{2B}$, the Sivers combination $\tilde f_{1T}^{\perp(1)}=-2\tAmp_{12B}^{\text{Re}}$, and the resulting Sivers shift $\langle k_y \rangle_{TU}$ and $x\langle k_y \rangle_{TU}$, the latter two restricted to the quark region $x\ge0$. Shaded bands are the Jackknife uncertainty propagated from the twelve extrapolated parameters.}
+    \caption{Unpolarized and Sivers TMD amplitudes reconstructed from the extrapolated ($\hat\zeta\to\infty$) fit parameters of Fig.~\ref{fig:param_extrapolation_zetahat}, evaluated as continuous functions of $x$ at fixed transverse separation $|b_T| = 3a \approx 0.34$ fm: $\tAmp^{[x]\text{Re}}_{2B}$, $i\tAmp^{[x]\text{Im}}_{2B}$, the full unpolarized combination $\tilde f_1^{(0)}=2\tAmp^{[x]}_{2B}$, the Sivers combination $\tilde f_{1T}^{\perp(1)}=-2\tAmp^{[x]\text{Re}}_{12B}$, and the resulting Sivers shift $\langle k_y \rangle_{TU}$ and $x\langle k_y \rangle_{TU}$, the latter two restricted to the quark region $x\ge0$. Shaded bands are the Jackknife uncertainty propagated from the twelve extrapolated parameters.}
     \label{fig:extrapolated_amplitude_level}
 \end{figure}
 
-Table~\ref{tab:numerical_integration_fourier} lists the corresponding numerical Fourier-transform integrals at $|b_T|=3a\approx0.34$ fm, evaluated over the full range $x\in\{-\infty,\infty\}$ as well as the restricted ranges $\{-1,1\}$, $\{-1,0\}$, and $\{0,1\}$ used to isolate, respectively, the quark-plus-antiquark, antiquark, and quark contributions to the $x$-moments $\tilde f_1^{[1](0)}$ and $\tilde f_{1T}^{\perp[1](1)}$.
+Table~\ref{tab:numerical_integration_fourier} lists the corresponding numerical Fourier-transform integrals at $|b_T|=3a\approx0.34$ fm, evaluated over the full range $x\in\{-\infty,\infty\}$ as well as the restricted ranges $\{-1,1\}$, $\{-1,0\}$, and $\{0,1\}$ used to isolate, respectively, the quark-plus-antiquark, antiquark, and quark contributions to the $x$-integrals $\int dx\,\tilde f_1^{(0)}$ and $\int dx\,\tilde f_{1T}^{\perp(1)}$.
 
 \begin{table}[h!]
     \centering
     \renewcommand{\arraystretch}{1.5}
     \caption{Numerical integration of the Fourier-transform integrals at $|b_T| = 3a \approx 0.34$ fm, evaluated using the extrapolated ($\hat\zeta\to\infty$) amplitudes of Fig.~\ref{fig:extrapolated_amplitude_level}, over the full range and three restricted $x$-ranges isolating the quark, antiquark, and combined contributions.}
-    % TODO(Hari): define the notation \tilde f^{[1](0)} and \tilde f_{1T}^{\perp[1](1)} (x-integrated moments) in the text before this table.
     \label{tab:numerical_integration_fourier}
     \resizebox{\textwidth}{!}{%
     \begin{tabular}{|l|c|c|c|c|}
     \hline
     Integral & $\{-\infty,\infty\}$ & $\{-1,1\}$ & $\{-1,0\}$ & $\{0,1\}$ \\
     \hline
-    $\displaystyle\int dx\, \tAmp_{2B}^{\text{Re}}$ & $1.88(20)$ & $1.88(20)$ & $0.941(100)$ & $0.941(100)$ \\
+    $\displaystyle\int dx\, \tAmp^{[x]\text{Re}}_{2B}$ & $1.88(20)$ & $1.88(20)$ & $0.941(100)$ & $0.941(100)$ \\
     \hline
-    $\displaystyle\int dx\, (i\tAmp_{2B}^{\text{Im}})$ & $2(23)\times10^{-16}$ & $7(52)\times10^{-16}$ & $0.413(68)$ & $-0.423(72)$ \\
+    $\displaystyle\int dx\, (i\tAmp^{[x]\text{Im}}_{2B})$ & $2(23)\times10^{-16}$ & $7(52)\times10^{-16}$ & $0.413(68)$ & $-0.423(72)$ \\
     \hline
-    $\tilde f_1^{[1](0)} = 2\displaystyle\int dx\, (\tAmp_{2B}^{\text{Re}} - i\tAmp_{2B}^{\text{Im}})$ & $3.77(40)$ & $3.76(40)$ & $1.06(20)$ & $2.73(28)$ \\
+    $\displaystyle\int dx\,\tilde f_1^{(0)} = 2\displaystyle\int dx\, (\tAmp^{[x]\text{Re}}_{2B} - i\tAmp^{[x]\text{Im}}_{2B})$ & $3.77(40)$ & $3.76(40)$ & $1.06(20)$ & $2.73(28)$ \\
     \hline
-    $\tilde f_{1T}^{\perp[1](1)} = -2\displaystyle\int dx\, \tAmp_{12B}^{\text{Re}}$ & $0.76(13)$ & $0.76(13)$ & $0.379(67)$ & $0.379(67)$ \\
+    $\displaystyle\int dx\,\tilde f_{1T}^{\perp(1)} = -2\displaystyle\int dx\, \tAmp^{[x]\text{Re}}_{12B}$ & $0.76(13)$ & $0.76(13)$ & $0.379(67)$ & $0.379(67)$ \\
     \hline
-    $\mN\,\dfrac{\tilde f_{1T}^{\perp[1](1)}}{\tilde f_1^{[1](0)}}$ & $0.217(38)$ & $0.217(38)$ & $0.387(89)$ & $0.150(26)$ \\
+    $\mN\,\dfrac{\int dx\,\tilde f_{1T}^{\perp(1)}}{\int dx\,\tilde f_1^{(0)}}$ & $0.217(38)$ & $0.217(38)$ & $0.387(89)$ & $0.150(26)$ \\
     \hline
     \end{tabular}%
     }
 \end{table}
 
-Restricting the integration to $x\in\{-1,0\}$ or $\{0,1\}$ isolates the antiquark and quark contributions respectively; because $\tAmp_{2B}^{\text{Im}}$ is an odd function of $x$ while $\tAmp_{2B}^{\text{Re}}$ and $\tAmp_{12B}^{\text{Re}}$ are even, the antiquark and quark ranges give equal $\int dx\,\tAmp_{2B}^{\text{Re}}$ and $\int dx\,\tAmp_{12B}^{\text{Re}}$ but opposite-sign $\int dx\,(i\tAmp_{2B}^{\text{Im}})$, so the combined $\{-1,1\}$ integral of the imaginary term is consistent with zero within uncertainty. The integrals over the full range $\{-\infty,\infty\}$ agree with those over the physically motivated range $\{-1,1\}$ well within uncertainties. The extrapolated amplitudes therefore decay fast enough in $x$ that truncating at the light-cone-momentum-fraction cutoff is negligible.
+Restricting the integration to $x\in\{-1,0\}$ or $\{0,1\}$ isolates the antiquark and quark contributions respectively; because $\tAmp^{[x]\text{Im}}_{2B}$ is an odd function of $x$ while $\tAmp^{[x]\text{Re}}_{2B}$ and $\tAmp^{[x]\text{Re}}_{12B}$ are even, the antiquark and quark ranges give equal $\int dx\,\tAmp^{[x]\text{Re}}_{2B}$ and $\int dx\,\tAmp^{[x]\text{Re}}_{12B}$ but opposite-sign $\int dx\,(i\tAmp^{[x]\text{Im}}_{2B})$, so the combined $\{-1,1\}$ integral of the imaginary term is consistent with zero within uncertainty. The integrals over the full range $\{-\infty,\infty\}$ agree with those over the physically motivated range $\{-1,1\}$ well within uncertainties. The extrapolated amplitudes therefore decay fast enough in $x$ that truncating at the light-cone-momentum-fraction cutoff is negligible.
 
 Figure~\ref{fig:extrapolated_amplitude_3d} extends this reconstruction to the full dependence on both $x$ and transverse separation, while Fig.~\ref{fig:momenta_vs_extrapolated} compares the extrapolated result with each of the three finite momenta used to obtain it.
 
 \pagebreak
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.8\linewidth]{SimultaneousFitsCov/extrapolation_para_level/SimulFitCovMatrix-A12B-A2B-FT-3D__bmin3_eta610_PLInf.pdf}
+    \includegraphics[width=0.8\linewidth]{SimultaneousFitsCov/extrapolation_para_level/FT_xdep_3D_A2B_A12B_bmin3_eta610_PLInf.pdf}
     \caption{The same six extrapolated ($\hat\zeta\to\infty$) quantities as Fig.~\ref{fig:extrapolated_amplitude_level}, shown here as full surfaces in $x$ and transverse separation $|b_T|$ (ranging from $3a\approx0.34$ fm to $\sqrt{68}\,a\approx0.94$ fm). The joint $x$-$|b_T|$ dependence shows how the reconstructed amplitudes and the extracted Sivers shift change with transverse quark separation at the physical limit.}
     \label{fig:extrapolated_amplitude_3d}
 \end{figure}
@@ -105,10 +104,10 @@ Figures~\ref{fig:extrapolated_amplitude_3d} and~\ref{fig:momenta_vs_extrapolated
 \end{equation}
 with all of the $x$-shape carried by $F(x)$ and all of the $|b_T|$-shape by $G(|b_T|)$. Such a factorization is not automatic in our fit ansatz. Each amplitude enters only through the combination $d_X(b^2) = 1 + d_X\,b^2$ inside a Bessel function that also carries the $x$-dependence,
 \begin{equation}
-    \tAmp_X(x,b^2) \ \propto\ N_X(b^2)\ |x|^{-1/2+j_X}\ K_{\nu_X}\!\left(|x|\sqrt{d_X(b^2)/c_X}\right) \ ,
+    \tAmp^{[x]}_X(x,b^2) \ \propto\ N_X(b^2)\ |x|^{-1/2+j_X}\ K_{\nu_X}\!\left(|x|\sqrt{d_X(b^2)/c_X}\right) \ ,
 \end{equation}
 % TODO(Hari): this closed form (and nu_X, N_X) is not derived earlier in the thesis. Add the Fourier transform of the power-law model in the Fitting chapter (Simultaneous Fitting Strategy) or an appendix, and cite it here.
-so $|b_T|$ rescales the argument of the same Bessel function that carries the $x$-dependence, rather than multiplying it by an overall $x$-independent prefactor. The Sivers shift is a ratio of three such amplitudes ($\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$, $\tAmp_{12B}^{\text{Re}}$), each with its own independently fitted $(j_X,d_X)$; an exact factorization would require these parameters to coincide across the three amplitudes so that the $x$- and $|b_T|$-dependence separates. Whether the extrapolated fit comes close enough to that coincidence is a numerical question, which we answer below.
+so $|b_T|$ rescales the argument of the same Bessel function that carries the $x$-dependence, rather than multiplying it by an overall $x$-independent prefactor. The Sivers shift is a ratio of three such amplitudes ($\tAmp^{[x]\text{Re}}_{2B}$, $\tAmp^{[x]\text{Im}}_{2B}$, $\tAmp^{[x]\text{Re}}_{12B}$), each with its own independently fitted $(j_X,d_X)$; an exact factorization would require these parameters to coincide across the three amplitudes so that the $x$- and $|b_T|$-dependence separates. Whether the extrapolated fit comes close enough to that coincidence is a numerical question, which we answer below.
 
 Section~\ref{sec:factorization_metric} defines the relative distance from a factorized form, and Sections~\ref{sec:factorization_sivers_test} and~\ref{sec:factorization_amplitude_test} apply it to the Sivers shift and to the individual amplitudes.
 
@@ -221,24 +220,24 @@ Finally, to check that the $\hat\zeta\to\infty$ extrapolation itself does not in
 \subsubsection{Factorization Test at the Amplitude Level}
 \label{sec:factorization_amplitude_test}
 
-The Sivers-shift test above probes factorization of the full ratio $\langle k_y \rangle_{TU} = -m_N \tAmp_{12B}^{\text{Re}}/(\tAmp_{2B}^{\text{Re}} - i\tAmp_{2B}^{\text{Im}})$, in which some of the non-factorized behavior of the individual amplitudes could in principle cancel. We therefore repeat the same distance test of Section~\ref{sec:factorization_metric} on each extrapolated amplitude separately: $\tAmp_{12B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Re}}$, $i\tAmp_{2B}^{\text{Im}}$, and the combination $\tAmp_{2B}^{\text{Re}} - i\tAmp_{2B}^{\text{Im}}$ (proportional to $\tilde f_1^{[1](0)}$) that appears in the Sivers-shift denominator. Table~\ref{tab:factorization_amplitudes} lists the resulting relative distances, using the same $|b_T|\in[0.3421,0.9403]$ fm grid and four $x$-windows as the Sivers-shift test.
+The Sivers-shift test above probes factorization of the full ratio $\langle k_y \rangle_{TU} = -m_N \tAmp^{[x]\text{Re}}_{12B}/(\tAmp^{[x]\text{Re}}_{2B} - i\tAmp^{[x]\text{Im}}_{2B})$, in which some of the non-factorized behavior of the individual amplitudes could in principle cancel. We therefore repeat the same distance test of Section~\ref{sec:factorization_metric} on each extrapolated amplitude separately: $\tAmp^{[x]\text{Re}}_{12B}$, $\tAmp^{[x]\text{Re}}_{2B}$, $i\tAmp^{[x]\text{Im}}_{2B}$, and the combination $\tAmp^{[x]\text{Re}}_{2B} - i\tAmp^{[x]\text{Im}}_{2B}$ (proportional to $\tilde f_1^{(0)}$) that appears in the Sivers-shift denominator. Table~\ref{tab:factorization_amplitudes} lists the resulting relative distances, using the same $|b_T|\in[0.3421,0.9403]$ fm grid and four $x$-windows as the Sivers-shift test.
 
 \begin{table}[h!]
     \centering
     \renewcommand{\arraystretch}{1.4}
-    \caption{Relative distance of each extrapolated amplitude (and their combination $\tAmp_{2B}^{\text{Re}}-i\tAmp_{2B}^{\text{Im}}$) from its optimal factorized approximation, over the same $|b_T|\in[0.3421,0.9403]$ fm grid and $x$-windows as Table~\ref{tab:factorization_sivers}.}
+    \caption{Relative distance of each extrapolated amplitude (and their combination $\tAmp^{[x]\text{Re}}_{2B}-i\tAmp^{[x]\text{Im}}_{2B}$) from its optimal factorized approximation, over the same $|b_T|\in[0.3421,0.9403]$ fm grid and $x$-windows as Table~\ref{tab:factorization_sivers}.}
     \label{tab:factorization_amplitudes}
     \begin{tabular}{|l|c|c|c|c|}
     \hline
     Amplitude & $x\in[0.0,1.0]$ & $x\in[0.1,0.9]$ & $x\in[0.2,0.8]$ & $x\in[0.3,0.8]$ \\
     \hline
-    $\tAmp_{12B}^{\text{Re}}$ & $0.0804(18)$ & $0.0573(26)$ & $0.0397(24)$ & $0.0303(21)$ \\
+    $\tAmp^{[x]\text{Re}}_{12B}$ & $0.0804(18)$ & $0.0573(26)$ & $0.0397(24)$ & $0.0303(21)$ \\
     \hline
-    $\tAmp_{2B}^{\text{Re}}$ & $0.08138(65)$ & $0.0718(36)$ & $0.0581(55)$ & $0.0478(56)$ \\
+    $\tAmp^{[x]\text{Re}}_{2B}$ & $0.08138(65)$ & $0.0718(36)$ & $0.0581(55)$ & $0.0478(56)$ \\
     \hline
-    $i\tAmp_{2B}^{\text{Im}}$ & $0.107(18)$ & $0.0868(30)$ & $0.0578(28)$ & $0.0425(23)$ \\
+    $i\tAmp^{[x]\text{Im}}_{2B}$ & $0.107(18)$ & $0.0868(30)$ & $0.0578(28)$ & $0.0425(23)$ \\
     \hline
-    $\tAmp_{2B}$ & $0.1943(63)$ & $0.0926(59)$ & $0.0594(40)$ & $0.0470(47)$ \\
+    $\tAmp^{[x]}_{2B}$ & $0.1943(63)$ & $0.0926(59)$ & $0.0594(40)$ & $0.0470(47)$ \\
     \hline
     \end{tabular}
 \end{table}
@@ -266,6 +265,6 @@ Every amplitude has a nonzero relative distance from factorized form in every wi
     \label{fig:factorization_reconstruction_amplitudes}
 \end{figure}
 
-The Sivers-shift and amplitude-level tests agree. Neither the individual amplitudes nor the Sivers-shift ratio built from them is exactly factorized in $x$ and $|b_T|$, but the deviation from a factorized form is a modest, well-resolved residual and not a qualitative failure. The Sivers shift itself is factorized to within roughly $5.7$-$7.6\%$ in the relative $L_2$ sense. This is smaller than the $8$-$19\%$ residuals of the amplitudes that enter it, which points to a partial cancellation of non-factorized behavior in the ratio. The residual traces back directly to the extrapolated fit parameters: the Bessel-function order $j_{\text{im}}\approx1$ governing $\tAmp_{2B}^{\text{Im}}$ differs from $j_{\text{re}},j_{\text{reA12B}}\approx2$ governing the two real amplitudes, and the three width parameters $d_X$ are likewise resolved from one another well outside their Jackknife uncertainties. We conclude that an exactly factorized ansatz $F(x)G(|b_T|)$ would be a good, but not exact, approximation to the extracted Sivers shift.
+The Sivers-shift and amplitude-level tests agree. Neither the individual amplitudes nor the Sivers-shift ratio built from them is exactly factorized in $x$ and $|b_T|$, but the deviation from a factorized form is a modest, well-resolved residual and not a qualitative failure. The Sivers shift itself is factorized to within roughly $5.7$-$7.6\%$ in the relative $L_2$ sense. This is smaller than the $8$-$19\%$ residuals of the amplitudes that enter it, which points to a partial cancellation of non-factorized behavior in the ratio. The residual traces back directly to the extrapolated fit parameters: the Bessel-function order $j_{\text{im}}\approx1$ governing $\tAmp^{[x]\text{Im}}_{2B}$ differs from $j_{\text{re}},j_{\text{reA12B}}\approx2$ governing the two real amplitudes, and the three width parameters $d_X$ are likewise resolved from one another well outside their Jackknife uncertainties. We conclude that an exactly factorized ansatz $F(x)G(|b_T|)$ would be a good, but not exact, approximation to the extracted Sivers shift.
 
 \pagebreak
