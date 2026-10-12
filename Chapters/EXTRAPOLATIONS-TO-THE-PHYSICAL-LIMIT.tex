@@ -6,9 +6,23 @@ Section~\ref{sec:zetahat_extrapolation_motivation} shows that the amplitudes, th
 \subsection{Motivation for the \texorpdfstring{$\hat{\zeta} \to \infty$}{TEXT} Extrapolation}
 \label{sec:zetahat_extrapolation_motivation}
 
-Section~\ref{sec:fitting_methodologies} established stable global simultaneous fits to the invariant amplitudes $\tAmp_{2B}$ and $\tAmp_{12B}$ at each of our four simulated nucleon momenta, corresponding to the finite Collins-Soper parameters $\hat\zeta = 0.090772$, $0.294367$, $0.539684$, $0.785756$ for $P_L=-1,-2,-3,-4$ respectively (Table~\ref{tab:zeta_directions}). As discussed in Section~\ref{sec:collins_soper_parameter}, these finite-$\hat\zeta$ results follow from the space-like staple direction that our Euclidean lattice geometry requires; the physical light-cone TMDs are recovered only in the limit $\hat\zeta \to \infty$. To compare our lattice results with phenomenological extractions of the Sivers function, we must therefore extrapolate each finite-momentum result to this physical limit.
+Section~\ref{sec:fitting_methodologies} established stable global simultaneous fits to the invariant amplitudes $\tAmp_{2B}$ and $\tAmp_{12B}$ at each of our four simulated nucleon momenta, corresponding to the finite Collins-Soper parameters $\hat\zeta = 0.090772$, $0.294367$, $0.539684$, $0.785756$ for $P_L=-1,-2,-3,-4$ respectively (Table~\ref{tab:zeta_directions}). As discussed in Section~\ref{sec:collins_soper_parameter}, the fully quantitative predictions for, or a comparison with, 
+phenomenological and experimental TMD studies employing QCD factorization
+would require lattice data for much larger Collins-Soper parameters,
+$\hat\zeta \gg 1$.
+With $\hat \zeta^2=- (v \tcdot P)^2/(v^2\mN^2)$, the limit $\hat\zeta\rightarrow\infty$ 
+corresponds to the limit of a light-like staple direction $v$,
+or an infinite rapidity $y_v\rightarrow -\infty$ in Eq.~(\ref{eq-zeta}). 
 
-Figure~\ref{fig:zetahat_discrete_slices_amps} shows why we need this extrapolation. At fixed transverse quark separation $|b_T| = 3a \approx 0.34$ fm, we evaluate the reconstructed amplitudes $\tAmp^{[x]\text{Re}}_{2B}$ and $\tAmp^{[x]\text{Im}}_{2B}$, the corresponding unpolarized and Sivers TMD combinations $\tilde f_1^{(0)} = 2\tAmp^{[x]}_{2B}$ and $\tilde f_{1T}^{\perp(1)} = -2\tAmp^{[x]\text{Re}}_{12B}$, and the resulting Sivers shift $\langle k_y \rangle_{TU}$ and $x\langle k_y \rangle_{TU}$, as continuous functions of $x$ at each of our four simulated momenta. Plotted against $1/\hat\zeta$, all six quantities vary systematically with the momentum. None of our finite lattice momenta has reached the physical limit, so the results can be interpreted physically only after the extrapolation to $1/\hat\zeta \to 0$ carried out in the rest of this chapter.
+Figures ~\ref{fig:zetahat_discrete_slices_amps}-\ref{fig:zetahat_discrete_slices_sivers} show why we need this extrapolation. At fixed transverse quark separation $|b_T| = 3a \approx 0.34$ fm, we evaluate the reconstructed amplitudes $\tAmp^{[x]\text{Re}}_{2B}$ and $\tAmp^{[x]\text{Im}}_{2B}$, the corresponding unpolarized and Sivers TMD combinations $\tilde f_1^{(0)} = 2\tAmp^{[x]}_{2B}$ and $\tilde f_{1T}^{\perp(1)} = -2\tAmp^{[x]\text{Re}}_{12B}$, and the resulting Sivers shift $\langle k_y \rangle_{TU}$ and $x\langle k_y \rangle_{TU}$, as continuous functions of $x$ at each of our four simulated momenta. Plotted against $1/\hat\zeta$, all six quantities vary systematically with the momentum. 
+
+For the shifts shift defined in Eq.~(\ref{eq-genSivShift}), 
+where the soft factors in the TMD definitions \cite{Ji:2004wu,Aybat:2011zv,CollinsBook2011}
+cancel out, large values of $\hat\zeta$ can also be accessed through large nucleon momenta.
+Clearly, the limit of an infinite Collins-Soper parameter is in practice not accessible on the lattice, so that
+we must rely on results for a limited range of $\hat \zeta$, as in Figures ~\ref{fig:zetahat_discrete_slices_amps}-\ref{fig:zetahat_discrete_slices_sivers}.
+From the perturbative prediction for the $\zeta$ dependence, cf., e.g., Ref.~\cite{Aybat:2011zv}, we would expect that 
+the ratios of TMDs should become independent of $\hat\zeta$ as $\hat\zeta\rightarrow\infty$.
 
 \begin{figure}[h!]
     \centering
@@ -26,14 +40,14 @@ Figure~\ref{fig:zetahat_discrete_slices_amps} shows why we need this extrapolati
 
 \pagebreak
 
-\subsection{Extrapolation at fit-parameters level}
+\subsection{Extrapolation \texorpdfstring{$\hat{\zeta} \to \infty$}{TEXT}}
 \label{sec:extrap_fit_param_level}
 
 The lowest simulated momentum, $P_L=-1$ ($\hat\zeta = 0.090772$), sits too close to the origin in $1/\hat\zeta$ to resolve the curvature required to anchor an extrapolation; including it risks biasing the fit away from the true asymptotic ($\hat\zeta \to \infty$) behavior rather than constraining it. We therefore exclude $P_L=-1$ and extrapolate using only the three higher, better-separated momenta $P_L = -2,-3,-4$.
 
 Rather than extrapolate the amplitudes point by point in $x$, we extrapolate each of the twelve parameters of the global simultaneous-fit models directly: the four parameters $\{a,c,d,j\}$ appearing in each of the power-law models for $\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$, and $\tAmp_{12B}^{\text{Re}}$ (Eq.~(\ref{eq:model_ReA2B})-(\ref{eq:model_ImA2B})).
 % TODO(Hari): the global fit also has f, k1, k2 (Fit_Table_PL-1). State how they enter the extrapolation (f cancels in the Sivers shift, but what about the amplitude plots, and how is c(eta) with k1, k2 evaluated?).
-In these models $c$ multiplies $b_L^2 = (P\cdot b)^2/P_L^2$ and $a_{\text{im}}$ multiplies $b_L = (P\cdot b)/(-P_L)$, so the parameters $c_{\text{re}}$, $c_{\text{im}}$, and $c_{\text{reA12B}}$ are first rescaled by $1/P_L^2$ and $a_{\text{im}}$ by $1/P_L$. After rescaling, they multiply powers of the invariant $P\cdot b$ directly (up to an overall sign for $a_{\text{im}}$), so all three momenta can be fit on a common footing. For the resulting $\hat\zeta$-dependence of each rescaled parameter, we tested two functional forms,
+In these models $c$ multiplies $b_L^2 = (P\cdot b)^2/P_L^2$ and $a_{\text{im}}$ multiplies $b_L = (P\cdot b)/(-P_L)$, so the parameters $c_{\text{re}}$, $c_{\text{im}}$, and $c_{\text{reA12B}}$ are first rescaled by $1/P_L^2$ and $a_{\text{im}}$ by $1/P_L$. After rescaling, they multiply powers of the invariant $P\cdot b$ directly (up to an overall sign for $a_{\text{im}}$), so all three momenta can be fit on a common footing. For the resulting $\hat\zeta$-dependence of each rescaled parameter, we tested two functional forms (as explored in \cite{Engelhardt:2015xja}),
 \begin{equation}
     p(\hat\zeta) = c + \frac{d}{\hat\zeta} \qquad \text{and} \qquad p(\hat\zeta) = c + \frac{d}{\hat\zeta^2} ,
     \label{eq:zetahat_extrap_ansatz}
@@ -51,43 +65,38 @@ Reconstructing the amplitudes from these twelve extrapolated parameters gives th
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.8\linewidth]{SimultaneousFitsCov/extrapolation_para_level/Extrapolated_AmpLevel_P234_Sivers_1_over_zetahat_sq_bmin3_eta610_b29.0_Amps.pdf}
+    \includegraphics[width=1\linewidth]{SimultaneousFitsCov/extrapolation_para_level/Extrapolated_AmpLevel_P234_Sivers_1_over_zetahat_sq_bmin3_eta610_b29.0_Amps.pdf}
     \caption{Unpolarized and Sivers TMD amplitudes reconstructed from the extrapolated ($\hat\zeta\to\infty$) fit parameters of Fig.~\ref{fig:param_extrapolation_zetahat}, evaluated as continuous functions of $x$ at fixed transverse separation $|b_T| = 3a \approx 0.34$ fm: $\tAmp^{[x]\text{Re}}_{2B}$, $\tAmp^{[x]\text{Im}}_{2B}$, the full unpolarized combination $\tilde f_1^{(0)}=2\tAmp^{[x]}_{2B}$, and the Sivers combination $\tilde f_{1T}^{\perp(1)}=-2\tAmp^{[x]\text{Re}}_{12B}$. Shaded bands are the Jackknife uncertainty propagated from the twelve extrapolated parameters.}
     \label{fig:extrapolated_amplitude_level_amps}
 \end{figure}
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.8\linewidth]{SimultaneousFitsCov/extrapolation_para_level/Extrapolated_AmpLevel_P234_Sivers_1_over_zetahat_sq_bmin3_eta610_b29.0_Sivers.pdf}
+    \includegraphics[width=1\linewidth]{SimultaneousFitsCov/extrapolation_para_level/Extrapolated_AmpLevel_P234_Sivers_1_over_zetahat_sq_bmin3_eta610_b29.0_Sivers.pdf}
     \caption{Sivers shift $\langle k_y \rangle_{TU}$ and $x\langle k_y \rangle_{TU}$ built from the extrapolated amplitudes of Fig.~\ref{fig:extrapolated_amplitude_level_amps}, restricted to the quark region $x\ge0$. Shaded bands are the Jackknife uncertainty.}
     \label{fig:extrapolated_amplitude_level_sivers}
 \end{figure}
 
 Table~\ref{tab:numerical_integration_fourier} lists the corresponding numerical Fourier-transform integrals at $|b_T|=3a\approx0.34$ fm, evaluated over the full range $x\in\{-\infty,\infty\}$ as well as the restricted ranges $\{-1,1\}$, $\{-1,0\}$, and $\{0,1\}$ used to isolate, respectively, the quark-plus-antiquark, antiquark, and quark contributions to the $x$-integrals $\int dx\,\tilde f_1^{(0)}$ and $\int dx\,\tilde f_{1T}^{\perp(1)}$.
 
-\begin{table}[h!]
-    \centering
-    \renewcommand{\arraystretch}{1.5}
-    \caption{Numerical integration of the Fourier-transform integrals at $|b_T| = 3a \approx 0.34$ fm, evaluated using the extrapolated ($\hat\zeta\to\infty$) amplitudes of Fig.~\ref{fig:extrapolated_amplitude_level_amps}, over the full range and three restricted $x$-ranges isolating the quark, antiquark, and combined contributions.}
-    \label{tab:numerical_integration_fourier}
-    \resizebox{\textwidth}{!}{%
-    \begin{tabular}{|l|c|c|c|c|}
-    \hline
-    Integral & $\{-\infty,\infty\}$ & $\{-1,1\}$ & $\{-1,0\}$ & $\{0,1\}$ \\
-    \hline
-    $\displaystyle\int dx\, \tAmp^{[x]\text{Re}}_{2B}$ & $0.751(79)$ & $0.751(80)$ & $0.375(40)$ & $0.375(40)$ \\
-    \hline
-    $\displaystyle\int dx\, (\tAmp^{[x]\text{Im}}_{2B})$ & $6(96)\times10^{-17}$ & $3(24)\times10^{-16}$ & $0.165(27)$ & $-0.169(29)$ \\
-    \hline
-    $\displaystyle\int dx\,\tilde f_1^{(0)} = 2\displaystyle\int dx\, (\tAmp^{[x]\text{Re}}_{2B} - \tAmp^{[x]\text{Im}}_{2B})$ & $1.50(16)$ & $1.50(16)$ & $0.421(81)$ & $1.09(11)$ \\
-    \hline
-    $\displaystyle\int dx\,\tilde f_{1T}^{\perp(1)} = -2\displaystyle\int dx\, \tAmp^{[x]\text{Re}}_{12B}$ & $0.302(53)$ & $0.302(53)$ & $0.151(27)$ & $0.151(27)$ \\
-    \hline
-    $\mN\,\dfrac{\int dx\,\tilde f_{1T}^{\perp(1)}}{\int dx\,\tilde f_1^{(0)}}$ & $0.217(38)$ & $0.217(38)$ & $0.387(89)$ & $0.150(26)$ \\
-    \hline
-    \end{tabular}%
-    }
+\begin{table}[htpb]
+\centering
+\renewcommand{\arraystretch}{1.8}
+\caption{Numerical Integration of Fourier Transforms: $P_L=-4, |b_T| = 3a \approx 0.34$ fm, evaluated using the extrapolated ($\hat\zeta\to\infty$) amplitudes of Fig.~\ref{fig:extrapolated_amplitude_level_amps}, over the full range and three restricted $x$-ranges isolating the quark, antiquark, and combined contributions.}
+\scalebox{0.7}{\begin{tabular}{|l|c|c|c|c|}
+\hline
+Integral & $[-\infty, \infty]$ & $[-1, 1]$ & $[-1, 0]$ & $[0, 1]$ \\
+\hline
+$\int dx\, \tAmp^{[x]\text{Re}}_{2B}$ & $0.751(79)$ & $0.751(80)$ & $0.375(40)$ & $0.375(40)$ \\
+$\int dx\, (\tAmp^{[x]\text{Im}}_{2B})$ & $6(96)\times10^{-17}$ & $3(24)\times10^{-16}$ & $0.165(27)$ & $-0.169(29)$ \\
+$\int dx\, \tilde{f}_1^{(0)} = 2\int dx\, (\tAmp^{[x]\text{Re}}_{2B} - \tAmp^{[x]\text{Im}}_{2B})$ & $1.50(16)$ & $1.50(16)$ & $0.421(81)$ & $1.09(11)$  \\
+$\int dx\, \tilde{f}_{1T}^{\perp(1)} = -2\int dx\, \tAmp^{[x]\text{Re}}_{12B}$ & $0.302(53)$ & $0.302(53)$ & $0.151(27)$ & $0.151(27)$ \\
+$m_N \frac{\int dx\, \tilde{f}_{1T}^{\perp(1)}}{\int dx\, \tilde{f}_1^{(0)}}$ & $0.217(38)$ & $0.217(38)$ & $0.387(89)$ & $0.150(26)$ \\
+\hline
+\end{tabular}}
+\label{tab:numerical_integration_fourier}
 \end{table}
+
 
 Restricting the integration to $x\in\{-1,0\}$ or $\{0,1\}$ isolates the antiquark and quark contributions respectively; because $\tAmp^{[x]\text{Im}}_{2B}$ is an odd function of $x$ while $\tAmp^{[x]\text{Re}}_{2B}$ and $\tAmp^{[x]\text{Re}}_{12B}$ are even, the antiquark and quark ranges give equal $\int dx\,\tAmp^{[x]\text{Re}}_{2B}$ and $\int dx\,\tAmp^{[x]\text{Re}}_{12B}$ but opposite-sign $\int dx\,(i\tAmp^{[x]\text{Im}}_{2B})$, so the combined $\{-1,1\}$ integral of the imaginary term is consistent with zero within uncertainty. The integrals over the full range $\{-\infty,\infty\}$ agree with those over the physically motivated range $\{-1,1\}$ well within uncertainties. The extrapolated amplitudes therefore decay fast enough in $x$ that truncating at the light-cone-momentum-fraction cutoff is negligible.
 

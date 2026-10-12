@@ -1,17 +1,17 @@
 \section{TMD CORRELATOR FOR LATTICE CALCULATIONS}
 \label{sec:tmd_framework}
 
-This chapter defines the terms used in the rest of the thesis. Section~\ref{sec:tmd_definition} defines the TMD correlator as the Fourier transform of a bare non-local matrix element divided by the soft factor, and identifies the unpolarized distribution $f_1$ and the T-odd Sivers function $f_{1T}^\perp$ in its $\gamma^+$ projection. Section~\ref{sec:tmd_fourier} introduces $\vprp{b}$-dependent TMDs and their derivatives, which the lattice evaluates directly, and keeps $|\vprp{\bvec}|$ finite because $f_{1T}^{\perp(1)}(x)$ diverges without additional regularization. Section~\ref{sec:link_geometry} introduces the staple-shaped gauge link and the Collins-Soper parameter $\hat\zeta$. Section~\ref{Symmetry Constraints} lists the Lorentz, parity, time-reversal, and Hermitian conjugation transformations, parametrizes the $b$-dependent correlator in terms of the Lorentz invariant amplitudes $\tAmp_i$ and $\tBmp_i$, and uses hermiticity to show that their real and imaginary parts are even and odd in $b$. Section~\ref{sec-parametr} combines these amplitudes into $\tAmp_{2B}$ and $\tAmp_{12B}$, from which $f_1$ and $f_{1T}^\perp$ follow by Fourier transformation.
+This chapter defines the terms used in the rest of the thesis. Section~\ref{sec:tmd_definition} defines the TMD correlator as the Fourier transform of a bare non-local matrix element divided by the soft factor, and identifies the unpolarized distribution $f_1$ and the T-odd Sivers function $f_{1T}^\perp$ in its $\gamma^+$ projection. Section~\ref{sec:tmd_fourier} introduces $\vprp{b}$-dependent TMDs and their derivatives, which the lattice evaluates directly, keeping $|\vprp{\bvec}|$ finite because $f_{1}^{(0)} (x)$ and $f_{1T}^{\perp(1)}(x)$ diverge without additional regularization. Section~\ref{sec:link_geometry} introduces the staple-shaped gauge link and the Collins-Soper parameter $\hat\zeta$. Section~\ref{Symmetry Constraints} lists the Lorentz, parity, time-reversal, and Hermitian conjugation transformations, parametrizes the $b$-dependent correlator in terms of the Lorentz invariant amplitudes $\tAmp_i$ and $\tBmp_i$, and uses hermiticity to show that their real and imaginary parts are even and odd in $b$. Section~\ref{sec-parametr} combines these amplitudes into $\tAmp_{2B}$ and $\tAmp_{12B}$, from which $f_1$ and $f_{1T}^\perp$ follow by Fourier transformation.
 
 \subsection{Definition of TMDs} 
 \label{sec:tmd_definition}
 Consider a frame of reference where the nucleon has large momentum in the $z$-direction, i.e., $P^+ \gg m_N$, $\vprp{P} = 0$.
-In light cone coordinates, the components $\kei^+$,~$\vprp{\kei}$,~$\kei^-$ of the quark momentum $\kei$ scale as $P^+/m_N$,~$1$,~$m_N/P^+$, respectively, under boosts along the $z$-axis. Thus, the quark longitudinal momentum fraction $x = k^+ / P^+$ and its transverse momentum $\vprp{\kei}$ are invariant under boosts along the $z$-axis, while the $k^-$ component is suppressed. 
+In light cone coordinates, the components $\kei^+$,~$\vprp{\kei}$,~$\kei^-$ of the quark momentum $\kei$ scale as $P^+/m_N$,~$1$,~$m_N/P^+$, respectively, under boosts along the $z$-axis. Thus, the quark longitudinal momentum fraction $x = k^+ / P^+$ and the transverse momentum $\vprp{\kei}$ are invariant under boosts along the $z$-axis, while the $k^-$ component is suppressed. 
 This leads to transverse momentum-dependent parton distribution functions (TMDs), which depend on the longitudinal momentum fraction $x \equiv \kei^+ / P^+$ and the quark transverse momentum $\vprp{\kei}$. 
-The transverse momentum components $\vprp{\kei}$ describe an intrinsic motion of the quarks inside the proton that occurs independently of the momentum of the proton itself. TMDs are also an important ingredient for understanding the origin of the large angular and spin asymmetries observed in experiments such as semi-inclusive deep inelastic scattering (SIDIS) and the Drell-Yan process (DY).
+The transverse momentum components $\vprp{\kei}$ describe an intrinsic motion of the quarks inside the proton that occurs independently of the momentum of the proton itself. TMDs are an important ingredient for understanding the origin of the large angular and spin asymmetries observed in experiments such as semi-inclusive deep inelastic scattering (SIDIS) and the Drell-Yan process (DY).
 
-We construct a correlator of the general form from the gauge-invariant bilocal operator $\bar q(0) \Gamma \WlineC{\mathcal{C}_\bvec} q(\bvec)$ acting on the nucleon state $\ket{P, S}$, where $\bar q$ and $q$ are local quark field operators, and the Wilson line $\WlineC{\mathcal{C}_\bvec}$ makes the bi-local operator gauge invariant. The Fourier transform of such a position space correlator $\bra{P,S}\ \bar{q}(0)\, \Gamma\ \WlineC{\mathcal{C}_\bvec}\ q(\bvec)\ \ket{P,S}$ gives the momentum space correlator $\Phi^{[\Gamma]}(\kei,P,S;\ldots)$, or equivalently the TMDs. The Wilson
-line introduces divergences that conventional dimensional
+We construct a correlator from the gauge-invariant bilocal operator $\bar q(0) \Gamma \WlineC{\mathcal{C}_\bvec} q(\bvec)$ acting on the nucleon state $\ket{P, S}$, where $\bar q$ and $q$ are local quark field operators, and the Wilson line $\WlineC{\mathcal{C}_\bvec}$ makes the bi-local operator gauge invariant. The Fourier transform of such a position space correlator $\bra{P,S}\ \bar{q}(0)\, \Gamma\ \WlineC{\mathcal{C}_\bvec}\ q(\bvec)\ \ket{P,S}$ with respect to $b$ gives the momentum space correlator $\Phi^{[\Gamma]}(\kei,P,S;\ldots)$, or equivalently the TMDs. The Wilson
+line (to be specified in more detail below) introduces divergences that conventional dimensional
 regularization cannot treat \cite{BMush_Engelhardt2012}, so we divide by the soft factor, $\widetilde{\softf}(\bvec^2;\ldots)$, 
 \begin{align}
 	\Phi^{[\Gamma]}(\kei,P,S;\ldots)\ \equiv\ \ 
@@ -86,56 +86,21 @@ To accommodate the symmetries required to isolate the Sivers effect and its $x$ 
 	\label{eq-staplelink}
 \end{align}
 
-\usetikzlibrary{calc}
-\begin{figure}[htbp]
-  \centering
-  \begin{tikzpicture}[
-    link/.style={double, double distance=1.3pt, line width=0.45pt},
-    >=latex]
-  % --- parameters ---
-  \def\ang{35}      % staple direction (unlabeled)
-  \def\L{4.2}       % leg length |eta v|
-  \def\bx{0.30}     % b offset (set \bx=0 for a vertical connector)
-  \def\by{0.75}
-  % --- points ---
-  \coordinate (O)   at (0,0);
-  \coordinate (B)   at (\bx,\by);
-  \coordinate (V)   at (\ang:\L);
-  \coordinate (VB)  at ($(V)+(B)$);
-  % --- axes ---
-  \def\ax{5.0}      % both axes have length \ax
-  \draw[->] (-0.4,0) -- (\ax,0) node[right] {$x^+$};
-  \draw[->] (0,-0.4) -- (0,\ax) node[above] {$x^\perp$};
-  % force a square picture
-  \path[use as bounding box] (-0.7,-0.7) rectangle (\ax+0.7,\ax+0.7);
-  % --- staple: solid / dashed gap / solid on each leg ---
-  \foreach \s in {O,B}{
-    \draw[link] (\s) -- ($(\s)+(\ang:0.52*\L)$);
-    \draw[link, dash pattern=on 6pt off 4pt]
-      ($(\s)+(\ang:0.55*\L)$) -- ($(\s)+(\ang:0.72*\L)$);
-  }
-  \draw[link] ($(O)+(\ang:0.75*\L)$) -- (V) -- (VB) -- ($(B)+(\ang:0.75*\L)$);
-  % --- endpoints and labels ---
-  \fill (O) circle (2.2pt) node[below right=1pt] {$0$};
-  \fill (B) circle (2.2pt) node[above=2pt] {$b$};
-  \node[below right] at (V)  {$\eta v$};
-  \node[above left]  at (VB) {$\eta v{+}b$};
-  % --- eta -> infinity ---
-  \draw[dashed,->,thick] ($(V)!0.5!(VB)+(0.2,0)$) -- ++(\ang:1.2)
-    node[midway, sloped, below] {$\eta\to\infty$};
-  \end{tikzpicture}
-  \caption{Staple-shaped gauge link $\Wline{0, \eta v, \eta v + b, b}$. The staple points along the direction $v$, in general $v=(0,v_1,v_2,v_3)$, and the
-           limit $\eta\to\infty$ extends it.}
-  \label{fig:staple}
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.5\linewidth]{plots/kinematics_interpolation/StapleLink2.pdf}
+    \caption{Staple-shaped gauge link (\cite{BMush_Engelhardt2012}) as in SIDIS and DY.}
+    \label{fig:staple}
 \end{figure}
-Here $v$ and $b$ are both purely spatial, $v=(0,v_1,v_2,v_3)$ and $b=(0,b_1,b_2,b_3)$. The vector $v$ sets the direction of the staple and $\eta$ sets its extent. We need this off-axis staple because the $x$ dependence requires a wide scan of $P\cdot b$ space, or equivalently $b$ space. Later sections discuss this constraint in detail.
+
+In Fig. \ref{fig:staple}, the two parallel Wilson lines are connected at the far end by another straight Wilson line. The complete gauge link thus has a staple-like shape. The vector $v$ sets the direction of the staple and $\eta$ sets its extent. In this phenomenology frame, quark separation $b$ and staple extent $v$ are spacelike; in the lattice frame, however, they become purely spatial, as we discuss in the upcoming chapters. 
 
 The Lorentz-invariant Collins-Soper parameter, $\zeta \equiv 2 v \tcdot P/\sqrt{|v^2|}$, parameterizes the approach toward the physical light-like limit ($v = \nminus$). As $v$ becomes light-like, $\zeta \rightarrow \infty$; the parameter acts as an artificial scale that regulates the rapidity divergences \cite{Collins:1981uk, Idilbi:2004vb, Aybat:2011ge}. Expressing the vectors $P$ and $v$ via rapidities $y_P$ and $y_v$ (we use $P^{\pm} = \mN e^{\pm y_P} / \sqrt{2}$ and $v^+/v^- = - e^{2y_v}$), we define the dimensionless variable:
 \begin{equation}
 	\hat \zeta \equiv \zeta / 2 \mN =  \frac{v \cdot P}{\sqrt{|v^2|} \sqrt{P^2}}=  \frac{v^+P^-+v^-P^+}{\sqrt{|v^2|} \mN} = \sinh(y_P - y_v)\ ,
 	\label{eq-zeta}
 \end{equation}
-So $\hat \zeta$ measures the rapidity difference between the nucleon momentum and the Wilson line direction. This allows us to boost to a frame where $v$ is purely spatial ($v^0 = 0, y_v = 0$).
+So $\hat \zeta$ measures the rapidity difference between the nucleon momentum and the Wilson line direction. This allows us to boost to a frame where $v$ is purely spatial ($v^0 = 0, y_v = 0$), which will be suited for lattice calculations.
 
 
 \subsection{Symmetry Constraints}
@@ -320,14 +285,14 @@ For brevity, define the $x-(\bvec\tcdot P)$-Fourier-transformed, soft-factor-div
 \begin{equation}
 	\tAmp^{[x]}_i(x,\vprp{\bvec}^2) \equiv \frac{1}{\widetilde{\mathcal{S}}(-\vprp{\bvec}^2;\ldots)} \int_{-\infty}^{\infty} \frac{d(\bvec \tcdot P)}{2\pi}\, e^{ix(\bvec \tcdot P)}\, \tAmp_{i}\big(-\vprp{\bvec}^2,\bvec \tcdot P,\ldots\big)\,,
 \end{equation}
-so that, by Eq.~\eqref{eq-fourint}, $\fourint \tAmp_i = \int \frac{d^2 \vprp{\bvec}'}{(2\pi)^2}\, e^{-i\vprp{\bvec}'\tcdot\vprp{\kei}}\, \tAmp^{[x]}_i(x,\vprp{\bvec}'^2)$. Inserting $f_1 = 2\fourint\tAmp_{2B}$ into Eq.~\eqref{eq-FTMD}, we have Unpolarized TMD,
+so that, by Eq.~\eqref{eq-fourint}, $\fourint \tAmp_i = \int \frac{d^2 \vprp{\bvec}'}{(2\pi)^2}\, e^{-i\vprp{\bvec}'\tcdot\vprp{\kei}}\, \tAmp^{[x]}_i(x,\vprp{\bvec}'^2)$. Inserting $f_1 = 2\fourint\tAmp_{2B}$ into Eq.~\eqref{eq-FTMD}, we have for the unpolarized TMD,
 \begin{align}
 	\tilde f_1(x,\vprp{\bvec}^2) 
 	&= 2 \int d^2\vprp{\kei}\, e^{i\vprp{\bvec}\tcdot\vprp{\kei}} \int \frac{d^2 \vprp{\bvec}'}{(2\pi)^2}\, e^{-i\vprp{\bvec}'\tcdot\vprp{\kei}}\, \tAmp^{[x]}_{2B}(x,\vprp{\bvec}'^2) 
 	= 2 \int d^2 \vprp{\bvec}'\, \delta^{(2)}(\vprp{\bvec}-\vprp{\bvec}')\, \tAmp^{[x]}_{2B}(x,\vprp{\bvec}'^2) \nonumber\\
 	&= 2\, \tAmp^{[x]}_{2B}(x,\vprp{\bvec}^2)\,,
 \end{align}
-For Sivers TMD, on starting from $f_{1T}^\perp = 4\mN^2\,\partial_{\vprp{\kei}^2}\fourint\tAmp_{12B}$ and using $\vect{k}_j\,\partial_{\vprp{\kei}^2} = \tfrac12\,\partial_{\vect{k}_j}$, differentiate Eq.~\eqref{eq-FTMD} with respect to $\vect{b}_j$, we have
+For Sivers TMD, on starting from $f_{1T}^\perp = 4\mN^2\,\partial_{\vprp{\kei}^2}\fourint\tAmp_{12B}$ and using $\vect{k}_j\,\partial_{\vprp{\kei}^2} = \tfrac12\,\partial_{\vect{k}_j}$, differentiating Eq.~\eqref{eq-FTMD} with respect to $\vect{b}_j$, we have
 \begin{align}
 	\partial_{\vect{b}_j}\tilde f_{1T}^\perp 
 	&= \int d^2\vprp{\kei}\,(i\vect{k}_j)\,e^{i\vprp{\bvec}\tcdot\vprp{\kei}}\; 4\mN^2\,\partial_{\vprp{\kei}^2}\fourint\tAmp_{12B}
@@ -349,11 +314,11 @@ In summary, we have,
     &=-2\,\tAmp^{[x]}_{12B}(x,\vprp{\bvec}^2)\,.
 	\label{eq-xintderfttmds2}
 \end{align}
-This framework lays the groundwork for extracting its $x$-dependence. In subsequent chapters, for brevity, we may drop the soft-factor term from the above definitions, as soft factors cancel in the ratios we form. 
+This framework lays the groundwork for extracting its $x$-dependence. In subsequent chapters, for brevity, we may drop the soft-factor term from the definitions above, since it ultimately cancels in the ratios we consider.
 
 \subsection{Generalized Sivers shift from amplitudes}
 \label{sec-parametr}
-Eqs. \eqref{eq-xintderfttmds1}-\eqref{eq-xintderfttmds2} identifies $x$-dependent derivatives of Fourier-transformed TMDs with simple linear combinations of amplitudes $\tAmp_i$ and $\tBmp_i$ evaluated at the same values of $\vprp{\bvec}^2$, $\bvec \cdot P$, $\zetahat$ and $\eta v \tcdot P$. Forming ratios of these objects thus amounts to taking ratios of linear combinations of the fundamental correlators $\tilde \Phi^{[\Gamma]}_\unsub$ evaluated at the same point, i.e., with the same values of $\bvec$, $P$, and $\eta v$. For a discussion of the renormalization properties of ratios of the objects in \eqref{eq-xintderfttmds1}-\eqref{eq-xintderfttmds2}, it is thus sufficient to understand the renormalization properties of (ratios formed from) the correlators $\widetilde \Phi^{[\Gamma]}_\unsub = \frac{1}{2} \, \bra{P, S}\ \bar{q}(0)\, \Gamma\ \mathcal{U}\ q(\bvec)\ \ket{P, S} $.
+Eqs. \eqref{eq-xintderfttmds1}-\eqref{eq-xintderfttmds2} identify $x$-dependent derivatives of Fourier-transformed TMDs with simple linear combinations of amplitudes $\tAmp_i$ and $\tBmp_i$ evaluated at the same values of $\vprp{\bvec}^2$, $\bvec \cdot P$, $\zetahat$ and $\eta v \tcdot P$. Forming ratios of these objects thus amounts to taking ratios of linear combinations of the fundamental correlators $\tilde \Phi^{[\Gamma]}_\unsub$ evaluated at the same point, i.e., with the same values of $\bvec$, $P$, and $\eta v$. For a discussion of the renormalization properties of ratios of the objects in \eqref{eq-xintderfttmds1}-\eqref{eq-xintderfttmds2}, it is thus sufficient to understand the renormalization properties of (ratios formed from) the correlators $\widetilde \Phi^{[\Gamma]}_\unsub = \frac{1}{2} \, \bra{P, S}\ \bar{q}(0)\, \Gamma\ \mathcal{U}\ q(\bvec)\ \ket{P, S} $.
 
 As discussed in Refs. \cite{BMush_Engelhardt2012, Yoon:2017qzo}, analytical studies of the operator $\bar{q}(0)\, \Gamma\, \mathcal{U} q(\bvec)$ in the continuum suggest that for $\bvec^2 \neq 0$ the renormalization factors are multiplicative and $\Gamma$-independent. The basic reason is that the quark field operators are at different locations and undergo wave function renormalization separately. We will assume here that our lattice representation of $\bar{q}(0)\, \Gamma\, \mathcal{U}\, q(\bvec)$ is renormalized multiplicatively independent of $\Gamma$ as long as we keep $\vprp{b}^2$ larger than a few lattice spacings. A more detailed discussion and numerical studies of this operator's renormalization properties appear in Ref. \cite{Musch:2010ka}. Under the assumption of multiplicative renormalization, the generalized Sivers shift can only depend on $\vprp{\bvec}^2$, $P\cdot b$, $\zetahat$, and the staple extent $\eta v \tcdot P$. All other renormalization and soft-factor-related dependence cancels out in the ratio.
 
@@ -363,7 +328,7 @@ From phenomenology, the Sivers shift is the ratio defined as
 	\left. \frac{ \int d^2 \vprp{\kei}\, \vect{\kei}_y  \ \Phi^{[\gamma^+]}(x,\vprp{\kei},P,S;\ldots) }{ \int d^2 \vprp{\kei}  \phantom{\vect{\kei}_y}\ \Phi^{[\gamma^+]}(x,\vprp{\kei},P,S;\ldots) } \right|_{\displaystyle \vprp{S}=(1,0) }\, , \label{eq-sivshift}
 \end{align}
 where $\gamma^+$ projects onto the leading twist.
-In the context of the density interpretation of TMDs mentioned in section \ref{sec:tmd_definition}, the ratio above yields the average transverse momentum
+The ratio above yields the average transverse momentum
 in the $y$-direction, for quarks with a given longitudinal momentum fraction $x$ inside a proton polarized in the $x$-direction. As mentioned before, understanding $f_{1T}^{\perp(1)}$ simply as a $\vprp{\kei}$-weighted TMD is problematic, since the $\vprp{k}$-integral is expected to be UV divergent. 
 A natural way of circumventing this divergence is to generalize the Sivers shift to an expression in terms of the Fourier-transformed TMDs:
 \begin{align}

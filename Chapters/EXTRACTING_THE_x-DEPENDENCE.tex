@@ -1,7 +1,7 @@
 \section{LATTICE DATA \& EXTRACTING THE \texorpdfstring{$x-$}{TEXT}DEPENDENCE OF SIVERS SHIFT}
 \label{sec:x_dependence}
 
-This Chapter connects the lattice correlators to the $x$-dependent Sivers shift. Section~\ref{sec:sivers_shift_x} writes the Sivers shift as a ratio of Fourier transforms over $b\cdot P$ of the amplitudes $\tAmp_{12B}$ and $\tAmp_{2B}$, and shows that the real parts enter with the cosine and the imaginary parts with the sine. Section~\ref{sec:collins_soper_parameter} explains why extrapolating the Collins-Soper parameter $\hat{\zeta} \to \infty$ is needed. Sections~\ref{sec:kinematic_constraints} and~\ref{sec:lattice_parameter_space} fix the staple direction $v$ for each nucleon momentum so that we scan the whole $b\cdot P$, and describe how the correlator at the off-axis target $\eta \vect{v}/a$ is obtained by path averaging and quadratic interpolation. Section~\ref{sec:b_separation_paths} describes the quark separation vectors $\vect{b}$, and the gauge link paths that correspond to them.
+This Chapter connects the lattice correlators to the $x$-dependent Sivers shift. Section~\ref{sec:sivers_shift_x} writes the Sivers shift as a ratio of Fourier transforms over $b\cdot P$ of the amplitudes $\tAmp_{12B}$ and $\tAmp_{2B}$. Section~\ref{sec:collins_soper_parameter} explains how extrapolating the Collins-Soper parameter $\hat{\zeta} \to \infty$ is performed. Sections~\ref{sec:kinematic_constraints} and~\ref{sec:lattice_parameter_space} fix the staple direction $v$ for each nucleon momentum so that we scan the whole $b\cdot P$ range, and describe how the correlator at the off-axis target $\eta \vect{v}/a$ is obtained by path averaging and quadratic interpolation. Section~\ref{sec:b_separation_paths} describes the quark separation vectors $\vect{b}$, and the gauge link paths that correspond to them.
 
 Section~\ref{sec:solving_amplitudes} projects the correlator parametrization onto the lattice kinematics and solves for the real and imaginary amplitudes from the symmetric and antisymmetric combinations of the longitudinal $b$ data. Section~\ref{sec:effective_amplitudes} combines them into $\tAmp_{2B}$ and $\tAmp_{12B}$, and Section~\ref{sec:lorentz_mapping} maps these from $(b_L,b_T)$ to $(P\cdot b,\bvec^2)$. Section~\ref{sec:numerical_amplitudes} checks the parity of the extracted amplitudes, shows them at the four simulated momenta, and discards $\tAmp_{12B}^{\text{Im}}$, which is statistically compatible with zero.
 
@@ -38,19 +38,19 @@ Next, we extract these parity components from the discrete lattice data; Section
 \label{sec:collins_soper_parameter}
 We defined the Collins-Soper parameter $\hat{\zeta}$ in the previous Chapter. \ref{sec:tmd_framework} (Eq.~\eqref{eq-zeta}):
 \begin{equation}
-	\hat \zeta \equiv \zeta / 2 \mN =  \frac{v \cdot P}{\sqrt{|v^2|} \sqrt{P^2}},
+	\hat \zeta \equiv \zeta / 2 \mN =  \frac{v \cdot P}{\sqrt{|v^2|} \sqrt{P^2}}.
 	\label{eq-zeta-again}
 \end{equation}
 
-On the lattice, the staple direction $v$ must be space-like ($v^2 < 0$), so the Collins-Soper parameter $\hat{\zeta}$ and the physical TMD limit are recovered only by extrapolating $\hat{\zeta} \to \infty$. In practice, since $v$ is a purely spatial vector on the lattice ($v_0 = 0$), increasing $\hat{\zeta}$ requires simulating the nucleon at progressively higher spatial momenta $\vect{P}$. Tracking the evolution of the Sivers shift across multiple $\hat{\zeta}$ values is therefore necessary for phenomenological predictions.
+On the lattice, the staple direction $v$ must be space-like ($v^2 < 0$), so the physical TMD limit is recovered only by extrapolating $\hat{\zeta} \to \infty$. In practice, since $v$ is a purely spatial vector on the lattice ($v_0 = 0$), increasing $\hat{\zeta}$ requires simulating the nucleon at progressively higher spatial momenta $\vect{P}$. Tracking the evolution of the Sivers shift across multiple $\hat{\zeta}$ values is therefore necessary for phenomenological predictions.
 
 \subsection{Kinematic Constraints to scan full \texorpdfstring{$b\cdot P$}{TEXT}}
 \label{sec:kinematic_constraints}
-To perform the Fourier transform over $b \cdot P$, we require a lattice geometry with both non-zero $b \cdot P$ and zero $b \cdot P$. However, the Lorentz-invariant arguments of the amplitudes are not independent. Our chosen frame ($b^+=0, \vprp{P}=0$) enforces the constraint of Eq.~\eqref{eq-lindeprel}. Expanding the dot products in a frame where the momentum is directed along the 1-axis ($P = (E, P_1, 0, 0)$), we find:
+We now move to the frame in which the lattice calculation is performed. To perform the Fourier transform over $b \cdot P$, we require a lattice geometry with both non-zero $b \cdot P$ and zero $b \cdot P$. However, the Lorentz-invariant arguments of the amplitudes are not independent. The phenomenological frame ($b^+=0, \vprp{P}=0$) enforces the constraint of Eq.~\eqref{eq-lindeprel}. Expanding the dot products in the case where the momentum is directed along the 1-axis ($P = (E, P_1, 0, 0)$), we find:
 \begin{align}
     b_{1}|v|\left[\frac{P_{1}}{m_{N}}\left(\hat{\zeta}-\sqrt{\hat{\zeta}^2+1}\right)+\hat{\zeta}\frac{m_{N}}{P_{1}}\right]=\vec{v}_{T}\cdot\vec{b}_{T} \ .\label{constraints}
 \end{align}
-To satisfy this equation over a continuous range of $b \cdot P$ without coupling the transverse separation $\vec{b}_T$ directly to the longitudinal staple geometry, we orient the transverse separation vectors orthogonally. By choosing $\vec{v}_{T}=(0,v_{3})$ and $\vec{b}_{T}=(b_{2},0)$, the right-hand side identically vanishes ($\vec{v}_{T}\cdot\vec{b}_{T} = 0$). 
+To satisfy this equation over a continuous range of $b \cdot P$ without coupling the transverse separation $\vec{b}_T$ directly to the longitudinal staple geometry, we orient the transverse separation vectors orthogonally. By choosing $\vec{v}_{T}=(0,v_{3})$ and $\vec{b}_{T}=(b_{2},0)$, the right-hand side identically vanishes ($\vec{v}_{T}\cdot\vec{b}_{T} = 0$). This is not the only choice, but it is convenient for a lattice calculation because both $b$ and $v$ can remain in 2-dimensional lattice planes. In general, $b$ and $v$ may have to point in arbitrary directions in three-dimensional space.
 
 \subsubsection{Explicit Calculation for Hadron Momentum \texorpdfstring{$P_1=-1$}{TEXT}}
 Setting the right-hand side of Eq. \eqref{constraints} to zero implies that the bracketed term $\left[\frac{P_{1}}{m_{N}}\left(\hat{\zeta}-\sqrt{\hat{\zeta}^2+1}\right)+\hat{\zeta}\frac{m_{N}}{P_{1}}\right]$ must vanish. This fixes the required Collins-Soper parameter, up to a sign, for a given lattice momentum. Using the lattice ensemble parameters from our lattice size of $\{\hat{L}^3\times\hat{T}\}=\{32^3\times96\}$ and lattice unit of $a=0.11403\text{ fm}$, the nucleon mass and the lowest momentum mode are:
@@ -94,7 +94,7 @@ This geometric calculation is repeated over a range of nucleon momenta to increa
         $(-4,0,0)$ & $\pm 0.785756$ &$v_{1}=\pm 0.786~v_{3}$\\
         \hline
     \end{tabular}
-    \caption{Resulting Collins-Soper parameters ($\hat{\zeta}$) and the necessary geometric constraint on the staple vector components to ensure scan full $b \cdot P$.}
+    \caption{Resulting Collins-Soper parameters ($\hat{\zeta}$) and the necessary geometric constraint on the staple vector components to ensure the full $b \cdot P$ range is scanned.}
     \label{tab:zeta_directions}
 \end{table}
 
@@ -108,7 +108,7 @@ This geometric calculation is repeated over a range of nucleon momenta to increa
         $(b_{1},b_{2},0)$ & $ \eta\cdot(v_{1},0,v_{3})$, $\eta=0,\cdots,10$  & $(n,0,0)$, $n=-1,-2,-3,-4$\\
         \hline
     \end{tabular}
-    \caption{Configuration parameters for the Lattice QCD non-local matrix element extraction. Our lattice size is of $\{\hat{L}^3\times\hat{T}\}=\{32^3\times96\}$ and lattice unit is of $a=0.11403\text{ fm}$}
+    \caption{Configuration parameters for the Lattice QCD non-local matrix element extraction. Our lattice size is $\{\hat{L}^3\times\hat{T}\}=\{32^3\times96\}$ and the lattice spacing is $a=0.11403\text{ fm}$.}
     \label{tab:lattice_params}
 \end{table}
 
@@ -211,7 +211,7 @@ Once these bounding matrix elements are computed, we perform a spatial interpola
 \subsubsection{Spatial Interpolation of Off-Axis Coordinates}
 \label{sec:spatial_interpolation}
 
-Before interpolating to the off-axis target $\eta \vect{v}/a$, we must account for path degeneracy. Because the lattice gauge links are restricted to the Cartesian axes, there are multiple step-wise permutations (different side-link paths) that terminate at the same physical lattice coordinate. While these paths are geometrically equivalent at their endpoints, they correspond to different local gauge field configurations and thus exhibit distinct discretization artifacts and gauge noise. As illustrated in Figure \ref{fig:example_2path}, to improve the symmetry, we average the correlation functions evaluated over all degenerate paths that share the same endpoint. Path averaging significantly improves the signal-to-noise ratio before any interpolation.
+Before interpolating to the off-axis target $\eta \vect{v}/a$, we must account for path degeneracy. Because the lattice gauge links are restricted to the Cartesian axes, there are multiple step-wise permutations (different side-link paths) that terminate at the same physical lattice coordinate. While these paths are geometrically equivalent at their endpoints, they correspond to different local gauge field configurations and thus exhibit distinct discretization artifacts and gauge noise. As illustrated in Figure \ref{fig:example_2path}, to improve the symmetry, we average the correlation functions evaluated over all degenerate paths that share the same endpoint. Path averaging significantly improves the signal-to-noise ratio before any interpolation. It symmetry-improves the latticized TMD operators.
 
 \begin{figure}[htpb]
     \centering
@@ -257,7 +257,7 @@ A representative example of this interpolation procedure is shown in Figure \ref
 
 In addition to the staple vector $\vect{v}$, the correlation function depends on the spatial separation $\vect{b}$ between the initial and final quark fields. Recall that the real and imaginary parts of the invariant amplitudes ($\tAmp_{iB}^{\text{Re}}$ and $\tAmp_{iB}^{\text{Im}}$) are even and odd functions of the invariant dot product $b \cdot P$, respectively. 
 
-Because the nucleon momentum in our lattice setup is fixed along the $\hat{x_{1}}$-axis ($P = P_1 \hat{x_{1}}$), the longitudinal separation is directly proportional to the $\hat{x_{1}}$-component of the separation vector: $b \cdot P = -P_1 b_1$. Therefore, to isolate the real and imaginary parts of the amplitudes, we must evaluate the correlator at both positive and negative values of $b_1$. By taking the symmetric (even) and antisymmetric (odd) linear combinations of the correlators evaluated at $+b_1$ and $-b_1$, we project out the real and imaginary amplitudes required for the $x$-dependent Fourier transform. The numerical Fourier transform over $b \cdot P$ requires a wide and dense grid of the separation vector $\vect{b}$. Figure \ref{fig:b_phase_space} shows the parameter space of our calculations. The left panel shows the discrete Cartesian grid in the $b_1-b_2$ plane. The right panel shows how this grid maps onto the phenomenologically relevant invariant Variable Space spanned by $(b \cdot P)\hat{L}/(2\pi)$ and the absolute separation $|b|/a$; the mapping shifts with the target Collins-Soper parameter $\hat{\zeta}$. Where, $\hat{L}$ is the spatial lattice length $\hat{L}=32$, and $a=0.11403\text{ fm}$ is lattice unit. 
+Because the nucleon momentum in our lattice setup is fixed along the $\hat{x_{1}}$-axis ($P = P_1 \hat{x_{1}}$), the longitudinal separation is directly proportional to the $\hat{x_{1}}$-component of the separation vector: $b \cdot P = -P_1 b_1$. Therefore, to isolate the real and imaginary parts of the amplitudes, we must evaluate the correlator at both positive and negative values of $b_1$. By taking the symmetric (even) and antisymmetric (odd) linear combinations of the correlators evaluated at $+b_1$ and $-b_1$, we project out the real and imaginary amplitudes required for the $x$-dependent Fourier transform. The numerical Fourier transform over $b \cdot P$ requires a wide and dense grid of the separation vector $\vect{b}$. Figures \ref{fig:bL_bT_path}-\ref{fig:bL_bT_standard} show the parameter space of our calculations. The left panel shows the discrete Cartesian grid in the $b_1-b_2$ plane. The right panel shows how this grid maps onto the phenomenologically relevant invariant Variable Space spanned by $(b \cdot P)\hat{L}/(2\pi)$ and the absolute separation $|b|/a$; the mapping shifts with the target Collins-Soper parameter $\hat{\zeta}$. Where, $\hat{L}$ is the spatial lattice length $\hat{L}=32$, and $a=0.11403\text{ fm}$ is the lattice spacing. 
 
 \begin{figure}[htpb]
     \centering
@@ -274,8 +274,6 @@ Because the nucleon momentum in our lattice setup is fixed along the $\hat{x_{1}
         \caption{Mapping of the spatial lattice vectors into the physical invariant Variable Space $(b \cdot P/(2\pi), |b|/a)$. The trajectories diverge based on the selected target $\hat{\zeta}$.}
         \label{fig:bL_bT_standard}
     \end{minipage}
-    \caption{Coverage of the quark separation vectors across the simulated lattice volume and their corresponding physical Variable Space representation. Our lattice size is of $\{\hat{L}^3\times\hat{T}\}=\{32^3\times96\}$ and lattice unit is of $a=0.11403\text{ fm}$}
-    \label{fig:b_phase_space}
 \end{figure}
 
 Section~\ref{sec:b_gauge_links} lists the gauge link paths used to reach each $\vect{b}$, and Section~\ref{sec:b_path_averaging} averages over degenerate paths.
@@ -287,7 +285,7 @@ Constructing the direct Wilson line connecting the quark fields at $0$ and $\vec
 \begin{figure}[htpb]
     \centering
     \includegraphics[width=0.6\linewidth]{plots/kinematics_interpolation/b_gauge_links_for_table1.pdf}
-    \caption{Discrete gauge link configurations for purely transverse quark separations ($\vect{b} = \{0, b_2, 0\}$). The numerical arrays show the sequential lattice steps (e.g., `2` represents a shift in the $x_2$ direction). Where the lattice size is $\{\hat{L}^3\times\hat{T}\}=\{32^3\times96\}$ and lattice unit is $a=0.11403\text{ fm}$.}
+    \caption{Discrete gauge link configurations for purely transverse quark separations ($\vect{b} = \{0, b_2, 0\}$). The numerical arrays show the sequential lattice steps (e.g., `2` represents a shift in the $x_2$ direction). Our lattice size is $\{\hat{L}^3\times\hat{T}\}=\{32^3\times96\}$ and the lattice spacing is $a=0.11403\text{ fm}$.}
     \label{fig:b_table_transverse}
 \end{figure}
 
@@ -295,14 +293,14 @@ To access finite $b \cdot P$, we construct off-axis paths with simultaneous step
 \begin{figure}[htpb]
     \centering
     \includegraphics[width=0.6\linewidth]{plots/kinematics_interpolation/b_gauge_links_for_table2.pdf}
-        \caption{Gauge link sequences for $+b_1$ (positive longitudinal separation). Symmetric sets of step-wise gauge link paths required to access finite $\pm b \cdot P$ and isolate the real and imaginary components of the invariant amplitudes. Where the lattice size is $\{\hat{L}^3\times\hat{T}\}=\{32^3\times96\}$ and lattice unit is $a=0.11403\text{ fm}$.}
+        \caption{Gauge link sequences for $+b_1$ (positive longitudinal separation). Symmetric sets of step-wise gauge link paths required to access finite $\pm b \cdot P$ and isolate the real and imaginary components of the invariant amplitudes. Our lattice size is $\{\hat{L}^3\times\hat{T}\}=\{32^3\times96\}$ and the lattice spacing is $a=0.11403\text{ fm}$.}
         \label{fig:b_table_pos_b1}
 \end{figure}
 
 \begin{figure}[htpb]
     \centering
     \includegraphics[width=0.6\linewidth]{plots/kinematics_interpolation/b_gauge_links_for_table3.pdf}
-        \caption{Mirrored gauge link sequences for $-b_1$ (negative longitudinal separation).Symmetric sets of step-wise gauge link paths required to access finite $\pm b \cdot P$ and isolate the real and imaginary components of the invariant amplitudes. Where the lattice size is $\{\hat{L}^3\times\hat{T}\}=\{32^3\times96\}$ and lattice unit is $a=0.11403\text{ fm}$.}
+        \caption{Mirrored gauge link sequences for $-b_1$ (negative longitudinal separation).Symmetric sets of step-wise gauge link paths required to access finite $\pm b \cdot P$ and isolate the real and imaginary components of the invariant amplitudes. Our lattice size is $\{\hat{L}^3\times\hat{T}\}=\{32^3\times96\}$ and the lattice spacing is $a=0.11403\text{ fm}$.}
         \label{fig:b_table_neg_b1}
 \end{figure}
 
@@ -343,7 +341,7 @@ To extract the physical Sivers shift from the lattice, we must isolate the speci
 		~~- \mN^3 (\bvec \tcdot S) \epsilon^{\mu \nu \alpha \beta} P_\nu \bvec_\alpha \eta v_\beta\, \tilde b_9
 		-i \mN^3 (v \tcdot S) \epsilon^{\mu \nu \alpha \beta} P_\nu \bvec_\alpha \eta^2 v_\beta \tilde b_{10}
 \end{align}
-To evaluate Eq.~\eqref{eq-phitildedecomp}, we project it onto the kinematics chosen for our lattice setup. We choose a frame where the nucleon moves along the negative $\hat{1}$-axis, the spin is polarized along the $\hat{3}$-axis, and the separation and staple vectors lie in the transverse/longitudinal planes. We set $P^{\mu}=(E_N, -|\vec{P}^1|,0,0)$, $b^{\mu}=(0,b_{1},b_{2},0)$, $v^{\mu}=\pm n^{\prime}(0,v_{1},0,v_{3})$, and $S^{\mu}=(0,0,0,1)$. Expanding the sum over Lorentz indices for the temporal component ($\mu = 0$) and canceling the terms that vanish (such as $b^0 = 0$, $v^0 = 0$, and $\bvec \tcdot S = 0$), we find for each $\gamma^{\mu}$:
+To evaluate Eq.~\eqref{eq-phitildedecomp}, we project it onto the kinematics chosen for our lattice setup. We choose a frame where the nucleon moves in the negative $\hat{1}$-direction, the spin is polarized along the $\hat{3}$-axis, and the separation and staple vectors lie in the transverse/longitudinal planes. We set $P^{\mu}=(E_N, -|\vec{P}^1|,0,0)$, $b^{\mu}=(0,b_{1},b_{2},0)$, $v^{\mu}=\pm n^{\prime}(0,v_{1},0,v_{3})$, and $S^{\mu}=(0,0,0,1)$. Expanding the sum over Lorentz indices for the temporal component ($\mu = 0$) and canceling the terms that vanish (such as $b^0 = 0$, $v^0 = 0$, and $\bvec \tcdot S = 0$), we find %for each $\gamma^{\mu}$:
 \begin{align}
     \frac{1}{2}\widetilde \Phi^{[\gamma^{0}]}_{\unsub} & = 
 		P^0\, \tAmp_2 - \cancelto{0}{i \mN^2 \bvec^0\, \tAmp_3}
@@ -600,7 +598,7 @@ Recalling that $v \tcdot P = v_1 P^1 = v^1 |P^1|$ in our chosen frame, each ampl
     \Aboxed{\tAmp^{\text{Re}}_{12}=&\frac{-1}{2\mN  \bvec^2}\left[\text{Re}\{ R_{\Gamma(1)}\}^{[b^{1}\text{-even}]}+\frac{v^3}{v^1}\text{Re}\{ R_{\Gamma(4)}\}^{[b^{1}\text{-even}]}\right]}\\
     \Aboxed{\tBmp^{\text{Re}}_8=&\frac{-E_N |P^1|}{ 2\mN^3 \bvec^2 }\left[\text{Im}\{ R_{\Gamma(8)}\}^{[b^{1}\text{-even}]}+\frac{|\vec{P}^1|v^3}{E_N v^1}\text{Re}\{ R_{\Gamma(4)}\}^{[b^{1}\text{-even}]}+ 2\mN  \frac{|\vec{P}^1|}{E_N} \bvec^2  \tAmp^{\text{Re}}_{12}\right]}
 \end{align}
-Applying the same scaling factors to the imaginary counterparts provides the complementary T-odd contributions:
+Applying the same scaling factors to the imaginary counterparts provides the complementary $b$-odd contributions:
 \begin{align}
     \Aboxed{\tAmp^{\text{Im}}_2 = & \frac{1}{2}\text{Im}\{ R_{\Gamma(8)}\}^{[b^{1}\text{-odd}]} }\\
     \Aboxed{\tBmp^{\text{Im}}_1 = & \frac{-E_{N}|P^1|v^1}{2\mN^2 \eta v^3} \text{Re}\{ R_{\Gamma(4)}\}^{[b^{1}\text{-odd}]}}\\
@@ -685,7 +683,7 @@ To complete the geometric mapping, we must also ensure the squared separation te
     \bvec^2 &= \left( \frac{P \cdot b}{-P_L} \right)^2 + b_T^2
 \end{align}
 
-By replacing $b_L$ and $\bvec^2$ with these invariant expressions, we transform our discrete lattice amplitudes into continuous functions within the Lorentz-invariant frame:
+By replacing $b_L$ and $\bvec^2$ with these invariant expressions, we transform our discrete lattice amplitudes into continuous functions of the Lorentz-invariant variables:
 \begin{align}
     \tAmp_{iB}(b_L, b_T, \hat{\zeta}) \quad \xrightarrow{\text{Coordinate Transformation}} \quad \tAmp_{iB}\left( P \cdot b, \bvec^2, \hat{\zeta} \right)
 \end{align}
@@ -708,31 +706,32 @@ Sections~\ref{sec:amp_profiles_P1}--\ref{sec:amp_profiles_P4} show the amplitude
 Figures \ref{fig:A2B_amplitudes_P1} through \ref{fig:combined_eta8_P1} show the extracted amplitudes at this momentum, first in the discrete $(b_L/a,b_T/a,\eta|\vect{v}|/a)$ lattice grid and then mapped into the Lorentz-invariant $(P\cdot b,b^2)$ variable space of Section \ref{sec:lorentz_mapping}.
 \begin{figure}[htbp]
     \centering
-    \begin{tabular}{cc}
-        % Column Headers
-        \textbf{$\tAmp_{2B}^{\text{Re}}$} & \textbf{$\tAmp_{2B}^{\text{Im}}$} \\[2ex]
-        \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ReA2B_PL\PLval_3D.pdf} &
-        \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ImA2B_PL\PLval_3D.pdf} \\[2ex]
-        \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ReA2B_Pb_bsq_PL\PLval_3D.pdf} &
-        \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ImA2B_Pb_bsq_PL\PLval_3D.pdf} \\
+    \begin{tabular}{c}
+        % Row 1: Real part
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ReA2B_PL\PLval_3D.pdf} \\
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ReA2B_Pb_bsq_PL\PLval_3D.pdf} \\[2ex]
+        % Row 2: Imaginary part
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ImA2B_PL\PLval_3D.pdf} \\
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ImA2B_Pb_bsq_PL\PLval_3D.pdf} \\
     \end{tabular}
-    \caption{Real and imaginary parts of the $\tAmp_{2B}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space.}
+    \caption{Real (top 2 rows) and imaginary (bottom 2 rows) parts of the $\tAmp_{2B}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The first row of each 2-row block displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the second row of each 2-row block displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space.}
     \label{fig:A2B_amplitudes_P1}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
-    \begin{tabular}{cc}
-        % Header
-        \textbf{$\tAmp_{12B}^{\text{Re}}$} & \textbf{$\tAmp_{12B}^{\text{Im}}$} \\[2ex]
-        \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ReA12B_PL\PLval_3D.pdf} &
-        \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ImA12B_PL\PLval_3D.pdf} \\[2ex]
-        \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ReA12B_Pb_bsq_PL\PLval_3D.pdf} &
-        \includegraphics[width=0.45\linewidth]{plots/Amps_Fit/ImA12B_Pb_bsq_PL\PLval_3D.pdf} \\
+    \begin{tabular}{c}
+        % Row 1: Real part
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ReA12B_PL\PLval_3D.pdf} \\
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ReA12B_Pb_bsq_PL\PLval_3D.pdf} \\[2ex]
+        % Row 2: Imaginary part
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ImA12B_PL\PLval_3D.pdf} \\
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ImA12B_Pb_bsq_PL\PLval_3D.pdf} \\
     \end{tabular}
-    \caption{Real and imaginary parts of the $\tAmp_{12B}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space.}
-    \label{fig:A12B_amplitude_P1}
+    \caption{Real (top 2 rows) and imaginary (bottom 2 rows) parts of the $\tAmp_{12B}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The first row of each 2-row block displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the second row of each 2-row block displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space.}
+    \label{fig:A12B_amplitudes_P1}
 \end{figure}
+
 
 \begin{figure}[htbp]
     \centering
