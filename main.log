@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.17)  12 OCT 2026 00:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.17)  12 OCT 2026 00:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2805,7 +2805,7 @@ Package pdftex.def Info: SimultaneousFitsCov/extrapolation_para_level/FT_xdep_3
 D_A2B_A12B_bmin3_eta610_PLInf_Amps.pdf  used on input line 99.
 (pdftex.def)             Requested size: 422.05858pt x 391.42221pt.
 <SimultaneousFitsCov/extrapolation_para_level/FT_xdep_3D_A2B_A12B_bmin3_eta610_
-PLInf_Sivers.pdf, id=12655, 801.63779pt x 391.52031pt>
+PLInf_Sivers.pdf, id=12655, 801.64815pt x 391.52031pt>
 File: SimultaneousFitsCov/extrapolation_para_level/FT_xdep_3D_A2B_A12B_bmin3_et
 a610_PLInf_Sivers.pdf Graphic file (type pdf)
 <use SimultaneousFitsCov/extrapolation_para_level/FT_xdep_3D_A2B_A12B_bmin3_eta
@@ -3041,7 +3041,7 @@ m/cmtt8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/lat
 xfont/line10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfont
 s/symbols/msam10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ams
 fonts/symbols/msbm10.pfb>
-Output written on main.pdf (192 pages, 35508312 bytes).
+Output written on main.pdf (192 pages, 35508231 bytes).
 PDF statistics:
  13970 PDF objects out of 15390 (max. 8388607)
  5473 compressed objects within 55 object streams
