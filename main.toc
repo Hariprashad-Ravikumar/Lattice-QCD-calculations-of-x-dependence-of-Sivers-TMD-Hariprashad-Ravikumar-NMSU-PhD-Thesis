@@ -101,6 +101,6 @@
 \contentsline {subsubsection}{\numberline {7.3.1}Quantifying the Distance from a Factorized Form}{151}{subsubsection.7.3.1}%
 \contentsline {subsubsection}{\numberline {7.3.2}Factorization Test for the Sivers Shift}{152}{subsubsection.7.3.2}%
 \contentsline {subsubsection}{\numberline {7.3.3}Factorization Test at the Amplitude Level}{154}{subsubsection.7.3.3}%
-\contentsline {section}{\numberline {8}CONCLUSION}{159}{section.8}%
+\contentsline {section}{\numberline {8}CONCLUSION AND OUTLOOK}{159}{section.8}%
 \contentsline {section}{\numberline {A}QLUA: Gamma $\Gamma (n)$}{160}{appendix.A}%
 \contentsline {section}{REFERENCES}{161}{section*.118}%
