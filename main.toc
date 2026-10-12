@@ -1,6 +1,6 @@
 \babel@toc {english}{}\relax 
 \contentsline {section}{LIST OF TABLES}{xiv}{section*.2}%
-\contentsline {section}{LIST OF FIGURES}{xxiv}{section*.3}%
+\contentsline {section}{LIST OF FIGURES}{xxvi}{section*.3}%
 \contentsline {section}{\numberline {1}INTRODUCTION AND MOTIVATION}{1}{section.1}%
 \contentsline {subsection}{\numberline {1.1}From form factors to partons}{1}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Beyond one dimension}{2}{subsection.1.2}%
@@ -50,57 +50,57 @@
 \contentsline {subsubsection}{\numberline {3.7.1}Lattice operator and three-point function.}{42}{subsubsection.3.7.1}%
 \contentsline {subsubsection}{\numberline {3.7.2}Contraction.}{43}{subsubsection.3.7.2}%
 \contentsline {subsubsection}{\numberline {3.7.3}Ratio and matrix element.}{44}{subsubsection.3.7.3}%
-\contentsline {section}{\numberline {4}TMD correlator}{46}{section.4}%
+\contentsline {section}{\numberline {4}TMD CORRELATOR FOR LATTICE CALCULATIONS}{46}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Definition of TMDs}{46}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}TMDs in Fourier space}{48}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Link geometry}{48}{subsection.4.3}%
 \contentsline {subsection}{\numberline {4.4}Symmetry Constraints}{50}{subsection.4.4}%
 \contentsline {subsection}{\numberline {4.5}Correlator Parametrization}{52}{subsection.4.5}%
 \contentsline {subsection}{\numberline {4.6}Generalized Sivers shift from amplitudes}{55}{subsection.4.6}%
-\contentsline {section}{\numberline {5}EXTRACTING THE $x-$DEPENDENCE OF SIVERS SHIFT}{59}{section.5}%
+\contentsline {section}{\numberline {5}LATTICE DATA \& EXTRACTING THE $x-$DEPENDENCE OF SIVERS SHIFT}{59}{section.5}%
 \contentsline {subsection}{\numberline {5.1}The Sivers Shift as a Function of Momentum Fraction $x$}{59}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}The Collins-Soper Parameter ($\hat {\zeta }$)}{60}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Kinematic Constraints for $b\cdot P \neq 0$}{61}{subsection.5.3}%
-\contentsline {subsubsection}{\numberline {5.3.1}Explicit Calculation for $P_1=-1$}{61}{subsubsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.2}The Collins-Soper Parameter ($\hat {\zeta }$)}{61}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Kinematic Constraints to scan full $b\cdot P$}{61}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {5.3.1}Explicit Calculation for Hadron Momentum $P_1=-1$}{61}{subsubsection.5.3.1}%
 \contentsline {subsection}{\numberline {5.4}Lattice Parameter Space and Off-Axis Links}{62}{subsection.5.4}%
-\contentsline {subsubsection}{\numberline {5.4.1}Off-Axis $\ensuremath {\boldsymbol {v}}$ and Spatial Interpolation}{62}{subsubsection.5.4.1}%
-\contentsline {subsubsection}{\numberline {5.4.2}Spatial Interpolation of Off-Axis Coordinates}{65}{subsubsection.5.4.2}%
-\contentsline {subsection}{\numberline {5.5}Quark Separation Vectors ($\ensuremath {\boldsymbol {b}}$) and Amplitude Parity}{66}{subsection.5.5}%
-\contentsline {subsubsection}{\numberline {5.5.1}Gauge Link Construction for $\ensuremath {\boldsymbol {b}}$}{68}{subsubsection.5.5.1}%
-\contentsline {subsubsection}{\numberline {5.5.2}Path Averaging for $\ensuremath {\boldsymbol {b}}$}{69}{subsubsection.5.5.2}%
-\contentsline {subsection}{\numberline {5.6}Solving for Real and Imaginary Amplitudes $\setbox \z@ \hbox {\mathsurround \z@ $\textstyle A$}\mathaccent "0365{A}_{iB}^{\text {Re}}$ and $\setbox \z@ \hbox {\mathsurround \z@ $\textstyle A$}\mathaccent "0365{A}_{iB}^{\text {Im}}$}{72}{subsection.5.6}%
-\contentsline {subsection}{\numberline {5.7}Constructing the Effective Amplitudes $\setbox \z@ \hbox {\mathsurround \z@ $\textstyle A$}\mathaccent "0365{A}_{2B}$ and $\setbox \z@ \hbox {\mathsurround \z@ $\textstyle A$}\mathaccent "0365{A}_{12B}$}{78}{subsection.5.7}%
-\contentsline {subsection}{\numberline {5.8}Transformation to the Lorentz-Invariant Variable Space}{80}{subsection.5.8}%
-\contentsline {subsection}{\numberline {5.9}Numerical Results and Parity Constraints of the Extracted Amplitudes}{81}{subsection.5.9}%
-\contentsline {subsubsection}{\numberline {5.9.1}Amplitude Profiles at $\hat {\zeta }=0.090772$ ($P_L = -1$)}{81}{subsubsection.5.9.1}%
-\contentsline {subsubsection}{\numberline {5.9.2}Amplitude Profiles at $\hat {\zeta }=0.294367$ ($P_L = -2$)}{84}{subsubsection.5.9.2}%
-\contentsline {subsubsection}{\numberline {5.9.3}Amplitude Profiles at $\hat {\zeta }=0.539684$ ($P_L = -3$)}{86}{subsubsection.5.9.3}%
-\contentsline {subsubsection}{\numberline {5.9.4}Amplitude Profiles at $\hat {\zeta }=0.785756$ ($P_L = -4$)}{88}{subsubsection.5.9.4}%
-\contentsline {section}{\numberline {6}FITTING METHODOLOGIES AND STABILITY ANALYSIS}{91}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Discretization Effects and Short-Distance Data Exclusion}{92}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Failure of Simple Gaussian Model}{93}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Physics-Informed Symbolic Regression via PySR}{94}{subsection.6.3}%
-\contentsline {subsubsection}{\numberline {6.3.1}Expression Search and Configuration}{95}{subsubsection.6.3.1}%
-\contentsline {subsubsection}{\numberline {6.3.2}The Physics-Informed Custom Loss Function}{95}{subsubsection.6.3.2}%
-\contentsline {subsubsection}{\numberline {6.3.3}Pareto Front of Discovered Models}{97}{subsubsection.6.3.3}%
-\contentsline {subsection}{\numberline {6.4}Systematic Exploration of the Power-Law Model}{101}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}Candidate Selection}{103}{subsection.6.5}%
-\contentsline {subsection}{\numberline {6.6}Simultaneous Fitting Strategy}{106}{subsection.6.6}%
-\contentsline {subsubsection}{\numberline {6.6.1}Simultaneous Fit with Full Covariance Matrix}{107}{subsubsection.6.6.1}%
-\contentsline {subsubsection}{\numberline {6.6.2}Simultaneous Fit Results for $\ensuremath {\boldsymbol {P}}\cdot a\hat {L}/(2\pi )=\{-1,0,0\}$}{108}{subsubsection.6.6.2}%
-\contentsline {subsubsection}{\numberline {6.6.3}Simultaneous Fit Results for $\ensuremath {\boldsymbol {P}}\cdot a\hat {L}/(2\pi )=\{-2,0,0\}$}{112}{subsubsection.6.6.3}%
-\contentsline {subsubsection}{\numberline {6.6.4}Simultaneous Fit Results for $\ensuremath {\boldsymbol {P}}\cdot a\hat {L}/(2\pi )=\{-3,0,0\}$}{115}{subsubsection.6.6.4}%
-\contentsline {subsubsection}{\numberline {6.6.5}Simultaneous Fit Results for $\ensuremath {\boldsymbol {P}}\cdot a\hat {L}/(2\pi )=\{-4,0,0\}$}{119}{subsubsection.6.6.5}%
-\contentsline {subsection}{\numberline {6.7}Test for Factorization in $(P\cdot b)$ and $b^2$}{122}{subsection.6.7}%
-\contentsline {subsubsection}{\numberline {6.7.1}Ratio Test on the Lattice Data}{122}{subsubsection.6.7.1}%
-\contentsline {subsubsection}{\numberline {6.7.2}Rejection of Separable Longitudinal and Transverse Factorization}{126}{subsubsection.6.7.2}%
-\contentsline {section}{\numberline {7}EXTRAPOLATIONS TO THE PHYSICAL LIMIT}{131}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Motivation for the $\hat {\zeta } \to \infty $ Extrapolation}{131}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Extrapolation at fit-parameters level}{131}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Testing Factorization in $x$ and $|b_T|$ at the Physical Limit}{135}{subsection.7.3}%
-\contentsline {subsubsection}{\numberline {7.3.1}Quantifying the Distance from a Factorized Form}{136}{subsubsection.7.3.1}%
-\contentsline {subsubsection}{\numberline {7.3.2}Factorization Test for the Sivers Shift}{137}{subsubsection.7.3.2}%
-\contentsline {subsubsection}{\numberline {7.3.3}Factorization Test at the Amplitude Level}{139}{subsubsection.7.3.3}%
-\contentsline {section}{\numberline {8}CONCLUSION}{144}{section.8}%
-\contentsline {section}{\numberline {A}QLUA: Gamma $\Gamma (n)$}{145}{appendix.A}%
-\contentsline {section}{REFERENCES}{146}{section*.101}%
+\contentsline {subsubsection}{\numberline {5.4.1}Off-Axis $\ensuremath {\boldsymbol {v}}$ and Spatial Interpolation}{64}{subsubsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.2}Spatial Interpolation of Off-Axis Coordinates}{69}{subsubsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.5}Quark Separation Vectors ($\ensuremath {\boldsymbol {b}}$) and Amplitude Parity}{72}{subsection.5.5}%
+\contentsline {subsubsection}{\numberline {5.5.1}Gauge Link Construction for $\ensuremath {\boldsymbol {b}}$}{73}{subsubsection.5.5.1}%
+\contentsline {subsubsection}{\numberline {5.5.2}Symmetry Improving Operation (Path Averaging) for $\ensuremath {\boldsymbol {b}}$}{76}{subsubsection.5.5.2}%
+\contentsline {subsection}{\numberline {5.6}Solving for Real and Imaginary Amplitudes $\setbox \z@ \hbox {\mathsurround \z@ $\textstyle A$}\mathaccent "0365{A}_{iB}^{\text {Re}}$ and $\setbox \z@ \hbox {\mathsurround \z@ $\textstyle A$}\mathaccent "0365{A}_{iB}^{\text {Im}}$ from correlator $\setbox \z@ \hbox {\mathsurround \z@ $\textstyle \Phi $}\mathaccent "0365{\Phi }^{[\gamma ^\mu ]}_{\text {unsubtr.}}$}{77}{subsection.5.6}%
+\contentsline {subsection}{\numberline {5.7}Constructing the unpolarized $\setbox \z@ \hbox {\mathsurround \z@ $\textstyle A$}\mathaccent "0365{A}_{2B}$ and Sivers $\setbox \z@ \hbox {\mathsurround \z@ $\textstyle A$}\mathaccent "0365{A}_{12B}$ Amplitudes}{83}{subsection.5.7}%
+\contentsline {subsection}{\numberline {5.8}Transformation to the Lorentz-Invariant Variable Space}{85}{subsection.5.8}%
+\contentsline {subsection}{\numberline {5.9}Numerical Results and Parity Constraints of the Extracted Amplitudes}{86}{subsection.5.9}%
+\contentsline {subsubsection}{\numberline {5.9.1}Amplitude Profiles at $\hat {\zeta }=0.090772$ ($P_L = -1$)}{86}{subsubsection.5.9.1}%
+\contentsline {subsubsection}{\numberline {5.9.2}Amplitude Profiles at $\hat {\zeta }=0.294367$ ($P_L = -2$)}{89}{subsubsection.5.9.2}%
+\contentsline {subsubsection}{\numberline {5.9.3}Amplitude Profiles at $\hat {\zeta }=0.539684$ ($P_L = -3$)}{91}{subsubsection.5.9.3}%
+\contentsline {subsubsection}{\numberline {5.9.4}Amplitude Profiles at $\hat {\zeta }=0.785756$ ($P_L = -4$)}{93}{subsubsection.5.9.4}%
+\contentsline {section}{\numberline {6}FITTING METHODOLOGIES AND STABILITY ANALYSIS}{97}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Discretization Effects and Short-Distance Data Exclusion}{98}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Failure of Simple Gaussian Model}{99}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Physics-Informed Symbolic Regression via PySR}{100}{subsection.6.3}%
+\contentsline {subsubsection}{\numberline {6.3.1}Expression Search and Configuration}{101}{subsubsection.6.3.1}%
+\contentsline {subsubsection}{\numberline {6.3.2}The Physics-Informed Custom Loss Function}{101}{subsubsection.6.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.3}Pareto Front of Discovered Models}{103}{subsubsection.6.3.3}%
+\contentsline {subsection}{\numberline {6.4}Systematic Exploration of the Power-Law Model}{107}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Candidate Selection}{112}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}Simultaneous Fitting Strategy}{114}{subsection.6.6}%
+\contentsline {subsubsection}{\numberline {6.6.1}Simultaneous Fit with Full Covariance Matrix}{115}{subsubsection.6.6.1}%
+\contentsline {subsubsection}{\numberline {6.6.2}Simultaneous Fit Results for $\hat {\zeta }=0.090772$ ($\ensuremath {\boldsymbol {P}}\cdot a\hat {L}/(2\pi )=\{-1,0,0\}$)}{116}{subsubsection.6.6.2}%
+\contentsline {subsubsection}{\numberline {6.6.3}Simultaneous Fit Results for $\hat {\zeta }=0.294367$ ($\ensuremath {\boldsymbol {P}}\cdot a\hat {L}/(2\pi )=\{-2,0,0\}$)}{121}{subsubsection.6.6.3}%
+\contentsline {subsubsection}{\numberline {6.6.4}Simultaneous Fit Results for $\hat {\zeta }=0.539684$ ($\ensuremath {\boldsymbol {P}}\cdot a\hat {L}/(2\pi )=\{-3,0,0\}$)}{126}{subsubsection.6.6.4}%
+\contentsline {subsubsection}{\numberline {6.6.5}Simultaneous Fit Results for $\hat {\zeta }=0.785756$ ($\ensuremath {\boldsymbol {P}}\cdot a\hat {L}/(2\pi )=\{-4,0,0\}$)}{131}{subsubsection.6.6.5}%
+\contentsline {subsection}{\numberline {6.7}Test for Factorization in $(P\cdot b)$ and $b^2$}{136}{subsection.6.7}%
+\contentsline {subsubsection}{\numberline {6.7.1}Ratio Test on the Lattice Data}{136}{subsubsection.6.7.1}%
+\contentsline {subsubsection}{\numberline {6.7.2}Rejection of Separable Longitudinal and Transverse Factorization}{139}{subsubsection.6.7.2}%
+\contentsline {section}{\numberline {7}EXTRAPOLATIONS TO THE PHYSICAL LIMIT}{144}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Motivation for the $\hat {\zeta } \to \infty $ Extrapolation}{144}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Extrapolation at fit-parameters level}{146}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Testing Factorization in $x$ and $|b_T|$ at the Physical Limit}{151}{subsection.7.3}%
+\contentsline {subsubsection}{\numberline {7.3.1}Quantifying the Distance from a Factorized Form}{151}{subsubsection.7.3.1}%
+\contentsline {subsubsection}{\numberline {7.3.2}Factorization Test for the Sivers Shift}{152}{subsubsection.7.3.2}%
+\contentsline {subsubsection}{\numberline {7.3.3}Factorization Test at the Amplitude Level}{154}{subsubsection.7.3.3}%
+\contentsline {section}{\numberline {8}CONCLUSION}{159}{section.8}%
+\contentsline {section}{\numberline {A}QLUA: Gamma $\Gamma (n)$}{160}{appendix.A}%
+\contentsline {section}{REFERENCES}{161}{section*.118}%

@@ -8,13 +8,20 @@ Section~\ref{sec:zetahat_extrapolation_motivation} shows that the amplitudes, th
 
 Section~\ref{sec:fitting_methodologies} established stable global simultaneous fits to the invariant amplitudes $\tAmp_{2B}$ and $\tAmp_{12B}$ at each of our four simulated nucleon momenta, corresponding to the finite Collins-Soper parameters $\hat\zeta = 0.090772$, $0.294367$, $0.539684$, $0.785756$ for $P_L=-1,-2,-3,-4$ respectively (Table~\ref{tab:zeta_directions}). As discussed in Section~\ref{sec:collins_soper_parameter}, these finite-$\hat\zeta$ results follow from the space-like staple direction that our Euclidean lattice geometry requires; the physical light-cone TMDs are recovered only in the limit $\hat\zeta \to \infty$. To compare our lattice results with phenomenological extractions of the Sivers function, we must therefore extrapolate each finite-momentum result to this physical limit.
 
-Figure~\ref{fig:zetahat_discrete_slices} shows why we need this extrapolation. At fixed transverse quark separation $|b_T| = 3a \approx 0.34$ fm, we evaluate the reconstructed amplitudes $\tAmp^{[x]\text{Re}}_{2B}$ and $\tAmp^{[x]\text{Im}}_{2B}$, the corresponding unpolarized and Sivers TMD combinations $\tilde f_1^{(0)} = 2\tAmp^{[x]}_{2B}$ and $\tilde f_{1T}^{\perp(1)} = -2\tAmp^{[x]\text{Re}}_{12B}$, and the resulting Sivers shift $\langle k_y \rangle_{TU}$ and $x\langle k_y \rangle_{TU}$, as continuous functions of $x$ at each of our four simulated momenta. Plotted against $1/\hat\zeta$, all six quantities vary systematically with the momentum. None of our finite lattice momenta has reached the physical limit, so the results can be interpreted physically only after the extrapolation to $1/\hat\zeta \to 0$ carried out in the rest of this chapter.
+Figure~\ref{fig:zetahat_discrete_slices_amps} shows why we need this extrapolation. At fixed transverse quark separation $|b_T| = 3a \approx 0.34$ fm, we evaluate the reconstructed amplitudes $\tAmp^{[x]\text{Re}}_{2B}$ and $\tAmp^{[x]\text{Im}}_{2B}$, the corresponding unpolarized and Sivers TMD combinations $\tilde f_1^{(0)} = 2\tAmp^{[x]}_{2B}$ and $\tilde f_{1T}^{\perp(1)} = -2\tAmp^{[x]\text{Re}}_{12B}$, and the resulting Sivers shift $\langle k_y \rangle_{TU}$ and $x\langle k_y \rangle_{TU}$, as continuous functions of $x$ at each of our four simulated momenta. Plotted against $1/\hat\zeta$, all six quantities vary systematically with the momentum. None of our finite lattice momenta has reached the physical limit, so the results can be interpreted physically only after the extrapolation to $1/\hat\zeta \to 0$ carried out in the rest of this chapter.
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.8\linewidth]{SimultaneousFitsCov/SimulFit_Distinct_1_over_PL_bmin3_eta610_b29.0.pdf}
-    \caption{Discrete $\hat\zeta$-slices of the reconstructed amplitudes, unpolarized and Sivers TMD combinations, and Sivers shift, plotted against both $x$ and $1/\hat\zeta$ at fixed transverse separation $|b_T| = 3a \approx 0.34$ fm. Each ribbon corresponds to one of the four simulated momenta $P_L = -1,-2,-3,-4$ (equivalently $1/\hat\zeta = 11.02,\ 3.40,\ 1.85,\ 1.27$). The systematic drift of every panel with $1/\hat\zeta$ motivates the extrapolation to the physical light-cone limit $\hat\zeta \to \infty$ performed below.}
-    \label{fig:zetahat_discrete_slices}
+    \includegraphics[width=0.8\linewidth]{SimultaneousFitsCov/SimulFit_Distinct_1_over_PL_bmin3_eta610_b29.0_Amps.pdf}
+    \caption{Discrete $\hat\zeta$-slices of the reconstructed amplitudes $\tAmp^{[x]\text{Re}}_{2B}$ and $\tAmp^{[x]\text{Im}}_{2B}$ and the unpolarized and Sivers TMD combinations $\tilde f_1^{(0)}=2\tAmp^{[x]}_{2B}$ and $\tilde f_{1T}^{\perp(1)}=-2\tAmp^{[x]\text{Re}}_{12B}$, plotted against both $x$ and $1/\hat\zeta$ at fixed transverse separation $|b_T| = 3a \approx 0.34$ fm. Each ribbon corresponds to one of the four simulated momenta $P_L = -1,-2,-3,-4$ (equivalently $1/\hat\zeta = 11.02,\ 3.40,\ 1.85,\ 1.27$). The systematic drift of every panel with $1/\hat\zeta$ motivates the extrapolation to the physical light-cone limit $\hat\zeta \to \infty$ performed below.}
+    \label{fig:zetahat_discrete_slices_amps}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\linewidth]{SimultaneousFitsCov/SimulFit_Distinct_1_over_PL_bmin3_eta610_b29.0_Sivers.pdf}
+    \caption{Sivers shift $\langle k_y \rangle_{TU}$ and $x\langle k_y \rangle_{TU}$ for the same four momenta and the same $|b_T|$ as Fig.~\ref{fig:zetahat_discrete_slices_amps}, restricted to the quark region $x\ge0$.}
+    \label{fig:zetahat_discrete_slices_sivers}
 \end{figure}
 
 \pagebreak
@@ -40,13 +47,20 @@ using correlated Jackknife fits to the three data points. The quadratic ansatz c
     \label{fig:param_extrapolation_zetahat}
 \end{figure}
 
-Reconstructing the amplitudes from these twelve extrapolated parameters gives the unpolarized and Sivers TMD combinations directly at the physical limit, shown in Fig.~\ref{fig:extrapolated_amplitude_level} as continuous functions of $x$ at fixed $|b_T| = 3a \approx 0.34$ fm.
+Reconstructing the amplitudes from these twelve extrapolated parameters gives the unpolarized and Sivers TMD combinations directly at the physical limit, shown in Fig.~\ref{fig:extrapolated_amplitude_level_amps} as continuous functions of $x$ at fixed $|b_T| = 3a \approx 0.34$ fm.
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.8\linewidth]{SimultaneousFitsCov/extrapolation_para_level/Extrapolated_AmpLevel_P234_Sivers_1_over_zetahat_sq_bmin3_eta610_b29.0.pdf}
-    \caption{Unpolarized and Sivers TMD amplitudes reconstructed from the extrapolated ($\hat\zeta\to\infty$) fit parameters of Fig.~\ref{fig:param_extrapolation_zetahat}, evaluated as continuous functions of $x$ at fixed transverse separation $|b_T| = 3a \approx 0.34$ fm: $\tAmp^{[x]\text{Re}}_{2B}$, $i\tAmp^{[x]\text{Im}}_{2B}$, the full unpolarized combination $\tilde f_1^{(0)}=2\tAmp^{[x]}_{2B}$, the Sivers combination $\tilde f_{1T}^{\perp(1)}=-2\tAmp^{[x]\text{Re}}_{12B}$, and the resulting Sivers shift $\langle k_y \rangle_{TU}$ and $x\langle k_y \rangle_{TU}$, the latter two restricted to the quark region $x\ge0$. Shaded bands are the Jackknife uncertainty propagated from the twelve extrapolated parameters.}
-    \label{fig:extrapolated_amplitude_level}
+    \includegraphics[width=0.8\linewidth]{SimultaneousFitsCov/extrapolation_para_level/Extrapolated_AmpLevel_P234_Sivers_1_over_zetahat_sq_bmin3_eta610_b29.0_Amps.pdf}
+    \caption{Unpolarized and Sivers TMD amplitudes reconstructed from the extrapolated ($\hat\zeta\to\infty$) fit parameters of Fig.~\ref{fig:param_extrapolation_zetahat}, evaluated as continuous functions of $x$ at fixed transverse separation $|b_T| = 3a \approx 0.34$ fm: $\tAmp^{[x]\text{Re}}_{2B}$, $\tAmp^{[x]\text{Im}}_{2B}$, the full unpolarized combination $\tilde f_1^{(0)}=2\tAmp^{[x]}_{2B}$, and the Sivers combination $\tilde f_{1T}^{\perp(1)}=-2\tAmp^{[x]\text{Re}}_{12B}$. Shaded bands are the Jackknife uncertainty propagated from the twelve extrapolated parameters.}
+    \label{fig:extrapolated_amplitude_level_amps}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\linewidth]{SimultaneousFitsCov/extrapolation_para_level/Extrapolated_AmpLevel_P234_Sivers_1_over_zetahat_sq_bmin3_eta610_b29.0_Sivers.pdf}
+    \caption{Sivers shift $\langle k_y \rangle_{TU}$ and $x\langle k_y \rangle_{TU}$ built from the extrapolated amplitudes of Fig.~\ref{fig:extrapolated_amplitude_level_amps}, restricted to the quark region $x\ge0$. Shaded bands are the Jackknife uncertainty.}
+    \label{fig:extrapolated_amplitude_level_sivers}
 \end{figure}
 
 Table~\ref{tab:numerical_integration_fourier} lists the corresponding numerical Fourier-transform integrals at $|b_T|=3a\approx0.34$ fm, evaluated over the full range $x\in\{-\infty,\infty\}$ as well as the restricted ranges $\{-1,1\}$, $\{-1,0\}$, and $\{0,1\}$ used to isolate, respectively, the quark-plus-antiquark, antiquark, and quark contributions to the $x$-integrals $\int dx\,\tilde f_1^{(0)}$ and $\int dx\,\tilde f_{1T}^{\perp(1)}$.
@@ -54,20 +68,20 @@ Table~\ref{tab:numerical_integration_fourier} lists the corresponding numerical 
 \begin{table}[h!]
     \centering
     \renewcommand{\arraystretch}{1.5}
-    \caption{Numerical integration of the Fourier-transform integrals at $|b_T| = 3a \approx 0.34$ fm, evaluated using the extrapolated ($\hat\zeta\to\infty$) amplitudes of Fig.~\ref{fig:extrapolated_amplitude_level}, over the full range and three restricted $x$-ranges isolating the quark, antiquark, and combined contributions.}
+    \caption{Numerical integration of the Fourier-transform integrals at $|b_T| = 3a \approx 0.34$ fm, evaluated using the extrapolated ($\hat\zeta\to\infty$) amplitudes of Fig.~\ref{fig:extrapolated_amplitude_level_amps}, over the full range and three restricted $x$-ranges isolating the quark, antiquark, and combined contributions.}
     \label{tab:numerical_integration_fourier}
     \resizebox{\textwidth}{!}{%
     \begin{tabular}{|l|c|c|c|c|}
     \hline
     Integral & $\{-\infty,\infty\}$ & $\{-1,1\}$ & $\{-1,0\}$ & $\{0,1\}$ \\
     \hline
-    $\displaystyle\int dx\, \tAmp^{[x]\text{Re}}_{2B}$ & $1.88(20)$ & $1.88(20)$ & $0.941(100)$ & $0.941(100)$ \\
+    $\displaystyle\int dx\, \tAmp^{[x]\text{Re}}_{2B}$ & $0.751(79)$ & $0.751(80)$ & $0.375(40)$ & $0.375(40)$ \\
     \hline
-    $\displaystyle\int dx\, (i\tAmp^{[x]\text{Im}}_{2B})$ & $2(23)\times10^{-16}$ & $7(52)\times10^{-16}$ & $0.413(68)$ & $-0.423(72)$ \\
+    $\displaystyle\int dx\, (\tAmp^{[x]\text{Im}}_{2B})$ & $6(96)\times10^{-17}$ & $3(24)\times10^{-16}$ & $0.165(27)$ & $-0.169(29)$ \\
     \hline
-    $\displaystyle\int dx\,\tilde f_1^{(0)} = 2\displaystyle\int dx\, (\tAmp^{[x]\text{Re}}_{2B} - i\tAmp^{[x]\text{Im}}_{2B})$ & $3.77(40)$ & $3.76(40)$ & $1.06(20)$ & $2.73(28)$ \\
+    $\displaystyle\int dx\,\tilde f_1^{(0)} = 2\displaystyle\int dx\, (\tAmp^{[x]\text{Re}}_{2B} - \tAmp^{[x]\text{Im}}_{2B})$ & $1.50(16)$ & $1.50(16)$ & $0.421(81)$ & $1.09(11)$ \\
     \hline
-    $\displaystyle\int dx\,\tilde f_{1T}^{\perp(1)} = -2\displaystyle\int dx\, \tAmp^{[x]\text{Re}}_{12B}$ & $0.76(13)$ & $0.76(13)$ & $0.379(67)$ & $0.379(67)$ \\
+    $\displaystyle\int dx\,\tilde f_{1T}^{\perp(1)} = -2\displaystyle\int dx\, \tAmp^{[x]\text{Re}}_{12B}$ & $0.302(53)$ & $0.302(53)$ & $0.151(27)$ & $0.151(27)$ \\
     \hline
     $\mN\,\dfrac{\int dx\,\tilde f_{1T}^{\perp(1)}}{\int dx\,\tilde f_1^{(0)}}$ & $0.217(38)$ & $0.217(38)$ & $0.387(89)$ & $0.150(26)$ \\
     \hline
@@ -77,21 +91,35 @@ Table~\ref{tab:numerical_integration_fourier} lists the corresponding numerical 
 
 Restricting the integration to $x\in\{-1,0\}$ or $\{0,1\}$ isolates the antiquark and quark contributions respectively; because $\tAmp^{[x]\text{Im}}_{2B}$ is an odd function of $x$ while $\tAmp^{[x]\text{Re}}_{2B}$ and $\tAmp^{[x]\text{Re}}_{12B}$ are even, the antiquark and quark ranges give equal $\int dx\,\tAmp^{[x]\text{Re}}_{2B}$ and $\int dx\,\tAmp^{[x]\text{Re}}_{12B}$ but opposite-sign $\int dx\,(i\tAmp^{[x]\text{Im}}_{2B})$, so the combined $\{-1,1\}$ integral of the imaginary term is consistent with zero within uncertainty. The integrals over the full range $\{-\infty,\infty\}$ agree with those over the physically motivated range $\{-1,1\}$ well within uncertainties. The extrapolated amplitudes therefore decay fast enough in $x$ that truncating at the light-cone-momentum-fraction cutoff is negligible.
 
-Figure~\ref{fig:extrapolated_amplitude_3d} extends this reconstruction to the full dependence on both $x$ and transverse separation, while Fig.~\ref{fig:momenta_vs_extrapolated} compares the extrapolated result with each of the three finite momenta used to obtain it.
+Figure~\ref{fig:extrapolated_amplitude_3d_amps} extends this reconstruction to the full dependence on both $x$ and transverse separation, while Fig.~\ref{fig:momenta_vs_extrapolated_amps} compares the extrapolated result with each of the three finite momenta used to obtain it.
 
 \pagebreak
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.8\linewidth]{SimultaneousFitsCov/extrapolation_para_level/FT_xdep_3D_A2B_A12B_bmin3_eta610_PLInf.pdf}
-    \caption{The same six extrapolated ($\hat\zeta\to\infty$) quantities as Fig.~\ref{fig:extrapolated_amplitude_level}, shown here as full surfaces in $x$ and transverse separation $|b_T|$ (ranging from $3a\approx0.34$ fm to $\sqrt{68}\,a\approx0.94$ fm). The joint $x$-$|b_T|$ dependence shows how the reconstructed amplitudes and the extracted Sivers shift change with transverse quark separation at the physical limit.}
-    \label{fig:extrapolated_amplitude_3d}
+    \includegraphics[width=0.8\linewidth]{SimultaneousFitsCov/extrapolation_para_level/FT_xdep_3D_A2B_A12B_bmin3_eta610_PLInf_Amps.pdf}
+    \caption{The four extrapolated ($\hat\zeta\to\infty$) amplitude quantities of Fig.~\ref{fig:extrapolated_amplitude_level_amps}, shown as surfaces in $x$ and $|b_T|$ (from $3a\approx0.34$ fm to $\sqrt{68}\,a\approx0.94$ fm). The joint $x$-$|b_T|$ dependence shows how the reconstructed amplitudes change with transverse quark separation at the physical limit.}
+    \label{fig:extrapolated_amplitude_3d_amps}
 \end{figure}
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.8\linewidth]{SimultaneousFitsCov/extrapolation_para_level/All_Momenta_vs_Extrapolated_2D_P234_bmin3_eta610_b29.0.pdf}
-    \caption{Comparison, at fixed $|b_T| = 3a \approx 0.34$ fm, between the six physical quantities evaluated at each of the three finite momenta used in the extrapolation ($P_L=-2,-3,-4$, colored curves, each using its own unextrapolated fit parameters) and the extrapolated $\hat\zeta\to\infty$ result (black dashed curve). The extrapolated curve differs from all three finite-momentum curves, including the one at the largest simulated momentum, so the fit-parameter extrapolation of Fig.~\ref{fig:param_extrapolation_zetahat} captures real momentum dependence and does not just reproduce the $P_L=-4$ result.}
-    \label{fig:momenta_vs_extrapolated}
+    \includegraphics[width=0.8\linewidth]{SimultaneousFitsCov/extrapolation_para_level/FT_xdep_3D_A2B_A12B_bmin3_eta610_PLInf_Sivers.pdf}
+    \caption{The extrapolated Sivers shift $\langle k_y \rangle_{TU}$ and $x\langle k_y \rangle_{TU}$ of Fig.~\ref{fig:extrapolated_amplitude_level_sivers}, shown as surfaces in $x\ge0$ and $|b_T|$ over the same range.}
+    \label{fig:extrapolated_amplitude_3d_sivers}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\linewidth]{SimultaneousFitsCov/extrapolation_para_level/All_Momenta_vs_Extrapolated_2D_P234_bmin3_eta610_b29.0_Amps.pdf}
+    \caption{Comparison, at fixed $|b_T| = 3a \approx 0.34$ fm, between the four amplitude quantities evaluated at each of the three finite momenta used in the extrapolation ($P_L=-2,-3,-4$, colored curves, each using its own unextrapolated fit parameters) and the extrapolated $\hat\zeta\to\infty$ result (black dashed curve). The extrapolated curve differs from all three finite-momentum curves, including the one at the largest simulated momentum, so the fit-parameter extrapolation of Fig.~\ref{fig:param_extrapolation_zetahat} captures real momentum dependence and does not just reproduce the $P_L=-4$ result.}
+    \label{fig:momenta_vs_extrapolated_amps}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\linewidth]{SimultaneousFitsCov/extrapolation_para_level/All_Momenta_vs_Extrapolated_2D_P234_bmin3_eta610_b29.0_Sivers.pdf}
+    \caption{The same comparison as Fig.~\ref{fig:momenta_vs_extrapolated_amps} for the Sivers shift $\langle k_y \rangle_{TU}$ and $x\langle k_y \rangle_{TU}$ ($x\ge0$).}
+    \label{fig:momenta_vs_extrapolated_sivers}
 \end{figure}
 
 \subsection{Testing Factorization in \texorpdfstring{$x$}{TEXT} and \texorpdfstring{$|b_T|$}{TEXT} at the Physical Limit}
@@ -100,7 +128,7 @@ Figure~\ref{fig:extrapolated_amplitude_3d} extends this reconstruction to the fu
 Section~\ref{sec:factorization_test} tested factorization of the position-space amplitudes in $(P\cdot b)$ and $b^2$. Here we ask a different question: whether the extrapolated distributions factorize in the momentum fraction $x$ and the transverse separation $|b_T|$.
 
 
-Figures~\ref{fig:extrapolated_amplitude_3d} and~\ref{fig:momenta_vs_extrapolated} show that the extrapolated Sivers shift and amplitudes depend on both $x$ and $|b_T|$ jointly. We ask whether this joint dependence is separable, that is, whether the extrapolated Sivers shift factorizes as
+Figures~\ref{fig:extrapolated_amplitude_3d_amps} and~\ref{fig:momenta_vs_extrapolated_amps} show that the extrapolated Sivers shift and amplitudes depend on both $x$ and $|b_T|$ jointly. We ask whether this joint dependence is separable, that is, whether the extrapolated Sivers shift factorizes as
 \begin{equation}
     \langle k_y \rangle_{TU}(x,|b_T|) \overset{?}{=} F(x)\,G(|b_T|) \ ,
 \end{equation}
