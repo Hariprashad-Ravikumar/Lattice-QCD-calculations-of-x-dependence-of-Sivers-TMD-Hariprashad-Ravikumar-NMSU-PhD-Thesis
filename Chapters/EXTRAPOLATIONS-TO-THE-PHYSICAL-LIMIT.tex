@@ -1,14 +1,14 @@
 \section{EXTRAPOLATIONS TO THE PHYSICAL LIMIT}
 \label{sec:physical_limit_extrapolation}
 
-Section~\ref{sec:zetahat_extrapolation_motivation} shows that the amplitudes, the TMD combinations and the Sivers shift change systematically with $1/\hat\zeta$ across the four simulated momenta. Section~\ref{sec:extrap_fit_param_level} extrapolates the fit parameters to $1/\hat\zeta\to0$ using $P_L=-2,-3,-4$, reconstructs the amplitudes and the Sivers shift in this limit, and lists the numerical Fourier-transform integrals over $x$ at $|b_T|=3a$. Section~\ref{sec:factorization_xbt} tests whether the extrapolated Sivers shift and amplitudes factorize in $x$ and $|b_T|$.
+Section~\ref{sec:zetahat_extrapolation_motivation} shows that the amplitudes, the TMD combinations, and the Sivers shift change systematically with $1/\hat\zeta$ across the four simulated momenta. Section~\ref{sec:extrap_fit_param_level} extrapolates the fit parameters to $1/\hat\zeta\to0$ using $P_L=-2,-3,-4$, reconstructs the amplitudes and the Sivers shift in this limit, and lists the numerical Fourier-transform integrals over $x$ at $|b_T|=3a$. Section~\ref{sec:factorization_xbt} tests whether the extrapolated Sivers shift and amplitudes factorize in $x$ and $|b_T|$.
 
 \subsection{Motivation for the \texorpdfstring{$\hat{\zeta} \to \infty$}{TEXT} Extrapolation}
 \label{sec:zetahat_extrapolation_motivation}
 
-Section~\ref{sec:fitting_methodologies} established stable global simultaneous fits to the invariant amplitudes $\tAmp_{2B}$ and $\tAmp_{12B}$ at each of our four simulated nucleon momenta, corresponding to the finite Collins-Soper parameters $\hat\zeta = 0.090772,\ 0.294367,\ 0.539684,\ 0.785756$ for $P_L=-1,-2,-3,-4$ respectively (Table~\ref{tab:zeta_directions}). As discussed in Section~\ref{sec:collins_soper_parameter}, these finite-$\hat\zeta$ results follow from the space-like staple direction that our Euclidean lattice geometry requires; the physical light-cone TMDs are recovered only in the limit $\hat\zeta \to \infty$. To compare our lattice results with phenomenological extractions of the Sivers function, we must therefore extrapolate each finite-momentum result to this physical limit.
+Section~\ref{sec:fitting_methodologies} established stable global simultaneous fits to the invariant amplitudes $\tAmp_{2B}$ and $\tAmp_{12B}$ at each of our four simulated nucleon momenta, corresponding to the finite Collins-Soper parameters $\hat\zeta = 0.090772$, $0.294367$, $0.539684$, $0.785756$ for $P_L=-1,-2,-3,-4$ respectively (Table~\ref{tab:zeta_directions}). As discussed in Section~\ref{sec:collins_soper_parameter}, these finite-$\hat\zeta$ results follow from the space-like staple direction that our Euclidean lattice geometry requires; the physical light-cone TMDs are recovered only in the limit $\hat\zeta \to \infty$. To compare our lattice results with phenomenological extractions of the Sivers function, we must therefore extrapolate each finite-momentum result to this physical limit.
 
-Figure~\ref{fig:zetahat_discrete_slices} shows why we need this extrapolation. At fixed transverse quark separation $|b_T| = 3a \approx 0.34$ fm, we evaluate the reconstructed amplitudes $\tAmp^{[x]\text{Re}}_{2B}$ and $i\tAmp^{[x]\text{Im}}_{2B}$, the corresponding unpolarized and Sivers TMD combinations $\tilde f_1^{(0)} = 2\tAmp^{[x]}_{2B}$ and $\tilde f_{1T}^{\perp(1)} = -2\tAmp^{[x]\text{Re}}_{12B}$, and the resulting Sivers shift $\langle k_y \rangle_{TU}$ and $x\langle k_y \rangle_{TU}$, as continuous functions of $x$ at each of our four simulated momenta. Plotted against $1/\hat\zeta$, all six quantities vary systematically with the momentum. None of our finite lattice momenta has reached the physical limit, so the results can be interpreted physically only after the extrapolation to $1/\hat\zeta \to 0$ carried out in the rest of this chapter.
+Figure~\ref{fig:zetahat_discrete_slices} shows why we need this extrapolation. At fixed transverse quark separation $|b_T| = 3a \approx 0.34$ fm, we evaluate the reconstructed amplitudes $\tAmp^{[x]\text{Re}}_{2B}$ and $\tAmp^{[x]\text{Im}}_{2B}$, the corresponding unpolarized and Sivers TMD combinations $\tilde f_1^{(0)} = 2\tAmp^{[x]}_{2B}$ and $\tilde f_{1T}^{\perp(1)} = -2\tAmp^{[x]\text{Re}}_{12B}$, and the resulting Sivers shift $\langle k_y \rangle_{TU}$ and $x\langle k_y \rangle_{TU}$, as continuous functions of $x$ at each of our four simulated momenta. Plotted against $1/\hat\zeta$, all six quantities vary systematically with the momentum. None of our finite lattice momenta has reached the physical limit, so the results can be interpreted physically only after the extrapolation to $1/\hat\zeta \to 0$ carried out in the rest of this chapter.
 
 \begin{figure}[h!]
     \centering
@@ -17,23 +17,25 @@ Figure~\ref{fig:zetahat_discrete_slices} shows why we need this extrapolation. A
     \label{fig:zetahat_discrete_slices}
 \end{figure}
 
+\pagebreak
+
 \subsection{Extrapolation at fit-parameters level}
 \label{sec:extrap_fit_param_level}
 
 The lowest simulated momentum, $P_L=-1$ ($\hat\zeta = 0.090772$), sits too close to the origin in $1/\hat\zeta$ to resolve the curvature required to anchor an extrapolation; including it risks biasing the fit away from the true asymptotic ($\hat\zeta \to \infty$) behavior rather than constraining it. We therefore exclude $P_L=-1$ and extrapolate using only the three higher, better-separated momenta $P_L = -2,-3,-4$.
 
-Rather than extrapolate the amplitudes point by point in $x$, we extrapolate each of the twelve parameters of the global simultaneous-fit models directly: the four parameters $\{a,c,d,j\}$ appearing in each of the coupled Lorentzian models for $\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$, and $\tAmp_{12B}^{\text{Re}}$ (Eq.~(\ref{eq:model_ReA2B})-(\ref{eq:model_ImA2B})).
+Rather than extrapolate the amplitudes point by point in $x$, we extrapolate each of the twelve parameters of the global simultaneous-fit models directly: the four parameters $\{a,c,d,j\}$ appearing in each of the power-law models for $\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$, and $\tAmp_{12B}^{\text{Re}}$ (Eq.~(\ref{eq:model_ReA2B})-(\ref{eq:model_ImA2B})).
 % TODO(Hari): the global fit also has f, k1, k2 (Fit_Table_PL-1). State how they enter the extrapolation (f cancels in the Sivers shift, but what about the amplitude plots, and how is c(eta) with k1, k2 evaluated?).
-In these models $c$ multiplies $b_L^2 = (P\cdot b)^2/P_L^2$ and $a_{\text{im}}$ multiplies $b_L = (P\cdot b)/(-P_L)$, so the parameters $c_{\text{re}}$, $c_{\text{im}}$, and $c_{\text{reA12B}}$ are first rescaled by $1/P_L^2$ and $a_{\text{im}}$ by $1/P_L$. After rescaling they multiply powers of the invariant $P\cdot b$ directly (up to an overall sign for $a_{\text{im}}$), so all three momenta can be fit on a common footing. For the resulting $\hat\zeta$-dependence of each rescaled parameter, we tested two functional forms,
+In these models $c$ multiplies $b_L^2 = (P\cdot b)^2/P_L^2$ and $a_{\text{im}}$ multiplies $b_L = (P\cdot b)/(-P_L)$, so the parameters $c_{\text{re}}$, $c_{\text{im}}$, and $c_{\text{reA12B}}$ are first rescaled by $1/P_L^2$ and $a_{\text{im}}$ by $1/P_L$. After rescaling, they multiply powers of the invariant $P\cdot b$ directly (up to an overall sign for $a_{\text{im}}$), so all three momenta can be fit on a common footing. For the resulting $\hat\zeta$-dependence of each rescaled parameter, we tested two functional forms,
 \begin{equation}
-    p(\hat\zeta) = c + \frac{d}{\hat\zeta} \qquad \text{and} \qquad p(\hat\zeta) = c + \frac{d}{\hat\zeta^2} \ ,
+    p(\hat\zeta) = c + \frac{d}{\hat\zeta} \qquad \text{and} \qquad p(\hat\zeta) = c + \frac{d}{\hat\zeta^2} ,
     \label{eq:zetahat_extrap_ansatz}
 \end{equation}
-using correlated Jackknife fits to the three data points. The quadratic ansatz consistently gave a lower $\chi^2/\text{dof}$ than the linear form across the twelve parameters, and we adopt it for every extrapolation shown below. The extrapolated, physical-limit value of each parameter is its fitted intercept $c$ at $1/\hat\zeta=0$.
+using correlated Jackknife fits to the three data points. The quadratic ansatz consistently gave a lower $\chi^2/\text{dof}$ than the linear form across the twelve parameters, and we adopt it for every extrapolation shown below. The extrapolated, physical-limit value of each parameter is its fitted intercept $c$ at $1/\hat\zeta^2=0$.
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.8\linewidth]{SimultaneousFitsCov/extrapolation_para_level/Param_Extrapolations_1byZetahat_sq_P234_bmin3_eta610_b29.0.pdf}
+    \includegraphics[width=1\linewidth]{SimultaneousFitsCov/extrapolation_para_level/Param_Extrapolations_1byZetahat_sq_P234_bmin3_eta610_b29.0.pdf}
     \caption{Extrapolation of the twelve simultaneous-fit parameters to the physical limit $\hat\zeta \to \infty$, using only the three higher momenta $P_L=-2,-3,-4$ (black points, plotted against $1/\hat\zeta$). The dashed red curve and shaded band show the fitted ansatz $c+d/\hat\zeta^2$ of Eq.~\ref{eq:zetahat_extrap_ansatz}, with each panel's Jackknife $\chi^2/\text{dof}$ noted in its title; the blue square at $1/\hat\zeta=0$ marks the extrapolated physical-limit value. The parameters $c_{\text{re}}$, $c_{\text{im}}$, and $c_{\text{reA12B}}$ are shown rescaled by $1/P_L^2$, and $a_{\text{im}}$ by $1/P_L$, as described in the text.}
     \label{fig:param_extrapolation_zetahat}
 \end{figure}

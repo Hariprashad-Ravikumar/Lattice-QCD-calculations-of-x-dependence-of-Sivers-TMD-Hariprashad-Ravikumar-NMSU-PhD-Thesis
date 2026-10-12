@@ -1,4 +1,4 @@
-\section{TMD correlator}
+\section{TMD CORRELATOR FOR LATTICE CALCULATIONS}
 \label{sec:tmd_framework}
 
 This chapter defines the terms used in the rest of the thesis. Section~\ref{sec:tmd_definition} defines the TMD correlator as the Fourier transform of a bare non-local matrix element divided by the soft factor, and identifies the unpolarized distribution $f_1$ and the T-odd Sivers function $f_{1T}^\perp$ in its $\gamma^+$ projection. Section~\ref{sec:tmd_fourier} introduces $\vprp{b}$-dependent TMDs and their derivatives, which the lattice evaluates directly, and keeps $|\vprp{\bvec}|$ finite because $f_{1T}^{\perp(1)}(x)$ diverges without additional regularization. Section~\ref{sec:link_geometry} introduces the staple-shaped gauge link and the Collins-Soper parameter $\hat\zeta$. Section~\ref{Symmetry Constraints} lists the Lorentz, parity, time-reversal, and Hermitian conjugation transformations, parametrizes the $b$-dependent correlator in terms of the Lorentz invariant amplitudes $\tAmp_i$ and $\tBmp_i$, and uses hermiticity to show that their real and imaginary parts are even and odd in $b$. Section~\ref{sec-parametr} combines these amplitudes into $\tAmp_{2B}$ and $\tAmp_{12B}$, from which $f_1$ and $f_{1T}^\perp$ follow by Fourier transformation.
@@ -349,7 +349,7 @@ In summary, we have,
     &=-2\,\tAmp^{[x]}_{12B}(x,\vprp{\bvec}^2)\,.
 	\label{eq-xintderfttmds2}
 \end{align}
-This framework lays the groundwork for extracting its $x$-dependence. In subsequent chapters, for brevity, we may drop the soft-factor term from the above definitions. 
+This framework lays the groundwork for extracting its $x$-dependence. In subsequent chapters, for brevity, we may drop the soft-factor term from the above definitions, as soft factors cancel in the ratios we form. 
 
 \subsection{Generalized Sivers shift from amplitudes}
 \label{sec-parametr}
