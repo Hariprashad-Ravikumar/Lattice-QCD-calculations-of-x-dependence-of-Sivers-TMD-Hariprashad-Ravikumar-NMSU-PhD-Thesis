@@ -5,14 +5,53 @@ As discussed in the previous section (Sec. \ref{sec:x_dependence}), the lattice 
 
 We parameterize the amplitudes in the Cartesian space $(b_L, b_T)$ rather than the Lorentz-invariant variable space $(P \cdot b, b^2)$. Fitting in $(b_L, b_T)$ provides a larger, more uniformly distributed set of discrete data points and resolves kinematic degeneracies. Because the squared separation distance $b^2 = b_L^2 + b_T^2$ is non-negative, multiple distinct combinations of longitudinal and transverse separations (such as a large $b_L$ with a small $b_T$, or a small $b_L$ with a large $b_T$) map to the same invariant $b^2$. Fitting in the $(P \cdot b, b^2)$ basis would therefore compress these distinct orthogonal spatial dependencies into a single coordinate. Fitting over the $(b_L, b_T)$ grid allows the model to separate the longitudinal decay profile from the transverse decay profile. 
 
-Section~\ref{sec:discretization_effects} removes the data with $|\vect{b}|<3a$, which contain discretization artifacts. Section~\ref{sec:gaussian_transformation} shows that a Gaussian model gives fails for $\tAmp_{2B}^{\text{Re}}$, which makes the Fourier integral over $P\cdot b$ diverge. Section~\ref{sec:pysr_methodology} searches for a functional form by symbolic regression (PySR) with an asymptotic penalty and finds a power-law tail $(1+b^2)^{-j}$ multiplied by $e^{-f\eta}$. Section~\ref{sec:systematic_exploration} compares Gaussian and power-law fits over $6\leq\eta\leq10$ and fits individual $\eta$ slices to determine the $\eta$-dependence of fit parameters ($c,d$), and Section~\ref{sec:candidate_selection} selects the model for $c(\eta)$ and gives the models for the three amplitudes. 
+Section~\ref{sec:discretization_effects} removes the data with $|\vect{b}|<3a$, which contain discretization artifacts. Section~\ref{sec:gaussian_transformation} shows that a simple Gaussian model fails for $\tAmp_{2B}^{\text{Re}}$, making the Fourier integral over $P\cdot b$ diverge. Section~\ref{sec:pysr_methodology} searches for a functional form by symbolic regression (PySR) with an asymptotic penalty and finds a power-law tail $(1+b^2)^{-j}$ multiplied by $e^{-f\eta}$. Section~\ref{sec:systematic_exploration} compares Gaussian and power-law fits over $6\leq\eta\leq10$ and fits individual $\eta$ slices to determine the $\eta$-dependence of fit parameters ($c,d$), and Section~\ref{sec:candidate_selection} selects the model for $c(\eta)$ and gives the models for the three amplitudes. 
 
 Section~\ref{sec:simultaneous_fit_strategy} fits the three amplitudes simultaneously with the full Jackknife covariance matrix, cancels the shared $e^{-f\eta}$ factor, and evaluates the $x$-dependent Sivers shift at each of the four momenta. Section~\ref{sec:factorization_test} tests whether the amplitudes factorize into separate $(P\cdot b)$ and $b^2$ profiles, first with ratios of the lattice data and then with explicit factorized fits.
+
+
+\subsection{Failure of Simple Gaussian Model}
+\label{sec:gaussian_transformation}
+
+For the real parts of the amplitudes ($\tAmp_{iB}^{\text{Re}}$), Hermitian conjugation requires the function to be even in the longitudinal separation $b_L$ (Eq.~\eqref{eq-ReIm-parity}). As a starting point, we model the real amplitude with a standard 2D Gaussian centered at the origin
+\begin{align}
+    \tAmp_{iB}^{\text{Re}}&=\gamma \exp{\left[-\alpha b_L^2-\beta b_T^2\right]}
+\end{align}
+To transform this into the invariant variable space, we substitute $b_T^2 = b^2 - b_L^2$ and apply the Lorentz-invariant projection $b_L = (P \cdot b) / (-P_L)$ derived in Section \ref{sec:lorentz_mapping}. Squaring this substitution gives
+\begin{align}
+   \tAmp_{iB}^{\text{Re}} &=\gamma \exp{\left[-\frac{\left(\alpha-\beta\right)}{P_{L}^2} (P\cdot b)^{2}-\beta b^{2}\right]}
+\end{align}
+
+For the Fourier integral $\int d(P\cdot b) e^{ix(P\cdot b)} \tAmp_{iB}$ to converge, the argument of the exponential must remain negative as $(P \cdot b) \to \pm \infty$. This requires $(\alpha - \beta) > 0$. If $\alpha < \beta$, the amplitude grows exponentially at large longitudinal separations and the integral diverges.
+
+However, fitting this simple Gaussian model to our lattice data yields $\alpha < \beta$ for the unpolarized real amplitude, $\tAmp_{2B}^{\text{Re}}$, as shown for $\tAmp_{2B}^{\text{Re}}$ and $\tAmp_{12B}^{\text{Re}}$ in Figures ~\ref{fig:gaussian_failure_A2B}-\ref{fig:gaussian_failure_A12B}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{plots/Gaussian_fit_all_b/Gaussian_A2B_Re_P1_FailedFit.pdf}\\[2ex]
+    \includegraphics[width=0.8\linewidth]{plots/Gaussian_fit_all_b/Gaussian_A2B_Re_P1_FailedFit_details1.pdf}\\[2ex]
+    \includegraphics[width=0.8\linewidth]{plots/Gaussian_fit_all_b/Gaussian_A2B_Re_P1_FailedFit_details2.pdf}
+    \caption{Failure of Gaussian model fit for the $\tAmp_{2B}^{\text{Re}}$ amplitude, with $\alpha-\beta = -0.0427(27)$ and $\chi^2/\text{dof}\approx 235$.}
+    \label{fig:gaussian_failure_A2B}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{plots/Gaussian_fit_all_b/Gaussian_A12B_Re_P1_FailedFit.pdf}\\[2ex]
+    \includegraphics[width=0.8\linewidth]{plots/Gaussian_fit_all_b/Gaussian_A12B_Re_P1_FailedFit_details1.pdf}\\[2ex]
+    \includegraphics[width=0.8\linewidth]{plots/Gaussian_fit_all_b/Gaussian_A12B_Re_P1_FailedFit_details2.pdf}
+    \caption{Failure of Gaussian model fit for the $\tAmp_{12B}^{\text{Re}}$ amplitude, with $\alpha-\beta = -0.022(25)$ and $\chi^2/\text{dof}\approx 1.4$.}
+    \label{fig:gaussian_failure_A12B}
+\end{figure}
+
+This means the amplitude decays faster transversely than longitudinally, so the expression in $(P \cdot b, b^2)$ space is not integrable. Figures ~\ref{fig:gaussian_failure_A2B}-\ref{fig:gaussian_failure_A12B} also shows poor fit quality. A 2D Gaussian decay profile is too rigid to describe the non-local operator.
+
+This global fit in $(P \cdot b, b^2)$ includes quark-separation $\vect{b}$ from both short-distance ($|\vect{b}| \sim 1a$ or $2a$) medium-range ($|\vect{b}|\ge 3a$). The short-distance regime is governed by different physics, namely perturbative effects, including incipient short-distance divergences that require additional renormalization, compared with the medium-range non-perturbative TMD physics we aim to probe. A fit incorporating the short-distance behavior would need to account for this crossover in regime even in the absence of discretization artifacts. Before exploring further models that fit the lattice amplitudes, we account for the limitations of discretized spacetime and use only the dataset containing non-perturbative TMD physics. 
 
 \subsection{Discretization Effects and Short-Distance Data Exclusion}
 \label{sec:discretization_effects}
 
-Before fitting the lattice amplitudes, we account for the limits of the discretized spacetime. As discussed in Chapter \ref{sec:lattice_methodology}, Lattice QCD defines the theory on a discrete grid with a finite lattice spacing $a$. Observables evaluated at length scales comparable to $a$ contain discretization artifacts. At short quark-separation distances ($|\vect{b}| \sim 1a$ or $2a$), the continuous $O(4)$ rotational symmetry of Euclidean QCD breaks down to the discrete hypercubic group of the lattice. The step-wise Wilson lines connecting these closely spaced fields also introduce $\mathcal{O}(a)$ and $\mathcal{O}(a^2)$ finite-spacing errors \cite{Gattringer:2010zz, Lin:2014}. Fitting continuum models to these short-distance points would parameterize ultraviolet lattice artifacts rather than the nucleon's non-perturbative structure.
+As discussed in Chapter \ref{sec:lattice_methodology}, Lattice QCD defines the theory on a discrete grid with a finite lattice spacing $a$. Observables evaluated at length scales comparable to $a$ contain discretization artifacts. At short quark-separation distances ($|\vect{b}| \sim 1a$ or $2a$), the continuous $O(4)$ rotational symmetry of Euclidean QCD breaks down to the discrete hypercubic group of the lattice. The step-wise Wilson lines connecting these closely spaced fields also introduce $\mathcal{O}(a)$ and $\mathcal{O}(a^2)$ finite-spacing errors \cite{Gattringer:2010zz, Lin:2014}. Fitting continuum models to these short-distance points would parameterize ultraviolet lattice artifacts rather than the nucleon's non-perturbative structure.
 
 To separate our parameterizations from these short-distance effects, we apply a spatial cut to our dataset before fitting. We exclude data points where the magnitude of the quark spatial separation is less than three lattice units:
 \begin{equation}
@@ -37,56 +76,20 @@ From the simulation data itself, we note that the short-distance data ($|\vect{b
     \label{short-dis2}
 \end{figure}
 
-All later stability analyses, global fits, and extracted phenomenological parameters in this chapter use only this artifact-suppressed ($|\vect{b}| \ge 3a$) dataset.
+All later stability analyses, global fits, and extracted phenomenological parameters in this chapter use only this artifact-suppressed ($|\vect{b}| \ge 3a$) dataset. 
 
 
+\subsection{Global fit in \texorpdfstring{$(b_L,b_T,\eta)$}{TEXT} (equivalently in \texorpdfstring{$(P\cdot b,b^2,\eta)$}{TEXT})}
+\label{global-bLbTeta-fit}
+As discussed in Section \ref{sec:link_geometry}, we require the staple extent $\eta$ to reach infinity, $\eta|v|\rightarrow\pm\infty$, as a crucial condition, thereby representing the generalized Sivers shifts (Eq.~\eqref{eq-genSivShift}) for SIDIS and DY. The first Mellin-moment ($x$-integrated) calculation of generalized Sivers shifts \cite{Engelhardt:2015xja} shows that the Sivers shift ratio reaches an asymptotic plateau in the region $|\eta| |v|=7a \ldots 12a$. This means the Sivers TMD and the unpolarized TMD share a common $\eta$ profile that cancels in the asymptotic limit, giving the Sivers shift ratio a plateau at large $\eta$.
 
-\subsection{Failure of Simple Gaussian Model}
-\label{sec:gaussian_transformation}
-
-For the real parts of the amplitudes ($\tAmp_{iB}^{\text{Re}}$), Hermitian conjugation requires the function to be even in the longitudinal separation $b_L$ (Eq.~\eqref{eq-ReIm-parity}). We model the real amplitude with a standard 2D Gaussian centered at the origin
-\begin{align}
-    \tAmp_{iB}^{\text{Re}}&=\gamma \exp{\left[-\alpha b_L^2-\beta b_T^2\right]}
-\end{align}
-To transform this into the invariant variable space, we substitute $b_T^2 = b^2 - b_L^2$ and apply the Lorentz-invariant projection $b_L = (P \cdot b) / (-P_L)$ derived in Section \ref{sec:lorentz_mapping}. Squaring this substitution gives
-\begin{align}
-   \tAmp_{iB}^{\text{Re}} &=\gamma \exp{\left[-\frac{\left(\alpha-\beta\right)}{P_{L}^2} (P\cdot b)^{2}-\beta b^{2}\right]}
-\end{align}
-
-For the Fourier integral $\int d(P\cdot b) e^{ix(P\cdot b)} \tAmp_{iB}$ to converge, the argument of the exponential must remain negative as $(P \cdot b) \to \pm \infty$. This requires $(\alpha - \beta) > 0$. If $\alpha < \beta$, the amplitude grows exponentially at large longitudinal separations and the integral diverges.
-
-Fitting this Gaussian model to our lattice data yields $\alpha < \beta$ for the unpolarized real amplitude, $\tAmp_{2B}^{\text{Re}}$. 
-% TODO(Hari): the plots come from Gaussian_fit_all_b/. Confirm whether this fit includes |b|<3a; the cut is now introduced before this section, so say so here if it does.
-\begin{figure}[H]
-    \centering
-    % Left Column: Re A2B
-    \begin{minipage}{0.48\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{plots/Gaussian_fit_all_b/Gaussian_A2B_Re_P1_FailedFit.pdf}\\[2ex]
-        \includegraphics[width=\linewidth]{plots/Gaussian_fit_all_b/Gaussian_A2B_Re_P1_FailedFit_details1.pdf}\\[2ex]
-        \includegraphics[width=\linewidth]{plots/Gaussian_fit_all_b/Gaussian_A2B_Re_P1_FailedFit_details2.pdf}
-    \end{minipage}\hfill
-    % Right Column: Re A12B
-    \begin{minipage}{0.48\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{plots/Gaussian_fit_all_b/Gaussian_A12B_Re_P1_FailedFit.pdf}\\[2ex]
-        \includegraphics[width=\linewidth]{plots/Gaussian_fit_all_b/Gaussian_A12B_Re_P1_FailedFit_details1.pdf}\\[2ex]
-        \includegraphics[width=\linewidth]{plots/Gaussian_fit_all_b/Gaussian_A12B_Re_P1_FailedFit_details2.pdf}
-    \end{minipage}
-    \caption{Failure of Gaussian model fit for $\tAmp_{2B}^{\text{Re}}$ (with $\alpha-\beta = -0.0427(27)$ and $\chi^2/\text{dof}\approx 235$) and $\tAmp_{12B}^{\text{Re}}$ (with $\alpha-\beta = -0.022(25)$ and $\chi^2/\text{dof}\approx 1.4$) amplitudes.}
-    \label{fig:gaussian_failure}
-\end{figure}
-
-This means the amplitude decays faster in the transverse direction than in the longitudinal direction, so the expression in the $(P \cdot b, b^2)$ space is not integrable. Figure~\ref{fig:gaussian_failure} also shows that the fit quality is poor. A symmetric 2D Gaussian decay profile is too rigid to describe the non-local operator.
-
-Because of this divergence and poor fit quality, we cannot use the simple Gaussian model. Instead, we use multi-parameter functions that accommodate distinct decay rates and ensure convergence in the Fourier domain.
-
+In the current work, we extract the $x$ dependence (we will not integrate over $x$). Since $(P\cdot b)$ (the Fourier conjugate of $x$) and the staple extent $\eta$ are independent for fixed $\hat{\zeta}$ (Eq.\eqref{eq-zeta-again}), we expect the $x$-dependent Sivers TMD and the unpolarized TMD to share a common $\eta$ profile that cancels in the asymptotic limit. This expected $\eta$ profile does not necessarily factorize into $\eta$ and $(b_L,b_T)$ for lattice amplitudes, since cancellation occurs only in the asymptotic limit. We will explore a Global fit in $(P_L,b_T,\eta)$ (equivalently in $(P\cdot b,b^2,\eta)$) for amplitudes which includes factorized $\eta$ profiles and also coupled to $(P_L,b_T)$ anzertz. Also, note that we are interested in the asymptotic limit; we include the relatively larger (approaching SIDIS and DY limits) $\eta$ range $6\leq\eta\leq10$ for all later stability analyses, global fits, and extracted phenomenological parameters from lattice amplitudes.  
 
 
 \subsection{Physics-Informed Symbolic Regression via PySR}
 \label{sec:pysr_methodology}
 
-Choosing a multi-dimensional functional form by hand introduces human bias, so we use machine learning (ML) methods, specifically Symbolic Regression (SR), instead.
+We utilized machine learning (ML) methods, specifically Symbolic Regression (SR), to explore multidimensional functional forms for lattice amplitudes as an aid.
 
 Unlike traditional regression, which optimizes the parameters of a pre-determined function, symbolic regression searches the space of mathematical expressions and their parameters simultaneously. We use \texttt{PySR} \cite{Cranmer2023pysr}, a framework that uses Genetic Programming to discover interpretable equations from data by balancing accuracy and simplicity.
 
@@ -137,7 +140,7 @@ Symbolic regression outputs a Pareto front of candidate models: a ranked list of
 
 \input{PySR_outputs/pysr_equations_table}
 
-At the lowest complexities ($C \leq 4$), \texttt{PySR} isolates the overall $\eta$-dependence of the amplitude as an exponential decay $\sim (0.499)^\eta \approx e^{-0.695\eta}$, consistent with the area-law suppression of the extended Wilson line. At intermediate complexities ($C = 7$ to $12$), the algorithm introduces spatial $b$-dependence through Lorentzian-type power-law denominators $(1 + b_L^2 + b_T^2)^{-j}$ alongside linear or power-law $\eta$-models. The algorithm does not select a Gaussian spatial profile $e^{-cb^2}$ at any point along the Pareto front. Instead, it converges on the power-law tail structure, consistent with Section~\ref{sec:gaussian_transformation}.
+At the lowest complexities ($C \leq 4$), \texttt{PySR} isolates the overall $\eta$-dependence of the amplitude as an exponential decay $\sim (0.499)^\eta \approx e^{-0.695\eta}$. At intermediate complexities ($C = 7$ to $12$), the algorithm introduces spatial $b$-dependence through Lorentzian-type power-law denominators $(1 + b_L^2 + b_T^2)^{-j}$ alongside linear or power-law $\eta$-models. The algorithm does not select a Gaussian spatial profile $e^{-cb^2}$ nor an exponential decay in $b$ at any point along the Pareto front. Instead, it converges on the power-law tail structure, consistent with Section~\ref{sec:gaussian_transformation}.
 
 The models at complexities $C = 14$ and $C = 16$ best balance accuracy and structure. The $C = 14$ expression has a factorized form:
 \begin{equation}
