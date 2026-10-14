@@ -267,14 +267,15 @@ From these fits, we extract the parameters $c$ and $d$. The fit parameter $c$ is
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.45\linewidth]{PowerLaw_etaAsymptotic/A2B_d_eta_Independence_P1.pdf}
-    \caption{The extracted parameter $d(\eta)$, which shows no visible dependence on the staple extent $\eta$.}
+    \caption{The extracted parameter $d(\eta)$ with a linear fit, slope $s = 0.00122(87)$ ($\chi^2/\text{DoF} = 0.22$), showing no visible dependence on the staple extent $\eta$.}
+    \label{fig:d_eta_A2B}
 \end{figure}
 
 %We find that the parameter $d$ is constant in $eta$, but more than few $\eta$-dependent function fits the parameter $c$. In the next section, we detail how we selected the best $\eta$-dependent function for the parameter $c$.
 
-For the unpolarized real amplitude $\tAmp_{2B}^{\text{Re}}$, the transverse width parameter $d$ remains constant across all $\eta$, but the longitudinal width parameter $c(\eta)$ requires an asymptotic model. We select the model $c_2(\eta) = c\left(1 - \frac{k_1}{\eta} - \frac{k_2}{\eta^2}\right)$ of Figure~\ref{fig:c_eta_candidates}, for the reasons below.
+For the unpolarized real amplitude $\tAmp_{2B}^{\text{Re}}$, several of the asymptotic models in Figure~\ref{fig:c_eta_candidates} describe the extracted $c(\eta)$ equally well. We select $c_2(\eta) = c\left(1 - \frac{k_1}{\eta} - \frac{k_2}{\eta^2}\right)$, for the reasons given in Section~\ref{sec:candidate_selection}. The transverse parameter $d$ is different. A linear fit $d(\eta) = d_0 + s\,\eta$ gives a slope $s = 0.00122(87)$, within $1.4\sigma$ of zero and small next to $d_0 = 0.0889(60)$, with $\chi^2/\text{DoF} = 0.22$ (Figure~\ref{fig:d_eta_A2B}). We also tried an asymptotic model for $d(\eta)$, but that fit did not converge. To avoid overfitting, we keep $d$ constant in $\eta$.
 
-For the real Sivers amplitude $\tAmp_{12B}^{\text{Re}}$, we repeated the sequential Lorentzian fitting at fixed $\eta$ slices. As shown in Figure~\ref{fig:ReA12B_eta_independence} and Table \ref{tab:ReA12B_fixed_eta}, the longitudinal parameter $c$ and transverse parameter $d$ are independent of $\eta$ or weakly dependent on $\eta$. We therefore model $c$ and $d$ as constants for $\tAmp_{12B}^{\text{Re}}$.
+For the real Sivers amplitude $\tAmp_{12B}^{\text{Re}}$, we repeated the sequential Lorentzian fits at fixed $\eta$ (Table~\ref{tab:ReA12B_fixed_eta}). Linear fits in $\eta$ give slopes of $-0.0112(131)$ for $c$ and $0.0052(48)$ for $d$, both consistent with zero within about $1\sigma$ (Figure~\ref{fig:ReA12B_eta_independence}). We therefore model $c$ and $d$ as constants for $\tAmp_{12B}^{\text{Re}}$.
 
 \begin{table}[H]
     \centering
@@ -287,12 +288,12 @@ For the real Sivers amplitude $\tAmp_{12B}^{\text{Re}}$, we repeated the sequent
     \centering
     \includegraphics[width=0.49\linewidth]{PowerLaw_etaAsymptotic/ReA12B_c_eta_Independence_P1.pdf}
     \includegraphics[width=0.49\linewidth]{PowerLaw_etaAsymptotic/ReA12B_d_eta_Independence_P1.pdf}
-    \caption{Lattice extracted parameters $c$ (left) and $d$ (right) for $\tAmp_{12B}^{\text{Re}}$ as a function of $\eta$. Both parameters show no visible dependence on $\eta$.}
+    \caption{Lattice extracted parameters $c$ (left) and $d$ (right) for $\tAmp_{12B}^{\text{Re}}$ as a function of $\eta$. Both parameters show no visible dependence on $\eta$. Linear fits give slopes $-0.0112(131)$ for $c$ and $0.0052(48)$ for $d$, both consistent with zero.}
     \label{fig:ReA12B_eta_independence}
 \end{figure}
 
 
-For the imaginary unpolarized amplitude $\tAmp_{2B}^{\text{Im}}$, the lattice data has more statistical noise, but the sequential fitting yields a similar trend. Mirroring the structural stability of the real amplitudes, we model $c$ and $d$ as constant in $\eta$. Figure~\ref{fig:ImA2B_eta_independence} and Table \ref{tab:ImA2B_fixed_eta} show the resulting fits.
+For the imaginary unpolarized amplitude $\tAmp_{2B}^{\text{Im}}$, the lattice data are noisier (Table~\ref{tab:ImA2B_fixed_eta}). The slope of $d$ is $-0.0316(219)$, within $1.5\sigma$ of zero, while the slope of $c$, $0.0765(350)$, differs from zero by about $2\sigma$ (Figure~\ref{fig:ImA2B_eta_independence}). Both linear fits already give $\chi^2/\text{DoF} < 1$, and with these error bars an extra $\eta$-dependence would be poorly constrained, so we again keep $c$ and $d$ constant to avoid overfitting.
 
 \begin{table}[H]
     \centering
@@ -305,7 +306,7 @@ For the imaginary unpolarized amplitude $\tAmp_{2B}^{\text{Im}}$, the lattice da
     \centering
     \includegraphics[width=0.49\linewidth]{PowerLaw_etaAsymptotic/ImA2B_c_eta_Independence_P1.pdf}
     \includegraphics[width=0.49\linewidth]{PowerLaw_etaAsymptotic/ImA2B_d_eta_Independence_P1.pdf}
-    \caption{Lattice extracted parameters $c$ (left) and $d$ (right) for $\tAmp_{2B}^{\text{Im}}$ as a function of $\eta$. The data are noisier than for the real amplitudes, but consistent with the constant-parameter ansatz.}
+    \caption{Lattice extracted parameters $c$ (left) and $d$ (right) for $\tAmp_{2B}^{\text{Im}}$ as a function of $\eta$. Linear fits give slopes $0.0765(350)$ for $c$ and $-0.0316(219)$ for $d$. The data are noisier than for the real amplitudes, and both parameters are kept constant.}
     \label{fig:ImA2B_eta_independence}
 \end{figure}
 
