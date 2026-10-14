@@ -223,26 +223,24 @@ These tests use $\tAmp_{2B}^{\text{Re}}$ alone. In Section~\ref{sec:rejection_ex
 \label{sec:systematic_exploration}
 
 Guided by the \texttt{PySR} result, we now explore the $\eta$-dependence of the power-law model in more detail. We fit $\tAmp_{2B}^{\text{Re}}$ at momentum $P_L=-1$, with $6\leq\eta\leq10$ and $|\vect{b}|\geq3a$. For comparison, we first refit a family of Gaussian ans\"atze with $\eta$-dependent widths (Table~\ref{tab:rejection_fit_list_gaussian_c_d_etas}); for each model, the figure lists the model expression, the fit parameters, their Jackknife-averaged values, and the resulting $\chi^2/\mathrm{DoF}$.
-\begin{table}[htbp]
+\begin{table}[H]
     \centering
     \includegraphics[width=1\linewidth]{plots/fit_exploration_mathematica/fit_list_gaussian_c_d_etas.eps}
     \caption{3D jackknife fits of $\tAmp_{2B}^{\text{Re}}(b_L,b_T,\eta)$ to a family of 16 Gaussian ans\"atze, all built on the common baseline $\tAmp_{2B}^{\text{Re}} = a\, e^{-f\eta}\, \exp\!\big[-c\,(b_L P_L)^2 - d\,(b_L^2+b_T^2)\big]$, in which the coefficients $c$ and $d$ are each independently allowed to be either constant or one of three $\eta$-dependent forms, $c\to c(\eta)$ and/or $d\to d(\eta)$.}
     \label{tab:rejection_fit_list_gaussian_c_d_etas}
 \end{table}
 
-\pagebreak
 
 The coefficient $c$ of $(P\cdot b)^2$ must be positive and stable for the Fourier transform to $x$ to exist. In Table~\ref{tab:rejection_fit_list_gaussian_c_d_etas}, most of the Gaussian fits give an unstable or negative $c$ and a higher $\chi^2/\mathrm{DoF}$, which confirms the conclusion of Section~\ref{sec:gaussian_transformation}. By contrast, the power-law ans\"atze in Table~\ref{tab:powerlaw_eta_asymptotic} reduce $\chi^2/\mathrm{DoF}$ to $\approx1.5$. We added two more columns for AIC (Akaike information criterion) and Fourier transform of the ans\"atze. Making $d$ depend on $\eta$ worsens the fit, while making $c$ depend on $\eta$ improves it. This raises a new ambiguity: several $\eta$-dependences give almost the same $\chi^2/\mathrm{DoF}$. For each power-law model, the figure lists the model expression, the fit parameters, their Jackknife-averaged values, $\chi^2/\mathrm{DoF}$, AIC, and the resulting Fourier transform in $x$.
-\begin{table}[htbp]
+\begin{table}[H]
     \centering
     \includegraphics[width=1\linewidth]{PowerLaw_etaAsymptotic/A2BfitFT_eta_Asymptotic_P1.pdf}
     \caption{3D Jackknife fits of $\tAmp_{2B}^{\text{Re}}(b_L,b_T,\eta)$ to a family of power-law ans\"atze, all built on the common baseline $\tAmp_{2B}^{\text{Re}} = a\, e^{-f\eta}\, \left(1+(c+d)b^2_L+db^2_T\right)^{-j}$, in which the coefficient $c$ is either constant or one of several $\eta$-dependent forms, $c\to c(\eta)$.}
     \label{tab:powerlaw_eta_asymptotic}
 \end{table}
-\pagebreak
 
 For completeness, we explored more $\eta$-dependent forms $c\to c(\eta)$, which yield wider Fourier transforms in $x$ space.
-\begin{table}[htbp]
+\begin{table}[H]
     \centering
     \includegraphics[width=1\linewidth]{PowerLaw_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_P1.pdf}
     \caption{3D jackknife fits of $\tAmp_{2B}^{\text{Re}}(b_L,b_T,\eta)$ to a family of power-law ans\"atze, all built on the common baseline $\tAmp_{2B}^{\text{Re}} = a\, e^{-f\eta}\, \left(1+(c+d)b^2_L+db^2_T\right)^{-j}$, in which the coefficient $c$ takes further $\eta$-dependent forms, $c\to c(\eta)$, that yield wider Fourier transforms in $x$ space.}
@@ -250,8 +248,7 @@ For completeness, we explored more $\eta$-dependent forms $c\to c(\eta)$, which 
 \end{table}
 
 All viable asymptotic functions in $\eta$ have a common power-law profile with a power $j \approx 2$ and an amplitude scale $a \approx 4$, damped by the area-law-like suppression factor $e^{-0.5\eta}$. To isolate the $\eta$-dependence of the width parameters $c$ and $d$, we fix these structural parameters ($j=2$, $a=4$) and fit individual $\eta$ slices sequentially (Figure~\ref{fig:ReA2B_fixed_eta_slices}).
-\pagebreak
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.6\linewidth]{Gaussian_type_fit_Real_A2B/LorentzianFixedA_P-1_b3.pdf}
     \caption{Sequential Lorentzian fits for $\tAmp_{2B}^{\text{Re}}$ at individual $\eta$ slices, holding the global power $j=2$ and amplitude $a=4$ constant.}
@@ -260,16 +257,16 @@ All viable asymptotic functions in $\eta$ have a common power-law profile with a
 
 From these fits, we extract the parameters $c$ and $d$. The fit parameter $c$ is the coefficient of $b_L^2=(P \cdot b)^2/P_L^2$, while $d$ is a coefficient of the invariant squared separation $b^2$. We plot the extracted values of $c$ and $d$ against our candidate asymptotic models to analyze their $\eta$-dependence:
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.6\linewidth]{PowerLaw_etaAsymptotic/A2B_c_eta_AllAsymptoticModels_P1.pdf}
     \caption{The extracted parameter $c(\eta)$ overlaid with the candidate asymptotic models $c_1(\eta),\ldots,c_{10}(\eta)$. The extracted values approach an asymptote at large $\eta$.}
     \label{fig:c_eta_candidates}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\linewidth]{PowerLaw_etaAsymptotic/A2B_d_eta_Independence_P1.pdf}
+    \includegraphics[width=0.45\linewidth]{PowerLaw_etaAsymptotic/A2B_d_eta_Independence_P1.pdf}
     \caption{The extracted parameter $d(\eta)$, which shows no visible dependence on the staple extent $\eta$.}
 \end{figure}
 
@@ -279,14 +276,14 @@ For the unpolarized real amplitude $\tAmp_{2B}^{\text{Re}}$, the transverse widt
 
 For the real Sivers amplitude $\tAmp_{12B}^{\text{Re}}$, we repeated the sequential Lorentzian fitting at fixed $\eta$ slices. As shown in Figure~\ref{fig:ReA12B_eta_independence} and Table \ref{tab:ReA12B_fixed_eta}, the longitudinal parameter $c$ and transverse parameter $d$ are independent of $\eta$ or weakly dependent on $\eta$. We therefore model $c$ and $d$ as constants for $\tAmp_{12B}^{\text{Re}}$.
 
-\begin{table}[h!]
+\begin{table}[H]
     \centering
     \includegraphics[width=0.55\linewidth]{Gaussian_type_fit_Real_A2B/LorentzianFixed_ReA12B_P-1_b3.pdf}
     \caption{Sequential Lorentzian fits for $\tAmp_{12B}^{\text{Re}}$ at individual $\eta$ slices showing consistent $\chi^2/\text{dof}$ and stable parameters.}
     \label{tab:ReA12B_fixed_eta}
 \end{table}
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.49\linewidth]{PowerLaw_etaAsymptotic/ReA12B_c_eta_Independence_P1.pdf}
     \includegraphics[width=0.49\linewidth]{PowerLaw_etaAsymptotic/ReA12B_d_eta_Independence_P1.pdf}
@@ -294,18 +291,17 @@ For the real Sivers amplitude $\tAmp_{12B}^{\text{Re}}$, we repeated the sequent
     \label{fig:ReA12B_eta_independence}
 \end{figure}
 
-\pagebreak
 
 For the imaginary unpolarized amplitude $\tAmp_{2B}^{\text{Im}}$, the lattice data has more statistical noise, but the sequential fitting yields a similar trend. Mirroring the structural stability of the real amplitudes, we model $c$ and $d$ as constant in $\eta$. Figure~\ref{fig:ImA2B_eta_independence} and Table \ref{tab:ImA2B_fixed_eta} show the resulting fits.
 
-\begin{table}[h!]
+\begin{table}[H]
     \centering
     \includegraphics[width=0.55\linewidth]{Gaussian_type_fit_Real_A2B/LorentzianFixed_ImA2B_P-1_b3.pdf}
     \caption{Sequential Lorentzian fits for $\tAmp_{2B}^{\text{Im}}$ at individual $\eta$ slices showing consistent $\chi^2/\text{dof}$.}
     \label{tab:ImA2B_fixed_eta}
 \end{table}
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.49\linewidth]{PowerLaw_etaAsymptotic/ImA2B_c_eta_Independence_P1.pdf}
     \includegraphics[width=0.49\linewidth]{PowerLaw_etaAsymptotic/ImA2B_d_eta_Independence_P1.pdf}
