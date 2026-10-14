@@ -176,9 +176,12 @@ As shown in Figure~\ref{fig:pysr_benchmark_fits}, the factorized $C = 14$ and $C
 
 The straight-line diagnostic in Figure~\ref{fig:gaussian_straightline_test} confirms the preference for a power-law tail over Gaussian fall-off: the lattice data curve upward at large $b^2$ rather than following the Gaussian's expected straight line, consistent with the generalized Lorentzian power-law tail discovered by the genetic algorithm.
 
-The \texttt{PySR} search also has a structural limitation. Every model on the front from $C = 7$ to $C = 21$ depends on $b_L$ and $b_T$ only through $b_L^2 + b_T^2 = b^2$, with no separate parameter for $b_L$. Since $b_L = (P\cdot b)/(-P_L)$, these expressions are independent of $P\cdot b$ once mapped to the Lorentz-invariant variables, and they cannot describe the $P\cdot b$ dependence that the Fourier transform to $x$ requires. \texttt{PySR} therefore served as a guide for the $b^2$ and $\eta$ dependence, not as the final model. Starting from its Gaussian, exponential decay, and power law, we systematically explored functions with $P\cdot b$ dependence in Section~\ref{sec:systematic_exploration} and tested factorized alternatives in Section~\ref{sec:rejection_exponential_longitudinal}.
+The \texttt{PySR} search also has a structural limitation. Every model on the front from $C = 7$ to $C = 21$ depends on $b_L$ and $b_T$ only through $b_L^2 + b_T^2 = b^2$, with no separate parameter for $b_L$. Since $b_L = (P\cdot b)/(-P_L)$, these expressions are independent of $P\cdot b$ once mapped to the Lorentz-invariant variables, and they cannot describe the $P\cdot b$ dependence that the Fourier transform to $x$ requires. \texttt{PySR} therefore served as a guide for the $b^2$ and $\eta$ dependence, not as the final model. Starting from Gaussian, exponential decay, and power-law forms, we systematically explored functions with $P\cdot b$ dependence in Section~\ref{sec:systematic_exploration} and tested factorized alternatives in Section~\ref{sec:rejection_exponential_longitudinal}.
 
 %We therefore adopt the Lorentzian power-law structure as the spatial profile for $\tAmp_{2B}^{\text{Re}}$. The following sections extend this functional form to the remaining amplitudes for the global simultaneous fit.
+
+\pagebreak~
+
 
 \subsection{Failure of Exponential Decay Model}
 \label{sec:exponential_failure}
@@ -211,7 +214,7 @@ Letting the longitudinal coefficient depend on $\eta$, as $c(\eta) = c\,(1 - k_1
     \label{tab:rejection_etadep_c}
 \end{table}
 
-These tests use $\tAmp_{2B}^{\text{Re}}$ alone. In Section~\ref{sec:rejection_exponential_longitudinal} we apply exponential and Gaussian longitudinal profiles, with exponential and power-law transverse envelopes, to all three amplitudes and discuss there why these factorized models fail for $\tAmp_{2B}^{\text{Im}}$ and $\tAmp_{12B}^{\text{Re}}$.
+These tests use $\tAmp_{2B}^{\text{Re}}$ alone. In Section~\ref{sec:rejection_exponential_longitudinal} we apply exponential and Gaussian longitudinal profiles, with exponential and power-law transverse envelopes, to all three amplitudes and discuss there why these factorized models, including the ones with exponential decay in $b$, fail for $\tAmp_{2B}^{\text{Im}}$ and $\tAmp_{12B}^{\text{Re}}$.
 
 
 \subsection{Systematic Exploration of the Power-Law Model}
