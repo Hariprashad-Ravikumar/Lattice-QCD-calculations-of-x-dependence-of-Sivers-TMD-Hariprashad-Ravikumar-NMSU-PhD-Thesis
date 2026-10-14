@@ -171,6 +171,19 @@ The power-law tail $(1 + b^2)^{-j}$ decays more slowly than a Gaussian but, for 
     \label{fig:gaussian_straightline_test}
 \end{figure}
 
+
+As shown in Figure~\ref{fig:pysr_benchmark_fits}, the factorized $C = 14$ and $C = 16$ expressions track the lattice data throughout the accessible $(b_L, b_T)$ grid across all staple extents. The pure power-law-$\eta$ models ($C = 11, 17$) show slight systematic tension at the boundary $\eta$ values, where their $\eta^{-n}$ dependence departs from the exponential decay.
+
+The straight-line diagnostic in Figure~\ref{fig:gaussian_straightline_test} confirms the preference for a power-law tail over Gaussian fall-off: the lattice data curve upward at large $b^2$ rather than following the Gaussian's expected straight line, consistent with the generalized Lorentzian power-law tail discovered by the genetic algorithm.
+
+The \texttt{PySR} search also has a structural limitation. Every model on the front from $C = 7$ to $C = 21$ depends on $b_L$ and $b_T$ only through $b_L^2 + b_T^2 = b^2$, with no separate parameter for $b_L$. Since $b_L = (P\cdot b)/(-P_L)$, these expressions are independent of $P\cdot b$ once mapped to the Lorentz-invariant variables, and they cannot describe the $P\cdot b$ dependence that the Fourier transform to $x$ requires. \texttt{PySR} therefore served as a guide for the $b^2$ and $\eta$ dependence, not as the final model. Starting from its Gaussian, exponential decay, and power law, we systematically explored functions with $P\cdot b$ dependence in Section~\ref{sec:systematic_exploration} and tested factorized alternatives in Section~\ref{sec:rejection_exponential_longitudinal}.
+
+%We therefore adopt the Lorentzian power-law structure as the spatial profile for $\tAmp_{2B}^{\text{Re}}$. The following sections extend this functional form to the remaining amplitudes for the global simultaneous fit.
+
+\subsection{Failure of Exponential Decay Model}
+\label{sec:exponential_failure}
+An exponential fall-off is a physically motivated alternative to the power law, but the Pareto front in Table~\ref{tab:pysr_pareto_front} contains no exponential decay in $|\vect{b}|$. The search used $(\eta, b_L, b_T)$ as inputs and had no square-root operator, so $e^{-c|\vect{b}|}$ has to be built from several nodes ($C \approx 19$ including the $\eta$ factor), while the $\text{lor}$ operator of Table~\ref{tab:pysr_config} gives a power law in $b^2$ at much lower complexity. Fitting $e^{-c|\vect{b}|}e^{-f\eta}$ directly to the same data gives a loss of about $2.63$, and adding a constant offset, as in the $C = 16$ model, lowers it to $2.26$. Both are above the loss of the simpler $C = 16$ model ($2.03$), so neither form would have stayed on the front. We therefore tested exponential decay directly, first in $|\vect{b}|$ and then in the longitudinal variable $P\cdot b$.
+
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.95\linewidth]{PySR_outputs/03_Exponential_b_StraightLine_Test.pdf}
@@ -178,34 +191,41 @@ The power-law tail $(1 + b^2)^{-j}$ decays more slowly than a Gaussian but, for 
     \label{fig:exp_b_straightline_test}
 \end{figure}
 
-As shown in Figure~\ref{fig:pysr_benchmark_fits}, the factorized $C = 14$ and $C = 16$ expressions track the lattice data throughout the accessible $(b_L, b_T)$ grid across all staple extents. The pure power-law-$\eta$ models ($C = 11, 17$) show slight systematic tension at the boundary $\eta$ values, where their $\eta^{-n}$ dependence departs from the exponential decay.
+In Figure~\ref{fig:exp_b_straightline_test} the data lie close to the straight line of $e^{-c|\vect{b}|}$ over the accessible range $3\le|\vect{b}|/a\le 8.2$, so $\tAmp_{2B}^{\text{Re}}$ alone does not favor the power law.
 
-The straight-line diagnostic in Figure~\ref{fig:gaussian_straightline_test} confirms the preference for a power-law tail over Gaussian fall-off: the lattice data curve upward at large $b^2$ rather than following the Gaussian's expected straight line, consistent with the generalized Lorentzian power-law tail discovered by the genetic algorithm.
+To test an exponential decay along the longitudinal direction, we fit separable models that multiply a longitudinal profile, $e^{-c|P\cdot b|}$ or $e^{-c(P\cdot b)^2}$, by a transverse profile, $e^{-d|\vect{b}|}$, $e^{-db^2}$ or $(1+db^2)^{-j}$, with the same factor $e^{-f\eta}$ (Figure~\ref{fig:rejection_gaussian_transverse}). With the Gaussian transverse profile the fit is poor ($\chi^2/\text{dof} \approx 4.98$). The other four combinations reach $\chi^2/\text{dof} \approx 1.9$ to $2.2$, but in each of them the longitudinal coefficient $c$ is consistent with zero and its central value is negative. Without a positive $c$ the model does not decay in $P\cdot b$, and the Fourier transform to $x$ diverges.
 
-The Pareto front in Table~\ref{tab:pysr_pareto_front} contains no exponential decay in $|\vect{b}|$. The search used $(\eta, b_L, b_T)$ as inputs and had no square-root operator, so $e^{-c|\vect{b}|}$ has to be built from several nodes ($C \approx 19$ including the $\eta$ factor), while the $\text{lor}$ operator of Table~\ref{tab:pysr_config} gives a power law in $b^2$ at much lower complexity. Evaluated with the same loss function, $e^{-c|\vect{b}|}e^{-f\eta}$ reaches a loss of about $2.63$ ($2.26$ with a constant offset). Both values are above the loss of the simpler $C = 16$ model ($2.03$), so neither form would have stayed on the front.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\linewidth]{plots/Rejection-of-Separable-Exponential-Longitudinal-Decay.pdf}
+    \caption{Separable fits of $\tAmp_{2B}^{\text{Re}}$ at $P_L=-1$ ($|\vect{b}|\ge 3a$, $6\le\eta\le10$) with an exponential or Gaussian longitudinal profile in $P\cdot b$ and an exponential, Gaussian or power-law transverse profile. The Gaussian transverse profile gives a poor fit ($\chi^2/\text{dof} \approx 4.98$). In the other models $c$ is consistent with zero within Jackknife uncertainties, so the fits show no longitudinal decay.}
+    \label{fig:rejection_gaussian_transverse}
+\end{figure}
 
-An exponential decay in $|\vect{b}|$ is nevertheless physically motivated, so we tested it directly.
-In Figure~\ref{fig:exp_b_straightline_test} the data lie close to the straight line of $e^{-c|\vect{b}|}$ over the accessible range $3\le|\vect{b}|/a\le 8.2$, so $\tAmp_{2B}^{\text{Re}}$ alone does not favor the power law. The exponential envelope fails once it is applied to all three amplitudes: the factorized models with an $e^{-d|b|}$ transverse envelope (\texttt{ExpPb\_Expb} and \texttt{GaussianPb\_Expb}) in Section~\ref{sec:rejection_exponential_longitudinal} do not describe $\tAmp_{2B}^{\text{Im}}$ and $\tAmp_{12B}^{\text{Re}}$ (Table~\ref{tab:factorized_ansatze_comparison}).
+Letting the longitudinal coefficient depend on $\eta$, as $c(\eta) = c\,(1 - k_1/\eta + k_2/\eta^2)$, changes this (Figure~\ref{fig:rejection_etadep_c}). The fitted $c$ is now positive, so $c(\eta)$ is positive in the asymptotic limit $\eta \to \infty$ that the Sivers shift requires (Section~\ref{global-bLbTeta-fit}), and the best combinations reach $\chi^2/\text{dof} \approx 1.32$. We explore the choice of $\eta$-dependence for $c$ in Section~\ref{sec:systematic_exploration}.
 
-These tests also show the limits of the \texttt{PySR} search. Every model on the front from $C = 7$ to $C = 21$ depends on $b_L$ and $b_T$ only through $b_L^2 + b_T^2 = b^2$, with no separate parameter for $b_L$. Since $b_L = (P\cdot b)/(-P_L)$, these expressions are independent of $P\cdot b$ once mapped to the Lorentz-invariant variables, and they cannot describe the $P\cdot b$ dependence that the Fourier transform to $x$ requires. \texttt{PySR} therefore served as a guide for the $b^2$ and $\eta$ dependence, not as the final model. Starting from its Gaussian, exponential decay, and power law, we systematically explored functions with $P\cdot b$ dependence in Section~\ref{sec:systematic_exploration} and tested factorized alternatives in Section~\ref{sec:rejection_exponential_longitudinal}.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\linewidth]{plots/Rejection-of-Separable-Exponential-Longitudinal-Decay-ceta.eps}
+    \caption{Separable fits as in Figure~\ref{fig:rejection_gaussian_transverse}, with an $\eta$-dependent longitudinal coefficient $c(\eta) = c\,(1 - k_1/\eta + k_2/\eta^2)$. The fitted $c$ is positive in every model, so $c(\eta)$ is positive as $\eta \to \infty$.}
+    \label{fig:rejection_etadep_c}
+\end{figure}
 
-%We therefore adopt the Lorentzian power-law structure as the spatial profile for $\tAmp_{2B}^{\text{Re}}$. The following sections extend this functional form to the remaining amplitudes for the global simultaneous fit.
-
-\subsection{Failure of Exponential Decay Model}
+These tests use $\tAmp_{2B}^{\text{Re}}$ alone. In Section~\ref{sec:rejection_exponential_longitudinal} we apply exponential and Gaussian longitudinal profiles, with exponential and power-law transverse envelopes, to all three amplitudes and discuss there why these factorized models fail for $\tAmp_{2B}^{\text{Im}}$ and $\tAmp_{12B}^{\text{Re}}$.
 
 
 \subsection{Systematic Exploration of the Power-Law Model}
 \label{sec:systematic_exploration}
 
-Guided by the \texttt{PySR} result, we now determine the $\eta$-dependence of the power-law model. We fit $\tAmp_{2B}^{\text{Re}}$ at momentum $P_L=-1$, with $6\leq\eta\leq10$ and $|\vect{b}|\geq3a$. For comparison, we first refit a family of Gaussian ans\"atze with $\eta$-dependent widths (Figure~\ref{fig:rejection_fit_list_gaussian_c_d_etas}); for each model, the figure lists the model expression, the fit parameters, their Jackknife-averaged values, and the resulting $\chi^2/\mathrm{DoF}$.
-\begin{figure}[htbp]
+Guided by the \texttt{PySR} result, we now determine the $\eta$-dependence of the power-law model. We fit $\tAmp_{2B}^{\text{Re}}$ at momentum $P_L=-1$, with $6\leq\eta\leq10$ and $|\vect{b}|\geq3a$. For comparison, we first refit a family of Gaussian ans\"atze with $\eta$-dependent widths (Table~\ref{tab:rejection_fit_list_gaussian_c_d_etas}); for each model, the figure lists the model expression, the fit parameters, their Jackknife-averaged values, and the resulting $\chi^2/\mathrm{DoF}$.
+\begin{table}[htbp]
     \centering
     \includegraphics[width=1\linewidth]{plots/fit_exploration_mathematica/fit_list_gaussian_c_d_etas.eps}
     \caption{3D jackknife fits of $\tAmp_{2B}^{\text{Re}}(b_L,b_T,\eta)$ to a family of 16 Gaussian ans\"atze, all built on the common baseline $\tAmp_{2B}^{\text{Re}} = a\, e^{-f\eta}\, \exp\!\big[-c\,(b_L P_L)^2 - d\,(b_L^2+b_T^2)\big]$, in which the coefficients $c$ and $d$ are each independently allowed to be either constant or one of three $\eta$-dependent forms, $c\to c(\eta)$ and/or $d\to d(\eta)$.}
-    \label{fig:rejection_fit_list_gaussian_c_d_etas}
-\end{figure}
+    \label{tab:rejection_fit_list_gaussian_c_d_etas}
+\end{table}
 
-The coefficient $c$ of $(P\cdot b)^2$ must be positive and stable for the Fourier transform to $x$ to exist. In Figure~\ref{fig:rejection_fit_list_gaussian_c_d_etas}, most of the Gaussian fits give an unstable or negative $c$ and a higher $\chi^2/\mathrm{DoF}$, which confirms the conclusion of Section~\ref{sec:gaussian_transformation}. The power-law ans\"atze in Figure~\ref{fig:powerlaw_eta_asymptotic} reduce $\chi^2/\mathrm{DoF}$ to $\approx1.5$. We added two more columns for AIC (Akaike information criterion) and Fourier transform of the ans\"atze. Making $d$ depend on $\eta$ worsens the fit, while making $c$ depend on $\eta$ improves it. This raises a new ambiguity: several $\eta$-dependences give almost the same $\chi^2/\mathrm{DoF}$. For each power-law model, the figure lists the model expression, the fit parameters, their Jackknife-averaged values, $\chi^2/\mathrm{DoF}$, AIC, and the resulting Fourier transform in $x$.
+The coefficient $c$ of $(P\cdot b)^2$ must be positive and stable for the Fourier transform to $x$ to exist. In Table~\ref{tab:rejection_fit_list_gaussian_c_d_etas}, most of the Gaussian fits give an unstable or negative $c$ and a higher $\chi^2/\mathrm{DoF}$, which confirms the conclusion of Section~\ref{sec:gaussian_transformation}. The power-law ans\"atze in Figure~\ref{fig:powerlaw_eta_asymptotic} reduce $\chi^2/\mathrm{DoF}$ to $\approx1.5$. We added two more columns for AIC (Akaike information criterion) and Fourier transform of the ans\"atze. Making $d$ depend on $\eta$ worsens the fit, while making $c$ depend on $\eta$ improves it. This raises a new ambiguity: several $\eta$-dependences give almost the same $\chi^2/\mathrm{DoF}$. For each power-law model, the figure lists the model expression, the fit parameters, their Jackknife-averaged values, $\chi^2/\mathrm{DoF}$, AIC, and the resulting Fourier transform in $x$.
 \begin{figure}[h!]
     \centering
     \includegraphics[width=1\linewidth]{PowerLaw_etaAsymptotic/A2BfitFT_eta_Asymptotic_P1.pdf}
@@ -664,7 +684,7 @@ Figs.~\ref{fig:ft_xdep_2d_P4} and \ref{fig:ft_xdep_3d_P4} show the $x$-dependenc
 \pagebreak
 
 \subsection{Test for Factorization in \texorpdfstring{$(P\cdot b)$}{TEXT} and \texorpdfstring{$b^2$}{TEXT}} \label{sec:factorization_test}
-The selected candidate model for amplitudes, and all other explored ansatze, were not factorized functions of $(P\cdot b)$ and $b^2$. In Section \ref{sec:gaussian_transformation}, we discussed the failure of a simple Gaussian model, which is a factorized function of $(P\cdot b)$ and $b^2$. In Section \ref{sec:pysr_methodology}, we concluded that symbolic regression (PySR) did not find any factorized function. Figure \ref{fig:rejection_fit_list_gaussian_c_d_etas} in Section \ref{sec:systematic_exploration} explored numerous factorized Gaussian models with different $\eta$ dependencies in fit parameters. To provide more detail on non-factorization in lattice TMD amplitudes, we explore ratios of lattice data as a function of $(P\cdot b)$ and $b^2$ in Section~\ref {sec:ratio_test} to test factorization. Finally, Section~\ref{sec:rejection_exponential_longitudinal} explores more explicit factorized fits for TMD amplitudes and shows why it fails.
+The selected candidate model for amplitudes, and all other explored ansatze, were not factorized functions of $(P\cdot b)$ and $b^2$. In Section \ref{sec:gaussian_transformation}, we discussed the failure of a simple Gaussian model, which is a factorized function of $(P\cdot b)$ and $b^2$. In Section \ref{sec:pysr_methodology}, we concluded that symbolic regression (PySR) did not find any factorized function. Table \ref{tab:rejection_fit_list_gaussian_c_d_etas} in Section \ref{sec:systematic_exploration} explored numerous factorized Gaussian models with different $\eta$ dependencies in fit parameters. To provide more detail on non-factorization in lattice TMD amplitudes, we explore ratios of lattice data as a function of $(P\cdot b)$ and $b^2$ in Section~\ref {sec:ratio_test} to test factorization. Finally, Section~\ref{sec:rejection_exponential_longitudinal} explores more explicit factorized fits for TMD amplitudes and shows why it fails.
 
 \subsubsection{Ratio Test on the Lattice Data}
 \label{sec:ratio_test}
@@ -733,27 +753,9 @@ The ratio test is thus only a qualitative check. Where the interpolated values r
 
 \subsubsection{Rejection of Separable Longitudinal and Transverse Factorization}
 \label{sec:rejection_exponential_longitudinal}
-Because the ratio test cannot settle the question, we fit explicitly factorized models and compare them with the selected power-law fit. We constructed candidate models that multiply an independent longitudinal $(P\cdot b)$ profile by various transverse $b^2$ profiles, including combinations of Gaussian, Lorentzian power-law, and exponential-decay forms, and evaluated each with full Jackknife fits.
+Because the ratio test cannot settle the question, we fit explicitly factorized models and compare them with the selected power-law fit. Section~\ref{sec:exponential_failure} tested separable longitudinal profiles on $\tAmp_{2B}^{\text{Re}}$ alone; here we apply the four lowest-$\chi^2$ combinations to all three amplitudes.
 
-The fit results are summarized in Figure~\ref{fig:rejection_gaussian_transverse} (see its caption for the poor $\chi^2/\text{dof}$ when exponential decay in $(P\cdot b)$ is paired with a Gaussian transverse profile). Even the better combinations give $\chi^2/\text{dof}\approx 2$, and the coefficient $c$ governing $(P\cdot b)$ comes out negative and consistent with zero within Jackknife uncertainties. Such a coefficient is unstable and makes the Fourier transform diverge.
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=1\linewidth]{plots/Rejection-of-Separable-Exponential-Longitudinal-Decay.pdf}
-    \caption{Fits testing the separability hypothesis. Pairing an exponential decay in $(P\cdot b)$ with a Gaussian transverse profile gives a poor fit ($\chi^2/\text{dof} \approx 4.98$). In models with a lower $\chi^2/\text{dof}$, the coefficient $c$ consistently fits to zero within uncertainties and is negative in each Jackknife set, so the data reject the separability hypothesis.}
-    \label{fig:rejection_gaussian_transverse}
-\end{figure}
-
-We also tested the separability hypothesis with an $\eta$-dependent $c$, written $c(\eta)$, as the coefficient governing $(P\cdot b)$; this forces $c$ to be positive in the asymptotic limit. The asymptotic $c(\eta)$ lowers the $\chi^2/\text{dof}$ to $\approx 1.35$, with $c$ positive in the asymptotic limit (Figure~\ref{fig:rejection_etadep_c}). These fits show that the lattice data prefer a power-law in $(P \cdot b)$ rather than an exponential decay in $|(P \cdot b)|$.
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=1\linewidth]{plots/Rejection-of-Separable-Exponential-Longitudinal-Decay-ceta.eps}
-    \caption{Fits testing the separability hypothesis with $\eta$-dependent $c$, written $c(\eta)$. In models with a lower $\chi^2/\text{dof}$, the coefficient $c$ is now positive.}
-    \label{fig:rejection_etadep_c}
-\end{figure}
-
-
-We studied four factorized ansatze with lower $\chi^2/\text{dof}$ and applied the same ansatze to all three invariant amplitudes ($\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$, and $\tAmp_{12B}^{\text{Re}}$). These models combine either an exponential ($e^{-c|P\cdot b|}$) or Gaussian ($e^{-c(P\cdot b)^2}$) longitudinal profile with either an exponential ($e^{-d|b|}$) or power-law ($(1+db^2)^{-j}$) transverse envelope:
+The four ans\"atze combine either an exponential ($e^{-c|P\cdot b|}$) or Gaussian ($e^{-c(P\cdot b)^2}$) longitudinal profile with either an exponential ($e^{-d|b|}$) or power-law ($(1+db^2)^{-j}$) transverse envelope:
 \begin{enumerate}
     \item \textbf{\texttt{ExpPb\_Expb}}:
     \begin{align}

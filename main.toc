@@ -1,5 +1,5 @@
 \babel@toc {english}{}\relax 
-\contentsline {section}{LIST OF TABLES}{xiv}{section*.2}%
+\contentsline {section}{LIST OF TABLES}{xv}{section*.2}%
 \contentsline {section}{LIST OF FIGURES}{xxvi}{section*.3}%
 \contentsline {section}{\numberline {1}INTRODUCTION AND MOTIVATION}{1}{section.1}%
 \contentsline {subsection}{\numberline {1.1}From form factors to partons}{1}{subsection.1.1}%
@@ -84,24 +84,25 @@
 \contentsline {subsubsection}{\numberline {6.4.1}Expression Search and Configuration}{110}{subsubsection.6.4.1}%
 \contentsline {subsubsection}{\numberline {6.4.2}The Physics-Informed Custom Loss Function}{111}{subsubsection.6.4.2}%
 \contentsline {subsubsection}{\numberline {6.4.3}Pareto Front of Discovered Models}{112}{subsubsection.6.4.3}%
-\contentsline {subsection}{\numberline {6.5}Systematic Exploration of the Power-Law Model}{118}{subsection.6.5}%
-\contentsline {subsection}{\numberline {6.6}Candidate Selection}{124}{subsection.6.6}%
-\contentsline {subsection}{\numberline {6.7}Simultaneous Fitting Strategy}{126}{subsection.6.7}%
-\contentsline {subsubsection}{\numberline {6.7.1}Simultaneous Fit with Full Covariance Matrix}{127}{subsubsection.6.7.1}%
-\contentsline {subsubsection}{\numberline {6.7.2}Simultaneous Fit Results for $\hat {\zeta }=0.090772$ ($\ensuremath {\boldsymbol {P}}\cdot a\hat {L}/(2\pi )=\{-1,0,0\}$)}{128}{subsubsection.6.7.2}%
-\contentsline {subsubsection}{\numberline {6.7.3}Simultaneous Fit Results for $\hat {\zeta }=0.294367$ ($\ensuremath {\boldsymbol {P}}\cdot a\hat {L}/(2\pi )=\{-2,0,0\}$)}{133}{subsubsection.6.7.3}%
-\contentsline {subsubsection}{\numberline {6.7.4}Simultaneous Fit Results for $\hat {\zeta }=0.539684$ ($\ensuremath {\boldsymbol {P}}\cdot a\hat {L}/(2\pi )=\{-3,0,0\}$)}{138}{subsubsection.6.7.4}%
-\contentsline {subsubsection}{\numberline {6.7.5}Simultaneous Fit Results for $\hat {\zeta }=0.785756$ ($\ensuremath {\boldsymbol {P}}\cdot a\hat {L}/(2\pi )=\{-4,0,0\}$)}{143}{subsubsection.6.7.5}%
-\contentsline {subsection}{\numberline {6.8}Test for Factorization in $(P\cdot b)$ and $b^2$}{148}{subsection.6.8}%
-\contentsline {subsubsection}{\numberline {6.8.1}Ratio Test on the Lattice Data}{148}{subsubsection.6.8.1}%
-\contentsline {subsubsection}{\numberline {6.8.2}Rejection of Separable Longitudinal and Transverse Factorization}{151}{subsubsection.6.8.2}%
-\contentsline {section}{\numberline {7}EXTRAPOLATIONS TO THE PHYSICAL LIMIT}{156}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Motivation for the $\hat {\zeta } \to \infty $ Extrapolation}{156}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Extrapolation $\hat {\zeta } \to \infty $}{158}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Testing Factorization in $x$ and $|b_T|$ at the Physical Limit}{161}{subsection.7.3}%
-\contentsline {subsubsection}{\numberline {7.3.1}Quantifying the Distance from a Factorized Form}{164}{subsubsection.7.3.1}%
-\contentsline {subsubsection}{\numberline {7.3.2}Factorization Test for the Sivers Shift}{165}{subsubsection.7.3.2}%
-\contentsline {subsubsection}{\numberline {7.3.3}Factorization Test at the Amplitude Level}{167}{subsubsection.7.3.3}%
-\contentsline {section}{\numberline {8}CONCLUSION AND OUTLOOK}{172}{section.8}%
-\contentsline {section}{\numberline {A}QLUA: Gamma $\Gamma (n)$}{173}{appendix.A}%
-\contentsline {section}{REFERENCES}{174}{section*.124}%
+\contentsline {subsection}{\numberline {6.5}Failure of Exponential Decay Model}{114}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}Systematic Exploration of the Power-Law Model}{119}{subsection.6.6}%
+\contentsline {subsection}{\numberline {6.7}Candidate Selection}{124}{subsection.6.7}%
+\contentsline {subsection}{\numberline {6.8}Simultaneous Fitting Strategy}{126}{subsection.6.8}%
+\contentsline {subsubsection}{\numberline {6.8.1}Simultaneous Fit with Full Covariance Matrix}{127}{subsubsection.6.8.1}%
+\contentsline {subsubsection}{\numberline {6.8.2}Simultaneous Fit Results for $\hat {\zeta }=0.090772$ ($\ensuremath {\boldsymbol {P}}\cdot a\hat {L}/(2\pi )=\{-1,0,0\}$)}{128}{subsubsection.6.8.2}%
+\contentsline {subsubsection}{\numberline {6.8.3}Simultaneous Fit Results for $\hat {\zeta }=0.294367$ ($\ensuremath {\boldsymbol {P}}\cdot a\hat {L}/(2\pi )=\{-2,0,0\}$)}{133}{subsubsection.6.8.3}%
+\contentsline {subsubsection}{\numberline {6.8.4}Simultaneous Fit Results for $\hat {\zeta }=0.539684$ ($\ensuremath {\boldsymbol {P}}\cdot a\hat {L}/(2\pi )=\{-3,0,0\}$)}{138}{subsubsection.6.8.4}%
+\contentsline {subsubsection}{\numberline {6.8.5}Simultaneous Fit Results for $\hat {\zeta }=0.785756$ ($\ensuremath {\boldsymbol {P}}\cdot a\hat {L}/(2\pi )=\{-4,0,0\}$)}{143}{subsubsection.6.8.5}%
+\contentsline {subsection}{\numberline {6.9}Test for Factorization in $(P\cdot b)$ and $b^2$}{148}{subsection.6.9}%
+\contentsline {subsubsection}{\numberline {6.9.1}Ratio Test on the Lattice Data}{148}{subsubsection.6.9.1}%
+\contentsline {subsubsection}{\numberline {6.9.2}Rejection of Separable Longitudinal and Transverse Factorization}{151}{subsubsection.6.9.2}%
+\contentsline {section}{\numberline {7}EXTRAPOLATIONS TO THE PHYSICAL LIMIT}{155}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Motivation for the $\hat {\zeta } \to \infty $ Extrapolation}{155}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Extrapolation $\hat {\zeta } \to \infty $}{157}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Testing Factorization in $x$ and $|b_T|$ at the Physical Limit}{160}{subsection.7.3}%
+\contentsline {subsubsection}{\numberline {7.3.1}Quantifying the Distance from a Factorized Form}{163}{subsubsection.7.3.1}%
+\contentsline {subsubsection}{\numberline {7.3.2}Factorization Test for the Sivers Shift}{164}{subsubsection.7.3.2}%
+\contentsline {subsubsection}{\numberline {7.3.3}Factorization Test at the Amplitude Level}{166}{subsubsection.7.3.3}%
+\contentsline {section}{\numberline {8}CONCLUSION AND OUTLOOK}{171}{section.8}%
+\contentsline {section}{\numberline {A}QLUA: Gamma $\Gamma (n)$}{172}{appendix.A}%
+\contentsline {section}{REFERENCES}{173}{section*.124}%

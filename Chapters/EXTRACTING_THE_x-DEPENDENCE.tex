@@ -8,7 +8,7 @@ Section~\ref{sec:solving_amplitudes} projects the correlator parametrization ont
 \subsection{The Sivers Shift as a Function of Momentum Fraction $x$}
 \label{sec:sivers_shift_x}
 To connect our lattice observables to the physical, $x$-dependent Transverse Momentum Dependent Parton Distribution Functions (TMDs), we must isolate the relevant amplitudes from the correlation function. Focusing on the leading-twist unpolarized quark distribution, the correlator is parameterized by the Lorentz-invariant amplitudes $\tAmp_{2B}$ and $\tAmp_{12B}$, which we construct from the primitive correlator amplitudes in Section \ref{sec:effective_amplitudes}.
-Our primary goal is to extract the generalized Sivers shift, $\langle \vect{k}_y \rangle_{TU}$, as a continuous function of the longitudinal momentum fraction $x = k^+ / P^+$. The Sivers shift is defined phenomenologically as the ratio of the first transverse momentum moment of the Sivers function to the unpolarized distribution as discussed in Section \ref{sec-parametr}. 
+Our primary goal is to extract the generalized Sivers shift, $\langle \vect{k}_y \rangle_{TU}$, as a continuous function of the longitudinal momentum fraction $x = k^+ / P^+$. The Sivers shift is defined phenomenologically as the ratio of the first transverse momentum moment of the Sivers function to the unpolarized distribution as discussed in Section \ref{sec:sivers_shift_amplitudes}. 
 
 Because $x$ and the longitudinal spatial separation $b \cdot P$ are Fourier conjugate variables, mapping the $x$-dependence requires a Fourier transform of these amplitudes with respect to $b \cdot P$. Analytically, the $x$-dependent Sivers shift takes the form:
 \begin{align}
@@ -134,7 +134,7 @@ To evaluate the correlation function as a function of the staple extent, we scal
 
  To access the continuous off-axis coordinate $\eta \vect{v}/a$, we employ a spatial bounding and interpolation strategy. Rather than constructing a single, potentially biased step-wise path (a "staircase") that roughly approximates the vector, we compute the observable at multiple distinct integer lattice sites surrounding the exact ideal target coordinate. We reach these bounding coordinates through specific permutations of unit links. A path sequence denoted $\{1,3,1\}$ is a single link in the $\hat{x_{1}}$ direction, followed by one in the $\hat{x_{3}}$ direction and a final link in the $\hat{x_{1}}$ direction, which lands at the integer coordinate $(2,0,1)$. By varying these step sequences, we gather data at three to four adjacent lattice sites (e.g., on either side of the target along the $x^3$ slice). 
 
-Once these bounding matrix elements are computed, we perform a spatial interpolation inside the Jackknife resampling loop to extract the value at the continuous target coordinate $\eta \vect{v}/a$. The interpolation reduces discretization artifacts and the staircase errors of off-axis Wilson lines; the next section describes the procedure. Figures \ref{fig:v_path_P-1} through \ref{fig:eta_table_P-4} show the ideal continuous trajectories for each nucleon momentum, together with the corresponding discrete bounding paths and link sequences.
+Once these bounding matrix elements are computed, we perform a spatial interpolation inside the Jackknife resampling loop to extract the value at the continuous target coordinate $\eta \vect{v}/a$. The interpolation reduces discretization artifacts and the staircase errors of off-axis Wilson lines; the next section describes the procedure. Figures \ref{fig:v_path_P-1}--\ref{fig:v_path_P-4} and Tables \ref{tab:eta_table_P-1}--\ref{tab:eta_table_P-4} show the ideal continuous trajectories for each nucleon momentum, together with the corresponding discrete bounding paths and link sequences.
 
 % ---------------------------------------------------------
 % P_1 = -1 Figures
@@ -146,12 +146,12 @@ Once these bounding matrix elements are computed, we perform a spatial interpola
         \label{fig:v_path_P-1}
 \end{figure}
 
-\begin{figure}[htpb]
+\begin{table}[htpb]
     \centering
     \includegraphics[width=1\linewidth]{plots/kinematics_interpolation/eta_gauge_links_forP-1_table.pdf}
         \caption{Discrete gauge link configurations defining the interpolation bounds for $P_1 = -1$. Empty brackets $\{\}$ denote a zero-length origin link, while numerical arrays (e.g., $\{1,3,1\}$) give the sequence of directional steps.}
-        \label{fig:eta_table_P-1}
-\end{figure}
+        \label{tab:eta_table_P-1}
+\end{table}
 
 
 % ---------------------------------------------------------
@@ -164,12 +164,12 @@ Once these bounding matrix elements are computed, we perform a spatial interpola
         \label{fig:v_path_P-2}
 \end{figure}
 
-\begin{figure}[htpb]
+\begin{table}[htpb]
     \centering
     \includegraphics[width=1\linewidth]{plots/kinematics_interpolation/eta_gauge_links_forP-2_table.pdf}
         \caption{Discrete gauge link configurations defining the interpolation bounds for $P_1 = -2$.}
-        \label{fig:eta_table_P-2}
-\end{figure}
+        \label{tab:eta_table_P-2}
+\end{table}
 
 
 % ---------------------------------------------------------
@@ -182,12 +182,12 @@ Once these bounding matrix elements are computed, we perform a spatial interpola
         \label{fig:v_path_P-3}
 \end{figure}
 
-\begin{figure}[htpb]
+\begin{table}[htpb]
     \centering
     \includegraphics[width=1\linewidth]{plots/kinematics_interpolation/eta_gauge_links_forP-3_table.pdf}
         \caption{Discrete gauge link configurations defining the interpolation bounds for $P_1 = -3$.}
-        \label{fig:eta_table_P-3}
-\end{figure}
+        \label{tab:eta_table_P-3}
+\end{table}
 
 
 % ---------------------------------------------------------
@@ -200,12 +200,12 @@ Once these bounding matrix elements are computed, we perform a spatial interpola
         \label{fig:v_path_P-4}
 \end{figure}
 
-\begin{figure}[htpb]
+\begin{table}[htpb]
     \centering
     \includegraphics[width=1\linewidth]{plots/kinematics_interpolation/eta_gauge_links_forP-4_table.pdf}
         \caption{Discrete gauge link configurations defining the interpolation bounds for $P_1 = -4$.}
-        \label{fig:eta_table_P-4}
-\end{figure}
+        \label{tab:eta_table_P-4}
+\end{table}
 
 \pagebreak
 \subsubsection{Spatial Interpolation of Off-Axis Coordinates}
@@ -280,14 +280,14 @@ Section~\ref{sec:b_gauge_links} lists the gauge link paths used to reach each $\
 
 \subsubsection{Gauge Link Construction for \texorpdfstring{$\vect{b}$}{TEXT}}
 \label{sec:b_gauge_links}
-Constructing the direct Wilson line connecting the quark fields at $0$ and $\vect{b}$ requires generating step-wise paths across the lattice. We categorize these paths into purely transverse separations ($b_1 = 0$) and off-axis separations with a longitudinal component ($b_1 \neq 0$). For purely transverse separations, where $b \cdot P = 0$, the gauge links lie entirely within the transverse plane. Figure \ref{fig:b_table_transverse} lists the link sequences used to reach these target coordinates. An empty bracket $\{\}$ denotes the local origin, while arrays such as $\{2,2\}$ indicate a sequence of two consecutive links in the $\hat{x_{2}}$-direction.
+Constructing the direct Wilson line connecting the quark fields at $0$ and $\vect{b}$ requires generating step-wise paths across the lattice. We categorize these paths into purely transverse separations ($b_1 = 0$) and off-axis separations with a longitudinal component ($b_1 \neq 0$). For purely transverse separations, where $b \cdot P = 0$, the gauge links lie entirely within the transverse plane. Table \ref{tab:b_table_transverse} lists the link sequences used to reach these target coordinates. An empty bracket $\{\}$ denotes the local origin, while arrays such as $\{2,2\}$ indicate a sequence of two consecutive links in the $\hat{x_{2}}$-direction.
 
-\begin{figure}[htpb]
+\begin{table}[htpb]
     \centering
     \includegraphics[width=0.6\linewidth]{plots/kinematics_interpolation/b_gauge_links_for_table1.pdf}
     \caption{Discrete gauge link configurations for purely transverse quark separations ($\vect{b} = \{0, b_2, 0\}$). The numerical arrays show the sequential lattice steps (e.g., `2` represents a shift in the $x_2$ direction). Our lattice size is $\{\hat{L}^3\times\hat{T}\}=\{32^3\times96\}$ and the lattice spacing is $a=0.11403\text{ fm}$.}
-    \label{fig:b_table_transverse}
-\end{figure}
+    \label{tab:b_table_transverse}
+\end{table}
 
 To access finite $b \cdot P$, we construct off-axis paths with simultaneous steps in the longitudinal ($\hat{x_{1}}$) and transverse ($\hat{x_{2}}$) directions. To preserve the symmetry required for isolating parity states, every path that reaches a $+b_1$ coordinate has an exact mirror path reaching $-b_1$. Figures \ref{fig:b_table_pos_b1}-\ref{fig:b_table_neg_b1} show these mirrored sequences side by side. Sequences such as $\{2,1\}$ indicate an alternating "staircase" step: one unit in the $\hat{x_{2}}$-direction followed by one unit in the $\hat{x_{1}}$-direction. 
 \begin{figure}[htpb]
