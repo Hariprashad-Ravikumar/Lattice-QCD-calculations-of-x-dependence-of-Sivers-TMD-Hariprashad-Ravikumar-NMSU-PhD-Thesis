@@ -170,9 +170,18 @@ The power-law tail $(1 + b^2)^{-j}$ decays more slowly than a Gaussian but, for 
     \label{fig:gaussian_straightline_test}
 \end{figure}
 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\linewidth]{PySR_outputs/03_Exponential_b_StraightLine_Test.pdf}
+    \caption{Straight-line test for an exponential decay in $|\vect{b}|=\sqrt{b^2}$. A profile $\tAmp_{2B}^{\text{Re}}\propto e^{-c|\vect{b}|}$ is a straight line on a logarithmic ordinate versus $|\vect{b}|/a$ (red dashed line, best fit $c=0.579$ with the same $\eta$ factor as the Gaussian baseline of Figure~\ref{fig:gaussian_straightline_test}). The \texttt{PySR} power law $(1+b^2)^{-1.39}$ (blue solid line) is shown for comparison. Over $3\le|\vect{b}|/a\le 8.2$ the exponential describes $\tAmp_{2B}^{\text{Re}}$ at least as well as the power law.}
+    \label{fig:exp_b_straightline_test}
+\end{figure}
+
 As shown in Figure~\ref{fig:pysr_benchmark_fits}, the factorized $C = 14$ and $C = 16$ expressions track the lattice data throughout the accessible $(b_L, b_T)$ grid across all staple extents. The pure power-law-$\eta$ models ($C = 11, 17$) show slight systematic tension at the boundary $\eta$ values, where their $\eta^{-n}$ dependence departs from the exponential decay.
 
 The straight-line diagnostic in Figure~\ref{fig:gaussian_straightline_test} confirms this: the lattice data curve upward at large $b^2$ rather than following the Gaussian's expected straight line, consistent with the generalized Lorentzian power-law tail discovered by the genetic algorithm.
+
+An exponential decay in $|\vect{b}|$ is harder to rule out from $\tAmp_{2B}^{\text{Re}}$ alone. In Figure~\ref{fig:exp_b_straightline_test} the data lie close to the straight line of $e^{-c|\vect{b}|}$ over the accessible range $3\le|\vect{b}|/a\le 8.2$, so this one amplitude does not favor the power law. The exponential envelope fails once it is applied to all three amplitudes: the factorized models with an $e^{-d|b|}$ transverse envelope (\texttt{ExpPb\_Expb} and \texttt{GaussianPb\_Expb}) in Section~\ref{sec:rejection_exponential_longitudinal} do not describe $\tAmp_{2B}^{\text{Im}}$ and $\tAmp_{12B}^{\text{Re}}$ (Table~\ref{tab:factorized_ansatze_comparison}).
 
 We therefore adopt the Lorentzian power-law structure as the spatial profile for $\tAmp_{2B}^{\text{Re}}$. The following sections extend this functional form to the remaining amplitudes for the global simultaneous fit.
 
