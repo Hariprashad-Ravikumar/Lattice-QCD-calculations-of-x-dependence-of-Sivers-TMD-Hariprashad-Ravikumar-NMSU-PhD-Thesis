@@ -1,6 +1,6 @@
 \babel@toc {english}{}\relax 
 \contentsline {section}{LIST OF TABLES}{xv}{section*.2}%
-\contentsline {section}{LIST OF FIGURES}{xxvi}{section*.3}%
+\contentsline {section}{LIST OF FIGURES}{xxv}{section*.3}%
 \contentsline {section}{\numberline {1}INTRODUCTION AND MOTIVATION}{1}{section.1}%
 \contentsline {subsection}{\numberline {1.1}From form factors to partons}{1}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Beyond one dimension}{2}{subsection.1.2}%

@@ -193,23 +193,23 @@ An exponential fall-off is a physically motivated alternative to the power law, 
 
 In Figure~\ref{fig:exp_b_straightline_test} the data lie close to the straight line of $e^{-c|\vect{b}|}$ over the accessible range $3\le|\vect{b}|/a\le 8.2$, so $\tAmp_{2B}^{\text{Re}}$ alone does not favor the power law.
 
-To test an exponential decay along the longitudinal direction, we fit separable models that multiply a longitudinal profile, $e^{-c|P\cdot b|}$ or $e^{-c(P\cdot b)^2}$, by a transverse profile, $e^{-d|\vect{b}|}$, $e^{-db^2}$ or $(1+db^2)^{-j}$, with the same factor $e^{-f\eta}$ (Figure~\ref{fig:rejection_gaussian_transverse}). With the Gaussian transverse profile the fit is poor ($\chi^2/\text{dof} \approx 4.98$). The other four combinations reach $\chi^2/\text{dof} \approx 1.9$ to $2.2$, but in each of them the longitudinal coefficient $c$ is consistent with zero and its central value is negative. Without a positive $c$ the model does not decay in $P\cdot b$, and the Fourier transform to $x$ diverges.
+To test an exponential decay along the longitudinal direction, we fit separable models that multiply a longitudinal profile, $e^{-c|P\cdot b|}$ or $e^{-c(P\cdot b)^2}$, by a transverse profile, $e^{-d|\vect{b}|}$, $e^{-db^2}$ or $(1+db^2)^{-j}$, with the same factor $e^{-f\eta}$ (Table~\ref{tab:rejection_gaussian_transverse}). With the Gaussian transverse profile the fit is poor ($\chi^2/\text{dof} \approx 4.98$). The other four combinations reach $\chi^2/\text{dof} \approx 1.9$ to $2.2$, but in each of them the longitudinal coefficient $c$ is consistent with zero and its central value is negative. Without a positive $c$ the model does not decay in $P\cdot b$, and the Fourier transform to $x$ diverges.
 
-\begin{figure}[htbp]
+\begin{table}[htbp]
     \centering
     \includegraphics[width=1\linewidth]{plots/Rejection-of-Separable-Exponential-Longitudinal-Decay.pdf}
     \caption{Separable fits of $\tAmp_{2B}^{\text{Re}}$ at $P_L=-1$ ($|\vect{b}|\ge 3a$, $6\le\eta\le10$) with an exponential or Gaussian longitudinal profile in $P\cdot b$ and an exponential, Gaussian or power-law transverse profile. The Gaussian transverse profile gives a poor fit ($\chi^2/\text{dof} \approx 4.98$). In the other models $c$ is consistent with zero within Jackknife uncertainties, so the fits show no longitudinal decay.}
-    \label{fig:rejection_gaussian_transverse}
-\end{figure}
+    \label{tab:rejection_gaussian_transverse}
+\end{table}
 
-Letting the longitudinal coefficient depend on $\eta$, as $c(\eta) = c\,(1 - k_1/\eta + k_2/\eta^2)$, changes this (Figure~\ref{fig:rejection_etadep_c}). The fitted $c$ is now positive, so $c(\eta)$ is positive in the asymptotic limit $\eta \to \infty$ that the Sivers shift requires (Section~\ref{global-bLbTeta-fit}), and the best combinations reach $\chi^2/\text{dof} \approx 1.32$. We explore the choice of $\eta$-dependence for $c$ in Section~\ref{sec:systematic_exploration}.
+Letting the longitudinal coefficient depend on $\eta$, as $c(\eta) = c\,(1 - k_1/\eta + k_2/\eta^2)$, changes this (Table~\ref{tab:rejection_etadep_c}). The fitted $c$ is now positive, so $c(\eta)$ is positive in the asymptotic limit $\eta \to \infty$ that the Sivers shift requires (Section~\ref{global-bLbTeta-fit}), and the best combinations reach $\chi^2/\text{dof} \approx 1.32$. We explore the choice of $\eta$-dependence for $c$ in Section~\ref{sec:systematic_exploration}.
 
-\begin{figure}[htbp]
+\begin{table}[htbp]
     \centering
     \includegraphics[width=1\linewidth]{plots/Rejection-of-Separable-Exponential-Longitudinal-Decay-ceta.eps}
-    \caption{Separable fits as in Figure~\ref{fig:rejection_gaussian_transverse}, with an $\eta$-dependent longitudinal coefficient $c(\eta) = c\,(1 - k_1/\eta + k_2/\eta^2)$. The fitted $c$ is positive in every model, so $c(\eta)$ is positive as $\eta \to \infty$.}
-    \label{fig:rejection_etadep_c}
-\end{figure}
+    \caption{Separable fits as in Table~\ref{tab:rejection_gaussian_transverse}, with an $\eta$-dependent longitudinal coefficient $c(\eta) = c\,(1 - k_1/\eta + k_2/\eta^2)$. The fitted $c$ is positive in every model, so $c(\eta)$ is positive as $\eta \to \infty$.}
+    \label{tab:rejection_etadep_c}
+\end{table}
 
 These tests use $\tAmp_{2B}^{\text{Re}}$ alone. In Section~\ref{sec:rejection_exponential_longitudinal} we apply exponential and Gaussian longitudinal profiles, with exponential and power-law transverse envelopes, to all three amplitudes and discuss there why these factorized models fail for $\tAmp_{2B}^{\text{Im}}$ and $\tAmp_{12B}^{\text{Re}}$.
 
@@ -225,22 +225,22 @@ Guided by the \texttt{PySR} result, we now determine the $\eta$-dependence of th
     \label{tab:rejection_fit_list_gaussian_c_d_etas}
 \end{table}
 
-The coefficient $c$ of $(P\cdot b)^2$ must be positive and stable for the Fourier transform to $x$ to exist. In Table~\ref{tab:rejection_fit_list_gaussian_c_d_etas}, most of the Gaussian fits give an unstable or negative $c$ and a higher $\chi^2/\mathrm{DoF}$, which confirms the conclusion of Section~\ref{sec:gaussian_transformation}. The power-law ans\"atze in Figure~\ref{fig:powerlaw_eta_asymptotic} reduce $\chi^2/\mathrm{DoF}$ to $\approx1.5$. We added two more columns for AIC (Akaike information criterion) and Fourier transform of the ans\"atze. Making $d$ depend on $\eta$ worsens the fit, while making $c$ depend on $\eta$ improves it. This raises a new ambiguity: several $\eta$-dependences give almost the same $\chi^2/\mathrm{DoF}$. For each power-law model, the figure lists the model expression, the fit parameters, their Jackknife-averaged values, $\chi^2/\mathrm{DoF}$, AIC, and the resulting Fourier transform in $x$.
-\begin{figure}[h!]
+The coefficient $c$ of $(P\cdot b)^2$ must be positive and stable for the Fourier transform to $x$ to exist. In Table~\ref{tab:rejection_fit_list_gaussian_c_d_etas}, most of the Gaussian fits give an unstable or negative $c$ and a higher $\chi^2/\mathrm{DoF}$, which confirms the conclusion of Section~\ref{sec:gaussian_transformation}. The power-law ans\"atze in Table~\ref{tab:powerlaw_eta_asymptotic} reduce $\chi^2/\mathrm{DoF}$ to $\approx1.5$. We added two more columns for AIC (Akaike information criterion) and Fourier transform of the ans\"atze. Making $d$ depend on $\eta$ worsens the fit, while making $c$ depend on $\eta$ improves it. This raises a new ambiguity: several $\eta$-dependences give almost the same $\chi^2/\mathrm{DoF}$. For each power-law model, the figure lists the model expression, the fit parameters, their Jackknife-averaged values, $\chi^2/\mathrm{DoF}$, AIC, and the resulting Fourier transform in $x$.
+\begin{table}[h!]
     \centering
     \includegraphics[width=1\linewidth]{PowerLaw_etaAsymptotic/A2BfitFT_eta_Asymptotic_P1.pdf}
     \caption{3D Jackknife fits of $\tAmp_{2B}^{\text{Re}}(b_L,b_T,\eta)$ to a family of power-law ans\"atze, all built on the common baseline $\tAmp_{2B}^{\text{Re}} = a\, e^{-f\eta}\, \left(1+(c+d)b^2_L+db^2_T\right)^{-j}$, in which the coefficient $c$ is either constant or one of several $\eta$-dependent forms, $c\to c(\eta)$.}
-    \label{fig:powerlaw_eta_asymptotic}
-\end{figure}
+    \label{tab:powerlaw_eta_asymptotic}
+\end{table}
 \pagebreak
 
 For completeness, we explored more $\eta$-dependent forms $c\to c(\eta)$, which yield wider Fourier transforms in $x$ space.
-\begin{figure}[h!]
+\begin{table}[h!]
     \centering
     \includegraphics[width=1\linewidth]{PowerLaw_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_P1.pdf}
     \caption{3D jackknife fits of $\tAmp_{2B}^{\text{Re}}(b_L,b_T,\eta)$ to a family of power-law ans\"atze, all built on the common baseline $\tAmp_{2B}^{\text{Re}} = a\, e^{-f\eta}\, \left(1+(c+d)b^2_L+db^2_T\right)^{-j}$, in which the coefficient $c$ takes further $\eta$-dependent forms, $c\to c(\eta)$, that yield wider Fourier transforms in $x$ space.}
-    \label{fig:powerlaw_eta_asymptotic_wider}
-\end{figure}
+    \label{tab:powerlaw_eta_asymptotic_wider}
+\end{table}
 
 All viable asymptotic functions in $\eta$ have a common power-law profile with a power $j \approx 2$ and an amplitude scale $a \approx 4$, damped by the area-law-like suppression factor $e^{-0.5\eta}$. To isolate the $\eta$-dependence of the width parameters $c$ and $d$, we fix these structural parameters ($j=2$, $a=4$) and fit individual $\eta$ slices sequentially (Figure~\ref{fig:ReA2B_fixed_eta_slices}).
 \pagebreak
