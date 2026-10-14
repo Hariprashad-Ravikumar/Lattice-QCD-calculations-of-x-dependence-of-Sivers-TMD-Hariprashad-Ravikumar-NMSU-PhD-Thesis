@@ -140,7 +140,8 @@ Symbolic regression outputs a Pareto front of candidate models: a ranked list of
 
 \input{PySR_outputs/pysr_equations_table}
 
-At the lowest complexities ($C \leq 4$), \texttt{PySR} isolates the overall $\eta$-dependence of the amplitude as an exponential decay $\sim (0.499)^\eta \approx e^{-0.695\eta}$. At intermediate complexities ($C = 7$ to $12$), the algorithm introduces spatial $b$-dependence through Lorentzian-type power-law denominators $(1 + b_L^2 + b_T^2)^{-j}$ alongside linear or power-law $\eta$-models. The algorithm does not select a Gaussian spatial profile $e^{-cb^2}$ nor an exponential decay in $b$ at any point along the Pareto front. Instead, it converges on the power-law tail structure, consistent with Section~\ref{sec:gaussian_transformation}.
+At the lowest complexities ($C \leq 4$), \texttt{PySR} isolates the overall $\eta$-dependence of the amplitude as an exponential decay $\sim (0.499)^\eta \approx e^{-0.695\eta}$. At intermediate complexities ($C = 7$ to $12$), the algorithm introduces spatial $b$-dependence through Lorentzian-type power-law denominators $(1 + b_L^2 + b_T^2)^{-j}$ alongside linear or power-law $\eta$-models. The algorithm does not select a Gaussian spatial profile $e^{-cb^2}$ %nor an exponential decay in $b$ 
+at any point along the Pareto front. Instead, it converges on the power-law tail structure.
 
 The models at complexities $C = 14$ and $C = 16$ best balance accuracy and structure. The $C = 14$ expression has a factorized form:
 \begin{equation}
@@ -179,16 +180,18 @@ The power-law tail $(1 + b^2)^{-j}$ decays more slowly than a Gaussian but, for 
 
 As shown in Figure~\ref{fig:pysr_benchmark_fits}, the factorized $C = 14$ and $C = 16$ expressions track the lattice data throughout the accessible $(b_L, b_T)$ grid across all staple extents. The pure power-law-$\eta$ models ($C = 11, 17$) show slight systematic tension at the boundary $\eta$ values, where their $\eta^{-n}$ dependence departs from the exponential decay.
 
-The straight-line diagnostic in Figure~\ref{fig:gaussian_straightline_test} confirms this: the lattice data curve upward at large $b^2$ rather than following the Gaussian's expected straight line, consistent with the generalized Lorentzian power-law tail discovered by the genetic algorithm.
+The straight-line diagnostic in Figure~\ref{fig:gaussian_straightline_test} confirms the preference for a power-law tail over Gaussian fall-off: the lattice data curve upward at large $b^2$ rather than following the Gaussian's expected straight line, consistent with the generalized Lorentzian power-law tail discovered by the genetic algorithm.
 
 The Pareto front in Table~\ref{tab:pysr_pareto_front} contains no exponential decay in $|\vect{b}|$. The search used $(\eta, b_L, b_T)$ as inputs and had no square-root operator, so $e^{-c|\vect{b}|}$ has to be built from several nodes ($C \approx 19$ including the $\eta$ factor), while the $\text{lor}$ operator of Table~\ref{tab:pysr_config} gives a power law in $b^2$ at much lower complexity. Evaluated with the same loss function, $e^{-c|\vect{b}|}e^{-f\eta}$ reaches a loss of about $2.63$ ($2.26$ with a constant offset). Both values are above the loss of the simpler $C = 16$ model ($2.03$), so neither form would have stayed on the front.
 
 An exponential decay in $|\vect{b}|$ is nevertheless physically motivated, so we tested it directly.
 In Figure~\ref{fig:exp_b_straightline_test} the data lie close to the straight line of $e^{-c|\vect{b}|}$ over the accessible range $3\le|\vect{b}|/a\le 8.2$, so $\tAmp_{2B}^{\text{Re}}$ alone does not favor the power law. The exponential envelope fails once it is applied to all three amplitudes: the factorized models with an $e^{-d|b|}$ transverse envelope (\texttt{ExpPb\_Expb} and \texttt{GaussianPb\_Expb}) in Section~\ref{sec:rejection_exponential_longitudinal} do not describe $\tAmp_{2B}^{\text{Im}}$ and $\tAmp_{12B}^{\text{Re}}$ (Table~\ref{tab:factorized_ansatze_comparison}).
 
-These tests also show the limits of the \texttt{PySR} search. Every model on the front from $C = 7$ to $C = 21$ depends on $b_L$ and $b_T$ only through $b_L^2 + b_T^2 = b^2$, with no separate parameter for $b_L$. Since $b_L = (P\cdot b)/(-P_L)$, these expressions are independent of $P\cdot b$ once mapped to the Lorentz-invariant variables, and they cannot describe the $P\cdot b$ dependence that the Fourier transform to $x$ requires. \texttt{PySR} therefore served as a guide for the $b^2$ and $\eta$ dependence, not as the final model. Starting from its power law, we systematically explored functions with an independent $P\cdot b$ dependence in Section~\ref{sec:systematic_exploration} and tested factorized alternatives in Section~\ref{sec:rejection_exponential_longitudinal}.
+These tests also show the limits of the \texttt{PySR} search. Every model on the front from $C = 7$ to $C = 21$ depends on $b_L$ and $b_T$ only through $b_L^2 + b_T^2 = b^2$, with no separate parameter for $b_L$. Since $b_L = (P\cdot b)/(-P_L)$, these expressions are independent of $P\cdot b$ once mapped to the Lorentz-invariant variables, and they cannot describe the $P\cdot b$ dependence that the Fourier transform to $x$ requires. \texttt{PySR} therefore served as a guide for the $b^2$ and $\eta$ dependence, not as the final model. Starting from its Gaussian, exponential decay, and power law, we systematically explored functions with $P\cdot b$ dependence in Section~\ref{sec:systematic_exploration} and tested factorized alternatives in Section~\ref{sec:rejection_exponential_longitudinal}.
 
-We therefore adopt the Lorentzian power-law structure as the spatial profile for $\tAmp_{2B}^{\text{Re}}$. The following sections extend this functional form to the remaining amplitudes for the global simultaneous fit.
+%We therefore adopt the Lorentzian power-law structure as the spatial profile for $\tAmp_{2B}^{\text{Re}}$. The following sections extend this functional form to the remaining amplitudes for the global simultaneous fit.
+
+\subsection{Failure of Exponential Decay Model}
 
 
 \subsection{Systematic Exploration of the Power-Law Model}
