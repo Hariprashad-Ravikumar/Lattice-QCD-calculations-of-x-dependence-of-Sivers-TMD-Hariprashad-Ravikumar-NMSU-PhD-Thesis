@@ -4,3 +4,63 @@
 
 
 \label{sec:conclusion}
+
+This thesis set out to compute the dependence of the generalized Sivers shift on the longitudinal momentum fraction $x$ directly from lattice QCD. We summarize the four central chapters, state the main results, and describe how the same method extends to other TMD observables.
+
+\subsection{Summary}
+\label{sec:conclusion_summary}
+
+Chapter~\ref{sec:tmd_framework} defined the quark TMD correlator with a staple-shaped gauge link and decomposed its Fourier-transformed, $b$-dependent form into Lorentz-invariant amplitudes. The Fourier-transformed TMDs $\tilde f_1$ and $\tilde f_{1T}^{\perp(1)}$ are given by the amplitudes $\tAmp_{2B}$ and $\tAmp_{12B}$, and the $x$-dependent generalized Sivers shift, Eq.~\eqref{eq-genSivShift}, is the ratio of their Fourier transforms over $\bvec\tcdot P$. In this ratio the soft factor and the multiplicative, $\Gamma$-independent renormalization cancel.
+
+Chapter~\ref{sec:x_dependence} described the lattice calculation on a $32^3\times96$ ensemble with $a=0.11403$~fm at four nucleon momenta, $P_L=-1,\ldots,-4$, which correspond to $\zetahat=0.090772$ to $0.785756$. The invariants are not independent: Eq.~\eqref{eq-lindeprel} ties $v\tcdot b$ to $b\tcdot P$. We chose orthogonal transverse vectors, $\vprp{v}\perp\vprp{b}$, to satisfy this constraint over a continuous range of $b\tcdot P$, and interpolated between step-wise paths for the off-axis staple directions. From the lattice correlators we extracted the real and imaginary parts of $\tAmp_{2B}$ and $\tAmp_{12B}$ and checked their parity in $b_L$. The imaginary Sivers amplitude $\tAmp_{12B}^{\text{Im}}$ is consistent with zero and was dropped.
+
+Chapter~\ref{sec:fitting_methodologies} built the fit models. After removing data with $|\vect{b}|<3a$, we showed that a Gaussian model fails, because its Fourier transform over $P\cdot b$ diverges. Symbolic regression with \texttt{PySR}, used as a guide, pointed to a power-law tail in $b^2$. An exponential decay in $|\vect{b}|$ or in $P\cdot b$ describes $\tAmp_{2B}^{\text{Re}}$ alone but fails once it is applied to all three amplitudes. We fixed the $\eta$-dependence of the power-law parameters, selected a model for each amplitude, and fit the three amplitudes simultaneously with the full Jackknife covariance matrix to obtain the $x$-dependent Sivers shift at each momentum. Explicitly factorized models in $(P\cdot b)$ and $b^2$ failed for $\tAmp_{2B}^{\text{Im}}$ and $\tAmp_{12B}^{\text{Re}}$.
+
+Chapter~\ref{sec:physical_limit_extrapolation} extrapolated the fit parameters to the physical limit $\zetahat\to\infty$ with the form $c+d/\zetahat^2$, using $P_L=-2,-3,-4$, and reconstructed the amplitudes and the Sivers shift in this limit. It then tested whether the extrapolated results factorize in $x$ and $|b_T|$. The Sivers shift is factorized to within about $5.7$-$7.6\%$ in the relative $L_2$ sense, smaller than the $8$-$19\%$ residuals of the amplitudes that enter it. A factorized form $F(x)G(|b_T|)$ is therefore a good, but not exact, approximation to the extracted Sivers shift.
+
+\subsection{Main results}
+\label{sec:conclusion_results}
+
+\begin{itemize}
+	\item It is feasible to obtain the $x$-dependence of TMD ratios from lattice QCD. We extracted the \textbf{Sivers shift} as a function of $x$ at four nucleon momenta and extrapolated it to the physical limit $\zetahat\to\infty$.
+	\item The range of accessible $b \tcdot P$ is limited:
+	\begin{align}
+		\boxed{\textcolor{blue}{\frac{v \tcdot b}{v \tcdot P} = b \tcdot P \frac{R(\zetahat^2)}{\mN^2}\, ,}}
+	\end{align}
+	In spite of this constraint, we improved the analysis. Orthogonal transverse vectors $\vprp{v}\perp\vprp{b}$ satisfy the constraint over a continuous range of $b\tcdot P$, interpolation between lattice paths gives access to the off-axis staple directions, and the four momenta allow the extrapolation to $\zetahat\to\infty$.
+\end{itemize}
+
+\subsection{Outlook}
+\label{sec:conclusion_outlook}
+
+Extracting the $x$-dependence of the Sivers shift required the $x$-dependence of both the unpolarized TMD $f_1$ and the Sivers TMD $f_{1T}^\perp$. The same method applies to the other leading-twist TMDs of Eqs.~\eqref{eq:tmd_decomp_g}-\eqref{eq:tmd_decomp_h}, which come from the Dirac structures $\gamma^+\gamma_5$ and $i\sigma^{i+}\gamma_5$ instead of $\gamma^+$. Their $x$-integrated generalized shifts were defined and computed in Refs.~\cite{BMush_Engelhardt2012, Musch:2010ka}. Following Eq.~\eqref{eq-genSivShift}, their $x$-dependent versions require non-zero $\bvec\tcdot P$ and a Fourier transform over it:
+\begin{align}
+	\langle \vect{k}_y \rangle_{UT}(\vprp{\bvec}^2,x;\zetahat,\eta v \tcdot P)
+	&\ \equiv\ \mN \frac{\tilde h_{1}^{\perp(1)}(\vprp{\bvec}^2,x;\zetahat,\ldots,\eta v \tcdot P)}{\tilde f_1^{(0)}(\vprp{\bvec}^2,x;\zetahat,\ldots,\eta v \tcdot P)} \nonumber \\
+	&\ =\ \mN \frac{\int d(\bvec\tcdot P)\, e^{ix(\bvec\tcdot P)}\, \tAmp_{4B}\big(-\vprp{\bvec}^2,\bvec \tcdot P,(\bvec \tcdot P) R(\zetahat^2)/\mN^2,-1/(\mN\zetahat)^2,\eta v\tcdot P\big)}{\int d(\bvec\tcdot P)\, e^{ix(\bvec\tcdot P)}\, \tAmp_{2B}\big(-\vprp{\bvec}^2,\bvec \tcdot P,(\bvec \tcdot P) R(\zetahat^2)/\mN^2,-1/(\mN\zetahat)^2,\eta v\tcdot P\big)} \nonumber \\
+	&\ \xrightarrow{\vprp{\bvec}^2 = 0}
+		\left. \frac{ \sum_{\Lambda=\pm 1} \int d^2 \vprp{\kei}\, \vect{\kei}_y  \ \Phi^{[\gamma^+ + s^j i \sigma^{j+}\gamma^5]}(x,\vprp{\kei},P,S;\ldots) }
+		{ \sum_{\Lambda=\pm 1} \int d^2 \vprp{\kei}  \phantom{\vect{\kei}_y}\ \Phi^{[\gamma^+ + s^j i \sigma^{j+}\gamma^5]}(x,\vprp{\kei},P,S;\ldots) } \right|_{\displaystyle \vprp{s}=(1,0) } \, ,
+	\label{eq:outlook_BM_x} \displaybreak[0] \\
+	\langle \vect{k}_x \rangle_{TL}(\vprp{\bvec}^2,x;\zetahat,\eta v \tcdot P)
+	&\ \equiv\ \mN \frac{\tilde g_{1T}^{(1)}(\vprp{\bvec}^2,x;\zetahat,\ldots,\eta v \tcdot P)}{\tilde f_1^{(0)}(\vprp{\bvec}^2,x;\zetahat,\ldots,\eta v \tcdot P)} \nonumber \\
+	&\ =\ - \mN \frac{\int d(\bvec\tcdot P)\, e^{ix(\bvec\tcdot P)}\, \tAmp_{7B}\big(-\vprp{\bvec}^2,\bvec \tcdot P,(\bvec \tcdot P) R(\zetahat^2)/\mN^2,-1/(\mN\zetahat)^2,\eta v\tcdot P\big)}{\int d(\bvec\tcdot P)\, e^{ix(\bvec\tcdot P)}\, \tAmp_{2B}\big(-\vprp{\bvec}^2,\bvec \tcdot P,(\bvec \tcdot P) R(\zetahat^2)/\mN^2,-1/(\mN\zetahat)^2,\eta v\tcdot P\big)} \nonumber \\
+	&\ \xrightarrow{\vprp{\bvec}^2 = 0}
+		\left. \frac{ \int d^2 \vprp{\kei}\, \vect{\kei}_x  \ \Phi^{[\gamma^+ + \lambda \gamma^{+}\gamma^5]}(x,\vprp{\kei},P,S;\ldots) }
+		{ \int d^2 \vprp{\kei}  \phantom{\vect{\kei}_x}\ \Phi^{[\gamma^+ + \lambda \gamma^{+}\gamma^5]}(x,\vprp{\kei},P,S;\ldots) } \right|_{\displaystyle \vprp{S}=(1,0),\ \lambda=1 } \, ,
+	\label{eq:outlook_g1T_x} \displaybreak[0] \\
+	\frac{\tilde h_{1}^{(0)}(\vprp{\bvec}^2,x;\zetahat,\ldots,\eta v \tcdot P)}{\tilde f_1^{(0)}(\vprp{\bvec}^2,x;\zetahat,\ldots,\eta v \tcdot P)}
+	&\ =\ - \frac{\int d(\bvec\tcdot P)\, e^{ix(\bvec\tcdot P)}\, \tAmp_{9Bm}\big(-\vprp{\bvec}^2,\bvec \tcdot P,(\bvec \tcdot P) R(\zetahat^2)/\mN^2,-1/(\mN\zetahat)^2,\eta v\tcdot P\big)}{\int d(\bvec\tcdot P)\, e^{ix(\bvec\tcdot P)}\, \tAmp_{2B}\big(-\vprp{\bvec}^2,\bvec \tcdot P,(\bvec \tcdot P) R(\zetahat^2)/\mN^2,-1/(\mN\zetahat)^2,\eta v\tcdot P\big)} \nonumber \\
+	&\ \xrightarrow{\vprp{\bvec}^2 = 0}
+		\left.
+		 \frac{ \int d^2 \vprp{\kei}\ \Phi^{[s^j i \sigma^{j+}\gamma^5]}(x,\vprp{\kei},P,S;\ldots) }
+		{ \int d^2 \vprp{\kei}\ \Phi^{[\gamma^+]}(x,\vprp{\kei},P,S;\ldots) } \right|_{\displaystyle \vprp{S}=(1,0),\ \vprp{s}=(1,0) } \, .
+	\label{eq:outlook_h1_x}
+\end{align}
+Here $\tAmp_{4B}$, $\tAmp_{7B}$ and $\tAmp_{9Bm}$ are the corresponding combinations of invariant amplitudes in the decompositions of the correlator for the Dirac structures $i\sigma^{\mu\nu}\gamma^5$ and $\gamma^\mu\gamma^5$, defined in Refs.~\cite{BMush_Engelhardt2012, Musch:2010ka}, just as $\tAmp_{2B}$ and $\tAmp_{12B}$ are for $\gamma^\mu$. Unlike the $x$-integrated shifts, which need only $\bvec\tcdot P=0$, each of these ratios needs the amplitudes over a range of $\bvec\tcdot P$, with the kinematic constraint of Eq.~\eqref{eq-lindeprel} handled as in this thesis.
+
+\begin{itemize}
+	\item The generalized Boer-Mulders shift $\langle \vect{k}_y \rangle^{\text{BM}}=\langle \vect{k}_y \rangle_{UT}$, Eq.~\eqref{eq:outlook_BM_x}, describes transversely polarized quarks in an unpolarized proton. Like the Sivers shift it is T-odd, so we expect opposite signs in the SIDIS and DY limits $\eta v \tcdot P \rightarrow \pm\infty$. In the limit $\vprp{\bvec}^2 = 0$ it measures, at fixed $x$, the dipole moment of the quark distribution orthogonal to the quark polarization. The sum over proton helicities $\sum_{\Lambda=\pm 1}$ represents the unpolarized target.
+	\item The generalized shift $\langle \vect{k}_x \rangle_{TL}$, Eq.~\eqref{eq:outlook_g1T_x}, belongs to the ``worm-gear'' function $g_{1T}$. It describes a dipole deformation of the transverse momentum distribution caused by the correlation between the quark helicity and the transverse proton spin. It is T-even, so the SIDIS and DY limits should agree. This shift has been computed on the lattice with straight gauge links \cite{MuschThesis2,Hagler:2009mb,Musch:2010ka}, and its $x$-dependence would show how much the staple-shaped links in the limits $\eta v\tcdot P \rightarrow \pm \infty$ change that result.
+	\item The ratio $\tilde h_{1}^{(0)}/\tilde f_1^{(0)}$, Eq.~\eqref{eq:outlook_h1_x}, is an $x$-dependent ``generalized tensor charge''. It is also T-even. Because it involves no $\vect{k}$-weighting and relates directly to the transversity and unpolarized distributions, it is a clean observable. $\tilde h_{1}$ has been studied on the lattice with straight gauge links \cite{MuschThesis2,Hagler:2009mb,Musch:2010ka}, which makes this ratio a good test of the change from straight to staple-shaped gauge links as a function of $x$.
+\end{itemize}

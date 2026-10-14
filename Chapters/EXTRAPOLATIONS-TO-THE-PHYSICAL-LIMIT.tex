@@ -1,7 +1,7 @@
 \section{EXTRAPOLATIONS TO THE PHYSICAL LIMIT}
 \label{sec:physical_limit_extrapolation}
 
-Section~\ref{sec:zetahat_extrapolation_motivation} shows that the amplitudes, the TMD combinations, and the Sivers shift change systematically with $1/\hat\zeta$ across the four simulated momenta. Section~\ref{sec:extrap_fit_param_level} extrapolates the fit parameters to $1/\hat\zeta\to0$ using $P_L=-2,-3,-4$, reconstructs the amplitudes and the Sivers shift in this limit, and lists the numerical Fourier-transform integrals over $x$ at $|b_T|=3a$. Section~\ref{sec:factorization_xbt} tests whether the extrapolated Sivers shift and amplitudes factorize in $x$ and $|b_T|$.
+Combining now the results obtained at each momentum in Section~\ref{sec:simultaneous_fit_strategy}, we extrapolate them to the physical limit $\hat{\zeta}\to\infty$. Section~\ref{sec:zetahat_extrapolation_motivation} shows that the amplitudes, the TMD combinations, and the Sivers shift change systematically with $1/\hat\zeta$ across the four simulated momenta. Section~\ref{sec:extrap_fit_param_level} extrapolates the fit parameters to $1/\hat\zeta\to0$ using $P_L=-2,-3,-4$, reconstructs the amplitudes and the Sivers shift in this limit, and lists the numerical Fourier-transform integrals over $x$ at $|b_T|=3a$. Section~\ref{sec:factorization_xbt} tests whether the extrapolated Sivers shift and amplitudes factorize in $x$ and $|b_T|$.
 
 \subsection{Motivation for the \texorpdfstring{$\hat{\zeta} \to \infty$}{TEXT} Extrapolation}
 \label{sec:zetahat_extrapolation_motivation}
@@ -24,14 +24,14 @@ we must rely on results for a limited range of $\hat \zeta$, as in Figures ~\ref
 From the perturbative prediction for the $\zeta$ dependence, cf., e.g., Ref.~\cite{Aybat:2011zv}, we would expect that 
 the ratios of TMDs should become independent of $\hat\zeta$ as $\hat\zeta\rightarrow\infty$.
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\linewidth]{SimultaneousFitsCov/SimulFit_Distinct_1_over_PL_bmin3_eta610_b29.0_Amps.pdf}
     \caption{Discrete $\hat\zeta$-slices of the reconstructed amplitudes $\tAmp^{[x]\text{Re}}_{2B}$ and $\tAmp^{[x]\text{Im}}_{2B}$ and the unpolarized and Sivers TMD combinations $\tilde f_1^{(0)}=2\tAmp^{[x]}_{2B}$ and $\tilde f_{1T}^{\perp(1)}=-2\tAmp^{[x]\text{Re}}_{12B}$, plotted against both $x$ and $1/\hat\zeta$ at fixed transverse separation $|b_T| = 3a \approx 0.34$ fm. Each ribbon corresponds to one of the four simulated momenta $P_L = -1,-2,-3,-4$ (equivalently $1/\hat\zeta = 11.02,\ 3.40,\ 1.85,\ 1.27$). The systematic drift of every panel with $1/\hat\zeta$ motivates the extrapolation to the physical light-cone limit $\hat\zeta \to \infty$ performed below.}
     \label{fig:zetahat_discrete_slices_amps}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\linewidth]{SimultaneousFitsCov/SimulFit_Distinct_1_over_PL_bmin3_eta610_b29.0_Sivers.pdf}
     \caption{Sivers shift $\langle k_y \rangle_{TU}$ and $x\langle k_y \rangle_{TU}$ for the same four momenta and the same $|b_T|$ as Fig.~\ref{fig:zetahat_discrete_slices_amps}, restricted to the quark region $x\ge0$.}
@@ -54,7 +54,7 @@ In these models $c$ multiplies $b_L^2 = (P\cdot b)^2/P_L^2$ and $a_{\text{im}}$ 
 \end{equation}
 using correlated Jackknife fits to the three data points. The quadratic ansatz consistently gave a lower $\chi^2/\text{dof}$ than the linear form across the twelve parameters, and we adopt it for every extrapolation shown below. The extrapolated, physical-limit value of each parameter is its fitted intercept $c$ at $1/\hat\zeta^2=0$.
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{SimultaneousFitsCov/extrapolation_para_level/Param_Extrapolations_1byZetahat_sq_P234_bmin3_eta610_b29.0.pdf}
     \caption{Extrapolation of the twelve simultaneous-fit parameters to the physical limit $\hat\zeta \to \infty$, using only the three higher momenta $P_L=-2,-3,-4$ (black points, plotted against $1/\hat\zeta$). The dashed red curve and shaded band show the fitted ansatz $c+d/\hat\zeta^2$ of Eq.~\ref{eq:zetahat_extrap_ansatz}, with each panel's Jackknife $\chi^2/\text{dof}$ noted in its title; the blue square at $1/\hat\zeta=0$ marks the extrapolated physical-limit value. The parameters $c_{\text{re}}$, $c_{\text{im}}$, and $c_{\text{reA12B}}$ are shown rescaled by $1/P_L^2$, and $a_{\text{im}}$ by $1/P_L$, as described in the text.}
@@ -63,14 +63,14 @@ using correlated Jackknife fits to the three data points. The quadratic ansatz c
 
 Reconstructing the amplitudes from these twelve extrapolated parameters gives the unpolarized and Sivers TMD combinations directly at the physical limit, shown in Fig.~\ref{fig:extrapolated_amplitude_level_amps} as continuous functions of $x$ at fixed $|b_T| = 3a \approx 0.34$ fm.
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{SimultaneousFitsCov/extrapolation_para_level/Extrapolated_AmpLevel_P234_Sivers_1_over_zetahat_sq_bmin3_eta610_b29.0_Amps.pdf}
     \caption{Unpolarized and Sivers TMD amplitudes reconstructed from the extrapolated ($\hat\zeta\to\infty$) fit parameters of Fig.~\ref{fig:param_extrapolation_zetahat}, evaluated as continuous functions of $x$ at fixed transverse separation $|b_T| = 3a \approx 0.34$ fm: $\tAmp^{[x]\text{Re}}_{2B}$, $\tAmp^{[x]\text{Im}}_{2B}$, the full unpolarized combination $\tilde f_1^{(0)}=2\tAmp^{[x]}_{2B}$, and the Sivers combination $\tilde f_{1T}^{\perp(1)}=-2\tAmp^{[x]\text{Re}}_{12B}$. Shaded bands are the Jackknife uncertainty propagated from the twelve extrapolated parameters.}
     \label{fig:extrapolated_amplitude_level_amps}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{SimultaneousFitsCov/extrapolation_para_level/Extrapolated_AmpLevel_P234_Sivers_1_over_zetahat_sq_bmin3_eta610_b29.0_Sivers.pdf}
     \caption{Sivers shift $\langle k_y \rangle_{TU}$ and $x\langle k_y \rangle_{TU}$ built from the extrapolated amplitudes of Fig.~\ref{fig:extrapolated_amplitude_level_amps}, restricted to the quark region $x\ge0$. Shaded bands are the Jackknife uncertainty.}
@@ -79,7 +79,7 @@ Reconstructing the amplitudes from these twelve extrapolated parameters gives th
 
 Table~\ref{tab:numerical_integration_fourier} lists the corresponding numerical Fourier-transform integrals at $|b_T|=3a\approx0.34$ fm, evaluated over the full range $x\in\{-\infty,\infty\}$ as well as the restricted ranges $\{-1,1\}$, $\{-1,0\}$, and $\{0,1\}$ used to isolate, respectively, the quark-plus-antiquark, antiquark, and quark contributions to the $x$-integrals $\int dx\,\tilde f_1^{(0)}$ and $\int dx\,\tilde f_{1T}^{\perp(1)}$.
 
-\begin{table}[htpb]
+\begin{table}[H]
 \centering
 \renewcommand{\arraystretch}{1.8}
 \caption{Numerical Integration of Fourier Transforms: $P_L=-4, |b_T| = 3a \approx 0.34$ fm, evaluated using the extrapolated ($\hat\zeta\to\infty$) amplitudes of Fig.~\ref{fig:extrapolated_amplitude_level_amps}, over the full range and three restricted $x$-ranges isolating the quark, antiquark, and combined contributions.}
@@ -103,28 +103,28 @@ Restricting the integration to $x\in\{-1,0\}$ or $\{0,1\}$ isolates the antiquar
 Figure~\ref{fig:extrapolated_amplitude_3d_amps} extends this reconstruction to the full dependence on both $x$ and transverse separation, while Fig.~\ref{fig:momenta_vs_extrapolated_amps} compares the extrapolated result with each of the three finite momenta used to obtain it.
 
 \pagebreak
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\linewidth]{SimultaneousFitsCov/extrapolation_para_level/FT_xdep_3D_A2B_A12B_bmin3_eta610_PLInf_Amps.pdf}
     \caption{The four extrapolated ($\hat\zeta\to\infty$) amplitude quantities of Fig.~\ref{fig:extrapolated_amplitude_level_amps}, shown as surfaces in $x$ and $|b_T|$ (from $3a\approx0.34$ fm to $\sqrt{68}\,a\approx0.94$ fm). The joint $x$-$|b_T|$ dependence shows how the reconstructed amplitudes change with transverse quark separation at the physical limit.}
     \label{fig:extrapolated_amplitude_3d_amps}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\linewidth]{SimultaneousFitsCov/extrapolation_para_level/FT_xdep_3D_A2B_A12B_bmin3_eta610_PLInf_Sivers.pdf}
     \caption{The extrapolated Sivers shift $\langle k_y \rangle_{TU}$ and $x\langle k_y \rangle_{TU}$ of Fig.~\ref{fig:extrapolated_amplitude_level_sivers}, shown as surfaces in $x\ge0$ and $|b_T|$ over the same range.}
     \label{fig:extrapolated_amplitude_3d_sivers}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\linewidth]{SimultaneousFitsCov/extrapolation_para_level/All_Momenta_vs_Extrapolated_2D_P234_bmin3_eta610_b29.0_Amps.pdf}
     \caption{Comparison, at fixed $|b_T| = 3a \approx 0.34$ fm, between the four amplitude quantities evaluated at each of the four simulated momenta ($P_L=-1,-2,-3,-4$, colored curves, each using its own unextrapolated fit parameters) and the extrapolated $\hat\zeta\to\infty$ result (black dashed curve), which uses only $P_L=-2,-3,-4$. The extrapolated curve differs from all three finite-momentum curves used in the extrapolation, including the one at the largest simulated momentum, so the fit-parameter extrapolation of Fig.~\ref{fig:param_extrapolation_zetahat} captures real momentum dependence and does not just reproduce the $P_L=-4$ result.}
     \label{fig:momenta_vs_extrapolated_amps}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\linewidth]{SimultaneousFitsCov/extrapolation_para_level/All_Momenta_vs_Extrapolated_2D_P234_bmin3_eta610_b29.0_Sivers.pdf}
     \caption{The same comparison as Fig.~\ref{fig:momenta_vs_extrapolated_amps} for the Sivers shift $\langle k_y \rangle_{TU}$ and $x\langle k_y \rangle_{TU}$ ($x\ge0$).}
@@ -195,7 +195,7 @@ The two $j$ parameters entering the real amplitudes, $j_{\text{re}}$ and $j_{\te
 
 Table~\ref{tab:factorization_sivers} lists the resulting relative distance of the extrapolated Sivers shift $\langle k_y \rangle_{TU}(x,|b_T|)$ from its best separable approximation, over $|b_T| \in [0.3421,0.9403]$ fm (60 points, fixed across all four $x$-windows).
 
-\begin{table}[h!]
+\begin{table}[H]
     \centering
     \renewcommand{\arraystretch}{1.4}
     \caption{Relative distance of the extrapolated Sivers shift $\langle k_y \rangle_{TU}(x,|b_T|)$ from its optimal factorized approximation $F(x)G(|b_T|)$, Eq.~\eqref{eq:factorization_relative_distance}, over $|b_T| \in [0.3421, 0.9403]$ fm for four choices of $x$-window.}
@@ -217,7 +217,7 @@ Table~\ref{tab:factorization_sivers} lists the resulting relative distance of th
 
 In every window the relative distance is at the level of $5.7$-$7.6\%$ and nonzero well outside its Jackknife uncertainty. The Sivers shift is therefore close to, but not exactly, factorized. The residual stays stable as the $x$-window narrows away from $x=0$, so behavior at the endpoint does not drive it. Figure~\ref{fig:factorization_gh_sivers} shows the optimal separable factors $g(x)$ and $h(|b_T|)$ for all four windows and compares the $g(x)h(|b_T|)$ reconstruction with the actual data at the two extreme $|b_T|$ values in the fit range.
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{SimultaneousFitsCov/factorization_test/Factorization_gh_and_Reconstruction_bmin3_eta610.pdf}
     \caption{Left and center: the optimal separable factors $g(x)$ and $h(|b_T|)$ (Eqs.~\eqref{eq:factorization_h_solution}-\eqref{eq:factorization_g_selfconsistent}, normalized so $\text{mean}[g^2]=1$) for the extrapolated Sivers shift, shown for all four $x$-windows of Table~\ref{tab:factorization_sivers}. Right: the reconstructed $g(x)h(|b_T|)$ (dashed) compared to the actual extrapolated Sivers shift (solid) at the smallest and largest fitted $|b_T|$, using the $x\in[0,1]$ fit; the visible gap between the solid and dashed curves is the residual quantified in Table~\ref{tab:factorization_sivers}.}
@@ -226,14 +226,14 @@ In every window the relative distance is at the level of $5.7$-$7.6\%$ and nonze
 
 Ratios of the Sivers shift at fixed $x$ or fixed $|b_T|$ show the same non-factorization more directly. If $\langle k_y \rangle_{TU}(x,|b_T|) = F(x)G(|b_T|)$ exactly, then $R_b(x) \equiv \langle k_y \rangle_{TU}(x,|b_T|)/\langle k_y \rangle_{TU}(x,|b_T|_{\text{ref}}) = G(|b_T|)/G(|b_T|_{\text{ref}})$ must be flat in $x$ for every choice of $|b_T|$ and reference $|b_T|_{\text{ref}}$, and likewise $R_x(|b_T|) \equiv \langle k_y \rangle_{TU}(x,|b_T|)/\langle k_y \rangle_{TU}(x_{\text{ref}},|b_T|) = F(x)/F(x_{\text{ref}})$ must be flat in $|b_T|$ for every $x$ and $x_{\text{ref}}$. Requiring this for every pair of references is both necessary and sufficient for factorization, so the ratio test is a complete test rather than a heuristic proxy. Figures~\ref{fig:factorization_ratio_x_sivers} and~\ref{fig:factorization_ratio_bT_sivers} show that neither ratio is flat.
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.75\linewidth]{SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_x_4curves_P234_bmin3_eta610.pdf}
     \caption{$R_b(x) = \langle k_y \rangle_{TU}(x,|b_T|)/\langle k_y \rangle_{TU}(x,0.34\text{ fm})$ for four values of $|b_T|$, as a function of $x$. Under exact factorization each curve would be flat. Instead, every curve rises from its $x\to0$ value to a peak near $x\approx0.1$ before decaying, so the $|b_T|$-dependence of the Sivers shift itself depends on $x$.}
     \label{fig:factorization_ratio_x_sivers}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.75\linewidth]{SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_bT_4curves_P234_bmin3_eta610.pdf}
     \caption{$R_x(|b_T|) = \langle k_y \rangle_{TU}(x,|b_T|)/\langle k_y \rangle_{TU}(0.3,|b_T|)$ for four values of $x$, as a function of $|b_T|$. The $x=0.2$ curve changes by more than a factor of two across the fitted $|b_T|$ range instead of staying flat, so the $x$-dependence of the Sivers shift itself depends on $|b_T|$, consistent with Fig.~\ref{fig:factorization_ratio_x_sivers}.}
@@ -242,14 +242,14 @@ Ratios of the Sivers shift at fixed $x$ or fixed $|b_T|$ show the same non-facto
 
 Finally, to check that the $\hat\zeta\to\infty$ extrapolation itself does not introduce this non-factorization, we repeat the $R_b(x)$ and $R_x(|b_T|)$ ratio tests on the raw, unextrapolated fit parameters at each finite momentum. Figures~\ref{fig:factorization_ratio_x_finitePL} and~\ref{fig:factorization_ratio_bT_finitePL} show that the same qualitative pattern, non-flat ratios in both $x$ and $|b_T|$, is already present at every simulated momentum. If anything, the pattern becomes more pronounced at the higher momenta.
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_x_AllPL_bmin3_eta610.pdf}
     \caption{The same ratio test as Fig.~\ref{fig:factorization_ratio_x_sivers}, $R_b(x)$, repeated at each finite momentum individually using its own raw (unextrapolated) fit parameters. None of the four panels shows a flat curve, so the non-factorization is a feature of the fitted amplitudes and not an artifact of the $\hat\zeta\to\infty$ extrapolation.}
     \label{fig:factorization_ratio_x_finitePL}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_bT_AllPL_bmin3_eta610.pdf}
     \caption{The same ratio test as Fig.~\ref{fig:factorization_ratio_bT_sivers}, $R_x(|b_T|)$, repeated at each finite momentum individually. The departure from flatness grows with $|P_L|$, most visibly in the $x=0.2$ curve, which is consistent with the parameter mismatch identified in the extrapolated $j_X$ and $d_X$ values above.}
@@ -261,7 +261,7 @@ Finally, to check that the $\hat\zeta\to\infty$ extrapolation itself does not in
 
 The Sivers-shift test above probes factorization of the full ratio $\langle k_y \rangle_{TU} = -m_N \tAmp^{[x]\text{Re}}_{12B}/(\tAmp^{[x]\text{Re}}_{2B} - i\tAmp^{[x]\text{Im}}_{2B})$, in which some of the non-factorized behavior of the individual amplitudes could in principle cancel. We therefore repeat the same distance test of Section~\ref{sec:factorization_metric} on each extrapolated amplitude separately: $\tAmp^{[x]\text{Re}}_{12B}$, $\tAmp^{[x]\text{Re}}_{2B}$, $i\tAmp^{[x]\text{Im}}_{2B}$, and the combination $\tAmp^{[x]\text{Re}}_{2B} - i\tAmp^{[x]\text{Im}}_{2B}$ (proportional to $\tilde f_1^{(0)}$) that appears in the Sivers-shift denominator. Table~\ref{tab:factorization_amplitudes} lists the resulting relative distances, using the same $|b_T|\in[0.3421,0.9403]$ fm grid and four $x$-windows as the Sivers-shift test.
 
-\begin{table}[h!]
+\begin{table}[H]
     \centering
     \renewcommand{\arraystretch}{1.4}
     \caption{Relative distance of each extrapolated amplitude (and their combination $\tAmp^{[x]\text{Re}}_{2B}-i\tAmp^{[x]\text{Im}}_{2B}$) from its optimal factorized approximation, over the same $|b_T|\in[0.3421,0.9403]$ fm grid and $x$-windows as Table~\ref{tab:factorization_sivers}.}
@@ -283,21 +283,21 @@ The Sivers-shift test above probes factorization of the full ratio $\langle k_y 
 
 Every amplitude has a nonzero relative distance from factorized form in every window. For the widest window, $x\in[0,1]$, the amplitude-level residuals ($8$-$19\%$) exceed the corresponding Sivers-ratio residual ($5.7\%$, Table~\ref{tab:factorization_sivers}), so the ratio structure of the Sivers shift partially, but not completely, cancels the non-factorized behavior of the individual amplitudes. All four amplitude-level residuals shrink as the $x$-window narrows away from $x=0$. This is consistent with the Bessel-function singularity structure of each amplitude near the origin, which differs between amplitudes because of the parameter mismatch identified in Section~\ref{sec:factorization_sivers_test}.
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{SimultaneousFitsCov/factorization_test/Factorization_Amplitudes_g_of_x_bmin3_eta610.pdf}
     \caption{Optimal separable factor $g(x)$ for each of the four amplitude combinations of Table~\ref{tab:factorization_amplitudes}, for all four $x$-windows (normalized so $\text{mean}[g^2]=1$). Each amplitude's $g(x)$ is dominated by a sharp rise as $x\to0$, which steepens as the window narrows and reflects the Bessel-function behavior at small $x$.}
     \label{fig:factorization_g_amplitudes}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{SimultaneousFitsCov/factorization_test/Factorization_Amplitudes_h_of_bT_bmin3_eta610.pdf}
     \caption{Optimal separable factor $h(|b_T|)$ for each of the four amplitude combinations of Table~\ref{tab:factorization_amplitudes}, for all four $x$-windows. For all four amplitudes, $h(|b_T|)$ falls smoothly with increasing $|b_T|$, but its magnitude and slope depend on the $x$-window used to define the fit, which itself signals imperfect factorization.}
     \label{fig:factorization_h_amplitudes}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{SimultaneousFitsCov/factorization_test/Factorization_Amplitudes_Reconstruction_bmin3_eta610.pdf}
     \caption{Reconstructed $g(x)h(|b_T|)$ (dashed) against the actual extrapolated amplitude data (solid) at the smallest and largest fitted $|b_T|$, using the $x\in[0,1]$ fit, for each of the four amplitude combinations of Table~\ref{tab:factorization_amplitudes}. The largest reconstruction gap appears near $x\to0$ for every amplitude, consistent with the $x\in[0,1]$ column of Table~\ref{tab:factorization_amplitudes} having the largest relative distance in every row.}
