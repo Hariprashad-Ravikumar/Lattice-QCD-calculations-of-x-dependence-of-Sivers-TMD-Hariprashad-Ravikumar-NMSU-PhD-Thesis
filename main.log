@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.17)  14 OCT 2026 11:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.17)  14 OCT 2026 11:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2210,6 +2210,9 @@ f)
 Package pdftex.def Info: PySR_outputs/03_Exponential_b_StraightLine_Test.pdf  u
 sed on input line 175.
 (pdftex.def)             Requested size: 501.19104pt x 378.21346pt.
+ [114] [115 <./PySR_outputs/01_A2B_PySR_Benchmark_Fits.pdf>]
+[116 <./PySR_outputs/02_Gaussian_StraightLine_Test.pdf>] [117 <./PySR_outputs/0
+3_Exponential_b_StraightLine_Test.pdf>]
 Package epstopdf Info: Source file: <plots/fit_exploration_mathematica/fit_list
 _gaussian_c_d_etas.eps>
 (epstopdf)                    date: 2026-09-11 12:36:24
@@ -2221,122 +2224,119 @@ _gaussian_c_d_etas-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=plots/fit_exploration_math
 ematica/fit_list_gaussian_c_d_etas-eps-converted-to.pdf plots/fit_exploration_m
 athematica/fit_list_gaussian_c_d_etas.eps>
-(epstopdf)             \includegraphics on input line 195.
+(epstopdf)             \includegraphics on input line 200.
 Package epstopdf Info: Output file is already uptodate.
 <plots/fit_exploration_mathematica/fit_list_gaussian_c_d_etas-eps-converted-to.
-pdf, id=8622, 916.42375pt x 607.26875pt>
+pdf, id=8945, 916.42375pt x 607.26875pt>
 File: plots/fit_exploration_mathematica/fit_list_gaussian_c_d_etas-eps-converte
 d-to.pdf Graphic file (type pdf)
 <use plots/fit_exploration_mathematica/fit_list_gaussian_c_d_etas-eps-converted
 -to.pdf>
 Package pdftex.def Info: plots/fit_exploration_mathematica/fit_list_gaussian_c_
-d_etas-eps-converted-to.pdf  used on input line 195.
+d_etas-eps-converted-to.pdf  used on input line 200.
 (pdftex.def)             Requested size: 527.57121pt x 349.61234pt.
- [114] [115 <./PySR_outputs/01_A2B_PySR_Benchmark_Fits.pdf>]
-[116 <./PySR_outputs/02_Gaussian_StraightLine_Test.pdf>] [117 <./PySR_outputs/0
-3_Exponential_b_StraightLine_Test.pdf>]
-<PowerLaw_etaAsymptotic/A2BfitFT_eta_Asymptotic_P1.pdf, id=8945, 1041.8925pt x 
+<PowerLaw_etaAsymptotic/A2BfitFT_eta_Asymptotic_P1.pdf, id=8949, 1041.8925pt x 
 1136.245pt>
 File: PowerLaw_etaAsymptotic/A2BfitFT_eta_Asymptotic_P1.pdf Graphic file (type 
 pdf)
 <use PowerLaw_etaAsymptotic/A2BfitFT_eta_Asymptotic_P1.pdf>
 Package pdftex.def Info: PowerLaw_etaAsymptotic/A2BfitFT_eta_Asymptotic_P1.pdf 
- used on input line 203.
+ used on input line 208.
 (pdftex.def)             Requested size: 527.57121pt x 575.35092pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[118 <./plots/fit_exploration_mathematica/fit_list_gaussian_c_d_etas-eps-conver
-ted-to.pdf>]
-<PowerLaw_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_P1.pdf, id=8971, 1050.926
+[118] [119 <./plots/fit_exploration_mathematica/fit_list_gaussian_c_d_etas-eps-
+converted-to.pdf>]
+<PowerLaw_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_P1.pdf, id=8980, 1050.926
 25pt x 842.14626pt>
 File: PowerLaw_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_P1.pdf Graphic file 
 (type pdf)
 <use PowerLaw_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_P1.pdf>
 Package pdftex.def Info: PowerLaw_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_P
-1.pdf  used on input line 212.
+1.pdf  used on input line 217.
 (pdftex.def)             Requested size: 527.57121pt x 422.78116pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Gaussian_type_fit_Real_A2B/LorentzianFixedA_P-1_b3.pdf, id=8973, 339.2675pt x 
+<Gaussian_type_fit_Real_A2B/LorentzianFixedA_P-1_b3.pdf, id=8982, 339.2675pt x 
 182.6825pt>
 File: Gaussian_type_fit_Real_A2B/LorentzianFixedA_P-1_b3.pdf Graphic file (type
  pdf)
 <use Gaussian_type_fit_Real_A2B/LorentzianFixedA_P-1_b3.pdf>
 Package pdftex.def Info: Gaussian_type_fit_Real_A2B/LorentzianFixedA_P-1_b3.pdf
-  used on input line 221.
+  used on input line 226.
 (pdftex.def)             Requested size: 316.54594pt x 170.45602pt.
-[119 <./PowerLaw_etaAsymptotic/A2BfitFT_eta_Asymptotic_P1.pdf>] [120 <./PowerLa
+[120 <./PowerLaw_etaAsymptotic/A2BfitFT_eta_Asymptotic_P1.pdf>] [121 <./PowerLa
 w_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_P1.pdf>]
-<PowerLaw_etaAsymptotic/A2B_c_eta_AllAsymptoticModels_P1.pdf, id=9074, 775.8987
+<PowerLaw_etaAsymptotic/A2B_c_eta_AllAsymptoticModels_P1.pdf, id=9082, 775.8987
 4pt x 386.44376pt>
 File: PowerLaw_etaAsymptotic/A2B_c_eta_AllAsymptoticModels_P1.pdf Graphic file 
 (type pdf)
 <use PowerLaw_etaAsymptotic/A2B_c_eta_AllAsymptoticModels_P1.pdf>
 Package pdftex.def Info: PowerLaw_etaAsymptotic/A2B_c_eta_AllAsymptoticModels_P
-1.pdf  used on input line 230.
+1.pdf  used on input line 235.
 (pdftex.def)             Requested size: 316.54594pt x 157.6587pt.
-<PowerLaw_etaAsymptotic/A2B_d_eta_Independence_P1.pdf, id=9075, 593.21625pt x 4
+<PowerLaw_etaAsymptotic/A2B_d_eta_Independence_P1.pdf, id=9083, 593.21625pt x 4
 59.7175pt>
 File: PowerLaw_etaAsymptotic/A2B_d_eta_Independence_P1.pdf Graphic file (type p
 df)
 <use PowerLaw_etaAsymptotic/A2B_d_eta_Independence_P1.pdf>
 Package pdftex.def Info: PowerLaw_etaAsymptotic/A2B_d_eta_Independence_P1.pdf  
-used on input line 237.
+used on input line 242.
 (pdftex.def)             Requested size: 263.7856pt x 204.42984pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Gaussian_type_fit_Real_A2B/LorentzianFixed_ReA12B_P-1_b3.pdf, id=9079, 339.267
+<Gaussian_type_fit_Real_A2B/LorentzianFixed_ReA12B_P-1_b3.pdf, id=9087, 339.267
 5pt x 182.6825pt>
 File: Gaussian_type_fit_Real_A2B/LorentzianFixed_ReA12B_P-1_b3.pdf Graphic file
  (type pdf)
 <use Gaussian_type_fit_Real_A2B/LorentzianFixed_ReA12B_P-1_b3.pdf>
 Package pdftex.def Info: Gaussian_type_fit_Real_A2B/LorentzianFixed_ReA12B_P-1_
-b3.pdf  used on input line 249.
+b3.pdf  used on input line 254.
 (pdftex.def)             Requested size: 290.16577pt x 156.24811pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<PowerLaw_etaAsymptotic/ReA12B_c_eta_Independence_P1.pdf, id=9080, 593.21625pt 
+<PowerLaw_etaAsymptotic/ReA12B_c_eta_Independence_P1.pdf, id=9088, 593.21625pt 
 x 463.7325pt>
 File: PowerLaw_etaAsymptotic/ReA12B_c_eta_Independence_P1.pdf Graphic file (typ
 e pdf)
 <use PowerLaw_etaAsymptotic/ReA12B_c_eta_Independence_P1.pdf>
 Package pdftex.def Info: PowerLaw_etaAsymptotic/ReA12B_c_eta_Independence_P1.pd
-f  used on input line 256.
+f  used on input line 261.
 (pdftex.def)             Requested size: 258.51279pt x 202.08995pt.
-<PowerLaw_etaAsymptotic/ReA12B_d_eta_Independence_P1.pdf, id=9081, 593.21625pt 
+<PowerLaw_etaAsymptotic/ReA12B_d_eta_Independence_P1.pdf, id=9089, 593.21625pt 
 x 462.72874pt>
 File: PowerLaw_etaAsymptotic/ReA12B_d_eta_Independence_P1.pdf Graphic file (typ
 e pdf)
 <use PowerLaw_etaAsymptotic/ReA12B_d_eta_Independence_P1.pdf>
 Package pdftex.def Info: PowerLaw_etaAsymptotic/ReA12B_d_eta_Independence_P1.pd
-f  used on input line 257.
+f  used on input line 262.
 (pdftex.def)             Requested size: 258.51279pt x 201.65253pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[121 <./Gaussian_type_fit_Real_A2B/LorentzianFixedA_P-1_b3.pdf> <./PowerLaw_eta
+[122 <./Gaussian_type_fit_Real_A2B/LorentzianFixedA_P-1_b3.pdf> <./PowerLaw_eta
 Asymptotic/A2B_c_eta_AllAsymptoticModels_P1.pdf
 
 pdfTeX warning: pdflatex (file ./PowerLaw_etaAsymptotic/A2B_c_eta_AllAsymptotic
 Models_P1.pdf): PDF inclusion: multiple pdfs with page group included in a sing
 le page
 >]
-<Gaussian_type_fit_Real_A2B/LorentzianFixed_ImA2B_P-1_b3.pdf, id=9192, 339.2675
+<Gaussian_type_fit_Real_A2B/LorentzianFixed_ImA2B_P-1_b3.pdf, id=9201, 339.2675
 pt x 182.6825pt>
 File: Gaussian_type_fit_Real_A2B/LorentzianFixed_ImA2B_P-1_b3.pdf Graphic file 
 (type pdf)
 <use Gaussian_type_fit_Real_A2B/LorentzianFixed_ImA2B_P-1_b3.pdf>
 Package pdftex.def Info: Gaussian_type_fit_Real_A2B/LorentzianFixed_ImA2B_P-1_b
-3.pdf  used on input line 268.
+3.pdf  used on input line 273.
 (pdftex.def)             Requested size: 290.16577pt x 156.24811pt.
- [122 <./PowerLaw_etaAsymptotic/A2B_d_eta_Independence_P1.pdf> <./Gaussian_type
+ [123 <./PowerLaw_etaAsymptotic/A2B_d_eta_Independence_P1.pdf> <./Gaussian_type
 _fit_Real_A2B/LorentzianFixed_ReA12B_P-1_b3.pdf
 
 pdfTeX warning: pdflatex (file ./Gaussian_type_fit_Real_A2B/LorentzianFixed_ReA
@@ -2353,23 +2353,23 @@ pdfTeX warning: pdflatex (file ./PowerLaw_etaAsymptotic/ReA12B_d_eta_Independen
 ce_P1.pdf): PDF inclusion: multiple pdfs with page group included in a single p
 age
 >]
-<PowerLaw_etaAsymptotic/ImA2B_c_eta_Independence_P1.pdf, id=9420, 593.21625pt x
+<PowerLaw_etaAsymptotic/ImA2B_c_eta_Independence_P1.pdf, id=9428, 593.21625pt x
  462.72874pt>
 File: PowerLaw_etaAsymptotic/ImA2B_c_eta_Independence_P1.pdf Graphic file (type
  pdf)
 <use PowerLaw_etaAsymptotic/ImA2B_c_eta_Independence_P1.pdf>
 Package pdftex.def Info: PowerLaw_etaAsymptotic/ImA2B_c_eta_Independence_P1.pdf
-  used on input line 275.
+  used on input line 280.
 (pdftex.def)             Requested size: 258.51279pt x 201.65253pt.
-<PowerLaw_etaAsymptotic/ImA2B_d_eta_Independence_P1.pdf, id=9421, 593.21625pt x
+<PowerLaw_etaAsymptotic/ImA2B_d_eta_Independence_P1.pdf, id=9429, 593.21625pt x
  466.74374pt>
 File: PowerLaw_etaAsymptotic/ImA2B_d_eta_Independence_P1.pdf Graphic file (type
  pdf)
 <use PowerLaw_etaAsymptotic/ImA2B_d_eta_Independence_P1.pdf>
 Package pdftex.def Info: PowerLaw_etaAsymptotic/ImA2B_d_eta_Independence_P1.pdf
-  used on input line 276.
+  used on input line 281.
 (pdftex.def)             Requested size: 258.51279pt x 203.40222pt.
- [123 <./Gaussian_type_fit_Real_A2B/LorentzianFixed_ImA2B_P-1_b3.pdf> <./PowerL
+ [124 <./Gaussian_type_fit_Real_A2B/LorentzianFixed_ImA2B_P-1_b3.pdf> <./PowerL
 aw_etaAsymptotic/ImA2B_c_eta_Independence_P1.pdf
 
 pdfTeX warning: pdflatex (file ./PowerLaw_etaAsymptotic/ImA2B_c_eta_Independenc
@@ -2380,349 +2380,349 @@ ge
 pdfTeX warning: pdflatex (file ./PowerLaw_etaAsymptotic/ImA2B_d_eta_Independenc
 e_P1.pdf): PDF inclusion: multiple pdfs with page group included in a single pa
 ge
->] [124] [125] [126] (./SimultaneousFitsCov/Fit_Table_PL-1_bmin3.tex)
-<plots/Amps_Fit/ReA2B_PL-1_WithFit_3D.pdf, id=9647, 980.3665pt x 380.41751pt>
+>] [125] [126] [127] (./SimultaneousFitsCov/Fit_Table_PL-1_bmin3.tex)
+<plots/Amps_Fit/ReA2B_PL-1_WithFit_3D.pdf, id=9655, 980.3665pt x 380.41751pt>
 File: plots/Amps_Fit/ReA2B_PL-1_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA2B_PL-1_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA2B_PL-1_WithFit_3D.pdf  used on inpu
-t line 388.
+t line 393.
 (pdftex.def)             Requested size: 369.29823pt x 143.30052pt.
-<plots/Amps_Fit/ReA2B_Pb_bsq_PL-1_WithFit_3D.pdf, id=9648, 997.04759pt x 360.48
+<plots/Amps_Fit/ReA2B_Pb_bsq_PL-1_WithFit_3D.pdf, id=9656, 997.04759pt x 360.48
 277pt>
 File: plots/Amps_Fit/ReA2B_Pb_bsq_PL-1_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA2B_Pb_bsq_PL-1_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA2B_Pb_bsq_PL-1_WithFit_3D.pdf  used 
-on input line 389.
+on input line 394.
 (pdftex.def)             Requested size: 369.29823pt x 133.51955pt.
-<plots/Amps_Fit/ImA2B_PL-1_WithFit_3D.pdf, id=9649, 980.3665pt x 380.41751pt>
+<plots/Amps_Fit/ImA2B_PL-1_WithFit_3D.pdf, id=9657, 980.3665pt x 380.41751pt>
 File: plots/Amps_Fit/ImA2B_PL-1_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ImA2B_PL-1_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ImA2B_PL-1_WithFit_3D.pdf  used on inpu
-t line 397.
+t line 402.
 (pdftex.def)             Requested size: 369.29823pt x 143.30052pt.
-<plots/Amps_Fit/ImA2B_Pb_bsq_PL-1_WithFit_3D.pdf, id=9650, 997.04759pt x 360.48
+<plots/Amps_Fit/ImA2B_Pb_bsq_PL-1_WithFit_3D.pdf, id=9658, 997.04759pt x 360.48
 277pt>
 File: plots/Amps_Fit/ImA2B_Pb_bsq_PL-1_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ImA2B_Pb_bsq_PL-1_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ImA2B_Pb_bsq_PL-1_WithFit_3D.pdf  used 
-on input line 398.
+on input line 403.
 (pdftex.def)             Requested size: 369.29823pt x 133.51955pt.
-<plots/Amps_Fit/ReA12B_PL-1_WithFit_3D.pdf, id=9651, 980.3665pt x 380.41751pt>
+<plots/Amps_Fit/ReA12B_PL-1_WithFit_3D.pdf, id=9659, 980.3665pt x 380.41751pt>
 File: plots/Amps_Fit/ReA12B_PL-1_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA12B_PL-1_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA12B_PL-1_WithFit_3D.pdf  used on inp
-ut line 406.
+ut line 411.
 (pdftex.def)             Requested size: 369.29823pt x 143.30052pt.
-<plots/Amps_Fit/ReA12B_Pb_bsq_PL-1_WithFit_3D.pdf, id=9652, 999.55696pt x 360.4
+<plots/Amps_Fit/ReA12B_Pb_bsq_PL-1_WithFit_3D.pdf, id=9660, 999.55696pt x 360.4
 8277pt>
 File: plots/Amps_Fit/ReA12B_Pb_bsq_PL-1_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA12B_Pb_bsq_PL-1_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA12B_Pb_bsq_PL-1_WithFit_3D.pdf  used
- on input line 407.
+ on input line 412.
 (pdftex.def)             Requested size: 369.29823pt x 133.184pt.
-<plots/Amps_Fit/Combined_eta8_PL-1_WithFit_2D.pdf, id=9653, 1436.4008pt x 851.6
+<plots/Amps_Fit/Combined_eta8_PL-1_WithFit_2D.pdf, id=9661, 1436.4008pt x 851.6
 2956pt>
 File: plots/Amps_Fit/Combined_eta8_PL-1_WithFit_2D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/Combined_eta8_PL-1_WithFit_2D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/Combined_eta8_PL-1_WithFit_2D.pdf  used
- on input line 415.
+ on input line 420.
 (pdftex.def)             Requested size: 474.81087pt x 281.50644pt.
-<plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-1_WithFit_2D.pdf, id=9654, 1436.37004pt
+<plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-1_WithFit_2D.pdf, id=9662, 1436.37004pt
  x 851.04338pt>
 File: plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-1_WithFit_2D.pdf Graphic file (typ
 e pdf)
 <use plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-1_WithFit_2D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-1_WithFit_2D.pd
-f  used on input line 416.
+f  used on input line 421.
 (pdftex.def)             Requested size: 474.81087pt x 281.32565pt.
- [127 <./plots/Amps_Fit/ReA2B_PL-1_WithFit_3D.pdf> <./plots/Amps_Fit/ReA2B_Pb_b
-sq_PL-1_WithFit_3D.pdf>] [128 <./plots/Amps_Fit/ImA2B_PL-1_WithFit_3D.pdf> <./p
+ [128 <./plots/Amps_Fit/ReA2B_PL-1_WithFit_3D.pdf> <./plots/Amps_Fit/ReA2B_Pb_b
+sq_PL-1_WithFit_3D.pdf>] [129 <./plots/Amps_Fit/ImA2B_PL-1_WithFit_3D.pdf> <./p
 lots/Amps_Fit/ImA2B_Pb_bsq_PL-1_WithFit_3D.pdf> <./plots/Amps_Fit/ReA12B_PL-1_W
-ithFit_3D.pdf> <./plots/Amps_Fit/ReA12B_Pb_bsq_PL-1_WithFit_3D.pdf>] [129 <./pl
+ithFit_3D.pdf> <./plots/Amps_Fit/ReA12B_Pb_bsq_PL-1_WithFit_3D.pdf>] [130 <./pl
 ots/Amps_Fit/Combined_eta8_PL-1_WithFit_2D.pdf> <./plots/Amps_Fit/Combined_Pb_b
 sq_eta8_PL-1_WithFit_2D.pdf>]
 (./SimultaneousFitsCov/Integration_Table_PL-1_bmin3_b2-9.tex)
-<SimultaneousFitsCov/FT_xdep_A2B_A12B_bmin3_eta610_b2-9_PL-1.pdf, id=10419, 100
+<SimultaneousFitsCov/FT_xdep_A2B_A12B_bmin3_eta610_b2-9_PL-1.pdf, id=10427, 100
 1.86118pt x 569.37094pt>
 File: SimultaneousFitsCov/FT_xdep_A2B_A12B_bmin3_eta610_b2-9_PL-1.pdf Graphic f
 ile (type pdf)
 <use SimultaneousFitsCov/FT_xdep_A2B_A12B_bmin3_eta610_b2-9_PL-1.pdf>
 Package pdftex.def Info: SimultaneousFitsCov/FT_xdep_A2B_A12B_bmin3_eta610_b2-9
-_PL-1.pdf  used on input line 444.
+_PL-1.pdf  used on input line 449.
 (pdftex.def)             Requested size: 527.57121pt x 299.83644pt.
-<SimultaneousFitsCov/FT_xdep_3D_A2B_A12B_bmin3_eta610_PL-1.pdf, id=10420, 1288.
+<SimultaneousFitsCov/FT_xdep_3D_A2B_A12B_bmin3_eta610_PL-1.pdf, id=10428, 1288.
 86156pt x 862.77747pt>
 File: SimultaneousFitsCov/FT_xdep_3D_A2B_A12B_bmin3_eta610_PL-1.pdf Graphic fil
 e (type pdf)
 <use SimultaneousFitsCov/FT_xdep_3D_A2B_A12B_bmin3_eta610_PL-1.pdf>
 Package pdftex.def Info: SimultaneousFitsCov/FT_xdep_3D_A2B_A12B_bmin3_eta610_P
-L-1.pdf  used on input line 451.
+L-1.pdf  used on input line 456.
 (pdftex.def)             Requested size: 527.57121pt x 353.16179pt.
- [130] [131 <./SimultaneousFitsCov/FT_xdep_A2B_A12B_bmin3_eta610_b2-9_PL-1.pdf>
+ [131] [132 <./SimultaneousFitsCov/FT_xdep_A2B_A12B_bmin3_eta610_b2-9_PL-1.pdf>
  <./SimultaneousFitsCov/FT_xdep_3D_A2B_A12B_bmin3_eta610_PL-1.pdf>]
 (./SimultaneousFitsCov/Fit_Table_PL-2_bmin3.tex)
-<plots/Amps_Fit/ReA2B_PL-2_WithFit_3D.pdf, id=10560, 980.3665pt x 380.41751pt>
+<plots/Amps_Fit/ReA2B_PL-2_WithFit_3D.pdf, id=10568, 980.3665pt x 380.41751pt>
 File: plots/Amps_Fit/ReA2B_PL-2_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA2B_PL-2_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA2B_PL-2_WithFit_3D.pdf  used on inpu
-t line 468.
+t line 473.
 (pdftex.def)             Requested size: 369.29823pt x 143.30052pt.
-<plots/Amps_Fit/ReA2B_Pb_bsq_PL-2_WithFit_3D.pdf, id=10561, 1001.5195pt x 357.3
+<plots/Amps_Fit/ReA2B_Pb_bsq_PL-2_WithFit_3D.pdf, id=10569, 1001.5195pt x 357.3
 18pt>
 File: plots/Amps_Fit/ReA2B_Pb_bsq_PL-2_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA2B_Pb_bsq_PL-2_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA2B_Pb_bsq_PL-2_WithFit_3D.pdf  used 
-on input line 469.
+on input line 474.
 (pdftex.def)             Requested size: 369.29823pt x 131.7585pt.
-<plots/Amps_Fit/ImA2B_PL-2_WithFit_3D.pdf, id=10562, 980.3665pt x 380.41751pt>
+<plots/Amps_Fit/ImA2B_PL-2_WithFit_3D.pdf, id=10570, 980.3665pt x 380.41751pt>
 File: plots/Amps_Fit/ImA2B_PL-2_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ImA2B_PL-2_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ImA2B_PL-2_WithFit_3D.pdf  used on inpu
-t line 477.
+t line 482.
 (pdftex.def)             Requested size: 369.29823pt x 143.30052pt.
-<plots/Amps_Fit/ImA2B_Pb_bsq_PL-2_WithFit_3D.pdf, id=10563, 1001.5195pt x 357.3
+<plots/Amps_Fit/ImA2B_Pb_bsq_PL-2_WithFit_3D.pdf, id=10571, 1001.5195pt x 357.3
 18pt>
 File: plots/Amps_Fit/ImA2B_Pb_bsq_PL-2_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ImA2B_Pb_bsq_PL-2_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ImA2B_Pb_bsq_PL-2_WithFit_3D.pdf  used 
-on input line 478.
+on input line 483.
 (pdftex.def)             Requested size: 369.29823pt x 131.7585pt.
-<plots/Amps_Fit/ReA12B_PL-2_WithFit_3D.pdf, id=10564, 980.3665pt x 380.41751pt>
+<plots/Amps_Fit/ReA12B_PL-2_WithFit_3D.pdf, id=10572, 980.3665pt x 380.41751pt>
 
 File: plots/Amps_Fit/ReA12B_PL-2_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA12B_PL-2_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA12B_PL-2_WithFit_3D.pdf  used on inp
-ut line 486.
+ut line 491.
 (pdftex.def)             Requested size: 369.29823pt x 143.30052pt.
-<plots/Amps_Fit/ReA12B_Pb_bsq_PL-2_WithFit_3D.pdf, id=10565, 1004.02887pt x 357
+<plots/Amps_Fit/ReA12B_Pb_bsq_PL-2_WithFit_3D.pdf, id=10573, 1004.02887pt x 357
 .318pt>
 File: plots/Amps_Fit/ReA12B_Pb_bsq_PL-2_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA12B_Pb_bsq_PL-2_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA12B_Pb_bsq_PL-2_WithFit_3D.pdf  used
- on input line 487.
+ on input line 492.
 (pdftex.def)             Requested size: 369.29823pt x 131.42592pt.
-<plots/Amps_Fit/Combined_eta8_PL-2_WithFit_2D.pdf, id=10566, 1436.4008pt x 851.
+<plots/Amps_Fit/Combined_eta8_PL-2_WithFit_2D.pdf, id=10574, 1436.4008pt x 851.
 62956pt>
 File: plots/Amps_Fit/Combined_eta8_PL-2_WithFit_2D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/Combined_eta8_PL-2_WithFit_2D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/Combined_eta8_PL-2_WithFit_2D.pdf  used
- on input line 496.
+ on input line 501.
 (pdftex.def)             Requested size: 474.81087pt x 281.50644pt.
-<plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-2_WithFit_2D.pdf, id=10567, 1436.3393pt
+<plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-2_WithFit_2D.pdf, id=10575, 1436.3393pt
  x 851.04338pt>
 File: plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-2_WithFit_2D.pdf Graphic file (typ
 e pdf)
 <use plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-2_WithFit_2D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-2_WithFit_2D.pd
-f  used on input line 497.
+f  used on input line 502.
 (pdftex.def)             Requested size: 474.81087pt x 281.32565pt.
- [132 <./plots/Amps_Fit/ReA2B_PL-2_WithFit_3D.pdf> <./plots/Amps_Fit/ReA2B_Pb_b
+ [133 <./plots/Amps_Fit/ReA2B_PL-2_WithFit_3D.pdf> <./plots/Amps_Fit/ReA2B_Pb_b
 sq_PL-2_WithFit_3D.pdf>]
-[133 <./plots/Amps_Fit/ImA2B_PL-2_WithFit_3D.pdf> <./plots/Amps_Fit/ImA2B_Pb_bs
+[134 <./plots/Amps_Fit/ImA2B_PL-2_WithFit_3D.pdf> <./plots/Amps_Fit/ImA2B_Pb_bs
 q_PL-2_WithFit_3D.pdf> <./plots/Amps_Fit/ReA12B_PL-2_WithFit_3D.pdf> <./plots/A
-mps_Fit/ReA12B_Pb_bsq_PL-2_WithFit_3D.pdf>] [134 <./plots/Amps_Fit/Combined_eta
+mps_Fit/ReA12B_Pb_bsq_PL-2_WithFit_3D.pdf>] [135 <./plots/Amps_Fit/Combined_eta
 8_PL-2_WithFit_2D.pdf> <./plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-2_WithFit_2D.p
 df>] (./SimultaneousFitsCov/Integration_Table_PL-2_bmin3_b2-9.tex)
-<SimultaneousFitsCov/FT_xdep_A2B_A12B_bmin3_eta610_b2-9_PL-2.pdf, id=11329, 100
+<SimultaneousFitsCov/FT_xdep_A2B_A12B_bmin3_eta610_b2-9_PL-2.pdf, id=11337, 100
 0.82672pt x 569.37094pt>
 File: SimultaneousFitsCov/FT_xdep_A2B_A12B_bmin3_eta610_b2-9_PL-2.pdf Graphic f
 ile (type pdf)
 <use SimultaneousFitsCov/FT_xdep_A2B_A12B_bmin3_eta610_b2-9_PL-2.pdf>
 Package pdftex.def Info: SimultaneousFitsCov/FT_xdep_A2B_A12B_bmin3_eta610_b2-9
-_PL-2.pdf  used on input line 512.
+_PL-2.pdf  used on input line 517.
 (pdftex.def)             Requested size: 527.57121pt x 300.13184pt.
-<SimultaneousFitsCov/FT_xdep_3D_A2B_A12B_bmin3_eta610_PL-2.pdf, id=11330, 1288.
+<SimultaneousFitsCov/FT_xdep_3D_A2B_A12B_bmin3_eta610_PL-2.pdf, id=11338, 1288.
 39093pt x 862.77747pt>
 File: SimultaneousFitsCov/FT_xdep_3D_A2B_A12B_bmin3_eta610_PL-2.pdf Graphic fil
 e (type pdf)
 <use SimultaneousFitsCov/FT_xdep_3D_A2B_A12B_bmin3_eta610_PL-2.pdf>
 Package pdftex.def Info: SimultaneousFitsCov/FT_xdep_3D_A2B_A12B_bmin3_eta610_P
-L-2.pdf  used on input line 519.
+L-2.pdf  used on input line 524.
 (pdftex.def)             Requested size: 527.57121pt x 353.29344pt.
- [135]
-[136 <./SimultaneousFitsCov/FT_xdep_A2B_A12B_bmin3_eta610_b2-9_PL-2.pdf> <./Sim
+ [136]
+[137 <./SimultaneousFitsCov/FT_xdep_A2B_A12B_bmin3_eta610_b2-9_PL-2.pdf> <./Sim
 ultaneousFitsCov/FT_xdep_3D_A2B_A12B_bmin3_eta610_PL-2.pdf>]
 (./SimultaneousFitsCov/Fit_Table_PL-3_bmin3.tex)
-<plots/Amps_Fit/ReA2B_PL-3_WithFit_3D.pdf, id=11465, 980.3665pt x 380.41751pt>
+<plots/Amps_Fit/ReA2B_PL-3_WithFit_3D.pdf, id=11474, 980.3665pt x 380.41751pt>
 File: plots/Amps_Fit/ReA2B_PL-3_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA2B_PL-3_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA2B_PL-3_WithFit_3D.pdf  used on inpu
-t line 534.
+t line 539.
 (pdftex.def)             Requested size: 369.29823pt x 143.30052pt.
-<plots/Amps_Fit/ReA2B_Pb_bsq_PL-3_WithFit_3D.pdf, id=11466, 1001.47435pt x 357.
+<plots/Amps_Fit/ReA2B_Pb_bsq_PL-3_WithFit_3D.pdf, id=11475, 1001.47435pt x 357.
 28975pt>
 File: plots/Amps_Fit/ReA2B_Pb_bsq_PL-3_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA2B_Pb_bsq_PL-3_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA2B_Pb_bsq_PL-3_WithFit_3D.pdf  used 
-on input line 535.
+on input line 540.
 (pdftex.def)             Requested size: 369.29823pt x 131.7481pt.
-<plots/Amps_Fit/ImA2B_PL-3_WithFit_3D.pdf, id=11467, 980.3665pt x 380.41751pt>
+<plots/Amps_Fit/ImA2B_PL-3_WithFit_3D.pdf, id=11476, 980.3665pt x 380.41751pt>
 File: plots/Amps_Fit/ImA2B_PL-3_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ImA2B_PL-3_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ImA2B_PL-3_WithFit_3D.pdf  used on inpu
-t line 543.
+t line 548.
 (pdftex.def)             Requested size: 369.29823pt x 143.30052pt.
-<plots/Amps_Fit/ImA2B_Pb_bsq_PL-3_WithFit_3D.pdf, id=11468, 1001.47435pt x 357.
+<plots/Amps_Fit/ImA2B_Pb_bsq_PL-3_WithFit_3D.pdf, id=11477, 1001.47435pt x 357.
 28975pt>
 File: plots/Amps_Fit/ImA2B_Pb_bsq_PL-3_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ImA2B_Pb_bsq_PL-3_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ImA2B_Pb_bsq_PL-3_WithFit_3D.pdf  used 
-on input line 544.
+on input line 549.
 (pdftex.def)             Requested size: 369.29823pt x 131.7481pt.
-<plots/Amps_Fit/ReA12B_PL-3_WithFit_3D.pdf, id=11469, 980.3665pt x 380.41751pt>
+<plots/Amps_Fit/ReA12B_PL-3_WithFit_3D.pdf, id=11478, 980.3665pt x 380.41751pt>
 
 File: plots/Amps_Fit/ReA12B_PL-3_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA12B_PL-3_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA12B_PL-3_WithFit_3D.pdf  used on inp
-ut line 552.
+ut line 557.
 (pdftex.def)             Requested size: 369.29823pt x 143.30052pt.
-<plots/Amps_Fit/ReA12B_Pb_bsq_PL-3_WithFit_3D.pdf, id=11470, 1003.98372pt x 357
+<plots/Amps_Fit/ReA12B_Pb_bsq_PL-3_WithFit_3D.pdf, id=11479, 1003.98372pt x 357
 .28975pt>
 File: plots/Amps_Fit/ReA12B_Pb_bsq_PL-3_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA12B_Pb_bsq_PL-3_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA12B_Pb_bsq_PL-3_WithFit_3D.pdf  used
- on input line 553.
+ on input line 558.
 (pdftex.def)             Requested size: 369.29823pt x 131.42097pt.
-<plots/Amps_Fit/Combined_eta8_PL-3_WithFit_2D.pdf, id=11471, 1436.4008pt x 851.
+<plots/Amps_Fit/Combined_eta8_PL-3_WithFit_2D.pdf, id=11480, 1436.4008pt x 851.
 62956pt>
 File: plots/Amps_Fit/Combined_eta8_PL-3_WithFit_2D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/Combined_eta8_PL-3_WithFit_2D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/Combined_eta8_PL-3_WithFit_2D.pdf  used
- on input line 562.
+ on input line 567.
 (pdftex.def)             Requested size: 474.81087pt x 281.50644pt.
-<plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-3_WithFit_2D.pdf, id=11472, 1436.34431p
+<plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-3_WithFit_2D.pdf, id=11481, 1436.34431p
 t x 851.04338pt>
 File: plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-3_WithFit_2D.pdf Graphic file (typ
 e pdf)
 <use plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-3_WithFit_2D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-3_WithFit_2D.pd
-f  used on input line 563.
+f  used on input line 568.
 (pdftex.def)             Requested size: 474.81087pt x 281.32565pt.
- [137 <./plots/Amps_Fit/ReA2B_PL-3_WithFit_3D.pdf> <./plots/Amps_Fit/ReA2B_Pb_b
+ [138 <./plots/Amps_Fit/ReA2B_PL-3_WithFit_3D.pdf> <./plots/Amps_Fit/ReA2B_Pb_b
 sq_PL-3_WithFit_3D.pdf>]
-[138 <./plots/Amps_Fit/ImA2B_PL-3_WithFit_3D.pdf> <./plots/Amps_Fit/ImA2B_Pb_bs
+[139 <./plots/Amps_Fit/ImA2B_PL-3_WithFit_3D.pdf> <./plots/Amps_Fit/ImA2B_Pb_bs
 q_PL-3_WithFit_3D.pdf> <./plots/Amps_Fit/ReA12B_PL-3_WithFit_3D.pdf> <./plots/A
-mps_Fit/ReA12B_Pb_bsq_PL-3_WithFit_3D.pdf>] [139 <./plots/Amps_Fit/Combined_eta
+mps_Fit/ReA12B_Pb_bsq_PL-3_WithFit_3D.pdf>] [140 <./plots/Amps_Fit/Combined_eta
 8_PL-3_WithFit_2D.pdf> <./plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-3_WithFit_2D.p
 df>] (./SimultaneousFitsCov/Integration_Table_PL-3_bmin3_b2-9.tex)
-<SimultaneousFitsCov/FT_xdep_A2B_A12B_bmin3_eta610_b2-9_PL-3.pdf, id=12235, 100
+<SimultaneousFitsCov/FT_xdep_A2B_A12B_bmin3_eta610_b2-9_PL-3.pdf, id=12243, 100
 1.86118pt x 569.37094pt>
 File: SimultaneousFitsCov/FT_xdep_A2B_A12B_bmin3_eta610_b2-9_PL-3.pdf Graphic f
 ile (type pdf)
 <use SimultaneousFitsCov/FT_xdep_A2B_A12B_bmin3_eta610_b2-9_PL-3.pdf>
 Package pdftex.def Info: SimultaneousFitsCov/FT_xdep_A2B_A12B_bmin3_eta610_b2-9
-_PL-3.pdf  used on input line 578.
+_PL-3.pdf  used on input line 583.
 (pdftex.def)             Requested size: 527.57121pt x 299.83644pt.
-<SimultaneousFitsCov/FT_xdep_3D_A2B_A12B_bmin3_eta610_PL-3.pdf, id=12236, 1291.
+<SimultaneousFitsCov/FT_xdep_3D_A2B_A12B_bmin3_eta610_PL-3.pdf, id=12244, 1291.
 68645pt x 862.77747pt>
 File: SimultaneousFitsCov/FT_xdep_3D_A2B_A12B_bmin3_eta610_PL-3.pdf Graphic fil
 e (type pdf)
 <use SimultaneousFitsCov/FT_xdep_3D_A2B_A12B_bmin3_eta610_PL-3.pdf>
 Package pdftex.def Info: SimultaneousFitsCov/FT_xdep_3D_A2B_A12B_bmin3_eta610_P
-L-3.pdf  used on input line 585.
+L-3.pdf  used on input line 590.
 (pdftex.def)             Requested size: 527.57121pt x 352.39822pt.
- [140]
-[141 <./SimultaneousFitsCov/FT_xdep_A2B_A12B_bmin3_eta610_b2-9_PL-3.pdf> <./Sim
+ [141]
+[142 <./SimultaneousFitsCov/FT_xdep_A2B_A12B_bmin3_eta610_b2-9_PL-3.pdf> <./Sim
 ultaneousFitsCov/FT_xdep_3D_A2B_A12B_bmin3_eta610_PL-3.pdf>]
 (./SimultaneousFitsCov/Fit_Table_PL-4_bmin3.tex)
-<plots/Amps_Fit/ReA2B_PL-4_WithFit_3D.pdf, id=12370, 980.3665pt x 380.41751pt>
+<plots/Amps_Fit/ReA2B_PL-4_WithFit_3D.pdf, id=12378, 980.3665pt x 380.41751pt>
 File: plots/Amps_Fit/ReA2B_PL-4_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA2B_PL-4_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA2B_PL-4_WithFit_3D.pdf  used on inpu
-t line 601.
+t line 606.
 (pdftex.def)             Requested size: 369.29823pt x 143.30052pt.
-<plots/Amps_Fit/ReA2B_Pb_bsq_PL-4_WithFit_3D.pdf, id=12371, 1000.97247pt x 357.
+<plots/Amps_Fit/ReA2B_Pb_bsq_PL-4_WithFit_3D.pdf, id=12379, 1000.97247pt x 357.
 28975pt>
 File: plots/Amps_Fit/ReA2B_Pb_bsq_PL-4_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA2B_Pb_bsq_PL-4_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA2B_Pb_bsq_PL-4_WithFit_3D.pdf  used 
-on input line 602.
+on input line 607.
 (pdftex.def)             Requested size: 369.29823pt x 131.8135pt.
-<plots/Amps_Fit/ImA2B_PL-4_WithFit_3D.pdf, id=12372, 980.3665pt x 380.41751pt>
+<plots/Amps_Fit/ImA2B_PL-4_WithFit_3D.pdf, id=12380, 980.3665pt x 380.41751pt>
 File: plots/Amps_Fit/ImA2B_PL-4_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ImA2B_PL-4_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ImA2B_PL-4_WithFit_3D.pdf  used on inpu
-t line 610.
+t line 615.
 (pdftex.def)             Requested size: 369.29823pt x 143.30052pt.
-<plots/Amps_Fit/ImA2B_Pb_bsq_PL-4_WithFit_3D.pdf, id=12373, 1000.97247pt x 357.
+<plots/Amps_Fit/ImA2B_Pb_bsq_PL-4_WithFit_3D.pdf, id=12381, 1000.97247pt x 357.
 28975pt>
 File: plots/Amps_Fit/ImA2B_Pb_bsq_PL-4_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ImA2B_Pb_bsq_PL-4_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ImA2B_Pb_bsq_PL-4_WithFit_3D.pdf  used 
-on input line 611.
+on input line 616.
 (pdftex.def)             Requested size: 369.29823pt x 131.8135pt.
-<plots/Amps_Fit/ReA12B_PL-4_WithFit_3D.pdf, id=12374, 980.3665pt x 380.41751pt>
+<plots/Amps_Fit/ReA12B_PL-4_WithFit_3D.pdf, id=12382, 980.3665pt x 380.41751pt>
 
 File: plots/Amps_Fit/ReA12B_PL-4_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA12B_PL-4_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA12B_PL-4_WithFit_3D.pdf  used on inp
-ut line 619.
+ut line 624.
 (pdftex.def)             Requested size: 369.29823pt x 143.30052pt.
-<plots/Amps_Fit/ReA12B_Pb_bsq_PL-4_WithFit_3D.pdf, id=12375, 1003.48184pt x 357
+<plots/Amps_Fit/ReA12B_Pb_bsq_PL-4_WithFit_3D.pdf, id=12383, 1003.48184pt x 357
 .28975pt>
 File: plots/Amps_Fit/ReA12B_Pb_bsq_PL-4_WithFit_3D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/ReA12B_Pb_bsq_PL-4_WithFit_3D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/ReA12B_Pb_bsq_PL-4_WithFit_3D.pdf  used
- on input line 620.
+ on input line 625.
 (pdftex.def)             Requested size: 369.29823pt x 131.4864pt.
-<plots/Amps_Fit/Combined_eta8_PL-4_WithFit_2D.pdf, id=12376, 1436.4008pt x 851.
+<plots/Amps_Fit/Combined_eta8_PL-4_WithFit_2D.pdf, id=12384, 1436.4008pt x 851.
 62956pt>
 File: plots/Amps_Fit/Combined_eta8_PL-4_WithFit_2D.pdf Graphic file (type pdf)
 <use plots/Amps_Fit/Combined_eta8_PL-4_WithFit_2D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/Combined_eta8_PL-4_WithFit_2D.pdf  used
- on input line 629.
+ on input line 634.
 (pdftex.def)             Requested size: 474.81087pt x 281.50644pt.
-<plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-4_WithFit_2D.pdf, id=12377, 1436.37508p
+<plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-4_WithFit_2D.pdf, id=12385, 1436.37508p
 t x 851.04338pt>
 File: plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-4_WithFit_2D.pdf Graphic file (typ
 e pdf)
 <use plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-4_WithFit_2D.pdf>
 Package pdftex.def Info: plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-4_WithFit_2D.pd
-f  used on input line 630.
+f  used on input line 635.
 (pdftex.def)             Requested size: 474.81087pt x 281.32565pt.
- [142 <./plots/Amps_Fit/ReA2B_PL-4_WithFit_3D.pdf> <./plots/Amps_Fit/ReA2B_Pb_b
+ [143 <./plots/Amps_Fit/ReA2B_PL-4_WithFit_3D.pdf> <./plots/Amps_Fit/ReA2B_Pb_b
 sq_PL-4_WithFit_3D.pdf>]
-[143 <./plots/Amps_Fit/ImA2B_PL-4_WithFit_3D.pdf> <./plots/Amps_Fit/ImA2B_Pb_bs
+[144 <./plots/Amps_Fit/ImA2B_PL-4_WithFit_3D.pdf> <./plots/Amps_Fit/ImA2B_Pb_bs
 q_PL-4_WithFit_3D.pdf> <./plots/Amps_Fit/ReA12B_PL-4_WithFit_3D.pdf> <./plots/A
-mps_Fit/ReA12B_Pb_bsq_PL-4_WithFit_3D.pdf>] [144 <./plots/Amps_Fit/Combined_eta
+mps_Fit/ReA12B_Pb_bsq_PL-4_WithFit_3D.pdf>] [145 <./plots/Amps_Fit/Combined_eta
 8_PL-4_WithFit_2D.pdf> <./plots/Amps_Fit/Combined_Pb_bsq_eta8_PL-4_WithFit_2D.p
 df>] (./SimultaneousFitsCov/Integration_Table_PL-4_bmin3_b2-9.tex)
-<SimultaneousFitsCov/FT_xdep_A2B_A12B_bmin3_eta610_b2-9_PL-4.pdf, id=13139, 100
+<SimultaneousFitsCov/FT_xdep_A2B_A12B_bmin3_eta610_b2-9_PL-4.pdf, id=13148, 100
 1.86118pt x 569.37094pt>
 File: SimultaneousFitsCov/FT_xdep_A2B_A12B_bmin3_eta610_b2-9_PL-4.pdf Graphic f
 ile (type pdf)
 <use SimultaneousFitsCov/FT_xdep_A2B_A12B_bmin3_eta610_b2-9_PL-4.pdf>
 Package pdftex.def Info: SimultaneousFitsCov/FT_xdep_A2B_A12B_bmin3_eta610_b2-9
-_PL-4.pdf  used on input line 645.
+_PL-4.pdf  used on input line 650.
 (pdftex.def)             Requested size: 527.57121pt x 299.83644pt.
-<SimultaneousFitsCov/FT_xdep_3D_A2B_A12B_bmin3_eta610_PL-4.pdf, id=13140, 1291.
+<SimultaneousFitsCov/FT_xdep_3D_A2B_A12B_bmin3_eta610_PL-4.pdf, id=13149, 1291.
 58916pt x 862.77747pt>
 File: SimultaneousFitsCov/FT_xdep_3D_A2B_A12B_bmin3_eta610_PL-4.pdf Graphic fil
 e (type pdf)
 <use SimultaneousFitsCov/FT_xdep_3D_A2B_A12B_bmin3_eta610_PL-4.pdf>
 Package pdftex.def Info: SimultaneousFitsCov/FT_xdep_3D_A2B_A12B_bmin3_eta610_P
-L-4.pdf  used on input line 652.
+L-4.pdf  used on input line 657.
 (pdftex.def)             Requested size: 527.57121pt x 352.41139pt.
- [145]
-[146 <./SimultaneousFitsCov/FT_xdep_A2B_A12B_bmin3_eta610_b2-9_PL-4.pdf> <./Sim
-ultaneousFitsCov/FT_xdep_3D_A2B_A12B_bmin3_eta610_PL-4.pdf>] [147]
-<plots/Factorization_ratios_Pb034_lin_vs_quad_eta8_PL-1.pdf, id=13289, 1309.291
+ [146]
+[147 <./SimultaneousFitsCov/FT_xdep_A2B_A12B_bmin3_eta610_b2-9_PL-4.pdf> <./Sim
+ultaneousFitsCov/FT_xdep_3D_A2B_A12B_bmin3_eta610_PL-4.pdf>] [148]
+<plots/Factorization_ratios_Pb034_lin_vs_quad_eta8_PL-1.pdf, id=13297, 1309.291
 03pt x 731.13103pt>
 File: plots/Factorization_ratios_Pb034_lin_vs_quad_eta8_PL-1.pdf Graphic file (
 type pdf)
 <use plots/Factorization_ratios_Pb034_lin_vs_quad_eta8_PL-1.pdf>
 Package pdftex.def Info: plots/Factorization_ratios_Pb034_lin_vs_quad_eta8_PL-1
-.pdf  used on input line 716.
+.pdf  used on input line 721.
 (pdftex.def)             Requested size: 527.57121pt x 294.61153pt.
- [148]
-[149 <./plots/Factorization_ratios_Pb034_lin_vs_quad_eta8_PL-1.pdf>]
-<plots/Rejection-of-Separable-Exponential-Longitudinal-Decay.pdf, id=13411, 100
+ [149]
+[150 <./plots/Factorization_ratios_Pb034_lin_vs_quad_eta8_PL-1.pdf>]
+<plots/Rejection-of-Separable-Exponential-Longitudinal-Decay.pdf, id=13419, 100
 3.75pt x 282.05376pt>
 File: plots/Rejection-of-Separable-Exponential-Longitudinal-Decay.pdf Graphic f
 ile (type pdf)
 <use plots/Rejection-of-Separable-Exponential-Longitudinal-Decay.pdf>
 Package pdftex.def Info: plots/Rejection-of-Separable-Exponential-Longitudinal-
-Decay.pdf  used on input line 734.
+Decay.pdf  used on input line 739.
 (pdftex.def)             Requested size: 527.57121pt x 148.25258pt.
 Package epstopdf Info: Source file: <plots/Rejection-of-Separable-Exponential-L
 ongitudinal-Decay-ceta.eps>
@@ -2735,75 +2735,75 @@ ongitudinal-Decay-ceta-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=plots/Rejection-of-Separab
 le-Exponential-Longitudinal-Decay-ceta-eps-converted-to.pdf plots/Rejection-of-
 Separable-Exponential-Longitudinal-Decay-ceta.eps>
-(epstopdf)             \includegraphics on input line 742.
+(epstopdf)             \includegraphics on input line 747.
 Package epstopdf Info: Output file is already uptodate.
 <plots/Rejection-of-Separable-Exponential-Longitudinal-Decay-ceta-eps-converted
--to.pdf, id=13413, 714.67pt x 276.03125pt>
+-to.pdf, id=13421, 714.67pt x 276.03125pt>
 File: plots/Rejection-of-Separable-Exponential-Longitudinal-Decay-ceta-eps-conv
 erted-to.pdf Graphic file (type pdf)
 <use plots/Rejection-of-Separable-Exponential-Longitudinal-Decay-ceta-eps-conve
 rted-to.pdf>
 Package pdftex.def Info: plots/Rejection-of-Separable-Exponential-Longitudinal-
-Decay-ceta-eps-converted-to.pdf  used on input line 742.
+Decay-ceta-eps-converted-to.pdf  used on input line 747.
 (pdftex.def)             Requested size: 527.57121pt x 203.77554pt.
- [150 <./plots/Rejection-of-Separable-Exponential-Longitudinal-Decay.pdf>]
+ [151 <./plots/Rejection-of-Separable-Exponential-Longitudinal-Decay.pdf>]
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 750.
- [151 <./plots/Rejection-of-Separable-Exponential-Longitudinal-Decay-ceta-eps-c
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 755.
+ [152 <./plots/Rejection-of-Separable-Exponential-Longitudinal-Decay-ceta-eps-c
 onverted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 804--804
+Underfull \hbox (badness 10000) in paragraph at lines 809--809
 []\OT1/cmr/bx/n/12 Primary Fail-ure
  []
 
 
-Underfull \hbox (badness 7168) in paragraph at lines 804--804
+Underfull \hbox (badness 7168) in paragraph at lines 809--809
 []\OT1/cmr/m/n/12 Fits $[]$ well, but
  []
 
 
-Underfull \hbox (badness 3872) in paragraph at lines 804--804
+Underfull \hbox (badness 3872) in paragraph at lines 809--809
 []\OT1/cmr/m/n/12 Poor $\OML/cmm/m/it/12 ^^_[]=[]$\OT1/cmr/m/n/12 ; $\OML/cmm/m
 /it/12 c[]$
  []
 
 
-Underfull \hbox (badness 2460) in paragraph at lines 804--804
+Underfull \hbox (badness 2460) in paragraph at lines 809--809
 \OT1/cmr/m/n/12 sian over-damping at
  []
 
 
-Underfull \hbox (badness 2689) in paragraph at lines 804--804
+Underfull \hbox (badness 2689) in paragraph at lines 809--809
 \OT1/cmr/m/n/12 mo-menta; $\OML/cmm/m/it/12 c[] \OMS/cmsy/m/n/12 ^^Y
  []
 
 
-Underfull \hbox (badness 1152) in paragraph at lines 804--804
+Underfull \hbox (badness 1152) in paragraph at lines 809--809
 \OT1/cmr/m/n/12 0$; un-phys-i-cal trun-ca-
  []
 
 
-Underfull \hbox (badness 3503) in paragraph at lines 804--804
+Underfull \hbox (badness 3503) in paragraph at lines 809--809
 \OT1/cmr/bx/n/12 ble, pos-i-tive, and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 804--804
+Underfull \hbox (badness 10000) in paragraph at lines 809--809
 \OT1/cmr/bx/n/12 well-constrained
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 804--804
+Underfull \hbox (badness 10000) in paragraph at lines 809--809
 \OT1/cmr/bx/n/12 across all am-pli-
  []
 
 
-Overfull \hbox (1.99649pt too wide) in paragraph at lines 804--805
+Overfull \hbox (1.99649pt too wide) in paragraph at lines 809--810
  [][] 
  []
 
-[152] [153]) [154] (./Chapters/EXTRAPOLATIONS-TO-THE-PHYSICAL-LIMIT.tex
+[153] [154]) [155] (./Chapters/EXTRAPOLATIONS-TO-THE-PHYSICAL-LIMIT.tex
 <SimultaneousFitsCov/SimulFit_Distinct_1_over_PL_bmin3_eta610_b29.0_Amps.pdf, i
-d=13518, 709.25089pt x 625.13548pt>
+d=13527, 709.25089pt x 625.13548pt>
 File: SimultaneousFitsCov/SimulFit_Distinct_1_over_PL_bmin3_eta610_b29.0_Amps.p
 df Graphic file (type pdf)
 <use SimultaneousFitsCov/SimulFit_Distinct_1_over_PL_bmin3_eta610_b29.0_Amps.pd
@@ -2816,7 +2816,7 @@ eta610_b29.0_Amps.pdf  used on input line 29.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 <SimultaneousFitsCov/SimulFit_Distinct_1_over_PL_bmin3_eta610_b29.0_Sivers.pdf,
- id=13519, 736.25105pt x 345.89226pt>
+ id=13528, 736.25105pt x 345.89226pt>
 File: SimultaneousFitsCov/SimulFit_Distinct_1_over_PL_bmin3_eta610_b29.0_Sivers
 .pdf Graphic file (type pdf)
 <use SimultaneousFitsCov/SimulFit_Distinct_1_over_PL_bmin3_eta610_b29.0_Sivers.
@@ -2827,15 +2827,15 @@ eta610_b29.0_Sivers.pdf  used on input line 36.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[155]
+[156]
 
-LaTeX Warning: Text page 156 contains only floats.
+LaTeX Warning: Text page 157 contains only floats.
 
-[156 <./SimultaneousFitsCov/SimulFit_Distinct_1_over_PL_bmin3_eta610_b29.0_Amps
+[157 <./SimultaneousFitsCov/SimulFit_Distinct_1_over_PL_bmin3_eta610_b29.0_Amps
 .pdf> <./SimultaneousFitsCov/SimulFit_Distinct_1_over_PL_bmin3_eta610_b29.0_Siv
 ers.pdf>]
 <SimultaneousFitsCov/extrapolation_para_level/Param_Extrapolations_1byZetahat_s
-q_P234_bmin3_eta610_b29.0.pdf, id=13624, 1300.86pt x 867.24pt>
+q_P234_bmin3_eta610_b29.0.pdf, id=13632, 1300.86pt x 867.24pt>
 File: SimultaneousFitsCov/extrapolation_para_level/Param_Extrapolations_1byZeta
 hat_sq_P234_bmin3_eta610_b29.0.pdf Graphic file (type pdf)
 <use SimultaneousFitsCov/extrapolation_para_level/Param_Extrapolations_1byZetah
@@ -2848,7 +2848,7 @@ rapolations_1byZetahat_sq_P234_bmin3_eta610_b29.0.pdf  used on input line 59.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 <SimultaneousFitsCov/extrapolation_para_level/Extrapolated_AmpLevel_P234_Sivers
-_1_over_zetahat_sq_bmin3_eta610_b29.0_Amps.pdf, id=13628, 784.04742pt x 569.651
+_1_over_zetahat_sq_bmin3_eta610_b29.0_Amps.pdf, id=13636, 784.04742pt x 569.651
 96pt>
 File: SimultaneousFitsCov/extrapolation_para_level/Extrapolated_AmpLevel_P234_S
 ivers_1_over_zetahat_sq_bmin3_eta610_b29.0_Amps.pdf Graphic file (type pdf)
@@ -2862,7 +2862,7 @@ ted_AmpLevel_P234_Sivers_1_over_zetahat_sq_bmin3_eta610_b29.0_Amps.pdf  used on
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 <SimultaneousFitsCov/extrapolation_para_level/Extrapolated_AmpLevel_P234_Sivers
-_1_over_zetahat_sq_bmin3_eta610_b29.0_Sivers.pdf, id=13631, 784.68518pt x 281.1
+_1_over_zetahat_sq_bmin3_eta610_b29.0_Sivers.pdf, id=13639, 784.68518pt x 281.1
 593pt>
 File: SimultaneousFitsCov/extrapolation_para_level/Extrapolated_AmpLevel_P234_S
 ivers_1_over_zetahat_sq_bmin3_eta610_b29.0_Sivers.pdf Graphic file (type pdf)
@@ -2875,17 +2875,17 @@ on input line 75.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[157] [158 <./SimultaneousFitsCov/extrapolation_para_level/Param_Extrapolations
+[158] [159 <./SimultaneousFitsCov/extrapolation_para_level/Param_Extrapolations
 _1byZetahat_sq_P234_bmin3_eta610_b29.0.pdf>]
 
-LaTeX Warning: Text page 159 contains only floats.
+LaTeX Warning: Text page 160 contains only floats.
 
-[159 <./SimultaneousFitsCov/extrapolation_para_level/Extrapolated_AmpLevel_P234
+[160 <./SimultaneousFitsCov/extrapolation_para_level/Extrapolated_AmpLevel_P234
 _Sivers_1_over_zetahat_sq_bmin3_eta610_b29.0_Amps.pdf> <./SimultaneousFitsCov/e
 xtrapolation_para_level/Extrapolated_AmpLevel_P234_Sivers_1_over_zetahat_sq_bmi
 n3_eta610_b29.0_Sivers.pdf>]
 <SimultaneousFitsCov/extrapolation_para_level/FT_xdep_3D_A2B_A12B_bmin3_eta610_
-PLInf_Amps.pdf, id=13809, 812.02382pt x 753.06215pt>
+PLInf_Amps.pdf, id=13817, 812.02382pt x 753.06215pt>
 File: SimultaneousFitsCov/extrapolation_para_level/FT_xdep_3D_A2B_A12B_bmin3_et
 a610_PLInf_Amps.pdf Graphic file (type pdf)
 <use SimultaneousFitsCov/extrapolation_para_level/FT_xdep_3D_A2B_A12B_bmin3_eta
@@ -2894,7 +2894,7 @@ Package pdftex.def Info: SimultaneousFitsCov/extrapolation_para_level/FT_xdep_3
 D_A2B_A12B_bmin3_eta610_PLInf_Amps.pdf  used on input line 108.
 (pdftex.def)             Requested size: 422.05858pt x 391.42221pt.
 <SimultaneousFitsCov/extrapolation_para_level/FT_xdep_3D_A2B_A12B_bmin3_eta610_
-PLInf_Sivers.pdf, id=13812, 801.64748pt x 391.52031pt>
+PLInf_Sivers.pdf, id=13820, 801.64748pt x 391.52031pt>
 File: SimultaneousFitsCov/extrapolation_para_level/FT_xdep_3D_A2B_A12B_bmin3_et
 a610_PLInf_Sivers.pdf Graphic file (type pdf)
 <use SimultaneousFitsCov/extrapolation_para_level/FT_xdep_3D_A2B_A12B_bmin3_eta
@@ -2907,7 +2907,7 @@ D_A2B_A12B_bmin3_eta610_PLInf_Sivers.pdf  used on input line 115.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 <SimultaneousFitsCov/extrapolation_para_level/All_Momenta_vs_Extrapolated_2D_P2
-34_bmin3_eta610_b29.0_Amps.pdf, id=13815, 765.56639pt x 619.45802pt>
+34_bmin3_eta610_b29.0_Amps.pdf, id=13823, 765.56639pt x 619.45802pt>
 File: SimultaneousFitsCov/extrapolation_para_level/All_Momenta_vs_Extrapolated_
 2D_P234_bmin3_eta610_b29.0_Amps.pdf Graphic file (type pdf)
 <use SimultaneousFitsCov/extrapolation_para_level/All_Momenta_vs_Extrapolated_2
@@ -2920,7 +2920,7 @@ ta_vs_Extrapolated_2D_P234_bmin3_eta610_b29.0_Amps.pdf  used on input line 122.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 <SimultaneousFitsCov/extrapolation_para_level/All_Momenta_vs_Extrapolated_2D_P2
-34_bmin3_eta610_b29.0_Sivers.pdf, id=13818, 771.94962pt x 340.2148pt>
+34_bmin3_eta610_b29.0_Sivers.pdf, id=13826, 771.94962pt x 340.2148pt>
 File: SimultaneousFitsCov/extrapolation_para_level/All_Momenta_vs_Extrapolated_
 2D_P234_bmin3_eta610_b29.0_Sivers.pdf Graphic file (type pdf)
 <use SimultaneousFitsCov/extrapolation_para_level/All_Momenta_vs_Extrapolated_2
@@ -2932,18 +2932,18 @@ ta_vs_Extrapolated_2D_P234_bmin3_eta610_b29.0_Sivers.pdf  used on input line 12
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[160 <./SimultaneousFitsCov/extrapolation_para_level/FT_xdep_3D_A2B_A12B_bmin3_
+[161 <./SimultaneousFitsCov/extrapolation_para_level/FT_xdep_3D_A2B_A12B_bmin3_
 eta610_PLInf_Amps.pdf>]
 
-LaTeX Warning: Text page 161 contains only floats.
+LaTeX Warning: Text page 162 contains only floats.
 
-[161 <./SimultaneousFitsCov/extrapolation_para_level/FT_xdep_3D_A2B_A12B_bmin3_
+[162 <./SimultaneousFitsCov/extrapolation_para_level/FT_xdep_3D_A2B_A12B_bmin3_
 eta610_PLInf_Sivers.pdf> <./SimultaneousFitsCov/extrapolation_para_level/All_Mo
-menta_vs_Extrapolated_2D_P234_bmin3_eta610_b29.0_Amps.pdf>] [162 <./Simultaneou
+menta_vs_Extrapolated_2D_P234_bmin3_eta610_b29.0_Amps.pdf>] [163 <./Simultaneou
 sFitsCov/extrapolation_para_level/All_Momenta_vs_Extrapolated_2D_P234_bmin3_eta
-610_b29.0_Sivers.pdf>] [163]
+610_b29.0_Sivers.pdf>] [164]
 <SimultaneousFitsCov/factorization_test/Factorization_gh_and_Reconstruction_bmi
-n3_eta610.pdf, id=14046, 1291.64185pt x 386.41953pt>
+n3_eta610.pdf, id=14054, 1291.64185pt x 386.41953pt>
 File: SimultaneousFitsCov/factorization_test/Factorization_gh_and_Reconstructio
 n_bmin3_eta610.pdf Graphic file (type pdf)
 <use SimultaneousFitsCov/factorization_test/Factorization_gh_and_Reconstruction
@@ -2970,9 +2970,9 @@ S/cmtt/m/n/10.95 j\OML/cmm/m/it/10.95 b[]\OMS/cmtt/m/n/10.95 j\OT1/cmr/m/n/10.9
 OML/cmm/m/it/10.95 b[]\OMS/cmtt/m/n/10.95 j\OT1/cmr/m/n/10.95 ) =
  []
 
-[164]
+[165]
 <SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_x_4curves_P234_b
-min3_eta610.pdf, id=14063, 640.62978pt x 424.12024pt>
+min3_eta610.pdf, id=14071, 640.62978pt x 424.12024pt>
 File: SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_x_4curves_P
 234_bmin3_eta610.pdf Graphic file (type pdf)
 <use SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_x_4curves_P2
@@ -2981,7 +2981,7 @@ Package pdftex.def Info: SimultaneousFitsCov/factorization_test/Factorization_R
 atio_vs_x_4curves_P234_bmin3_eta610.pdf  used on input line 231.
 (pdftex.def)             Requested size: 395.6784pt x 261.94873pt.
 <SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_bT_4curves_P234_
-bmin3_eta610.pdf, id=14064, 640.6348pt x 422.56258pt>
+bmin3_eta610.pdf, id=14072, 640.6348pt x 422.56258pt>
 File: SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_bT_4curves_
 P234_bmin3_eta610.pdf Graphic file (type pdf)
 <use SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_bT_4curves_P
@@ -2993,11 +2993,11 @@ atio_vs_bT_4curves_P234_bmin3_eta610.pdf  used on input line 238.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[165 <./SimultaneousFitsCov/factorization_test/Factorization_gh_and_Reconstruct
+[166 <./SimultaneousFitsCov/factorization_test/Factorization_gh_and_Reconstruct
 ion_bmin3_eta610.pdf> <./SimultaneousFitsCov/factorization_test/Factorization_R
 atio_vs_x_4curves_P234_bmin3_eta610.pdf>]
 <SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_x_AllPL_bmin3_et
-a610.pdf, id=14170, 1001.97978pt x 711.04016pt>
+a610.pdf, id=14178, 1001.97978pt x 711.04016pt>
 File: SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_x_AllPL_bmi
 n3_eta610.pdf Graphic file (type pdf)
 <use SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_x_AllPL_bmin
@@ -3010,7 +3010,7 @@ atio_vs_x_AllPL_bmin3_eta610.pdf  used on input line 247.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 <SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_bT_AllPL_bmin3_e
-ta610.pdf, id=14173, 1001.99165pt x 709.48247pt>
+ta610.pdf, id=14181, 1001.99165pt x 709.48247pt>
 File: SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_bT_AllPL_bm
 in3_eta610.pdf Graphic file (type pdf)
 <use SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_bT_AllPL_bmi
@@ -3025,7 +3025,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 <SimultaneousFitsCov/factorization_test/Factorization_Amplitudes_g_of_x_bmin3_e
-ta610.pdf, id=14182, 1002.55492pt x 711.04016pt>
+ta610.pdf, id=14190, 1002.55492pt x 711.04016pt>
 File: SimultaneousFitsCov/factorization_test/Factorization_Amplitudes_g_of_x_bm
 in3_eta610.pdf Graphic file (type pdf)
 <use SimultaneousFitsCov/factorization_test/Factorization_Amplitudes_g_of_x_bmi
@@ -3033,13 +3033,13 @@ n3_eta610.pdf>
 Package pdftex.def Info: SimultaneousFitsCov/factorization_test/Factorization_A
 mplitudes_g_of_x_bmin3_eta610.pdf  used on input line 288.
 (pdftex.def)             Requested size: 527.57121pt x 374.1805pt.
-[166 <./SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_bT_4curve
+[167 <./SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_bT_4curve
 s_P234_bmin3_eta610.pdf>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 <SimultaneousFitsCov/factorization_test/Factorization_Amplitudes_h_of_bT_bmin3_
-eta610.pdf, id=14226, 1002.5668pt x 709.48247pt>
+eta610.pdf, id=14235, 1002.5668pt x 709.48247pt>
 File: SimultaneousFitsCov/factorization_test/Factorization_Amplitudes_h_of_bT_b
 min3_eta610.pdf Graphic file (type pdf)
 <use SimultaneousFitsCov/factorization_test/Factorization_Amplitudes_h_of_bT_bm
@@ -3051,7 +3051,7 @@ mplitudes_h_of_bT_bmin3_eta610.pdf  used on input line 295.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 <SimultaneousFitsCov/factorization_test/Factorization_Amplitudes_Reconstruction
-_bmin3_eta610.pdf, id=14229, 1000.82672pt x 711.04016pt>
+_bmin3_eta610.pdf, id=14238, 1000.82672pt x 711.04016pt>
 File: SimultaneousFitsCov/factorization_test/Factorization_Amplitudes_Reconstru
 ction_bmin3_eta610.pdf Graphic file (type pdf)
 <use SimultaneousFitsCov/factorization_test/Factorization_Amplitudes_Reconstruc
@@ -3062,12 +3062,12 @@ mplitudes_Reconstruction_bmin3_eta610.pdf  used on input line 302.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[167 <./SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_x_AllPL_b
-min3_eta610.pdf>]) [168 <./SimultaneousFitsCov/factorization_test/Factorization
-_Ratio_vs_bT_AllPL_bmin3_eta610.pdf>] [169 <./SimultaneousFitsCov/factorization
-_test/Factorization_Amplitudes_g_of_x_bmin3_eta610.pdf>] [170 <./SimultaneousFi
+[168 <./SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_x_AllPL_b
+min3_eta610.pdf>]) [169 <./SimultaneousFitsCov/factorization_test/Factorization
+_Ratio_vs_bT_AllPL_bmin3_eta610.pdf>] [170 <./SimultaneousFitsCov/factorization
+_test/Factorization_Amplitudes_g_of_x_bmin3_eta610.pdf>] [171 <./SimultaneousFi
 tsCov/factorization_test/Factorization_Amplitudes_h_of_bT_bmin3_eta610.pdf>]
-(./Chapters/CONCLUSION.tex) [171 <./SimultaneousFitsCov/factorization_test/Fact
+(./Chapters/CONCLUSION.tex) [172 <./SimultaneousFitsCov/factorization_test/Fact
 orization_Amplitudes_Reconstruction_bmin3_eta610.pdf>] (./appendix.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -3081,7 +3081,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-) [172] (./main.bbl [173] [174] [175] [176]) [177] (./main.aux (./title.aux)
+) [173] (./main.bbl [174] [175] [176] [177]) [178] (./main.aux (./title.aux)
 (./copyright.aux) (./approval.aux) (./dedica.aux) (./ackno.aux) (./vita.aux)
 (./abstract.aux))
 
@@ -3094,8 +3094,8 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 2B2CCEA2333FDC1BFE5E26FF2D98652B;24897.
  ) 
 Here is how much of TeX's memory you used:
- 45646 strings out of 476025
- 930450 string characters out of 5790016
+ 45647 strings out of 476025
+ 930458 string characters out of 5790016
  2432049 words of memory out of 5000000
  64288 multiletter control sequences out of 15000+600000
  529785 words of font info for 113 fonts, out of 8000000 for 9000
@@ -3134,10 +3134,10 @@ m/cmtt8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/lat
 xfont/line10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfont
 s/symbols/msam10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ams
 fonts/symbols/msbm10.pfb>
-Output written on main.pdf (203 pages, 35761307 bytes).
+Output written on main.pdf (204 pages, 35762704 bytes).
 PDF statistics:
- 15130 PDF objects out of 15390 (max. 8388607)
- 5723 compressed objects within 58 object streams
- 906 named destinations out of 1000 (max. 500000)
+ 15139 PDF objects out of 15390 (max. 8388607)
+ 5731 compressed objects within 58 object streams
+ 907 named destinations out of 1000 (max. 500000)
  1702 words of extra memory for PDF output out of 10000 (max. 10000000)
 
