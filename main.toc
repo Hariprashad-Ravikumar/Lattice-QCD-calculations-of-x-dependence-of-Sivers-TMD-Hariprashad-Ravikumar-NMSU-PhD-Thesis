@@ -84,7 +84,7 @@
 \contentsline {subsubsection}{\numberline {6.4.1}Expression Search and Configuration}{110}{subsubsection.6.4.1}%
 \contentsline {subsubsection}{\numberline {6.4.2}The Physics-Informed Custom Loss Function}{111}{subsubsection.6.4.2}%
 \contentsline {subsubsection}{\numberline {6.4.3}Pareto Front of Discovered Models}{112}{subsubsection.6.4.3}%
-\contentsline {subsection}{\numberline {6.5}Systematic Exploration of the Power-Law Model}{117}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.5}Systematic Exploration of the Power-Law Model}{114}{subsection.6.5}%
 \contentsline {subsection}{\numberline {6.6}Candidate Selection}{123}{subsection.6.6}%
 \contentsline {subsection}{\numberline {6.7}Simultaneous Fitting Strategy}{125}{subsection.6.7}%
 \contentsline {subsubsection}{\numberline {6.7.1}Simultaneous Fit with Full Covariance Matrix}{126}{subsubsection.6.7.1}%

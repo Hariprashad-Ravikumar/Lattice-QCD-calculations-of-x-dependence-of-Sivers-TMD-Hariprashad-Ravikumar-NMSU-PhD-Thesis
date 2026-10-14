@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.17)  14 OCT 2026 11:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.17)  14 OCT 2026 11:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2210,9 +2210,6 @@ f)
 Package pdftex.def Info: PySR_outputs/03_Exponential_b_StraightLine_Test.pdf  u
 sed on input line 175.
 (pdftex.def)             Requested size: 501.19104pt x 378.21346pt.
- [114 <./PySR_outputs/01_A2B_PySR_Benchmark_Fits.pdf>] [115 <./PySR_outputs/02_
-Gaussian_StraightLine_Test.pdf>] [116 <./PySR_outputs/03_Exponential_b_Straight
-Line_Test.pdf>]
 Package epstopdf Info: Source file: <plots/fit_exploration_mathematica/fit_list
 _gaussian_c_d_etas.eps>
 (epstopdf)                    date: 2026-09-11 12:36:24
@@ -2227,7 +2224,7 @@ athematica/fit_list_gaussian_c_d_etas.eps>
 (epstopdf)             \includegraphics on input line 195.
 Package epstopdf Info: Output file is already uptodate.
 <plots/fit_exploration_mathematica/fit_list_gaussian_c_d_etas-eps-converted-to.
-pdf, id=8937, 916.42375pt x 607.26875pt>
+pdf, id=8622, 916.42375pt x 607.26875pt>
 File: plots/fit_exploration_mathematica/fit_list_gaussian_c_d_etas-eps-converte
 d-to.pdf Graphic file (type pdf)
 <use plots/fit_exploration_mathematica/fit_list_gaussian_c_d_etas-eps-converted
@@ -2235,7 +2232,10 @@ d-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: plots/fit_exploration_mathematica/fit_list_gaussian_c_
 d_etas-eps-converted-to.pdf  used on input line 195.
 (pdftex.def)             Requested size: 527.57121pt x 349.61234pt.
-<PowerLaw_etaAsymptotic/A2BfitFT_eta_Asymptotic_P1.pdf, id=8941, 1041.8925pt x 
+ [114] [115 <./PySR_outputs/01_A2B_PySR_Benchmark_Fits.pdf>]
+[116 <./PySR_outputs/02_Gaussian_StraightLine_Test.pdf>] [117 <./PySR_outputs/0
+3_Exponential_b_StraightLine_Test.pdf>]
+<PowerLaw_etaAsymptotic/A2BfitFT_eta_Asymptotic_P1.pdf, id=8945, 1041.8925pt x 
 1136.245pt>
 File: PowerLaw_etaAsymptotic/A2BfitFT_eta_Asymptotic_P1.pdf Graphic file (type 
 pdf)
@@ -2247,8 +2247,8 @@ Package pdftex.def Info: PowerLaw_etaAsymptotic/A2BfitFT_eta_Asymptotic_P1.pdf
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[117] [118 <./plots/fit_exploration_mathematica/fit_list_gaussian_c_d_etas-eps-
-converted-to.pdf>]
+[118 <./plots/fit_exploration_mathematica/fit_list_gaussian_c_d_etas-eps-conver
+ted-to.pdf>]
 <PowerLaw_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_P1.pdf, id=8971, 1050.926
 25pt x 842.14626pt>
 File: PowerLaw_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_P1.pdf Graphic file 
@@ -3096,7 +3096,7 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Here is how much of TeX's memory you used:
  45646 strings out of 476025
  930450 string characters out of 5790016
- 2431982 words of memory out of 5000000
+ 2432049 words of memory out of 5000000
  64288 multiletter control sequences out of 15000+600000
  529785 words of font info for 113 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -3134,7 +3134,7 @@ m/cmtt8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/lat
 xfont/line10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfont
 s/symbols/msam10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ams
 fonts/symbols/msbm10.pfb>
-Output written on main.pdf (203 pages, 35743532 bytes).
+Output written on main.pdf (203 pages, 35761307 bytes).
 PDF statistics:
  15130 PDF objects out of 15390 (max. 8388607)
  5723 compressed objects within 58 object streams
