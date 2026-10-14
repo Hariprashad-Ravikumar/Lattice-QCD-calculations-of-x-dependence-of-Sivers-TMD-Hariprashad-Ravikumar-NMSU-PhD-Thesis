@@ -214,13 +214,15 @@ Letting the longitudinal coefficient depend on $\eta$, as $c(\eta) = c\,(1 - k_1
     \label{tab:rejection_etadep_c}
 \end{table}
 
+\pagebreak
+
 These tests use $\tAmp_{2B}^{\text{Re}}$ alone. In Section~\ref{sec:rejection_exponential_longitudinal} we apply exponential and Gaussian longitudinal profiles, with exponential and power-law transverse envelopes, to all three amplitudes and discuss there why these factorized models, including the ones with exponential decay in $b$, fail for $\tAmp_{2B}^{\text{Im}}$ and $\tAmp_{12B}^{\text{Re}}$.
 
 
 \subsection{Systematic Exploration of the Power-Law Model}
 \label{sec:systematic_exploration}
 
-Guided by the \texttt{PySR} result, we now determine the $\eta$-dependence of the power-law model. We fit $\tAmp_{2B}^{\text{Re}}$ at momentum $P_L=-1$, with $6\leq\eta\leq10$ and $|\vect{b}|\geq3a$. For comparison, we first refit a family of Gaussian ans\"atze with $\eta$-dependent widths (Table~\ref{tab:rejection_fit_list_gaussian_c_d_etas}); for each model, the figure lists the model expression, the fit parameters, their Jackknife-averaged values, and the resulting $\chi^2/\mathrm{DoF}$.
+Guided by the \texttt{PySR} result, we now explore the $\eta$-dependence of the power-law model in more detail. We fit $\tAmp_{2B}^{\text{Re}}$ at momentum $P_L=-1$, with $6\leq\eta\leq10$ and $|\vect{b}|\geq3a$. For comparison, we first refit a family of Gaussian ans\"atze with $\eta$-dependent widths (Table~\ref{tab:rejection_fit_list_gaussian_c_d_etas}); for each model, the figure lists the model expression, the fit parameters, their Jackknife-averaged values, and the resulting $\chi^2/\mathrm{DoF}$.
 \begin{table}[htbp]
     \centering
     \includegraphics[width=1\linewidth]{plots/fit_exploration_mathematica/fit_list_gaussian_c_d_etas.eps}
@@ -228,8 +230,10 @@ Guided by the \texttt{PySR} result, we now determine the $\eta$-dependence of th
     \label{tab:rejection_fit_list_gaussian_c_d_etas}
 \end{table}
 
-The coefficient $c$ of $(P\cdot b)^2$ must be positive and stable for the Fourier transform to $x$ to exist. In Table~\ref{tab:rejection_fit_list_gaussian_c_d_etas}, most of the Gaussian fits give an unstable or negative $c$ and a higher $\chi^2/\mathrm{DoF}$, which confirms the conclusion of Section~\ref{sec:gaussian_transformation}. The power-law ans\"atze in Table~\ref{tab:powerlaw_eta_asymptotic} reduce $\chi^2/\mathrm{DoF}$ to $\approx1.5$. We added two more columns for AIC (Akaike information criterion) and Fourier transform of the ans\"atze. Making $d$ depend on $\eta$ worsens the fit, while making $c$ depend on $\eta$ improves it. This raises a new ambiguity: several $\eta$-dependences give almost the same $\chi^2/\mathrm{DoF}$. For each power-law model, the figure lists the model expression, the fit parameters, their Jackknife-averaged values, $\chi^2/\mathrm{DoF}$, AIC, and the resulting Fourier transform in $x$.
-\begin{table}[h!]
+\pagebreak
+
+The coefficient $c$ of $(P\cdot b)^2$ must be positive and stable for the Fourier transform to $x$ to exist. In Table~\ref{tab:rejection_fit_list_gaussian_c_d_etas}, most of the Gaussian fits give an unstable or negative $c$ and a higher $\chi^2/\mathrm{DoF}$, which confirms the conclusion of Section~\ref{sec:gaussian_transformation}. By contrast, the power-law ans\"atze in Table~\ref{tab:powerlaw_eta_asymptotic} reduce $\chi^2/\mathrm{DoF}$ to $\approx1.5$. We added two more columns for AIC (Akaike information criterion) and Fourier transform of the ans\"atze. Making $d$ depend on $\eta$ worsens the fit, while making $c$ depend on $\eta$ improves it. This raises a new ambiguity: several $\eta$-dependences give almost the same $\chi^2/\mathrm{DoF}$. For each power-law model, the figure lists the model expression, the fit parameters, their Jackknife-averaged values, $\chi^2/\mathrm{DoF}$, AIC, and the resulting Fourier transform in $x$.
+\begin{table}[htbp]
     \centering
     \includegraphics[width=1\linewidth]{PowerLaw_etaAsymptotic/A2BfitFT_eta_Asymptotic_P1.pdf}
     \caption{3D Jackknife fits of $\tAmp_{2B}^{\text{Re}}(b_L,b_T,\eta)$ to a family of power-law ans\"atze, all built on the common baseline $\tAmp_{2B}^{\text{Re}} = a\, e^{-f\eta}\, \left(1+(c+d)b^2_L+db^2_T\right)^{-j}$, in which the coefficient $c$ is either constant or one of several $\eta$-dependent forms, $c\to c(\eta)$.}
@@ -238,7 +242,7 @@ The coefficient $c$ of $(P\cdot b)^2$ must be positive and stable for the Fourie
 \pagebreak
 
 For completeness, we explored more $\eta$-dependent forms $c\to c(\eta)$, which yield wider Fourier transforms in $x$ space.
-\begin{table}[h!]
+\begin{table}[htbp]
     \centering
     \includegraphics[width=1\linewidth]{PowerLaw_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_P1.pdf}
     \caption{3D jackknife fits of $\tAmp_{2B}^{\text{Re}}(b_L,b_T,\eta)$ to a family of power-law ans\"atze, all built on the common baseline $\tAmp_{2B}^{\text{Re}} = a\, e^{-f\eta}\, \left(1+(c+d)b^2_L+db^2_T\right)^{-j}$, in which the coefficient $c$ takes further $\eta$-dependent forms, $c\to c(\eta)$, that yield wider Fourier transforms in $x$ space.}
