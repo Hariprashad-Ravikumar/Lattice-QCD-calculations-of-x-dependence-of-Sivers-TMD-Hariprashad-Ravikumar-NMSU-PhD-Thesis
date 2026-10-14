@@ -1,6 +1,6 @@
 \babel@toc {english}{}\relax 
-\contentsline {section}{LIST OF TABLES}{xv}{section*.2}%
-\contentsline {section}{LIST OF FIGURES}{xxv}{section*.3}%
+\contentsline {section}{LIST OF TABLES}{xvi}{section*.2}%
+\contentsline {section}{LIST OF FIGURES}{xxvi}{section*.3}%
 \contentsline {section}{\numberline {1}INTRODUCTION AND MOTIVATION}{1}{section.1}%
 \contentsline {subsection}{\numberline {1.1}From form factors to partons}{1}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Beyond one dimension}{2}{subsection.1.2}%
@@ -99,13 +99,13 @@
 \contentsline {section}{\numberline {7}EXTRAPOLATIONS TO THE PHYSICAL LIMIT}{157}{section.7}%
 \contentsline {subsection}{\numberline {7.1}Motivation for the $\hat {\zeta } \to \infty $ Extrapolation}{157}{subsection.7.1}%
 \contentsline {subsection}{\numberline {7.2}Extrapolation $\hat {\zeta } \to \infty $}{159}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Testing Factorization in $x$ and $|b_T|$ at the Physical Limit}{165}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.3}Testing Factorization in $x$ and $|b_T|$ at $\hat {\zeta } \to \infty $}{165}{subsection.7.3}%
 \contentsline {subsubsection}{\numberline {7.3.1}Quantifying the Distance from a Factorized Form}{165}{subsubsection.7.3.1}%
 \contentsline {subsubsection}{\numberline {7.3.2}Factorization Test for the Sivers Shift}{166}{subsubsection.7.3.2}%
 \contentsline {subsubsection}{\numberline {7.3.3}Factorization Test at the Amplitude Level}{171}{subsubsection.7.3.3}%
-\contentsline {section}{\numberline {8}CONCLUSION AND OUTLOOK}{178}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Summary}{178}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Main results}{179}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Outlook}{179}{subsection.8.3}%
-\contentsline {section}{\numberline {A}QLUA: Gamma $\Gamma (n)$}{181}{appendix.A}%
-\contentsline {section}{REFERENCES}{182}{section*.124}%
+\contentsline {section}{\numberline {8}CONCLUSION AND OUTLOOK}{177}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Summary}{177}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Main results}{178}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Outlook}{178}{subsection.8.3}%
+\contentsline {section}{\numberline {A}QLUA: Gamma $\Gamma (n)$}{180}{appendix.A}%
+\contentsline {section}{REFERENCES}{181}{section*.124}%
