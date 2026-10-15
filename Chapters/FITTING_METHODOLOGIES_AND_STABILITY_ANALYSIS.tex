@@ -44,12 +44,12 @@ However, fitting this simple Gaussian model to our lattice data yields $\alpha <
     \label{fig:gaussian_failure_A12B}
 \end{figure}
 
-This means the amplitude decays faster transversely than longitudinally, so the expression in $(P \cdot b, b^2)$ space is not integrable. Figures ~\ref{fig:gaussian_failure_A2B}-\ref{fig:gaussian_failure_A12B} also shows poor fit quality. A 2D Gaussian decay profile is too rigid to describe the non-local operator.
-
-This global fit in $(P \cdot b, b^2)$ includes quark-separation $\vect{b}$ from both short-distance ($|\vect{b}| \sim 1a$ or $2a$) medium-range ($|\vect{b}|\ge 3a$). The short-distance regime is governed by different physics, namely perturbative effects, including incipient short-distance divergences that require additional renormalization, compared with the medium-range non-perturbative TMD physics we aim to probe. A fit incorporating the short-distance behavior would need to account for this crossover in regime even in the absence of discretization artifacts. Before exploring further models that fit the lattice amplitudes, we account for the limitations of \textbf{discretized spacetime} and use only the dataset containing non-perturbative TMD physics. 
+This means the amplitude decays faster transversely than longitudinally, so the expression in $(P \cdot b, b^2)$ space is not integrable. Figures~\ref{fig:gaussian_failure_A2B}--\ref{fig:gaussian_failure_A12B} also show poor fit quality. A 2D Gaussian decay profile is too rigid to describe the non-local operator.
 
 \subsection{Discretization Effects and Short-Distance Data Exclusion}
 \label{sec:discretization_effects}
+
+The Gaussian fit of Section~\ref{sec:gaussian_transformation} includes quark separations $\vect{b}$ at short distance ($|\vect{b}| \sim 1a$ or $2a$) as well as in the medium range ($|\vect{b}|\ge 3a$). The short-distance regime is governed by different physics, namely perturbative effects, including incipient short-distance divergences that require additional renormalization, while we aim to probe the medium-range non-perturbative TMD physics. A fit that includes the short-distance data would have to account for this crossover between regimes even without discretization artifacts. Before exploring further models, we therefore account for the limitations of discretized spacetime and keep only the data that probe non-perturbative TMD physics.
 
 As discussed in Chapter \ref{sec:lattice_methodology}, Lattice QCD defines the theory on a discrete grid with a finite lattice spacing $a$. Observables evaluated at length scales comparable to $a$ contain discretization artifacts. At short quark-separation distances ($|\vect{b}| \sim 1a$ or $2a$), the continuous $O(4)$ rotational symmetry of Euclidean QCD breaks down to the discrete hypercubic group of the lattice. The step-wise Wilson lines connecting these closely spaced fields also introduce $\mathcal{O}(a)$ and $\mathcal{O}(a^2)$ finite-spacing errors \cite{Gattringer:2010zz, Lin:2014}. Fitting continuum models to these short-distance points would parameterize ultraviolet lattice artifacts rather than the nucleon's non-perturbative structure.
 
@@ -58,25 +58,19 @@ To separate our parameterizations from these short-distance effects, we apply a 
     |\vect{b}| = \sqrt{b_L^2 + b_T^2} \ge 3a \ .
 \end{equation}
 
-With the dataset restricted to $b \ge 3a$, the non-local operator spans enough lattice sites for the step-wise gauge link to approach a continuous trajectory. The fits and subsequent Fourier transforms then depend on long-range dynamics rather than the ultraviolet regulator. 
+With the dataset restricted to $|\vect{b}| \ge 3a$, the non-local operator spans enough lattice sites for the step-wise gauge link to approach a continuous trajectory. The fits and subsequent Fourier transforms then depend on long-range dynamics rather than the ultraviolet regulator. 
 
-From the simulation data itself, we note that the short-distance data ($|\vect{b}| < 3a$) curve in the opposite direction compared to the long-distance data ($|\vect{b}| \ge 3a$) for $\tAmp_{2B}^{\text{Re}}$ and $\tAmp_{12B}^{\text{Re}}$ amplitudes, as shown in Figures \ref{short-dis1} and \ref{short-dis2}. 
+The lattice data themselves show the difference between the two regions (Figure~\ref{short-dis1}). At fixed $b^2$, the short-distance amplitude rises with $|P\cdot b|$, by about $14\%$ for $b^2/a^2=5$, while the long-distance amplitude stays flat within uncertainties for $b^2/a^2=20$ and $45$.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{plots/short_distance/A2B_Re_b_lessthan3_and_ge3.pdf}
-    \caption{The $\tAmp_{2B}^{\text{Re}}$ amplitude at fixed momentum ($P=-1$) and fixed $\eta$ (here $\eta=8$). The short-distance data ($|\vect{b}| < 3a$) curve in the opposite direction to the long-distance data ($|\vect{b}| \ge 3a$).}
+    \caption{The $\tAmp_{2B}^{\text{Re}}$ amplitude at fixed momentum ($P_L=-1$) and fixed staple extent $\eta|\vect{v}|/a=9$, for short-distance ($|\vect{b}|<3a$, left) and long-distance ($|\vect{b}|\ge 3a$, right) data. Points with the same $b^2$ are connected.}
     \label{short-dis1}
 \end{figure}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\linewidth]{plots/short_distance/A12B_Re_b_lessthan3_and_ge3.pdf}
-    \caption{The $\tAmp_{12B}^{\text{Re}}$ amplitude at fixed momentum ($P=-1$) and fixed $\eta$ (here $\eta=8$). The short-distance data ($|\vect{b}| < 3a$) curve in the opposite direction to the long-distance data ($|\vect{b}| \ge 3a$).}
-    \label{short-dis2}
-\end{figure}
 
-All later stability analyses, global fits, and extracted phenomenological parameters in this chapter use only this artifact-suppressed ($|\vect{b}| \ge 3a$) dataset. 
+The fits in this chapter are global fits over the full $(b_L, b_T, \eta)$ grid, equivalently over $(P\cdot b, b^2, \eta)$. They do not model the amplitude at any single value of $b^2$, so what matters is the behavior of the data set as a whole rather than the trend of each individual $b^2$ group. Isolated groups at $|\vect{b}| \ge 3a$ can follow the short-distance trend within their uncertainties, as $b^2/a^2 = 20$ does at $\eta|\vect{v}|/a = 6$, $7$ and $8$. The fit, however, is constrained by all the data at $|\vect{b}| \ge 3a$ together. All later stability analyses, global fits, and extracted phenomenological parameters in this chapter therefore use only the $|\vect{b}| \ge 3a$ dataset. 
 
 
 \subsection{Global fit in \texorpdfstring{$(b_L,b_T,\eta)$}{TEXT} (equivalently in \texorpdfstring{$(P\cdot b,b^2,\eta)$}{TEXT})}
