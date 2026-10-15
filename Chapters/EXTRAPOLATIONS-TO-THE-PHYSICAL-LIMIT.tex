@@ -3,7 +3,7 @@
 
 Combining the results obtained at each momentum in Section~\ref{sec:simultaneous_fit_strategy}, we extrapolate them to $\hat{\zeta}\to\infty$, which for the Sivers shift is the physical limit. Section~\ref{sec:zetahat_extrapolation_motivation} shows that the amplitudes, the TMD combinations, and the Sivers shift change systematically with $1/\hat\zeta$ across the four simulated momenta. Section~\ref{sec:extrap_fit_param_level} extrapolates the fit parameters to $1/\hat\zeta\to0$ using $P_L=-2,-3,-4$, reconstructs the amplitudes and the Sivers shift in this limit, and lists the numerical Fourier-transform integrals over $x$ at $|b_T|=3a$. Section~\ref{sec:factorization_xbt} tests factorization, first in $(P\cdot b)$ and $b^2$ on the lattice data at finite momentum, and then in $x$ and $|b_T|$ for the extrapolated Sivers shift and amplitudes.
 
-\subsection{Motivation for the \texorpdfstring{$\hat{\zeta} \to \infty$}{TEXT} Extrapolation}
+\subsection{Motivation for the \texorpdfstring{$\hat{\zeta} \to \infty$}{zeta-hat to infinity} Extrapolation}
 \label{sec:zetahat_extrapolation_motivation}
 
 Chapter~\ref{sec:fitting_methodologies} established stable global simultaneous fits to the invariant amplitudes $\tAmp_{2B}$ and $\tAmp_{12B}$ at each of our four simulated nucleon momenta, corresponding to the finite Collins-Soper parameters $\hat\zeta = 0.090772$, $0.294367$, $0.539684$, $0.785756$ for $P_L=-1,-2,-3,-4$ respectively (Table~\ref{tab:zeta_directions}). As discussed in Section~\ref{sec:collins_soper_parameter}, the fully quantitative predictions for, or a comparison with, 
@@ -40,7 +40,7 @@ the ratios of TMDs should become independent of $\hat\zeta$ as $\hat\zeta\righta
 
 \pagebreak
 
-\subsection{Extrapolation \texorpdfstring{$\hat{\zeta} \to \infty$}{TEXT}}
+\subsection{Extrapolation \texorpdfstring{$\hat{\zeta} \to \infty$}{zeta-hat to infinity}}
 \label{sec:extrap_fit_param_level}
 
 The lowest simulated momentum, $P_L=-1$ ($\hat\zeta = 0.090772$), lies at $1/\hat\zeta = 11.02$, far from the other three momenta ($1/\hat\zeta = 3.40$, $1.85$, $1.27$) and from the asymptotic region $1/\hat\zeta \to 0$ that the extrapolation targets. A single point that far out would dominate the two-parameter fits introduced below and bias the extrapolated intercept rather than constrain it. We therefore exclude $P_L=-1$ and extrapolate using only the three higher momenta $P_L = -2,-3,-4$.
@@ -131,14 +131,14 @@ Figure~\ref{fig:extrapolated_amplitude_3d_amps} extends this reconstruction to t
     \label{fig:momenta_vs_extrapolated_sivers}
 \end{figure}
 
-\subsection{Testing Factorization in \texorpdfstring{$x$}{TEXT} and \texorpdfstring{$|b_T|$}{TEXT} at \texorpdfstring{$\hat{\zeta} \to \infty$}{TEXT}}
+\subsection{Testing Factorization in \texorpdfstring{$x$}{x} and \texorpdfstring{$|b_T|$}{|bT|} at \texorpdfstring{$\hat{\zeta} \to \infty$}{zeta-hat to infinity}}
 \label{sec:factorization_xbt}
 
 We test factorization at two levels. First, we check whether the lattice amplitudes factorize in $(P\cdot b)$ and $b^2$ at finite momentum. We then ask whether the extrapolated distributions factorize in the momentum fraction $x$ and the transverse separation $|b_T|$.
 
 The selected amplitude model and the other ans\"atze of Chapter~\ref{sec:fitting_methodologies} are not products of separate functions of $(P\cdot b)$ and $b^2$. The Gaussian model of Section~\ref{sec:gaussian_transformation}, which is such a product, fails; the \texttt{PySR} search of Section~\ref{sec:pysr_methodology} found no such product; and the separable models of Sections~\ref{sec:systematic_exploration} and~\ref{sec:rejection_exponential_longitudinal} fail as well. Section~\ref{sec:ratio_test} checks the question directly on the lattice data at finite momentum.
 
-\subsubsection{Ratio Test in \texorpdfstring{$(P\cdot b, b^2)$}{TEXT} on the Lattice Data}
+\subsubsection{Ratio Test in \texorpdfstring{$(P\cdot b, b^2)$}{(P.b, b2)} on the Lattice Data}
 \label{sec:ratio_test}
 
 We first check directly on the lattice data whether an amplitude can be written as a product of longitudinal and transverse profiles, $\tAmp(P\cdot b,b^2) = F(P\cdot b)\,G(b^2)$. If it can, any ratio taken at a common $b^2$ between two values of $P\cdot b$ is a constant in $b^2$, and any ratio taken at a common $P\cdot b$ between two values of $b^2$ does not depend on $P\cdot b$. We form
@@ -202,7 +202,7 @@ From Figure~\ref{fig:Factorization_ratios_Pb034_eta8_PL-1}, in certain region $P
 
 The ratio test is thus only a qualitative check. Where the interpolated values rest on closely spaced data, the $P\cdot b = 0$ and $4$ rows are compatible with factorization, but the sampling is too sparse to settle the question. The separable fits of Section~\ref{sec:rejection_exponential_longitudinal} lead to the same conclusion: no separable form describes all three amplitudes.
 
-\subsubsection{Factorization in \texorpdfstring{$x$}{TEXT} and \texorpdfstring{$|b_T|$}{TEXT} at \texorpdfstring{$\hat{\zeta} \to \infty$}{TEXT}}
+\subsubsection{Factorization in \texorpdfstring{$x$}{x} and \texorpdfstring{$|b_T|$}{|bT|} at \texorpdfstring{$\hat{\zeta} \to \infty$}{zeta-hat to infinity}}
 \label{sec:factorization_xbt_form}
 
 

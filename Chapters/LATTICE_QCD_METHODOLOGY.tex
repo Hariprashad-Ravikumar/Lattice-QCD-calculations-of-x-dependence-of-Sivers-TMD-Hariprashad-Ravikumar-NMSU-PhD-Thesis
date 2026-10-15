@@ -279,8 +279,10 @@ where $\Gamma$ is any product of Dirac matrices, the three-point function is~\ci
 \end{equation}
 with spin projector $\Gamma^{\rm 3pt}$ and momentum transfer $\vect q=\vect p'-\vect p$. One factor $a^3$, from the sink projection, cancels against the two-point function in the ratio below; the other defines the momentum-projected operator $\mathcal O(\vect q)=a^3\sum_{\vect x_1}e^{i\vect q\cdot\vect x_1}\mathcal O(\vect x_1)$. Inserting complete sets of states before and after $\mathcal O$ and using the translation $\chi(\vect x,t)=e^{Ht}e^{-i\vect P\cdot\vect x}\chi(0)e^{i\vect P\cdot\vect x}e^{-Ht}$~\cite{Lin:2014},
 \begin{equation}
-    G(t,\tau;\vect p,\vect p')=\sum_{n,n'}\sum_{s,s'}\frac{e^{-E_{n'}(\vect p')(t-\tau)}\,e^{-E_n(\vect p)\tau}}{2E_{n'}(\vect p')\,2E_n(\vect p)}\;\Gamma^{\rm 3pt}_{\beta\alpha}\,
-    \langle\Omega|\chi_\alpha|N_{n'}(\vect p',s')\rangle\,\langle N_{n'}(\vect p',s')|\mathcal O(\vect q)|N_n(\vect p,s)\rangle\,\langle N_n(\vect p,s)|\bar\chi_\beta|\Omega\rangle \ .
+\begin{split}
+    G(t,\tau;\vect p,\vect p')={}&\sum_{n,n'}\sum_{s,s'}\frac{e^{-E_{n'}(\vect p')(t-\tau)}\,e^{-E_n(\vect p)\tau}}{2E_{n'}(\vect p')\,2E_n(\vect p)}\;\Gamma^{\rm 3pt}_{\beta\alpha}\\
+    &\times\langle\Omega|\chi_\alpha|N_{n'}(\vect p',s')\rangle\,\langle N_{n'}(\vect p',s')|\mathcal O(\vect q)|N_n(\vect p,s)\rangle\,\langle N_n(\vect p,s)|\bar\chi_\beta|\Omega\rangle \ .
+\end{split}
     \label{eq:c3pt_spectral}
 \end{equation}
 For $0\ll\tau\ll t$ the ground state dominates both sums~\cite{Lin:2014}. The matrix element is written as a spinor sandwich,
@@ -349,7 +351,7 @@ The connected contraction of Eq.~\eqref{eq:staple_3pt} uses the forward propagat
     C^{\rm 3pt}_{\Gamma}(z)=\Tr\Big[\Gamma\;\mathcal U^{\rm lat}\big[\mathcal C^{\rm lat}+z\big]\;S_{\rm fw}\big(z+\ell\big)\;\gamma_5\,S_{\rm bw}(z)^\dagger\,\gamma_5\Big] \ ,
     \label{eq:staple_contraction}
 \end{equation}
-where $S_{\rm fw}$ is the forward propagator from the source, $S_{\rm bw}$ the sequential propagator, and the trace runs over Dirac and color indices. In the lattice code used for this work, this contraction is implemented in Qlua as follows, with \texttt{gamma\{n=15\}} $=\Gamma(15)=\gamma_5$:
+where $S_{\rm fw}$ is the forward propagator from the source, $S_{\rm bw}$ the sequential propagator, and the trace runs over Dirac and color indices. In the lattice code used for this work, this contraction is implemented in Qlua as follows, with \texttt{gamma\char`\{n=15\char`\}} $=\Gamma(15)=\gamma_5$:
 \begin{lstlisting}[basicstyle=\ttfamily\footnotesize, frame=single, breaklines=true, caption={Contraction of the staple-link three-point function in Qlua.}, label={lst:qlua_contraction}]
 local stap_fw_shifts_bw = (staple * fw_p:shift(b_dir, "from_forward")
                            * gamma{n=15} * bw_p:adjoin() * gamma{n=15})
@@ -365,8 +367,10 @@ The forward propagator \texttt{fw\_p} is shifted along the separation direction 
 \subsubsection{Ratio and matrix element}
 Since source and sink momenta are equal, the matrix element is extracted from the plateau of the forward ratio of Eq.~\eqref{eq:ratio_forward}~\cite{MuschThesis2, Musch:2011er},
 \begin{equation}
-    R_{\Gamma,q}(\vect P;\mathcal C^{\rm lat})\equiv\mathrm{plateau}\left[\frac{C^{\rm 3pt}_{\Gamma,q}(\tau,\vect P;\mathcal C^{\rm lat})}{C^{\rm 2pt}(t_{\rm snk}-t_{\rm src},\vect P)}\right]
-    =\sum_{S,S'}\frac{\bar u(P,S)\,\Gamma^{\rm 3pt}\,u(P,S')}{2E_P\,\Tr\big[\Gamma^{+}\big(-i{\not\!P}+\mN\big)\big]}\,\big\langle N(P,S')\big|O^{\rm lat}\big|N(P,S)\big\rangle \ .
+\begin{split}
+    R_{\Gamma,q}(\vect P;\mathcal C^{\rm lat})&\equiv\mathrm{plateau}\left[\frac{C^{\rm 3pt}_{\Gamma,q}(\tau,\vect P;\mathcal C^{\rm lat})}{C^{\rm 2pt}(t_{\rm snk}-t_{\rm src},\vect P)}\right]\\
+    &=\sum_{S,S'}\frac{\bar u(P,S)\,\Gamma^{\rm 3pt}\,u(P,S')}{2E_P\,\Tr\big[\Gamma^{+}\big(-i{\not\!P}+\mN\big)\big]}\,\big\langle N(P,S')\big|O^{\rm lat}\big|N(P,S)\big\rangle \ .
+\end{split}
     \label{eq:staple_ratio}
 \end{equation}
 The ratios $R_{\Gamma(n)}$ for $\Gamma(1),\Gamma(2),\Gamma(4),\Gamma(8)=\gamma_1,\gamma_2,\gamma_3,\gamma_4$ are the input from which the invariant amplitudes are solved in Section~\ref{sec:solving_amplitudes}. Under the assumption stated in Section~\ref{sec:rapidity_soft}, the soft factor and the renormalization of the gauge link cancel in ratios of amplitudes taken at the same $b$, $P$ and staple geometry~\cite{Boussarie:2023izj,Yoon:2017qzo}; Ref.~\cite{Yoon:2017qzo} examined whether this multiplicative structure carries over to the lattice. The following chapters work with such ratios. Chapter~\ref{sec:tmd_framework} gives the Lorentz-invariant parametrization of $\langle N|O^{\rm lat}|N\rangle$ that turns the ratios $R_{\Gamma(n)}$ into invariant amplitudes.

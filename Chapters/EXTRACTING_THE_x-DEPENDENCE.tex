@@ -1,11 +1,11 @@
-\section{LATTICE DATA \texorpdfstring{$\&$}{TEXT} EXTRACTING THE \texorpdfstring{$x-$}{TEXT}DEPENDENCE OF SIVERS SHIFT}
+\section{LATTICE DATA \texorpdfstring{$\&$}{\&} EXTRACTING THE \texorpdfstring{$x-$}{x-}DEPENDENCE OF SIVERS SHIFT}
 \label{sec:x_dependence}
 
 This Chapter connects the lattice correlators to the $x$-dependent Sivers shift. Section~\ref{sec:sivers_shift_x} writes the Sivers shift as a ratio of Fourier transforms over $b\cdot P$ of the amplitudes $\tAmp_{12B}$ and $\tAmp_{2B}$. Section~\ref{sec:collins_soper_parameter} explains how extrapolating the Collins-Soper parameter $\hat{\zeta} \to \infty$ is performed. Sections~\ref{sec:kinematic_constraints} and~\ref{sec:lattice_parameter_space} fix the staple direction $v$ for each nucleon momentum so that we scan the whole $b\cdot P$ range, and describe how the correlator at the off-axis target $\eta \vect{v}/a$ is obtained by path averaging and quadratic interpolation. Section~\ref{sec:b_separation_paths} describes the quark separation vectors $\vect{b}$, and the gauge link paths that correspond to them.
 
 Section~\ref{sec:solving_amplitudes} projects the correlator parametrization onto the lattice kinematics and solves for the real and imaginary amplitudes from the symmetric and antisymmetric combinations of the longitudinal $b$ data. Section~\ref{sec:effective_amplitudes} combines them into $\tAmp_{2B}$ and $\tAmp_{12B}$, and Section~\ref{sec:lorentz_mapping} maps these from $(b_L,b_T)$ to $(P\cdot b,\bvec^2)$. Section~\ref{sec:numerical_amplitudes} checks the parity of the extracted amplitudes, shows them at the four simulated momenta, and discards $\tAmp_{12B}^{\text{Im}}$, which is statistically compatible with zero.
 
-\subsection{The Sivers Shift as a Function of Momentum Fraction $x$}
+\subsection{The Sivers Shift as a Function of Momentum Fraction \texorpdfstring{$x$}{x}}
 \label{sec:sivers_shift_x}
 To connect our lattice observables to the physical, $x$-dependent Transverse Momentum Dependent Parton Distribution Functions (TMDs), we must isolate the relevant amplitudes from the correlation function. Focusing on the leading-twist unpolarized quark distribution, the correlator is parameterized by the Lorentz-invariant amplitudes $\tAmp_{2B}$ and $\tAmp_{12B}$, which we construct from the primitive correlator amplitudes in Section \ref{sec:effective_amplitudes}.
 Our primary goal is to extract the generalized Sivers shift, $\langle \vect{k}_y \rangle_{TU}$, as a continuous function of the longitudinal momentum fraction $x = k^+ / P^+$. The Sivers shift is defined phenomenologically as the ratio of the first transverse momentum moment of the Sivers function to the unpolarized distribution as discussed in Section \ref{sec:sivers_shift_amplitudes}. 
@@ -34,7 +34,7 @@ for both unpolarized and Sivers TMD amplitudes.
 Next, we extract these parity components from the discrete lattice data; Sections~\ref{sec:b_separation_paths} and~\ref{sec:solving_amplitudes} describe how we build correlation functions to separate them.
 
 
-\subsection{The Collins-Soper Parameter (\texorpdfstring{$\hat{\zeta}$}{TEXT})}
+\subsection{The Collins-Soper Parameter (\texorpdfstring{$\hat{\zeta}$}{zeta-hat})}
 \label{sec:collins_soper_parameter}
 We defined the Collins-Soper parameter $\hat{\zeta}$ in the previous Chapter. \ref{sec:tmd_framework} (Eq.~\eqref{eq-zeta}):
 \begin{equation}
@@ -44,7 +44,7 @@ We defined the Collins-Soper parameter $\hat{\zeta}$ in the previous Chapter. \r
 
 On the lattice, the staple direction $v$ must be space-like ($v^2 < 0$), so the physical TMD limit is recovered only by extrapolating $\hat{\zeta} \to \infty$. In practice, since $v$ is a purely spatial vector on the lattice ($v_0 = 0$), increasing $\hat{\zeta}$ requires simulating the nucleon at progressively higher spatial momenta $\vect{P}$. Tracking the evolution of the Sivers shift across multiple $\hat{\zeta}$ values is therefore necessary for phenomenological predictions.
 
-\subsection{Kinematic Constraints to scan full \texorpdfstring{$b\cdot P$}{TEXT}}
+\subsection{Kinematic Constraints to scan full \texorpdfstring{$b\cdot P$}{b.P}}
 \label{sec:kinematic_constraints}
 We now move to the frame in which the lattice calculation is performed. To perform the Fourier transform over $b \cdot P$, we require a lattice geometry with both non-zero $b \cdot P$ and zero $b \cdot P$. However, the Lorentz-invariant arguments of the amplitudes are not independent. The phenomenological frame ($b^+=0, \vprp{P}=0$) enforces the constraint of Eq.~\eqref{eq-lindeprel}. Expanding the dot products in the case where the momentum is directed along the 1-axis ($P = (E, P_1, 0, 0)$), we find:
 \begin{align}
@@ -52,8 +52,12 @@ We now move to the frame in which the lattice calculation is performed. To perfo
 \end{align}
 To satisfy this equation over a continuous range of $b \cdot P$ without coupling the transverse separation $\vec{b}_T$ directly to the longitudinal staple geometry, we orient the transverse separation vectors orthogonally. By choosing $\vec{v}_{T}=(0,v_{3})$ and $\vec{b}_{T}=(b_{2},0)$, the right-hand side identically vanishes ($\vec{v}_{T}\cdot\vec{b}_{T} = 0$). This is not the only choice, but it is convenient for a lattice calculation because both $b$ and $v$ can remain in 2-dimensional lattice planes. In general, $b$ and $v$ may have to point in arbitrary directions in three-dimensional space.
 
-\subsubsection{Explicit Calculation for Hadron Momentum \texorpdfstring{$P_1=-1$}{TEXT}}
-Setting the right-hand side of Eq. \eqref{constraints} to zero implies that the bracketed term $\left[\frac{P_{1}}{m_{N}}\left(\hat{\zeta}-\sqrt{\hat{\zeta}^2+1}\right)+\hat{\zeta}\frac{m_{N}}{P_{1}}\right]$ must vanish. This fixes the required Collins-Soper parameter, up to a sign, for a given lattice momentum. Using the lattice ensemble parameters from our lattice size of $\{\hat{L}^3\times\hat{T}\}=\{32^3\times96\}$ and lattice unit of $a=0.11403\text{ fm}$, the nucleon mass and the lowest momentum mode are:
+\subsubsection{Explicit Calculation for Hadron Momentum \texorpdfstring{$P_1=-1$}{P1=-1}}
+Setting the right-hand side of Eq. \eqref{constraints} to zero implies that the bracketed term
+\begin{equation*}
+\left[\frac{P_{1}}{m_{N}}\left(\hat{\zeta}-\sqrt{\hat{\zeta}^2+1}\right)+\hat{\zeta}\frac{m_{N}}{P_{1}}\right]
+\end{equation*}
+must vanish. This fixes the required Collins-Soper parameter, up to a sign, for a given lattice momentum. Using the lattice ensemble parameters from our lattice size of $\{\hat{L}^3\times\hat{T}\}=\{32^3\times96\}$ and lattice unit of $a=0.11403\text{ fm}$, the nucleon mass and the lowest momentum mode are:
 \begin{align}
     \mN &= \frac{0.6228(28)}{0.11403\text{ fm}} =  \frac{0.6228(28)\times 197.32698 \text{ MeV}}{0.11403} = 1077.8(48)\text{ MeV} \ , \\
     P_{1}&=-\frac{2\pi}{L}=-\frac{2\pi}{32\times 0.11403\text{ fm}}=-339.8\text{ MeV} \ .
@@ -127,7 +131,7 @@ Section~\ref{sec:offaxis_v} identifies the integer lattice sites that bound each
 
 \pagebreak
 
-\subsubsection{Off-Axis \texorpdfstring{$\vect{v}$}{TEXT} and Spatial Interpolation}
+\subsubsection{Off-Axis \texorpdfstring{$\vect{v}$}{v} and Spatial Interpolation}
 \label{sec:offaxis_v}
 
 To evaluate the correlation function as a function of the staple extent, we scale the direction vector $\vect{v}$ by an increment $\eta$, and $\vect{v}$ is a unit vector. The physical length of the staple is thus governed by the coordinate $\eta \vect{v}/a$. Because $\vect{v}$ points in a continuous, off-axis direction, scaling it by integer values of $\eta$ generally yields target coordinates that fall somewhere between the discrete Cartesian lattice sites. 
@@ -228,7 +232,7 @@ By calculating the observable at three or more bounding lattice sites, we genera
 
 The core Mathematica logic executed inside the data analysis pipeline to perform this quadratic interpolation is shown in the snippet below:
 
-\begin{lstlisting}[language=Mathematica, basicstyle=\ttfamily\footnotesize, frame=single, numbers=left, breaklines=true, breakatwhitespace=true, caption={Core interpolation logic for evaluating the constrained correlator.}, label={lst:interpolation}]
+\begin{lstlisting}[language=Mathematica, basicstyle=\ttfamily\footnotesize, keywordstyle=\mdseries, frame=single, numbers=left, breaklines=true, breakatwhitespace=true, caption={Core interpolation logic for evaluating the constrained correlator.}, label={lst:interpolation}]
 (* Pair fractional deviation (x) with path-averaged data (y) *)
 plotforinterpolation = Transpose[{v1dataforInterpolation, 
                                   dataforInterpolation}];
@@ -252,7 +256,7 @@ A representative example of this interpolation procedure is shown in Figure \ref
 
 \pagebreak
 
-\subsection{Quark Separation Vectors (\texorpdfstring{$\vect{b}$}{TEXT}) and Amplitude Parity}
+\subsection{Quark Separation Vectors (\texorpdfstring{$\vect{b}$}{b}) and Amplitude Parity}
 \label{sec:b_separation_paths}
 
 In addition to the staple vector $\vect{v}$, the correlation function depends on the spatial separation $\vect{b}$ between the initial and final quark fields. Recall that the real and imaginary parts of the invariant amplitudes ($\tAmp_{iB}^{\text{Re}}$ and $\tAmp_{iB}^{\text{Im}}$) are even and odd functions of the invariant dot product $b \cdot P$, respectively. 
@@ -278,7 +282,7 @@ Because the nucleon momentum in our lattice setup is fixed along the $\hat{x_{1}
 
 Section~\ref{sec:b_gauge_links} lists the gauge link paths used to reach each $\vect{b}$, and Section~\ref{sec:b_path_averaging} averages over degenerate paths.
 
-\subsubsection{Gauge Link Construction for \texorpdfstring{$\vect{b}$}{TEXT}}
+\subsubsection{Gauge Link Construction for \texorpdfstring{$\vect{b}$}{b}}
 \label{sec:b_gauge_links}
 Constructing the direct Wilson line connecting the quark fields at $0$ and $\vect{b}$ requires generating step-wise paths across the lattice. We categorize these paths into purely transverse separations ($b_1 = 0$) and off-axis separations with a longitudinal component ($b_1 \neq 0$). For purely transverse separations, where $b \cdot P = 0$, the gauge links lie entirely within the transverse plane. Table \ref{tab:b_table_transverse} lists the link sequences used to reach these target coordinates. An empty bracket $\{\}$ denotes the local origin, while arrays such as $\{2,2\}$ indicate a sequence of two consecutive links in the $\hat{x_{2}}$-direction.
 
@@ -306,7 +310,7 @@ To access finite $b \cdot P$, we construct off-axis paths with simultaneous step
 
 \pagebreak
 
-\subsubsection{Symmetry Improving Operation (Path Averaging) for \texorpdfstring{$\vect{b}$}{TEXT}}
+\subsubsection{Symmetry Improving Operation (Path Averaging) for \texorpdfstring{$\vect{b}$}{b}}
 \label{sec:b_path_averaging}
 
 Several quark separation vectors $\vect{b}$ have the same path degeneracy as the staple direction vector $\vect{v}$ (Section~\ref{sec:spatial_interpolation}). We treat it the same way: we average the correlation function over all equivalent step-wise paths that share the same origin and endpoint, as illustrated for a single coordinate in Figure \ref{fig:b_path_example}. 
@@ -327,7 +331,7 @@ Applying this symmetry-improving operation (path-averaging) strategy across the 
 \end{figure}
 From this path-averaged dataset, we obtain the parity-separated amplitudes used in the final Fourier transform.
 
-\subsection{Solving for Real and Imaginary Amplitudes \texorpdfstring{$\tAmp_{iB}^{\text{Re}}$ and $\tAmp_{iB}^{\text{Im}}$}{TEXT} from correlator \texorpdfstring{$\widetilde \Phi^{[\gamma^\mu]}_{\unsub}$}{TEXT}}
+\subsection{Solving for Real and Imaginary Amplitudes \texorpdfstring{$\tAmp_{iB}^{\text{Re}}$ and $\tAmp_{iB}^{\text{Im}}$}{Re AiB and Im AiB} from correlator \texorpdfstring{$\widetilde \Phi^{[\gamma^\mu]}_{\unsub}$}{Phi-tilde}}
 \label{sec:solving_amplitudes}
 
 To extract the physical Sivers shift from the lattice, we must isolate the specific invariant amplitudes $\tAmp_{2B}$ and $\tAmp_{12B}$ from the raw correlator data. We start from the parametrization of the unsubtracted correlator in Eq.~\eqref{eq-phitildedecomp}~\cite{Musch:2011er}. While this parametrization describes a continuous gauge link extending to infinity, we adopt an equivalent representation for lattice calculations in which the structures depend explicitly on the finite staple extent $\eta$. This form remains well defined even in the $v \cdot P = 0$ limit. We obtain it by making the substitution $v \rightarrow \eta v$ and extracting the scaling factors $(v \tcdot P)^{-n}$ as discussed in detail in Chapter \ref{sec:tmd_framework}:
@@ -605,7 +609,7 @@ Applying the same scaling factors to the imaginary counterparts provides the com
     \Aboxed{\tAmp^{\text{Im}}_{12}=&\frac{-1}{2\mN  \bvec^2}\left[\text{Im}\{ R_{\Gamma(1)}\}^{[b^{1}\text{-odd}]}+\frac{v^3}{v^1}\text{Im}\{ R_{\Gamma(4)}\}^{[b^{1}\text{-odd}]}\right]}\\
      \Aboxed{\tBmp^{\text{Im}}_8=&\frac{E_N|P^1|}{ 2\mN^3 \bvec^2  }\left[\text{Re}\{ R_{\Gamma(8)}\}^{[b^{1}\text{-odd}]}-\frac{|\vec{P}^1|v^3}{E_N v^1}\text{Im}\{ R_{\Gamma(4)}\}^{[b^{1}\text{-odd}]}- 2\mN  \frac{|\vec{P}^1|}{E_N} \bvec^2  \tAmp^{\text{Im}}_{12}\right]}
 \end{align}
-\subsection{Constructing the unpolarized \texorpdfstring{$\tAmp_{2B}$}{TEXT} and Sivers \texorpdfstring{$\tAmp_{12B}$}{TEXT} Amplitudes}
+\subsection{Constructing the unpolarized \texorpdfstring{$\tAmp_{2B}$}{A2B} and Sivers \texorpdfstring{$\tAmp_{12B}$}{A12B} Amplitudes}
 \label{sec:effective_amplitudes}
 
 With the invariant amplitudes isolated by parity projection, we now combine them into the amplitudes $\tAmp_{2B}$ and $\tAmp_{12B}$ of Eq.~\eqref{eq-ABamps_sivers}, with $R(\zetahat^2)$ from Eq.~\eqref{eq-lindeprel}. 
@@ -701,7 +705,7 @@ However, the statistical quality of the extracted signals differs between amplit
 
 Sections~\ref{sec:amp_profiles_P1}--\ref{sec:amp_profiles_P4} show the amplitudes at $P_L=-1,-2,-3,-4$.
 
-\subsubsection{Amplitude Profiles at \texorpdfstring{$\hat{\zeta}=0.090772$ ($P_L = -1$)}{TEXT}}
+\subsubsection{Amplitude Profiles at \texorpdfstring{$\hat{\zeta}=0.090772$ ($P_L = -1$)}{zeta-hat=0.090772 (PL = -1)}}
 \label{sec:amp_profiles_P1}
 \newcommand{\PLval}{-1}
 Figures \ref{fig:A2B_amplitudes_P1} through \ref{fig:combined_eta8_P1} show the extracted amplitudes at this momentum, first in the discrete $(b_L/a,b_T/a,\eta|\vect{v}|/a)$ lattice grid and then mapped into the Lorentz-invariant $(P\cdot b,b^2)$ variable space of Section \ref{sec:lorentz_mapping}.
@@ -715,7 +719,7 @@ Figures \ref{fig:A2B_amplitudes_P1} through \ref{fig:combined_eta8_P1} show the 
         \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ImA2B_PL\PLval_3D.pdf} \\
         \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ImA2B_Pb_bsq_PL\PLval_3D.pdf} \\
     \end{tabular}
-    \caption{Real (top 2 rows) and imaginary (bottom 2 rows) parts of the $\tAmp_{2B}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The first row of each 2-row block displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the second row of each 2-row block displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space.}
+    \caption{Real (top 2 rows) and imaginary (bottom 2 rows) parts of the $\tAmp_{2B}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The first row of each 2-row block displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)$ space, while the second row of each 2-row block displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)$ space.}
     \label{fig:A2B_amplitudes_P1}
 \end{figure}
 
@@ -729,7 +733,7 @@ Figures \ref{fig:A2B_amplitudes_P1} through \ref{fig:combined_eta8_P1} show the 
         \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ImA12B_PL\PLval_3D.pdf} \\
         \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ImA12B_Pb_bsq_PL\PLval_3D.pdf} \\
     \end{tabular}
-    \caption{Real (top 2 rows) and imaginary (bottom 2 rows) parts of the $\tAmp_{12B}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The first row of each 2-row block displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the second row of each 2-row block displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space.}
+    \caption{Real (top 2 rows) and imaginary (bottom 2 rows) parts of the $\tAmp_{12B}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The first row of each 2-row block displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)$ space, while the second row of each 2-row block displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)$ space.}
     \label{fig:A12B_amplitudes_P1}
 \end{figure}
 
@@ -743,7 +747,7 @@ Figures \ref{fig:A2B_amplitudes_P1} through \ref{fig:combined_eta8_P1} show the 
         \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ImA2B_eta8_PL\PLval_2D.pdf} \\
         \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ImA2B_Pb_bsq_eta8_PL\PLval_2D.pdf} \\
     \end{tabular}
-    \caption{Real (top 2 rows) and imaginary (bottom 2 rows) parts of the $\tAmp_{2B}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ at fixed $\eta|\vect{v}|/a=8$. The first row of each 2-row block displays the $(b_{L}/a,b_{T}/a)-$space, while the second row of each 2-row block displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2)-$space.}
+    \caption{Real (top 2 rows) and imaginary (bottom 2 rows) parts of the $\tAmp_{2B}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ at fixed $\eta|\vect{v}|/a=8$. The first row of each 2-row block displays the $(b_{L}/a,b_{T}/a)$ space, while the second row of each 2-row block displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2)$ space.}
     \label{fig:A2B_eta8_P1}
 \end{figure}
 
@@ -757,12 +761,12 @@ Figures \ref{fig:A2B_amplitudes_P1} through \ref{fig:combined_eta8_P1} show the 
         \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ImA12B_eta8_PL\PLval_2D.pdf} \\
         \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ImA12B_Pb_bsq_eta8_PL\PLval_2D.pdf} \\
     \end{tabular}
-    \caption{Real (top 2 rows) and imaginary (bottom 2 rows) parts of the $\tAmp_{12B}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ at fixed $\eta|\vect{v}|/a=8$. The first row of each 2-row block displays the $(b_{L}/a,b_{T}/a)-$space, while the second row of each 2-row block displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2)-$space. Notice the lack of discernible signal in $\tAmp_{12B}^{\text{Im}}$.}
+    \caption{Real (top 2 rows) and imaginary (bottom 2 rows) parts of the $\tAmp_{12B}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ at fixed $\eta|\vect{v}|/a=8$. The first row of each 2-row block displays the $(b_{L}/a,b_{T}/a)$ space, while the second row of each 2-row block displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2)$ space. Notice the lack of discernible signal in $\tAmp_{12B}^{\text{Im}}$.}
     \label{fig:combined_eta8_P1}
 \end{figure}
 
 \pagebreak
-\subsubsection{Amplitude Profiles at \texorpdfstring{$\hat{\zeta}=0.294367$ ($P_L = -2$)}{TEXT}}
+\subsubsection{Amplitude Profiles at \texorpdfstring{$\hat{\zeta}=0.294367$ ($P_L = -2$)}{zeta-hat=0.294367 (PL = -2)}}
 \label{sec:amp_profiles_P2}
 \renewcommand{\PLval}{-2}
 Figures \ref{fig:A2B_amplitudes_P2} through \ref{fig:combined_eta8_P2} show the corresponding amplitudes at this larger Collins-Soper value.
@@ -823,7 +827,7 @@ Figures \ref{fig:A2B_amplitudes_P2} through \ref{fig:combined_eta8_P2} show the 
 \end{figure}
 
 \pagebreak
-\subsubsection{Amplitude Profiles at \texorpdfstring{$\hat{\zeta}=0.539684$ ($P_L = -3$)}{TEXT}}
+\subsubsection{Amplitude Profiles at \texorpdfstring{$\hat{\zeta}=0.539684$ ($P_L = -3$)}{zeta-hat=0.539684 (PL = -3)}}
 \label{sec:amp_profiles_P3}
 \renewcommand{\PLval}{-3}
 Figures \ref{fig:A2B_amplitudes_P3} through \ref{fig:combined_eta8_P3} give the same amplitude decomposition at $P_L=-3$.
@@ -884,7 +888,7 @@ Figures \ref{fig:A2B_amplitudes_P3} through \ref{fig:combined_eta8_P3} give the 
 \end{figure}
 
 \pagebreak
-\subsubsection{Amplitude Profiles at \texorpdfstring{$\hat{\zeta}=0.785756$ ($P_L = -4$)}{TEXT}}
+\subsubsection{Amplitude Profiles at \texorpdfstring{$\hat{\zeta}=0.785756$ ($P_L = -4$)}{zeta-hat=0.785756 (PL = -4)}}
 \label{sec:amp_profiles_P4}
 \renewcommand{\PLval}{-4}
 Figures \ref{fig:A2B_amplitudes_P4} through \ref{fig:combined_eta8_P4} complete the set at our largest simulated momentum, $P_L=-4$.

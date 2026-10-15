@@ -240,9 +240,11 @@ At $t = 0$, $F_1$ gives the electric charge and $F_2$ the anomalous magnetic mom
 
 GPDs are off-forward generalizations of PDFs. For unpolarized quarks they are defined by~\cite{Muller:1994ses,Ji:1996ek,Radyushkin:1997ki,Diehl:2003ny}
 \begin{equation}
-  \frac{1}{2}\int\frac{dz^-}{2\pi}\,e^{ix\bar{P}^+z^-}\,
-  \langle P'|\,\bar{q}\!\left(-\tfrac{z}{2}\right)\gamma^+\,\mathcal{U}\,q\!\left(\tfrac{z}{2}\right)|P\rangle\Big|_{z^+=0,\,\vprp{z}=0}
-  = \frac{1}{2\bar{P}^+}\left[H^q\,\bar{u}(P')\gamma^+u(P) + E^q\,\bar{u}(P')\frac{i\sigma^{+\nu}\Delta_\nu}{2\mN}u(P)\right] ,
+\begin{split}
+  &\frac{1}{2}\int\frac{dz^-}{2\pi}\,e^{ix\bar{P}^+z^-}\,
+  \langle P'|\,\bar{q}\!\left(-\tfrac{z}{2}\right)\gamma^+\,\mathcal{U}\,q\!\left(\tfrac{z}{2}\right)|P\rangle\Big|_{z^+=0,\,\vprp{z}=0}\\
+  &\qquad= \frac{1}{2\bar{P}^+}\left[H^q\,\bar{u}(P')\gamma^+u(P) + E^q\,\bar{u}(P')\frac{i\sigma^{+\nu}\Delta_\nu}{2\mN}u(P)\right] ,
+\end{split}
   \label{eq:gpd_definition}
 \end{equation}
 where $\bar{P} = (P+P')/2$, $\mathcal{U}$ is the straight light-like Wilson line between the quark fields, and $H^q$ and $E^q$ depend on $x$, the skewness $\xi = -\Delta^+/(2\bar{P}^+)$, and $t$. GPDs connect several quantities discussed so far. In the forward limit $H^q(x,0,0) = f_1^q(x)$. Their first moments are the form factors of Eq.~\eqref{eq:form_factors}, $\int dx\,H^q = F_1^q(t)$ and $\int dx\,E^q = F_2^q(t)$. Their second moments give the total angular momentum carried by quarks through Ji's sum rule~\cite{Ji:1996ek},
@@ -384,7 +386,7 @@ The $\gamma^+$ projection has a density interpretation. In light-cone gauge, $\P
 
 \subsubsection{Time reversal and the sign change}
 
-Time reversal is a symmetry of QCD, but it also acts on the gauge link. Combined with parity, it maps the correlator with a future-pointing staple onto the correlator with a past-pointing staple, $\nminus\to-\nminus$~\cite{Collins:2002kn,Boer:2003cm}. Under this map the T-even functions are unchanged, whereas the terms in brackets in Eqs.~\eqref{eq:tmd_decomp_f} and \eqref{eq:tmd_decomp_h} change sign. Combined with the link directions of Eqs.~\eqref{eq:staple_sidis} and \eqref{staple-shaped, this gives
+Time reversal is a symmetry of QCD, but it also acts on the gauge link. Combined with parity, it maps the correlator with a future-pointing staple onto the correlator with a past-pointing staple, $\nminus\to-\nminus$~\cite{Collins:2002kn,Boer:2003cm}. Under this map the T-even functions are unchanged, whereas the terms in brackets in Eqs.~\eqref{eq:tmd_decomp_f} and \eqref{eq:tmd_decomp_h} change sign. Combined with the link directions of Eqs.~\eqref{eq:staple_sidis} and \eqref{eq:staple_dy}, this gives
 \begin{equation}
   f_{1T}^\perp\big|_{\text{SIDIS}} = -f_{1T}^\perp\big|_{\text{DY}}\ ,\qquad
   h_{1}^\perp\big|_{\text{SIDIS}} = -h_{1}^\perp\big|_{\text{DY}}\ ,\qquad
@@ -474,7 +476,7 @@ The value at $\bvec\tcdot P = 0$ is the $x$-integrated quantity studied in earli
 
 Second, the real and imaginary parts of the amplitude separate quark and antiquark contributions. Using $f_1^{\bar q}(x) = -f_1^q(-x)$ for $x>0$, and taking the soft factor to be real,
 \begin{align}
-  \myRe\,\tAmp_{2B} &= \frac{\tilde{\softf}}{2}\int_0^1 dx\ \cos\big(x\,\bvec\tcdo,t P\big)\left[\tilde f_1^q(x) - \tilde f_1^{\bar q}(x)\right] , \nonumber\\
+  \myRe\,\tAmp_{2B} &= \frac{\tilde{\softf}}{2}\int_0^1 dx\ \cos\big(x\,\bvec\tcdot P\big)\left[\tilde f_1^q(x) - \tilde f_1^{\bar q}(x)\right] , \nonumber\\
   \myIm\,\tAmp_{2B} &= -\frac{\tilde{\softf}}{2}\int_0^1 dx\ \sin\big(x\,\bvec\tcdot P\big)\left[\tilde f_1^q(x) + \tilde f_1^{\bar q}(x)\right] .
   \label{eq:re_im_valence}
 \end{align}

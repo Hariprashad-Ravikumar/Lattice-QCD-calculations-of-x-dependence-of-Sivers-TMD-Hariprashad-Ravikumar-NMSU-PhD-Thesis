@@ -1,11 +1,12 @@
+\pdfminorversion=7
+\pdfsuppresswarningpagegroup=1
 \documentclass[12pt]{nmsuth01}
 %If your system does not have a latex package ``pkg'', for example,
  %attempting to run latex on the file will produce an error report
  %reading something like ``Latex error:  File pkg.sty not found.''
 %
-%Your system should have the latex symbol package.  If not comment out 
- %the next line by placing a percent sign % at the beginning of the line.
-\usepackage{latexsym}
+%array: extended column types, e.g. >{\raggedright\arraybackslash}p{..} in tables.
+\usepackage{array}
 %Your system may not have the American Mathematical Society packages
  %for mathematics and theorem formatting.  If not, comment out the
  %next line.  If you comment out the next line, you should also
@@ -32,7 +33,7 @@
 \usepackage{braket}
 \usepackage{caption}
 \usepackage{subcaption}
-\usepackage{ulem}
+\usepackage[normalem]{ulem}
 \usepackage{cancel}
 \usepackage{graphicx}
 \usepackage{mathtools}
@@ -192,6 +193,7 @@
 \usepackage{tikz}
 \usetikzlibrary{positioning,decorations.pathmorphing}
 %
+\setlength{\emergencystretch}{1.5em}
 \begin{document}
 %Use the next line to obtain double spacing for the main body of the document
 \setlength{\baselineskip}{\doublespace}

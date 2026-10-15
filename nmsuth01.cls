@@ -91,7 +91,7 @@
 %%   Grave accent  \`     Left brace    \{     Vertical bar  \|
 %%   Right brace   \}     Tilde         \~}
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
-\ProvidesClass{article}
+\ProvidesClass{nmsuth01}
               [1996/05/26 v1.3r
  Standard LaTeX document class]
 \newcommand\@ptsize{}
@@ -543,8 +543,8 @@
 \DeclareOldFontCommand{\sc}{\normalfont\scshape}{\@nomath\sc}
 \DeclareRobustCommand*\cal{\@fontswitch\relax\mathcal}
 \DeclareRobustCommand*\mit{\@fontswitch\relax\mathnormal}
-\newcommand\@pnumwidth{1.55em}
-\newcommand\@tocrmarg{2.55em}
+\newcommand\@pnumwidth{2.2em}
+\newcommand\@tocrmarg{3.2em}
 \newcommand\@dotsep{4.5}
 \setcounter{tocdepth}{3}
 \newcommand\tableofcontents{%
