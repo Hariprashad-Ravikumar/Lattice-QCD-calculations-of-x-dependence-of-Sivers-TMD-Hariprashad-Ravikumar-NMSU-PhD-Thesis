@@ -46,7 +46,7 @@ However, fitting this simple Gaussian model to our lattice data yields $\alpha <
 
 This means the amplitude decays faster transversely than longitudinally, so the expression in $(P \cdot b, b^2)$ space is not integrable. Figures ~\ref{fig:gaussian_failure_A2B}-\ref{fig:gaussian_failure_A12B} also shows poor fit quality. A 2D Gaussian decay profile is too rigid to describe the non-local operator.
 
-This global fit in $(P \cdot b, b^2)$ includes quark-separation $\vect{b}$ from both short-distance ($|\vect{b}| \sim 1a$ or $2a$) medium-range ($|\vect{b}|\ge 3a$). The short-distance regime is governed by different physics, namely perturbative effects, including incipient short-distance divergences that require additional renormalization, compared with the medium-range non-perturbative TMD physics we aim to probe. A fit incorporating the short-distance behavior would need to account for this crossover in regime even in the absence of discretization artifacts. Before exploring further models that fit the lattice amplitudes, we account for the limitations of discretized spacetime and use only the dataset containing non-perturbative TMD physics. 
+This global fit in $(P \cdot b, b^2)$ includes quark-separation $\vect{b}$ from both short-distance ($|\vect{b}| \sim 1a$ or $2a$) medium-range ($|\vect{b}|\ge 3a$). The short-distance regime is governed by different physics, namely perturbative effects, including incipient short-distance divergences that require additional renormalization, compared with the medium-range non-perturbative TMD physics we aim to probe. A fit incorporating the short-distance behavior would need to account for this crossover in regime even in the absence of discretization artifacts. Before exploring further models that fit the lattice amplitudes, we account for the limitations of \textbf{discretized spacetime} and use only the dataset containing non-perturbative TMD physics. 
 
 \subsection{Discretization Effects and Short-Distance Data Exclusion}
 \label{sec:discretization_effects}
@@ -205,7 +205,7 @@ To test an exponential decay along the longitudinal direction, we fit separable 
     \label{tab:rejection_gaussian_transverse}
 \end{table}
 
-Letting the longitudinal coefficient depend on $\eta$, as $c(\eta) = c\,(1 - k_1/\eta + k_2/\eta^2)$, changes this (Table~\ref{tab:rejection_etadep_c}). The fitted $c$ is now positive, so $c(\eta)$ is positive in the asymptotic limit $\eta \to \infty$ that the Sivers shift requires (Section~\ref{global-bLbTeta-fit}), and the best combinations reach $\chi^2/\text{dof} \approx 1.32$. We explore the choice of $\eta$-dependence for $c$ in Section~\ref{sec:systematic_exploration}.
+Letting the longitudinal coefficient depend on $\eta$, as $c(\eta) = c\,(1 - k_1/\eta + k_2/\eta^2)$ (the $\eta$ dependency is explored more systematically below in Section \ref{sec:systematic_exploration}, nevertheless we use this simpler $c(\eta)$), changes this (Table~\ref{tab:rejection_etadep_c}). The fitted $c$ is now positive, so $c(\eta)$ is positive in the asymptotic limit $\eta \to \infty$ that the Sivers shift requires (Section~\ref{global-bLbTeta-fit}), and the best combinations reach $\chi^2/\text{dof} \approx 1.32$. We explore the choice of $\eta$-dependence for $c$ in Section~\ref{sec:systematic_exploration}.
 
 \begin{table}[htbp]
     \centering

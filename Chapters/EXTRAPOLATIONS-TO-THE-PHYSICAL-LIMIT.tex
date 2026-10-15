@@ -120,7 +120,7 @@ Figure~\ref{fig:extrapolated_amplitude_3d_amps} extends this reconstruction to t
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\linewidth]{SimultaneousFitsCov/extrapolation_para_level/All_Momenta_vs_Extrapolated_2D_P234_bmin3_eta610_b29.0_Amps.pdf}
-    \caption{Comparison, at fixed $|b_T| = 3a \approx 0.34$ fm, between the four amplitude quantities evaluated at each of the four simulated momenta ($P_L=-1,-2,-3,-4$, colored curves, each using its own unextrapolated fit parameters) and the extrapolated $\hat\zeta\to\infty$ result (black dashed curve), which uses only $P_L=-2,-3,-4$. The extrapolated curve differs from all three finite-momentum curves used in the extrapolation, including the one at the largest simulated momentum, so the fit-parameter extrapolation of Fig.~\ref{fig:param_extrapolation_zetahat} captures real momentum dependence and does not just reproduce the $P_L=-4$ result.}
+    \caption{Comparison, at fixed $|b_T| = 3a \approx 0.34$ fm, between the four amplitude quantities evaluated at each of the four simulated momenta ($P_L=-1,-2,-3,-4$, colored curves, each using its own unextrapolated fit parameters) and the extrapolated $\hat\zeta\to\infty$ result (black dashed curve), which uses only $P_L=-2,-3,-4$. The extrapolated curve differs from all three finite-momentum curves used in the extrapolation, including the one at the largest simulated momentum; the fit-parameter extrapolation of Fig.~\ref{fig:param_extrapolation_zetahat} captures momentum dependence beyond the $P_L=-4$ result.}
     \label{fig:momenta_vs_extrapolated_amps}
 \end{figure}
 
@@ -134,14 +134,14 @@ Figure~\ref{fig:extrapolated_amplitude_3d_amps} extends this reconstruction to t
 \subsection{Testing Factorization in \texorpdfstring{$x$}{TEXT} and \texorpdfstring{$|b_T|$}{TEXT} at \texorpdfstring{$\hat{\zeta} \to \infty$}{TEXT}}
 \label{sec:factorization_xbt}
 
-Section~\ref{sec:factorization_test} tested factorization of the position-space amplitudes in $(P\cdot b)$ and $b^2$. Here we ask a different question: whether the extrapolated distributions factorize in the momentum fraction $x$ and the transverse separation $|b_T|$.
+Section~\ref{sec:factorization_test} tested factorization of the position-space amplitudes in $(P\cdot b)$ and $b^2$ at the level of lattice data. Here we ask a complementary question: whether the extrapolated distributions factorize in the momentum fraction $x$ and the transverse separation $|b_T|$.
 
 
-Figures~\ref{fig:extrapolated_amplitude_3d_amps} and~\ref{fig:momenta_vs_extrapolated_amps} show that the extrapolated Sivers shift and amplitudes depend on both $x$ and $|b_T|$ jointly. We ask whether this joint dependence is separable, that is, whether the extrapolated Sivers shift factorizes as
+Figures~\ref{fig:extrapolated_amplitude_3d_amps} and~\ref{ig:momenta_vs_extrapolated_sivers} show the joint dependence of the extrapolated Sivers shift and amplitudes on both $x$ and $|b_T|$. We ask whether this joint dependence is separable, that is, whether the extrapolated Sivers shift factorizes as
 \begin{equation}
     \langle k_y \rangle_{TU}(x,|b_T|) \overset{?}{=} F(x)\,G(|b_T|) \ ,
 \end{equation}
-with all of the $x$-shape carried by $F(x)$ and all of the $|b_T|$-shape by $G(|b_T|)$. Such a factorization is not automatic in our fit ansatz. Each amplitude enters only through the combination $d_X(b^2) = 1 + d_X\,b^2$ inside a Bessel function that also carries the $x$-dependence,
+with all of the $x$-shape carried by $F(x)$ and all of the $|b_T|$-shape by $G(|b_T|)$. Such a factorization is not automatic in our fit ansatz for $\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$, and $\tAmp_{12B}^{\text{Re}}$ (Eq.~(\ref{eq:model_ReA2B})-(\ref{eq:model_ImA2B})). After Fourier transformation, each amplitude enters only through the combination $d_X(b^2) = 1 + d_X\,b^2$ inside a Bessel function that also carries the $x$-dependence,
 \begin{equation}
     \tAmp^{[x]}_X(x,b^2) \ \propto\ N_X(b^2)\ |x|^{-1/2+j_X}\ K_{\nu_X}\!\left(|x|\sqrt{d_X(b^2)/c_X}\right) \ ,
 \end{equation}
