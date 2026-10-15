@@ -543,8 +543,8 @@
 \DeclareOldFontCommand{\sc}{\normalfont\scshape}{\@nomath\sc}
 \DeclareRobustCommand*\cal{\@fontswitch\relax\mathcal}
 \DeclareRobustCommand*\mit{\@fontswitch\relax\mathnormal}
-\newcommand\@pnumwidth{2.2em}
-\newcommand\@tocrmarg{3.2em}
+\newcommand\@pnumwidth{2.5em}
+\newcommand\@tocrmarg{3.5em}
 \newcommand\@dotsep{4.5}
 \setcounter{tocdepth}{3}
 \newcommand\tableofcontents{%
