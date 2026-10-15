@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.17)  14 OCT 2026 21:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.17)  14 OCT 2026 21:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3151,98 +3151,86 @@ Package pdftex.def Info: SimultaneousFitsCov/factorization_test/Factorization_g
 h_and_Reconstruction_bmin3_eta610.pdf  used on input line 291.
 (pdftex.def)             Requested size: 527.57121pt x 157.8316pt.
 
-Overfull \hbox (33.77885pt too wide) in paragraph at lines 296--297
-\OT1/cmr/m/n/10.95 must be flat in $\OML/cmm/m/it/10.95 x$ \OT1/cmr/m/n/10.95 f
-or ev-ery choice of $\OMS/cmtt/m/n/10.95 j\OML/cmm/m/it/10.95 b[]\OMS/cmtt/m/n/
-10.95 j$ \OT1/cmr/m/n/10.95 and ref-er-ence $\OMS/cmtt/m/n/10.95 j\OML/cmm/m/it
-/10.95 b[]\OMS/cmtt/m/n/10.95 j[]$\OT1/cmr/m/n/10.95 , and like-wise $\OML/cmm/
-m/it/10.95 R[]\OT1/cmr/m/n/10.95 (\OMS/cmtt/m/n/10.95 j\OML/cmm/m/it/10.95 b[]\
-OMS/cmtt/m/n/10.95 j\OT1/cmr/m/n/10.95 ) \OMS/cmtt/m/n/10.95 ^^Q h\OML/cmm/m/it
-/10.95 k[]\OMS/cmtt/m/n/10.95 i[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x; \OM
-S/cmtt/m/n/10.95 j\OML/cmm/m/it/10.95 b[]\OMS/cmtt/m/n/10.95 j\OT1/cmr/m/n/10.9
-5 )\OML/cmm/m/it/10.95 =\OMS/cmtt/m/n/10.95 h\OML/cmm/m/it/10.95 k[]\OMS/cmtt/m
-/n/10.95 i[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x[]; \OMS/cmtt/m/n/10.95 j\
-OML/cmm/m/it/10.95 b[]\OMS/cmtt/m/n/10.95 j\OT1/cmr/m/n/10.95 ) =
- []
-
 [183 <./SimultaneousFitsCov/factorization_test/Factorization_gh_and_Reconstruct
 ion_bmin3_eta610.pdf>]
 <SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_x_4curves_P234_b
-min3_eta610.pdf, id=14837, 640.62978pt x 424.12024pt>
+min3_eta610.pdf, id=14839, 640.62978pt x 424.12024pt>
 File: SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_x_4curves_P
 234_bmin3_eta610.pdf Graphic file (type pdf)
 <use SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_x_4curves_P2
 34_bmin3_eta610.pdf>
 Package pdftex.def Info: SimultaneousFitsCov/factorization_test/Factorization_R
-atio_vs_x_4curves_P234_bmin3_eta610.pdf  used on input line 300.
+atio_vs_x_4curves_P234_bmin3_eta610.pdf  used on input line 305.
 (pdftex.def)             Requested size: 395.6784pt x 261.94873pt.
 <SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_bT_4curves_P234_
-bmin3_eta610.pdf, id=14838, 640.6348pt x 422.56258pt>
+bmin3_eta610.pdf, id=14840, 640.6348pt x 422.56258pt>
 File: SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_bT_4curves_
 P234_bmin3_eta610.pdf Graphic file (type pdf)
 <use SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_bT_4curves_P
 234_bmin3_eta610.pdf>
 Package pdftex.def Info: SimultaneousFitsCov/factorization_test/Factorization_R
-atio_vs_bT_4curves_P234_bmin3_eta610.pdf  used on input line 307.
+atio_vs_bT_4curves_P234_bmin3_eta610.pdf  used on input line 312.
 (pdftex.def)             Requested size: 356.11217pt x 234.89252pt.
  [184 <./SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_x_4curve
-s_P234_bmin3_eta610.pdf> <./SimultaneousFitsCov/factorization_test/Factorizatio
-n_Ratio_vs_bT_4curves_P234_bmin3_eta610.pdf>]
+s_P234_bmin3_eta610.pdf>]
 <SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_x_AllPL_bmin3_et
-a610.pdf, id=14921, 1001.97978pt x 711.04016pt>
+a610.pdf, id=14887, 1001.97978pt x 711.04016pt>
 File: SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_x_AllPL_bmi
 n3_eta610.pdf Graphic file (type pdf)
 <use SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_x_AllPL_bmin
 3_eta610.pdf>
 Package pdftex.def Info: SimultaneousFitsCov/factorization_test/Factorization_R
-atio_vs_x_AllPL_bmin3_eta610.pdf  used on input line 316.
+atio_vs_x_AllPL_bmin3_eta610.pdf  used on input line 321.
 (pdftex.def)             Requested size: 527.57121pt x 374.39748pt.
+ [185 <./SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_bT_4curv
+es_P234_bmin3_eta610.pdf>]
 <SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_bT_AllPL_bmin3_e
-ta610.pdf, id=14924, 1001.99165pt x 709.48247pt>
+ta610.pdf, id=14931, 1001.99165pt x 709.48247pt>
 File: SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_bT_AllPL_bm
 in3_eta610.pdf Graphic file (type pdf)
 <use SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_bT_AllPL_bmi
 n3_eta610.pdf>
 Package pdftex.def Info: SimultaneousFitsCov/factorization_test/Factorization_R
-atio_vs_bT_AllPL_bmin3_eta610.pdf  used on input line 323.
+atio_vs_bT_AllPL_bmin3_eta610.pdf  used on input line 328.
 (pdftex.def)             Requested size: 422.05858pt x 298.84666pt.
- [185 <./SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_x_AllPL_
-bmin3_eta610.pdf>] [186 <./SimultaneousFitsCov/factorization_test/Factorization
-_Ratio_vs_bT_AllPL_bmin3_eta610.pdf>]
+
+[186 <./SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_x_AllPL_b
+min3_eta610.pdf>] [187 <./SimultaneousFitsCov/factorization_test/Factorization_
+Ratio_vs_bT_AllPL_bmin3_eta610.pdf>]
 <SimultaneousFitsCov/factorization_test/Factorization_Amplitudes_g_of_x_bmin3_e
-ta610.pdf, id=15044, 1002.55492pt x 711.04016pt>
+ta610.pdf, id=15051, 1002.55492pt x 711.04016pt>
 File: SimultaneousFitsCov/factorization_test/Factorization_Amplitudes_g_of_x_bm
 in3_eta610.pdf Graphic file (type pdf)
 <use SimultaneousFitsCov/factorization_test/Factorization_Amplitudes_g_of_x_bmi
 n3_eta610.pdf>
 Package pdftex.def Info: SimultaneousFitsCov/factorization_test/Factorization_A
-mplitudes_g_of_x_bmin3_eta610.pdf  used on input line 357.
+mplitudes_g_of_x_bmin3_eta610.pdf  used on input line 362.
 (pdftex.def)             Requested size: 527.57121pt x 374.1805pt.
 <SimultaneousFitsCov/factorization_test/Factorization_Amplitudes_h_of_bT_bmin3_
-eta610.pdf, id=15047, 1002.5668pt x 709.48247pt>
+eta610.pdf, id=15054, 1002.5668pt x 709.48247pt>
 File: SimultaneousFitsCov/factorization_test/Factorization_Amplitudes_h_of_bT_b
 min3_eta610.pdf Graphic file (type pdf)
 <use SimultaneousFitsCov/factorization_test/Factorization_Amplitudes_h_of_bT_bm
 in3_eta610.pdf>
 Package pdftex.def Info: SimultaneousFitsCov/factorization_test/Factorization_A
-mplitudes_h_of_bT_bmin3_eta610.pdf  used on input line 364.
+mplitudes_h_of_bT_bmin3_eta610.pdf  used on input line 369.
 (pdftex.def)             Requested size: 527.57121pt x 373.33911pt.
- [187 <./SimultaneousFitsCov/factorization_test/Factorization_Amplitudes_g_of_x
+ [188 <./SimultaneousFitsCov/factorization_test/Factorization_Amplitudes_g_of_x
 _bmin3_eta610.pdf>]
 <SimultaneousFitsCov/factorization_test/Factorization_Amplitudes_Reconstruction
-_bmin3_eta610.pdf, id=15122, 1000.82672pt x 711.04016pt>
+_bmin3_eta610.pdf, id=15129, 1000.82672pt x 711.04016pt>
 File: SimultaneousFitsCov/factorization_test/Factorization_Amplitudes_Reconstru
 ction_bmin3_eta610.pdf Graphic file (type pdf)
 <use SimultaneousFitsCov/factorization_test/Factorization_Amplitudes_Reconstruc
 tion_bmin3_eta610.pdf>
 Package pdftex.def Info: SimultaneousFitsCov/factorization_test/Factorization_A
-mplitudes_Reconstruction_bmin3_eta610.pdf  used on input line 371.
+mplitudes_Reconstruction_bmin3_eta610.pdf  used on input line 376.
 (pdftex.def)             Requested size: 527.57121pt x 374.80977pt.
- [188 <./SimultaneousFitsCov/factorization_test/Factorization_Amplitudes_h_of_b
-T_bmin3_eta610.pdf>]) [189 <./SimultaneousFitsCov/factorization_test/Factorizat
-ion_Amplitudes_Reconstruction_bmin3_eta610.pdf>] [190] (./Chapters/CONCLUSION.t
-ex [191] [192]) [193]
-(./appendix.tex
+ [189 <./SimultaneousFitsCov/factorization_test/Factorization_Amplitudes_h_of_b
+T_bmin3_eta610.pdf>])
+[190 <./SimultaneousFitsCov/factorization_test/Factorization_Amplitudes_Reconst
+ruction_bmin3_eta610.pdf>] [191] (./Chapters/CONCLUSION.tex [192] [193])
+[194] (./appendix.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -3255,7 +3243,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-) [194] (./main.bbl [195] [196] [197] [198]) [199] (./main.aux (./title.aux)
+) [195] (./main.bbl [196] [197] [198] [199]) [200] (./main.aux (./title.aux)
 (./copyright.aux) (./approval.aux) (./dedica.aux) (./ackno.aux) (./vita.aux)
 (./abstract.aux))
 
@@ -3265,10 +3253,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 2762D706228295FBA922D10CAAAF7A8D;25303.
  ) 
 Here is how much of TeX's memory you used:
- 45826 strings out of 476025
- 937289 string characters out of 5790016
- 2390140 words of memory out of 5000000
- 64415 multiletter control sequences out of 15000+600000
+ 45833 strings out of 476025
+ 937385 string characters out of 5790016
+ 2390362 words of memory out of 5000000
+ 64419 multiletter control sequences out of 15000+600000
  529785 words of font info for 113 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  82i,22n,80p,3236b,8785s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -3305,10 +3293,10 @@ m/cmtt8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/lat
 xfont/line10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfont
 s/symbols/msam10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ams
 fonts/symbols/msbm10.pfb>
-Output written on main.pdf (226 pages, 34220410 bytes).
+Output written on main.pdf (227 pages, 34221105 bytes).
 PDF statistics:
- 15895 PDF objects out of 18468 (max. 8388607)
- 6003 compressed objects within 61 object streams
- 944 named destinations out of 1000 (max. 500000)
+ 15902 PDF objects out of 18468 (max. 8388607)
+ 6009 compressed objects within 61 object streams
+ 947 named destinations out of 1000 (max. 500000)
  1809 words of extra memory for PDF output out of 10000 (max. 10000000)
 

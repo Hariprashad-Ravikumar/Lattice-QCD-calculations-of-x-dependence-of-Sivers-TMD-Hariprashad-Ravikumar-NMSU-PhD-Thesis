@@ -102,10 +102,10 @@
 \contentsline {subsubsection}{\numberline {7.3.2}Factorization in $x$ and $|b_T|$ at $\hat {\zeta } \to \infty $}{180}{subsubsection.7.3.2}%
 \contentsline {subsubsection}{\numberline {7.3.3}Quantifying the Distance from a Factorized Form}{181}{subsubsection.7.3.3}%
 \contentsline {subsubsection}{\numberline {7.3.4}Factorization Test for the Sivers Shift}{182}{subsubsection.7.3.4}%
-\contentsline {subsubsection}{\numberline {7.3.5}Factorization Test at the Amplitude Level}{186}{subsubsection.7.3.5}%
-\contentsline {section}{\numberline {8}CONCLUSION AND OUTLOOK}{191}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Summary}{191}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Main results}{192}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Outlook}{192}{subsection.8.3}%
-\contentsline {section}{\numberline {A}QLUA: Gamma $\Gamma (n)$}{194}{appendix.A}%
-\contentsline {section}{REFERENCES}{195}{section*.131}%
+\contentsline {subsubsection}{\numberline {7.3.5}Factorization Test at the Amplitude Level}{187}{subsubsection.7.3.5}%
+\contentsline {section}{\numberline {8}CONCLUSION AND OUTLOOK}{192}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Summary}{192}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Main results}{193}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Outlook}{193}{subsection.8.3}%
+\contentsline {section}{\numberline {A}QLUA: Gamma $\Gamma (n)$}{195}{appendix.A}%
+\contentsline {section}{REFERENCES}{196}{section*.131}%
