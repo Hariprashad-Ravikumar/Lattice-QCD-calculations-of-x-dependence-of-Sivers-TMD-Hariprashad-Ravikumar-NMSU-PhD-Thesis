@@ -1,6 +1,6 @@
 \babel@toc {english}{}\relax 
 \contentsline {section}{LIST OF TABLES}{xvi}{section*.2}%
-\contentsline {section}{LIST OF FIGURES}{xxviii}{section*.3}%
+\contentsline {section}{LIST OF FIGURES}{xxvii}{section*.3}%
 \contentsline {section}{\numberline {1}INTRODUCTION AND MOTIVATION}{1}{section.1}%
 \contentsline {subsection}{\numberline {1.1}From form factors to partons}{1}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Beyond one dimension}{2}{subsection.1.2}%
@@ -90,22 +90,22 @@
 \contentsline {subsection}{\numberline {6.8}Simultaneous Fitting Strategy}{128}{subsection.6.8}%
 \contentsline {subsubsection}{\numberline {6.8.1}Simultaneous Fit with Full Covariance Matrix}{129}{subsubsection.6.8.1}%
 \contentsline {subsubsection}{\numberline {6.8.2}Simultaneous Fit Results for $\hat {\zeta }=0.090772$ ($\ensuremath {\boldsymbol {P}}\cdot a\hat {L}/(2\pi )=\{-1,0,0\}$)}{130}{subsubsection.6.8.2}%
-\contentsline {subsubsection}{\numberline {6.8.3}Simultaneous Fit Results for $\hat {\zeta }=0.294367$ ($\ensuremath {\boldsymbol {P}}\cdot a\hat {L}/(2\pi )=\{-2,0,0\}$)}{142}{subsubsection.6.8.3}%
-\contentsline {subsubsection}{\numberline {6.8.4}Simultaneous Fit Results for $\hat {\zeta }=0.539684$ ($\ensuremath {\boldsymbol {P}}\cdot a\hat {L}/(2\pi )=\{-3,0,0\}$)}{154}{subsubsection.6.8.4}%
-\contentsline {subsubsection}{\numberline {6.8.5}Simultaneous Fit Results for $\hat {\zeta }=0.785756$ ($\ensuremath {\boldsymbol {P}}\cdot a\hat {L}/(2\pi )=\{-4,0,0\}$)}{166}{subsubsection.6.8.5}%
-\contentsline {subsection}{\numberline {6.9}Separable Longitudinal and Transverse Models}{178}{subsection.6.9}%
-\contentsline {section}{\numberline {7}EXTRAPOLATIONS TO THE PHYSICAL LIMIT}{182}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Motivation for the $\hat {\zeta } \to \infty $ Extrapolation}{182}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Extrapolation $\hat {\zeta } \to \infty $}{184}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Testing Factorization in $x$ and $|b_T|$ at $\hat {\zeta } \to \infty $}{190}{subsection.7.3}%
-\contentsline {subsubsection}{\numberline {7.3.1}Ratio Test in $(P\cdot b, b^2)$ on the Lattice Data}{190}{subsubsection.7.3.1}%
-\contentsline {subsubsection}{\numberline {7.3.2}Factorization in $x$ and $|b_T|$ at $\hat {\zeta } \to \infty $}{192}{subsubsection.7.3.2}%
-\contentsline {subsubsection}{\numberline {7.3.3}Quantifying the Distance from a Factorized Form}{193}{subsubsection.7.3.3}%
-\contentsline {subsubsection}{\numberline {7.3.4}Factorization Test for the Sivers Shift}{194}{subsubsection.7.3.4}%
-\contentsline {subsubsection}{\numberline {7.3.5}Factorization Test at the Amplitude Level}{198}{subsubsection.7.3.5}%
-\contentsline {section}{\numberline {8}CONCLUSION AND OUTLOOK}{203}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Summary}{203}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Main results}{204}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Outlook}{204}{subsection.8.3}%
-\contentsline {section}{\numberline {A}QLUA: Gamma $\Gamma (n)$}{206}{appendix.A}%
-\contentsline {section}{REFERENCES}{207}{section*.143}%
+\contentsline {subsubsection}{\numberline {6.8.3}Simultaneous Fit Results for $\hat {\zeta }=0.294367$ ($\ensuremath {\boldsymbol {P}}\cdot a\hat {L}/(2\pi )=\{-2,0,0\}$)}{139}{subsubsection.6.8.3}%
+\contentsline {subsubsection}{\numberline {6.8.4}Simultaneous Fit Results for $\hat {\zeta }=0.539684$ ($\ensuremath {\boldsymbol {P}}\cdot a\hat {L}/(2\pi )=\{-3,0,0\}$)}{148}{subsubsection.6.8.4}%
+\contentsline {subsubsection}{\numberline {6.8.5}Simultaneous Fit Results for $\hat {\zeta }=0.785756$ ($\ensuremath {\boldsymbol {P}}\cdot a\hat {L}/(2\pi )=\{-4,0,0\}$)}{157}{subsubsection.6.8.5}%
+\contentsline {subsection}{\numberline {6.9}Separable Longitudinal and Transverse Models}{166}{subsection.6.9}%
+\contentsline {section}{\numberline {7}EXTRAPOLATIONS TO THE PHYSICAL LIMIT}{170}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Motivation for the $\hat {\zeta } \to \infty $ Extrapolation}{170}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Extrapolation $\hat {\zeta } \to \infty $}{172}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Testing Factorization in $x$ and $|b_T|$ at $\hat {\zeta } \to \infty $}{178}{subsection.7.3}%
+\contentsline {subsubsection}{\numberline {7.3.1}Ratio Test in $(P\cdot b, b^2)$ on the Lattice Data}{178}{subsubsection.7.3.1}%
+\contentsline {subsubsection}{\numberline {7.3.2}Factorization in $x$ and $|b_T|$ at $\hat {\zeta } \to \infty $}{180}{subsubsection.7.3.2}%
+\contentsline {subsubsection}{\numberline {7.3.3}Quantifying the Distance from a Factorized Form}{181}{subsubsection.7.3.3}%
+\contentsline {subsubsection}{\numberline {7.3.4}Factorization Test for the Sivers Shift}{182}{subsubsection.7.3.4}%
+\contentsline {subsubsection}{\numberline {7.3.5}Factorization Test at the Amplitude Level}{186}{subsubsection.7.3.5}%
+\contentsline {section}{\numberline {8}CONCLUSION AND OUTLOOK}{191}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Summary}{191}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Main results}{192}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Outlook}{192}{subsection.8.3}%
+\contentsline {section}{\numberline {A}QLUA: Gamma $\Gamma (n)$}{194}{appendix.A}%
+\contentsline {section}{REFERENCES}{195}{section*.131}%
