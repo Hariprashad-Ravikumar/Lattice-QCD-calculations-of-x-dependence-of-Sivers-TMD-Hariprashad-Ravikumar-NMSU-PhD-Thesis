@@ -406,42 +406,98 @@ The extracted parameters from the simultaneous fit for the lowest simulated nucl
 
 \input{SimultaneousFitsCov/Fit_Table_PL\PLval_bmin3}
 
-Figures \ref{fig:A2Bre_amplitudes_fit_P1}, \ref{fig:A2Bim_amplitudes_fit_P1}, \ref{fig:A12Bre_amplitudes_fit_P1} show the 3D fit plots on the raw lattice data in both $\{b_L,b_T,\eta\}$-space and $\{(b\cdot P),b^2,\eta\}$-space. Because we exclude the short-distance data ($|\vect{b}| < 3a$), the fit describes the long-range dynamics, and ultraviolet lattice artifacts do not influence the results. Figure \ref{fig:combined_fit_P1} shows the fit plots on the raw lattice data in both $\{b_L,b_T,\eta=8\}$-space and $\{(b\cdot P),b^2,\eta=8\}$-space at a specific $\eta$ slice ($\eta=8$). 
+Figures~\ref{fig:A2Bre_amplitudes_fit_P1}--\ref{fig:A12Bre_amplitudes_fit_Pb_P1} show the 3D fit plots on the raw lattice data in both $\{b_L,b_T,\eta\}$-space and $\{(b\cdot P),b^2,\eta\}$-space. Because we exclude the short-distance data ($|\vect{b}| < 3a$), the fit describes the long-range dynamics, and ultraviolet lattice artifacts do not influence the results. Figures~\ref{fig:A2B_fit_eta8_P1}--\ref{fig:combined_fit_P1} show the fit plots on the raw lattice data in both $\{b_L,b_T,\eta=8\}$-space and $\{(b\cdot P),b^2,\eta=8\}$-space at a specific $\eta$ slice ($\eta=8$). 
 
 % ---- Re A_2B ----
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\linewidth]{plots/Amps_Fit/ReA2B_PL\PLval_WithFit_3D.pdf}\\[2ex]
-    \includegraphics[width=0.7\linewidth]{plots/Amps_Fit/ReA2B_Pb_bsq_PL\PLval_WithFit_3D.pdf}
-    \caption{Fit for $\tAmp_{2B}^{\text{Re}}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space with the global simultaneous fit overlaid.}
+    \begin{tabular}{c}
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ReA2B_PL\PLval_WithFit_3D_bL.pdf} \\
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ReA2B_PL\PLval_WithFit_3D_bT.pdf} \\
+    \end{tabular}
+    \caption{Fit for $\tAmp_{2B}^{\text{Re}}$ for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ in the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, with the global simultaneous fit overlaid. Top: against $b_L/a$ for each $b_T/a$; bottom: against $b_T/a$ for each $b_L/a$.}
     \label{fig:A2Bre_amplitudes_fit_P1}
 \end{figure}
 
-% ---- Im A_2B ----
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\linewidth]{plots/Amps_Fit/ImA2B_PL\PLval_WithFit_3D.pdf}\\[2ex]
-    \includegraphics[width=0.7\linewidth]{plots/Amps_Fit/ImA2B_Pb_bsq_PL\PLval_WithFit_3D.pdf}
-    \caption{Fit for $\tAmp_{2B}^{\text{Im}}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space with the global simultaneous fit overlaid.}
+    \begin{tabular}{c}
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ReA2B_Pb_bsq_PL\PLval_WithFit_3D_Pb.pdf} \\
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ReA2B_Pb_bsq_PL\PLval_WithFit_3D_bsq.pdf} \\
+    \end{tabular}
+    \caption{Fit for $\tAmp_{2B}^{\text{Re}}$ for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ in the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space, with the global simultaneous fit overlaid. Top: against $(\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi)$ for each $b^2/a^2$; bottom: against $b^2/a^2$ for each $(\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi)$.}
+    \label{fig:A2Bre_amplitudes_fit_Pb_P1}
+\end{figure}
+
+% ---- Im A_2B ----
+\begin{figure}[H]
+    \centering
+    \begin{tabular}{c}
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ImA2B_PL\PLval_WithFit_3D_bL.pdf} \\
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ImA2B_PL\PLval_WithFit_3D_bT.pdf} \\
+    \end{tabular}
+    \caption{Fit for $\tAmp_{2B}^{\text{Im}}$ for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ in the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, with the global simultaneous fit overlaid. Top: against $b_L/a$ for each $b_T/a$; bottom: against $b_T/a$ for each $b_L/a$.}
     \label{fig:A2Bim_amplitudes_fit_P1}
 \end{figure}
 
-% ---- Re A_12B ----
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\linewidth]{plots/Amps_Fit/ReA12B_PL\PLval_WithFit_3D.pdf}\\[2ex]
-    \includegraphics[width=0.7\linewidth]{plots/Amps_Fit/ReA12B_Pb_bsq_PL\PLval_WithFit_3D.pdf}
-    \caption{Fit for $\tAmp_{12B}^{\text{Re}}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space with the global simultaneous fit overlaid.}
+    \begin{tabular}{c}
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ImA2B_Pb_bsq_PL\PLval_WithFit_3D_Pb.pdf} \\
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ImA2B_Pb_bsq_PL\PLval_WithFit_3D_bsq.pdf} \\
+    \end{tabular}
+    \caption{Fit for $\tAmp_{2B}^{\text{Im}}$ for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ in the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space, with the global simultaneous fit overlaid. Top: against $(\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi)$ for each $b^2/a^2$; bottom: against $b^2/a^2$ for each $(\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi)$.}
+    \label{fig:A2Bim_amplitudes_fit_Pb_P1}
+\end{figure}
+
+% ---- Re A_12B ----
+\begin{figure}[H]
+    \centering
+    \begin{tabular}{c}
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ReA12B_PL\PLval_WithFit_3D_bL.pdf} \\
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ReA12B_PL\PLval_WithFit_3D_bT.pdf} \\
+    \end{tabular}
+    \caption{Fit for $\tAmp_{12B}^{\text{Re}}$ for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ in the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, with the global simultaneous fit overlaid. Top: against $b_L/a$ for each $b_T/a$; bottom: against $b_T/a$ for each $b_L/a$.}
     \label{fig:A12Bre_amplitudes_fit_P1}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
     \begin{tabular}{c}
-        \includegraphics[width=0.9\linewidth]{plots/Amps_Fit/Combined_eta8_PL\PLval_WithFit_2D.pdf} \\
-        \includegraphics[width=0.9\linewidth]{plots/Amps_Fit/Combined_Pb_bsq_eta8_PL\PLval_WithFit_2D.pdf} \\
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ReA12B_Pb_bsq_PL\PLval_WithFit_3D_Pb.pdf} \\
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ReA12B_Pb_bsq_PL\PLval_WithFit_3D_bsq.pdf} \\
     \end{tabular}
-    \caption{Fit for $\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$ \& $\tAmp_{12B}^{\text{Re}}$ amplitudes for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ at a fixed staple extent $\eta|\vect{v}|/a=8$. The top two rows display the $(b_{L}/a,b_{T}/a)-$space, while the bottom two rows display the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2)-$space with the fit.}
+    \caption{Fit for $\tAmp_{12B}^{\text{Re}}$ for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ in the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space, with the global simultaneous fit overlaid. Top: against $(\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi)$ for each $b^2/a^2$; bottom: against $b^2/a^2$ for each $(\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi)$.}
+    \label{fig:A12Bre_amplitudes_fit_Pb_P1}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{tabular}{c}
+        \includegraphics[width=1\linewidth]{plots/Amps_Fit/ReA2B_eta8_PL\PLval_WithFit_2D.pdf} \\
+        \includegraphics[width=1\linewidth]{plots/Amps_Fit/ReA2B_Pb_bsq_eta8_PL\PLval_WithFit_2D.pdf} \\
+    \end{tabular}
+    \caption{Fit for $\tAmp_{2B}^{\text{Re}}$ for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ at a fixed staple extent $\eta|\vect{v}|/a=8$. The top row displays the $(b_{L}/a,b_{T}/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2)-$space with the fit.}
+    \label{fig:A2B_fit_eta8_P1}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{tabular}{c}
+        \includegraphics[width=1\linewidth]{plots/Amps_Fit/ImA2B_eta8_PL\PLval_WithFit_2D.pdf} \\
+        \includegraphics[width=1\linewidth]{plots/Amps_Fit/ImA2B_Pb_bsq_eta8_PL\PLval_WithFit_2D.pdf} \\
+    \end{tabular}
+    \caption{Fit for $\tAmp_{2B}^{\text{Im}}$ for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ at a fixed staple extent $\eta|\vect{v}|/a=8$. The top row displays the $(b_{L}/a,b_{T}/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2)-$space with the fit.}
+    \label{fig:A2Bim_fit_eta8_P1}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{tabular}{c}
+        \includegraphics[width=1\linewidth]{plots/Amps_Fit/ReA12B_eta8_PL\PLval_WithFit_2D.pdf} \\
+        \includegraphics[width=1\linewidth]{plots/Amps_Fit/ReA12B_Pb_bsq_eta8_PL\PLval_WithFit_2D.pdf} \\
+    \end{tabular}
+    \caption{Fit for $\tAmp_{12B}^{\text{Re}}$ for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ at a fixed staple extent $\eta|\vect{v}|/a=8$. The top row displays the $(b_{L}/a,b_{T}/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2)-$space with the fit.}
     \label{fig:combined_fit_P1}
 \end{figure}
 
@@ -487,42 +543,98 @@ Figs.~\ref{fig:ft_xdep_2d_P1} and \ref{fig:ft_xdep_3d_P1} show the $x$-dependenc
 The extracted parameters from the simultaneous fit for the nucleon momentum, $P_1 = \PLval$ ($\hat{\zeta}=0.294367$), are in Table \ref{fit-para-P2}. 
 \input{SimultaneousFitsCov/Fit_Table_PL\PLval_bmin3}
 
-Figures \ref{fig:A2Bre_amplitudes_fit_P2}, \ref{fig:A2Bim_amplitudes_fit_P2}, \ref{fig:A12Bre_amplitudes_fit_P2}  and \ref{fig:combined_fit_P2} show the fit on lattice data, and Figures \ref{fig:ft_xdep_2d_P2} and \ref{fig:ft_xdep_3d_P2} show the resulting $x$-dependence.
+Figures~\ref{fig:A2Bre_amplitudes_fit_P2}--\ref{fig:combined_fit_P2} show the fit on lattice data, and Figures \ref{fig:ft_xdep_2d_P2} and \ref{fig:ft_xdep_3d_P2} show the resulting $x$-dependence.
 % ---- Re A_2B ----
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\linewidth]{plots/Amps_Fit/ReA2B_PL\PLval_WithFit_3D.pdf}\\[2ex]
-    \includegraphics[width=0.7\linewidth]{plots/Amps_Fit/ReA2B_Pb_bsq_PL\PLval_WithFit_3D.pdf}
-    \caption{Fit for $\tAmp_{2B}^{\text{Re}}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space with the global simultaneous fit overlaid.}
+    \begin{tabular}{c}
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ReA2B_PL\PLval_WithFit_3D_bL.pdf} \\
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ReA2B_PL\PLval_WithFit_3D_bT.pdf} \\
+    \end{tabular}
+    \caption{Fit for $\tAmp_{2B}^{\text{Re}}$ for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ in the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, with the global simultaneous fit overlaid. Top: against $b_L/a$ for each $b_T/a$; bottom: against $b_T/a$ for each $b_L/a$.}
     \label{fig:A2Bre_amplitudes_fit_P2}
 \end{figure}
 
-% ---- Im A_2B ----
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\linewidth]{plots/Amps_Fit/ImA2B_PL\PLval_WithFit_3D.pdf}\\[2ex]
-    \includegraphics[width=0.7\linewidth]{plots/Amps_Fit/ImA2B_Pb_bsq_PL\PLval_WithFit_3D.pdf}
-    \caption{Fit for $\tAmp_{2B}^{\text{Im}}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space with the global simultaneous fit overlaid.}
+    \begin{tabular}{c}
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ReA2B_Pb_bsq_PL\PLval_WithFit_3D_Pb.pdf} \\
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ReA2B_Pb_bsq_PL\PLval_WithFit_3D_bsq.pdf} \\
+    \end{tabular}
+    \caption{Fit for $\tAmp_{2B}^{\text{Re}}$ for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ in the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space, with the global simultaneous fit overlaid. Top: against $(\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi)$ for each $b^2/a^2$; bottom: against $b^2/a^2$ for each $(\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi)$.}
+    \label{fig:A2Bre_amplitudes_fit_Pb_P2}
+\end{figure}
+
+% ---- Im A_2B ----
+\begin{figure}[H]
+    \centering
+    \begin{tabular}{c}
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ImA2B_PL\PLval_WithFit_3D_bL.pdf} \\
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ImA2B_PL\PLval_WithFit_3D_bT.pdf} \\
+    \end{tabular}
+    \caption{Fit for $\tAmp_{2B}^{\text{Im}}$ for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ in the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, with the global simultaneous fit overlaid. Top: against $b_L/a$ for each $b_T/a$; bottom: against $b_T/a$ for each $b_L/a$.}
     \label{fig:A2Bim_amplitudes_fit_P2}
 \end{figure}
 
-% ---- Re A_12B ----
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\linewidth]{plots/Amps_Fit/ReA12B_PL\PLval_WithFit_3D.pdf}\\[2ex]
-    \includegraphics[width=0.7\linewidth]{plots/Amps_Fit/ReA12B_Pb_bsq_PL\PLval_WithFit_3D.pdf}
-    \caption{Fit for $\tAmp_{12B}^{\text{Re}}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space with the global simultaneous fit overlaid.}
+    \begin{tabular}{c}
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ImA2B_Pb_bsq_PL\PLval_WithFit_3D_Pb.pdf} \\
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ImA2B_Pb_bsq_PL\PLval_WithFit_3D_bsq.pdf} \\
+    \end{tabular}
+    \caption{Fit for $\tAmp_{2B}^{\text{Im}}$ for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ in the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space, with the global simultaneous fit overlaid. Top: against $(\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi)$ for each $b^2/a^2$; bottom: against $b^2/a^2$ for each $(\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi)$.}
+    \label{fig:A2Bim_amplitudes_fit_Pb_P2}
+\end{figure}
+
+% ---- Re A_12B ----
+\begin{figure}[H]
+    \centering
+    \begin{tabular}{c}
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ReA12B_PL\PLval_WithFit_3D_bL.pdf} \\
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ReA12B_PL\PLval_WithFit_3D_bT.pdf} \\
+    \end{tabular}
+    \caption{Fit for $\tAmp_{12B}^{\text{Re}}$ for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ in the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, with the global simultaneous fit overlaid. Top: against $b_L/a$ for each $b_T/a$; bottom: against $b_T/a$ for each $b_L/a$.}
     \label{fig:A12Bre_amplitudes_fit_P2}
 \end{figure}
 
-
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
     \begin{tabular}{c}
-        \includegraphics[width=0.9\linewidth]{plots/Amps_Fit/Combined_eta8_PL\PLval_WithFit_2D.pdf} \\
-        \includegraphics[width=0.9\linewidth]{plots/Amps_Fit/Combined_Pb_bsq_eta8_PL\PLval_WithFit_2D.pdf} \\
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ReA12B_Pb_bsq_PL\PLval_WithFit_3D_Pb.pdf} \\
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ReA12B_Pb_bsq_PL\PLval_WithFit_3D_bsq.pdf} \\
     \end{tabular}
-    \caption{Fit for $\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$ \& $\tAmp_{12B}^{\text{Re}}$ amplitudes for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ at a fixed staple extent $\eta|\vect{v}|/a=8$. The top two rows display the $(b_{L}/a,b_{T}/a)-$space, while the bottom two rows display the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2)-$space with the fit.}
+    \caption{Fit for $\tAmp_{12B}^{\text{Re}}$ for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ in the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space, with the global simultaneous fit overlaid. Top: against $(\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi)$ for each $b^2/a^2$; bottom: against $b^2/a^2$ for each $(\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi)$.}
+    \label{fig:A12Bre_amplitudes_fit_Pb_P2}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \begin{tabular}{c}
+        \includegraphics[width=1\linewidth]{plots/Amps_Fit/ReA2B_eta8_PL\PLval_WithFit_2D.pdf} \\
+        \includegraphics[width=1\linewidth]{plots/Amps_Fit/ReA2B_Pb_bsq_eta8_PL\PLval_WithFit_2D.pdf} \\
+    \end{tabular}
+    \caption{Fit for $\tAmp_{2B}^{\text{Re}}$ for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ at a fixed staple extent $\eta|\vect{v}|/a=8$. The top row displays the $(b_{L}/a,b_{T}/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2)-$space with the fit.}
+    \label{fig:A2B_fit_eta8_P2}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{tabular}{c}
+        \includegraphics[width=1\linewidth]{plots/Amps_Fit/ImA2B_eta8_PL\PLval_WithFit_2D.pdf} \\
+        \includegraphics[width=1\linewidth]{plots/Amps_Fit/ImA2B_Pb_bsq_eta8_PL\PLval_WithFit_2D.pdf} \\
+    \end{tabular}
+    \caption{Fit for $\tAmp_{2B}^{\text{Im}}$ for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ at a fixed staple extent $\eta|\vect{v}|/a=8$. The top row displays the $(b_{L}/a,b_{T}/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2)-$space with the fit.}
+    \label{fig:A2Bim_fit_eta8_P2}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{tabular}{c}
+        \includegraphics[width=1\linewidth]{plots/Amps_Fit/ReA12B_eta8_PL\PLval_WithFit_2D.pdf} \\
+        \includegraphics[width=1\linewidth]{plots/Amps_Fit/ReA12B_Pb_bsq_eta8_PL\PLval_WithFit_2D.pdf} \\
+    \end{tabular}
+    \caption{Fit for $\tAmp_{12B}^{\text{Re}}$ for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ at a fixed staple extent $\eta|\vect{v}|/a=8$. The top row displays the $(b_{L}/a,b_{T}/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2)-$space with the fit.}
     \label{fig:combined_fit_P2}
 \end{figure}
 
@@ -553,42 +665,98 @@ Figs.~\ref{fig:ft_xdep_2d_P2} and \ref{fig:ft_xdep_3d_P2} show the $x$-dependenc
 The extracted parameters from the simultaneous fit for the nucleon momentum, $P_1 = \PLval$ ($\hat{\zeta}=0.539684$), are in Table \ref{fit-para-P3}. 
 \input{SimultaneousFitsCov/Fit_Table_PL\PLval_bmin3}
 
-Figures \ref{fig:A2Bre_amplitudes_fit_P3}, \ref{fig:A2Bim_amplitudes_fit_P3}, \ref{fig:A12Bre_amplitudes_fit_P3}  and \ref{fig:combined_fit_P3} show the fit on lattice data, and Figures \ref{fig:ft_xdep_2d_P3} and \ref{fig:ft_xdep_3d_P3} show the resulting $x$-dependence.
+Figures~\ref{fig:A2Bre_amplitudes_fit_P3}--\ref{fig:combined_fit_P3} show the fit on lattice data, and Figures \ref{fig:ft_xdep_2d_P3} and \ref{fig:ft_xdep_3d_P3} show the resulting $x$-dependence.
 % ---- Re A_2B ----
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\linewidth]{plots/Amps_Fit/ReA2B_PL\PLval_WithFit_3D.pdf}\\[2ex]
-    \includegraphics[width=0.7\linewidth]{plots/Amps_Fit/ReA2B_Pb_bsq_PL\PLval_WithFit_3D.pdf}
-    \caption{Fit for $\tAmp_{2B}^{\text{Re}}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space with the global simultaneous fit overlaid.}
+    \begin{tabular}{c}
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ReA2B_PL\PLval_WithFit_3D_bL.pdf} \\
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ReA2B_PL\PLval_WithFit_3D_bT.pdf} \\
+    \end{tabular}
+    \caption{Fit for $\tAmp_{2B}^{\text{Re}}$ for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ in the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, with the global simultaneous fit overlaid. Top: against $b_L/a$ for each $b_T/a$; bottom: against $b_T/a$ for each $b_L/a$.}
     \label{fig:A2Bre_amplitudes_fit_P3}
 \end{figure}
 
-% ---- Im A_2B ----
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\linewidth]{plots/Amps_Fit/ImA2B_PL\PLval_WithFit_3D.pdf}\\[2ex]
-    \includegraphics[width=0.7\linewidth]{plots/Amps_Fit/ImA2B_Pb_bsq_PL\PLval_WithFit_3D.pdf}
-    \caption{Fit for $\tAmp_{2B}^{\text{Im}}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space with the global simultaneous fit overlaid.}
+    \begin{tabular}{c}
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ReA2B_Pb_bsq_PL\PLval_WithFit_3D_Pb.pdf} \\
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ReA2B_Pb_bsq_PL\PLval_WithFit_3D_bsq.pdf} \\
+    \end{tabular}
+    \caption{Fit for $\tAmp_{2B}^{\text{Re}}$ for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ in the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space, with the global simultaneous fit overlaid. Top: against $(\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi)$ for each $b^2/a^2$; bottom: against $b^2/a^2$ for each $(\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi)$.}
+    \label{fig:A2Bre_amplitudes_fit_Pb_P3}
+\end{figure}
+
+% ---- Im A_2B ----
+\begin{figure}[H]
+    \centering
+    \begin{tabular}{c}
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ImA2B_PL\PLval_WithFit_3D_bL.pdf} \\
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ImA2B_PL\PLval_WithFit_3D_bT.pdf} \\
+    \end{tabular}
+    \caption{Fit for $\tAmp_{2B}^{\text{Im}}$ for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ in the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, with the global simultaneous fit overlaid. Top: against $b_L/a$ for each $b_T/a$; bottom: against $b_T/a$ for each $b_L/a$.}
     \label{fig:A2Bim_amplitudes_fit_P3}
 \end{figure}
 
-% ---- Re A_12B ----
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\linewidth]{plots/Amps_Fit/ReA12B_PL\PLval_WithFit_3D.pdf}\\[2ex]
-    \includegraphics[width=0.7\linewidth]{plots/Amps_Fit/ReA12B_Pb_bsq_PL\PLval_WithFit_3D.pdf}
-    \caption{Fit for $\tAmp_{12B}^{\text{Re}}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space with the global simultaneous fit overlaid.}
+    \begin{tabular}{c}
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ImA2B_Pb_bsq_PL\PLval_WithFit_3D_Pb.pdf} \\
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ImA2B_Pb_bsq_PL\PLval_WithFit_3D_bsq.pdf} \\
+    \end{tabular}
+    \caption{Fit for $\tAmp_{2B}^{\text{Im}}$ for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ in the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space, with the global simultaneous fit overlaid. Top: against $(\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi)$ for each $b^2/a^2$; bottom: against $b^2/a^2$ for each $(\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi)$.}
+    \label{fig:A2Bim_amplitudes_fit_Pb_P3}
+\end{figure}
+
+% ---- Re A_12B ----
+\begin{figure}[H]
+    \centering
+    \begin{tabular}{c}
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ReA12B_PL\PLval_WithFit_3D_bL.pdf} \\
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ReA12B_PL\PLval_WithFit_3D_bT.pdf} \\
+    \end{tabular}
+    \caption{Fit for $\tAmp_{12B}^{\text{Re}}$ for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ in the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, with the global simultaneous fit overlaid. Top: against $b_L/a$ for each $b_T/a$; bottom: against $b_T/a$ for each $b_L/a$.}
     \label{fig:A12Bre_amplitudes_fit_P3}
 \end{figure}
 
-
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
     \begin{tabular}{c}
-        \includegraphics[width=0.9\linewidth]{plots/Amps_Fit/Combined_eta8_PL\PLval_WithFit_2D.pdf} \\
-        \includegraphics[width=0.9\linewidth]{plots/Amps_Fit/Combined_Pb_bsq_eta8_PL\PLval_WithFit_2D.pdf} \\
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ReA12B_Pb_bsq_PL\PLval_WithFit_3D_Pb.pdf} \\
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ReA12B_Pb_bsq_PL\PLval_WithFit_3D_bsq.pdf} \\
     \end{tabular}
-    \caption{Fit for $\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$ \& $\tAmp_{12B}^{\text{Re}}$ amplitudes for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ at a fixed staple extent $\eta|\vect{v}|/a=8$. The top two rows display the $(b_{L}/a,b_{T}/a)-$space, while the bottom two rows display the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2)-$space with the fit.}
+    \caption{Fit for $\tAmp_{12B}^{\text{Re}}$ for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ in the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space, with the global simultaneous fit overlaid. Top: against $(\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi)$ for each $b^2/a^2$; bottom: against $b^2/a^2$ for each $(\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi)$.}
+    \label{fig:A12Bre_amplitudes_fit_Pb_P3}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \begin{tabular}{c}
+        \includegraphics[width=1\linewidth]{plots/Amps_Fit/ReA2B_eta8_PL\PLval_WithFit_2D.pdf} \\
+        \includegraphics[width=1\linewidth]{plots/Amps_Fit/ReA2B_Pb_bsq_eta8_PL\PLval_WithFit_2D.pdf} \\
+    \end{tabular}
+    \caption{Fit for $\tAmp_{2B}^{\text{Re}}$ for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ at a fixed staple extent $\eta|\vect{v}|/a=8$. The top row displays the $(b_{L}/a,b_{T}/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2)-$space with the fit.}
+    \label{fig:A2B_fit_eta8_P3}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{tabular}{c}
+        \includegraphics[width=1\linewidth]{plots/Amps_Fit/ImA2B_eta8_PL\PLval_WithFit_2D.pdf} \\
+        \includegraphics[width=1\linewidth]{plots/Amps_Fit/ImA2B_Pb_bsq_eta8_PL\PLval_WithFit_2D.pdf} \\
+    \end{tabular}
+    \caption{Fit for $\tAmp_{2B}^{\text{Im}}$ for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ at a fixed staple extent $\eta|\vect{v}|/a=8$. The top row displays the $(b_{L}/a,b_{T}/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2)-$space with the fit.}
+    \label{fig:A2Bim_fit_eta8_P3}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{tabular}{c}
+        \includegraphics[width=1\linewidth]{plots/Amps_Fit/ReA12B_eta8_PL\PLval_WithFit_2D.pdf} \\
+        \includegraphics[width=1\linewidth]{plots/Amps_Fit/ReA12B_Pb_bsq_eta8_PL\PLval_WithFit_2D.pdf} \\
+    \end{tabular}
+    \caption{Fit for $\tAmp_{12B}^{\text{Re}}$ for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ at a fixed staple extent $\eta|\vect{v}|/a=8$. The top row displays the $(b_{L}/a,b_{T}/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2)-$space with the fit.}
     \label{fig:combined_fit_P3}
 \end{figure}
 
@@ -620,42 +788,98 @@ Figs.~\ref{fig:ft_xdep_2d_P3} and \ref{fig:ft_xdep_3d_P3} show the $x$-dependenc
 The extracted parameters from the simultaneous fit for the nucleon momentum, $P_1 = \PLval$ ($\hat{\zeta}=0.785756$), are in Table \ref{fit-para-P4}. 
 \input{SimultaneousFitsCov/Fit_Table_PL\PLval_bmin3}
 
-Figures \ref{fig:A2Bre_amplitudes_fit_P4}, \ref{fig:A2Bim_amplitudes_fit_P4}, \ref{fig:A12Bre_amplitudes_fit_P4}  and \ref{fig:combined_fit_P4} show the fit on lattice data, and Figures \ref{fig:ft_xdep_2d_P4} and \ref{fig:ft_xdep_3d_P4} show the resulting $x$-dependence.
+Figures~\ref{fig:A2Bre_amplitudes_fit_P4}--\ref{fig:combined_fit_P4} show the fit on lattice data, and Figures \ref{fig:ft_xdep_2d_P4} and \ref{fig:ft_xdep_3d_P4} show the resulting $x$-dependence.
 % ---- Re A_2B ----
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\linewidth]{plots/Amps_Fit/ReA2B_PL\PLval_WithFit_3D.pdf}\\[2ex]
-    \includegraphics[width=0.7\linewidth]{plots/Amps_Fit/ReA2B_Pb_bsq_PL\PLval_WithFit_3D.pdf}
-    \caption{Fit for $\tAmp_{2B}^{\text{Re}}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space with the global simultaneous fit overlaid.}
+    \begin{tabular}{c}
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ReA2B_PL\PLval_WithFit_3D_bL.pdf} \\
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ReA2B_PL\PLval_WithFit_3D_bT.pdf} \\
+    \end{tabular}
+    \caption{Fit for $\tAmp_{2B}^{\text{Re}}$ for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ in the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, with the global simultaneous fit overlaid. Top: against $b_L/a$ for each $b_T/a$; bottom: against $b_T/a$ for each $b_L/a$.}
     \label{fig:A2Bre_amplitudes_fit_P4}
 \end{figure}
 
-% ---- Im A_2B ----
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\linewidth]{plots/Amps_Fit/ImA2B_PL\PLval_WithFit_3D.pdf}\\[2ex]
-    \includegraphics[width=0.7\linewidth]{plots/Amps_Fit/ImA2B_Pb_bsq_PL\PLval_WithFit_3D.pdf}
-    \caption{Fit for $\tAmp_{2B}^{\text{Im}}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space with the global simultaneous fit overlaid.}
+    \begin{tabular}{c}
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ReA2B_Pb_bsq_PL\PLval_WithFit_3D_Pb.pdf} \\
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ReA2B_Pb_bsq_PL\PLval_WithFit_3D_bsq.pdf} \\
+    \end{tabular}
+    \caption{Fit for $\tAmp_{2B}^{\text{Re}}$ for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ in the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space, with the global simultaneous fit overlaid. Top: against $(\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi)$ for each $b^2/a^2$; bottom: against $b^2/a^2$ for each $(\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi)$.}
+    \label{fig:A2Bre_amplitudes_fit_Pb_P4}
+\end{figure}
+
+% ---- Im A_2B ----
+\begin{figure}[H]
+    \centering
+    \begin{tabular}{c}
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ImA2B_PL\PLval_WithFit_3D_bL.pdf} \\
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ImA2B_PL\PLval_WithFit_3D_bT.pdf} \\
+    \end{tabular}
+    \caption{Fit for $\tAmp_{2B}^{\text{Im}}$ for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ in the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, with the global simultaneous fit overlaid. Top: against $b_L/a$ for each $b_T/a$; bottom: against $b_T/a$ for each $b_L/a$.}
     \label{fig:A2Bim_amplitudes_fit_P4}
 \end{figure}
 
-% ---- Re A_12B ----
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\linewidth]{plots/Amps_Fit/ReA12B_PL\PLval_WithFit_3D.pdf}\\[2ex]
-    \includegraphics[width=0.7\linewidth]{plots/Amps_Fit/ReA12B_Pb_bsq_PL\PLval_WithFit_3D.pdf}
-    \caption{Fit for $\tAmp_{12B}^{\text{Re}}$ amplitude for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$. The top row displays the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space with the global simultaneous fit overlaid.}
+    \begin{tabular}{c}
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ImA2B_Pb_bsq_PL\PLval_WithFit_3D_Pb.pdf} \\
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ImA2B_Pb_bsq_PL\PLval_WithFit_3D_bsq.pdf} \\
+    \end{tabular}
+    \caption{Fit for $\tAmp_{2B}^{\text{Im}}$ for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ in the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space, with the global simultaneous fit overlaid. Top: against $(\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi)$ for each $b^2/a^2$; bottom: against $b^2/a^2$ for each $(\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi)$.}
+    \label{fig:A2Bim_amplitudes_fit_Pb_P4}
+\end{figure}
+
+% ---- Re A_12B ----
+\begin{figure}[H]
+    \centering
+    \begin{tabular}{c}
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ReA12B_PL\PLval_WithFit_3D_bL.pdf} \\
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ReA12B_PL\PLval_WithFit_3D_bT.pdf} \\
+    \end{tabular}
+    \caption{Fit for $\tAmp_{12B}^{\text{Re}}$ for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ in the $(b_{L}/a,b_{T}/a,\eta|\vect{v}|/a)-$space, with the global simultaneous fit overlaid. Top: against $b_L/a$ for each $b_T/a$; bottom: against $b_T/a$ for each $b_L/a$.}
     \label{fig:A12Bre_amplitudes_fit_P4}
 \end{figure}
 
-
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
     \begin{tabular}{c}
-        \includegraphics[width=0.9\linewidth]{plots/Amps_Fit/Combined_eta8_PL\PLval_WithFit_2D.pdf} \\
-        \includegraphics[width=0.9\linewidth]{plots/Amps_Fit/Combined_Pb_bsq_eta8_PL\PLval_WithFit_2D.pdf} \\
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ReA12B_Pb_bsq_PL\PLval_WithFit_3D_Pb.pdf} \\
+        \includegraphics[width=0.8\linewidth]{plots/Amps_Fit/ReA12B_Pb_bsq_PL\PLval_WithFit_3D_bsq.pdf} \\
     \end{tabular}
-    \caption{Fit for $\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$ \& $\tAmp_{12B}^{\text{Re}}$ amplitudes for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ at a fixed staple extent $\eta|\vect{v}|/a=8$. The top two rows display the $(b_{L}/a,b_{T}/a)-$space, while the bottom two rows display the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2)-$space with the fit.}
+    \caption{Fit for $\tAmp_{12B}^{\text{Re}}$ for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ in the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2,\eta|\vect{v}|/a)-$space, with the global simultaneous fit overlaid. Top: against $(\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi)$ for each $b^2/a^2$; bottom: against $b^2/a^2$ for each $(\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi)$.}
+    \label{fig:A12Bre_amplitudes_fit_Pb_P4}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \begin{tabular}{c}
+        \includegraphics[width=1\linewidth]{plots/Amps_Fit/ReA2B_eta8_PL\PLval_WithFit_2D.pdf} \\
+        \includegraphics[width=1\linewidth]{plots/Amps_Fit/ReA2B_Pb_bsq_eta8_PL\PLval_WithFit_2D.pdf} \\
+    \end{tabular}
+    \caption{Fit for $\tAmp_{2B}^{\text{Re}}$ for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ at a fixed staple extent $\eta|\vect{v}|/a=8$. The top row displays the $(b_{L}/a,b_{T}/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2)-$space with the fit.}
+    \label{fig:A2B_fit_eta8_P4}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{tabular}{c}
+        \includegraphics[width=1\linewidth]{plots/Amps_Fit/ImA2B_eta8_PL\PLval_WithFit_2D.pdf} \\
+        \includegraphics[width=1\linewidth]{plots/Amps_Fit/ImA2B_Pb_bsq_eta8_PL\PLval_WithFit_2D.pdf} \\
+    \end{tabular}
+    \caption{Fit for $\tAmp_{2B}^{\text{Im}}$ for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ at a fixed staple extent $\eta|\vect{v}|/a=8$. The top row displays the $(b_{L}/a,b_{T}/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2)-$space with the fit.}
+    \label{fig:A2Bim_fit_eta8_P4}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{tabular}{c}
+        \includegraphics[width=1\linewidth]{plots/Amps_Fit/ReA12B_eta8_PL\PLval_WithFit_2D.pdf} \\
+        \includegraphics[width=1\linewidth]{plots/Amps_Fit/ReA12B_Pb_bsq_eta8_PL\PLval_WithFit_2D.pdf} \\
+    \end{tabular}
+    \caption{Fit for $\tAmp_{12B}^{\text{Re}}$ for $\vect{P}\cdot a\hat{L}/(2\pi)=\{\PLval,0,0\}$ at a fixed staple extent $\eta|\vect{v}|/a=8$. The top row displays the $(b_{L}/a,b_{T}/a)-$space, while the bottom row displays the $((\vect{P}\cdot \vect{b})\cdot\hat{L}/(2\pi),b^{2}/a^2)-$space with the fit.}
     \label{fig:combined_fit_P4}
 \end{figure}
 
