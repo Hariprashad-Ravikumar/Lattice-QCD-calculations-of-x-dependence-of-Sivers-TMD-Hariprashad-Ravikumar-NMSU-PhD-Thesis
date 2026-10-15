@@ -103,9 +103,9 @@
 \contentsline {subsubsection}{\numberline {7.3.3}Quantifying the Distance from a Factorized Form}{181}{subsubsection.7.3.3}%
 \contentsline {subsubsection}{\numberline {7.3.4}Factorization Test for the Sivers Shift}{182}{subsubsection.7.3.4}%
 \contentsline {subsubsection}{\numberline {7.3.5}Factorization Test at the Amplitude Level}{187}{subsubsection.7.3.5}%
-\contentsline {section}{\numberline {8}CONCLUSION AND OUTLOOK}{192}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Summary}{192}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Main results}{193}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Outlook}{193}{subsection.8.3}%
-\contentsline {section}{\numberline {A}QLUA: Gamma $\Gamma (n)$}{195}{appendix.A}%
-\contentsline {section}{REFERENCES}{196}{section*.131}%
+\contentsline {section}{\numberline {8}CONCLUSION AND OUTLOOK}{193}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Summary}{193}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Main results}{194}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Outlook}{194}{subsection.8.3}%
+\contentsline {section}{\numberline {A}QLUA: Gamma $\Gamma (n)$}{196}{appendix.A}%
+\contentsline {section}{REFERENCES}{197}{section*.131}%

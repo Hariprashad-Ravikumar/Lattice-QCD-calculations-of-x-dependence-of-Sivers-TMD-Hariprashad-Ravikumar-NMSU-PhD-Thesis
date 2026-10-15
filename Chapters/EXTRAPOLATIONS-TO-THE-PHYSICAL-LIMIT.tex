@@ -17,7 +17,7 @@ or an infinite rapidity $y_v\rightarrow -\infty$ in Eq.~(\ref{eq-zeta}).
 Figures~\ref{fig:zetahat_discrete_slices_amps}--\ref{fig:zetahat_discrete_slices_sivers} show why we need this extrapolation. At fixed transverse quark separation $|b_T| = 3a \approx 0.34$ fm, we evaluate the reconstructed amplitudes $\tAmp^{[x]\text{Re}}_{2B}$ and $\tAmp^{[x]\text{Im}}_{2B}$, the corresponding unpolarized and Sivers TMD combinations $\tilde f_1^{(0)} = 2\tAmp^{[x]}_{2B}$ and $\tilde f_{1T}^{\perp(1)} = -2\tAmp^{[x]\text{Re}}_{12B}$, and the resulting Sivers shift $\langle k_y \rangle_{TU}$ and $x\langle k_y \rangle_{TU}$, as continuous functions of $x$ at each of our four simulated momenta. Plotted against $1/\hat\zeta$, all six quantities vary systematically with the momentum. 
 
 For the Sivers shift defined in Eq.~(\ref{eq-genSivShift}), 
-where the soft factors in the TMD definitions \cite{Ji:2004wu,Aybat:2011zv,CollinsBook2011}
+where the soft factors in the TMD definitions~\cite{Ji:2004wu,Aybat:2011zv,CollinsBook2011}
 cancel out, large values of $\hat\zeta$ can also be accessed through large nucleon momenta.
 Clearly, the limit of an infinite Collins-Soper parameter is in practice not accessible on the lattice, so that
 we must rely on results for a limited range of $\hat \zeta$, as in Figures~\ref{fig:zetahat_discrete_slices_amps}--\ref{fig:zetahat_discrete_slices_sivers}.
@@ -47,7 +47,7 @@ The lowest simulated momentum, $P_L=-1$ ($\hat\zeta = 0.090772$), lies at $1/\ha
 
 Rather than extrapolate the amplitudes point by point in $x$, we extrapolate each of the twelve parameters of the global simultaneous-fit models directly: the four parameters $\{a,c,d,j\}$ appearing in each of the power-law models for $\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$, and $\tAmp_{12B}^{\text{Re}}$ (Eq.~(\ref{eq:model_ReA2B})-(\ref{eq:model_ImA2B})).
 % TODO(Hari): the global fit also has f, k1, k2 (Fit_Table_PL-1). State how they enter the extrapolation (f cancels in the Sivers shift, but what about the amplitude plots, and how is c(eta) with k1, k2 evaluated?).
-In these models $c$ multiplies $b_L^2 = (P\cdot b)^2/P_L^2$ and $a_{\text{im}}$ multiplies $b_L = (P\cdot b)/(-P_L)$, so the parameters $c_{\text{re}}$, $c_{\text{im}}$, and $c_{\text{reA12B}}$ are first rescaled by $1/P_L^2$ and $a_{\text{im}}$ by $1/P_L$. After rescaling, they multiply powers of the invariant $P\cdot b$ directly (up to an overall sign for $a_{\text{im}}$), so all three momenta can be fit on a common footing. For the resulting $\hat\zeta$-dependence of each rescaled parameter, we tested two functional forms (as explored in \cite{Engelhardt:2015xja}),
+In these models $c$ multiplies $b_L^2 = (P\cdot b)^2/P_L^2$ and $a_{\text{im}}$ multiplies $b_L = (P\cdot b)/(-P_L)$, so the parameters $c_{\text{re}}$, $c_{\text{im}}$, and $c_{\text{reA12B}}$ are first rescaled by $1/P_L^2$ and $a_{\text{im}}$ by $1/P_L$. After rescaling, they multiply powers of the invariant $P\cdot b$ directly (up to an overall sign for $a_{\text{im}}$), so all three momenta can be fit on a common footing. For the resulting $\hat\zeta$-dependence of each rescaled parameter, we tested two functional forms (as explored in Ref.~\cite{Musch:2011er}),
 \begin{equation}
     p(\hat\zeta) = c + \frac{d}{\hat\zeta} \qquad \text{and} \qquad p(\hat\zeta) = c + \frac{d}{\hat\zeta^2} ,
     \label{eq:zetahat_extrap_ansatz}
@@ -210,7 +210,7 @@ Figures~\ref{fig:extrapolated_amplitude_3d_amps} and~\ref{fig:extrapolated_ampli
 \begin{equation}
     \langle k_y \rangle_{TU}(x,|b_T|) \overset{?}{=} F(x)\,G(|b_T|) \ ,
 \end{equation}
-with all of the $x$-shape carried by $F(x)$ and all of the $|b_T|$-shape by $G(|b_T|)$. Such a factorization is not automatic in our fit ansatz for $\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$, and $\tAmp_{12B}^{\text{Re}}$ (Eq.~(\ref{eq:model_ReA2B})-(\ref{eq:model_ImA2B})). After Fourier transformation, each amplitude enters only through the combination $d_X(b^2) = 1 + d_X\,b^2$ inside a Bessel function that also carries the $x$-dependence,
+with all of the $x$-shape carried by $F(x)$ and all of the $|b_T|$-shape by $G(|b_T|)$. A recent symbolic-regression extraction of the non-perturbative unpolarized TMD from Drell--Yan data finds a mild but genuine correlation between $x$ and $b_T$ rather than strict separability~\cite{Granger:2026symb}, so the question is worth testing directly on the lattice. Such a factorization is not automatic in our fit ansatz for $\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$, and $\tAmp_{12B}^{\text{Re}}$ (Eq.~(\ref{eq:model_ReA2B})-(\ref{eq:model_ImA2B})). After Fourier transformation, each amplitude enters only through the combination $d_X(b^2) = 1 + d_X\,b^2$ inside a Bessel function that also carries the $x$-dependence,
 \begin{equation}
     \tAmp^{[x]}_X(x,b^2) \ \propto\ N_X(b^2)\ |x|^{-1/2+j_X}\ K_{\nu_X}\!\left(|x|\sqrt{d_X(b^2)/c_X}\right) \ ,
 \end{equation}
@@ -379,5 +379,7 @@ Every amplitude has a nonzero relative distance from factorized form in every wi
 \end{figure}
 
 The Sivers-shift and amplitude-level tests agree. Neither the individual amplitudes nor the Sivers-shift ratio built from them is exactly factorized in $x$ and $|b_T|$, but the deviation from a factorized form is a modest, well-resolved residual and not a qualitative failure. The Sivers shift itself is factorized to within roughly $5.7$-$7.6\%$ in the relative $L_2$ sense. This is smaller than the $8$-$19\%$ residuals of the amplitudes that enter it, which points to a partial cancellation of non-factorized behavior in the ratio. The residual traces back directly to the extrapolated fit parameters: the Bessel-function order $j_{\text{im}}\approx1$ governing $\tAmp^{[x]\text{Im}}_{2B}$ differs from $j_{\text{re}},j_{\text{reA12B}}\approx2$ governing the two real amplitudes, and the three width parameters $d_X$ are likewise resolved from one another well outside their Jackknife uncertainties. We conclude that an exactly factorized ansatz $F(x)G(|b_T|)$ would be a good, but not exact, approximation to the extracted Sivers shift.
+
+This conclusion agrees qualitatively with the recent extraction of the non-perturbative unpolarized TMD from Drell--Yan data~\cite{Granger:2026symb}, in which an $x$--$b_T$ cross term survives a sparsity prior that pushes it toward zero. The two results are complementary rather than directly comparable. That extraction constrains the TMD for $b_T \lesssim 2.5$~GeV$^{-1}$ ($\approx 0.49$~fm), while our range $|b_T| = 0.34$--$0.94$~fm extends well beyond it, and our individual amplitudes are unrenormalized, so only the Sivers-shift ratio is a physical quantity. The comparison is therefore qualitative.
 
 \pagebreak
