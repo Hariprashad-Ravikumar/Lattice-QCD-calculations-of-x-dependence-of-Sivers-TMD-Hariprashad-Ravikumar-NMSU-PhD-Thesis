@@ -78,9 +78,9 @@
 \contentsline {subsubsection}{\numberline {5.9.4}Amplitude Profiles at $\hat {\zeta }=0.785756$ ($P_L = -4$)}{99}{subsubsection.5.9.4}%
 \contentsline {section}{\numberline {6}FITTING METHODOLOGIES AND STABILITY ANALYSIS}{105}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Failure of Simple Gaussian Model}{106}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Discretization Effects and Short-Distance Data Exclusion}{108}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.2}Discretization Effects and Short-Distance Data Exclusion}{107}{subsection.6.2}%
 \contentsline {subsection}{\numberline {6.3}Global fit in $(b_L,b_T,\eta )$ (equivalently in $(P\cdot b,b^2,\eta )$)}{109}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Physics-Informed Symbolic Regression via PySR}{110}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.4}Physics-Informed Symbolic Regression via PySR}{109}{subsection.6.4}%
 \contentsline {subsubsection}{\numberline {6.4.1}Expression Search and Configuration}{110}{subsubsection.6.4.1}%
 \contentsline {subsubsection}{\numberline {6.4.2}The Physics-Informed Custom Loss Function}{110}{subsubsection.6.4.2}%
 \contentsline {subsubsection}{\numberline {6.4.3}Pareto Front of Discovered Models}{112}{subsubsection.6.4.3}%
@@ -93,19 +93,19 @@
 \contentsline {subsubsection}{\numberline {6.8.3}Simultaneous Fit Results for $\hat {\zeta }=0.294367$ ($\ensuremath {\boldsymbol {P}}\cdot a\hat {L}/(2\pi )=\{-2,0,0\}$)}{135}{subsubsection.6.8.3}%
 \contentsline {subsubsection}{\numberline {6.8.4}Simultaneous Fit Results for $\hat {\zeta }=0.539684$ ($\ensuremath {\boldsymbol {P}}\cdot a\hat {L}/(2\pi )=\{-3,0,0\}$)}{140}{subsubsection.6.8.4}%
 \contentsline {subsubsection}{\numberline {6.8.5}Simultaneous Fit Results for $\hat {\zeta }=0.785756$ ($\ensuremath {\boldsymbol {P}}\cdot a\hat {L}/(2\pi )=\{-4,0,0\}$)}{145}{subsubsection.6.8.5}%
-\contentsline {subsection}{\numberline {6.9}Test for Factorization in $(P\cdot b)$ and $b^2$}{150}{subsection.6.9}%
-\contentsline {subsubsection}{\numberline {6.9.1}Ratio Test on the Lattice Data}{150}{subsubsection.6.9.1}%
-\contentsline {subsubsection}{\numberline {6.9.2}Rejection of Separable Longitudinal and Transverse Factorization}{153}{subsubsection.6.9.2}%
-\contentsline {section}{\numberline {7}EXTRAPOLATIONS TO THE PHYSICAL LIMIT}{157}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Motivation for the $\hat {\zeta } \to \infty $ Extrapolation}{157}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Extrapolation $\hat {\zeta } \to \infty $}{159}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Testing Factorization in $x$ and $|b_T|$ at $\hat {\zeta } \to \infty $}{165}{subsection.7.3}%
-\contentsline {subsubsection}{\numberline {7.3.1}Quantifying the Distance from a Factorized Form}{165}{subsubsection.7.3.1}%
-\contentsline {subsubsection}{\numberline {7.3.2}Factorization Test for the Sivers Shift}{166}{subsubsection.7.3.2}%
-\contentsline {subsubsection}{\numberline {7.3.3}Factorization Test at the Amplitude Level}{171}{subsubsection.7.3.3}%
-\contentsline {section}{\numberline {8}CONCLUSION AND OUTLOOK}{177}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Summary}{177}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Main results}{178}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Outlook}{178}{subsection.8.3}%
-\contentsline {section}{\numberline {A}QLUA: Gamma $\Gamma (n)$}{180}{appendix.A}%
-\contentsline {section}{REFERENCES}{181}{section*.123}%
+\contentsline {subsection}{\numberline {6.9}Separable Longitudinal and Transverse Models}{150}{subsection.6.9}%
+\contentsline {section}{\numberline {7}EXTRAPOLATIONS TO THE PHYSICAL LIMIT}{154}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Motivation for the $\hat {\zeta } \to \infty $ Extrapolation}{154}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Extrapolation $\hat {\zeta } \to \infty $}{156}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Testing Factorization in $x$ and $|b_T|$ at $\hat {\zeta } \to \infty $}{162}{subsection.7.3}%
+\contentsline {subsubsection}{\numberline {7.3.1}Ratio Test in $(P\cdot b, b^2)$ on the Lattice Data}{162}{subsubsection.7.3.1}%
+\contentsline {subsubsection}{\numberline {7.3.2}Factorization in $x$ and $|b_T|$ at $\hat {\zeta } \to \infty $}{164}{subsubsection.7.3.2}%
+\contentsline {subsubsection}{\numberline {7.3.3}Quantifying the Distance from a Factorized Form}{165}{subsubsection.7.3.3}%
+\contentsline {subsubsection}{\numberline {7.3.4}Factorization Test for the Sivers Shift}{166}{subsubsection.7.3.4}%
+\contentsline {subsubsection}{\numberline {7.3.5}Factorization Test at the Amplitude Level}{170}{subsubsection.7.3.5}%
+\contentsline {section}{\numberline {8}CONCLUSION AND OUTLOOK}{175}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Summary}{175}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Main results}{176}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Outlook}{176}{subsection.8.3}%
+\contentsline {section}{\numberline {A}QLUA: Gamma $\Gamma (n)$}{178}{appendix.A}%
+\contentsline {section}{REFERENCES}{179}{section*.123}%

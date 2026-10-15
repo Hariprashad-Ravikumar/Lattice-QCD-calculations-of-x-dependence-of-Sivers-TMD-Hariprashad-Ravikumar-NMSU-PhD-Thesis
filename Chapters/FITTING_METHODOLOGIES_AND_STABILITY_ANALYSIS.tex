@@ -7,7 +7,7 @@ We parameterize the amplitudes in the Cartesian space $(b_L, b_T)$ rather than t
 
 Section~\ref{sec:gaussian_transformation} shows that a simple Gaussian model fails for $\tAmp_{2B}^{\text{Re}}$ and makes the Fourier integral over $P\cdot b$ diverge. Section~\ref{sec:discretization_effects} removes the data with $|\vect{b}|<3a$, which contain discretization artifacts. Section~\ref{global-bLbTeta-fit} explains why the fits must include the staple extent $\eta$ and reach the asymptotic limit $\eta\to\infty$. Section~\ref{sec:pysr_methodology} uses symbolic regression (\texttt{PySR}) with an asymptotic penalty as a guide to the functional form, which points to a power-law tail $(1+b^2)^{-j}$ multiplied by $e^{-f\eta}$. Section~\ref{sec:exponential_failure} tests exponential decay in $|\vect{b}|$ and in $P\cdot b$ as an alternative. Section~\ref{sec:systematic_exploration} compares Gaussian and power-law fits over $6\leq\eta\leq10$ and fits individual $\eta$ slices to find the $\eta$-dependence of the parameters $c$ and $d$, and Section~\ref{sec:candidate_selection} selects the model for $c(\eta)$ and gives the models for the three amplitudes.
 
-Section~\ref{sec:simultaneous_fit_strategy} fits the three amplitudes simultaneously with the full Jackknife covariance matrix, cancels the shared $e^{-f\eta}$ factor, and evaluates the $x$-dependent Sivers shift at each of the four momenta. Section~\ref{sec:factorization_test} tests whether the amplitudes factorize into separate $(P\cdot b)$ and $b^2$ profiles, first with ratios of the lattice data and then with explicit factorized fits.
+Section~\ref{sec:simultaneous_fit_strategy} fits the three amplitudes simultaneously with the full Jackknife covariance matrix, cancels the shared $e^{-f\eta}$ factor, and evaluates the $x$-dependent Sivers shift at each of the four momenta. Section~\ref{sec:rejection_exponential_longitudinal} applies separable longitudinal and transverse models to all three amplitudes.
 
 
 \subsection{Failure of Simple Gaussian Model}
@@ -170,7 +170,7 @@ As shown in Figure~\ref{fig:pysr_benchmark_fits}, the factorized $C = 14$ and $C
 
 The straight-line diagnostic in Figure~\ref{fig:gaussian_straightline_test} confirms the preference for a power-law tail over Gaussian fall-off: the lattice data curve upward at large $b^2$ rather than following the Gaussian's expected straight line, consistent with the generalized Lorentzian power-law tail discovered by the genetic algorithm.
 
-The \texttt{PySR} search also has a structural limitation. Every model on the front from $C = 7$ to $C = 21$ depends on $b_L$ and $b_T$ only through $b_L^2 + b_T^2 = b^2$, with no separate parameter for $b_L$. Since $b_L = (P\cdot b)/(-P_L)$, these expressions are independent of $P\cdot b$ once mapped to the Lorentz-invariant variables, and they cannot describe the $P\cdot b$ dependence that the Fourier transform to $x$ requires. \texttt{PySR} therefore served as a guide for the $b^2$ and $\eta$ dependence, not as the final model. Starting from Gaussian, exponential decay, and power-law forms, we systematically explored functions with $P\cdot b$ dependence in Section~\ref{sec:systematic_exploration} and tested factorized alternatives in Section~\ref{sec:rejection_exponential_longitudinal}.
+The \texttt{PySR} search also has a structural limitation. Every model on the front from $C = 7$ to $C = 21$ depends on $b_L$ and $b_T$ only through $b_L^2 + b_T^2 = b^2$, with no separate parameter for $b_L$. Since $b_L = (P\cdot b)/(-P_L)$, these expressions are independent of $P\cdot b$ once mapped to the Lorentz-invariant variables, and they cannot describe the $P\cdot b$ dependence that the Fourier transform to $x$ requires. \texttt{PySR} therefore served as a guide for the $b^2$ and $\eta$ dependence, not as the final model. Starting from Gaussian, exponential decay, and power-law forms, we systematically explored functions with $P\cdot b$ dependence in Section~\ref{sec:systematic_exploration} and tested separable alternatives in Section~\ref{sec:rejection_exponential_longitudinal}.
 
 %We therefore adopt the Lorentzian power-law structure as the spatial profile for $\tAmp_{2B}^{\text{Re}}$. The following sections extend this functional form to the remaining amplitudes for the global simultaneous fit.
 
@@ -210,7 +210,7 @@ Letting the longitudinal coefficient depend on $\eta$, as $c(\eta) = c\,(1 - k_1
 
 \pagebreak
 
-These tests use $\tAmp_{2B}^{\text{Re}}$ alone. In Section~\ref{sec:rejection_exponential_longitudinal} we apply exponential and Gaussian longitudinal profiles, with exponential and power-law transverse envelopes, to all three amplitudes and discuss there why these factorized models, including the ones with exponential decay in $b$, fail for $\tAmp_{2B}^{\text{Im}}$ and $\tAmp_{12B}^{\text{Re}}$.
+These tests use $\tAmp_{2B}^{\text{Re}}$ alone. In Section~\ref{sec:rejection_exponential_longitudinal} we apply exponential and Gaussian longitudinal profiles, with exponential and power-law transverse envelopes, to all three amplitudes and discuss there why these separable models, including the ones with exponential decay in $b$, fail for $\tAmp_{2B}^{\text{Im}}$ and $\tAmp_{12B}^{\text{Re}}$.
 
 
 \subsection{Systematic Exploration of the Power-Law Model}
@@ -681,77 +681,9 @@ Figs.~\ref{fig:ft_xdep_2d_P4} and \ref{fig:ft_xdep_3d_P4} show the $x$-dependenc
 \end{figure}
 \pagebreak
 
-\subsection{Test for Factorization in \texorpdfstring{$(P\cdot b)$}{TEXT} and \texorpdfstring{$b^2$}{TEXT}} \label{sec:factorization_test}
-The selected candidate model for amplitudes, and all other explored ansatze, were not factorized functions of $(P\cdot b)$ and $b^2$. In Section \ref{sec:gaussian_transformation}, we discussed the failure of a simple Gaussian model, which is a factorized function of $(P\cdot b)$ and $b^2$. In Section \ref{sec:pysr_methodology}, we concluded that symbolic regression (PySR) did not find any factorized function. Table \ref{tab:rejection_fit_list_gaussian_c_d_etas} in Section \ref{sec:systematic_exploration} explored numerous factorized Gaussian models with different $\eta$ dependencies in fit parameters. To provide more detail on non-factorization in lattice TMD amplitudes, we explore ratios of lattice data as a function of $(P\cdot b)$ and $b^2$ in Section~\ref {sec:ratio_test} to test factorization. Finally, Section~\ref{sec:rejection_exponential_longitudinal} explores more explicit factorized fits for TMD amplitudes and shows why it fails.
-
-\subsubsection{Ratio Test on the Lattice Data}
-\label{sec:ratio_test}
-
-We first check directly on the lattice data whether an amplitude can be written as a product of longitudinal and transverse profiles, $\tAmp(P\cdot b,b^2) = F(P\cdot b)\,G(b^2)$. If it can, any ratio taken at a common $b^2$ between two values of $P\cdot b$ is a constant in $b^2$, and any ratio taken at a common $P\cdot b$ between two values of $b^2$ does not depend on $P\cdot b$. We form
-\begin{align}
-    T(P\cdot b, b^2) &= \frac{\tAmp(P\cdot b, b^2)}{\tAmp(P\cdot b = 4, b^2)} \overset{?}{=} \frac{F(P\cdot b)}{F(4)} \ , \label{eq:factorization_T}\\
-    B(P\cdot b, b^2) &= \frac{\tAmp(P\cdot b, b^2)}{\tAmp(P\cdot b, b^2 = 18)} \overset{?}{=} \frac{G(b^2)}{G(18)} \ , \label{eq:factorization_B}
-\end{align}
-where the second equality in each line holds only under factorization. $T$ should be flat in $b^2$ and $B$ should be flat in $P\cdot b$. Both ratios are computed on each Jackknife sample, and the error comes from the Jackknife spread of the ratio.
-
-The limitation of this test lies in how the data are sampled. At fixed $\eta$ and $P_L$, the $(b_L, b_T)$ points computed on the lattice map onto an irregular set of $(P\cdot b, b^2)$ pairs, listed in Table~\ref{tab:Pb_bsq_pairs} for $\eta|v|/a = 8$ and $P_L = -1$. There are 34 pairs, but the rows at $\pm P\cdot b$ are symmetric copies of each other (identical for the real amplitudes and opposite in sign for $\tAmp_{2B}^{\text{Im}}$), so only $P\cdot b \ge 0$ carries independent information. At each $(P\cdot b, b^2)$, the two points with $\pm b_T$ are independent measurements, and we average them sample by sample. After the cut $|\vect{b}| \ge 3a$, that is $b^2 \ge 9$, only three values of $P\cdot b$ have more than one $b^2$: $P\cdot b = 0$ with $b^2 = 9, 16, 25, 36, 49$; $P\cdot b = 3$ with $b^2 = 18, 45$; and $P\cdot b = 4$ with $b^2 = 17, 20, 32$. No two of these rows share two $b^2$ values, so the ratios in Eqs.~\eqref{eq:factorization_T} and~\eqref{eq:factorization_B} cannot be built from data alone.
-
-\begin{table}[htbp]
-    \centering
-    \begin{tabular}{c|l}
-        \hline
-        $P\cdot b$ & $b^2/a^2$ \\
-        \hline
-        $0$      & \textcolor{gray}{0, 1, 4}, \textbf{9, 16, 25, 36, 49} \\
-        $\pm 1$  & \textcolor{gray}{2, 5} \\
-        $\pm 2$  & \textcolor{gray}{5, 8}, 20 \\
-        $\pm 3$  & \textbf{18, 45} \\
-        $\pm 4$  & \textbf{17, 20, 32} \\
-        $\pm 5$  & 50 \\
-        $\pm 6$  & 45 \\
-        $\pm 8$  & 68 \\
-        \hline
-    \end{tabular}
-    \caption{All 34 $(P\cdot b, b^2)$ pairs available at $\eta|v|/a = 8$ and $P_L = -1$, where $P\cdot b = -P_L\,b_L$ and $b^2 = b_L^2 + b_T^2$. Grey entries fail the cut $|\vect{b}| \ge 3a$. Bold entries are the data used in the factorization test of Figure~\ref{fig:Factorization_ratios_Pb034_eta8_PL-1}.}
-    \label{tab:Pb_bsq_pairs}
-\end{table}
-
-To address this, we place the three rows on a common grid $b^2 = 18, 20, 25, 32$ that spans all three rows. On the $P\cdot b = 0$ and $P\cdot b = 4$ rows, we use quadratic interpolation in $b^2$: the value at a grid point comes from the parabola through the three data points on the same row that lie closest to it. The $P\cdot b = 3$ row has only two data points, $b^2 = 18$ and $45$, so there we use linear interpolation between them. There is no extrapolation. As a check, Figure~\ref{fig:Factorization_ratios_Pb034_eta8_PL-1} also shows the ratios obtained with linear interpolation on all three rows, between the nearest data points above and below each grid value. Table~\ref{tab:factorization_grid} lists which grid values are data and which are interpolated: 4 of the 12 are data, and the other 8 are interpolated. For $\tAmp_{2B}^{\text{Im}}$, which is odd in $P\cdot b$ and vanishes at $P\cdot b = 0$, only the $P\cdot b = 3$ and $4$ rows are used.
-
-\begin{table}[htbp]
-    \centering
-    \small
-    \begin{tabular}{c||cccc}
-        \hline
-        $P\cdot b$ & $b^2 = 18$ & $b^2 = 20$ & $b^2 = 25$ & $b^2 = 32$ \\
-        \hline
-        \hline
-        $0$ & \shortstack{lin.\ $[16, 25]$\\ quad.\ $(9, 16, 25)$} & \shortstack{lin.\ $[16, 25]$\\ quad.\ $(9, 16, 25)$} & \textbf{data} & \shortstack{lin.\ $[25, 36]$\\ quad.\ $(16, 25, 36)$} \\[1ex]
-        \hline
-        $3$ & \textbf{data} & lin.\ $[18, 45]$ & lin.\ $[18, 45]$ & lin.\ $[18, 45]$ \\[1ex]
-        \hline
-        $4$ & \shortstack{lin.\ $[17, 20]$\\ quad.\ $(17, 20, 32)$} & \textbf{data} & \shortstack{lin.\ $[20, 32]$\\ quad.\ $(17, 20, 32)$} & \textbf{data} \\
-        \hline
-    \end{tabular}
-    \caption{Origin of each grid value used in Figure~\ref{fig:Factorization_ratios_Pb034_eta8_PL-1}. ``Quad.\ $(b_1^2, b_2^2, b_3^2)$'' means the parabola in $b^2$ through the data at those three points on the same $P\cdot b$ row; ``lin.\ $[b_a^2, b_b^2]$'' means linear interpolation in $b^2$ between the data at $b_a^2$ and $b_b^2$. Where a cell has two entries, the upper one gives the linear points (circles) and the lower one the quadratic points (triangles) of Figure~\ref{fig:Factorization_ratios_Pb034_eta8_PL-1}. The pattern is the same for all three amplitudes.}
-    \label{tab:factorization_grid}
-\end{table}
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=1\linewidth]{plots/Factorization_ratios_Pb034_lin_vs_quad_eta8_PL-1.pdf}
-    \caption{Factorization ratio test at $\eta|v|/a = 8$, $P_L = -1$ ($\hat{\zeta} = 0.090772$) for $\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$ and $\tAmp_{12B}^{\text{Re}}$. Top row: $T(P\cdot b, b^2)$ of Eq.~\eqref{eq:factorization_T}, the ratio to the $P\cdot b = 4$ row, plotted against $b^2$. Bottom row: $B(P\cdot b, b^2)$ of Eq.~\eqref{eq:factorization_B}, the ratio to $b^2 = 18$, plotted against $P\cdot b$. Under factorization, every set of points should be flat. Filled circles use linear interpolation in $b^2$ on all three rows. Open triangles use quadratic interpolation on the $P\cdot b = 0$ and $4$ rows and linear interpolation on the $P\cdot b = 3$ row (Table~\ref{tab:factorization_grid}). A triangle is omitted where both schemes give the same value, which happens for every point that involves only the $P\cdot b = 3$ row and data points. Error bars are Jackknife errors and do not include any uncertainty from the interpolation.}
-    \label{fig:Factorization_ratios_Pb034_eta8_PL-1}
-\end{figure}
-
-From Figure~\ref{fig:Factorization_ratios_Pb034_eta8_PL-1}, in certain region $P\cdot b=0$, the ratio $T(P\cdot b, b^2) = \frac{\tAmp(P\cdot b, b^2)}{\tAmp(P\cdot b = 4, b^2)}$ is flat but for $P\cdot b=3$, the ratio $T$ is increasing monotonically. The same behavior is captured in both linear and quadratic interpolation. The other ratio $B(P\cdot b, b^2) = \frac{\tAmp(P\cdot b, b^2)}{\tAmp(P\cdot b, b^2 = 18)}$ is not flat, and there exists a cut in continuity at $P\cdot b=3$ which could also arise from systematic uncertainty from interpolation and limitation of data. 
-
-The ratio test is thus only a qualitative check. Where the interpolated values rest on closely spaced data, the $P\cdot b = 0$ and $4$ rows are compatible with factorization, but the sampling is too sparse to settle the question. We therefore test it below with explicit factorized fits, using the global simultaneous fit of Section~\ref{sec:simultaneous_fit_strategy} as the benchmark.
-
-
-\subsubsection{Rejection of Separable Longitudinal and Transverse Factorization}
+\subsection{Separable Longitudinal and Transverse Models}
 \label{sec:rejection_exponential_longitudinal}
-Because the ratio test cannot settle the question, we fit explicitly factorized models and compare them with the selected power-law fit. Section~\ref{sec:exponential_failure} tested separable longitudinal profiles on $\tAmp_{2B}^{\text{Re}}$ alone; here we apply the four lowest-$\chi^2$ combinations to all three amplitudes.
+We now apply separable longitudinal and transverse models to all three amplitudes and compare them with the selected power-law fit. Section~\ref{sec:exponential_failure} tested such profiles on $\tAmp_{2B}^{\text{Re}}$ alone; here we use the four lowest-$\chi^2$ combinations.
 
 The four ans\"atze combine either an exponential ($e^{-c|P\cdot b|}$) or Gaussian ($e^{-c(P\cdot b)^2}$) longitudinal profile with either an exponential ($e^{-d|b|}$) or power-law ($(1+db^2)^{-j}$) transverse envelope:
 \begin{enumerate}
@@ -784,13 +716,13 @@ The four ans\"atze combine either an exponential ($e^{-c|P\cdot b|}$) or Gaussia
     \end{align}
 \end{enumerate}
 
-Each model has a closed-form Fourier transform, so the resulting $x$-space distributions are easy to inspect. We performed global simultaneous Jackknife fits on these four ansatze using the same kinematic cuts ($|\vect{b}| \ge 3a$, $\eta \in [6, 10]$) and shared area-law factor $e^{-f\eta}$. The fit quality and extracted parameters are summarized in Table~\ref{tab:factorized_ansatze_comparison}.
+Each model has a closed-form Fourier transform, so the resulting $x$-space distributions are easy to inspect. We performed global simultaneous Jackknife fits on these four ansatze using the same kinematic cuts ($|\vect{b}| \ge 3a$, $\eta \in [6, 10]$) and shared area-law factor $e^{-f\eta}$. The fit quality and extracted parameters are summarized in Table~\ref{tab:separable_ansatze_comparison}.
 
 \begin{table}[htbp]
 \centering
 \renewcommand{\arraystretch}{1.3}
-\caption{Comparison of the four factorized longitudinal-transverse models across nucleon momenta $P_L$, with extracted parameters shown at $P_L = -1$. While models with power-law transverse envelopes describe $\tAmp_{2B}^{\text{Re}}$ passably, all four factorized ansatze fail on $\tAmp_{2B}^{\text{Im}}$ and $\tAmp_{12B}^{\text{Re}}$.}
-\label{tab:factorized_ansatze_comparison}
+\caption{Comparison of the four separable longitudinal-transverse models across nucleon momenta $P_L$, with extracted parameters shown at $P_L = -1$. While models with power-law transverse envelopes describe $\tAmp_{2B}^{\text{Re}}$ passably, all four separable ans\"atze fail on $\tAmp_{2B}^{\text{Im}}$ and $\tAmp_{12B}^{\text{Re}}$.}
+\label{tab:separable_ansatze_comparison}
 \scalebox{0.7}{
 \begin{tabular}{|l|c|c|c|c|c|c|c|p{4.2cm}|}
 \hline
@@ -812,15 +744,15 @@ Each model has a closed-form Fourier transform, so the resulting $x$-space distr
 }
 \end{table}
 
-The numerical results show several ways in which the factorized models fail. In \texttt{ExpPb\_PowerLawb}, the real unpolarized amplitude fits with $\chi^2/\text{dof} \approx 1.286$. Because $\tAmp_{2B}^{\text{Re}}$ dominates the statistical weight, the fit quality alone can make the model look adequate. The same parameterization fails for the imaginary amplitude $\tAmp_{2B}^{\text{Im}}$, however: the longitudinal decay width $c_{\text{im}} = 0.0045 \pm 0.0248$ is zero within errors. The model then loses its longitudinal decay profile and gives an essentially flat distribution in $P\cdot b$. The overall amplitude also flips to an unphysical negative sign ($a_{\text{im}} = -0.167$).
+The numerical results show several ways in which the separable models fail. In \texttt{ExpPb\_PowerLawb}, the real unpolarized amplitude fits with $\chi^2/\text{dof} \approx 1.286$. Because $\tAmp_{2B}^{\text{Re}}$ dominates the statistical weight, the fit quality alone can make the model look adequate. The same parameterization fails for the imaginary amplitude $\tAmp_{2B}^{\text{Im}}$, however: the longitudinal decay width $c_{\text{im}} = 0.0045 \pm 0.0248$ is zero within errors. The model then loses its longitudinal decay profile and gives an essentially flat distribution in $P\cdot b$. The overall amplitude also flips to an unphysical negative sign ($a_{\text{im}} = -0.167$).
 
-For the real Sivers amplitude $\tAmp_{12B}^{\text{Re}}$, the longitudinal parameter $c_{\text{reA12B}}$ is similarly suppressed across all factorized models ($0.028 \pm 0.024$ for \texttt{ExpPb\_PowerLawb} and $0.0016 \pm 0.0061$ for \texttt{GaussianPb\_PowerLawb}). The factorized models cannot capture the spin-dependent correlator's distinct longitudinal curvature without forcing the decay parameter to its lower boundary. Factoring out an exponential $|P\cdot b|$ dependence introduces a discontinuous first derivative (a cusp) at $P\cdot b = 0$. For an odd-parity amplitude like $\tAmp_{2B}^{\text{Im}}$, which must vanish linearly through the origin ($\tAmp_{2B}^{\text{Im}} \propto b_L$), the non-analytic factor $e^{-c|P\cdot b|}$ conflicts with the smooth behavior of the Euclidean correlation function. The fit responds by driving $c_{\text{im}} \to 0$ to minimize the cusp penalty.
+For the real Sivers amplitude $\tAmp_{12B}^{\text{Re}}$, the longitudinal parameter $c_{\text{reA12B}}$ is similarly suppressed across all separable models ($0.028 \pm 0.024$ for \texttt{ExpPb\_PowerLawb} and $0.0016 \pm 0.0061$ for \texttt{GaussianPb\_PowerLawb}). The separable models cannot capture the spin-dependent correlator's distinct longitudinal curvature without forcing the decay parameter to its lower boundary. Separating out an exponential $|P\cdot b|$ dependence introduces a discontinuous first derivative (a cusp) at $P\cdot b = 0$. For an odd-parity amplitude like $\tAmp_{2B}^{\text{Im}}$, which must vanish linearly through the origin ($\tAmp_{2B}^{\text{Im}} \propto b_L$), the non-analytic factor $e^{-c|P\cdot b|}$ conflicts with the smooth behavior of the Euclidean correlation function. The fit responds by driving $c_{\text{im}} \to 0$ to minimize the cusp penalty.
 
-In the Lorentz-invariant variable space $(P\cdot b, b^2)$, the longitudinal separation $b_L = (P\cdot b)/(-P_L)$ and transverse separation $b_T = \sqrt{b^2 - b_L^2}$ are geometrically coupled. Factorized models artificially decouple $P\cdot b$ and $b^2$. In contrast, coupling $(P\cdot b)^2$ and $b^2$ within a single denominator,
+In the Lorentz-invariant variable space $(P\cdot b, b^2)$, the longitudinal separation $b_L = (P\cdot b)/(-P_L)$ and transverse separation $b_T = \sqrt{b^2 - b_L^2}$ are geometrically coupled. Separable models artificially decouple $P\cdot b$ and $b^2$. In contrast, coupling $(P\cdot b)^2$ and $b^2$ within a single denominator,
     \begin{equation}
         D = \left[ 1 + c(\eta) \frac{(P\cdot b)^2}{P_L^2} + d\,b^2 \right]^j \ ,
     \end{equation}
-preserves smooth analyticity at $P\cdot b = 0$, satisfies power-law integrability, and yields stable, positive parameters across all three amplitudes, matching the values already obtained from the global fit above (e.g., $c_{\text{im}} = 0.2253(69)$, $c_{\text{reA12B}} = 0.0773(46)$, $a_{\text{im}} = +0.267(13)$). This confirms that the coupled power-law structure adopted for the global fit is preferred over the four explicit factorizations of $(P\cdot b)$ and $b^2$ tested above.
+preserves smooth analyticity at $P\cdot b = 0$, satisfies power-law integrability, and yields stable, positive parameters across all three amplitudes, matching the values already obtained from the global fit above (e.g., $c_{\text{im}} = 0.2253(69)$, $c_{\text{reA12B}} = 0.0773(46)$, $a_{\text{im}} = +0.267(13)$). This confirms that the coupled power-law structure adopted for the global fit is preferred over the four separable forms tested above.
 
 In the next section, we extrapolate the lattice calculation modeled by the adopted power-law ansatz to $\hat{\zeta}\rightarrow\infty$.
 
