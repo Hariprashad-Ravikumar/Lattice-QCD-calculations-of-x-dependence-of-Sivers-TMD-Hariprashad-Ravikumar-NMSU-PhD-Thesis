@@ -2,9 +2,10 @@
 \label{sec:lattice_methodology}
 
 
-This chapter describes how the QCD correlation functions used in this thesis are defined and computed on a Euclidean spacetime lattice. We follow Lin and Meyer~\cite{Lin:2014} and Gattringer and Lang~\cite{Gattringer:2010zz}. Section~\ref{sec:lat_lattice} defines the lattice and the Euclidean Dirac matrices used throughout. Section~\ref{sec:lat_gauge} introduces the link variables, the plaquette and the Wilson gauge action, and derives its continuum limit. Section~\ref{sec:lat_fermions} discretizes the Dirac action, identifies the fermion doublers and removes them with the Wilson term, and adds the clover term. Section~\ref{sec:lat_propagators} integrates out the quark fields, introduces quark propagators and the Monte Carlo evaluation of the path integral. Section~\ref{sec:lat_2pt} derives the spectral form of the nucleon two-point function, and Section~\ref{sec:lat_3pt_local} does the same for three-point functions of local operators and shows how the ratio of three- to two-point functions isolates the matrix element. Section~\ref{sec:lat_staple} extends the construction to the non-local staple-link operators that define TMDs.
+This chapter describes how the QCD correlation functions used in this thesis are defined and computed on a Euclidean spacetime lattice. We follow Lin and Meyer~\cite{Lin:2014} and Gattringer and Lang~\cite{Gattringer:2010zz}. % TODO(Hari): Lin:2014 is an edited volume (LNP 889); cite the individual chapters used here, verify the equation and figure numbers quoted below (Eqs. 3.78, 3.79, 3.80-3.81, 3.93; Fig. 1.1), and confirm reuse permission for the adapted Fig. 1.1.
+Sections~\ref{sec:lat_lattice}--\ref{sec:lat_fermions} set up the lattice, the Wilson gauge action with its continuum limit, and the Wilson-clover fermion action. Section~\ref{sec:lat_propagators} integrates out the quarks and introduces propagators and the Monte Carlo method. The nucleon two-point function (Section~\ref{sec:lat_2pt}) and three-point functions of local operators (Section~\ref{sec:lat_3pt_local}) then lead to the ratio that isolates a matrix element, and Section~\ref{sec:lat_staple} extends this construction to the staple-link operators that define TMDs.
 
-\subsection{The Euclidean Lattice}
+\subsection{The Euclidean lattice}
 \label{sec:lat_lattice}
 
 The Euclidean path integral of Section~\ref{sec:path_integral} is regulated by restricting spacetime to a four-dimensional hypercubic lattice~\cite{Wilson:1974sk},
@@ -14,10 +15,10 @@ The Euclidean path integral of Section~\ref{sec:path_integral} is regulated by r
 \end{equation}
 where $L_i$ is the number of sites in direction $i$ and a site $n$ sits at the spacetime point $x=an$, with $a$ the lattice spacing. We write $n+\hat\mu$ for the neighboring site in direction $\mu$, which is the point $x+a\hat\mu$. Spatial boundary conditions are periodic for all fields; in time they are periodic for the gauge field and anti-periodic for the quark fields~\cite{Gattringer:2010zz}. The lattice spacing acts as an ultraviolet regulator, with momenta restricted to the Brillouin zone $p_\mu\in(-\pi/a,\pi/a]$, and the finite volume acts as an infrared regulator. Physical results are recovered in the continuum limit $a\to0$ and the infinite-volume limit~\cite{Gattringer:2010zz}.
 
-\subsubsection{Euclidean Dirac matrices.}
+\subsubsection{Euclidean Dirac matrices}
 The Euclidean Dirac matrices used in this thesis are related to the Minkowski ones by
 \begin{equation}
-    \gamma^{1}_{E}=+i\gamma^{1}_{M} \ , \quad \gamma^{2}_{E}=-i\gamma^{2}_{M} \ , \quad \gamma^{3}_{E}=+i\gamma^{3}_{M} \ , \quad \gamma^{4}_{E}=\gamma^{0}_{M} \ ,
+    \gamma^{1}_{E}=+i\gamma^{1}_{M} \ , \quad \gamma^{2}_{E}=-i\gamma^{2}_{M} \ , \quad \gamma^{3}_{E}=+i\gamma^{3}_{M} \ , \quad \gamma^{4}_{E}=\gamma^{0}_{M} \ .
     \label{eq:gamma_code_basis}
 \end{equation}
 This is the convention of the lattice code that produced the matrix elements analyzed in Section~\ref{sec:solving_amplitudes}. These matrices are hermitian and satisfy $\{\gamma_\mu,\gamma_\nu\}=2\delta_{\mu\nu}$, and $\gamma_5\equiv\gamma_1\gamma_2\gamma_3\gamma_4=-\gamma^5_M$ is hermitian and anticommutes with every $\gamma_\mu$. Products of Dirac matrices are labeled by a four-bit integer, $\Gamma(n)=\gamma_1^{n_1}\gamma_2^{n_2}\gamma_3^{n_3}\gamma_4^{n_4}$ with $n=n_1+2n_2+4n_3+8n_4$, so that $\Gamma(1)=\gamma_1$, $\Gamma(8)=\gamma_4$ and $\Gamma(15)=\gamma_5$. For $\gamma_1$ and $\gamma_3$, Eq.~\eqref{eq:gamma_code_basis} agrees with the convention $\gamma_i^M=-i\gamma_i^E$ of Ref.~\cite{Lin:2014}; for $\gamma_2$ the sign is opposite. For a Dirac spinor $u(p,s)$ of mass $m$ the spin sum reads
@@ -27,7 +28,7 @@ This is the convention of the lattice code that produced the matrix elements ana
 \end{equation}
 where $(E,p^1,p^2,p^3)$ are the Minkowski components. Equation~\eqref{eq:spin_sum} follows from the Minkowski relation $\sum_s u\bar u=\gamma^\mu_M p_\mu+m$ and Eq.~\eqref{eq:gamma_code_basis}, with $\bar u u=2m$. It has the form of Eq.~(3.78) of Ref.~\cite{Lin:2014}, with the components of $p_\mu$ fixed by Eq.~\eqref{eq:gamma_code_basis}. For momenta along the 1-axis, $p_\mu=(-p^1,0,0,iE)$.
 
-\subsection{Gauge Fields on the Lattice}
+\subsection{Gauge fields on the lattice}
 \label{sec:lat_gauge}
 
 On the lattice the gauge field is represented by link variables, $SU(3)$ matrices that live on the links between neighboring sites. In this chapter we use the lattice convention of Ref.~\cite{Gattringer:2010zz}, in which the coupling is absorbed into the gauge field,
@@ -51,7 +52,7 @@ The shortest non-trivial closed loop is the plaquette (Fig.~\ref{fig:plaquette})
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.5\linewidth]{plots/lattice_methodology/LM_fig1_1_plaquette.png}
-    \caption{Quark fields $\psi(x)$ and $\psi(x+a\hat\mu)$ on the sites of a cubic spacetime lattice, the link variable $U_\mu(x)$ between them, and the plaquette $P_{\mu\nu}(y)$ of Eq.~\eqref{eq:plaquette}. The product $U_\mu(x)\psi(x+a\hat\mu)$ transforms in the same way as $\psi(x)$. Adapted from Ref.~\cite{Lin:2014}, Fig.~1.1.}
+    \caption{Quark fields $\psi(x)$ and $\psi(x+a\hat\mu)$ on the sites of a cubic spacetime lattice, the link variable $U_\mu(x)$ between them, and the plaquette $P_{\mu\nu}(y)$ of Eq.~\eqref{eq:plaquette} at the site $y$. The product $U_\mu(x)\psi(x+a\hat\mu)$ transforms in the same way as $\psi(x)$. Adapted from Ref.~\cite{Lin:2014}, Fig.~1.1.}
     \label{fig:plaquette}
 \end{figure}
 
@@ -62,7 +63,7 @@ Wilson's gauge action is a sum over all plaquettes, each counted with one orient
 \end{equation}
 Written as $\beta\sum[1-\frac13\mathrm{Re}\,\Tr P_{\mu\nu}]$, the prefactor is the inverse coupling $\beta=6/g^2$~\cite{Gattringer:2010zz}.
 
-\subsubsection{Continuum limit of the Wilson action.}
+\subsubsection{Continuum limit of the Wilson action}
 Equation~\eqref{eq:plaquette_expansion} quoted the small-$a$ behavior of the plaquette; here we derive it. To show that Eq.~\eqref{eq:wilson_gauge_action} approaches the Yang-Mills action, we insert Eq.~\eqref{eq:link_def} into the plaquette and combine the four exponentials with the Baker-Campbell-Hausdorff formula~\cite{Gattringer:2010zz},
 \begin{equation}
     e^{A}e^{B}=\exp\Big(A+B+\tfrac12[A,B]+\cdots\Big) \ .
@@ -89,10 +90,10 @@ since $a^4\sum_n$ becomes $\int d^4x$. This is the Euclidean Yang-Mills action~\
 
 The integration over gauge fields uses the product of Haar measures of all links, $\mathcal D[U]=\prod_{x,\mu}dU_\mu(x)$, which is invariant under the gauge transformation of Eq.~\eqref{eq:link_gauge}~\cite{Lin:2014}.
 
-\subsection{Fermions on the Lattice}
+\subsection{Fermions on the lattice}
 \label{sec:lat_fermions}
 
-\subsubsection{Naive discretization and doublers.}
+\subsubsection{Naive discretization and doublers}
 Replacing the derivative in the Euclidean Dirac action by a symmetric, gauge-covariant difference gives the naive lattice action~\cite{Gattringer:2010zz}
 \begin{equation}
     S_F[\psi,\bar\psi,U]=a^4\sum_{n\in\Lambda_4}\bar\psi(n)\left(\sum_{\mu=1}^{4}\gamma_\mu\frac{U_\mu(n)\psi(n+\hat\mu)-U_{-\mu}(n)\psi(n-\hat\mu)}{2a}+m\,\psi(n)\right) ,
@@ -114,9 +115,9 @@ For $m=0$ the propagator has the correct continuum limit at fixed $p$, $\widetil
     p=(\pi/a,0,0,0)\,,\ (0,\pi/a,0,0)\,,\ \ldots\,,\ (\pi/a,\pi/a,\pi/a,\pi/a) \ ,
     \label{eq:doublers}
 \end{equation}
-which gives 15 unphysical poles, the doublers, in addition to the physical one. By the Nielsen-Ninomiya theorem~\cite{Nielsen:1980rz,Lin:2014}, a lattice Dirac operator with the correct continuum limit, no doublers and exact chiral symmetry in the form $\gamma_5D+D\gamma_5=0$ cannot be constructed.
+which gives 15 unphysical poles, the doublers, in addition to the physical one. By the Nielsen-Ninomiya theorem~\cite{Nielsen:1980rz,Lin:2014}, a local, translation-invariant lattice Dirac operator with the correct continuum limit, no doublers and exact chiral symmetry in the form $\gamma_5D+D\gamma_5=0$ cannot be constructed.
 
-\subsubsection{Wilson fermions.}
+\subsubsection{Wilson fermions}
 Wilson removed the doublers by adding a term that vanishes for $p_\mu=0$~\cite{Wilson:1974sk,Gattringer:2010zz},
 \begin{equation}
     \widetilde D(p)=m\,\mathbbm{1}+\frac{i}{a}\sum_{\mu=1}^{4}\gamma_\mu\sin(p_\mu a)+\mathbbm{1}\,\frac{1}{a}\sum_{\mu=1}^{4}\big(1-\cos(p_\mu a)\big) \ .
@@ -139,24 +140,24 @@ where $H$ collects the nearest-neighbor terms and $\kappa$ is the hopping parame
 \end{equation}
 which follows from $\gamma_5^\dagger=\gamma_5$, $\gamma_5\gamma_\mu\gamma_5=-\gamma_\mu$ and $U_{-\mu}(n)=U_\mu(n-\hat\mu)^\dagger$, and which holds in the basis of Eq.~\eqref{eq:gamma_code_basis}. The Wilson term breaks chiral symmetry explicitly, even for massless quarks, and introduces discretization errors of $\mathcal O(a)$~\cite{Gattringer:2010zz}.
 
-\subsubsection{Clover improvement.}
+\subsubsection{Clover improvement}
 The $\mathcal O(a)$ errors of the Wilson action are removed by adding the Sheikholeslami-Wohlert or clover term~\cite{Sheikholeslami:1985ij,Gattringer:2010zz},
 \begin{equation}
     S_{\rm clover}=S_{\rm Wilson}+c_{\rm sw}\,a^5\sum_{n\in\Lambda_4}\sum_{\mu<\nu}\bar\psi(n)\,\frac12\,\sigma_{\mu\nu}\,\widehat F_{\mu\nu}(n)\,\psi(n) \ , \qquad \sigma_{\mu\nu}=\frac{1}{2i}[\gamma_\mu,\gamma_\nu] \ ,
     \label{eq:clover_action}
 \end{equation}
-where the lattice field strength is built from the four plaquettes around the site $n$,
+with the Euclidean $\sigma_{\mu\nu}$ of Ref.~\cite{Gattringer:2010zz}, which is not the Minkowski $\sigma^{\mu\nu}$ of Section~\ref{sec:conventions}. The lattice field strength is built from the four plaquettes around the site $n$,
 \begin{equation}
     \widehat F_{\mu\nu}(n)=\frac{-i}{8a^2}\big(Q_{\mu\nu}(n)-Q_{\nu\mu}(n)\big) \ , \qquad
-    Q_{\mu\nu}(n)=U_{\mu,\nu}(n)+U_{\nu,-\mu}(n)+U_{-\mu,-\nu}(n)+U_{-\nu,\mu}(n) \ ,
+    Q_{\mu\nu}(n)=P_{\mu\nu}(n)+P_{\nu,-\mu}(n)+P_{-\mu,-\nu}(n)+P_{-\nu,\mu}(n) \ ,
     \label{eq:clover_F}
 \end{equation}
-with $U_{\mu,\nu}(n)$ the plaquette of Eq.~\eqref{eq:plaquette} in the $(\mu,\nu)$ orientation. The four plaquettes form the clover leaf that gives the term its name, and the coefficient $c_{\rm sw}$ is tuned to cancel the $\mathcal O(a)$ terms~\cite{Lin:2014,Gattringer:2010zz}.
+with $P_{\mu\nu}(n)$ the plaquette of Eq.~\eqref{eq:plaquette} and $P_{\nu,-\mu}$, $P_{-\mu,-\nu}$, $P_{-\nu,\mu}$ the plaquettes with the indicated orientations. The four plaquettes form the clover leaf that gives the term its name, and the coefficient $c_{\rm sw}$ is tuned to cancel the $\mathcal O(a)$ terms~\cite{Lin:2014,Gattringer:2010zz}.
 
-\subsubsection{Other formulations.}
+\subsubsection{Other formulations}
 Twisted-mass fermions remove the doublers with a Wilson term, while staggered (Kogut-Susskind) fermions reduce the sixteen naive species to four tastes and keep a remnant chiral symmetry. Overlap fermions satisfy the Ginsparg-Wilson relation, and domain-wall fermions, which introduce a fifth dimension, satisfy it approximately at finite fifth-dimension extent~\cite{Gattringer:2010zz}. The gauge ensemble used in this work was generated with $n_f=2+1$ flavors of clover-improved Wilson fermions~\cite{Yoon:2017qzo}. % TODO(Hari): confirm this is the JLab/W&M clover ensemble of Yoon:2017qzo Table I (or cite the ensemble paper).
 
-\subsection{Path Integral, Wick Contractions and Quark Propagators}
+\subsection{Path integral, Wick contractions and quark propagators}
 \label{sec:lat_propagators}
 
 With gauge action $S_G$ and fermion action $S_F=a^4\sum_f\sum_{n,m}\bar\psi^{(f)}(n)D^{(f)}(n|m)\psi^{(f)}(m)$, the lattice expectation value of an observable is~\cite{Gattringer:2010zz,Lin:2014}
@@ -182,7 +183,7 @@ After integrating out the quarks,
 \end{equation}
 where $\widetilde{\mathcal O}[U]$ is the contracted observable, a function of the propagators in the gauge field $U$~\cite{Gattringer:2010zz}.
 
-\subsubsection{Monte Carlo evaluation.}
+\subsubsection{Monte Carlo evaluation}
 For real and positive determinants, $\mathcal P[U]=Z^{-1}\prod_f\det[D^{(f)}[U]]\,e^{-S_G[U]}$ is a probability distribution. A Markov chain whose transition probabilities satisfy detailed balance produces gauge configurations $U_i$ distributed according to $\mathcal P[U]$~\cite{Gattringer:2010zz}, and the expectation value becomes an ensemble average~\cite{Lin:2014},
 \begin{equation}
     \langle\mathcal O\rangle=\frac{1}{N}\sum_{i=1}^{N}\widetilde{\mathcal O}[U_i]+\mathcal O\big(N^{-1/2}\big) \ .
@@ -190,7 +191,7 @@ For real and positive determinants, $\mathcal P[U]=Z^{-1}\prod_f\det[D^{(f)}[U]]
 \end{equation}
 With dynamical quarks the standard algorithm is hybrid Monte Carlo~\cite{Duane:1987de}. Statistical uncertainties in this thesis are estimated with the Jackknife method (Section~\ref{sec:simultaneous_fit_strategy}).
 
-\subsubsection{Computing propagators.}
+\subsubsection{Computing propagators}
 Rather than computing the full matrix $D^{-1}$, one solves the linear system~\cite{Gattringer:2010zz}
 \begin{equation}
     \sum_{m}D(n|m)\,G(m)=S_0(n) \ , \qquad S_0(m)_{\substack{\beta\\b}}=\delta_{m,m_0}\,\delta_{\beta\beta_0}\,\delta_{bb_0} \ ,
@@ -202,24 +203,24 @@ for a point source $S_0$ at $m_0$ with iterative Krylov-space solvers. The twelv
     \label{eq:backward_prop}
 \end{equation}
 
-\subsubsection{Example: the pion two-point function.}
-As an example of Wick contraction~\cite{Gattringer:2010zz,Lin:2014}, consider $\chi_\pi=\bar d\,\gamma_5\,u$, the conjugate operator is $\bar\chi_\pi=(\bar d\gamma_5 u)^\dagger=-\bar u\gamma_5 d$, using $\bar\psi=\psi^\dagger\gamma_4$ and $\gamma_4\gamma_5\gamma_4=-\gamma_5$. Wick's theorem contracts $u(x)\bar u(0)$ and $d(0)\bar d(x)$; moving $d(0)$ to the front past three Grassmann fields gives a sign, and the minus sign of $\bar\chi_\pi$ cancels it:
+\subsubsection{Example: the pion two-point function}
+As an example of Wick contraction~\cite{Gattringer:2010zz,Lin:2014}, consider $\chi_\pi=\bar d\,\gamma_5\,u$. Its conjugate is $\bar\chi_\pi=(\bar d\gamma_5 u)^\dagger=-\bar u\gamma_5 d$, using $\bar\psi=\psi^\dagger\gamma_4$ and $\gamma_4\gamma_5\gamma_4=-\gamma_5$. Wick's theorem contracts $u(x)\bar u(0)$ and $d(0)\bar d(x)$; moving $d(0)$ to the front past three Grassmann fields gives a sign, and the minus sign of $\bar\chi_\pi$ cancels it:
 \begin{equation}
     \big\langle\chi_\pi(x)\,\bar\chi_\pi(0)\big\rangle_F=\Tr\big[S_d(0,x)\,\gamma_5\,S_u(x,0)\,\gamma_5\big]=\Tr\big[S_d(x,0)^\dagger\,S_u(x,0)\big] \ ,
     \label{eq:pion_contraction}
 \end{equation}
 where the second step uses Eq.~\eqref{eq:backward_prop} and the trace runs over Dirac and color indices. For degenerate $u$ and $d$ quarks this is $\sum|S_u(x,0)|^2$, so a single point-to-all propagator per configuration determines the pion correlator. The nucleon correlators below are built in the same way.
 
-\subsection{The Nucleon Two-Point Function}
+\subsection{The nucleon two-point function}
 \label{sec:lat_2pt}
 
-\subsubsection{Interpolating operator and contraction.}
+\subsubsection{Interpolating operator and contraction}
 A standard interpolating operator with the quantum numbers of the proton is~\cite{Lin:2014}
 \begin{equation}
     \chi_\alpha(\vect x,t)=\epsilon^{ijk}\,u^i_\alpha(\vect x,t)\,u^j_\gamma(\vect x,t)\,[C^{-1}\gamma_5]_{\gamma\delta}\,d^k_\delta(\vect x,t) \ ,
     \label{eq:nucleon_interpolator}
 \end{equation}
-with $C$ the charge-conjugation matrix. The momentum-projected two-point function is
+with $C$ the charge-conjugation matrix (not to be confused with the correlator $C_{\alpha\beta}$ below). The momentum-projected two-point function is
 \begin{equation}
     C_{\alpha\beta}(t,\vect p)=a^3\sum_{\vect x}e^{-i\vect p\cdot\vect x}\,\big\langle\chi_\alpha(\vect x,t)\,\bar\chi_\beta(\vect 0,0)\big\rangle \ ,
     \label{eq:c2pt_def}
@@ -232,7 +233,7 @@ and Wick's theorem expresses it through $u$ and $d$ propagators from the source~
 \end{align}
 with $S_f\equiv S_f(\vect x,t;\vect 0,0)$. The two terms correspond to the two ways of contracting the two $u$ quarks.
 
-\subsubsection{Spectral decomposition.}
+\subsubsection{Spectral decomposition}
 On a lattice with time extent $T$, the two-point function is a trace over states~\cite{Lin:2014},
 \begin{equation}
     \big\langle\chi(\vect x,t)\,\bar\chi(\vect 0,0)\big\rangle=\frac{\mathrm{Tr}\big[e^{-H(T-t)}\chi(\vect x)\,e^{-Ht}\,\bar\chi(\vect 0)\big]}{\mathrm{Tr}\big[e^{-HT}\big]} \ .
@@ -262,10 +263,10 @@ so that, for $0\ll t\ll T/2$,
 \end{equation}
 where $E$ and $m$ refer to the nucleon ground state and $\Delta E$ is the gap to the first excitation. This agrees with Eq.~(3.79) of Ref.~\cite{Lin:2014} and Eq.~(3.46) of Ref.~\cite{MuschThesis2}. On a finite lattice, the backward-propagating contribution $\propto e^{-E(T-t)}$ and the negative-parity states are not negligible near $t\approx T/2$~\cite{Lin:2014}. Fits of Eq.~\eqref{eq:c2pt_ground} at large $t$ determine the nucleon mass and dispersion relation.
 
-\subsection{Three-Point Functions of Local Operators}
+\subsection{Three-point functions of local operators}
 \label{sec:lat_3pt_local}
 
-\subsubsection{Definition and spectral decomposition.}
+\subsubsection{Definition and spectral decomposition}
 To probe nucleon structure, an operator is inserted at time $\tau$ between the source at time $0$ and the sink at time $t$. For a local quark bilinear,
 \begin{equation}
     \mathcal O_\Gamma(x)=\bar q(x)\,\Gamma\,q(x) \ ,
@@ -276,7 +277,7 @@ where $\Gamma$ is any product of Dirac matrices, the three-point function is~\ci
     G(t,\tau;\vect p,\vect p')=a^6\sum_{\vect x_2,\vect x_1}e^{-i\vect p'\cdot(\vect x_2-\vect x_1)}\,e^{-i\vect p\cdot\vect x_1}\;\Gamma^{\rm 3pt}_{\beta\alpha}\,\big\langle\Omega\big|\,T\big\{\chi_\alpha(\vect x_2,t)\,\mathcal O(\vect x_1,\tau)\,\bar\chi_\beta(\vect 0,0)\big\}\big|\Omega\big\rangle \ ,
     \label{eq:c3pt_def}
 \end{equation}
-with spin projector $\Gamma^{\rm 3pt}$ and momentum transfer $\vect q=\vect p'-\vect p$; the factor $a^6$ cancels in the ratio below. Inserting complete sets of states before and after $\mathcal O$ and using the translation $\chi(\vect x,t)=e^{Ht}e^{-i\vect P\cdot\vect x}\chi(0)e^{i\vect P\cdot\vect x}e^{-Ht}$~\cite{Lin:2014},
+with spin projector $\Gamma^{\rm 3pt}$ and momentum transfer $\vect q=\vect p'-\vect p$. One factor $a^3$, from the sink projection, cancels against the two-point function in the ratio below; the other defines the momentum-projected operator $\mathcal O(\vect q)=a^3\sum_{\vect x_1}e^{i\vect q\cdot\vect x_1}\mathcal O(\vect x_1)$. Inserting complete sets of states before and after $\mathcal O$ and using the translation $\chi(\vect x,t)=e^{Ht}e^{-i\vect P\cdot\vect x}\chi(0)e^{i\vect P\cdot\vect x}e^{-Ht}$~\cite{Lin:2014},
 \begin{equation}
     G(t,\tau;\vect p,\vect p')=\sum_{n,n'}\sum_{s,s'}\frac{e^{-E_{n'}(\vect p')(t-\tau)}\,e^{-E_n(\vect p)\tau}}{2E_{n'}(\vect p')\,2E_n(\vect p)}\;\Gamma^{\rm 3pt}_{\beta\alpha}\,
     \langle\Omega|\chi_\alpha|N_{n'}(\vect p',s')\rangle\,\langle N_{n'}(\vect p',s')|\mathcal O(\vect q)|N_n(\vect p,s)\rangle\,\langle N_n(\vect p,s)|\bar\chi_\beta|\Omega\rangle \ .
@@ -297,15 +298,15 @@ where $\mathcal J$ is the combination of Dirac matrices and form factors allowed
 \end{align}
 (compare Eqs.~(3.80)--(3.81) of Ref.~\cite{Lin:2014} and Eq.~(3.57) of Ref.~\cite{MuschThesis2}).
 
-\subsubsection{Quark-level contraction and sequential propagators.}
-After Wick contraction, the three-point function contains a connected part, in which the operator acts on a valence quark line, and a disconnected part, in which it closes a separate quark loop~\cite{Lin:2014}. In the isospin limit $m_u=m_d$, the disconnected part cancels in the isovector combination $u-d$~\cite{Boussarie:2023izj,Yoon:2017qzo}. In the connected part, the propagator from the operator at $(\vect x_1,\tau)$ to the sink at $(\vect x_2,t)$ is summed over $\vect x_2$ and cannot be computed from point-to-all propagators. The sequential-source method solves this problem~\cite{Lin:2014}. For a fixed sink time $t$, sink momentum $\vect p'$ and projector $\Gamma^{\rm 3pt}$, the forward propagators from the source are combined into a sequential source at the sink, and one further inversion gives the sequential propagator $\Sigma(\vect 0,0;\vect x_1,\tau;\vect p',t)$ from the sink to every point $(\vect x_1,\tau)$. The three-point function then becomes, with the phase convention of Eq.~\eqref{eq:c3pt_def}~\cite{Lin:2014},
+\subsubsection{Quark-level contraction and sequential propagators}
+After Wick contraction, the three-point function contains a connected part, in which the operator acts on a valence quark line, and a disconnected part, in which it closes a separate quark loop~\cite{Lin:2014}. In the isospin limit $m_u=m_d$, the disconnected part cancels in the isovector combination $u-d$~\cite{Boussarie:2023izj,Yoon:2017qzo}. In the connected part, the propagator from the operator at $(\vect x_1,\tau)$ to the sink at $(\vect x_2,t)$ is summed over $\vect x_2$ and cannot be computed from point-to-all propagators. The sequential-source method solves this problem~\cite{Lin:2014}. For a fixed sink time $t$, sink momentum $\vect p'$ and projector $\Gamma^{\rm 3pt}$, the forward propagators from the source are combined into a sequential source at the sink, and one further inversion gives the sequential propagator $\Sigma(\vect 0,0;\vect x_1,\tau;\vect p',t)$ from the sink to every point $(\vect x_1,\tau)$. The three-point function then becomes, up to the factors of $a^3$ and with the phase convention of Eq.~\eqref{eq:c3pt_def}~\cite{Lin:2014},
 \begin{equation}
     G_\Gamma(t,\tau;\vect p,\vect p')=\sum_{\vect x_1}e^{+i\vect q\cdot\vect x_1}\,\Big\langle\Tr\big[\Sigma(\vect 0,0;\vect x_1,\tau;\vect p',t)\,\Gamma\,S(\vect x_1,\tau;\vect 0,0)\big]\Big\rangle \ ,
     \label{eq:c3pt_sequential}
 \end{equation}
 a contraction of the sequential propagator, the operator and an ordinary propagator. Because the sum over $\vect x_1$ is done last, any operator and any momentum transfer can be used with the same sequential propagator. A new inversion is needed for each sink momentum, sink time, projector and quark flavor~\cite{Lin:2014,MuschThesis2}.
 
-\subsubsection{Ratio and zero momentum transfer.}
+\subsubsection{Ratio and zero momentum transfer}
 The overlaps $Z(\vect p)$ and the exponential time dependence are removed with the ratio~\cite{Lin:2014}
 \begin{equation}
     R(t,\tau;\vect p',\vect p)=\frac{G_\Gamma(t,\tau;\vect p,\vect p')}{C_{\Gamma^+}(t,\vect p')}\left[\frac{C_{\Gamma^+}(\tau,\vect p')\,C_{\Gamma^+}(t,\vect p')\,C_{\Gamma^+}(t-\tau,\vect p)}{C_{\Gamma^+}(\tau,\vect p)\,C_{\Gamma^+}(t,\vect p)\,C_{\Gamma^+}(t-\tau,\vect p')}\right]^{1/2} .
@@ -324,12 +325,12 @@ and the ratio reduces to $R=G_\Gamma(t,\tau;\vect p,\vect p)/C_{\Gamma^+}(t,\vec
 \end{equation}
 where the second form uses Eq.~\eqref{eq:c2pt_trace} and agrees with Eq.~(3.61) of Ref.~\cite{MuschThesis2}. Equivalently, the kinematic prefactor $\sqrt{E_{p'}E_p/[(E_{p'}+m)(E_p+m)]}$ of Eq.~(3.93) in Ref.~\cite{Lin:2014} becomes $E/(E+m)$ at $\vect p'=\vect p$. The ratio is independent of $\tau$ and $t$ in the region where the ground state dominates. Excited states are suppressed by increasing the source-sink separation, but the statistical noise grows with it, so the separation is a compromise between the two~\cite{MuschThesis2}.
 
-\subsection{Non-Local Staple-Link Operators}
+\subsection{Non-local staple-link operators}
 \label{sec:lat_staple}
 
 A local operator such as Eq.~\eqref{eq:local_op} places the quark and antiquark fields at the same point. The TMD correlator of Eq.~\eqref{eq-corr} instead contains the non-local operator $\bar q(0)\,\Gamma\,\mathcal U[0,\eta v,\eta v+b,b]\,q(b)$, in which the quark fields are separated by $b$ and connected by the staple-shaped gauge link of Eq.~\eqref{eq-staplelink} to make the operator gauge invariant. As discussed in Sections~\ref{sec:tmd_gauge_links} and~\ref{sec:link_geometry}, the staple legs of the continuum definition extend to infinity; on the lattice $v$ is space-like, $\eta$ is finite, and the results are extrapolated to $\eta\to\infty$~\cite{Boussarie:2023izj,Yoon:2017qzo}.
 
-\subsubsection{Lattice operator and three-point function.}
+\subsubsection{Lattice operator and three-point function}
 The operator is evaluated in a Lorentz frame in which $b$ and $v$ are purely spatial, so that the whole operator lies in one time slice and can be computed with the Euclidean path integral~\cite{Musch:2011er, Yoon:2017qzo}. On the lattice the gauge link is a product of link variables along a step-wise path $\mathcal C^{\rm lat}$ that approximates the staple~\cite{MuschThesis2},
 \begin{equation}
     O^{\rm lat}_{\Gamma,q}(\mathcal C^{\rm lat};z)\equiv\bar q(z)\,\Gamma\,\mathcal U^{\rm lat}\big[\mathcal C^{\rm lat}+z\big]\,q\big(z+\ell[\mathcal C^{\rm lat}]\big) \ ,
@@ -340,15 +341,15 @@ where $\ell[\mathcal C^{\rm lat}]$ is the displacement between the two ends of t
     C^{\rm 3pt}_{\Gamma,q}(\tau,\vect P;\mathcal C^{\rm lat})=\frac{1}{\hat L^3}\sum_{z}\sum_{\beta\alpha}\Gamma^{\rm 3pt}_{\beta\alpha}\,\Big\langle\chi_\alpha(t_{\rm snk},\vect P)\,O^{\rm lat}_{\Gamma,q}(\mathcal C^{\rm lat};z,\tau)\,\bar\chi_\beta(t_{\rm src},\vect P)\Big\rangle \ ,
     \label{eq:staple_3pt}
 \end{equation}
-with $\hat L$ the spatial extent in lattice units. Here $P$ denotes the nucleon momentum and $U(P,S)$ the corresponding spinor. Source and sink carry the same momentum $\vect P$: TMDs are defined by diagonal matrix elements, $P'=P$, whereas generalized TMDs also depend on the momentum transfer $\Delta=P'-P$~\cite{Boussarie:2023izj}. The spectral decomposition of Section~\ref{sec:lat_3pt_local} therefore applies with $\vect p'=\vect p=\vect P$, and Eq.~\eqref{eq:sqrt_unity} holds for every link path.
+with $\hat L$ the spatial extent in lattice units. Here $P$ denotes the nucleon momentum and $u(P,S)$ the corresponding spinor. Source and sink carry the same momentum $\vect P$: TMDs are defined by diagonal matrix elements, $P'=P$, whereas generalized TMDs also depend on the momentum transfer $\Delta=P'-P$~\cite{Boussarie:2023izj}. The spectral decomposition of Section~\ref{sec:lat_3pt_local} therefore applies with $\vect p'=\vect p=\vect P$, and Eq.~\eqref{eq:sqrt_unity} holds for every link path.
 
-\subsubsection{Contraction.}
+\subsubsection{Contraction}
 The connected contraction of Eq.~\eqref{eq:staple_3pt} uses the forward propagator from the source to the quark field at one end of the link path and the sequential propagator from the sink to the antiquark field at the other end, joined by the link product~\cite{MuschThesis2}. The sequential propagator enters as a backward propagator, but it is stored in the format of a forward propagator, so Eq.~\eqref{eq:backward_prop} is applied before the contraction~\cite{MuschThesis2}. Schematically, for every site $z$ in the operator time slice,
 \begin{equation}
-    C^{\rm 3pt}_{\Gamma}(z)=\Tr\Big[\Gamma\;\mathcal U^{\rm lat}\big[\mathcal C^{\rm lat}+z\big]\;S_F\big(z+\ell\big)\;\gamma_5\,S_B(z)^\dagger\,\gamma_5\Big] \ ,
+    C^{\rm 3pt}_{\Gamma}(z)=\Tr\Big[\Gamma\;\mathcal U^{\rm lat}\big[\mathcal C^{\rm lat}+z\big]\;S_{\rm fw}\big(z+\ell\big)\;\gamma_5\,S_{\rm bw}(z)^\dagger\,\gamma_5\Big] \ ,
     \label{eq:staple_contraction}
 \end{equation}
-where $S_F$ is the forward propagator from the source, $S_B$ the sequential propagator, and the trace runs over Dirac and color indices. In the lattice code used for this work, this contraction is implemented in Qlua as follows, with \texttt{gamma\{n=15\}} $=\Gamma(15)=\gamma_5$:
+where $S_{\rm fw}$ is the forward propagator from the source, $S_{\rm bw}$ the sequential propagator, and the trace runs over Dirac and color indices. In the lattice code used for this work, this contraction is implemented in Qlua as follows, with \texttt{gamma\{n=15\}} $=\Gamma(15)=\gamma_5$:
 \begin{lstlisting}[basicstyle=\ttfamily\footnotesize, frame=single, breaklines=true, caption={Contraction of the staple-link three-point function in Qlua.}, label={lst:qlua_contraction}]
 local stap_fw_shifts_bw = (staple * fw_p:shift(b_dir, "from_forward")
                            * gamma{n=15} * bw_p:adjoin() * gamma{n=15})
@@ -361,11 +362,11 @@ end
 % TODO(Hari): the listing defines stap_fw_shifts_bw but uses stap_fw_shift_bw; check the name in the production code.
 The forward propagator \texttt{fw\_p} is shifted along the separation direction \texttt{b\_dir}, multiplied by the staple link product, and contracted with the $\gamma_5$-conjugated sequential propagator \texttt{bw\_p}; the trace is then taken for every Dirac structure $\Gamma(n)$ in \texttt{gamma\_list}. Ref.~\cite{MuschThesis2} gives an equivalent implementation in Chroma. In the isospin limit the disconnected contribution again cancels in the isovector combination $u-d$~\cite{Boussarie:2023izj,Yoon:2017qzo}.
 
-\subsubsection{Ratio and matrix element.}
+\subsubsection{Ratio and matrix element}
 Since source and sink momenta are equal, the matrix element is extracted from the plateau of the forward ratio of Eq.~\eqref{eq:ratio_forward}~\cite{MuschThesis2, Musch:2011er},
 \begin{equation}
     R_{\Gamma,q}(\vect P;\mathcal C^{\rm lat})\equiv\mathrm{plateau}\left[\frac{C^{\rm 3pt}_{\Gamma,q}(\tau,\vect P;\mathcal C^{\rm lat})}{C^{\rm 2pt}(t_{\rm snk}-t_{\rm src},\vect P)}\right]
-    =\sum_{S,S'}\frac{\bar U(P,S)\,\Gamma^{\rm 3pt}\,U(P,S')}{2E_P\,\Tr\big[\Gamma^{+}\big(-i{\not\!P}+\mN\big)\big]}\,\big\langle N(P,S')\big|O^{\rm lat}\big|N(P,S)\big\rangle \ .
+    =\sum_{S,S'}\frac{\bar u(P,S)\,\Gamma^{\rm 3pt}\,u(P,S')}{2E_P\,\Tr\big[\Gamma^{+}\big(-i{\not\!P}+\mN\big)\big]}\,\big\langle N(P,S')\big|O^{\rm lat}\big|N(P,S)\big\rangle \ .
     \label{eq:staple_ratio}
 \end{equation}
-The ratios $R_{\Gamma(n)}$ for $\Gamma(1),\Gamma(2),\Gamma(4),\Gamma(8)=\gamma_1,\gamma_2,\gamma_3,\gamma_4$ are the input from which the invariant amplitudes are solved in Section~\ref{sec:solving_amplitudes}. As discussed in Section~\ref{sec:rapidity_soft}, the soft factor and the renormalization of the gauge link multiply the correlator independently of $\Gamma$, so they cancel in ratios of amplitudes taken at the same $b$, $P$ and staple geometry, such as the Sivers shift~\cite{Boussarie:2023izj,Yoon:2017qzo}. Whether this multiplicative structure carries over exactly to the lattice is not guaranteed and has been examined in Ref.~\cite{Yoon:2017qzo}. The following chapters therefore work with such ratios. Section~\ref{sec:tmd_framework} gives the Lorentz-invariant parametrization of $\langle N|O^{\rm lat}|N\rangle$ that turns the ratios $R_{\Gamma(n)}$ into invariant amplitudes.
+The ratios $R_{\Gamma(n)}$ for $\Gamma(1),\Gamma(2),\Gamma(4),\Gamma(8)=\gamma_1,\gamma_2,\gamma_3,\gamma_4$ are the input from which the invariant amplitudes are solved in Section~\ref{sec:solving_amplitudes}. Under the assumption stated in Section~\ref{sec:rapidity_soft}, the soft factor and the renormalization of the gauge link cancel in ratios of amplitudes taken at the same $b$, $P$ and staple geometry~\cite{Boussarie:2023izj,Yoon:2017qzo}; Ref.~\cite{Yoon:2017qzo} examined whether this multiplicative structure carries over to the lattice. The following chapters work with such ratios. Chapter~\ref{sec:tmd_framework} gives the Lorentz-invariant parametrization of $\langle N|O^{\rm lat}|N\rangle$ that turns the ratios $R_{\Gamma(n)}$ into invariant amplitudes.

@@ -442,8 +442,8 @@ The lattice evaluation also requires converting the continuous Minkowski gamma m
         \Aboxed{\gamma^{1}_{E}=&+i\gamma^{1}_{M}}\\
         \Aboxed{\gamma^{2}_{E}=&-i\gamma^{2}_{M}}\\
         \Aboxed{\gamma^{3}_{E}=&+i\gamma^{3}_{M}}\\
-        \Aboxed{\gamma^{4}_{E}=&\gamma^{4}_{M}}\\
-        \boxed{\gamma^{5}_{E}}=&\gamma^{1}_{E}\gamma^{2}_{E}\gamma^{3}_{E}\gamma^{4}_{E}=\boxed{-\gamma^{5}_{M}}=-i\gamma^{4}_{M}\gamma^{1}_{M}\gamma^{2}_{M}\gamma^{3}_{M}
+        \Aboxed{\gamma^{4}_{E}=&\gamma^{0}_{M}}\\
+        \boxed{\gamma^{5}_{E}}=&\gamma^{1}_{E}\gamma^{2}_{E}\gamma^{3}_{E}\gamma^{4}_{E}=\boxed{-\gamma^{5}_{M}}=-i\gamma^{0}_{M}\gamma^{1}_{M}\gamma^{2}_{M}\gamma^{3}_{M}
     \end{align}
 \end{itemize}
 Substituting the Euclidean gamma structures and mapping $P^0 \to E_N$, we rewrite the column vector entirely in terms of the lattice ratio observables $R_{\Gamma(i)}$ and the finite-link amplitudes. The index $i \in \{1,2,4,8\}$ labels each Dirac structure by its bit-encoded position (CHROMA \& QLUA convention discussed in Appendix \ref{app:gamma}.) in our operator basis, matching the correspondence $\Gamma(1)=[+i\gamma^1]$, $\Gamma(2)=[-i\gamma^2]$, $\Gamma(4)=[+i\gamma^3]$, and $\Gamma(8)=[\gamma^0]$ used below:
@@ -609,7 +609,8 @@ Applying the same scaling factors to the imaginary counterparts provides the com
 \label{sec:effective_amplitudes}
 
 With the invariant amplitudes isolated by parity projection, we now combine them into the amplitudes $\tAmp_{2B}$ and $\tAmp_{12B}$ of Eq.~\eqref{eq-ABamps_sivers}, with $R(\zetahat^2)$ from Eq.~\eqref{eq-lindeprel}. 
-To apply these expressions in our simulated lattice geometry, we map the contravariant spatial indices to our physical grid parameters. We define the longitudinal spatial separation as $b_L \equiv b^1$ and the transverse spatial separation as $b_T \equiv b^2$. The squared spatial separation then expands to $\bvec^2 = b_L^2 + b_T^2$, and we identify the longitudinal nucleon momentum as $P_L \equiv P^1$. 
+To apply these expressions in our simulated lattice geometry, we map the contravariant spatial indices to our physical grid parameters. We define the longitudinal spatial separation as $b_L \equiv b^1$ and the transverse spatial separation as $b_T \equiv b^2$. % TODO(Hari): in Eqs. above, \bvec^2 is the contravariant component b^{(2)} (cf. \bvec^1 in the same equations), but below it is read as b_L^2+b_T^2 and the A12/B8 denominators become (b_L^2+b_T^2). Check whether the amplitude code divides by b_T or by b_L^2+b_T^2, then fix the notation here and in the A12/B8 equations that follow.
+The squared spatial separation then expands to $\bvec^2 = b_L^2 + b_T^2$, and we identify the longitudinal nucleon momentum as $P_L \equiv P^1$. 
 
 We begin with the defining linear combination for the unpolarized amplitude, $\tAmp_{2B}$. Splitting this amplitude into its real and imaginary components yields:
 \begin{align}
