@@ -27,21 +27,8 @@ Both GPDs and TMDs can be obtained from a common parent, the generalized TMDs (G
 
 \begin{figure}[htpb]
 \centering
-\begin{tikzpicture}[
-    box/.style={draw, rounded corners, align=center, minimum width=3.3cm, minimum height=1.0cm, font=\small},
-    arr/.style={-latex, thick}]
-  \node[box] (gtmd) at (0,0) {GTMDs / Wigner\\ $W(x,\vprp{k},\vprp{b})$};
-  \node[box] (tmd) at (-3.6,-2.3) {TMDs\\ $f(x,\vprp{k})$};
-  \node[box] (gpd) at (3.6,-2.3) {GPDs\\ $H(x,\xi,t)\ \leftrightarrow\ q(x,\vprp{b})$};
-  \node[box] (pdf) at (-1.8,-4.6) {PDFs\\ $f_1(x)$};
-  \node[box] (ff) at (3.6,-4.6) {Form factors\\ $F_1(t),\,F_2(t)$};
-  \draw[arr] (gtmd) -- node[left, font=\footnotesize, xshift=-2pt] {$\int d^2 b_T$} (tmd);
-  \draw[arr] (gtmd) -- node[right, font=\footnotesize, xshift=2pt] {$\int d^2 k_T$} (gpd);
-  \draw[arr] (tmd) -- node[left, font=\footnotesize, xshift=-2pt] {$\int d^2 k_T$} (pdf);
-  \draw[arr] (gpd) -- node[above, font=\footnotesize, sloped] {$\xi,t\to 0$} (pdf);
-  \draw[arr] (gpd) -- node[right, font=\footnotesize] {$\int dx$} (ff);
-\end{tikzpicture}
-\caption{Relations between the distributions that describe the quark structure of the nucleon. Integrating the generalized TMDs (or their Fourier transforms, the Wigner distributions) over transverse position gives TMDs, and integrating over transverse momentum gives GPDs. The collinear PDFs are obtained from TMDs by integrating over $\vprp{k}$ and from GPDs in the forward limit. Moments of GPDs in $x$ give the elastic form factors.}
+\includegraphics[width=0.95\linewidth]{plots/EIC_whitepaper/EIC_WP_Fig2p2_distributions.png}
+\caption{Relations between the distributions that describe partons in the nucleon, shown for unpolarized partons in an unpolarized nucleon. Integrating the Wigner distribution $W(x,\vprp{b},\vprp{k})$ over transverse position gives the TMDs $f(x,\vprp{k})$, and integrating over transverse momentum gives the impact parameter distributions $f(x,\vprp{b})$. The latter are Fourier transforms of the GPDs at zero skewness. Integrating either over the remaining transverse variable gives the collinear PDF $f(x)$. Moments of GPDs in $x$ give the elastic form factors and the generalized form factors computed on the lattice. Each quantity is labeled with the processes that probe it. Reproduced from Ref.~\cite{Accardi:2012qut} (arXiv:1212.1701, Fig.~2.2) under the CC BY 4.0 license.}
 \label{fig:intro_hierarchy}
 \end{figure}
 
