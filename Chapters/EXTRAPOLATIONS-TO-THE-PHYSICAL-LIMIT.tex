@@ -1,7 +1,7 @@
 \section{EXTRAPOLATIONS TO THE PHYSICAL LIMIT}
 \label{sec:physical_limit_extrapolation}
 
-Combining the results obtained at each momentum in Section~\ref{sec:simultaneous_fit_strategy}, we extrapolate them to $\hat{\zeta}\to\infty$, which for the Sivers shift is the physical limit. Section~\ref{sec:zetahat_extrapolation_motivation} shows that the amplitudes, the TMD combinations, and the Sivers shift change systematically with $1/\hat\zeta$ across the four simulated momenta. Section~\ref{sec:extrap_fit_param_level} extrapolates the fit parameters to $1/\hat\zeta\to0$ using $P_L=-2,-3,-4$, reconstructs the amplitudes and the Sivers shift in this limit, and lists the numerical Fourier-transform integrals over $x$ at $|b_T|=3a$. Section~\ref{sec:factorization_xbt} tests factorization, first in $(P\cdot b)$ and $b^2$ on the lattice data at finite momentum, and then in $x$ and $|b_T|$ for the extrapolated Sivers shift and amplitudes.
+All quantities in this chapter are for the isovector $u-d$ combination. Combining the results obtained at each momentum in Section~\ref{sec:simultaneous_fit_strategy}, we extrapolate them to $\hat{\zeta}\to\infty$, which for the Sivers shift is the physical limit. Section~\ref{sec:zetahat_extrapolation_motivation} shows that the amplitudes, the TMD combinations, and the Sivers shift change systematically with $1/\hat\zeta$ across the four simulated momenta. Section~\ref{sec:extrap_fit_param_level} extrapolates the fit parameters to $1/\hat\zeta\to0$ using $P_L=-2,-3,-4$, reconstructs the amplitudes and the Sivers shift in this limit, and lists the numerical Fourier-transform integrals over $x$ at $|b_T|=3a$. Section~\ref{sec:factorization_xbt} tests factorization, first in $(P\cdot b)$ and $b^2$ on the lattice data at finite momentum, and then in $x$ and $|b_T|$ for the extrapolated Sivers shift and amplitudes.
 
 \subsection{Motivation for the \texorpdfstring{$\hat{\zeta} \to \infty$}{zeta-hat to infinity} Extrapolation}
 \label{sec:zetahat_extrapolation_motivation}
@@ -73,7 +73,7 @@ Reconstructing the amplitudes from these twelve extrapolated parameters gives th
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{SimultaneousFitsCov/extrapolation_para_level/Extrapolated_AmpLevel_P234_Sivers_1_over_zetahat_sq_bmin3_eta610_b29.0_Sivers.pdf}
-    \caption{Sivers shift $\langle k_y \rangle_{TU}$ and $x\langle k_y \rangle_{TU}$ built from the extrapolated amplitudes of Fig.~\ref{fig:extrapolated_amplitude_level_amps}, restricted to the quark region $x\ge0$. Shaded bands are the Jackknife uncertainty.}
+    \caption{Isovector ($u-d$) Sivers shift $\langle k_y \rangle_{TU}$ and $x\langle k_y \rangle_{TU}$ built from the extrapolated amplitudes of Fig.~\ref{fig:extrapolated_amplitude_level_amps}, restricted to the quark region $x\ge0$. Shaded bands are the Jackknife uncertainty.}
     \label{fig:extrapolated_amplitude_level_sivers}
 \end{figure}
 
@@ -113,7 +113,7 @@ Figure~\ref{fig:extrapolated_amplitude_3d_amps} extends this reconstruction to t
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\linewidth]{SimultaneousFitsCov/extrapolation_para_level/FT_xdep_3D_A2B_A12B_bmin3_eta610_PLInf_Sivers.pdf}
-    \caption{The extrapolated Sivers shift $\langle k_y \rangle_{TU}$ and $x\langle k_y \rangle_{TU}$ of Fig.~\ref{fig:extrapolated_amplitude_level_sivers}, shown as surfaces in $x\ge0$ and $|b_T|$ over the same range.}
+    \caption{The extrapolated isovector ($u-d$) Sivers shift $\langle k_y \rangle_{TU}$ and $x\langle k_y \rangle_{TU}$ of Fig.~\ref{fig:extrapolated_amplitude_level_sivers}, shown as surfaces in $x\ge0$ and $|b_T|$ over the same range.}
     \label{fig:extrapolated_amplitude_3d_sivers}
 \end{figure}
 
@@ -127,7 +127,7 @@ Figure~\ref{fig:extrapolated_amplitude_3d_amps} extends this reconstruction to t
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\linewidth]{SimultaneousFitsCov/extrapolation_para_level/All_Momenta_vs_Extrapolated_2D_P234_bmin3_eta610_b29.0_Sivers.pdf}
-    \caption{The same comparison as Fig.~\ref{fig:momenta_vs_extrapolated_amps} for the Sivers shift $\langle k_y \rangle_{TU}$ and $x\langle k_y \rangle_{TU}$ ($x\ge0$).}
+    \caption{The same comparison as Fig.~\ref{fig:momenta_vs_extrapolated_amps} for the isovector ($u-d$) Sivers shift $\langle k_y \rangle_{TU}$ and $x\langle k_y \rangle_{TU}$ ($x\ge0$).}
     \label{fig:momenta_vs_extrapolated_sivers}
 \end{figure}
 
@@ -267,7 +267,7 @@ Table~\ref{tab:factorization_sivers} lists the resulting relative distance of th
 \begin{table}[H]
     \centering
     \renewcommand{\arraystretch}{1.4}
-    \caption{Relative distance of the extrapolated Sivers shift $\langle k_y \rangle_{TU}(x,|b_T|)$ from its optimal factorized approximation $F(x)G(|b_T|)$, Eq.~\eqref{eq:factorization_relative_distance}, over $|b_T| \in [0.3421, 0.9403]$ fm for four choices of $x$-window.}
+    \caption{Relative distance of the extrapolated isovector ($u-d$) Sivers shift $\langle k_y \rangle_{TU}(x,|b_T|)$ from its optimal factorized approximation $F(x)G(|b_T|)$, Eq.~\eqref{eq:factorization_relative_distance}, over $|b_T| \in [0.3421, 0.9403]$ fm for four choices of $x$-window.}
     \label{tab:factorization_sivers}
     \begin{tabular}{|c|c|}
     \hline
@@ -289,7 +289,7 @@ In every window the relative distance is at the level of $5.7$-$7.6\%$ and nonze
 \begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{SimultaneousFitsCov/factorization_test/Factorization_gh_and_Reconstruction_bmin3_eta610.pdf}
-    \caption{Left and center: the optimal separable factors $g(x)$ and $h(|b_T|)$ (Eqs.~\eqref{eq:factorization_h_solution}-\eqref{eq:factorization_g_selfconsistent}, normalized so $\text{mean}[g^2]=1$) for the extrapolated Sivers shift, shown for all four $x$-windows of Table~\ref{tab:factorization_sivers}. Right: the reconstructed $g(x)h(|b_T|)$ (dashed) compared to the actual extrapolated Sivers shift (solid) at the smallest and largest fitted $|b_T|$, using the $x\in[0,1]$ fit; the visible gap between the solid and dashed curves is the residual quantified in Table~\ref{tab:factorization_sivers}.}
+    \caption{Left and center: the optimal separable factors $g(x)$ and $h(|b_T|)$ (Eqs.~\eqref{eq:factorization_h_solution}-\eqref{eq:factorization_g_selfconsistent}, normalized so $\text{mean}[g^2]=1$) for the extrapolated isovector ($u-d$) Sivers shift, shown for all four $x$-windows of Table~\ref{tab:factorization_sivers}. Right: the reconstructed $g(x)h(|b_T|)$ (dashed) compared to the actual extrapolated Sivers shift (solid) at the smallest and largest fitted $|b_T|$, using the $x\in[0,1]$ fit; the visible gap between the solid and dashed curves is the residual quantified in Table~\ref{tab:factorization_sivers}.}
     \label{fig:factorization_gh_sivers}
 \end{figure}
 
@@ -303,14 +303,14 @@ must be flat in $x$ for every $|b_T|$ and reference $|b_T|_{\text{ref}}$, and fl
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.75\linewidth]{SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_x_4curves_P234_bmin3_eta610.pdf}
-    \caption{$R_b(x) = \langle k_y \rangle_{TU}(x,|b_T|)/\langle k_y \rangle_{TU}(x,0.34\text{ fm})$ for four values of $|b_T|$, as a function of $x$. Under exact factorization each curve would be flat. Instead, every curve rises from its $x\to0$ value to a peak near $x\approx0.1$ before decaying, so the $|b_T|$-dependence of the Sivers shift itself depends on $x$.}
+    \caption{Isovector ($u-d$): $R_b(x) = \langle k_y \rangle_{TU}(x,|b_T|)/\langle k_y \rangle_{TU}(x,0.34\text{ fm})$ for four values of $|b_T|$, as a function of $x$. Under exact factorization each curve would be flat. Instead, every curve rises from its $x\to0$ value to a peak near $x\approx0.1$ before decaying, so the $|b_T|$-dependence of the Sivers shift itself depends on $x$.}
     \label{fig:factorization_ratio_x_sivers}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.675\linewidth]{SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_bT_4curves_P234_bmin3_eta610.pdf}
-    \caption{$R_x(|b_T|) = \langle k_y \rangle_{TU}(x,|b_T|)/\langle k_y \rangle_{TU}(0.3,|b_T|)$ for four values of $x$, as a function of $|b_T|$. The $x=0.2$ curve changes by more than a factor of two across the fitted $|b_T|$ range instead of staying flat, so the $x$-dependence of the Sivers shift itself depends on $|b_T|$, consistent with Fig.~\ref{fig:factorization_ratio_x_sivers}.}
+    \caption{Isovector ($u-d$): $R_x(|b_T|) = \langle k_y \rangle_{TU}(x,|b_T|)/\langle k_y \rangle_{TU}(0.3,|b_T|)$ for four values of $x$, as a function of $|b_T|$. The $x=0.2$ curve changes by more than a factor of two across the fitted $|b_T|$ range instead of staying flat, so the $x$-dependence of the Sivers shift itself depends on $|b_T|$, consistent with Fig.~\ref{fig:factorization_ratio_x_sivers}.}
     \label{fig:factorization_ratio_bT_sivers}
 \end{figure}
 

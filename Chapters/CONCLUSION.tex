@@ -5,7 +5,7 @@
 
 \label{sec:conclusion}
 
-This thesis set out to compute the dependence of the generalized Sivers shift on the longitudinal momentum fraction $x$ directly from lattice QCD. We summarize the four central chapters, state the main results, and describe how the same method extends to other TMD observables.
+This thesis set out to compute the dependence of the isovector ($u-d$) generalized Sivers shift on the longitudinal momentum fraction $x$ directly from lattice QCD. We summarize the four central chapters, state the main results, and describe how the same method extends to other TMD observables.
 
 \subsection{Summary}
 \label{sec:conclusion_summary}
@@ -16,13 +16,13 @@ Chapter~\ref{sec:x_dependence} described the lattice calculation on a $32^3\time
 
 Chapter~\ref{sec:fitting_methodologies} built a global fit of the lattice amplitudes by exploring several functional forms, with symbolic regression (\texttt{PySR}) as a guide. After we removed data with $|\vect{b}|<3a$, \texttt{PySR} pointed to a power-law tail in $b^2$. A Gaussian model fails because its Fourier transform over $P\cdot b$ diverges. An exponential decay in $|\vect{b}|$ or in $P\cdot b$ describes $\tAmp_{2B}^{\text{Re}}$ alone but fails once it is applied to all three amplitudes. We fixed the $\eta$-dependence of the power-law parameters, selected a model for each amplitude, and fit the three amplitudes simultaneously with the full Jackknife covariance matrix to obtain the $x$-dependent Sivers shift at each momentum. Separable longitudinal and transverse models failed for $\tAmp_{2B}^{\text{Im}}$ and $\tAmp_{12B}^{\text{Re}}$.
 
-Chapter~\ref{sec:physical_limit_extrapolation} extrapolated the fit parameters to $\zetahat\to\infty$ with the form $c+d/\zetahat^2$, using $P_L=-2,-3,-4$, and reconstructed the amplitudes and the Sivers shift in this limit (see Section~\ref{sec:conclusion_results}). It then tested factorization, first qualitatively on the lattice data in $(P\cdot b)$ and $b^2$, and then for the extrapolated results in $x$ and $|b_T|$. The Sivers shift is factorized to within about $5.7$-$7.6\%$ in the relative $L_2$ sense, smaller than the $8$-$19\%$ residuals of the amplitudes that enter it. A factorized form $F(x)G(|b_T|)$ is therefore a good, but not exact, approximation to the extracted Sivers shift.
+Chapter~\ref{sec:physical_limit_extrapolation} extrapolated the fit parameters to $\zetahat\to\infty$ with the form $c+d/\zetahat^2$, using $P_L=-2,-3,-4$, and reconstructed the amplitudes and the isovector Sivers shift in this limit (see Section~\ref{sec:conclusion_results}). It then tested factorization, first qualitatively on the lattice data in $(P\cdot b)$ and $b^2$, and then for the extrapolated results in $x$ and $|b_T|$. The Sivers shift is factorized to within about $5.7$-$7.6\%$ in the relative $L_2$ sense, smaller than the $8$-$19\%$ residuals of the amplitudes that enter it. A factorized form $F(x)G(|b_T|)$ is therefore a good, but not exact, approximation to the extracted Sivers shift.
 
 \subsection{Main results}
 \label{sec:conclusion_results}
 
 \begin{itemize}
-	\item It is feasible to obtain the $x$-dependence of TMD ratios from lattice QCD. This is the main result of this thesis: we extracted the \textbf{Sivers shift} $\langle k_y\rangle_{TU}$ as a function of $x$ at four nucleon momenta and extrapolated it to the physical limit $\zetahat\to\infty$ (Figures~\ref{fig:extrapolated_amplitude_level_sivers} and~\ref{fig:extrapolated_amplitude_3d_sivers}). At $|b_T| = 3a \approx 0.34$~fm, $\langle k_y\rangle_{TU}$ peaks at about $0.21$~GeV at small $x$ and falls to near zero by $x \approx 0.5$, while $x\langle k_y\rangle_{TU}$ peaks at about $0.02$~GeV near $x \approx 0.15$. Figure~\ref{fig:extrapolated_amplitude_3d_sivers} shows how both change with $|b_T|$ between $0.34$ and $0.94$~fm.
+	\item It is feasible to obtain the $x$-dependence of TMD ratios from lattice QCD. This is the main result of this thesis: we extracted the isovector ($u-d$) \textbf{Sivers shift} $\langle k_y\rangle_{TU}$ as a function of $x$ at four nucleon momenta and extrapolated it to the physical limit $\zetahat\to\infty$ (Figures~\ref{fig:extrapolated_amplitude_level_sivers} and~\ref{fig:extrapolated_amplitude_3d_sivers}). At $|b_T| = 3a \approx 0.34$~fm, $\langle k_y\rangle_{TU}$ peaks at about $0.21$~GeV at small $x$ and falls to near zero by $x \approx 0.5$, while $x\langle k_y\rangle_{TU}$ peaks at about $0.02$~GeV near $x \approx 0.15$. The overall sign reverses between the SIDIS/DY limits while the magnitude is unchanged, so the magnitude and $x$-shape are the result. Figure~\ref{fig:extrapolated_amplitude_3d_sivers} shows how both change with $|b_T|$ between $0.34$ and $0.94$~fm.
 	\item The range of accessible $b \tcdot P$ is limited:
 	\begin{align}
 		\frac{v \tcdot b}{v \tcdot P} = b \tcdot P \frac{R(\zetahat^2)}{\mN^2}\, 
