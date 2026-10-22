@@ -41,15 +41,15 @@
 \contentsline {subsubsection}{\numberline {3.4.3}Example: the pion two-point function}{42}{subsubsection.3.4.3}%
 \contentsline {subsection}{\numberline {3.5}The nucleon two-point function}{42}{subsection.3.5}%
 \contentsline {subsubsection}{\numberline {3.5.1}Interpolating operator and contraction}{42}{subsubsection.3.5.1}%
-\contentsline {subsubsection}{\numberline {3.5.2}Spectral decomposition}{42}{subsubsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.6}Three-point functions of local operators}{43}{subsection.3.6}%
-\contentsline {subsubsection}{\numberline {3.6.1}Definition and spectral decomposition}{43}{subsubsection.3.6.1}%
+\contentsline {subsubsection}{\numberline {3.5.2}Spectral decomposition}{43}{subsubsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.6}Three-point functions of local operators}{44}{subsection.3.6}%
+\contentsline {subsubsection}{\numberline {3.6.1}Definition and spectral decomposition}{44}{subsubsection.3.6.1}%
 \contentsline {subsubsection}{\numberline {3.6.2}Quark-level contraction and sequential propagators}{44}{subsubsection.3.6.2}%
 \contentsline {subsubsection}{\numberline {3.6.3}Ratio and zero momentum transfer}{45}{subsubsection.3.6.3}%
 \contentsline {subsection}{\numberline {3.7}Non-local staple-link operators}{46}{subsection.3.7}%
 \contentsline {subsubsection}{\numberline {3.7.1}Lattice operator and three-point function}{46}{subsubsection.3.7.1}%
 \contentsline {subsubsection}{\numberline {3.7.2}Contraction}{47}{subsubsection.3.7.2}%
-\contentsline {subsubsection}{\numberline {3.7.3}Ratio and matrix element}{47}{subsubsection.3.7.3}%
+\contentsline {subsubsection}{\numberline {3.7.3}Ratio and matrix element}{48}{subsubsection.3.7.3}%
 \contentsline {section}{\numberline {4}TMD CORRELATOR FOR LATTICE CALCULATIONS}{50}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Definition of TMDs}{50}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}TMDs in Fourier space}{52}{subsection.4.2}%

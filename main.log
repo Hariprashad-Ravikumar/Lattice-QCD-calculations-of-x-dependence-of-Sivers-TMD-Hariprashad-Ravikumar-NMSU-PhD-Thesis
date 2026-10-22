@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.17)  21 OCT 2026 12:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.17)  21 OCT 2026 19:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1221,7 +1221,7 @@ File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 [40] [41] [42] [43] [44] [45] [46]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 355.
-) [47] [48] [49]
+ [47]) [48] [49]
 (./Chapters/THEORETICAL_FRAMEWORK_OF_TMDs.tex [50] [51] [52]
 <plots/kinematics_interpolation/StapleLink2.pdf, id=3096, 170.6375pt x 73.27374
 pt>
@@ -2799,7 +2799,7 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Here is how much of TeX's memory you used:
  45778 strings out of 476025
  936226 string characters out of 5790016
- 2419902 words of memory out of 5000000
+ 2418902 words of memory out of 5000000
  64364 multiletter control sequences out of 15000+600000
  527599 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2834,7 +2834,7 @@ r/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb
 ></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10
 .pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
 bm10.pfb>
-Output written on main.pdf (239 pages, 34310801 bytes).
+Output written on main.pdf (239 pages, 34311231 bytes).
 PDF statistics:
  16843 PDF objects out of 18468 (max. 8388607)
  6923 compressed objects within 70 object streams
