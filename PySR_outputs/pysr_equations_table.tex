@@ -6,6 +6,7 @@
 \renewcommand{\arraystretch}{1.3}
 \caption{Pareto front of analytical candidate models discovered by \texttt{PySR} for the real amplitude $\tAmp_{2B}^{\text{Re}}(\eta, b_L, b_T)$, ranked by mathematical complexity and loss. The optimal physics-informed models ($C=14$ and $C=16$) are highlighted.}
 \label{tab:pysr_pareto_front}
+\begin{adjustbox}{max width=\linewidth}
 \begin{tabular}{@{}c c l >{\raggedright\arraybackslash}p{4.8cm}@{}}
 \hline\hline
 \textbf{Complexity} & \textbf{Loss} & \textbf{Discovered Analytical Expression} $\tAmp_{2B}^{\text{Re}}(\eta, b_L, b_T)$ & \textbf{Physical Interpretation} \\
@@ -27,4 +28,5 @@
 21 & 1.76   & $\frac{1}{\eta}\left(\frac{10.30}{\eta}\right)^{2.43} \frac{1.40}{(1 + b^2)^{1.13}} - \frac{0.00319}{\eta} - 0.00139$ & Multi-scale refinement \\
 \hline\hline
 \end{tabular}
+\end{adjustbox}
 \end{table}

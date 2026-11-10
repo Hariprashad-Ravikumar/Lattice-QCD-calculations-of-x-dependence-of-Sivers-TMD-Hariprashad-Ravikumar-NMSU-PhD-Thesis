@@ -291,7 +291,10 @@ Here $\vprp{k}$ is the transverse momentum of the quark in the nucleon and $\vpr
 
 In the Drell-Yan process, $h_a(P_a) + h_b(P_b) \to \ell^+\ell^-(q) + X$, a quark from one hadron annihilates with an antiquark from the other into a virtual photon or $Z$ boson, which decays into a lepton pair of invariant mass $Q$ and transverse momentum $\vprp{q}$~\cite{Drell:1970wh}. No fragmentation is involved, and for $|\vprp{q}|\ll Q$ the cross section is determined by two TMDs. The TMD factorization theorem for this process takes the form~\cite{Collins:1984kg,CollinsBook2011,Boussarie:2023izj}
 \begin{equation}
-  \frac{d\sigma}{dQ^2\,dy\,d^2\vprp{q}} = \sigma_0 \sum_q e_q^2\, H(Q,\mu)\int\frac{d^2\vprp{b}}{(2\pi)^2}\ e^{-i\vprp{b}\tcdot\vprp{q}}\ \tilde{f}_1^{q}(x_a,\vprp{b};\mu,\zeta_a)\ \tilde{f}_1^{\bar q}(x_b,\vprp{b};\mu,\zeta_b) + (q\leftrightarrow\bar q) + \mathcal{O}\!\left(\frac{|\vprp{q}|}{Q}\right) ,
+  \begin{split}
+  \frac{d\sigma}{dQ^2\,dy\,d^2\vprp{q}} = \sigma_0 \sum_q e_q^2\, H(Q,\mu)&\int\frac{d^2\vprp{b}}{(2\pi)^2}\ e^{-i\vprp{b}\tcdot\vprp{q}}\ \tilde{f}_1^{q}(x_a,\vprp{b};\mu,\zeta_a)\ \tilde{f}_1^{\bar q}(x_b,\vprp{b};\mu,\zeta_b)\\
+  &+ (q\leftrightarrow\bar q) + \mathcal{O}\!\left(\frac{|\vprp{q}|}{Q}\right) ,
+  \end{split}
   \label{eq:dy_factorization}
 \end{equation}
 where $\sigma_0$ is the Born cross section, $H$ is a perturbative hard factor, $y$ is the rapidity of the lepton pair, and $\tilde f_1(x,\vprp{b})$ is the Fourier transform of the TMD in the transverse momentum, Eq.~\eqref{eq-FTMD}. The scales $\zeta_a$ and $\zeta_b$, with $\zeta_a\zeta_b = Q^4$, arise from the rapidity divergences discussed in Section~\ref{sec:rapidity_soft}. These rapidity scales have mass dimension two and are not the same as the Lorentz-invariant $\zeta = 2v\tcdot P/\sqrt{|v^2|}$ of Chapter~\ref{sec:tmd_framework}; only the dimensionless $\zetahat$ enters the lattice calculation. Transverse position space is the natural setting for TMD factorization: the convolution in $\vprp{k}$ becomes a product, and evolution is multiplicative. Similar factorization theorems hold for SIDIS and for $e^+e^-$ annihilation into two hadrons~\cite{Ji:2004wu,CollinsBook2011}. A single-spin asymmetry in Drell-Yan with a transversely polarized hadron measures the Sivers function of that hadron in the Drell-Yan process, which makes the sign change of Eq.~\eqref{eq:intro_sign_change} testable.
@@ -446,11 +449,13 @@ with both amplitudes evaluated at $\bvec^2 = -\vprp{b}^2$ and $\bvec\tcdot P = 0
 Since $\bvec$ is space-like, $\bvec^2<0$ in the Minkowski metric. The lattice frame, used from Chapter~\ref{sec:x_dependence} on, is one in which $\bvec$ has no time component, so $-\bvec^2 = |\vect{b}|^2$. In that frame we write $b_L$ and $b_T$ for the components of $\vect{b}$ along and perpendicular to the nucleon momentum $\vect{P}$, and $b^2$ for the positive quantity $|\vect{b}|^2 = b_L^2 + b_T^2$. Because the TMD frame has $b^+=0$, the TMD transverse separation satisfies $\vprp{b}^2 = -\bvec^2 = b_L^2 + b_T^2$. It coincides with the lattice component $b_T$ only when $b_L = 0$, that is, at $\bvec\tcdot P = 0$.
 
 The Sivers function describes the average transverse momentum of unpolarized quarks in the direction perpendicular to the nucleon spin. For a nucleon polarized along $\hat{\vect{x}}$, $\vprp{S} = (1,0)$, Eq.~\eqref{eq:tmd_decomp_f} gives $\Phi^{[\gamma^+]} = f_1 + (k_y/\mN)\,f_{1T}^\perp$, and the average $k_y$ is $\mN f_{1T}^{\perp(1)}/f_1^{(0)}$. The generalized Sivers shift extends this quantity to finite $|\vprp{b}|$~\cite{Musch:2011er,Boer:2011xd},
+\begingroup\small
 \begin{equation}
   \langle k_y\rangle_{TU}(\vprp{b}^2;\zetahat,\eta v\tcdot P) \equiv \mN\,\frac{\tilde f_{1T}^{\perp[1](1)}(\vprp{b}^2;\zetahat,\ldots,\eta v\tcdot P)}{\tilde f_1^{[1](0)}(\vprp{b}^2;\zetahat,\ldots,\eta v\tcdot P)}
   = -\mN\,\frac{\tAmp_{12B}(-\vprp{b}^2,0,0,-1/(\mN\zetahat)^2,\eta v\tcdot P)}{\tAmp_{2B}(-\vprp{b}^2,0,0,-1/(\mN\zetahat)^2,\eta v\tcdot P)} \ .
   \label{eq:generalized_sivers_shift}
 \end{equation}
+\endgroup
 Under the assumption stated in Section~\ref{sec:rapidity_soft}, the soft factor and the multiplicative renormalization factors cancel in this ratio, so $\langle k_y\rangle_{TU}$ can be computed on the lattice without constructing either. In the limit $|\vprp{b}|\to 0$, it would become the average transverse momentum of the quarks, with the numerator summing quark and antiquark contributions and the denominator counting quarks minus antiquarks~\cite{Boussarie:2023izj}. Because $\bvec\tcdot P = 0$, Eq.~\eqref{eq:generalized_sivers_shift} is integrated over $x$.
 
 The $x$ dependence enters through the second argument of the amplitudes. Since $x$ and $\bvec\tcdot P$ are Fourier conjugate variables (Chapter~\ref{sec:tmd_framework}), keeping $\bvec\tcdot P$ as a variable and Fourier transforming the numerator and denominator separately gives an $x$-dependent generalized Sivers shift,

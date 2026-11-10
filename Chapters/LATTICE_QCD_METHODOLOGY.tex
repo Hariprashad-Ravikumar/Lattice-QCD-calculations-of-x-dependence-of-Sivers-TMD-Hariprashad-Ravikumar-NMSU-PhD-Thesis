@@ -226,11 +226,13 @@ with $C$ the charge-conjugation matrix (not to be confused with the correlator $
     \label{eq:c2pt_def}
 \end{equation}
 and Wick's theorem expresses it through $u$ and $d$ propagators from the source~\cite{Gattringer:2010zz},
+\begingroup\footnotesize
 \begin{align}
     C_{\alpha\beta}(t,\vect p)=-a^3\sum_{\vect x}e^{-i\vect p\cdot\vect x}\,\epsilon^{ijk}\epsilon^{i'j'k'}\,[C^{-1}\gamma_5]_{\alpha'\alpha''}\,[\gamma_5C]_{\beta'\beta''}\,
     \Big\langle\big[S_d\big]^{ki'}_{\alpha''\beta'}\Big\{\big[S_u\big]^{jj'}_{\alpha'\beta''}\big[S_u\big]^{ik'}_{\alpha\beta}-\big[S_u\big]^{ij'}_{\alpha\beta''}\big[S_u\big]^{jk'}_{\alpha'\beta}\Big\}\Big\rangle \ ,
     \label{eq:c2pt_contraction}
 \end{align}
+\endgroup
 with $S_f\equiv S_f(\vect x,t;\vect 0,0)$. The two terms correspond to the two ways of contracting the two $u$ quarks.
 
 \subsubsection{Spectral decomposition}
@@ -246,11 +248,13 @@ For $T\to\infty$ only the vacuum survives in the outer trace, and inserting a co
     \label{eq:overlap}
 \end{equation}
 where $n$ labels the nucleon and its excitations. If source and sink operators differ, for example through smearing, $Z_n$ stands for $\sqrt{Z^{\rm snk}_n\bar Z^{\rm src}_n}$~\cite{Lin:2014}. Then
+\begingroup\small
 \begin{equation}
     C_{\alpha\beta}(t,\vect p)=\sum_n\frac{|Z_n(\vect p)|}{2E_n(\vect p)}\,e^{-E_n(\vect p)t}\sum_s u_\alpha(n,\vect p,s)\,\bar u_\beta(n,\vect p,s)
     =\sum_n\frac{|Z_n(\vect p)|}{2E_n(\vect p)}\,e^{-E_n(\vect p)t}\,\big(-i{\not\!p}_n+m_n\big)_{\alpha\beta} \ ,
     \label{eq:c2pt_spectral}
 \end{equation}
+\endgroup
 where we used Eq.~\eqref{eq:spin_sum}, with $p_n$ the Euclidean four-momentum of Eq.~\eqref{eq:spin_sum} for energy $E_n(\vect p)$. The correlator is projected onto positive parity with $\Gamma^+=\frac12(1+\gamma_4)$~\cite{Gattringer:2010zz}. Using $\Tr[\gamma_\mu]=0$, $\Tr[\gamma_4\gamma_4]=4$ and $p_4=iE$,
 \begin{equation}
     \Tr\big[\Gamma^+\big(-i{\not\!p}+m\big)\big]=\frac12\Big(-i\,\Tr\big[\gamma_4\gamma_4\big]\,iE+4m\Big)=2(E+m) \ ,
@@ -291,6 +295,7 @@ For $0\ll\tau\ll t$ the ground state dominates both sums~\cite{Lin:2014}. The ma
     \label{eq:me_sandwich}
 \end{equation}
 where $\mathcal J$ is the combination of Dirac matrices and form factors allowed by the symmetries of $\mathcal O$~\cite{Lin:2014}. Inserting Eqs.~\eqref{eq:overlap} and~\eqref{eq:me_sandwich}, the spin sums close into Eq.~\eqref{eq:spin_sum},
+\begingroup\footnotesize
 \begin{align}
     G(t,\tau;\vect p,\vect p')&=\frac{\sqrt{Z(\vect p')}\sqrt{Z(\vect p)}^{\,*}}{4E(\vect p')E(\vect p)}\,e^{-E(\vect p')(t-\tau)}\,e^{-E(\vect p)\tau}\;
     \Gamma^{\rm 3pt}_{\beta\alpha}\sum_{s'}u_\alpha(\vect p',s')\bar u(\vect p',s')\,\mathcal J\sum_s u(\vect p,s)\bar u_\beta(\vect p,s) \nonumber\\
@@ -298,6 +303,7 @@ where $\mathcal J$ is the combination of Dirac matrices and form factors allowed
     \Tr\Big[\Gamma^{\rm 3pt}\big(-i{\not\!p}'+m\big)\,\mathcal J\,\big(-i{\not\!p}+m\big)\Big] \ ,
     \label{eq:c3pt_ground}
 \end{align}
+\endgroup
 (compare Eqs.~(3.80)--(3.81) of Ref.~\cite{Lin:2014} and Eq.~(3.57) of Ref.~\cite{MuschThesis2}).
 
 \subsubsection{Quark-level contraction and sequential propagators}
@@ -320,11 +326,13 @@ For the forward matrix elements that define TMDs, the source and sink momenta ar
     \label{eq:sqrt_unity}
 \end{equation}
 and the ratio reduces to $R=G_\Gamma(t,\tau;\vect p,\vect p)/C_{\Gamma^+}(t,\vect p)$. Inserting Eqs.~\eqref{eq:c2pt_ground} and~\eqref{eq:c3pt_ground} with $\vect p'=\vect p$, the overlaps and the factors $e^{-E(t-\tau)}e^{-E\tau}=e^{-Et}$ cancel,
+\begingroup\small
 \begin{equation}
     R(t,\tau;\vect p,\vect p)\xrightarrow{\ 0\ll\tau\ll t\ }\frac{\Tr\big[\Gamma^{\rm 3pt}\big(-i{\not\!p}+m\big)\,\mathcal J\,\big(-i{\not\!p}+m\big)\big]}{4E(\vect p)\big(E(\vect p)+m\big)}
     =\frac{\Tr\big[\Gamma^{\rm 3pt}\big(-i{\not\!p}+m\big)\,\mathcal J\,\big(-i{\not\!p}+m\big)\big]}{2E(\vect p)\,\Tr\big[\Gamma^+\big(-i{\not\!p}+m\big)\big]} \ ,
     \label{eq:ratio_forward}
 \end{equation}
+\endgroup
 where the second form uses Eq.~\eqref{eq:c2pt_trace} and agrees with Eq.~(3.61) of Ref.~\cite{MuschThesis2}. Equivalently, the kinematic prefactor $\sqrt{E_{p'}E_p/[(E_{p'}+m)(E_p+m)]}$ of Eq.~(3.93) in Ref.~\cite{Lin:2014} becomes $E/(E+m)$ at $\vect p'=\vect p$. The ratio is independent of $\tau$ and $t$ in the region where the ground state dominates. Excited states are suppressed by increasing the source-sink separation, but the statistical noise grows with it, so the separation is a compromise between the two~\cite{MuschThesis2}.
 
 \subsection{Non-local staple-link operators}
@@ -378,7 +386,7 @@ The ratios $R_{\Gamma(n)}$ for $\Gamma(1),\Gamma(2),\Gamma(4),\Gamma(8)=\gamma_1
 
 \subsection{Lattice simulation setup}
 \label{sec:lat_setup}
-All results in this thesis come from a single ensemble of gauge configurations with $N_f=2+1$ flavors of clover fermions, summarized in Table~\ref{tab:lat_setup}. The ensemble has 967 configurations. On each configuration we compute the proton and antiproton propagators from 12 source positions each, together with the corresponding sequential propagators, which gives $967\times24=23208$ measurements. We divide these into blocks of 8 and use them to form 2901 jackknife sets. The momentum transfer is zero, and the sink momentum runs from $(-1,0,0)$ to $(-4,0,0)$ in units of $2\pi/L$. We use $t_{\rm src}=0$ and $t_{\rm snk}=t_{\rm sep}=10$.
+All results in this thesis come from a single ensemble of gauge configurations with $N_f=2+1$ flavors of clover fermions, summarized in Table~\ref{tab:lat_setup}. The ensemble has 967 configurations. On each configuration we compute the proton and antiproton propagators from 12 source positions each, together with the corresponding sequential propagators, which gives $967\times24=23208$ measurements. We divide these into blocks of 8 and use them to form 2901 jackknife sets. The momentum transfer $\Delta=P'-P$ is zero, and the sink momentum runs from $(-1,0,0)$ to $(-4,0,0)$ in units of $2\pi/L$. We use $t_{\rm src}=0$ and $t_{\rm snk}=t_{\rm sep}=10$.
 
 \begin{table}[h!]
     \centering
@@ -401,7 +409,7 @@ All results in this thesis come from a single ensemble of gauge configurations w
     \hline
     \multicolumn{2}{|c|}{Kinematics} \\
     \hline
-    Momentum transfer $\vect{\Delta}$ & $(0,0,0)$ \\
+    Momentum transfer $\Delta$ & $(0,0,0)$ \\
     \hline
     Sink momentum $\vect{P}$ & $(-n,0,0)$, $n=1,2,3,4$ \\
     \hline

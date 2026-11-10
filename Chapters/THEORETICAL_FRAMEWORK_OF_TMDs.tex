@@ -39,6 +39,7 @@ vacuum expectation value of Wilson line structures.
 In this framework, we start with space-like Wilson lines. Some Wilson lines remain tilted away from the light cone, leading to the dependence on the rapidity parameter $y_s$ in the above expression. We need not specify $\tilde \softf$ further, since it cancels in the observables we consider.
 
 To project the correlator onto the relevant kinematics, we integrate over the suppressed momentum component $k^-$, which sets the position-space separation to $b^+ = 0$:
+\begingroup\footnotesize
 \begin{align}
 	\Phi^{[\Gamma]}(x,\vprp{k};P,S;\ldots) & \equiv \int dk^{-} \Phi^{[\Gamma]}(\kei,P,S;\ldots) \nonumber \\ 
  &=\int dk^{-}\int \frac{d^4 \bvec}{(2\pi)^4}\, e^{i \kei\cdot \bvec} \frac{\frac{1}{2}\, \bra{P,S}\ \bar{q}(0)\, \Gamma\ \WlineC{\mathcal{C}_\bvec}\ q(\bvec)\ \ket{P,S}}{ \widetilde{\mathcal{S}}(-\vprp{\bvec}^2;\ldots) }\\
@@ -48,6 +49,7 @@ To project the correlator onto the relevant kinematics, we integrate over the su
 		\left. \frac{\frac{1}{2}\, \bra{P,S}\ \bar{q}(0)\, \Gamma\ \WlineC{\mathcal{C}_\bvec}\ q(\bvec)\ \ket{P,S}}
 		{ \widetilde{\mathcal{S}}(-\vprp{\bvec}^2;\ldots) } \right|_{b^+ = 0} \ .
 \end{align}
+\endgroup
 As a consequence, $x \leftrightarrow (\bvec \tcdot P)$ and $\vprp{k} \leftrightarrow \vprp{b}$ are independent pairs of Fourier conjugate variables.
 With the Dirac matrix $\Gamma = \gamma^+$, which projects onto the leading-twist unpolarized quark distribution, the correlator becomes~\cite{Ralston:1979ys, Tangerman:1994eh,Mulders:1995dh,Goeke:2005hb}:
 \begin{align}
@@ -254,6 +256,7 @@ have introduced the following abbreviations for combinations of amplitudes:
 	\label{eq-ABamps_sivers}
 \end{align}
 The unpolarized distribution $f_1$ and the Sivers distribution $f_{1T}^\perp$ follow from the Fourier integration operator $\fourint$:
+\begingroup\footnotesize
 \begin{align}
 	\fourint \tAmp_i \equiv & \int \frac{d^2 \vprp{\bvec}}{(2\pi)^2}\,e^{-i\vprp{\bvec}\tcdot\vprp{\kei}}\, \frac{1}{\widetilde{\mathcal{S}}(\bvec^2;\ldots)} \int \frac{d(\bvec \tcdot P)}{(2\pi)}\,e^{ix(\bvec \tcdot P)} 
 	\tAmp_i(-\vprp{\bvec}^2,\bvec \tcdot P,(\bvec \tcdot P) R(\zetahat^2)/\mN^2,-1/(\mN\zetahat)^2,\eta v \tcdot P) \nonumber \\
@@ -261,6 +264,7 @@ The unpolarized distribution $f_1$ and the Sivers distribution $f_{1T}^\perp$ fo
 	\tAmp_i(\bvec^2,\bvec \tcdot P,(\bvec \tcdot P) R(\zetahat^2)/\mN^2,-1/(\mN\zetahat)^2,\eta v \tcdot P) \, 
 	\label{eq-fourint}
 \end{align}
+\endgroup
 Applied to the combined amplitudes, it gives the leading-twist distributions:
 \begin{align}
 	 f_1(x,\vprp{\kei}^2;\zetahat,\ldots,\eta v \tcdot P) & = 2 \fourint\ \tAmp_{2B} \,,\nonumber \displaybreak[0] \\
@@ -306,6 +310,7 @@ where we integrated by parts in $\vect{k}_j$ (the surface term vanishes for $|\v
 	\tilde f_{1T}^{\perp(1)}(x,\vprp{\bvec}^2) = -\frac{2}{\mN^2}\,\partial_{\vprp{\bvec}^2}\tilde f_{1T}^\perp(x,\vprp{\bvec}^2) = -2\,\tAmp^{[x]}_{12B}(x,\vprp{\bvec}^2)\,.
 \end{equation}
 In summary, we have,
+\begingroup\footnotesize
 \begin{align}
 	\tilde f_1^{(0)}(x, \vprp{\bvec}^2;\zetahat,\ldots,\eta v \tcdot P) & = 2 \int_{-\infty}^{\infty} \frac{d(\bvec \tcdot P)}{2\pi}\, e^{ix(\bvec \tcdot P)}\, 
 	\frac{\tAmp_{2B}\big(-\vprp{\bvec}^2,\bvec \tcdot P,(\bvec \tcdot P) R(\zetahat^2)/\mN^2,-1/(\mN\zetahat)^2,\eta v\tcdot P\big)}{\widetilde{\mathcal{S}}(-\vprp{\bvec}^2;\ldots)} \,,\displaybreak[0] \nonumber \\
@@ -315,6 +320,7 @@ In summary, we have,
     &=-2\,\tAmp^{[x]}_{12B}(x,\vprp{\bvec}^2)\,.
 	\label{eq-xintderfttmds2}
 \end{align}
+\endgroup
 This framework lays the groundwork for extracting its $x$-dependence. In subsequent chapters, for brevity, we may drop the soft-factor term from the definitions above, since it ultimately cancels in the ratios we consider. It must be kept in mind, then, that ultimately only the final ratios are physical observables. 
 
 \subsection{Generalized Sivers shift from amplitudes}
@@ -332,6 +338,7 @@ where $\gamma^+$ projects onto the leading twist.
 The ratio above yields the average transverse momentum
 in the $y$-direction, for quarks with a given longitudinal momentum fraction $x$ inside a proton polarized in the $x$-direction. As mentioned before, understanding $f_{1T}^{\perp(1)}$ simply as a $\vprp{\kei}$-weighted TMD is problematic, since the $\vprp{k}$-integral is expected to be UV divergent. 
 A natural way of circumventing this divergence is to generalize the Sivers shift to an expression in terms of the Fourier-transformed TMDs:
+\begingroup\small
 \begin{align}
     \langle \vect{k}_y \rangle_{TU}(\vprp{\bvec}^2,x,\zetahat,\eta v \tcdot P) 
 	&\ \equiv\ \mN \frac{\tilde f_{1T}^{\perp(1)}(\vprp{\bvec}^2,x;\zetahat,\ldots,\eta v \tcdot P)}{\tilde f_1^{(0)}(\vprp{\bvec}^2,x;\zetahat,\ldots,\eta v \tcdot P)}  \\
@@ -341,6 +348,7 @@ A natural way of circumventing this divergence is to generalize the Sivers shift
 		{  \int d^2 \vprp{\kei}  \phantom{\vect{\kei}_y}\ \Phi^{[\gamma^+]}(x,\vprp{\kei},P,S;\ldots) } \right|_{\displaystyle \vprp{S}=(1,0) } 
 	\label{eq-genSivShift}
 \end{align}
+\endgroup
 In the limit $\vprp{\bvec}^2=0$ we recover the Sivers shift \eqref{eq-sivshift}, because the Fourier transformed TMDs $\tilde f_{1T}^{\perp(1)}$ and $\tilde f_1^{(0)}$ coincide with the moments $f_{1T}^{\perp(1)}$ and $f_1^{(0)}$, respectively. However, we are interested in the generalized Sivers shift for non-zero $\vprp{\bvec}^2$, where this UV divergence disappears. The variable $\vprp{b}^2$ effectively acts as a regulator. Moreover, the $\vprp{\bvec}$-dependence allows us to study differences in the widths of distributions on a qualitative level.
 
 Furthermore, the generalized Sivers shift is T-odd, i.e., we expect to obtain results of opposite sign in the SIDIS and DY limits $\eta v \tcdot P \rightarrow \infty$ and $\eta v \tcdot P \rightarrow -\infty$, respectively, as demonstrated in Refs.~\cite{Musch:2011er,Yoon:2017qzo}.

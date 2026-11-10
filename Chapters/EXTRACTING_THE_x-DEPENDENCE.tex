@@ -11,6 +11,7 @@ To connect our lattice observables to the physical, $x$-dependent Transverse Mom
 Our primary goal is to extract the generalized Sivers shift, $\langle \vect{k}_y \rangle_{TU}$, as a continuous function of the longitudinal momentum fraction $x = k^+ / P^+$. The Sivers shift is defined phenomenologically as the ratio of the first transverse momentum moment of the Sivers function to the unpolarized distribution as discussed in Section \ref{sec:sivers_shift_amplitudes}. 
 
 Because $x$ and the longitudinal spatial separation $b \cdot P$ are Fourier conjugate variables, mapping the $x$-dependence requires a Fourier transform of these amplitudes with respect to $b \cdot P$. Analytically, the $x$-dependent Sivers shift takes the form:
+\begingroup\small
 \begin{align}
    \langle \vect{k}_y \rangle_{TU}(\vprp{\bvec}^2,x,\zetahat,\eta v \tcdot P) 
 	&\ \equiv\ \mN \frac{\tilde f_{1T}^{\perp(1)}(\vprp{\bvec}^2,x;\zetahat,\ldots,\eta v \tcdot P)}{\tilde f_1^{(0)}(\vprp{\bvec}^2,x;\zetahat,\ldots,\eta v \tcdot P)}  \\
@@ -21,6 +22,7 @@ Because $x$ and the longitudinal spatial separation $b \cdot P$ are Fourier conj
  &=-m_{N} \frac{\left[\tAmp_{12B}^{[x]\text{Re}}(b^2,x,\zetahat,\eta v \tcdot P)-\tAmp_{12B}^{[x]\text{Im}}(b^2,x,\zetahat,\eta v \tcdot P)\right]}{\left[\tAmp_{2B}^{[x]\text{Re}}(b^2,x,\zetahat,\eta v \tcdot P)-\tAmp_{2B}^{[x]\text{Im}}(b^2,x,\zetahat,\eta v \tcdot P)\right]}
  \label{eq:sivers_shift_xdep}
  \end{align}
+\endgroup
  Expanding the Fourier phase factor into its trigonometric components isolates the real and imaginary contributions of the amplitudes to the Sivers shift. Because the integration over $d(b \cdot P)$ is performed over a symmetric domain, the non-vanishing terms of the integral are dictated by the parity of the integrands with respect to $b \cdot P$. The trigonometric weights $\cos\left(x(b\cdot P)\right)$ and $\sin\left(x(b\cdot P)\right)$ are even and odd, respectively.
 
 This harmonic symmetry filters the invariant amplitudes based on their behavior under Hermitian conjugation. By Eqs.~\eqref{conditi_hermitian} and~\eqref{eq-ReIm-parity}, the real components $\tAmp_{2B}^{\text{Re}}$ and $\tAmp_{12B}^{\text{Re}}$ are even functions of $b \cdot P$, while the imaginary components $\tAmp_{2B}^{\text{Im}}$ and $\tAmp_{12B}^{\text{Im}}$ are odd. (Parity in $b$ is parity in $b\cdot P$ here, because $\bvec^2$ is unchanged under $b\to-b$, $v\cdot b$ is tied to $b\cdot P$ by Eq.~\eqref{eq-lindeprel}, and $R(\zetahat^2)$ is real.) Only the symmetric products therefore survive the integration, i.e., the even real amplitudes coupled with the cosine term and the odd imaginary amplitudes coupled with the sine term. Here, $\tAmp_{iB}^{[x]\text{Re}}$ and $\tAmp_{iB}^{[x]\text{Im}}$ are the Fourier-transformed amplitudes. Note that, since $\tAmp_{iB}^{\text{Im}}$ is odd in $(P\cdot b)$, its Fourier transform gives an imaginary solution, i. e. $\int \frac{d(\bvec \tcdot P)}{2\pi}e^{ix(b\cdot P)}\tAmp_{iB}^{\text{Im}}=i\tAmp_{iB}^{[x]\text{Im}}$, this results in
@@ -340,6 +342,7 @@ To extract the physical Sivers shift from the lattice, we must isolate the speci
 		-i \mN^3 (v \tcdot S) \epsilon^{\mu \nu \alpha \beta} P_\nu \bvec_\alpha \eta^2 v_\beta \tilde b_{10}
 \end{align}
 To evaluate Eq.~\eqref{eq-phitildedecomp}, we project it onto the kinematics chosen for our lattice setup. We choose a frame where the nucleon moves in the negative $\hat{1}$-direction, the spin is polarized along the $\hat{3}$-axis, and the separation and staple vectors lie in the transverse/longitudinal planes. We set $P^{\mu}=(E_N, -|\vec{P}^1|,0,0)$, $b^{\mu}=(0,b_{1},b_{2},0)$, $v^{\mu}=\pm n^{\prime}(0,v_{1},0,v_{3})$, and $S^{\mu}=(0,0,0,1)$. Throughout this derivation, $\bvec^1$ and $\bvec^2$ denote the contravariant components of $\bvec$, so that $\bvec^1=b_L$ and $\bvec^2=b_T$ in this frame. The invariant dot product is $\bvec\cdot\bvec$; it is the quantity written $\bvec^2$ in the arguments of the amplitudes $\tAmp_i(\bvec^2,\ldots)$ and is never a component. Expanding the sum over Lorentz indices for the temporal component ($\mu = 0$) and canceling the terms that vanish (such as $b^0 = 0$, $v^0 = 0$, and $\bvec \tcdot S = 0$), we find %for each $\gamma^{\mu}$:
+\begingroup\footnotesize
 \begin{align}
     \frac{1}{2}\widetilde \Phi^{[\gamma^{0}]}_{\unsub} & = 
 		P^0\, \tAmp_2 - \cancelto{0}{i \mN^2 \bvec^0\, \tAmp_3}
@@ -354,7 +357,9 @@ To evaluate Eq.~\eqref{eq-phitildedecomp}, we project it onto the kinematics cho
         - \cancelto{0}{\frac{i \mN^3}{(v \tcdot P)^2} (v \tcdot S) \epsilon^{0 111} P_1 \bvec_1 v_1 \tBmp_{10}} - \cancelto{0}{\frac{i \mN^3}{(v \tcdot P)^2} (v \tcdot S) \epsilon^{0 113} P_1 \bvec_1 v_3 \tBmp_{10}}\\
   \Aboxed{ \frac{1}{2}\widetilde \Phi^{[\gamma^{0}]}_{\unsub}& = P^0\, \tAmp_2  - i \mN  |\vec{P}^1| \bvec_2 S_3\, \tAmp_{12}+ \frac{ i \mN^3}{v \tcdot P}  \bvec_2 v_1 S_3\, \tBmp_8- \frac{i \mN^3}{(v \tcdot P)^2} (v \tcdot S)  |P_1| \bvec_2 v_3 \tBmp_{10}}
 \end{align}
+\endgroup
 Repeating this tensor contraction for the longitudinal spatial component ($\mu = 1$), taking care to track the signs of the Levi-Civita symbol, yields:
+\begingroup\footnotesize
 \begin{align}
     \frac{1}{2}\widetilde \Phi^{[\gamma^{1}]}_{\unsub} & = 
 		-|\vec{P}^1|\, \tAmp_2 - i \mN^2 \bvec^1\, \tAmp_3
@@ -366,6 +371,7 @@ Repeating this tensor contraction for the longitudinal spatial component ($\mu =
   \Aboxed{ \frac{1}{2}\widetilde \Phi^{[\gamma^{1}]}_{\unsub} & =-|\vec{P}^1|\, \tAmp_2+ \frac{\mN^2}{(v \tcdot P)} v^1\, \tBmp_1 
 		+ i \mN  P_0 \bvec_2 S_3\, \tAmp_{12}+ \frac{i \mN^3}{(v \tcdot P)^2} (v \tcdot S)  P_0 \bvec_2 v_3 \tBmp_{10}- i \mN^2 \bvec^1\, \tAmp_3}
 \end{align}
+\endgroup
 Evaluating the transverse component ($\mu=2$) isolates terms that depend on $P_0$ and the longitudinal separation $b_1$:
 \begin{align}
     \frac{1}{2}\widetilde \Phi^{[\gamma^2]}_{\unsub} & = 
@@ -388,6 +394,7 @@ Finally, the orthogonal transverse component ($\mu=3$) simplifies because of the
   \Aboxed{\frac{1}{2}\widetilde \Phi^{[\gamma^3]}_{\unsub}& = \frac{\mN^2}{(v \tcdot P)} v^3\, \tBmp_1- \frac{i \mN^3}{(v \tcdot P)^2} (v \tcdot S)  P_0 \bvec_2 v_1 \tBmp_{10}}
 \end{align}
 Collecting these boxed results gives the full system of equations mapping the infinite-link continuous amplitudes to the projected correlator components:
+\begingroup\small
 \begin{align}
    \Aboxed{ \frac{1}{2}\widetilde \Phi^{[\gamma^{0}]}_{\unsub}& = P^0\, \tAmp_2  - i \mN  |\vec{P}^1| \bvec_2 S_3\, \tAmp_{12}+ \frac{ i \mN^3}{v \tcdot P}  \bvec_2 v_1 S_3\, \tBmp_8- \frac{i \mN^3}{(v \tcdot P)^2} (v \tcdot S)  |P_1| \bvec_2 v_3 \tBmp_{10}}\\
    \Aboxed{ \frac{1}{2}\widetilde \Phi^{[\gamma^{1}]}_{\unsub} & =-|\vec{P}^1|\, \tAmp_2- i \mN^2 \bvec^1\, \tAmp_3+ \frac{\mN^2}{(v \tcdot P)} v^1\, \tBmp_1 
@@ -396,7 +403,9 @@ Collecting these boxed results gives the full system of equations mapping the in
 		- i \mN  P_0 \bvec_1 S_3\, \tAmp_{12}+ \frac{\mN}{v \tcdot P}  P_0 v_1 S_3\, \tBmp_7- \frac{i \mN^3}{(v \tcdot P)^2} (v \tcdot S) P_0 \bvec_1 v_3 \tBmp_{10}}\\
     \Aboxed{\frac{1}{2}\widetilde \Phi^{[\gamma^3]}_{\unsub}& = \frac{\mN^2}{(v \tcdot P)} v^3\, \tBmp_1- \frac{i \mN^3}{(v \tcdot P)^2} (v \tcdot S)  P_0 \bvec_2 v_1 \tBmp_{10}}
 \end{align}
+\endgroup
 We structure this system as a column vector to streamline the upcoming algebraic inversions:
+\begingroup\small
 \begin{align}
     \begin{pmatrix}
         \rule{0pt}{16pt} \widetilde \Phi^{[\gamma^{0}]}_{\unsub}\\
@@ -412,7 +421,9 @@ We structure this system as a column vector to streamline the upcoming algebraic
         \rule{0pt}{16pt} \frac{\mN^2}{(v \tcdot P)} v^3\, \tBmp_1- \frac{i \mN^3}{(v \tcdot P)^2} (v \tcdot S)  P_0 \bvec_2 v_1 \tBmp_{10}
     \end{pmatrix}
 \end{align}
+\endgroup
 To match standard contravariant Lorentz notation, we raise the spatial indices using the Minkowski metric $g^{\mu\nu} = \text{diag}(1, -1, -1, -1)$. This introduces a relative minus sign for the spatial components (e.g., $P_1 = -P^1$, $b_2 = -b^2$):
+\begingroup\small
 \begin{align}
     \begin{pmatrix}
         \rule{0pt}{16pt} \widetilde \Phi^{[\gamma^{0}]}_{\unsub}\\
@@ -428,6 +439,7 @@ To match standard contravariant Lorentz notation, we raise the spatial indices u
         \rule{0pt}{16pt} \frac{\mN^2}{(v \tcdot P)} v^3\, \tBmp_1- \frac{i \mN^3}{(v \tcdot P)^2} (v \tcdot S)  P^0 \bvec^2 v^1 \tBmp_{10}
     \end{pmatrix}
 \end{align}
+\endgroup
 To connect these continuous amplitudes to the discretized finite-link observables simulated on the lattice, we use the mapping of Eq.~\eqref{eq-ab} between the infinite-link amplitudes ($\tAmp_i$, $\tBmp_i$) and the finite-link amplitudes ($\tilde{a}_i$, $\tilde{b}_i$). The finite-link amplitudes are complex-valued functions, which we decompose into their real and imaginary components:
 \begin{align}
     \tilde{a}_i&=\tilde{a}^{\text{Re}}_i+i\tilde{a}^{\text{Im}}_i\\
@@ -445,6 +457,7 @@ The lattice evaluation also requires converting the continuous Minkowski gamma m
     \end{align}
 \end{itemize}
 Substituting the Euclidean gamma structures and mapping $P^0 \to E_N$, we rewrite the column vector entirely in terms of the lattice ratio observables $R_{\Gamma(i)}$ and the finite-link amplitudes. The index $i \in \{1,2,4,8\}$ labels each Dirac structure by its bit-encoded position (CHROMA \& QLUA convention discussed in Appendix \ref{app:gamma}.) in our operator basis, matching the correspondence $\Gamma(1)=[+i\gamma^1]$, $\Gamma(2)=[-i\gamma^2]$, $\Gamma(4)=[+i\gamma^3]$, and $\Gamma(8)=[\gamma^0]$ used below:
+\begingroup\small
 \begin{align}
     \begin{pmatrix}
         \rule{0pt}{16pt} R_{\Gamma(1)}\\
@@ -465,6 +478,7 @@ Substituting the Euclidean gamma structures and mapping $P^0 \to E_N$, we rewrit
          \rule{0pt}{16pt}   \tilde a_2  - i \mN  \frac{|\vec{P}^1|}{E_N} \bvec^2  \tilde a_{12}- \frac{ i \mN^3}{E_N}  \bvec^2 \eta v^1  \tilde b_8+ \frac{i \mN^3}{E_N}  |\vec{P}^1| \bvec^2 \eta^2 (v^3)^2 \tilde b_{10}
     \end{pmatrix}
 \end{align}
+\endgroup
 To separate the real and imaginary amplitude contributions analytically, we split this matrix equation into two sets by flipping the longitudinal separation component $b^1$. For a strictly positive longitudinal separation ($+b^1$), writing out the real and imaginary parts of the correlator ratios gives:
 \begin{align}
     \begin{pmatrix}

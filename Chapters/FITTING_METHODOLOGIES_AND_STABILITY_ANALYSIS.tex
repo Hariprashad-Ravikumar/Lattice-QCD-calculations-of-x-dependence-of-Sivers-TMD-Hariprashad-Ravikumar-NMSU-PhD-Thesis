@@ -318,7 +318,8 @@ The $\chi^2/\text{dof}$ minimizations and the sequential fits at individual $\et
     \end{align}
     where, $\tAmp^{[x]}_{2B}(x)=\int_{-\infty}^{+\infty} d(b\cdot P)e^{ix(b\cdot P)} \left[\tAmp_{2B}^{\text{Re}}(\cdots)+i\tAmp_{2B}^{\text{Im}}(\cdots)\right]$. This crucial condition involves both $\tAmp_{2B}^{\text{Re}}$ and $\tAmp_{2B}^{\text{Im}}$. 
     \item \textbf{Mellin moment ($x$-integrated) calculations}: The previous work on lattice TMDs~\cite{Musch:2011er, Yoon:2015ocs, Yoon:2017qzo} calculated the first Mellin moment in $x$ ($x$-integrated TMD: $f^{[1]}(\vprp{\kei}^2;\ldots) \equiv \int_{-1}^1 dx\ f(x,\vprp{\kei}^2;\ldots)$) of the Sivers shift, which is accessible by evaluating amplitudes at $(b\cdot P)=0$:
-    \begin{align}
+    \begingroup\footnotesize
+\begin{align}
         \langle \vect{k}_y \rangle_{TU}(\vprp{\bvec}^2;\zetahat,\eta v \tcdot P) 
 	&\ \equiv\ \mN \frac{\tilde f_{1T}^{\perp[1](1)}(\vprp{\bvec}^2;\zetahat,\ldots,\eta v \tcdot P)}{\tilde f_1^{[1](0)}(\vprp{\bvec}^2;\zetahat,\ldots,\eta v \tcdot P)}  
 	= - \mN \frac{\widetilde{A}_{12B}(-\vprp{\bvec}^2,0,0,-1/(\mN\zetahat)^2,\eta v\tcdot P) }{ \widetilde{A}_{2B}(-\vprp{\bvec}^2,0,0,-1/(\mN\zetahat)^2,\eta v\tcdot P) } \nonumber \\
@@ -327,6 +328,7 @@ The $\chi^2/\text{dof}$ minimizations and the sequential fits at individual $\et
 		{ \int dx \int d^2 \vprp{\kei}  \phantom{\vect{\kei}_y}\ \Phi^{[\gamma^+]}(x,\vprp{\kei},P,S;\ldots) } \right|_{\displaystyle \vprp{S}=(1,0) } 
 	\label{eq-genSivShift-x-moment}
     \end{align}
+\endgroup
     The correct candidate model must reproduce the previous results. This means we calculate
     \begin{align}
         \tAmp^{[x]}_{2B}(x)=&\int_{-\infty}^{+\infty} d(b\cdot P)e^{ix(b\cdot P)} \left[\tAmp_{2B}^{\text{Re}}(\cdots)+i\tAmp_{2B}^{\text{Im}}(\cdots)\right]\\
@@ -340,7 +342,15 @@ The $\chi^2/\text{dof}$ minimizations and the sequential fits at individual $\et
     to calculate $m_N \frac{\int dx\, \tilde{f}_{1T}^{\perp(1)}}{\int dx\, \tilde{f}_1^{(0)}}$. This condition involves all $\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$ and $\tAmp_{12B}^{\text{Re}}$ amplitudes. 
 \end{itemize}
 
-The model $c_2(\eta)$ (of Figure \ref{fig:c_eta_candidates}) for the real unpolarized amplitude $\tAmp_{2B}^{\text{Re}}=\left[\frac{a e^{-f \eta}}{\left[1 + \left(d + c\left(1 - \frac{k_1}{\eta} - \frac{k_2}{\eta^2}\right)\right) b_L^2 + d b_T^2\right]^j}\right]$ combined with the imaginary unpolarized amplitude model $\tAmp_{2B}^{\text{Im}}=\left[\frac{a^{\prime\prime} b_L e^{-f \eta}}{\left[1 + (c^{\prime\prime} + d^{\prime\prime}) b_L^2 + d^{\prime\prime}b_T^2\right]^{j^{\prime\prime}}}\right]$ suppresses anti-quark contributions in the above mentioned regime and has the lowest AIC (and $\chi^2/\mathrm{DoF}$). The row 1 and column 3 of Figures \ref{fig:ft_xdep_2d_P1}, \ref{fig:ft_xdep_2d_P2}, \ref{fig:ft_xdep_2d_P3}, \ref{fig:ft_xdep_2d_P4} plot the $\tilde{f}^{(0)}_{1}(x)=2\tAmp^{[x]}_{2B}(x)$, which shows near-zero contribution for anti-quark ($x\lesssim-0.2$) for higher momentum.
+The model $c_2(\eta)$ (of Figure \ref{fig:c_eta_candidates}) for the real unpolarized amplitude
+\[
+\tAmp_{2B}^{\text{Re}}=\left[\frac{a e^{-f \eta}}{\left[1 + \left(d + c\left(1 - \frac{k_1}{\eta} - \frac{k_2}{\eta^2}\right)\right) b_L^2 + d b_T^2\right]^j}\right]
+\]
+combined with the imaginary unpolarized amplitude model
+\[
+\tAmp_{2B}^{\text{Im}}=\left[\frac{a^{\prime\prime} b_L e^{-f \eta}}{\left[1 + (c^{\prime\prime} + d^{\prime\prime}) b_L^2 + d^{\prime\prime}b_T^2\right]^{j^{\prime\prime}}}\right]
+\]
+suppresses anti-quark contributions in the above mentioned regime and has the lowest AIC (and $\chi^2/\mathrm{DoF}$). The row 1 and column 3 of Figures \ref{fig:ft_xdep_2d_P1}, \ref{fig:ft_xdep_2d_P2}, \ref{fig:ft_xdep_2d_P3}, \ref{fig:ft_xdep_2d_P4} plot the $\tilde{f}^{(0)}_{1}(x)=2\tAmp^{[x]}_{2B}(x)$, which shows near-zero contribution for anti-quark ($x\lesssim-0.2$) for higher momentum.
 
 The selected model for $\tAmp_{2B}^{\text{Re}}$, $\tAmp_{2B}^{\text{Im}}$ along with the model for $\tAmp_{12B}^{\text{Re}}=\left[\frac{-a^{\prime} e^{-f \eta}}{\left[1 + (c^{\prime} + d^{\prime}) b_L^2 + d^{\prime} b_T^2\right]^{j^{\prime}}}\right]$, produce Mellin moment ($x$-integrated) results of the Sivers TMD shift $\langle \vect{k}_y \rangle_{TU}=m_N \frac{\int dx\, \tilde{f}_{1T}^{\perp(1)}}{\int dx\, \tilde{f}_1^{(0)}}$ which is consistent with previously published results. Tables \ref{Numerical-Integration-P1}, \ref{Numerical-Integration-P2}, \ref{Numerical-Integration-P3}, \ref{Numerical-Integration-P4}, calculate the $\int dx\, \tAmp^{[x]\text{Re}}_{2B}$, $\int dx\, (\tAmp^{[x]\text{Im}}_{2B})$, $\int dx\, \tilde{f}_1^{(0)} = 2\int dx\, (\tAmp^{[x]\text{Re}}_{2B} - \tAmp^{[x]\text{Im}}_{2B})$, $\int dx\, \tilde{f}_{1T}^{\perp(1)} = -2\int dx\, \tAmp^{[x]\text{Re}}_{12B}$, and finally the Mellin moment of Sivers TMD shift $m_N \frac{\int dx\, \tilde{f}_{1T}^{\perp(1)}}{\int dx\, \tilde{f}_1^{(0)}}$ for integration limits of $[-\infty, \infty]$, $[-1, 1]$, $[-1, 0]$, and $[0, 1]$ which are consistent with previously published results.
 
@@ -826,7 +836,7 @@ Each model has a closed-form Fourier transform, so the resulting $x$-space distr
 \renewcommand{\arraystretch}{1.3}
 \caption{Comparison of the four separable longitudinal-transverse models across nucleon momenta $P_L$, with extracted parameters shown at $P_L = -1$. While models with power-law transverse envelopes describe $\tAmp_{2B}^{\text{Re}}$ passably, all four separable ansätze fail on $\tAmp_{2B}^{\text{Im}}$ and $\tAmp_{12B}^{\text{Re}}$.}
 \label{tab:separable_ansätze_comparison}
-\scalebox{0.69}{
+\scalebox{0.6}{
 \begin{tabular}{|l|c|c|c|c|c|c|c|>{\raggedright\arraybackslash}p{4.2cm}|}
 \hline
 \textbf{Model Ansatz} & \multicolumn{4}{c|}{\textbf{$\chi^2/\text{dof}$ Across Momenta}} & \multicolumn{3}{c|}{\textbf{Key Fitted Parameters at $P_L = -1$}} & \textbf{Primary Failure Mode} \\
