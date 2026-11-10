@@ -2,7 +2,7 @@
 \label{sec:lattice_methodology}
 
 
-This chapter describes how the QCD correlation functions used in this thesis are defined and computed on a Euclidean spacetime lattice. We follow Lin and Meyer~\cite{Lin:2014} and Gattringer and Lang~\cite{Gattringer:2010zz}. % TODO(Hari): Lin:2014 is an edited volume (LNP 889); cite the individual chapters used here, verify the equation and figure numbers quoted below (Eqs. 3.78, 3.79, 3.80-3.81, 3.93; Fig. 1.1), and confirm reuse permission for the adapted Fig. 1.1.
+This chapter describes how the QCD correlation functions used in this thesis are defined and computed on a Euclidean spacetime lattice. We follow Lin and Meyer~\cite{Lin:2014} and Gattringer and Lang~\cite{Gattringer:2010zz}.
 Sections~\ref{sec:lat_lattice}--\ref{sec:lat_fermions} set up the lattice, the Wilson gauge action with its continuum limit, and the Wilson-clover fermion action. Section~\ref{sec:lat_propagators} integrates out the quarks and introduces propagators and the Monte Carlo method. The nucleon two-point function (Section~\ref{sec:lat_2pt}) and three-point functions of local operators (Section~\ref{sec:lat_3pt_local}) then lead to the ratio that isolates a matrix element, and Section~\ref{sec:lat_staple} extends this construction to the staple-link operators that define TMDs.
 
 \subsection{The Euclidean lattice}
@@ -155,7 +155,7 @@ with the Euclidean $\sigma_{\mu\nu}$ of Ref.~\cite{Gattringer:2010zz}, which is 
 with $P_{\mu\nu}(n)$ the plaquette of Eq.~\eqref{eq:plaquette} and $P_{\nu,-\mu}$, $P_{-\mu,-\nu}$, $P_{-\nu,\mu}$ the plaquettes with the indicated orientations. The four plaquettes form the clover leaf that gives the term its name, and the coefficient $c_{\rm sw}$ is tuned to cancel the $\mathcal O(a)$ terms~\cite{Lin:2014,Gattringer:2010zz}.
 
 \subsubsection{Other formulations}
-Twisted-mass fermions remove the doublers with a Wilson term, while staggered (Kogut-Susskind) fermions reduce the sixteen naive species to four tastes and keep a remnant chiral symmetry. Overlap fermions satisfy the Ginsparg-Wilson relation, and domain-wall fermions, which introduce a fifth dimension, satisfy it approximately at finite fifth-dimension extent~\cite{Gattringer:2010zz}. The gauge ensemble used in this work was generated with $n_f=2+1$ flavors of clover-improved Wilson fermions~\cite{Yoon:2017qzo}, with pion mass $m_\pi=317$~MeV. % TODO(Hari): confirm this is the JLab/W&M clover ensemble of Yoon:2017qzo Table I (or cite the ensemble paper).
+Twisted-mass fermions remove the doublers with a Wilson term, while staggered (Kogut-Susskind) fermions reduce the sixteen naive species to four tastes and keep a remnant chiral symmetry. Overlap fermions satisfy the Ginsparg-Wilson relation, and domain-wall fermions, which introduce a fifth dimension, satisfy it approximately at finite fifth-dimension extent~\cite{Gattringer:2010zz}. The gauge ensemble used in this work was generated with $n_f=2+1$ flavors of clover-improved Wilson fermions~\cite{Yoon:2017qzo}, with pion mass $m_\pi=317$~MeV.
 
 \subsection{Path integral, Wick contractions and quark propagators}
 \label{sec:lat_propagators}
@@ -369,7 +369,6 @@ for i_gn, gn in pairs(gamma_list) do
   ...
 end
 \end{lstlisting}
-% TODO(Hari): the listing defines stap_fw_shifts_bw but uses stap_fw_shift_bw; check the name in the production code.
 The forward propagator \texttt{fw\_p} is shifted along the separation direction \texttt{b\_dir}, multiplied by the staple link product, and contracted with the $\gamma_5$-conjugated sequential propagator \texttt{bw\_p}; the trace is then taken for every Dirac structure $\Gamma(n)$ in \texttt{gamma\_list}. Ref.~\cite{MuschThesis2} gives an equivalent implementation in Chroma. In the isospin limit the disconnected contribution again cancels in the isovector combination $u-d$~\cite{Boussarie:2023izj,Yoon:2017qzo}.
 
 \subsubsection{Ratio and matrix element}
