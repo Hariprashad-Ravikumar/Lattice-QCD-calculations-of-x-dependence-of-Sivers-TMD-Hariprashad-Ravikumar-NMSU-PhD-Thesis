@@ -374,3 +374,40 @@ Since source and sink momenta are equal, the matrix element is extracted from th
     \label{eq:staple_ratio}
 \end{equation}
 The ratios $R_{\Gamma(n)}$ for $\Gamma(1),\Gamma(2),\Gamma(4),\Gamma(8)=\gamma_1,\gamma_2,\gamma_3,\gamma_4$ are the input from which the invariant amplitudes are solved in Section~\ref{sec:solving_amplitudes}. Under the assumption stated in Section~\ref{sec:rapidity_soft}, the soft factor and the renormalization of the gauge link cancel in ratios of amplitudes taken at the same $b$, $P$ and staple geometry~\cite{Boussarie:2023izj,Yoon:2017qzo}; Ref.~\cite{Yoon:2017qzo} examined whether this multiplicative structure carries over to the lattice. The following chapters work with such ratios. Chapter~\ref{sec:tmd_framework} gives the Lorentz-invariant parametrization of $\langle N|O^{\rm lat}|N\rangle$ that turns the ratios $R_{\Gamma(n)}$ into invariant amplitudes.
+
+
+\subsection{Lattice simulation setup}
+\label{sec:lat_setup}
+All results in this thesis come from a single ensemble of gauge configurations with $N_f=2+1$ flavors of clover fermions, summarized in Table~\ref{tab:lat_setup}. The ensemble has 967 configurations. On each configuration we compute the proton and antiproton propagators from 12 source positions each, together with the corresponding sequential propagators, which gives $967\times24=23208$ measurements. We divide these into blocks of 8 and use them to form 2901 jackknife sets. The momentum transfer is zero, and the sink momentum runs from $(-1,0,0)$ to $(-4,0,0)$ in units of $2\pi/L$. We use $t_{\rm src}=0$ and $t_{\rm snk}=t_{\rm sep}=10$.
+
+\begin{table}[h!]
+    \centering
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabular}{|l|l|}
+    \hline
+    \multicolumn{2}{|c|}{Ensemble} \\
+    \hline
+    Fermion type & Clover ($N_f=2+1$) \\
+    \hline
+    Geometry & $32^3\times96$ \\
+    \hline
+    $a$ (fm) & $0.11403(77)$ \\
+    \hline
+    $m_\pi$ (MeV) & $317(2)(2)$ \\
+    \hline
+    \# confs & 967 \\
+    \hline
+    \# meas & 23208 ($=967\times24$) \\
+    \hline
+    \multicolumn{2}{|c|}{Kinematics} \\
+    \hline
+    Momentum transfer $\vect{\Delta}$ & $(0,0,0)$ \\
+    \hline
+    Sink momentum $\vect{P}$ & $(-n,0,0)$, $n=1,2,3,4$ \\
+    \hline
+    $t_{\rm src}$, $t_{\rm snk}$, $t_{\rm sep}$ & $0$, $10$, $10$ \\
+    \hline
+    \end{tabular}
+    \caption{Ensemble and measurement parameters. The 24 measurements per configuration are 12 proton and 12 antiproton source and sequential propagators. Momenta are in units of $2\pi/L$ and times in lattice units.}
+    \label{tab:lat_setup}
+\end{table}

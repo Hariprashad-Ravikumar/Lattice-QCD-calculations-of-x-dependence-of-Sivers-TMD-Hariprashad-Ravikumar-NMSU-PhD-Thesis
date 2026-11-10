@@ -50,6 +50,7 @@
 \contentsline {subsubsection}{\numberline {3.7.1}Lattice operator and three-point function}{47}{subsubsection.3.7.1}%
 \contentsline {subsubsection}{\numberline {3.7.2}Contraction}{48}{subsubsection.3.7.2}%
 \contentsline {subsubsection}{\numberline {3.7.3}Ratio and matrix element}{49}{subsubsection.3.7.3}%
+\contentsline {subsection}{\numberline {3.8}Lattice simulation setup}{49}{subsection.3.8}%
 \contentsline {section}{\numberline {4}TMD CORRELATOR FOR LATTICE CALCULATIONS}{51}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Definition of TMDs}{51}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}TMDs in Fourier space}{53}{subsection.4.2}%
@@ -108,4 +109,4 @@
 \contentsline {subsection}{\numberline {8.2}Main results}{203}{subsection.8.2}%
 \contentsline {subsection}{\numberline {8.3}Outlook}{203}{subsection.8.3}%
 \contentsline {section}{\numberline {A}QLUA: Gamma $\Gamma (n)$}{206}{appendix.A}%
-\contentsline {section}{REFERENCES}{207}{section*.131}%
+\contentsline {section}{REFERENCES}{207}{section*.132}%
