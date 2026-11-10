@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.17)  10 NOV 2026 11:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.17)  10 NOV 2026 11:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2012,7 +2012,7 @@ File: PowerLaw_etaAsymptotic/A2B_c_eta_AllAsymptoticModels_P1.pdf Graphic file
 <use PowerLaw_etaAsymptotic/A2B_c_eta_AllAsymptoticModels_P1.pdf>
 Package pdftex.def Info: PowerLaw_etaAsymptotic/A2B_c_eta_AllAsymptoticModels_P
 1.pdf  used on input line 258.
-(pdftex.def)             Requested size: 316.54594pt x 157.6587pt.
+(pdftex.def)             Requested size: 422.05858pt x 210.21555pt.
 <PowerLaw_etaAsymptotic/A2B_d_eta_Independence_P1.pdf, id=10083, 593.21625pt x 
 459.7175pt>
 File: PowerLaw_etaAsymptotic/A2B_d_eta_Independence_P1.pdf Graphic file (type p
@@ -2020,7 +2020,7 @@ df)
 <use PowerLaw_etaAsymptotic/A2B_d_eta_Independence_P1.pdf>
 Package pdftex.def Info: PowerLaw_etaAsymptotic/A2B_d_eta_Independence_P1.pdf  
 used on input line 265.
-(pdftex.def)             Requested size: 237.40543pt x 183.98193pt.
+(pdftex.def)             Requested size: 263.7856pt x 204.42984pt.
 [131 <./Gaussian_type_fit_Real_A2B/LorentzianFixedA_P-1_b3.pdf> <./PowerLaw_eta
 Asymptotic/A2B_c_eta_AllAsymptoticModels_P1.pdf>]
 <Gaussian_type_fit_Real_A2B/LorentzianFixed_ReA12B_P-1_b3.pdf, id=10197, 339.26
@@ -2697,7 +2697,7 @@ atio_vs_x_4curves_P234_bmin3_eta610.pdf  used on input line 307.
  [193 <./SimultaneousFitsCov/factorization_test/Factorization_gh_and_Reconstruc
 tion_bmin3_eta610.pdf>]
 <SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_bT_4curves_P234_
-bmin3_eta610.pdf, id=15777, 640.6348pt x 422.56258pt>
+bmin3_eta610.pdf, id=15779, 640.6348pt x 422.56258pt>
 File: SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_bT_4curves_
 P234_bmin3_eta610.pdf Graphic file (type pdf)
 <use SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_bT_4curves_P
@@ -2709,7 +2709,7 @@ atio_vs_bT_4curves_P234_bmin3_eta610.pdf  used on input line 314.
 s_P234_bmin3_eta610.pdf> <./SimultaneousFitsCov/factorization_test/Factorizatio
 n_Ratio_vs_bT_4curves_P234_bmin3_eta610.pdf>]
 <SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_x_AllPL_bmin3_et
-a610.pdf, id=15860, 1001.97978pt x 711.04016pt>
+a610.pdf, id=15862, 1001.97978pt x 711.04016pt>
 File: SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_x_AllPL_bmi
 n3_eta610.pdf Graphic file (type pdf)
 <use SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_x_AllPL_bmin
@@ -2718,7 +2718,7 @@ Package pdftex.def Info: SimultaneousFitsCov/factorization_test/Factorization_R
 atio_vs_x_AllPL_bmin3_eta610.pdf  used on input line 323.
 (pdftex.def)             Requested size: 527.57121pt x 374.39748pt.
 <SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_bT_AllPL_bmin3_e
-ta610.pdf, id=15863, 1001.99165pt x 709.48247pt>
+ta610.pdf, id=15865, 1001.99165pt x 709.48247pt>
 File: SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_bT_AllPL_bm
 in3_eta610.pdf Graphic file (type pdf)
 <use SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_bT_AllPL_bmi
@@ -2731,7 +2731,7 @@ bmin3_eta610.pdf>]
 [196 <./SimultaneousFitsCov/factorization_test/Factorization_Ratio_vs_bT_AllPL_
 bmin3_eta610.pdf>]
 <SimultaneousFitsCov/factorization_test/Factorization_Amplitudes_g_of_x_bmin3_e
-ta610.pdf, id=15984, 1002.55492pt x 711.04016pt>
+ta610.pdf, id=15986, 1002.55492pt x 711.04016pt>
 File: SimultaneousFitsCov/factorization_test/Factorization_Amplitudes_g_of_x_bm
 in3_eta610.pdf Graphic file (type pdf)
 <use SimultaneousFitsCov/factorization_test/Factorization_Amplitudes_g_of_x_bmi
@@ -2740,7 +2740,7 @@ Package pdftex.def Info: SimultaneousFitsCov/factorization_test/Factorization_A
 mplitudes_g_of_x_bmin3_eta610.pdf  used on input line 364.
 (pdftex.def)             Requested size: 527.57121pt x 374.1805pt.
 <SimultaneousFitsCov/factorization_test/Factorization_Amplitudes_h_of_bT_bmin3_
-eta610.pdf, id=15987, 1002.5668pt x 709.48247pt>
+eta610.pdf, id=15989, 1002.5668pt x 709.48247pt>
 File: SimultaneousFitsCov/factorization_test/Factorization_Amplitudes_h_of_bT_b
 min3_eta610.pdf Graphic file (type pdf)
 <use SimultaneousFitsCov/factorization_test/Factorization_Amplitudes_h_of_bT_bm
@@ -2751,7 +2751,7 @@ mplitudes_h_of_bT_bmin3_eta610.pdf  used on input line 371.
  [197 <./SimultaneousFitsCov/factorization_test/Factorization_Amplitudes_g_of_x
 _bmin3_eta610.pdf>]
 <SimultaneousFitsCov/factorization_test/Factorization_Amplitudes_Reconstruction
-_bmin3_eta610.pdf, id=16062, 1000.82672pt x 711.04016pt>
+_bmin3_eta610.pdf, id=16064, 1000.82672pt x 711.04016pt>
 File: SimultaneousFitsCov/factorization_test/Factorization_Amplitudes_Reconstru
 ction_bmin3_eta610.pdf Graphic file (type pdf)
 <use SimultaneousFitsCov/factorization_test/Factorization_Amplitudes_Reconstruc
@@ -2812,9 +2812,9 @@ r/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb
 ></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10
 .pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
 bm10.pfb>
-Output written on main.pdf (240 pages, 34304527 bytes).
+Output written on main.pdf (240 pages, 34305184 bytes).
 PDF statistics:
- 16849 PDF objects out of 18468 (max. 8388607)
+ 16851 PDF objects out of 18468 (max. 8388607)
  6933 compressed objects within 70 object streams
  965 named destinations out of 1000 (max. 500000)
  1822 words of extra memory for PDF output out of 10000 (max. 10000000)
