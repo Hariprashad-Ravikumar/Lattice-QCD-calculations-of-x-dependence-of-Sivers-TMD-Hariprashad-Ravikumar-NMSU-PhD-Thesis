@@ -50,7 +50,7 @@ We now move to the frame in which the lattice calculation is performed. To perfo
 \begin{align}
     b_{1}|v|\left[\frac{P_{1}}{m_{N}}\left(\hat{\zeta}-\sqrt{\hat{\zeta}^2+1}\right)+\hat{\zeta}\frac{m_{N}}{P_{1}}\right]=\vec{v}_{T}\cdot\vec{b}_{T} \ .\label{constraints}
 \end{align}
-To satisfy this equation over a continuous range of $b \cdot P$ without coupling the transverse separation $\vec{b}_T$ directly to the longitudinal staple geometry, we orient the transverse separation vectors orthogonally. By choosing $\vec{v}_{T}=(0,v_{3})$ and $\vec{b}_{T}=(b_{2},0)$, the right-hand side identically vanishes ($\vec{v}_{T}\cdot\vec{b}_{T} = 0$). This is not the only choice, but it is convenient for a lattice calculation because both $b$ and $v$ can remain in 2-dimensional lattice planes. In general, $b$ and $v$ may have to point in arbitrary directions in three-dimensional space.
+To satisfy this equation over a continuous range of $b \cdot P$ without coupling the transverse separation $\vec{b}_T$ directly to the longitudinal staple geometry, we orient the transverse separation vectors orthogonally. By choosing $\vec{v}_{T}=(0,v_{3})$ and $\vec{b}_{T}=(b_{2},0)$, the right-hand side identically vanishes ($\vec{v}_{T}\cdot\vec{b}_{T} = 0$). This is not the only possible choice, but it is convenient for a lattice calculation because both $b$ and $v$ can remain in 2-dimensional lattice planes. In general, $b$ and $v$ may have to point in arbitrary directions in three-dimensional space.
 
 \subsubsection{Explicit Calculation for Hadron Momentum \texorpdfstring{$P_1=-1$}{P1=-1}}
 Setting the right-hand side of Eq. \eqref{constraints} to zero implies that the bracketed term
@@ -261,7 +261,7 @@ A representative example of this interpolation procedure is shown in Figure \ref
 
 In addition to the staple vector $\vect{v}$, the correlation function depends on the spatial separation $\vect{b}$ between the initial and final quark fields. Recall that the real and imaginary parts of the invariant amplitudes ($\tAmp_{iB}^{\text{Re}}$ and $\tAmp_{iB}^{\text{Im}}$) are even and odd functions of the invariant dot product $b \cdot P$, respectively. 
 
-Because the nucleon momentum in our lattice setup is fixed along the $\hat{x_{1}}$-axis ($P = P_1 \hat{x_{1}}$), the longitudinal separation is directly proportional to the $\hat{x_{1}}$-component of the separation vector: $b \cdot P = -P_1 b_1$. Therefore, to isolate the real and imaginary parts of the amplitudes, we must evaluate the correlator at both positive and negative values of $b_1$. By taking the symmetric (even) and antisymmetric (odd) linear combinations of the correlators evaluated at $+b_1$ and $-b_1$, we project out the real and imaginary amplitudes required for the $x$-dependent Fourier transform. The numerical Fourier transform over $b \cdot P$ requires a wide and dense grid of the separation vector $\vect{b}$. Figures \ref{fig:bL_bT_path}-\ref{fig:bL_bT_standard} show the parameter space of our calculations. The left panel shows the discrete Cartesian grid in the $b_1-b_2$ plane. The right panel shows how this grid maps onto the phenomenologically relevant invariant Variable Space spanned by $(b \cdot P)\hat{L}/(2\pi)$ and the absolute separation $|b|/a$; the mapping shifts with the target Collins-Soper parameter $\hat{\zeta}$. Where, $\hat{L}$ is the spatial lattice length $\hat{L}=32$, and $a=0.11403\text{ fm}$ is the lattice spacing. 
+Because the nucleon momentum in our lattice setup is fixed along the $\hat{x_{1}}$-axis ($P = P_1 \hat{x_{1}}$), the longitudinal separation is directly proportional to the $\hat{x_{1}}$-component of the separation vector: $b \cdot P = -P_1 b_1$. Therefore, to isolate the real and imaginary parts of the amplitudes, we must evaluate the correlator at both positive and negative values of $b_1$. By taking the symmetric (even) and antisymmetric (odd) linear combinations of the correlators evaluated at $+b_1$ and $-b_1$, we project out the real and imaginary amplitudes required for the $x$-dependent Fourier transform. The numerical Fourier transform over $b \cdot P$ requires a wide and dense grid of the separation vector $\vect{b}$. Figures \ref{fig:bL_bT_path}-\ref{fig:bL_bT_standard} show the parameter space of our calculations. The left panel shows the discrete Cartesian grid in the $b_1-b_2$ plane. The right panel shows how this grid maps onto the phenomenologically relevant invariant variable space spanned by $(b \cdot P)\hat{L}/(2\pi)$ and the absolute separation $|b|/a$; the mapping shifts with the target Collins-Soper parameter $\hat{\zeta}$. Here, $\hat{L}$ is the spatial lattice length $\hat{L}=32$, and $a=0.11403\text{ fm}$ is the lattice spacing. 
 
 \begin{figure}[htpb]
     \centering
@@ -275,7 +275,7 @@ Because the nucleon momentum in our lattice setup is fixed along the $\hat{x_{1}
     \begin{minipage}{0.45\textwidth}
         \centering
         \includegraphics[width=\linewidth]{plots/kinematics_interpolation/Pb_bsq_plot.pdf}
-        \caption{Mapping of the spatial lattice vectors into the physical invariant Variable Space $(b \cdot P/(2\pi), |b|/a)$. The trajectories diverge based on the selected target $\hat{\zeta}$.}
+        \caption{Mapping of the spatial lattice vectors into the physical invariant variable space $(b \cdot P/(2\pi), |b|/a)$. The trajectories diverge based on the selected target $\hat{\zeta}$.}
         \label{fig:bL_bT_standard}
     \end{minipage}
 \end{figure}
@@ -310,10 +310,10 @@ To access finite $b \cdot P$, we construct off-axis paths with simultaneous step
 
 \pagebreak
 
-\subsubsection{Symmetry Improving Operation (Path Averaging) for \texorpdfstring{$\vect{b}$}{b}}
+\subsubsection{Symmetry Improving Operator (Path Averaging) for \texorpdfstring{$\vect{b}$}{b}}
 \label{sec:b_path_averaging}
 
-Several quark separation vectors $\vect{b}$ have the same path degeneracy as the staple direction vector $\vect{v}$ (Section~\ref{sec:spatial_interpolation}). We treat it the same way: we average the correlation function over all equivalent step-wise paths that share the same origin and endpoint, as illustrated for a single coordinate in Figure \ref{fig:b_path_example}. 
+Several quark separation vectors $\vect{b}$ have a similar path degeneracy as the staple direction vector $\vect{v}$ (Section~\ref{sec:spatial_interpolation}). We treat it the same way: we average the correlation function over all equivalent step-wise paths that share the same origin and endpoint, as illustrated for a single coordinate in Figure \ref{fig:b_path_example}. 
 
 \begin{figure}[htpb]
     \centering
@@ -661,10 +661,10 @@ We then insert it to obtain the full equation for the imaginary part of the Sive
 \end{align}
 
 
-\subsection{Transformation to the Lorentz-Invariant Variable Space}
+\subsection{Transformation to the Lorentz-Invariant variable space}
 \label{sec:lorentz_mapping}
 
-At this stage, the amplitudes $\tAmp_{2B}$ and $\tAmp_{12B}$ are discrete functions of the Cartesian lattice grid parameters $b_L$ and $b_T$. Extracting the dependence on the longitudinal momentum fraction $x$, however, requires the Fourier transform over the Lorentz-invariant inner product $P \cdot b$. To perform this integration, we first show that our simulated Cartesian lattice coordinates map one-to-one to the invariant Variable Space.
+At this stage, the amplitudes $\tAmp_{2B}$ and $\tAmp_{12B}$ are discrete functions of the Cartesian lattice grid parameters $b_L$ and $b_T$. Extracting the dependence on the longitudinal momentum fraction $x$, however, requires the Fourier transform over the Lorentz-invariant inner product $P \cdot b$. To perform this integration, we first show that our simulated Cartesian lattice coordinates map one-to-one to the invariant variable space.
 
 In our selected kinematic frame, the 4-vectors for the nucleon momentum and spatial separation are defined as:
 \begin{align}
