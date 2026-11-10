@@ -219,8 +219,8 @@ These tests use $\tAmp_{2B}^{\text{Re}}$ alone. In Section~\ref{sec:rejection_ex
 Guided by the \texttt{PySR} result, we now explore the $\eta$-dependence of the power-law model in more detail. We fit $\tAmp_{2B}^{\text{Re}}$ at momentum $P_L=-1$, with $6\leq\eta\leq10$ and $|\vect{b}|\geq3a$. For comparison, we first refit a family of Gaussian ansätze with $\eta$-dependent widths (Table~\ref{tab:rejection_fit_list_gaussian_c_d_etas}); for each model, the figure lists the model expression, the fit parameters, their Jackknife-averaged values, and the resulting $\chi^2/\mathrm{DoF}$.
 \begin{table}[H]
     \centering
-    \includegraphics[width=1\linewidth]{plots/fit_exploration_mathematica/fit_list_gaussian_c_d_etas.eps}
-    \caption{3D jackknife fits of $\tAmp_{2B}^{\text{Re}}(b_L,b_T,\eta)$ to a family of 16 Gaussian ansätze, all built on the common baseline $\tAmp_{2B}^{\text{Re}} = a\, e^{-f\eta}\, \exp\!\big[-c\,(b_L P_L)^2 - d\,(b_L^2+b_T^2)\big]$, in which the coefficients $c$ and $d$ are each independently allowed to be either constant or one of three $\eta$-dependent forms, $c\to c(\eta)$ and/or $d\to d(\eta)$.}
+    \includegraphics[width=1\linewidth]{plots/fit_exploration_mathematica/fit_list_gaussian_c_d_etas_crop.pdf}
+    \caption{3D jackknife fits of $\tAmp_{2B}^{\text{Re}}(b_L,b_T,\eta)$ to a family of 16 Gaussian ansätze, all built on the common baseline $\tAmp_{2B}^{\text{Re}} = a\, e^{-f\eta}\, \exp\!\big[-c\,(b_L P_L)^2 - d\,(b_L^2+b_T^2)\big]$, in which the coefficients $c$ and $d$ are each independently allowed to be either constant or one of three $\eta$-dependent forms, $c\to c(\eta)$ and/or $d\to d(\eta)$. The fits use data at $P_L=-1$ with $|\vect{b}|\ge 3a$ and $6\le\eta\le10$.}
     \label{tab:rejection_fit_list_gaussian_c_d_etas}
 \end{table}
 
@@ -229,7 +229,7 @@ The coefficient $c$ of $(P\cdot b)^2$ must be positive and stable for the Fourie
 \begin{table}[H]
     \centering
     \includegraphics[width=1\linewidth]{PowerLaw_etaAsymptotic/A2BfitFT_eta_Asymptotic_P1_crop.pdf}
-    \caption{3D Jackknife fits of $\tAmp_{2B}^{\text{Re}}(b_L,b_T,\eta)$ to a family of power-law ansätze, all built on the common baseline $\tAmp_{2B}^{\text{Re}} = a\, e^{-f\eta}\, \left(1+(c+d)b^2_L+db^2_T\right)^{-j}$, in which the coefficient $c$ is either constant or one of several $\eta$-dependent forms, $c\to c(\eta)$. The fits use data with $|\vect{b}|\ge 3a$ and $6\le\eta\le10$.}  % TODO(Hari): confirm cut and eta range (taken from old figure header)
+    \caption{3D Jackknife fits of $\tAmp_{2B}^{\text{Re}}(b_L,b_T,\eta)$ to a family of power-law ansätze, all built on the common baseline $\tAmp_{2B}^{\text{Re}} = a\, e^{-f\eta}\, \left(1+(c+d)b^2_L+db^2_T\right)^{-j}$, in which the coefficient $c$ is either constant or one of several $\eta$-dependent forms, $c\to c(\eta)$. The fits use data at $P_L=-1$ with $|\vect{b}|\ge 3a$ and $6\le\eta\le10$.}
     \label{tab:powerlaw_eta_asymptotic}
 \end{table}
 
@@ -237,7 +237,7 @@ The fit parameter $c$ determines how wide the amplitudes are in Fourier-transfor
 \begin{table}[H]
     \centering
     \includegraphics[width=1\linewidth]{PowerLaw_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_P1_crop.pdf}
-    \caption{3D jackknife fits of $\tAmp_{2B}^{\text{Re}}(b_L,b_T,\eta)$ to a family of power-law ansätze, all built on the common baseline $\tAmp_{2B}^{\text{Re}} = a\, e^{-f\eta}\, \left(1+(c+d)b^2_L+db^2_T\right)^{-j}$, in which the coefficient $c$ takes further $\eta$-dependent forms, $c\to c(\eta)$, that yield wider Fourier transforms in $x$ space. The fits use data with $|\vect{b}|\ge 3a$ and $6\le\eta\le10$.}  % TODO(Hari): confirm cut and eta range (taken from old figure header)
+    \caption{3D jackknife fits of $\tAmp_{2B}^{\text{Re}}(b_L,b_T,\eta)$ to a family of power-law ansätze, all built on the common baseline $\tAmp_{2B}^{\text{Re}} = a\, e^{-f\eta}\, \left(1+(c+d)b^2_L+db^2_T\right)^{-j}$, in which the coefficient $c$ takes further $\eta$-dependent forms, $c\to c(\eta)$, that yield wider Fourier transforms in $x$ space. The fits use data at $P_L=-1$ with $|\vect{b}|\ge 3a$ and $6\le\eta\le10$.}
     \label{tab:powerlaw_eta_asymptotic_wider}
 \end{table}
 
